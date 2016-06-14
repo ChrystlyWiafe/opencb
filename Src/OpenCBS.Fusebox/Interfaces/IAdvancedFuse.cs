@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace OPENCBS.Fusebox
+namespace OpenCBS.Fusebox.Interfaces
 {
     public interface IAdvancedFuse:IFuse
     {

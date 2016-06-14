@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OPENCBS.Fusebox
+namespace OpenCBS.Fusebox.Fusebox
 {
     /// <summary>
     /// Specifies a Fusebox log entry.

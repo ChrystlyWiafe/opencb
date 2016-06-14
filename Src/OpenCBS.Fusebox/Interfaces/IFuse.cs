@@ -1,8 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Runtime.InteropServices;
+﻿using System.Data;
 
-namespace OPENCBS.Fusebox
+namespace OpenCBS.Fusebox.Interfaces
 {
     /// <summary>
     /// Defines a task that will be launched.

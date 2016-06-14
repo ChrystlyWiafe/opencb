@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace OpenCBS.Fusebox
+namespace OpenCBS.Fusebox.Fusebox
 {
     public partial class FuseBoxExecutingForm : Form
     {

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain;
-using OPENCBS.Fusebox;
+using OpenCBS.Fusebox.Interfaces;
 using StructureMap.Graph;
 using Container = StructureMap.Container;
 
-namespace OpenCBS.Fusebox
+namespace OpenCBS.Fusebox.Fusebox
 {
     public class Fusebox
     {
@@ -67,6 +67,7 @@ namespace OpenCBS.Fusebox
             };
             _bw.RunWorkerCompleted += (obj, args) =>
             {
+                OnFuseComplited();
                 MessageBox.Show(@"Fusebox executing complete.");
             };
             _bw.RunWorkerAsync();
@@ -97,7 +98,7 @@ namespace OpenCBS.Fusebox
 
         private void ExecuteFuses(IDbTransaction transaction)
         {
-            var routines = _container.GetAllInstances<IFuse>().OrderBy(x => x.Order).ToArray();
+            var routines = GetRoutines<IFuse>();
             var index = 0;
             foreach (var routine in routines)
             {
@@ -108,12 +109,11 @@ namespace OpenCBS.Fusebox
 
                 routine.Activate(transaction);
             }
-            OnFuseComplited();
         }
 
         private void ExecuteAdvancedFuses(IDbTransaction transaction)
         {
-            var routines = _container.GetAllInstances<IAdvancedFuse>().OrderBy(x => x.Order).ToArray();
+            var routines = GetRoutines<IAdvancedFuse>();
             var index = 0;
             foreach (var routine in routines)
             {
@@ -128,7 +128,6 @@ namespace OpenCBS.Fusebox
 
                 _logEntries.Add(GetDefaultFuseBoxLogEntry());
             }
-            OnFuseComplited();
         }
 
         private void SetAdvancedFusesEvents(IAdvancedFuse routine)
@@ -185,6 +184,15 @@ namespace OpenCBS.Fusebox
         public void Stop()
         {
             _bw.CancelAsync();
+        }
+
+        private T[] GetRoutines<T>()
+        {
+            var defaultRoutines =
+                _container.GetAllInstances<T>().Where(item => item.GetType().Name.StartsWith("Default")).ToArray();
+            var extensionRoutines =
+                _container.GetAllInstances<T>().Where(item => !item.GetType().Name.StartsWith("Default")).ToArray();
+            return extensionRoutines.Length > 0 ? extensionRoutines : defaultRoutines;
         }
 
         private const string ExtensionsPath = "Extensions";

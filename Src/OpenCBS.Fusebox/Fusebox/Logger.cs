@@ -2,7 +2,7 @@
 using System.Data;
 using Dapper;
 
-namespace OPENCBS.Fusebox
+namespace OpenCBS.Fusebox.Fusebox
 {
     internal static class Logger
     {

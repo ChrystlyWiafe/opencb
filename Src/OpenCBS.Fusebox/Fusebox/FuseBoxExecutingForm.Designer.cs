@@ -1,4 +1,4 @@
-﻿namespace OpenCBS.Fusebox
+﻿namespace OpenCBS.Fusebox.Fusebox
 {
     partial class FuseBoxExecutingForm
     {
