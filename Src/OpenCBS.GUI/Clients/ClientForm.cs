@@ -3601,6 +3601,11 @@ namespace OpenCBS.GUI.Clients
                 credit.InstallmentList = _credit.InstallmentList;
             }
             credit.EconomicActivity = eacLoan.Activity;
+            if (credit.InstallmentList != null && credit.InstallmentList.Count > 0)
+            {
+                var firstInstallment = credit.InstallmentList.First();
+                credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
+            }
             return credit;
         }
 
@@ -3671,6 +3676,11 @@ namespace OpenCBS.GUI.Clients
                 if (!_credit.Disbursed && !_credit.ScheduleChangedManually)
                     _credit.InstallmentList =
                         ServicesProvider.GetInstance().GetContractServices().SimulateScheduleCreation(_credit);
+                if (_credit.InstallmentList != null && _credit.InstallmentList.Count > 0)
+                {
+                    var firstInstallment = _credit.InstallmentList.First();
+                    _credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
+                }
             }
 
             return _credit;

@@ -169,6 +169,7 @@ namespace OpenCBS.Manager.Contracts
                         [insurance],
                         [effective_interest_rate],
                         schedule_type,
+                        initial_emi,
                         script_name) 
                         VALUES(@id, 
                         @packageId, 
@@ -200,6 +201,7 @@ namespace OpenCBS.Manager.Contracts
                         @insurance,
                         ISNULL(dbo.GetXIRR(@id),0),
                         @schedule_type,
+                        @initial_emi,
                         @script_name
                         )";
 
@@ -620,7 +622,8 @@ namespace OpenCBS.Manager.Contracts
                                 [insurance]=@insurance,
                                 [effective_interest_rate] =  ISNULL(dbo.GetXIRR(@id),0),
                                 schedule_type = @schedule_type,
-                                script_name = @script_name
+                                script_name = @script_name,
+                                initial_emi = @initial_emi
                               WHERE id = @id";
 
             using (OpenCbsCommand c = new OpenCbsCommand(q, pSqlTransac.Connection, pSqlTransac))
@@ -802,6 +805,7 @@ namespace OpenCBS.Manager.Contracts
             c.AddParam("@insurance", pLoan.Insurance);
             c.AddParam("@schedule_type", (int) pLoan.ScheduleType);
             c.AddParam("@script_name", pLoan.ScriptName);
+            c.AddParam("@initial_emi", pLoan.InitialEmi);
         }
 
         private void _DeleteGuarantorsFromLoan(int pLoanId, SqlTransaction pSqlTransac)
@@ -1802,6 +1806,7 @@ namespace OpenCBS.Manager.Contracts
                                         Credit.rescheduled, 
                                         Credit.bad_loan,                                         
                                         Credit.grace_period_of_latefees,
+                                        Credit.initial_emi,
                                         Contracts.contract_code, 
                                         Tiers.client_type_code, 
                                         Credit.synchronize,
@@ -1931,6 +1936,7 @@ namespace OpenCBS.Manager.Contracts
             c.AddParam("@nonRepaymentPenaltiesOverduePrincipal", pLoan.NonRepaymentPenalties.OverDuePrincipal);
             c.AddParam("@badLoan", pLoan.BadLoan);
             c.AddParam("@grace_period_of_latefees", pLoan.GracePeriodOfLateFees);
+            c.AddParam("@initial_emi",pLoan.InitialEmi);
 
             c.AddParam("@DrawingsNumber", pLoan.DrawingsNumber);
             c.AddParam("@AmountUnderLoc", pLoan.AmountUnderLoc);
@@ -2000,7 +2006,8 @@ namespace OpenCBS.Manager.Contracts
                     Amount = r.GetMoney("amount"),
                     InterestRate = r.GetDecimal("interest_rate"),
                     NbOfInstallments = r.GetInt("nb_of_installment"),
-                    NonRepaymentPenalties = new NonRepaymentPenalties
+                    InitialEmi = r.GetNullDecimal("initial_emi"),
+                NonRepaymentPenalties = new NonRepaymentPenalties
                         {
                             InitialAmount = r.GetDouble("non_repayment_penalties_based_on_initial_amount"),
                             OLB = r.GetDouble("non_repayment_penalties_based_on_olb"),
