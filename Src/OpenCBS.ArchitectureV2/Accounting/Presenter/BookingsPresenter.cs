@@ -157,12 +157,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
             Refresh();
         }
 
-        public void OnPrint(object report)
-        {
-            //Initializer.ShowReport((Report)report,
-            //    new Dictionary<string, object> { { "BookingId", _view.SelectedBooking.Id } });
-        }
-
         public void Refresh()
         {
             var debit = _view.DebitAccount;

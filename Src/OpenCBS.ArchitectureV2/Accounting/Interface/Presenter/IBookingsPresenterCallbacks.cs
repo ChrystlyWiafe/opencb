@@ -6,7 +6,6 @@
         void Add();
         void Edit();
         void OnDeleteBooking();
-        void OnPrint(object report);
         void Refresh();
         void OnFiltering();
         void OnControlPrint();

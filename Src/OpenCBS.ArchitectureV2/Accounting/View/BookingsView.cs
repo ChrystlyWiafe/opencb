@@ -58,7 +58,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
             _editButton.Click += (sender, e) => callbacks.Edit();
             _bookingsListView.DoubleClick += (sender, e) => callbacks.Edit();
             _deleteButton.Click += (sender, e) => callbacks.OnDeleteBooking();
-            _printButton.DropDownItemClicked += (sender, e) => callbacks.OnPrint(e.ClickedItem.Tag);
             _refreshButton.Click += (sender, e) => callbacks.Refresh();
             _bookingsListView.Click += (sender, e) => callbacks.OnCheck();
             _bookingsListView.ItemsChanged += (sender, e) => callbacks.OnCheck();
