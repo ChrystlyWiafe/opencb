@@ -5,14 +5,12 @@ using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Accounting.Repository;
 using OpenCBS.ArchitectureV2.Interface.View;
-using OpenCBS.Extension.ExcelReports;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Interface.View
 {
     public interface IBookingsView : IView<IBookingsPresenterCallbacks>
     {
         void SetBookings(IEnumerable<BookingDto> bookings);
-        List<Report> Reports { set; }
         List<Account> Accounts { get; set; }
         BookingDto SelectedBooking { get; }
         void AddButtonEnabled();

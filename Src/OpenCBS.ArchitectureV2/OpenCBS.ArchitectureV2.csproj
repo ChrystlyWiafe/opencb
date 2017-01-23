@@ -64,9 +64,6 @@
       <HintPath>..\packages\ObjectListView.Official.2.8.1\lib\net20\ObjectListView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="OpenCBS.Extension.ExcelReports">
-      <HintPath>..\..\..\..\OpenCBSLibs\Extensions\OpenCBS.Extension.ExcelReports.dll</HintPath>
-    </Reference>
     <Reference Include="StructureMap, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
@@ -160,7 +157,6 @@
     <Compile Include="Accounting\Service\BookingService.cs" />
     <Compile Include="Accounting\Service\IAccountService.cs" />
     <Compile Include="Accounting\Service\IBookingService.cs" />
-    <Compile Include="Accounting\Service\ReportService.cs" />
     <Compile Include="Accounting\View\AccountMovements.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +243,7 @@
     <Compile Include="CommandData\ShowAlertsCommandData.cs" />
     <Compile Include="CommandData\ShowDashboardCommandData.cs" />
     <Compile Include="CommandData\FastRepaymentCommandData.cs" />
+    <Compile Include="CommandData\ShowReportsMenuCommandData.cs" />
     <Compile Include="CommandData\ShowRepaymentViewCommandData.cs" />
     <Compile Include="CommandData\ShowSearchCommandData.cs" />
     <Compile Include="CommandData\ShowStartPageCommandData.cs" />
@@ -261,6 +258,7 @@
     <Compile Include="Command\EditSavingCommand.cs" />
     <Compile Include="Command\FastRepaymentCommand.cs" />
     <Compile Include="Command\ShowDashboardCommand.cs" />
+    <Compile Include="Command\ShowReportsMenuCommand.cs" />
     <Compile Include="EventInterceptor.cs" />
     <Compile Include="Event\DisbursementNotification.cs" />
     <Compile Include="Interface\IAfterLoginHook.cs" />

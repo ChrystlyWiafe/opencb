@@ -6,19 +6,23 @@ using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Accounting.Repository;
+using OpenCBS.ArchitectureV2.CommandData;
+using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.View;
-using OpenCBS.Extension.ExcelReports;
 using StructureMap;
 
 namespace OpenCBS.ArchitectureV2.Accounting.View
 {
     public partial class BookingsView : BaseView, IBookingsView
     {
+        private IApplicationController _applicationController;
+
         [DefaultConstructor]
-        public BookingsView(ITranslationService translationService)
+        public BookingsView(ITranslationService translationService, IApplicationController applicationController)
             : base(translationService)
         {
+            _applicationController = applicationController;
             InitializeComponent();
             Setup();
         }
@@ -90,6 +94,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
                 if (booking.IsDeleted)
                     olvi.ForeColor = Color.Silver;
             };
+            _applicationController.Execute(new ShowReportsMenuCommandData() {MenuItem =_printButton, AttachmentPoint = "Bookings"});
+
         }
 
         public Control Control
@@ -147,16 +153,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
             _printButton.Enabled = false;
         }
 
-        public List<Report> Reports
-        {
-            set
-            {
-                foreach (var report in value)
-                {
-                    _printButton.DropDownItems.Add(new ToolStripMenuItem {Text = report.Title, Tag = report});
-                }
-            }
-        }
 
         public List<Account> Accounts
         {

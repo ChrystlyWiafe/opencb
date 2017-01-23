@@ -14,7 +14,6 @@ using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain;
-using OpenCBS.Extension.ExcelReports;
 using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
@@ -67,20 +66,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
             accounts.AddRange(_accounts);
             _view.Accounts = accounts;
 
-            var directory = TechnicalSettings.ReportPath;
-            if (string.IsNullOrEmpty(directory))
-            {
-                directory = AppDomain.CurrentDomain.BaseDirectory;
-                if (string.IsNullOrEmpty(directory)) return;
-            }
-            directory = Path.Combine(directory, "Reports");
-            directory = Path.Combine(directory, "Excel");
-            if (!Directory.Exists(directory)) return;
-
-            _view.Reports = Directory.GetFiles(directory, "*.zip")
-                .Select(file => new Report(file))
-                .Where(report => report.AttachmentPoint == "Bookings")
-                .ToList();
             OnCheck();
         }
 
@@ -174,8 +159,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 
         public void OnPrint(object report)
         {
-            Initializer.ShowReport((Report) report,
-                new Dictionary<string, object> {{"BookingId", _view.SelectedBooking.Id}});
+            //Initializer.ShowReport((Report)report,
+            //    new Dictionary<string, object> { { "BookingId", _view.SelectedBooking.Id } });
         }
 
         public void Refresh()
