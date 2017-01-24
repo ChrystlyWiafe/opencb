@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using OpenCBS.GUI.UserControl;
 using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
@@ -12,15 +13,30 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
         public PaymentMethodForm()
         {
             InitializeComponent();
-            DisplayaddPaymentMethods();
+            DisplayPaymentMethods();
         }
 
-        public void DisplayaddPaymentMethods()
+        public void DisplayPaymentMethods()
         {
             ClearListOfPaymentMethods();
 
-            _paymentMethods = Services.GetPaymentMethodServices().GetAllNonCashsPaymentMethods();
+            SetLocalPaymentMethods();
 
+            SetPaymentMethodToListView();
+        }
+
+        private void ClearListOfPaymentMethods()
+        {
+            _listViewPaymentMethods.Items.Clear();
+        }
+
+        private void SetLocalPaymentMethods()
+        {
+            _paymentMethods = Services.GetPaymentMethodServices().GetAllNonCashsPaymentMethods();
+        }
+
+        private void SetPaymentMethodToListView()
+        {
             foreach (var paymentMethod in _paymentMethods)
             {
                 var item = new ListViewItem(paymentMethod.Id.ToString()) { Tag = paymentMethod };
@@ -30,57 +46,65 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 _listViewPaymentMethods.Items.Add(item);
             }
         }
-
-        private void ClearListOfPaymentMethods()
-        {
-            _listViewPaymentMethods.Items.Clear();
-        }
-
-        private void SetPaymentMethods()
-        {
-            
-        }
-
-        private void _buttonClose_Click(object sender, System.EventArgs e)
-        {
-            Close();
-        }
-
-        private void _buttonAdd_Click(object sender, System.EventArgs e)
+        
+        private void AddButtonClick(object sender, EventArgs e)
         {
             var addPaymentMethodForm = new PaymentMethodAddEdit(_paymentMethods);
             addPaymentMethodForm.ShowDialog();
 
-            DisplayaddPaymentMethods();
+            DisplayPaymentMethods();
         }
 
-        private void _buttonEdit_Click(object sender, System.EventArgs e)
+        private void EditButtonClick(object sender, EventArgs e)
         {
-            if (_listViewPaymentMethods.SelectedItems.Count != 0)
+            if (SomePaymentMethodSelected())
             {
-                EditSelectedEntryFee();
-                return;
+                EditPaymentMethod();
             }
+            else
+            {
+                MessageBox.Show(GetString("needToSelectPaymentMethod"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
-            MessageBox.Show(GetString("needToSelectPaymentMethod"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private bool SomePaymentMethodSelected()
+        {
+            return _listViewPaymentMethods.SelectedItems.Count != 0;
+        }
+        
+        private void EditPaymentMethod()
+        {
+            EditSelectedEntryFee();
+
+            DisplayPaymentMethods();
         }
 
         private void EditSelectedEntryFee()
         {
-            var editPaymentMethodForm = new PaymentMethodAddEdit((AccountingPaymentMethod)_listViewPaymentMethods.SelectedItems[0].Tag, _paymentMethods);
+            var firstSelectedPaymentMethod = GetFirstSelectedPaymentMethod();
+            var editPaymentMethodForm = new PaymentMethodAddEdit(firstSelectedPaymentMethod, _paymentMethods);
             editPaymentMethodForm.ShowDialog();
-
-            DisplayaddPaymentMethods();
         }
 
-        private void _listViewPaymentMethods_MouseDoubleClick(object sender, MouseEventArgs e)
+        private AccountingPaymentMethod GetFirstSelectedPaymentMethod()
+        {
+            return (AccountingPaymentMethod)_listViewPaymentMethods.SelectedItems[0].Tag;
+        }
+
+        private void DoubleClickToListView(object sender, MouseEventArgs e)
         {
             EditSelectedEntryFee();
+
+            DisplayPaymentMethods();
         }
 
-        private void _buttonDelete_Click(object sender, System.EventArgs e)
+        private void DeleteButtonClick(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
+        }
+        private void CloseButtonClick(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

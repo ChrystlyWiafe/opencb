@@ -40,12 +40,17 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void SaveButtonClick(object sender, System.EventArgs e)
         {
-            var operationComplete = _paymentMethod == null
+            var operationComplete = IsItNewPaymentMethod()
                 ? SaveNewPaymentMethod()
                 : UpdatePaymentMethod();
 
             if (operationComplete)
                 Close();
+        }
+
+        private bool IsItNewPaymentMethod()
+        {
+            return _paymentMethod == null;
         }
 
         private bool SaveNewPaymentMethod()
@@ -54,6 +59,28 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 return false;
 
             Services.GetPaymentMethodServices().Save(GetNewPaymentMethodFromForm());
+
+            return true;
+        }
+
+        private bool ValidatePaymentMethod()
+        {
+            _labelError.Text = string.Empty;
+            _buttonSave.Enabled = true;
+
+            var paymentMethod = GetNewPaymentMethodFromForm();
+            if (string.IsNullOrEmpty(paymentMethod.Name))
+            {
+                _labelError.Text = GetString("nameEmpty");
+                _buttonSave.Enabled = false;
+                return false;
+            }
+            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name && x.Description == paymentMethod.Description) != null)
+            {
+                _labelError.Text = GetString("alreadyHave");
+                _buttonSave.Enabled = false;
+                return false;
+            }
 
             return true;
         }
@@ -71,42 +98,23 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private bool UpdatePaymentMethod()
         {
-            var paymentMethod = GetNewPaymentMethodFromForm();
-
             if (!ValidatePaymentMethod())
                 return false;
 
-            _paymentMethod.Name = paymentMethod.Name;
-            _paymentMethod.Description = paymentMethod.Description;
+            SetNewValuesToCurrentPaymentMethod();
 
             Services.GetPaymentMethodServices().Update(_paymentMethod);
 
             return true;
         }
 
-        private bool ValidatePaymentMethod()
+        private void SetNewValuesToCurrentPaymentMethod()
         {
-            _labelError.Text = string.Empty;
-            _buttonSave.Enabled = true;
-
             var paymentMethod = GetNewPaymentMethodFromForm();
-
-            if (string.IsNullOrEmpty(paymentMethod.Name))
-            {
-                _labelError.Text = GetString("nameEmpty");
-                _buttonSave.Enabled = false;
-                return false;
-            }
-            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name && x.Description == paymentMethod.Description) != null)
-            {
-                _labelError.Text = GetString("alreadyHave");
-                _buttonSave.Enabled = false;
-                return false;
-            }
-
-            return true;
+            _paymentMethod.Name = paymentMethod.Name;
+            _paymentMethod.Description = paymentMethod.Description;
         }
-
+        
         private void PaymentMethodChanged(object sender, System.EventArgs e)
         {
             ValidatePaymentMethod();
