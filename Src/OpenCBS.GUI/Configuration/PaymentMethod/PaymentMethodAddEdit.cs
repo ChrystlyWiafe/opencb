@@ -15,7 +15,8 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             _paymentMethods = paymentMethods;
             InitializeComponent();
 
-//            Text = GetString("titleAdd");
+            // ReSharper disable once VirtualMemberCallInContructor
+            Text = GetString("titleAdd");
         }
 
         public PaymentMethodAddEdit(AccountingPaymentMethod paymentMethod, List<AccountingPaymentMethod> paymentMethods)
@@ -26,7 +27,10 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
             FillFieldsPaymentMethod(paymentMethod);
 
-//            Text = GetString("titleAdd");
+            ValidatePaymentMethod();
+
+            // ReSharper disable once VirtualMemberCallInContructor
+            Text = GetString("titleEdit");
         }
 
         private void FillFieldsPaymentMethod(AccountingPaymentMethod paymentMethod)
@@ -38,7 +42,9 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void SaveButtonClick(object sender, System.EventArgs e)
         {
-            var operationComplete = _paymentMethod == null ? SaveNewPaymentMethod() : UpdatePaymentMethod();
+            var operationComplete = _paymentMethod == null
+                ? SaveNewPaymentMethod()
+                : UpdatePaymentMethod();
 
             if (operationComplete)
                 Close();
@@ -46,29 +52,30 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private bool SaveNewPaymentMethod()
         {
-            var paymentMethod = new AccountingPaymentMethod
-            {
-                Name = _textBoxName.Text,
-                Description = _descriptionRichTextBox.Text
-            };
-
-            if (!ValidateEntryFee(paymentMethod))
+            if (!ValidatePaymentMethod())
                 return false;
 
-            Services.GetPaymentMethodServices().Save(paymentMethod);
+            Services.GetPaymentMethodServices().Save(GetNewPaymentMethodFromForm());
 
             return true;
         }
 
-        private bool UpdatePaymentMethod()
+        private AccountingPaymentMethod GetNewPaymentMethodFromForm()
         {
-            var paymentMethod = new AccountingPaymentMethod
+            return new AccountingPaymentMethod
             {
                 Name = _textBoxName.Text,
-                Description = _descriptionRichTextBox.Text
+                Description = _descriptionRichTextBox.Text == ""
+                    ? null
+                    : _descriptionRichTextBox.Text
             };
+        }
 
-            if (!ValidateEntryFee(paymentMethod))
+        private bool UpdatePaymentMethod()
+        {
+            var paymentMethod = GetNewPaymentMethodFromForm();
+
+            if (!ValidatePaymentMethod())
                 return false;
 
             _paymentMethod.Name = paymentMethod.Name;
@@ -79,20 +86,22 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             return true;
         }
 
-        private bool ValidateEntryFee(AccountingPaymentMethod paymentMethod)
+        private bool ValidatePaymentMethod()
         {
             _labelError.Text = string.Empty;
             _buttonSave.Enabled = true;
 
+            var paymentMethod = GetNewPaymentMethodFromForm();
+
             if (string.IsNullOrEmpty(paymentMethod.Name))
             {
-//                _labelError.Text = GetString("nameEmpty");
+                _labelError.Text = GetString("nameEmpty");
                 _buttonSave.Enabled = false;
                 return false;
             }
-            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name) != null)
+            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name && x.Description == paymentMethod.Description) != null)
             {
-//                _labelError.Text = GetString("nameEmpty");
+                _labelError.Text = GetString("alreadyHave");
                 _buttonSave.Enabled = false;
                 return false;
             }
@@ -100,14 +109,9 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             return true;
         }
 
-        private void NameChanged(object sender, System.EventArgs e)
+        private void PaymentMethodChanged(object sender, System.EventArgs e)
         {
-            var paymentMethod = new AccountingPaymentMethod
-            {
-                Name = _textBoxName.Text
-            };
-
-            ValidateEntryFee(paymentMethod);
+            ValidatePaymentMethod();
         }
     }
 }

@@ -187,6 +187,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoanSharesForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="resx\PaymentMethodAddEdit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentMethodAddEdit.resx</DependentUpon>
+    </Compile>
+    <Compile Include="resx\PaymentMethodForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentMethodForm.resx</DependentUpon>
+    </Compile>
     <Compile Include="resx\ReassingContract.Designer.cs" />
     <Compile Include="resx\EntryFeeAddEdit.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -273,7 +283,24 @@
     <EmbeddedResource Include="resx\EntryFeesForm.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EntryFeesForm.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="resx\PaymentMethodAddEdit.es-Es.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodAddEdit.fr.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodAddEdit.pt.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodAddEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentMethodAddEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resx\PaymentMethodAddEdit.ru-RU.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodForm.es.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodForm.fr.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodForm.pt.resx" />
+    <EmbeddedResource Include="resx\PaymentMethodForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentMethodForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resx\PaymentMethodForm.ru-RU.resx" />
     <EmbeddedResource Include="resx\PersonUserControlCountries.pt.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

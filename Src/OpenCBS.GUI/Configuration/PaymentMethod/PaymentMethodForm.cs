@@ -5,7 +5,7 @@ using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 
 namespace OpenCBS.GUI.Configuration.PaymentMethod
 {
-    public partial class PaymentMethodForm : SweetBaseForm // todo transalte
+    public partial class PaymentMethodForm : SweetBaseForm
     {
         private List<AccountingPaymentMethod> _paymentMethods;
 
@@ -52,8 +52,9 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 return;
             }
 
-//            MessageBox.Show(GetString("needToSelectFee"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(GetString("needToSelectPaymentMethod"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         private void EditSelectedEntryFee()
         {
             var editPaymentMethodForm = new PaymentMethodAddEdit((AccountingPaymentMethod)_listViewPaymentMethods.SelectedItems[0].Tag, _paymentMethods);
