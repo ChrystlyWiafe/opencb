@@ -27,8 +27,6 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
             FillFieldsPaymentMethod(paymentMethod);
 
-            ValidatePaymentMethod();
-
             // ReSharper disable once VirtualMemberCallInContructor
             Text = GetString("titleEdit");
         }

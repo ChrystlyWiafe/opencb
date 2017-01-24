@@ -17,7 +17,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         public void DisplayaddPaymentMethods()
         {
-            _listViewPaymentMethods.Items.Clear();
+            ClearListOfPaymentMethods();
 
             _paymentMethods = Services.GetPaymentMethodServices().GetAllNonCashsPaymentMethods();
 
@@ -29,6 +29,16 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
                 _listViewPaymentMethods.Items.Add(item);
             }
+        }
+
+        private void ClearListOfPaymentMethods()
+        {
+            _listViewPaymentMethods.Items.Clear();
+        }
+
+        private void SetPaymentMethods()
+        {
+            
         }
 
         private void _buttonClose_Click(object sender, System.EventArgs e)
@@ -66,6 +76,11 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
         private void _listViewPaymentMethods_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             EditSelectedEntryFee();
+        }
+
+        private void _buttonDelete_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
