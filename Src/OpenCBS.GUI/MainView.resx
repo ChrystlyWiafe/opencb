@@ -308,7 +308,7 @@
     <value>206, 22</value>
   </data>
   <data name="paymentMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Payment Method</value>
+    <value>Payment Methods</value>
   </data>
   <data name="toolStripSeparatorConfig2.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 6</value>
@@ -1451,6 +1451,12 @@
   <data name="&gt;&gt;toolStripMenuItemInstallmentTypes.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;paymentMethodToolStripMenuItem.Name" xml:space="preserve">
+    <value>paymentMethodToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;paymentMethodToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparatorConfig2.Name" xml:space="preserve">
     <value>toolStripSeparatorConfig2</value>
   </data>
@@ -1755,12 +1761,6 @@
     <value>visitOpenCBScomToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;visitOpenCBScomToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodToolStripMenuItem.Name" xml:space="preserve">
-    <value>paymentMethodToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

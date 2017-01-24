@@ -83,6 +83,7 @@ namespace OpenCBS.GUI
             this.menuItemLocations = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFundingLines = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInstallmentTypes = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparatorConfig2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
             this.currenciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,7 +135,6 @@ namespace OpenCBS.GUI
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getHelpFromForumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitOpenCBScomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paymentMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusBar.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -332,6 +332,12 @@ namespace OpenCBS.GUI
             this.toolStripMenuItemInstallmentTypes.Name = "toolStripMenuItemInstallmentTypes";
             resources.ApplyResources(this.toolStripMenuItemInstallmentTypes, "toolStripMenuItemInstallmentTypes");
             this.toolStripMenuItemInstallmentTypes.Click += new System.EventHandler(this.toolStripMenuItemInstallmentTypes_Click);
+            // 
+            // paymentMethodToolStripMenuItem
+            // 
+            this.paymentMethodToolStripMenuItem.Name = "paymentMethodToolStripMenuItem";
+            resources.ApplyResources(this.paymentMethodToolStripMenuItem, "paymentMethodToolStripMenuItem");
+            this.paymentMethodToolStripMenuItem.Click += new System.EventHandler(this.paymentMethodToolStripMenuItem_Click);
             // 
             // toolStripSeparatorConfig2
             // 
@@ -677,12 +683,6 @@ namespace OpenCBS.GUI
             this.visitOpenCBScomToolStripMenuItem.Name = "visitOpenCBScomToolStripMenuItem";
             resources.ApplyResources(this.visitOpenCBScomToolStripMenuItem, "visitOpenCBScomToolStripMenuItem");
             this.visitOpenCBScomToolStripMenuItem.Click += new System.EventHandler(this.visitOpenCBScomToolStripMenuItem_Click);
-            // 
-            // paymentMethodToolStripMenuItem
-            // 
-            this.paymentMethodToolStripMenuItem.Name = "paymentMethodToolStripMenuItem";
-            resources.ApplyResources(this.paymentMethodToolStripMenuItem, "paymentMethodToolStripMenuItem");
-            this.paymentMethodToolStripMenuItem.Click += new System.EventHandler(this.paymentMethodToolStripMenuItem_Click);
             // 
             // MainView
             // 
