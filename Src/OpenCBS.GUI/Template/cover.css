@@ -113,6 +113,7 @@ A.link_popup
 {
 	cursor:default;
 	text-decoration:none;
+    /* ReSharper disable once InvalidValue */
 	color:'#3333cc';
 	font-weight:normal;
 }
@@ -121,6 +122,7 @@ A.link_popup_over
 {
 	cursor:hand;
 	text-decoration:underline;
+    /* ReSharper disable once InvalidValue */
 	color:'#3333cc';
 }
 
@@ -140,6 +142,7 @@ SPAN.description
 {	
 	width:100%;
 	text-align:justify;
+    /* ReSharper disable once InvalidValue */
 	text-justify:newspaper;
 	text-overflow:ellipsis;
 	overflow :hidden;	
@@ -281,11 +284,13 @@ class popup_curved
 
 .list_content_enter
 {
+    /* ReSharper disable once InvalidValue */
 	background-color:'#F8F8F8';
 }
 
 .list_content_clicked
 {
+    /* ReSharper disable once InvalidValue */
 	background-color:'#DDEEFF';
 }
 
