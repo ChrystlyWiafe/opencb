@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.View;
+using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.ArchitectureV2.Accounting.View
 {

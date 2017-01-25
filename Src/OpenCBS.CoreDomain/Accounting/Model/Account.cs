@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenCBS.ArchitectureV2.Accounting.Model
+namespace OpenCBS.CoreDomain.Accounting.Model
 {
     public enum AccountType : byte
     {

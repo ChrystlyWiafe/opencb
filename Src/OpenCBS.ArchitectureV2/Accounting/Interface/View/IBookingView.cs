@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Interface.View;
 using OpenCBS.CoreDomain;
+using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Interface.View
 {

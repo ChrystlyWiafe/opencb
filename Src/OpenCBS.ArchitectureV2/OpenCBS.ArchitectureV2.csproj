@@ -137,12 +137,6 @@
     <Compile Include="Accounting\Message\AccountSavedMessage.cs" />
     <Compile Include="Accounting\Message\AddBookingMessage.cs" />
     <Compile Include="Accounting\Message\BookingSavedMessage.cs" />
-    <Compile Include="Accounting\Model\Account.cs" />
-    <Compile Include="Accounting\Model\AccountMovement.cs" />
-    <Compile Include="Accounting\Model\Balance.cs" />
-    <Compile Include="Accounting\Model\Booking.cs" />
-    <Compile Include="Accounting\Model\BookingBase.cs" />
-    <Compile Include="Accounting\Model\BookingEntry.cs" />
     <Compile Include="Accounting\Presenter\AccountMovementsPresenter.cs" />
     <Compile Include="Accounting\Presenter\AccountPresenter.cs" />
     <Compile Include="Accounting\Presenter\AccountsPresenter.cs" />

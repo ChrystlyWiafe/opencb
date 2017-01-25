@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Accounting.Service;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.GUI.UserControl;
 using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using OpenCBS.ArchitectureV2.Accounting.Model;
+using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Service
 {

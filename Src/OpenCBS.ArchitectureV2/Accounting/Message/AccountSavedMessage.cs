@@ -1,4 +1,4 @@
-﻿using OpenCBS.ArchitectureV2.Accounting.Model;
+﻿using OpenCBS.CoreDomain.Accounting.Model;
 using TinyMessenger;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Message

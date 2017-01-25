@@ -1,4 +1,4 @@
-﻿using OpenCBS.ArchitectureV2.Accounting.Model;
+﻿using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.ArchitectureV2.Accounting.CommandData
 {

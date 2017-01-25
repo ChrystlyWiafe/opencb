@@ -3,10 +3,10 @@ using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Presenter;
+using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {

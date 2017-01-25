@@ -7,13 +7,13 @@ using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter

@@ -5,8 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.CoreDomain;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.Shared;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Repository

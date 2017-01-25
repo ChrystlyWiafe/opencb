@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
-using OpenCBS.ArchitectureV2.Accounting.Model;
 using OpenCBS.ArchitectureV2.Accounting.Repository;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Events.Saving;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Service
