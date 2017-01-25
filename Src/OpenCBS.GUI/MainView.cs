@@ -31,6 +31,7 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.View;
@@ -1021,7 +1022,7 @@ namespace OpenCBS.GUI
         {
             InitializeLoanCalculator();
         }
-
+        
         private void entryFeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frmEntryFees = new EntryFeesForm{ MdiParent = this };
@@ -1030,8 +1031,33 @@ namespace OpenCBS.GUI
 
         private void paymentMethodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmPaymentMethods = new PaymentMethodForm { MdiParent = this };
+            var frmPaymentMethods = new PaymentMethodForm {MdiParent = this};
             frmPaymentMethods.Show();
+        }
+
+        private void mnuNewBooking_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowBookingsCommandData());
+        }
+
+        private void mnuNewChartOfAccounts_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowAccountsCommandData());
+        }
+
+        private void mnuNewBalances_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowTurnoverBalancesCommandData { BalancesOnly = true });
+        }
+
+        private void mnuNewTurnoverBalances_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowTurnoverBalancesCommandData());
+        }
+
+        private void mnuNewAccountMovements_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowAccountMovementsCommandData());
         }
     }
 }

@@ -461,6 +461,42 @@
   <data name="_modulesMenuItem.Text" xml:space="preserve">
     <value>Модули</value>
   </data>
+  <data name="mnuNewBooking.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 22</value>
+  </data>
+  <data name="mnuNewBooking.Text" xml:space="preserve">
+    <value>Операции</value>
+  </data>
+  <data name="mnuNewChartOfAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 22</value>
+  </data>
+  <data name="mnuNewChartOfAccounts.Text" xml:space="preserve">
+    <value>План счетов</value>
+  </data>
+  <data name="mnuNewBalances.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 22</value>
+  </data>
+  <data name="mnuNewBalances.Text" xml:space="preserve">
+    <value>Балансовый отчет</value>
+  </data>
+  <data name="mnuNewTurnoverBalances.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 22</value>
+  </data>
+  <data name="mnuNewTurnoverBalances.Text" xml:space="preserve">
+    <value>Оборотно-сальдовая ведомость</value>
+  </data>
+  <data name="mnuNewAccountMovements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 22</value>
+  </data>
+  <data name="mnuNewAccountMovements.Text" xml:space="preserve">
+    <value>Информация о движении счета</value>
+  </data>
+  <data name="mnuAccounting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 20</value>
+  </data>
+  <data name="mnuAccounting.Text" xml:space="preserve">
+    <value>Бухгалтерия</value>
+  </data>
   <data name="reportsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
   </data>
