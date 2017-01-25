@@ -16,7 +16,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             DisplayPaymentMethods();
         }
 
-        public void DisplayPaymentMethods()
+        private void DisplayPaymentMethods()
         {
             ClearListOfPaymentMethods();
 
