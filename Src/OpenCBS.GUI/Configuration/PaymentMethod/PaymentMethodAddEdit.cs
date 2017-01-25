@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
+using OpenCBS.ArchitectureV2.Accounting.Model;
+using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.GUI.UserControl;
 using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 
@@ -9,11 +12,15 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
     {
         private AccountingPaymentMethod _paymentMethod;
         private List<AccountingPaymentMethod> _paymentMethods;
+        private Account _currentAccount;
 
         public PaymentMethodAddEdit(List<AccountingPaymentMethod> paymentMethods)
         {
             _paymentMethods = paymentMethods;
             InitializeComponent();
+
+            ConfigureAccountsView();
+            FillFieldsAccounts();
 
             // ReSharper disable once VirtualMemberCallInContructor
             Text = GetString("titleAdd");
@@ -26,9 +33,32 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             InitializeComponent();
 
             FillFieldsPaymentMethod(paymentMethod);
+            ConfigureAccountsView();
+            FillFieldsAccounts();
 
             // ReSharper disable once VirtualMemberCallInContructor
             Text = GetString("titleEdit");
+        }
+
+        private void ConfigureAccountsView()
+        {
+            _comboBoxAccounts.Format += Format;
+            _comboBoxAccounts.SelectedValueChanged += (sender, e) =>
+            {
+                _currentAccount = (Account)_comboBoxAccounts.SelectedItem;
+            };
+        }
+
+        private static void Format(object sender, ListControlConvertEventArgs e)
+        {
+            var account = ((Account)e.ListItem);
+            e.Value = account.AccountNumber + " - " + account.Label;
+        }
+
+        private void FillFieldsAccounts()
+        {
+//            var accountService = new AccountService();
+//            _comboBoxAccounts.DataSource = accountService.SelectAccounts();
         }
 
         private void FillFieldsPaymentMethod(AccountingPaymentMethod paymentMethod)

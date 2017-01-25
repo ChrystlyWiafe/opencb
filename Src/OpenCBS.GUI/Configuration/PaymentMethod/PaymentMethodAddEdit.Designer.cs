@@ -37,6 +37,8 @@
             this._textBoxId = new System.Windows.Forms.TextBox();
             this._descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this._labelError = new System.Windows.Forms.Label();
+            this._comboBoxAccounts = new OpenCBS.View.UserControl.AutocompletionComboBox.AutocompletionComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _buttonSave
@@ -84,10 +86,23 @@
             this._labelError.ForeColor = System.Drawing.SystemColors.GrayText;
             this._labelError.Name = "_labelError";
             // 
+            // _comboBoxAccounts
+            // 
+            this._comboBoxAccounts.FormattingEnabled = true;
+            resources.ApplyResources(this._comboBoxAccounts, "_comboBoxAccounts");
+            this._comboBoxAccounts.Name = "_comboBoxAccounts";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // PaymentMethodAddEdit
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this._comboBoxAccounts);
             this.Controls.Add(this._labelError);
             this.Controls.Add(this._descriptionRichTextBox);
             this.Controls.Add(this._buttonSave);
@@ -112,5 +127,7 @@
         private System.Windows.Forms.TextBox _textBoxId;
         private System.Windows.Forms.RichTextBox _descriptionRichTextBox;
         private System.Windows.Forms.Label _labelError;
+        private View.UserControl.AutocompletionComboBox.AutocompletionComboBox _comboBoxAccounts;
+        private System.Windows.Forms.Label label1;
     }
 }

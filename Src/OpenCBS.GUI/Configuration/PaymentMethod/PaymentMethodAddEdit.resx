@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="_buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 312</value>
+    <value>119, 361</value>
   </data>
   <data name="_buttonSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 36</value>
@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_buttonSave.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="_labelDescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -154,7 +154,7 @@
     <value>NoControl</value>
   </data>
   <data name="_labelDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 119</value>
+    <value>37, 167</value>
   </data>
   <data name="_labelDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_labelDescription.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="_labelName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -205,13 +205,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_labelName.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="_textBoxName.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 79</value>
   </data>
   <data name="_textBoxName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+    <value>245, 20</value>
   </data>
   <data name="_textBoxName.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -226,7 +226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_textBoxName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="_labelId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_labelId.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="_textBoxId.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -265,7 +265,7 @@
     <value>119, 39</value>
   </data>
   <data name="_textBoxId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+    <value>245, 20</value>
   </data>
   <data name="_textBoxId.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -280,13 +280,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_textBoxId.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="_descriptionRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 149</value>
+    <value>40, 197</value>
   </data>
   <data name="_descriptionRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 136</value>
+    <value>324, 136</value>
   </data>
   <data name="_descriptionRichTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -304,7 +304,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_descriptionRichTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="_labelError.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +316,7 @@
     <value>NoControl</value>
   </data>
   <data name="_labelError.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 361</value>
+    <value>4, 405</value>
   </data>
   <data name="_labelError.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -334,6 +334,57 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_labelError.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_comboBoxAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 119</value>
+  </data>
+  <data name="_comboBoxAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="_comboBoxAccounts.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;_comboBoxAccounts.Name" xml:space="preserve">
+    <value>_comboBoxAccounts</value>
+  </data>
+  <data name="&gt;&gt;_comboBoxAccounts.Type" xml:space="preserve">
+    <value>OpenCBS.View.UserControl.AutocompletionComboBox.AutocompletionComboBox, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_comboBoxAccounts.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_comboBoxAccounts.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 127</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -343,7 +394,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>341, 378</value>
+    <value>404, 426</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
