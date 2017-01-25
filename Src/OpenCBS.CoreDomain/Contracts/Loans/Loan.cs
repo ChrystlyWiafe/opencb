@@ -115,6 +115,8 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
         public int? NmbOfInstallmentsMin { get; set; }
         public int? NmbOfInstallmentsMax { get; set; }
 
+        public OCurrency InitialEmi { get; set; }
+
         public int? LoanCycle { get; set; }
 
         public OAnticipatedRepaymentPenaltiesBases AnticipatedTotalRepaymentPenaltiesBase { get; set; }
