@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Repository;
 using OpenCBS.ArchitectureV2.Interface.View;
 using OpenCBS.CoreDomain.Accounting.Model;
 

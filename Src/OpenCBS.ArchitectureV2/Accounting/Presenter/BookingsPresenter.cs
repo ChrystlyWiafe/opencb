@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
-using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
-using OpenCBS.Shared.Settings;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {
     public class BookingsPresenter : IBookingsPresenter, IBookingsPresenterCallbacks
     {
         private readonly IBookingsView _view;
-        private readonly IBookingService _bookingService;
+        private readonly BookingService _bookingService;
         private readonly ITranslationService _translationService;
         private readonly IApplicationController _applicationController;
         private List<Account> _accounts;
@@ -33,7 +30,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 
         public BookingsPresenter(
             IBookingsView view,
-            IBookingService bookingService,
+            BookingService bookingService,
             ITranslationService translationService,
             IApplicationController applicationController)
         {

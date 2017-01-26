@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.GUI.UserControl;
 using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
@@ -57,8 +56,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void FillFieldsAccounts()
         {
-//            var accountService = new AccountService();
-//            _comboBoxAccounts.DataSource = accountService.SelectAccounts();
+            _comboBoxAccounts.DataSource = Services.GetAccountService().SelectAccounts();
         }
 
         private void FillFieldsPaymentMethod(AccountingPaymentMethod paymentMethod)

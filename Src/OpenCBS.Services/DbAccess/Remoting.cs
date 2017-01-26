@@ -234,6 +234,16 @@ namespace OpenCBS.Services
             throw new NotImplementedException();
         }
 
+        public AccountService GetAccountService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BookingService GetBookingService()
+        {
+            throw new NotImplementedException();
+        }
+
         public CollateralProductServices GetCollateralProductServices()
         {
             // TO DO: This could be later implemented for remoting

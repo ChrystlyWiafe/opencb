@@ -1,25 +1,25 @@
 ﻿using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Presenter;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Manager.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {
     public class AccountPresenter : IAccountPresenter, IAccountPresenterCallbacks
     {
         private readonly IAccountView _view;
-        private readonly IAccountRepository _accountRepository;
+        private readonly AccountRepository _accountRepository;
         private readonly IApplicationController _applicationController;
         private bool _isNew;
 
         public AccountPresenter(
             IAccountView view,
-            IAccountRepository accountRepository,
+            AccountRepository accountRepository,
             IApplicationController applicationController)
         {
             _view = view;

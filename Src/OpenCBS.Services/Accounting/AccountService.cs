@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
-using OpenCBS.ArchitectureV2.Accounting.Repository;
+using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Manager.Accounting;
 
-namespace OpenCBS.ArchitectureV2.Accounting.Service
+namespace OpenCBS.Services.Accounting
 {
-    public class AccountService : IAccountService
+    public class AccountService : MarshalByRefObject
     {
-        private readonly IAccountRepository _accountRepository;
+        private readonly AccountRepository _accountRepository;
 
-        public AccountService()
+        public AccountService(User user)
         {
-            _accountRepository = new AccountRepository();
+            _accountRepository = new AccountRepository(user);
         }
 
         public void SaveAccount(Account entity)

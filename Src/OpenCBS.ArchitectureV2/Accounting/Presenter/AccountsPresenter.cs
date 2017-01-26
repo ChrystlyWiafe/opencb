@@ -1,25 +1,25 @@
 ﻿using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain;
+using OpenCBS.Manager.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {
     public class AccountsPresenter : IAccountsPresenter, IAccountsPresenterCallbacks
     {
         private readonly IAccountsView _view;
-        private readonly IAccountRepository _accountRepository;
+        private readonly AccountRepository _accountRepository;
         private readonly IApplicationController _applicationController;
         private bool _addAction;
         private bool _editAction;
         private bool _deleteAction;
 
         public AccountsPresenter(IAccountsView view,
-            IAccountRepository accountRepository,
+            AccountRepository accountRepository,
             IApplicationController applicationController)
         {
             _view = view;

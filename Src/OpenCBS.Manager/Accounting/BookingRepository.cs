@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
-using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
-using OpenCBS.Services;
 
-namespace OpenCBS.ArchitectureV2.Accounting.Repository
+namespace OpenCBS.Manager.Accounting
 {
-    public class BookingRepository : IBookingRepository
+    public class BookingRepository : Manager
     {
-        private readonly IConnectionProvider _connectionProvider;
+        private readonly SqlConnection _connection;
 
-        public BookingRepository(IConnectionProvider connectionProvider)
+        public BookingRepository(User pUser) : base(pUser)
         {
-            _connectionProvider = connectionProvider;
+            _connection = CoreDomain.DatabaseConnection.GetConnection();
         }
 
-        public void Save(IEnumerable<Booking> entity, IDbTransaction tx = null)
+        public void Save(IEnumerable<Booking> entity, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                var rows = entity.Select(booking => booking.Map()).ToList();
+            var rows = entity.Select(booking => booking.Map()).ToList();
                 const string query = @"
                     insert into
                         dbo.Booking 
@@ -68,23 +64,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                         , @Doc2
                     )
                     ";
-                connection.Execute(query, rows, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+                tx.Connection.Execute(query, rows, tx);
         }
 
-        public int Save(Booking entity, IDbTransaction tx = null)
+        public int Save(Booking entity, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     insert into
                         dbo.Booking 
                     (
@@ -129,24 +114,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                         , @Doc2
                     )
                     ";
-                return connection.Query<int>(query, entity.Map(), tx).FirstOrDefault();
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            return tx.Connection.Query<int>(query, entity.Map(), tx).FirstOrDefault();
         }
 
-        public void Update(IEnumerable<Booking> entity, IDbTransaction tx = null)
+        public void Update(IEnumerable<Booking> entity, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                var rows = entity.Select(i => i.Map()).ToList();
-                const string query = @"
+            var rows = entity.Select(i => i.Map()).ToList();
+            const string query = @"
                     update 
                         dbo.Booking 
                     set 
@@ -167,23 +141,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         Id = @Id
                     ";
-                connection.Execute(query, rows, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, rows, tx);
         }
 
-        public void Delete(int bookingId, IDbTransaction tx = null)
+        public void Delete(int bookingId, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     update 
                         dbo.Booking 
                     set 
@@ -192,23 +155,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         Id = @bookingId
                     ";
-                connection.Execute(query, new { bookingId }, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, new {bookingId}, tx);
         }
 
-        public void DeleteByLoanEvent(int loanEventId, IDbTransaction tx = null)
+        public void DeleteByLoanEvent(int loanEventId, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     update 
                         dbo.Booking 
                     set 
@@ -217,23 +169,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         LoanEventId = @loanEventId 
                     ";
-                connection.Execute(query, new {loanEventId}, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, new {loanEventId}, tx);
         }
 
-        public void DeleteBySavingEvent(int savingEventId, IDbTransaction tx = null)
+        public void DeleteBySavingEvent(int savingEventId, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     update 
                         dbo.Booking 
                     set 
@@ -242,22 +183,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         SavingEventId = @savingEventId
                     ";
-                connection.Execute(query, new {savingEventId}, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, new {savingEventId}, tx);
         }
 
-        public Booking Get(int id)
+        public Booking Get(int id, IEnumerable<User> users, IDbTransaction tx)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         b.*
                         , coalesce(p.last_name, g.name, c.name, '-') ClientLastName
@@ -275,22 +206,19 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         b.Id = @id
                     ";
-                var row = connection.Query<BookingDto>(query, new { id }).Single();
-                var accounts = SelectAllAccounts().ToList();
-                var users = ServicesProvider.GetInstance().GetUserServices().FindAll(true);
-                var booking = row.Map();
-                booking.Credit = accounts.FirstOrDefault(i => i.AccountNumber == row.CreditAccount);
-                booking.Debit = accounts.FirstOrDefault(i => i.AccountNumber == row.DebitAccount);
-                booking.User = users.FirstOrDefault(i => i.Id == row.UserId);
-                return booking;
-            }
+            var row = tx.Connection.Query<BookingDto>(query, new {id}, tx).Single();
+            var accounts = SelectAllAccounts(tx).ToList();
+            var booking = row.Map();
+            booking.Credit = accounts.FirstOrDefault(i => i.AccountNumber == row.CreditAccount);
+            booking.Debit = accounts.FirstOrDefault(i => i.AccountNumber == row.DebitAccount);
+            booking.User = users.FirstOrDefault<User>(i => i.Id == row.UserId);
+            return booking;
         }
 
-        public IEnumerable<BookingDto> SelectBookings(DateTime from, DateTime to, Account debit, Account credit)
+        public IEnumerable<BookingDto> SelectBookings(DateTime from, DateTime to, Account debit, Account credit,
+            IDbTransaction transaction)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         b.*
                         , coalesce(p.last_name, g.name, c.name, '-') ClientLastName
@@ -319,23 +247,20 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                         and ca.lft >= @creditLeft and ca.rgt <= @creditRight
 
                     ";
-                return connection.Query<BookingDto>(query, new
-                {
-                    from,
-                    to,
-                    debitLeft = debit.Lft,
-                    debitRight = debit.Rgt,
-                    creditLeft = credit.Lft,
-                    creditRight = credit.Rgt
-                });
-            }
+            return transaction.Connection.Query<BookingDto>(query, new
+            {
+                from,
+                to,
+                debitLeft = debit.Lft,
+                debitRight = debit.Rgt,
+                creditLeft = credit.Lft,
+                creditRight = credit.Rgt
+            }, transaction);
         }
 
-        public IEnumerable<BookingDto> SelectBookings(DateTime from, DateTime to)
+        public IEnumerable<BookingDto> SelectBookings(DateTime from, DateTime to, IDbTransaction tx)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         b.*
                         , coalesce(p.last_name, g.name, c.name, '-') ClientLastName
@@ -361,15 +286,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                         convert(date, b.Date) >= @from 
                         and convert(date, b.Date) <= @to
                     ";
-                return connection.Query<BookingDto>(query, new { from, to });
-            }
+            return tx.Connection.Query<BookingDto>(query, new {from, to}, tx);
         }
 
-        public decimal GetAccountBalance(DateTime date, Account account)
+        public decimal GetAccountBalance(DateTime date, Account account, IDbTransaction tx)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         case 
                             when a.is_debit = 1
@@ -418,15 +340,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         a.account_number = @number
                     ";
-                return connection.Query<decimal>(query, new { date, number = account.AccountNumber }).FirstOrDefault();
-            }
+            return tx.Connection.Query<decimal>(query, new {date, number = account.AccountNumber}, tx).FirstOrDefault();
         }
 
-        public IEnumerable<Account> SelectAllAccounts()
+        public IEnumerable<Account> SelectAllAccounts(IDbTransaction tx)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         account_number AccountNumber
                         , label Label
@@ -441,11 +360,11 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                         , rgt Rgt
                     from 
                         dbo.Accounts";
-                return connection.Query<Account>(query);
-            }
+            return tx.Connection.Query<Account>(query, null, tx);
         }
 
-        public List<AccountMovement> GetAccountMovements(DateTime @from, DateTime to, Account account = null)
+        public List<AccountMovement> GetAccountMovements(DateTime @from, DateTime to, IDbTransaction tx,
+            Account account = null)
         {
             const string query = @"
                 select 
@@ -485,18 +404,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                 ";
             var lft = account == null ? 0 : account.Lft;
             var rgt = account == null ? int.MaxValue : account.Rgt;
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                return connection.Query<AccountMovement>(query, new { from, to, lft, rgt }).ToList();
-            }
+            return tx.Connection.Query<AccountMovement>(query, new {from, to, lft, rgt}, tx).ToList();
         }
 
-        public void CloseAccount(DateTime date, Account account, IDbTransaction tx = null)
+        public void CloseAccount(DateTime date, Account account, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     update 
                         dbo.Accounts 
                     set 
@@ -504,23 +417,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         account_number = @accountNumber
                     ";
-                connection.Execute(query, new { date, accountNumber = account.AccountNumber }, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, new {date, accountNumber = account.AccountNumber}, tx);
         }
 
-        public void RecoverAccount(Account account, IDbTransaction tx = null)
+        public void RecoverAccount(Account account, IDbTransaction tx)
         {
-            var connection = tx == null ? _connectionProvider.GetConnection() : tx.Connection;
-            try
-            {
-                const string query = @"
+            const string query = @"
                     update 
                         dbo.Accounts 
                     set 
@@ -528,22 +430,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         account_number = @accountNumber
                     ";
-                connection.Execute(query, new { accountNumber = account.AccountNumber }, tx);
-            }
-            finally
-            {
-                if (tx == null)
-                {
-                    connection.Dispose();
-                }
-            }
+            tx.Connection.Execute(query, new {accountNumber = account.AccountNumber}, tx);
         }
 
-        public int GetLoanId(int savingId)
+        public int GetLoanId(int savingId, IDbTransaction tx)
         {
-            using (var connection = _connectionProvider.GetConnection())
-            {
-                const string query = @"
+            const string query = @"
                     select 
                         loan_id 
                     from 
@@ -551,8 +443,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
                     where 
                         id = @savingId
                     ";
-                return connection.Query<int>(query, new { savingId }).FirstOrDefault();
-            }
+            return tx.Connection.Query<int>(query, new {savingId}, tx).FirstOrDefault();
         }
     }
 }

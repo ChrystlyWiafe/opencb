@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Linq;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
-using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Manager.Accounting;
+using OpenCBS.Services;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {
     public class BookingPresenter : IBookingPresenter, IBookingPresenterCallbacks
     {
         private readonly IBookingView _view;
-        private readonly IBookingService _bookingService;
-        private readonly IAccountRepository _accountRepository;
+        private readonly BookingService _bookingService;
+        private readonly AccountRepository _accountRepository;
         private readonly IApplicationController _applicationController;
 
         public BookingPresenter(
             IBookingView view,
-            IBookingService bookingService,
-            IAccountRepository accountRepository,
+            BookingService bookingService,
+            AccountRepository accountRepository,
             IApplicationController applicationController)
         {
             _view = view;
@@ -47,7 +48,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
             _view.Branches = User.CurrentUser.Branches.ToList();
             if (bookingId != null)
             {
-                var booking = _bookingService.Get(bookingId.Value);
+                var users = ServicesProvider.GetInstance().GetUserServices().FindAll(true);
+                var booking = _bookingService.Get(bookingId.Value, users);
                 _view.Booking = booking;
                 _view.Amount = booking.Amount;
                 _view.Debit = booking.Debit;

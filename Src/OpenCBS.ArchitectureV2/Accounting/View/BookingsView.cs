@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
-using OpenCBS.ArchitectureV2.Accounting.Repository;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;

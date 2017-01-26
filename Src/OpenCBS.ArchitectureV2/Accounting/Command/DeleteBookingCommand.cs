@@ -1,21 +1,21 @@
 ﻿using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Message;
-using OpenCBS.ArchitectureV2.Accounting.Service;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Command
 {
     public class DeleteBookingCommand : ArchitectureV2.Command.Command, ICommand<DeleteBookingCommandData>
     {
         private readonly ITranslationService _translationService;
-        private readonly IBookingService _bookingService;
+        private readonly BookingService _bookingService;
         private readonly IApplicationController _applicationController;
 
         public DeleteBookingCommand(
-            ITranslationService translationService, 
-            IBookingService bookingService, 
+            ITranslationService translationService,
+            BookingService bookingService, 
             IApplicationController applicationController)
             : base(applicationController)
         {

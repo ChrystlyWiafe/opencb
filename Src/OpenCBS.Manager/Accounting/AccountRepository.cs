@@ -4,20 +4,19 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.Shared;
 
-namespace OpenCBS.ArchitectureV2.Accounting.Repository
+namespace OpenCBS.Manager.Accounting
 {
-    public class AccountRepository : IAccountRepository
+    public class AccountRepository : Manager
     {
         private readonly SqlConnection _connection;
 
-        public AccountRepository()
+        public AccountRepository(User pUser) : base(pUser)
         {
-            _connection = DatabaseConnection.GetConnection();
+            _connection = CoreDomain.DatabaseConnection.GetConnection();
         }
 
         public List<Balance> GetBalances(DateTime @from, DateTime to, int branchId)
@@ -418,7 +417,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
 
         public void Save(Account entity, IDbTransaction tx = null)
         {
-            var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
+            var connection = tx == null ? CoreDomain.DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
                 var query = @"
@@ -520,7 +519,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
 
         public bool Exists(Account entity, IDbTransaction tx = null)
         {
-            var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
+            var connection = tx == null ? CoreDomain.DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
                 const string query = @"
@@ -540,7 +539,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
 
         public void Update(Account entity, IDbTransaction tx = null)
         {
-            var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
+            var connection = tx == null ? CoreDomain.DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
                 const string query = @"
@@ -567,7 +566,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.Repository
 
         public void Delete(Account entity, IDbTransaction tx = null)
         {
-            var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
+            var connection = tx == null ? CoreDomain.DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
                 var query = @"

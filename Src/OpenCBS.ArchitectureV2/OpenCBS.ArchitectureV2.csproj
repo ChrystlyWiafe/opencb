@@ -125,8 +125,6 @@
     <Compile Include="Accounting\Interface\Presenter\IBookingsPresenterCallbacks.cs" />
     <Compile Include="Accounting\Interface\Presenter\ITurnoverBalancesPresenter.cs" />
     <Compile Include="Accounting\Interface\Presenter\ITurnoverBalancesPresenterCallbacks.cs" />
-    <Compile Include="Accounting\Interface\Repository\IAccountRepository.cs" />
-    <Compile Include="Accounting\Interface\Repository\IBookingRepository.cs" />
     <Compile Include="Accounting\Interface\View\IAccountMovementsView.cs" />
     <Compile Include="Accounting\Interface\View\IAccountsView.cs" />
     <Compile Include="Accounting\Interface\View\IAccountView.cs" />
@@ -144,13 +142,6 @@
     <Compile Include="Accounting\Presenter\BookingPresenter.cs" />
     <Compile Include="Accounting\Presenter\BookingsPresenter.cs" />
     <Compile Include="Accounting\Presenter\TurnoverBalancesPresenter.cs" />
-    <Compile Include="Accounting\Repository\AccountRepository.cs" />
-    <Compile Include="Accounting\Repository\BookingDto.cs" />
-    <Compile Include="Accounting\Repository\BookingRepository.cs" />
-    <Compile Include="Accounting\Service\AccountService.cs" />
-    <Compile Include="Accounting\Service\BookingService.cs" />
-    <Compile Include="Accounting\Service\IAccountService.cs" />
-    <Compile Include="Accounting\Service\IBookingService.cs" />
     <Compile Include="Accounting\View\AccountMovements.cs">
       <SubType>Form</SubType>
     </Compile>

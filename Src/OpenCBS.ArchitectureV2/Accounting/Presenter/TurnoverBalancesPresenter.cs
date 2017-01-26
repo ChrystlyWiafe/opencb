@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
-using OpenCBS.ArchitectureV2.Accounting.Interface.Repository;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
 using OpenCBS.ArchitectureV2.Accounting.View;
@@ -11,6 +10,7 @@ using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Manager.Accounting;
 using OpenCBS.Services;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
@@ -18,13 +18,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
     public class TurnoverBalancesPresenter : ITurnoverBalancesPresenter, ITurnoverBalancesPresenterCallbacks
     {
         private readonly ITurnoverBalancesView _view;
-        private readonly IAccountRepository _repository;
+        private readonly AccountRepository _repository;
         private readonly IApplicationController _applicationController;
         private bool _balancesOnly;
 
         public TurnoverBalancesPresenter(
             ITurnoverBalancesView view,
-            IAccountRepository repository,
+            AccountRepository repository,
             IApplicationController applicationController)
         {
             _view = view;

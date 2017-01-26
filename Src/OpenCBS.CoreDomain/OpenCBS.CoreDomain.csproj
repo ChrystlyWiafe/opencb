@@ -161,6 +161,7 @@
     <Compile Include="Accounting\Model\Balance.cs" />
     <Compile Include="Accounting\Model\Booking.cs" />
     <Compile Include="Accounting\Model\BookingBase.cs" />
+    <Compile Include="Accounting\Model\BookingDto.cs" />
     <Compile Include="Accounting\Model\BookingEntry.cs" />
     <Compile Include="Accounting\PaymentMethod.cs" />
     <Compile Include="Accounting\ProvisioningRate.cs">
