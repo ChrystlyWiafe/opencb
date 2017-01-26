@@ -25,6 +25,7 @@ using System.Data;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.Manager;
 using OpenCBS.CoreDomain;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.Services
 {
@@ -65,6 +66,13 @@ namespace OpenCBS.Services
             try
             {
                 var result = _paymentMethodManager.GetAllNonCashsPaymentMethods(tx);
+                var accountService = new AccountService(_user);
+                foreach (var paymentMethod in result)
+                {
+                    if (paymentMethod.AccountNumber == null)
+                        continue;
+                    paymentMethod.Account = accountService.SelectAccountByNumber(paymentMethod.AccountNumber, tx);
+                }
 
                 if (transaction == null)
                     tx.Commit();

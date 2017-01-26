@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain.Accounting.Model;
@@ -11,7 +12,8 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
     {
         private AccountingPaymentMethod _paymentMethod;
         private List<AccountingPaymentMethod> _paymentMethods;
-        private Account _currentAccount;
+        private Account _account;
+        private List<Account> _accounts;
 
         public PaymentMethodAddEdit(List<AccountingPaymentMethod> paymentMethods)
         {
@@ -31,9 +33,9 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             _paymentMethods = paymentMethods;
             InitializeComponent();
 
-            FillFieldsPaymentMethod(paymentMethod);
             ConfigureAccountsView();
             FillFieldsAccounts();
+            FillFieldsPaymentMethod(paymentMethod);
 
             // ReSharper disable once VirtualMemberCallInContructor
             Text = GetString("titleEdit");
@@ -44,7 +46,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             _comboBoxAccounts.Format += Format;
             _comboBoxAccounts.SelectedValueChanged += (sender, e) =>
             {
-                _currentAccount = (Account)_comboBoxAccounts.SelectedItem;
+                _account = (Account)_comboBoxAccounts.SelectedItem;
             };
         }
 
@@ -56,7 +58,8 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void FillFieldsAccounts()
         {
-            _comboBoxAccounts.DataSource = Services.GetAccountService().SelectAccounts();
+            _accounts = Services.GetAccountService().SelectAccounts().ToList();
+            _comboBoxAccounts.DataSource = _accounts;
         }
 
         private void FillFieldsPaymentMethod(AccountingPaymentMethod paymentMethod)
@@ -64,6 +67,14 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             _textBoxId.Text = paymentMethod.Id.ToString();
             _textBoxName.Text = paymentMethod.Name;
             _descriptionRichTextBox.Text = paymentMethod.Description;
+            if (paymentMethod.Account != null)
+            {
+                foreach (var row in _comboBoxAccounts.Items)
+                {
+                    if (((Account)row).AccountNumber == paymentMethod.Account.AccountNumber)
+                        _comboBoxAccounts.SelectedItem = row;
+                }
+            }
         }
 
         private void SaveButtonClick(object sender, System.EventArgs e)
@@ -103,7 +114,22 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 _buttonSave.Enabled = false;
                 return false;
             }
-            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name && x.Description == paymentMethod.Description) != null)
+            if (_comboBoxAccounts.Text != ""
+                && (_comboBoxAccounts.SelectedItem == null
+                || _accounts.FirstOrDefault(x => x.AccountNumber == ((Account)_comboBoxAccounts.SelectedItem).AccountNumber) == null))
+            {
+                _labelError.Text = GetString("selectedIncorrectAccount");
+                _buttonSave.Enabled = false;
+                return false;
+            }
+            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name
+                                                 && x.Description == paymentMethod.Description
+                                                 && x.Account != null
+                                                 && x.Account.AccountNumber != null
+                                                 && paymentMethod.Account != null
+                                                 && paymentMethod.Account.AccountNumber != null
+                                                 && x.Account.AccountNumber == paymentMethod.Account.AccountNumber)
+                               != null)
             {
                 _labelError.Text = GetString("alreadyHave");
                 _buttonSave.Enabled = false;
@@ -120,7 +146,12 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 Name = _textBoxName.Text,
                 Description = _descriptionRichTextBox.Text == ""
                     ? null
-                    : _descriptionRichTextBox.Text
+                    : _descriptionRichTextBox.Text,
+                Account = _comboBoxAccounts.Text == ""
+                    ? null
+                    : _comboBoxAccounts.Text == _account.AccountNumber + @" - " + _account.Label
+                        ? _account
+                        : null
             };
         }
 
@@ -141,9 +172,15 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             var paymentMethod = GetNewPaymentMethodFromForm();
             _paymentMethod.Name = paymentMethod.Name;
             _paymentMethod.Description = paymentMethod.Description;
+            _paymentMethod.Account = paymentMethod.Account;
         }
         
         private void PaymentMethodChanged(object sender, System.EventArgs e)
+        {
+            ValidatePaymentMethod();
+        }
+
+        private void PaymentMethodChanged(object sender, KeyEventArgs e)
         {
             ValidatePaymentMethod();
         }

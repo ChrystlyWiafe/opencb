@@ -120,6 +120,9 @@
   <data name="chName.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
+  <data name="chAccountNumber.Text" xml:space="preserve">
+    <value>Número da conta</value>
+  </data>
   <data name="chDescription.Text" xml:space="preserve">
     <value>Descrição</value>
   </data>

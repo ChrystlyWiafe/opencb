@@ -842,5 +842,29 @@ namespace OpenCBS.Manager.Accounting
             ";
             return _connection.Query<Balance>(query, new { date, accountNumber }).FirstOrDefault();
         }
+
+        public Account SelectAccountByNumber(string accountNumber, IDbTransaction tx)
+        {
+            const string query = @"
+                select 
+                    account_number AccountNumber
+                    , label Label
+                    , start_date StartDate
+                    , close_date CloseDate
+                    , type Type
+                    , is_debit IsDebit
+                    , is_direct IsDirect
+                    , can_be_negative CanBeNegative
+                    , parent Parent
+                    , is_direct IsDirect
+                    , lft Lft
+                    , rgt Rgt
+                from 
+                    dbo.Accounts
+                where
+                    account_number = @accountNumber
+                ";
+            return tx.Connection.Query<Account>(query, new { accountNumber }, tx).FirstOrDefault();
+        }
     }
 }

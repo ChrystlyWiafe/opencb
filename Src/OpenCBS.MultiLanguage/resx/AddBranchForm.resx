@@ -120,6 +120,9 @@
   <data name="add" xml:space="preserve">
     <value>Add Branch</value>
   </data>
+  <data name="confirmDelete" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
   <data name="edit" xml:space="preserve">
     <value>Edit Branch</value>
   </data>

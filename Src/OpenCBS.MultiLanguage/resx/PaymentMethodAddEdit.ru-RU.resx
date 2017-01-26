@@ -123,6 +123,9 @@
   <data name="nameEmpty" xml:space="preserve">
     <value>Имя пустое</value>
   </data>
+  <data name="selectedIncorrectAccount" xml:space="preserve">
+    <value>Выбран некорректный счёт</value>
+  </data>
   <data name="titleAdd" xml:space="preserve">
     <value>Добавить метод оплаты</value>
   </data>

@@ -1347,6 +1347,9 @@
     <EmbeddedResource Include="Configuration\PaymentMethod\PaymentMethodAddEdit.ru-RU.resx">
       <DependentUpon>PaymentMethodAddEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\PaymentMethod\PaymentMethodForm.es-ES.resx">
+      <DependentUpon>PaymentMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuration\PaymentMethod\PaymentMethodForm.es.resx">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </EmbeddedResource>

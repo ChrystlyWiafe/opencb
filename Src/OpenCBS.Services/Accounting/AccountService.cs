@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
@@ -39,6 +40,30 @@ namespace OpenCBS.Services.Accounting
         public IEnumerable<Account> SelectAccounts()
         {
             return _accountRepository.SelectAllAccounts();
+        }
+
+        public Account SelectAccountByNumber(string accountNumber, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+            try
+            {
+                var result = _accountRepository.SelectAccountByNumber(accountNumber, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return result;
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
         }
 
         public void AddAccountsForLoan(string portfolioAccount, string interestAccount, string transitAccount,

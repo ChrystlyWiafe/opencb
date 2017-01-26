@@ -349,7 +349,7 @@
     <value>_comboBoxAccounts</value>
   </data>
   <data name="&gt;&gt;_comboBoxAccounts.Type" xml:space="preserve">
-    <value>OpenCBS.View.UserControl.AutocompletionComboBox.AutocompletionComboBox, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_comboBoxAccounts.Parent" xml:space="preserve">
     <value>$this</value>

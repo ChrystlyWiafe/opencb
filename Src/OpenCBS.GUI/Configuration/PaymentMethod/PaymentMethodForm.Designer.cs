@@ -33,6 +33,7 @@
             this._listViewPaymentMethods = new System.Windows.Forms.ListView();
             this.chId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAccountNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._checkBoxShowDeleted = new System.Windows.Forms.CheckBox();
             this._buttonAdd = new System.Windows.Forms.Button();
@@ -72,12 +73,13 @@
             // 
             // _listViewPaymentMethods
             // 
+            resources.ApplyResources(this._listViewPaymentMethods, "_listViewPaymentMethods");
             this._listViewPaymentMethods.BackColor = System.Drawing.SystemColors.Window;
             this._listViewPaymentMethods.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chId,
             this.chName,
+            this.chAccountNumber,
             this.chDescription});
-            resources.ApplyResources(this._listViewPaymentMethods, "_listViewPaymentMethods");
             this._listViewPaymentMethods.FullRowSelect = true;
             this._listViewPaymentMethods.GridLines = true;
             this._listViewPaymentMethods.HideSelection = false;
@@ -95,6 +97,10 @@
             // 
             resources.ApplyResources(this.chName, "chName");
             // 
+            // chAccountNumber
+            // 
+            resources.ApplyResources(this.chAccountNumber, "chAccountNumber");
+            // 
             // chDescription
             // 
             resources.ApplyResources(this.chDescription, "chDescription");
@@ -107,22 +113,22 @@
             // 
             // _buttonAdd
             // 
-            this._buttonAdd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonAdd, "_buttonAdd");
+            this._buttonAdd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this._buttonAdd.Name = "_buttonAdd";
             this._buttonAdd.Click += new System.EventHandler(this.AddButtonClick);
             // 
             // _buttonDelete
             // 
-            this._buttonDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonDelete, "_buttonDelete");
+            this._buttonDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this._buttonDelete.Name = "_buttonDelete";
             this._buttonDelete.Click += new System.EventHandler(this.DeleteButtonClick);
             // 
             // _buttonEdit
             // 
-            this._buttonEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonEdit, "_buttonEdit");
+            this._buttonEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this._buttonEdit.Name = "_buttonEdit";
             this._buttonEdit.Click += new System.EventHandler(this.EditButtonClick);
             // 
@@ -134,11 +140,13 @@
             // 
             // splitContainerMain.Panel1
             // 
+            resources.ApplyResources(this.splitContainerMain.Panel1, "splitContainerMain.Panel1");
             this.splitContainerMain.Panel1.Controls.Add(this._buttonClose);
             this.splitContainerMain.Panel1.Controls.Add(this._TitleLabel);
             // 
             // splitContainerMain.Panel2
             // 
+            resources.ApplyResources(this.splitContainerMain.Panel2, "splitContainerMain.Panel2");
             this.splitContainerMain.Panel2.Controls.Add(this.splitContainer2);
             // 
             // _buttonClose
@@ -150,8 +158,8 @@
             // 
             // _TitleLabel
             // 
-            this._TitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
             resources.ApplyResources(this._TitleLabel, "_TitleLabel");
+            this._TitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
             this._TitleLabel.ForeColor = System.Drawing.Color.White;
             this._TitleLabel.Name = "_TitleLabel";
             // 
@@ -188,5 +196,6 @@
         private System.Windows.Forms.Button _buttonAdd;
         private System.Windows.Forms.Button _buttonDelete;
         private System.Windows.Forms.Button _buttonEdit;
+        private System.Windows.Forms.ColumnHeader chAccountNumber;
     }
 }

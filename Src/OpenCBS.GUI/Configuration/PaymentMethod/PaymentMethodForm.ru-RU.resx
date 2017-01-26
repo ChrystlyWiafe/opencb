@@ -136,6 +136,9 @@
   <data name="chName.Text" xml:space="preserve">
     <value>Название</value>
   </data>
+  <data name="chAccountNumber.Text" xml:space="preserve">
+    <value>Номер счёта</value>
+  </data>
   <data name="chDescription.Text" xml:space="preserve">
     <value>Описание</value>
   </data>

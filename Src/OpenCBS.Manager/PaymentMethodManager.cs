@@ -26,7 +26,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
 using OpenCBS.CoreDomain.Accounting;
-using OpenCBS.Manager.Accounting;
+using OpenCBS.CoreDomain.Accounting.Model;
 
 namespace OpenCBS.Manager
 {
@@ -213,12 +213,14 @@ namespace OpenCBS.Manager
         {
             const string query = @"INSERT INTO dbo.PaymentMethods 
                                         (name 
-                                        , description)
+                                        , description
+                                        , accountNumber)
                                    VALUES
                                        (@Name
-                                        , @Description)";
+                                        , @Description
+                                        , @AccountNumber)";
 
-            transaction.Connection.Execute(query, paymentMethod, transaction);
+            transaction.Connection.Execute(query, new {paymentMethod.Name, paymentMethod.Description, paymentMethod.Account.AccountNumber}, transaction);
         }
 
         public void Update(PaymentMethod paymentMethod, IDbTransaction transaction)
@@ -227,22 +229,27 @@ namespace OpenCBS.Manager
                                         dbo.PaymentMethods 
                                    set
                                         name = @Name, 
-                                        description = @Description
+                                        description = @Description,
+                                        accountNumber = @AccountNumber
                                    where
                                         id = @Id";
 
-            transaction.Connection.Execute(query, paymentMethod, transaction);
+            transaction.Connection.Execute(query, new {paymentMethod.Name,
+                                                       paymentMethod.Description,
+                                                       AccountNumber = paymentMethod.Account != null ? paymentMethod.Account.AccountNumber : "",
+                                                       paymentMethod.Id}, transaction);
         }
 
         public List<PaymentMethod> GetAllNonCashsPaymentMethods(IDbTransaction transaction)
         {
             const string query = @"SELECT pm.[id]
-                                  ,[name]
-                                  ,[description]
-                                  ,[pending]
+                                  ,[name] Name
+                                  ,[description] Description
+                                  ,[pending] IsPending
+                                  ,[accountNumber] AccountNumber
                             FROM [PaymentMethods] pm
                             ORDER BY pm.[id]";
-
+            
             var result = transaction.Connection.Query<PaymentMethod>(query, null, transaction).ToList();
             return result;
         }

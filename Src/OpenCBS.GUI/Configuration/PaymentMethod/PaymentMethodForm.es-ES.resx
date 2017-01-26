@@ -117,19 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="alreadyHave" xml:space="preserve">
-    <value>Ce mode de paiement existe déjà</value>
-  </data>
-  <data name="nameEmpty" xml:space="preserve">
-    <value>Le nom est vide</value>
-  </data>
-  <data name="selectedIncorrectAccount" xml:space="preserve">
-    <value>A sélectionné un compte incorrect</value>
-  </data>
-  <data name="titleAdd" xml:space="preserve">
-    <value>Ajouter un mode de paiement</value>
-  </data>
-  <data name="titleEdit" xml:space="preserve">
-    <value>Modifier le mode de paiement</value>
+  <data name="chAccountNumber.Text" xml:space="preserve">
+    <value>Número de cuenta</value>
   </data>
 </root>

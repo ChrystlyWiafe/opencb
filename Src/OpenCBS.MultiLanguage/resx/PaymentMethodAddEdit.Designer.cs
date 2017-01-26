@@ -79,6 +79,15 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected an incorrect account.
+        /// </summary>
+        internal static string selectedIncorrectAccount {
+            get {
+                return ResourceManager.GetString("selectedIncorrectAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add payment method.
         /// </summary>
         internal static string titleAdd {

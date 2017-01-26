@@ -123,6 +123,9 @@
   <data name="nameEmpty" xml:space="preserve">
     <value>O nome está vazio</value>
   </data>
+  <data name="selectedIncorrectAccount" xml:space="preserve">
+    <value>Selecionou uma conta incorreta</value>
+  </data>
   <data name="titleAdd" xml:space="preserve">
     <value>Adicionar método de pagamento</value>
   </data>
