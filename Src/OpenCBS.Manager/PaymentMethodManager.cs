@@ -220,7 +220,11 @@ namespace OpenCBS.Manager
                                         , @Description
                                         , @AccountNumber)";
 
-            transaction.Connection.Execute(query, new {paymentMethod.Name, paymentMethod.Description, paymentMethod.Account.AccountNumber}, transaction);
+            transaction.Connection.Execute(query,
+                                           new {paymentMethod.Name,
+                                                paymentMethod.Description,
+                                                AccountNumber = paymentMethod.Account != null ? paymentMethod.Account.AccountNumber : ""},
+                                           transaction);
         }
 
         public void Update(PaymentMethod paymentMethod, IDbTransaction transaction)
