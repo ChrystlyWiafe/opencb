@@ -3603,8 +3603,9 @@ namespace OpenCBS.GUI.Clients
             credit.EconomicActivity = eacLoan.Activity;
             if (credit.InstallmentList != null && credit.InstallmentList.Count > 0)
             {
-                var firstInstallment = credit.InstallmentList.First();
-                credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
+                var firstInstallment = credit.InstallmentList.Skip(credit.GracePeriod??0).FirstOrDefault();
+                if (firstInstallment != null)
+                    credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
             }
             return credit;
         }
