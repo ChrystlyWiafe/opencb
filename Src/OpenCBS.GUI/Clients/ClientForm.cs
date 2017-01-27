@@ -1953,6 +1953,8 @@ namespace OpenCBS.GUI.Clients
             _repaymentScheduleControl.ShowOlbAfterRepayment = !ApplicationSettings.GetInstance("").IsOlbBeforeRepayment;
             DisplayListViewLoanRepayments(pCredit);
             DisplayLoanEvents(pCredit);
+            buttonLoanReschedule.Enabled = !pCredit.WrittenOff;
+            buttonManualSchedule.Enabled = !pCredit.WrittenOff;
             buttonLoanReschedule.Enabled = !pCredit.Closed;
             buttonManualSchedule.Enabled = !pCredit.Closed;
             try
@@ -1965,8 +1967,6 @@ namespace OpenCBS.GUI.Clients
             }
             SetAddTrancheButton(pCredit);
             buttonLoanRepaymentRepay.Enabled = !pCredit.Closed;
-            buttonLoanReschedule.Enabled = !pCredit.WrittenOff;
-            buttonManualSchedule.Enabled = !pCredit.WrittenOff;
             btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
             InitLoanRepaymentButtons();
         }
