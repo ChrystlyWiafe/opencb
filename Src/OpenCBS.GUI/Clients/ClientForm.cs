@@ -1982,21 +1982,10 @@ namespace OpenCBS.GUI.Clients
             buttonLoanDisbursment.Enabled = !disbursed && validated && !isNew;
             if (isNew)
             {
-                if (_client is Person)
-                {
-                    eacLoan.Activity = ((Person)_client).Activity;
-                }
-                if (_client is Corporate)
-                {
-                    eacLoan.Activity = ((Corporate)_client).Activity;
-                }
-                else
-                {
-                    eacLoan.Activity = ServicesProvider.GetInstance()
+                eacLoan.Activity = ServicesProvider.GetInstance()
                                                    .GetEconomicActivityServices()
-                                                   .FindAllEconomicActivities(false)
+                                                   .FindAllEconomicActivities(true)
                                                    .FirstOrDefault(i => !i.HasChildrens);
-                }
             }
             else
             {
