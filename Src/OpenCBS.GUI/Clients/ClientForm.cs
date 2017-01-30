@@ -3579,7 +3579,7 @@ namespace OpenCBS.GUI.Clients
             {
                 if (item.Tag is LoanEntryFee)
                 {
-                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                     credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                 }
             }
@@ -3668,7 +3668,7 @@ namespace OpenCBS.GUI.Clients
                 {
                     if (item.Tag is LoanEntryFee)
                     {
-                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                         _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                     }
                 }
@@ -7234,6 +7234,7 @@ namespace OpenCBS.GUI.Clients
                             else
                                 item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            ((LoanEntryFee) item.Tag).FeeValue = Convert.ToDecimal(item.SubItems[1].Text);
                         }
                         else
                         {
@@ -7318,17 +7319,7 @@ namespace OpenCBS.GUI.Clients
                 if (_credit.LoanEntryFeesList != null)
                 {
                     _credit.LoanEntryFeesList.Clear();
-
-                    foreach (ListViewItem item in lvEntryFees.Items)
-                    {
-                        if (item.Tag is LoanEntryFee)
-                        {
-                            _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
-                        }
-                        else if (item.Tag.Equals("TotalFees"))
-                            ShowTotalFeesInListViewByNudLoanAmount(item);
-                    }
-
+                    
                     foreach (ListViewItem item in lvEntryFees.Items)
                     {
                         if (item.Tag is LoanEntryFee)
@@ -7358,6 +7349,16 @@ namespace OpenCBS.GUI.Clients
                             item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                         }
+                    }
+
+                    foreach (ListViewItem item in lvEntryFees.Items)
+                    {
+                        if (item.Tag is LoanEntryFee)
+                        {
+                            _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
+                        }
+                        else if (item.Tag.Equals("TotalFees"))
+                            ShowTotalFeesInListViewByNudLoanAmount(item);
                     }
                 }
             }
