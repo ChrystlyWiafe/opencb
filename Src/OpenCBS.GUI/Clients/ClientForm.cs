@@ -1984,7 +1984,7 @@ namespace OpenCBS.GUI.Clients
             {
                 eacLoan.Activity = ServicesProvider.GetInstance()
                                                    .GetEconomicActivityServices()
-                                                   .FindAllEconomicActivities(true)
+                                                   .FindAllEconomicActivities(false)
                                                    .FirstOrDefault(i => !i.HasChildrens);
             }
             else
