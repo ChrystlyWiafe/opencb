@@ -1066,7 +1066,7 @@
     <value>listViewLoanCycles</value>
   </data>
   <data name="&gt;&gt;listViewLoanCycles.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=16.12.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;listViewLoanCycles.Parent" xml:space="preserve">
     <value>panelAmountCycles</value>
@@ -4150,7 +4150,7 @@
     <value>NoControl</value>
   </data>
   <data name="label55.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 294</value>
+    <value>11, 12</value>
   </data>
   <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 16</value>
@@ -4177,7 +4177,7 @@
     <value>True</value>
   </data>
   <data name="label54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 9</value>
+    <value>6, 304</value>
   </data>
   <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 16</value>
@@ -4234,10 +4234,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="_listViewCreditProductEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 33</value>
+    <value>3, 328</value>
   </data>
   <data name="_listViewCreditProductEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>773, 203</value>
+    <value>781, 281</value>
   </data>
   <data name="_listViewCreditProductEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -4288,10 +4288,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="_listViewAllEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 321</value>
+    <value>8, 39</value>
   </data>
   <data name="_listViewAllEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>773, 280</value>
+    <value>776, 198</value>
   </data>
   <data name="_listViewAllEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -4324,7 +4324,7 @@
     <value>7</value>
   </data>
   <data name="_buttonAddEntryFee.Text" xml:space="preserve">
-    <value>↑</value>
+    <value>↓</value>
   </data>
   <data name="&gt;&gt;_buttonAddEntryFee.Name" xml:space="preserve">
     <value>_buttonAddEntryFee</value>
@@ -4354,7 +4354,7 @@
     <value>4</value>
   </data>
   <data name="_buttonDeleteEntryFee.Text" xml:space="preserve">
-    <value>↓</value>
+    <value>↑</value>
   </data>
   <data name="&gt;&gt;_buttonDeleteEntryFee.Name" xml:space="preserve">
     <value>_buttonDeleteEntryFee</value>
@@ -7973,6 +7973,6 @@
     <value>FrmAddLoanProduct</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=16.12.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -41,7 +41,10 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             {
                 var item = new ListViewItem(paymentMethod.Id.ToString()) { Tag = paymentMethod };
                 item.SubItems.Add(paymentMethod.Name);
-                item.SubItems.Add(paymentMethod.AccountNumber);
+                var accountNameOfPaymentMethod = paymentMethod.Account != null
+                    ? paymentMethod.AccountNumber + " - " + paymentMethod.Account.Label
+                    : "";
+                item.SubItems.Add(accountNameOfPaymentMethod);
                 item.SubItems.Add(paymentMethod.Description);
 
                 _listViewPaymentMethods.Items.Add(item);

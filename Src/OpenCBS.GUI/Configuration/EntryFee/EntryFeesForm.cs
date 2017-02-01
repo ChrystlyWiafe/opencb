@@ -10,6 +10,9 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public partial class EntryFeesForm : SweetBaseForm
     {
         private List<Fee> _entryFees;
+        public bool ShowDeleted {
+            get { return _checkBoxShowDeleted.Checked; }
+        }
 
         public EntryFeesForm()
         {
@@ -18,15 +21,27 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             DisplayEntryFee();
         }
 
-        public void DisplayEntryFee()
+        private void DisplayEntryFee()
         {
             _listViewEntryFee.Items.Clear();
 
+            UpdateLocalEntryFees();
+
+            SetEntryFeesToListView();
+        }
+
+        private void UpdateLocalEntryFees()
+        {
             _entryFees = Services.GetEntryFeeServices().SelectAllEntryFee();
+        }
+
+        private void SetEntryFeesToListView()
+        {
+            ClearListView();
 
             foreach (var fee in _entryFees)
             {
-                if(!_checkBoxShowDeleted.Checked && fee.IsDeleted)
+                if (!ShowDeleted && fee.IsDeleted)
                     continue;
 
                 var item = new ListViewItem(fee.Id.ToString()) { Tag = fee };
@@ -46,12 +61,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             }
         }
 
-        private void _buttonClose_Click(object sender, System.EventArgs e)
+        private void ClearListView()
+        {
+            _listViewEntryFee.Items.Clear();
+        }
+
+        private void CloseClick(object sender, System.EventArgs e)
         {
             Close();
         }
 
-        private void _buttonAdd_Click(object sender, System.EventArgs e)
+        private void AddClick(object sender, System.EventArgs e)
         {
             var addEntryFeeForm = new EntryFeeAddEdit(_entryFees);
             addEntryFeeForm.ShowDialog();
@@ -59,7 +79,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             DisplayEntryFee();
         }
 
-        private void _buttonEdit_Click(object sender, System.EventArgs e)
+        private void EditClick(object sender, System.EventArgs e)
         {
             if (_listViewEntryFee.SelectedItems.Count != 0)
             {
@@ -88,7 +108,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             DisplayEntryFee();
         }
 
-        private void _buttonDelete_Click(object sender, System.EventArgs e)
+        private void DeleteClick(object sender, System.EventArgs e)
         {
             if (_listViewEntryFee.SelectedItems.Count != 0)
             {

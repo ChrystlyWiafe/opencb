@@ -9,6 +9,9 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     {
         private Fee _entryFee;
         private List<Fee> _entryFees;
+        private bool IsRate {
+            get { return _comboBoxRate.SelectedIndex == 0; }
+        }
 
         public EntryFeeAddEdit(List<Fee> entryFees)
         {
@@ -40,7 +43,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 Name = _textBoxName.Text,
                 Min = _numericUpDownMin.Value,
                 Max = _numericUpDownMax.Value,
-                IsRate = _comboBoxRate.SelectedIndex == 0,
+                IsRate = this.IsRate,
                 MaxSum = _numericUpDownMaxSum.Value
             };
 
@@ -57,7 +60,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _entryFee.Name = _textBoxName.Text;
             _entryFee.Min = _numericUpDownMin.Value;
             _entryFee.Max = _numericUpDownMax.Value;
-            _entryFee.IsRate = _comboBoxRate.SelectedIndex == 0;
+            _entryFee.IsRate = IsRate;
             _entryFee.MaxSum = _numericUpDownMaxSum.Value;
 
             if (!ValidateEntryFee(_entryFee))
@@ -86,11 +89,11 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         {
             _timer.Stop();
             if (e.KeyCode == Keys.Return)
-                ValidateEntryFee(GetFee());
+                ValidateEntryFee(GetFeeFromForm());
             else _timer.Start();
         }
 
-        private void _buttonSave_Click(object sender, System.EventArgs e)
+        private void SaveClick(object sender, System.EventArgs e)
         {
             var operationComplete = _entryFee == null ? SaveNewEntryFee() : UpdateEntryFee();
 
@@ -98,16 +101,19 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 Close();
         }
 
-        private void _numericUpDownMin_ValueChanged(object sender, System.EventArgs e)
+        private void MinMaxChanged(object sender, System.EventArgs e)
         {
-            ValidateMinMaxValues();
-            ValidateEntryFee(GetFee());
+            ValidateEntryFee(GetFeeFromForm());
         }
 
-        private void _numericUpDownMax_ValueChanged(object sender, System.EventArgs e)
+        private void RateChanged(object sender, System.EventArgs e)
         {
-            ValidateMinMaxValues(true);
-            ValidateEntryFee(GetFee());
+            _numericUpDownMaxSum.Visible = _labelMaxSum.Visible = true;
+
+            if (IsRate)
+            {
+                
+            }
         }
 
         #endregion
@@ -126,28 +132,31 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 return false;
             }
 
-            if (entryFee.Min == 0m && entryFee.Max == 0m)
+            if (ValidateMinMaxIsZero(entryFee))
             {
                 _labelError.Text = GetString("minMaxIsZero");
                 _buttonSave.Enabled = false;
                 return false;
             }
 
-            if (entryFee.Min > entryFee.Max)
-                entryFee.Min = entryFee.Max;
+            if (ValidateMinGreaterMax())
+            {
+                _labelError.Text = GetString("minGreaterMax");//TODO Translate
+                _buttonSave.Enabled = false;
+                return false;
+            }
 
             return true;
         }
 
-        private void ValidateMinMaxValues(bool numericUpDownMaxEvent = false)
+        private static bool ValidateMinMaxIsZero(Fee entryFee)
         {
-            if (_numericUpDownMin.Value > _numericUpDownMax.Value)
-            {
-                if (numericUpDownMaxEvent)
-                    _numericUpDownMin.Value = _numericUpDownMax.Value;
-                else
-                    _numericUpDownMax.Value = _numericUpDownMin.Value;
-            }
+            return entryFee.Min == 0m && entryFee.Max == 0m;
+        }
+
+        private bool ValidateMinGreaterMax()
+        {
+            return _numericUpDownMin.Value > _numericUpDownMax.Value;
         }
 
         #endregion
@@ -157,7 +166,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _timer.Tick += (sender, e) =>
             {
                 _timer.Stop();
-                ValidateEntryFee(GetFee());
+                ValidateEntryFee(GetFeeFromForm());
             };
 
             _textBoxName.KeyDown += (sender, e) =>
@@ -176,14 +185,14 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             };
         }
 
-        private Fee GetFee()
+        private Fee GetFeeFromForm()
         {
             var fee = new Fee
                         {
                             Name = _textBoxName.Text,
                             Min = _numericUpDownMin.Value,
                             Max = _numericUpDownMax.Value,
-                            IsRate = _comboBoxRate.SelectedIndex == 0,
+                            IsRate = IsRate,
                             MaxSum = _numericUpDownMaxSum.Value
                         };
             return fee;

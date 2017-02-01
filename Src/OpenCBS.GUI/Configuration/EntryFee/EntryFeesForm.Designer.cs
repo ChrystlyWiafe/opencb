@@ -129,21 +129,21 @@
             this._buttonAdd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonAdd, "_buttonAdd");
             this._buttonAdd.Name = "_buttonAdd";
-            this._buttonAdd.Click += new System.EventHandler(this._buttonAdd_Click);
+            this._buttonAdd.Click += new System.EventHandler(this.AddClick);
             // 
             // _buttonDelete
             // 
             this._buttonDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonDelete, "_buttonDelete");
             this._buttonDelete.Name = "_buttonDelete";
-            this._buttonDelete.Click += new System.EventHandler(this._buttonDelete_Click);
+            this._buttonDelete.Click += new System.EventHandler(this.DeleteClick);
             // 
             // _buttonEdit
             // 
             this._buttonEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this._buttonEdit, "_buttonEdit");
             this._buttonEdit.Name = "_buttonEdit";
-            this._buttonEdit.Click += new System.EventHandler(this._buttonEdit_Click);
+            this._buttonEdit.Click += new System.EventHandler(this.EditClick);
             // 
             // splitContainerMain
             // 
@@ -165,7 +165,7 @@
             resources.ApplyResources(this._buttonClose, "_buttonClose");
             this._buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this._buttonClose.Name = "_buttonClose";
-            this._buttonClose.Click += new System.EventHandler(this._buttonClose_Click);
+            this._buttonClose.Click += new System.EventHandler(this.CloseClick);
             // 
             // lblRoles
             // 

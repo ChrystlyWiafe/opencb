@@ -95,7 +95,7 @@
             resources.ApplyResources(this._buttonSave, "_buttonSave");
             this._buttonSave.Name = "_buttonSave";
             this._buttonSave.UseVisualStyleBackColor = true;
-            this._buttonSave.Click += new System.EventHandler(this._buttonSave_Click);
+            this._buttonSave.Click += new System.EventHandler(this.SaveClick);
             // 
             // _comboBoxRate
             // 
@@ -106,6 +106,7 @@
             resources.GetString("_comboBoxRate.Items1")});
             resources.ApplyResources(this._comboBoxRate, "_comboBoxRate");
             this._comboBoxRate.Name = "_comboBoxRate";
+            this._comboBoxRate.SelectedIndexChanged += new System.EventHandler(this.RateChanged);
             // 
             // _numericUpDownMin
             // 
@@ -116,7 +117,7 @@
             54210108,
             0});
             this._numericUpDownMin.Name = "_numericUpDownMin";
-            this._numericUpDownMin.ValueChanged += new System.EventHandler(this._numericUpDownMin_ValueChanged);
+            this._numericUpDownMin.ValueChanged += new System.EventHandler(this.MinMaxChanged);
             // 
             // _numericUpDownMax
             // 
@@ -127,7 +128,7 @@
             54210108,
             0});
             this._numericUpDownMax.Name = "_numericUpDownMax";
-            this._numericUpDownMax.ValueChanged += new System.EventHandler(this._numericUpDownMax_ValueChanged);
+            this._numericUpDownMax.ValueChanged += new System.EventHandler(this.MinMaxChanged);
             // 
             // _numericUpDownMaxSum
             // 
