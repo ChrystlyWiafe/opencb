@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="minGreaterMax" xml:space="preserve">
+    <value>Minimum greater maximum</value>
+  </data>
   <data name="minMaxIsZero" xml:space="preserve">
     <value>Min and max cannot be zero</value>
   </data>

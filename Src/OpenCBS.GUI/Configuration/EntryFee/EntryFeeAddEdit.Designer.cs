@@ -1,6 +1,6 @@
 ﻿namespace OpenCBS.GUI.Configuration.EntryFee
 {
-    partial class EntryFeeAddEdit
+    sealed partial class EntryFeeAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,6 @@
             this._numericUpDownMax = new System.Windows.Forms.NumericUpDown();
             this._numericUpDownMaxSum = new System.Windows.Forms.NumericUpDown();
             this._timer = new System.Windows.Forms.Timer(this.components);
-            this._labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMaxSum)).BeginInit();
@@ -117,7 +116,6 @@
             54210108,
             0});
             this._numericUpDownMin.Name = "_numericUpDownMin";
-            this._numericUpDownMin.ValueChanged += new System.EventHandler(this.MinMaxChanged);
             // 
             // _numericUpDownMax
             // 
@@ -128,7 +126,6 @@
             54210108,
             0});
             this._numericUpDownMax.Name = "_numericUpDownMax";
-            this._numericUpDownMax.ValueChanged += new System.EventHandler(this.MinMaxChanged);
             // 
             // _numericUpDownMaxSum
             // 
@@ -140,17 +137,10 @@
             0});
             this._numericUpDownMaxSum.Name = "_numericUpDownMaxSum";
             // 
-            // _labelError
-            // 
-            resources.ApplyResources(this._labelError, "_labelError");
-            this._labelError.ForeColor = System.Drawing.SystemColors.GrayText;
-            this._labelError.Name = "_labelError";
-            // 
             // EntryFeeAddEdit
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._labelError);
             this.Controls.Add(this._numericUpDownMaxSum);
             this.Controls.Add(this._numericUpDownMax);
             this.Controls.Add(this._numericUpDownMin);
@@ -190,6 +180,5 @@
         private System.Windows.Forms.NumericUpDown _numericUpDownMax;
         private System.Windows.Forms.NumericUpDown _numericUpDownMaxSum;
         private System.Windows.Forms.Timer _timer;
-        private System.Windows.Forms.Label _labelError;
     }
 }
