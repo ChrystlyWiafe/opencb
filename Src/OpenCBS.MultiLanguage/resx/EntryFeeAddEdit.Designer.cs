@@ -61,6 +61,15 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Minimum greater maximum.
+        /// </summary>
+        internal static string minGreaterMax {
+            get {
+                return ResourceManager.GetString("minGreaterMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Min and max cannot be zero.
         /// </summary>
         internal static string minMaxIsZero {

@@ -10,7 +10,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public partial class EntryFeesForm : SweetBaseForm
     {
         private List<Fee> _entryFees;
-        public bool ShowDeleted {
+
+        private bool ShowDeleted {
             get { return _checkBoxShowDeleted.Checked; }
         }
 
@@ -73,7 +74,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
         private void AddClick(object sender, System.EventArgs e)
         {
-            var addEntryFeeForm = new EntryFeeAddEdit(_entryFees);
+            var addEntryFeeForm = new EntryFeeAddEdit();
             addEntryFeeForm.ShowDialog();
 
             DisplayEntryFee();
@@ -97,7 +98,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
         private void EditSelectedEntryFee()
         {
-            var addEntryFeeForm = new EntryFeeAddEdit((Fee)_listViewEntryFee.SelectedItems[0].Tag, _entryFees);
+            var addEntryFeeForm = new EntryFeeAddEdit((Fee)_listViewEntryFee.SelectedItems[0].Tag);
             addEntryFeeForm.ShowDialog();
 
             DisplayEntryFee();
@@ -112,7 +113,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         {
             if (_listViewEntryFee.SelectedItems.Count != 0)
             {
-                //todo handle case if some product use this entry fee
+                //TODO handle case if some product use this entry fee
 
                 if (MessageBox.Show(GetString(@"areUSure"), GetString("deleteSelectedEntryFee"), MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
