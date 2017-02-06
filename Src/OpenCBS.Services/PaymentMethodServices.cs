@@ -118,6 +118,11 @@ namespace OpenCBS.Services
             _paymentMethodManager.AddPaymentMethodToBranch(paymentMethod);
         }
 
+        public bool ExistsLinkBranchesPaymentMethods(PaymentMethod paymentMethod)
+        {
+            return _paymentMethodManager.ExistsLinkBranchesPaymentMethods(paymentMethod);
+        }
+
         public void Delete(PaymentMethod paymentMethod)
         {
             _paymentMethodManager.DeletePaymentMethodFromBranch(paymentMethod);

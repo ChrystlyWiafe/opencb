@@ -1113,6 +1113,9 @@
     <EmbeddedResource Include="Configuration\AddBranchForm.ru-RU.resx">
       <DependentUpon>AddBranchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\AddPaymentMethodForm.es-ES.resx">
+      <DependentUpon>AddPaymentMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuration\AddPaymentMethodForm.fr.resx">
       <DependentUpon>AddPaymentMethodForm.cs</DependentUpon>
     </EmbeddedResource>

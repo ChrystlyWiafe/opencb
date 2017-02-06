@@ -19,6 +19,7 @@
 // Website: http://www.opencbs.com
 // Contact: contact@opencbs.com
 
+using System;
 using System.Collections.Generic;
 using System.Data;
 using OpenCBS.CoreDomain;
@@ -84,6 +85,7 @@ namespace OpenCBS.Manager
                                   ,[name]
                                   ,[description]
                                   ,[pending]
+                                  ,[accountNumber]
                             FROM [PaymentMethods] pm
                             ORDER BY pm.[id]";
 
@@ -102,6 +104,7 @@ namespace OpenCBS.Manager
                             Name = r.GetString("name"),
                             Description = r.GetString("description"),
                             IsPending = r.GetBool("pending"),
+                            AccountNumber = r.GetString("accountNumber"),
                         };
                         paymentMethods.Add(paymentMethod);
                     }
@@ -115,6 +118,7 @@ namespace OpenCBS.Manager
                                   ,[name] Name
                                   ,[description] Description
                                   ,[pending] Pending
+                                  ,[accountnumber] AccountNumber
                             FROM [PaymentMethods] pm
                             ORDER BY pm.[id]";
 
@@ -127,7 +131,8 @@ namespace OpenCBS.Manager
                                 [lbpm].[id] LinkId, 
                                 [pm].[name] Name, 
                                 [pm].[description] Description, 
-                                [pm].[pending] IsPending, 
+                                [pm].[pending] IsPending,
+                                [pm].[accountNumber] AccountNumber,
                                 [lbpm].[branch_id], 
                                 [lbpm].[date] Date,
                                 [b].[id] Id,
@@ -162,6 +167,7 @@ namespace OpenCBS.Manager
                                 [pm].[name], 
                                 [pm].[description], 
                                 [pm].[pending], 
+                                [pm].[accountNumber],
                                 [lbpm].[branch_id], 
                                 [lbpm].[date]
                          FROM PaymentMethods pm
@@ -188,6 +194,7 @@ namespace OpenCBS.Manager
                             LinkId = r.GetInt("id"),
                             Branch = _branchManager.Select(r.GetInt("branch_id")),
                             Date = r.GetDateTime("date"),
+                            AccountNumber = r.GetString("accountNumber")
                         };
                         paymentMethods.Add(paymentMethod);
                     }
@@ -209,6 +216,31 @@ namespace OpenCBS.Manager
         public PaymentMethod SelectPaymentMethodByName(string name)
         {
             return _cacheWithoutBranch.FirstOrDefault(val => val.Name == name);
+        }
+
+        public bool ExistsLinkBranchesPaymentMethods(PaymentMethod paymentMethod)
+        {
+            const string q =
+                @"select top 1 isnull(branch_id,0) id
+                      from dbo.LinkBranchesPaymentMethods
+                      where branch_id=@branch_id 
+                          and payment_method_id=@payment_method_id
+                          and deleted=0";
+            using (SqlConnection conn = GetConnection())
+            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+            {
+                c.AddParam("@branch_id", paymentMethod.Branch.Id);
+                c.AddParam("@payment_method_id", paymentMethod.Id);
+                using (OpenCbsReader r = c.ExecuteReader())
+                {
+                    if (r != null && !r.Empty && r.Read())
+                    {
+                        return r.GetInt("id") != 0;
+                    }
+
+                }
+            }
+            return false;
         }
 
         public void AddPaymentMethodToBranch(PaymentMethod paymentMethod)

@@ -27,6 +27,7 @@ using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.GUI.UserControl;
 using System.Windows.Forms;
+using OpenCBS.ArchitectureV2.Presenter;
 using OpenCBS.Services;
 using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 
@@ -41,6 +42,7 @@ namespace OpenCBS.GUI.Configuration
         private string tempAddress;
         private string tempDescription;
         public bool EditBranch;
+        private TranslationService _translationService;
 
         public AddBranchForm(bool editBranch)
         {
@@ -76,7 +78,11 @@ namespace OpenCBS.GUI.Configuration
             tbDescription.Text = Branch.Description;
             
             LoadPaymentMethods();
-            
+
+            _translationService = new TranslationService();
+            _translationService.Reload();
+
+
         }
 
         private void AddBranchForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -118,10 +124,12 @@ namespace OpenCBS.GUI.Configuration
                 ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(Branch.Id);
             foreach (AccountingPaymentMethod method in methods)
             {
+                method.Account =
+                    ServicesProvider.GetInstance().GetAccountService().SelectAccountByNumber(method.AccountNumber);
                 ListViewItem lvi = new ListViewItem { Tag = method };
                 lvi.UseItemStyleForSubItems = false;
                 lvi.SubItems.Add(method.Name);
-                lvi.SubItems.Add(method.Date.ToShortDateString());
+                lvi.SubItems.Add(GetAccountNumber(method));
                 lvPaymentMethods.Items.Add(lvi);
             }
         }
@@ -132,7 +140,12 @@ namespace OpenCBS.GUI.Configuration
             if (DialogResult.OK != frm.ShowDialog()) return;
             try
             {
-                ServicesProvider.GetInstance().GetPaymentMethodServices().AddPaymentMethodToBranch(frm.PaymentMethod);
+                var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
+                if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
+                    paymentMethodServices.AddPaymentMethodToBranch(frm.PaymentMethod);
+                else
+                    throw new OpenCbsException(_translationService.Translate("The same payment method already exists."));
+
             }
             catch (Exception ex)
             {
@@ -148,7 +161,10 @@ namespace OpenCBS.GUI.Configuration
             AccountingPaymentMethod paymentMethod = lvPaymentMethods.SelectedItems[0].Tag as AccountingPaymentMethod;
             Debug.Assert(paymentMethod != null, "Payment method not selected!");
             if (!Confirm("confirmDelete")) return;
+            {
                 ServicesProvider.GetInstance().GetPaymentMethodServices().Delete(paymentMethod);
+                ServicesProvider.GetInstance().GetBranchService().RefreshBranches();
+            }
             
             LoadPaymentMethods();
         }
@@ -163,13 +179,22 @@ namespace OpenCBS.GUI.Configuration
             if (DialogResult.OK != frm.ShowDialog()) return;
             try
             {
-                ServicesProvider.GetInstance().GetPaymentMethodServices().UpdatePaymentMethodFromBranch(frm.PaymentMethod);
+                var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
+                if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
+                    paymentMethodServices.UpdatePaymentMethodFromBranch(frm.PaymentMethod);
+                else
+                    throw new OpenCbsException(_translationService.Translate("The same payment method already exists."));
             }
             catch(Exception ex)
             {
                 new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
             }
             LoadPaymentMethods();
+        }
+        private string GetAccountNumber(AccountingPaymentMethod paymentMethod)
+        {
+            if (paymentMethod == null || paymentMethod.Account == null) return "";
+            return string.Format("{0} - {1}", paymentMethod.Account.AccountNumber, paymentMethod.Account.Label);
         }
     }
     public class TablessControl : TabControl

@@ -243,6 +243,7 @@
   "Result": "Результат",
   "Search Client": "Поиск клиента",
   "SIRET": "SIRET",
+  "The same payment method already exists.": "Такой тип платежа уже существует.",
   "Type": "Тип",
   "Volunteer": "Волонтер"
 }

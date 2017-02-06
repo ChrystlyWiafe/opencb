@@ -54,6 +54,7 @@ namespace OpenCBS.GUI.Configuration
         {
             InitializeComponent();
             Initialize(paymentMethod);
+            branch = paymentMethod.Branch;
         }
 
         public AddPaymentMethodForm(Branch tBranch)
@@ -106,6 +107,19 @@ namespace OpenCBS.GUI.Configuration
                 e.Cancel = true;
                 return;
             }
+        }
+
+        private void cmbPaymentMethod_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            var currentPaymentMethod = (AccountingPaymentMethod) cmbPaymentMethod.SelectedItem;
+            currentPaymentMethod.Account =
+                ServicesProvider.GetInstance().GetAccountService().SelectAccountByNumber(currentPaymentMethod.AccountNumber);
+            lblAccountNumber.Text = GetAccountNumber(currentPaymentMethod);
+        }
+        private string GetAccountNumber(AccountingPaymentMethod paymentMethod)
+        {
+            if (paymentMethod == null || paymentMethod.Account == null) return "";
+            return string.Format("{0} - {1}", paymentMethod.Account.AccountNumber, paymentMethod.Account.Label);
         }
     }
 }

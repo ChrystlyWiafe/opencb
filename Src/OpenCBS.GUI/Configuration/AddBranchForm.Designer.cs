@@ -46,7 +46,7 @@ namespace OpenCBS.GUI.Configuration
             this.lvPaymentMethods = new System.Windows.Forms.ListView();
             this.columnHeaderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPaymentMethod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderAccountNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelPaymentMethods = new System.Windows.Forms.Panel();
             this.btnDeletePaymentMethod = new System.Windows.Forms.Button();
             this.btnEditPaymentMethod = new System.Windows.Forms.Button();
@@ -137,7 +137,7 @@ namespace OpenCBS.GUI.Configuration
             this.lvPaymentMethods.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderId,
             this.columnHeaderPaymentMethod,
-            this.columnHeaderDate});
+            this.columnHeaderAccountNumber});
             resources.ApplyResources(this.lvPaymentMethods, "lvPaymentMethods");
             this.lvPaymentMethods.FullRowSelect = true;
             this.lvPaymentMethods.GridLines = true;
@@ -154,9 +154,9 @@ namespace OpenCBS.GUI.Configuration
             // 
             resources.ApplyResources(this.columnHeaderPaymentMethod, "columnHeaderPaymentMethod");
             // 
-            // columnHeaderDate
+            // columnHeaderAccountNumber
             // 
-            resources.ApplyResources(this.columnHeaderDate, "columnHeaderDate");
+            resources.ApplyResources(this.columnHeaderAccountNumber, "columnHeaderAccountNumber");
             // 
             // panelPaymentMethods
             // 
@@ -223,7 +223,7 @@ namespace OpenCBS.GUI.Configuration
         private System.Windows.Forms.Panel panelPaymentMethods;
         private System.Windows.Forms.ListView lvPaymentMethods;
         private System.Windows.Forms.ColumnHeader columnHeaderPaymentMethod;
-        private System.Windows.Forms.ColumnHeader columnHeaderDate;
+        private System.Windows.Forms.ColumnHeader columnHeaderAccountNumber;
         private System.Windows.Forms.Button btnDeletePaymentMethod;
         private System.Windows.Forms.Button btnAddPaymentMethod;
         private System.Windows.Forms.ColumnHeader columnHeaderId;
