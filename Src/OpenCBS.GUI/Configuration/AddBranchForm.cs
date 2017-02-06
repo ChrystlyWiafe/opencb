@@ -161,11 +161,8 @@ namespace OpenCBS.GUI.Configuration
             AccountingPaymentMethod paymentMethod = lvPaymentMethods.SelectedItems[0].Tag as AccountingPaymentMethod;
             Debug.Assert(paymentMethod != null, "Payment method not selected!");
             if (!Confirm("confirmDelete")) return;
-            {
-                ServicesProvider.GetInstance().GetPaymentMethodServices().Delete(paymentMethod);
-                ServicesProvider.GetInstance().GetBranchService().RefreshBranches();
-            }
-            
+            ServicesProvider.GetInstance().GetPaymentMethodServices().Delete(paymentMethod);
+
             LoadPaymentMethods();
         }
 
