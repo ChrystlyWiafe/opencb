@@ -118,81 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPageMainParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabPageMainParameters.Text" xml:space="preserve">
-    <value>Parámetros Principales</value>
-  </data>
-  <data name="tabPageFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabPageFees.Text" xml:space="preserve">
-    <value>Cargos</value>
-  </data>
-  <data name="tabPageCommissions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabPageCommissions.Text" xml:space="preserve">
-    <value>Comisiones</value>
-  </data>
-  <data name="tabPageOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabPageOptionalParameters.Text" xml:space="preserve">
-    <value>Parámetros Opcionales</value>
-  </data>
-  <data name="tabLOC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabLOC.Text" xml:space="preserve">
-    <value>Linea de Crédito</value>
-  </data>
-  <data name="tabGuarantorsCollaterals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
-    <value>Garantías</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Seguro de Crédito</value>
-  </data>
-  <data name="tabCreditInsurance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 651</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
-  </data>
-  <data name="gbAdvancedParameters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 279</value>
-  </data>
-  <data name="gbAdvancedParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>919, 329</value>
-  </data>
-  <data name="gbAdvancedParameters.Text" xml:space="preserve">
-    <value>Parametros Avanzados</value>
-  </data>
   <data name="cbUseLoanCycle.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 20</value>
   </data>
   <data name="cbUseLoanCycle.Text" xml:space="preserve">
     <value>Usar Ciclos de Crédito</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 108</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 79</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.Text" xml:space="preserve">
-    <value>Número de cuotas</value>
   </data>
   <data name="labelNbIMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 49</value>
@@ -242,14 +172,14 @@
   <data name="textBoxNbOfInstallmentMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBoxInterestRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 108</value>
+  <data name="groupBoxNumberOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 108</value>
   </data>
-  <data name="groupBoxInterestRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 79</value>
+  <data name="groupBoxNumberOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 79</value>
   </data>
-  <data name="groupBoxInterestRate.Text" xml:space="preserve">
-    <value>Tasa de interés (en % por periodo)</value>
+  <data name="groupBoxNumberOfInstallments.Text" xml:space="preserve">
+    <value>Número de cuotas</value>
   </data>
   <data name="labelRateMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 48</value>
@@ -299,14 +229,14 @@
   <data name="textBoxRateMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBoxAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 22</value>
+  <data name="groupBoxInterestRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 108</value>
   </data>
-  <data name="groupBoxAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>616, 80</value>
+  <data name="groupBoxInterestRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 79</value>
   </data>
-  <data name="groupBoxAmount.Text" xml:space="preserve">
-    <value>Monto</value>
+  <data name="groupBoxInterestRate.Text" xml:space="preserve">
+    <value>Tasa de interés (en % por periodo)</value>
   </data>
   <data name="labelLoanCycle.Location" type="System.Drawing.Point, System.Drawing">
     <value>564, 37</value>
@@ -362,20 +292,14 @@
   <data name="textBoxAmountMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
   </data>
-  <data name="panelAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 81</value>
+  <data name="groupBoxAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 22</value>
   </data>
-  <data name="panelAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>890, 257</value>
+  <data name="groupBoxAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 80</value>
   </data>
-  <data name="groupBoxAmountCycle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 67</value>
-  </data>
-  <data name="groupBoxAmountCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 84</value>
-  </data>
-  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
-    <value>Propiedades del ciclo de crédito</value>
+  <data name="groupBoxAmount.Text" xml:space="preserve">
+    <value>Monto</value>
   </data>
   <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 54</value>
@@ -394,6 +318,15 @@
   </data>
   <data name="textBoxCycleMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 22</value>
+  </data>
+  <data name="groupBoxAmountCycle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 67</value>
+  </data>
+  <data name="groupBoxAmountCycle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 84</value>
+  </data>
+  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
+    <value>Propiedades del ciclo de crédito</value>
   </data>
   <data name="listViewLoanCycles.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 27</value>
@@ -452,14 +385,11 @@
   <data name="buttonAddAmountCycle.Text" xml:space="preserve">
     <value>Agregar</value>
   </data>
-  <data name="groupBoxAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 17</value>
+  <data name="panelAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 81</value>
   </data>
-  <data name="groupBoxAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>747, 58</value>
-  </data>
-  <data name="groupBoxAmountCycles.Text" xml:space="preserve">
-    <value>Ciclos de crédito</value>
+  <data name="panelAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>890, 257</value>
   </data>
   <data name="comboBoxLoanCyclesName.Location" type="System.Drawing.Point, System.Drawing">
     <value>184, 17</value>
@@ -481,6 +411,24 @@
   </data>
   <data name="buttonNewAmountCycles.Text" xml:space="preserve">
     <value>Nuevo ciclo de crédito</value>
+  </data>
+  <data name="groupBoxAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 17</value>
+  </data>
+  <data name="groupBoxAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 58</value>
+  </data>
+  <data name="groupBoxAmountCycles.Text" xml:space="preserve">
+    <value>Ciclos de crédito</value>
+  </data>
+  <data name="gbAdvancedParameters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 279</value>
+  </data>
+  <data name="gbAdvancedParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>919, 329</value>
+  </data>
+  <data name="gbAdvancedParameters.Text" xml:space="preserve">
+    <value>Parametros Avanzados</value>
   </data>
   <data name="groupBoxRoundingType.Location" type="System.Drawing.Point, System.Drawing">
     <value>540, 23</value>
@@ -509,15 +457,6 @@
   <data name="label32.Text" xml:space="preserve">
     <value>Codigo*:</value>
   </data>
-  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 112</value>
-  </data>
-  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 50</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Relacionar el producto a una línea de financiamiento y donante</value>
-  </data>
   <data name="comboBoxCurrencies.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 21</value>
   </data>
@@ -533,14 +472,14 @@
   <data name="comboBoxFundingLine.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 24</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 23</value>
+  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 112</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 83</value>
+  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 50</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Text" xml:space="preserve">
-    <value>Cobrar intereses durante el periodo de gracia</value>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Relacionar el producto a una línea de financiamiento y donante</value>
   </data>
   <data name="radioButtonChargeInterestNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 48</value>
@@ -557,14 +496,14 @@
   <data name="radioButtonChargeInterestYes.Text" xml:space="preserve">
     <value>Si</value>
   </data>
-  <data name="groupBoxType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 112</value>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 23</value>
   </data>
-  <data name="groupBoxType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>466, 50</value>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 83</value>
   </data>
-  <data name="groupBoxType.Text" xml:space="preserve">
-    <value>Asociar producto a un tipo específico de cliente</value>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Text" xml:space="preserve">
+    <value>Cobrar intereses durante el periodo de gracia</value>
   </data>
   <data name="clientTypeVillageCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 20</value>
@@ -590,6 +529,15 @@
   <data name="clientTypeAllCheckBox.Text" xml:space="preserve">
     <value>Tod.</value>
   </data>
+  <data name="groupBoxType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 112</value>
+  </data>
+  <data name="groupBoxType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>466, 50</value>
+  </data>
+  <data name="groupBoxType.Text" xml:space="preserve">
+    <value>Asociar producto a un tipo específico de cliente</value>
+  </data>
   <data name="groupBoxInterestRateType.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 168</value>
   </data>
@@ -598,15 +546,6 @@
   </data>
   <data name="groupBoxInterestRateType.Text" xml:space="preserve">
     <value>Tipo de tasa de interés</value>
-  </data>
-  <data name="groupBoxGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 172</value>
-  </data>
-  <data name="groupBoxGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 105</value>
-  </data>
-  <data name="groupBoxGracePeriod.Text" xml:space="preserve">
-    <value>Periodo de gracia</value>
   </data>
   <data name="labelGPMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 51</value>
@@ -656,6 +595,15 @@
   <data name="textBoxGracePeriodMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 22</value>
   </data>
+  <data name="groupBoxGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 172</value>
+  </data>
+  <data name="groupBoxGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 105</value>
+  </data>
+  <data name="groupBoxGracePeriod.Text" xml:space="preserve">
+    <value>Periodo de gracia</value>
+  </data>
   <data name="comboBoxInstallmentType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt, style=Bold</value>
   </data>
@@ -692,23 +640,18 @@
   <data name="labelName.Text" xml:space="preserve">
     <value>Nombre*:</value>
   </data>
-  <data name="gbAnticipatedRepayment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 374</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="gbAnticipatedRepayment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>932, 241</value>
+  <data name="groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
   </data>
-  <data name="gbAnticipatedRepayment.Text" xml:space="preserve">
-    <value>Cargos por Pago Total Anticipado (PTA) y Pago Parcial Anticipado(PPA) </value>
+  <data name="tabPageMainParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
   </data>
-  <data name="groupBoxAPR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 125</value>
-  </data>
-  <data name="groupBoxAPR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 104</value>
-  </data>
-  <data name="groupBoxAPR.Text" xml:space="preserve">
-    <value>Cargos por PPA*</value>
+  <data name="tabPageMainParameters.Text" xml:space="preserve">
+    <value>Parámetros Principales</value>
   </data>
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 50</value>
@@ -761,14 +704,14 @@
   <data name="textBoxAnticipatedPartialRepaimentMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBoxPartialAnticipatedRepaymentBase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 125</value>
+  <data name="groupBoxAPR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 125</value>
   </data>
-  <data name="groupBoxPartialAnticipatedRepaymentBase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 104</value>
+  <data name="groupBoxAPR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 104</value>
   </data>
-  <data name="groupBoxPartialAnticipatedRepaymentBase.Text" xml:space="preserve">
-    <value>Cargos por PPA en Base a:*</value>
+  <data name="groupBoxAPR.Text" xml:space="preserve">
+    <value>Cargos por PPA*</value>
   </data>
   <data name="rbPrepaidPrincipal.Text" xml:space="preserve">
     <value>% Capital Pre-Pagado</value>
@@ -785,14 +728,14 @@
   <data name="rbPartialRemainingInterest.Text" xml:space="preserve">
     <value>% Sobre Interés</value>
   </data>
-  <data name="groupBoxTotalAnticipatedRepaymentBase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 21</value>
+  <data name="groupBoxPartialAnticipatedRepaymentBase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 125</value>
   </data>
-  <data name="groupBoxTotalAnticipatedRepaymentBase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 98</value>
+  <data name="groupBoxPartialAnticipatedRepaymentBase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 104</value>
   </data>
-  <data name="groupBoxTotalAnticipatedRepaymentBase.Text" xml:space="preserve">
-    <value>Cargos por PTA en Base a*</value>
+  <data name="groupBoxPartialAnticipatedRepaymentBase.Text" xml:space="preserve">
+    <value>Cargos por PPA en Base a:*</value>
   </data>
   <data name="rbRemainingOLB.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 20</value>
@@ -806,14 +749,14 @@
   <data name="rbRemainingInterest.Text" xml:space="preserve">
     <value>% Sobre Interés</value>
   </data>
-  <data name="groupBoxAnticipatedRepayment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
+  <data name="groupBoxTotalAnticipatedRepaymentBase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 21</value>
   </data>
-  <data name="groupBoxAnticipatedRepayment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 98</value>
+  <data name="groupBoxTotalAnticipatedRepaymentBase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 98</value>
   </data>
-  <data name="groupBoxAnticipatedRepayment.Text" xml:space="preserve">
-    <value>Cargos por PTA*</value>
+  <data name="groupBoxTotalAnticipatedRepaymentBase.Text" xml:space="preserve">
+    <value>Cargos por PTA en Base a*</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 46</value>
@@ -866,14 +809,23 @@
   <data name="textBoxAnticipatedRepaymentPenaltiesMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBoxLateFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 110</value>
+  <data name="groupBoxAnticipatedRepayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
   </data>
-  <data name="groupBoxLateFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>933, 258</value>
+  <data name="groupBoxAnticipatedRepayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 98</value>
   </data>
-  <data name="groupBoxLateFees.Text" xml:space="preserve">
-    <value>Interereses por Mora (% por día)</value>
+  <data name="groupBoxAnticipatedRepayment.Text" xml:space="preserve">
+    <value>Cargos por PTA*</value>
+  </data>
+  <data name="gbAnticipatedRepayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 374</value>
+  </data>
+  <data name="gbAnticipatedRepayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>932, 241</value>
+  </data>
+  <data name="gbAnticipatedRepayment.Text" xml:space="preserve">
+    <value>Cargos por Pago Total Anticipado (PTA) y Pago Parcial Anticipado(PPA) </value>
   </data>
   <data name="labelLateFeeGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
     <value>285, 229</value>
@@ -892,12 +844,6 @@
   </data>
   <data name="textBoxGracePeriodLateFee.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
-  </data>
-  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 85</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>Sobre el Monto Total del Préstamos</value>
   </data>
   <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 48</value>
@@ -950,14 +896,11 @@
   <data name="tBInitialAmountMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 113</value>
+  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 85</value>
   </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 99</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Sobre el capital adeudado</value>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Sobre el Monto Total del Préstamos</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 48</value>
@@ -1022,14 +965,14 @@
   <data name="tBOverduePrincipalMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 22</value>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 113</value>
   </data>
-  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 85</value>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 99</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>Sobre Saldo*</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Sobre el capital adeudado</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 46</value>
@@ -1085,14 +1028,14 @@
   <data name="tBOLBMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 113</value>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 22</value>
   </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 99</value>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 85</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Sobre los intereses adeudados</value>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Sobre Saldo*</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 48</value>
@@ -1157,20 +1100,44 @@
   <data name="tBOverdueInterestMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 113</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 99</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Sobre los intereses adeudados</value>
+  </data>
+  <data name="groupBoxLateFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 110</value>
+  </data>
+  <data name="groupBoxLateFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>933, 258</value>
+  </data>
+  <data name="groupBoxLateFees.Text" xml:space="preserve">
+    <value>Interereses por Mora (% por día)</value>
+  </data>
+  <data name="tabPageFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
+  </data>
+  <data name="tabPageFees.Text" xml:space="preserve">
+    <value>Cargos</value>
+  </data>
   <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 16</value>
   </data>
   <data name="label55.Text" xml:space="preserve">
     <value>Todos los derechos de inscripción disponibles</value>
   </data>
+  <data name="label54.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 315</value>
+  </data>
   <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 16</value>
+    <value>287, 16</value>
   </data>
   <data name="label54.Text" xml:space="preserve">
-    <value>Las tarifas de entrada de este producto (no más de 10)</value>
-  </data>
-  <data name="_listViewCreditProductEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 203</value>
+    <value>Las tarifas de entrada de este producto (max 9)</value>
   </data>
   <data name="chName.Text" xml:space="preserve">
     <value>Nombre</value>
@@ -1187,8 +1154,11 @@
   <data name="chMaxSum.Text" xml:space="preserve">
     <value>Suma máxima</value>
   </data>
-  <data name="_listViewAllEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 280</value>
+  <data name="_listViewCreditProductEntryFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 337</value>
+  </data>
+  <data name="_listViewCreditProductEntryFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 203</value>
   </data>
   <data name="ch2Name.Text" xml:space="preserve">
     <value>Nombre</value>
@@ -1205,29 +1175,20 @@
   <data name="ch2MaxSum.Text" xml:space="preserve">
     <value>Suma máxima</value>
   </data>
-  <data name="groupBoxDetailsOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_listViewAllEntryFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>748, 207</value>
+  </data>
+  <data name="tabPageCommissions.Size" type="System.Drawing.Size, System.Drawing">
     <value>952, 611</value>
+  </data>
+  <data name="tabPageCommissions.Text" xml:space="preserve">
+    <value>Comisiones</value>
   </data>
   <data name="groupBoxExoticProducts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="groupBoxExoticProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 26</value>
-  </data>
-  <data name="groupBoxExoticProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>754, 298</value>
-  </data>
-  <data name="groupBoxExoticProducts.Text" xml:space="preserve">
-    <value>Cronograma exótico</value>
-  </data>
   <data name="panelExoticProduct.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
-  </data>
-  <data name="panelExoticProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 90</value>
-  </data>
-  <data name="panelExoticProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>735, 199</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 134</value>
@@ -1261,21 +1222,6 @@
   </data>
   <data name="buttonSaveExoticProduct.Text" xml:space="preserve">
     <value>Guardar</value>
-  </data>
-  <data name="groupBoxExoticInstallmentProperties.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 4</value>
-  </data>
-  <data name="groupBoxExoticInstallmentProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 125</value>
-  </data>
-  <data name="groupBoxExoticInstallmentProperties.Text" xml:space="preserve">
-    <value>Propiedades del cronograma exótico</value>
-  </data>
-  <data name="panelExoticInstallment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 26</value>
-  </data>
-  <data name="panelExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 92</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 55</value>
@@ -1313,11 +1259,20 @@
   <data name="label10.Text" xml:space="preserve">
     <value>Capital</value>
   </data>
-  <data name="panelExoticProductNavigationButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 4</value>
+  <data name="panelExoticInstallment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
   </data>
-  <data name="panelExoticProductNavigationButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 98</value>
+  <data name="panelExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 92</value>
+  </data>
+  <data name="groupBoxExoticInstallmentProperties.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 4</value>
+  </data>
+  <data name="groupBoxExoticInstallmentProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 125</value>
+  </data>
+  <data name="groupBoxExoticInstallmentProperties.Text" xml:space="preserve">
+    <value>Propiedades del cronograma exótico</value>
   </data>
   <data name="buttonDecreaseExoticInstallment.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 57</value>
@@ -1330,6 +1285,12 @@
   </data>
   <data name="buttonIncreaseExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 38</value>
+  </data>
+  <data name="panelExoticProductNavigationButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 4</value>
+  </data>
+  <data name="panelExoticProductNavigationButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 98</value>
   </data>
   <data name="buttonRemoveExoticInstallment.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 168</value>
@@ -1349,26 +1310,26 @@
   <data name="buttonAddExoticInstallment.Text" xml:space="preserve">
     <value>Agregar</value>
   </data>
-  <data name="listViewExoticInstallments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 4</value>
-  </data>
-  <data name="listViewExoticInstallments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 129</value>
-  </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Capital (%)</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>Interés (%)</value>
   </data>
+  <data name="listViewExoticInstallments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 4</value>
+  </data>
+  <data name="listViewExoticInstallments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 129</value>
+  </data>
+  <data name="panelExoticProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 90</value>
+  </data>
+  <data name="panelExoticProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>735, 199</value>
+  </data>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 26</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>736, 55</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 22</value>
@@ -1397,11 +1358,20 @@
   <data name="comboBoxExoticProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>278, 24</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 26</value>
   </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 98</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>736, 55</value>
+  </data>
+  <data name="groupBoxExoticProducts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 26</value>
+  </data>
+  <data name="groupBoxExoticProducts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 298</value>
+  </data>
+  <data name="groupBoxExoticProducts.Text" xml:space="preserve">
+    <value>Cronograma exótico</value>
   </data>
   <data name="checkBoxUseExceptionalInstallmen.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 27</value>
@@ -1412,11 +1382,11 @@
   <data name="checkBoxUseExceptionalInstallmen.Text" xml:space="preserve">
     <value>Usar Cronograma Exótico</value>
   </data>
-  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 130</value>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
   </data>
-  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 88</value>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 98</value>
   </data>
   <data name="checkBoxFlexPackage.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 26</value>
@@ -1427,17 +1397,20 @@
   <data name="checkBoxFlexPackage.Text" xml:space="preserve">
     <value>Permitir Cronograma Fexible</value>
   </data>
-  <data name="drawNumGroupBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9.75pt</value>
+  <data name="groupBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 130</value>
   </data>
-  <data name="drawNumGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 49</value>
+  <data name="groupBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 88</value>
   </data>
-  <data name="drawNumGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>923, 72</value>
+  <data name="groupBoxDetailsOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
   </data>
-  <data name="drawNumGroupBox.Text" xml:space="preserve">
-    <value>Maximo Número de Tramos </value>
+  <data name="tabPageOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
+  </data>
+  <data name="tabPageOptionalParameters.Text" xml:space="preserve">
+    <value>Parámetros Opcionales</value>
   </data>
   <data name="textBoxNumOfDrawings.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 28</value>
@@ -1454,6 +1427,18 @@
   <data name="drawingNumberLabel.Text" xml:space="preserve">
     <value>Maximo Número de Tramos Bajo LDC</value>
   </data>
+  <data name="drawNumGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="drawNumGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 49</value>
+  </data>
+  <data name="drawNumGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>923, 72</value>
+  </data>
+  <data name="drawNumGroupBox.Text" xml:space="preserve">
+    <value>Maximo Número de Tramos </value>
+  </data>
   <data name="useLOCCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 12</value>
   </data>
@@ -1462,18 +1447,6 @@
   </data>
   <data name="useLOCCheckBox.Text" xml:space="preserve">
     <value>Usar Linea de Crédito</value>
-  </data>
-  <data name="maxLOCMaturityGroupBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9.75pt</value>
-  </data>
-  <data name="maxLOCMaturityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 252</value>
-  </data>
-  <data name="maxLOCMaturityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>923, 116</value>
-  </data>
-  <data name="maxLOCMaturityGroupBox.Text" xml:space="preserve">
-    <value>Madurez del Tramo (Número de Cuotas)</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
     <value>356, 54</value>
@@ -1514,17 +1487,17 @@
   <data name="textBoxLOCMaturityMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="maxLOCAmountGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="maxLOCMaturityGroupBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
-  <data name="maxLOCAmountGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 128</value>
+  <data name="maxLOCMaturityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 252</value>
   </data>
-  <data name="maxLOCAmountGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="maxLOCMaturityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>923, 116</value>
   </data>
-  <data name="maxLOCAmountGroupBox.Text" xml:space="preserve">
-    <value>Monto Total por Linea de Crédito (Incluye Monto Desembolsado)</value>
+  <data name="maxLOCMaturityGroupBox.Text" xml:space="preserve">
+    <value>Madurez del Tramo (Número de Cuotas)</value>
   </data>
   <data name="labelLOCAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>595, 54</value>
@@ -1574,17 +1547,29 @@
   <data name="textBoxAmountUnderLOCMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
+  <data name="maxLOCAmountGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="maxLOCAmountGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 128</value>
+  </data>
+  <data name="maxLOCAmountGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>923, 116</value>
+  </data>
+  <data name="maxLOCAmountGroupBox.Text" xml:space="preserve">
+    <value>Monto Total por Linea de Crédito (Incluye Monto Desembolsado)</value>
+  </data>
+  <data name="tabLOC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
+  </data>
+  <data name="tabLOC.Text" xml:space="preserve">
+    <value>Linea de Crédito</value>
+  </data>
   <data name="cbUseCompulsorySavings.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
   </data>
   <data name="cbUseCompulsorySavings.Text" xml:space="preserve">
     <value>Utilice ahorro obligatorio</value>
-  </data>
-  <data name="gbCSAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 305</value>
-  </data>
-  <data name="gbCSAmount.Text" xml:space="preserve">
-    <value>Monto de Ahorro Obligario</value>
   </data>
   <data name="rbCompulsoryAmountRate.Text" xml:space="preserve">
     <value>Tasa</value>
@@ -1613,6 +1598,12 @@
   <data name="lbCompulsoryAmountOr.Text" xml:space="preserve">
     <value>o</value>
   </data>
+  <data name="gbCSAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 305</value>
+  </data>
+  <data name="gbCSAmount.Text" xml:space="preserve">
+    <value>Monto de Ahorro Obligario</value>
+  </data>
   <data name="checkBoxSetSepCollGuar.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 138</value>
   </data>
@@ -1621,12 +1612,6 @@
   </data>
   <data name="checkBoxSetSepCollGuar.Text" xml:space="preserve">
     <value>Establecer Valores Separados para Garantes y Garantías</value>
-  </data>
-  <data name="groupBoxTotGuarColl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 53</value>
-  </data>
-  <data name="groupBoxTotGuarColl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>896, 73</value>
   </data>
   <data name="textBoxCollGuar.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 28</value>
@@ -1652,14 +1637,11 @@
   <data name="label33.Text" xml:space="preserve">
     <value>Porcentaje Mínimo de Garantes + Garantías</value>
   </data>
-  <data name="groupBoxSepGuarColl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 172</value>
+  <data name="groupBoxTotGuarColl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 53</value>
   </data>
-  <data name="groupBoxSepGuarColl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>896, 101</value>
-  </data>
-  <data name="groupBoxSepGuarColl.Text" xml:space="preserve">
-    <value>Separado</value>
+  <data name="groupBoxTotGuarColl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>896, 73</value>
   </data>
   <data name="textBoxColl.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 51</value>
@@ -1718,6 +1700,15 @@
   <data name="labelMinPercGuar.Text" xml:space="preserve">
     <value>Porcentaje Mínimo para Garantes:</value>
   </data>
+  <data name="groupBoxSepGuarColl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 172</value>
+  </data>
+  <data name="groupBoxSepGuarColl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>896, 101</value>
+  </data>
+  <data name="groupBoxSepGuarColl.Text" xml:space="preserve">
+    <value>Separado</value>
+  </data>
   <data name="checkBoxGuarCollRequired.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 12</value>
   </data>
@@ -1727,11 +1718,14 @@
   <data name="checkBoxGuarCollRequired.Text" xml:space="preserve">
     <value>Usar Garantes y Garantías</value>
   </data>
-  <data name="groupBox9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9.75pt</value>
+  <data name="tabGuarantorsCollaterals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 611</value>
   </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Seguro de Crédito</value>
+  <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
+    <value>Garantías</value>
+  </data>
+  <data name="tabCreditInsurance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>960, 651</value>
   </data>
   <data name="splitter2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 650</value>
@@ -1756,12 +1750,6 @@
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Usar</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 651</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 59</value>
   </data>
   <data name="buttonCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1795,6 +1783,12 @@
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>Guardar</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 651</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>960, 59</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>960, 710</value>

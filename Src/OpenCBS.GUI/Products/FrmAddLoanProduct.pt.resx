@@ -479,10 +479,40 @@
     <value>Todas as taxas de inscrição disponíveis</value>
   </data>
   <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 16</value>
+    <value>254, 16</value>
   </data>
   <data name="label54.Text" xml:space="preserve">
-    <value>Taxas de inscrição deste produto (não mais de 10)</value>
+    <value>Taxas de inscrição deste produto (max 9)</value>
+  </data>
+  <data name="chName.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="chMin.Text" xml:space="preserve">
+    <value>Mínimo</value>
+  </data>
+  <data name="chMax.Text" xml:space="preserve">
+    <value>Máximo</value>
+  </data>
+  <data name="chRate.Text" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="chMaxSum.Text" xml:space="preserve">
+    <value>Soma máxima</value>
+  </data>
+  <data name="ch2Name.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ch2Min.Text" xml:space="preserve">
+    <value>Mínimo</value>
+  </data>
+  <data name="ch2Max.Text" xml:space="preserve">
+    <value>Máximo</value>
+  </data>
+  <data name="ch2Rate.Text" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="ch2MaxSum.Text" xml:space="preserve">
+    <value>Soma máxima</value>
   </data>
   <data name="tabPageCommissions.Text" xml:space="preserve">
     <value>Comissões</value>
@@ -687,12 +717,6 @@
   </data>
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantias</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Seguro de Crédito</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>O seguro de crédito</value>
   </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Use valor do cíclo</value>
@@ -1330,35 +1354,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Adicionar produto de empréstimo</value>
-  </data>
-  <data name="chMax.Text" xml:space="preserve">
-    <value>Máximo</value>
-  </data>
-  <data name="chMaxSum.Text" xml:space="preserve">
-    <value>Soma máxima</value>
-  </data>
-  <data name="chMin.Text" xml:space="preserve">
-    <value>Mínimo</value>
-  </data>
-  <data name="chName.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="chRate.Text" xml:space="preserve">
-    <value>Taxa</value>
-  </data>
-  <data name="ch2Max.Text" xml:space="preserve">
-    <value>Máximo</value>
-  </data>
-  <data name="ch2MaxSum.Text" xml:space="preserve">
-    <value>Soma máxima</value>
-  </data>
-  <data name="ch2Min.Text" xml:space="preserve">
-    <value>Mínimo</value>
-  </data>
-  <data name="ch2Name.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="ch2Rate.Text" xml:space="preserve">
-    <value>Taxa</value>
   </data>
 </root>
