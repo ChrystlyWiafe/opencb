@@ -228,4 +228,7 @@
   <data name="allScheduleTypes" xml:space="preserve">
     <value>Toutes les méthodes</value>
   </data>
+  <data name="EntryFeeAlreadyHave" xml:space="preserve">
+    <value>Les frais d'inscription</value>
+  </data>
 </root>

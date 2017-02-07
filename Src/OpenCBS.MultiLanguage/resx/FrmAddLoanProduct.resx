@@ -246,4 +246,7 @@
   <data name="allScheduleTypes" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="EntryFeeAlreadyHave" xml:space="preserve">
+    <value>Entry fee already have</value>
+  </data>
 </root>

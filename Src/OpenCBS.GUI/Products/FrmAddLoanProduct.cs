@@ -2159,6 +2159,17 @@ namespace OpenCBS.GUI.Products
             if (_listViewAllEntryFees.SelectedItems.Count != 0)
             {
                 var fee = (EntryFee) _listViewAllEntryFees.SelectedItems[0].Tag;
+
+                for (var i = 0; i < _listViewCreditProductEntryFees.Items.Count; i++)
+                {
+                    var alredyHaveFee = ((EntryFee)_listViewCreditProductEntryFees.Items[i].Tag).Copy();
+                    if (fee.Id == alredyHaveFee.Id)
+                    {
+                        MessageBox.Show(GetString(@"EntryFeeAlreadyHave"));
+                        return;
+                    }
+                }
+
                 var item = new ListViewItem(fee.Name) { Tag = fee };
                 item.SubItems.Add(fee.Min.HasValue ? fee.Min.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
