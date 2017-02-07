@@ -91,7 +91,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
         private void RateChanged(object sender, System.EventArgs e)
         {
-            _numericUpDownMaxSum.Visible = _labelMaxSum.Visible = IsRate;
+            _numericUpDownMaxSum.Enabled = _labelMaxSum.Enabled = IsRate;
 
             if (!IsRate)
             {
