@@ -113,7 +113,9 @@
             this.Controls.Add(this._textBoxName);
             this.Controls.Add(this._labelId);
             this.Controls.Add(this._textBoxId);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PaymentMethodAddEdit";
             this.ResumeLayout(false);
             this.PerformLayout();

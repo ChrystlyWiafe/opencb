@@ -1004,6 +1004,6 @@
     <value>PaymentMethodAddEdit</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
