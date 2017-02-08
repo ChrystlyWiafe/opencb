@@ -285,6 +285,9 @@
   <data name="_descriptionRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 197</value>
   </data>
+  <data name="_descriptionRichTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
   <data name="_descriptionRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>324, 136</value>
   </data>
@@ -1004,6 +1007,6 @@
     <value>PaymentMethodAddEdit</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
