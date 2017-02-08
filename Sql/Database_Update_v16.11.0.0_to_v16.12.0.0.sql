@@ -8,3 +8,9 @@ if col_length('dbo.LoanPenaltyAccrualEvents','installment_number') IS NULL
         alter table dbo.LoanPenaltyAccrualEvents add installment_number int not null
     end
 GO
+
+if col_length('dbo.PenaltyWriteOffEvents','installment_number') IS NULL
+    begin
+        alter table dbo.PenaltyWriteOffEvents add installment_number int not null
+    end
+GO
