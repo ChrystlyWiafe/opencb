@@ -36,7 +36,6 @@
             this._labelId = new System.Windows.Forms.Label();
             this._textBoxId = new System.Windows.Forms.TextBox();
             this._descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
-            this._labelError = new System.Windows.Forms.Label();
             this._comboBoxAccounts = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -62,7 +61,6 @@
             // 
             resources.ApplyResources(this._textBoxName, "_textBoxName");
             this._textBoxName.Name = "_textBoxName";
-            this._textBoxName.TextChanged += new System.EventHandler(this.PaymentMethodChanged);
             // 
             // _labelId
             // 
@@ -78,21 +76,12 @@
             // 
             resources.ApplyResources(this._descriptionRichTextBox, "_descriptionRichTextBox");
             this._descriptionRichTextBox.Name = "_descriptionRichTextBox";
-            this._descriptionRichTextBox.TextChanged += new System.EventHandler(this.PaymentMethodChanged);
-            // 
-            // _labelError
-            // 
-            resources.ApplyResources(this._labelError, "_labelError");
-            this._labelError.ForeColor = System.Drawing.SystemColors.GrayText;
-            this._labelError.Name = "_labelError";
             // 
             // _comboBoxAccounts
             // 
             this._comboBoxAccounts.FormattingEnabled = true;
             resources.ApplyResources(this._comboBoxAccounts, "_comboBoxAccounts");
             this._comboBoxAccounts.Name = "_comboBoxAccounts";
-            this._comboBoxAccounts.SelectedIndexChanged += new System.EventHandler(this.PaymentMethodChanged);
-            this._comboBoxAccounts.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PaymentMethodChanged);
             // 
             // label1
             // 
@@ -105,7 +94,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this._comboBoxAccounts);
-            this.Controls.Add(this._labelError);
             this.Controls.Add(this._descriptionRichTextBox);
             this.Controls.Add(this._buttonSave);
             this.Controls.Add(this._labelDescription);
@@ -130,7 +118,6 @@
         private System.Windows.Forms.Label _labelId;
         private System.Windows.Forms.TextBox _textBoxId;
         private System.Windows.Forms.RichTextBox _descriptionRichTextBox;
-        private System.Windows.Forms.Label _labelError;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox _comboBoxAccounts;
         private System.Windows.Forms.Label label1;
     }
