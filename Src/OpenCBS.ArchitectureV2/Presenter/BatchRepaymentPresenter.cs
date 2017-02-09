@@ -261,7 +261,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
                                 Interests = repaymentEvent2.Interest,
                                 Penalties = 0,
                                 Comment = repaymentEvent2.Comment,
-                                Doc1 = repaymentEvent2.ReceiptNumber,
+                                Doc2 = repaymentEvent2.ReceiptNumber,
                                 PaymentMethodId = repaymentEvent2.PaymentMethodId,
                                 PaymentMethod = _view.SelectedPaymentMethod
                             };
