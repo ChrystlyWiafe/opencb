@@ -9,10 +9,14 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 {
     public partial class PaymentMethodAddEdit : SweetBaseForm
     {
-        private AccountingPaymentMethod _paymentMethod;
-        private List<AccountingPaymentMethod> _paymentMethods;
+        private readonly AccountingPaymentMethod _paymentMethod;
+        private readonly List<AccountingPaymentMethod> _paymentMethods;
         private Account _account;
         private List<Account> _accounts;
+        private bool IsItNewPaymentMethod
+        {
+            get { return _paymentMethod == null; }
+        }
 
         public PaymentMethodAddEdit(List<AccountingPaymentMethod> paymentMethods)
         {
@@ -78,7 +82,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void SaveButtonClick(object sender, System.EventArgs e)
         {
-            var operationComplete = IsItNewPaymentMethod()
+            var operationComplete = IsItNewPaymentMethod
                 ? SaveNewPaymentMethod()
                 : UpdatePaymentMethod();
 
@@ -86,56 +90,62 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 Close();
         }
 
-        private bool IsItNewPaymentMethod()
-        {
-            return _paymentMethod == null;
-        }
-
         private bool SaveNewPaymentMethod()
         {
-            if (!ValidatePaymentMethod())
-                return false;
+            var validResult = ValidatePaymentMethod();
 
-            Services.GetPaymentMethodServices().Save(GetNewPaymentMethodFromForm());
+            if (validResult)
+            {
+                Services.GetPaymentMethodServices().Save(GetNewPaymentMethodFromForm());
+                return true;
+            }
 
-            return true;
+            return false;
         }
 
         private bool ValidatePaymentMethod()
         {
-            _labelError.Text = string.Empty;
-            _buttonSave.Enabled = true;
-
             var paymentMethod = GetNewPaymentMethodFromForm();
+
             if (string.IsNullOrEmpty(paymentMethod.Name))
             {
-                _labelError.Text = GetString("nameEmpty");
-                _buttonSave.Enabled = false;
-                return false;
+                return ShowErrorMessageAndReturnFalse("nameEmpty");
             }
-            if (_comboBoxAccounts.Text != ""
-                && (_comboBoxAccounts.SelectedItem == null
-                || _accounts.FirstOrDefault(x => x.AccountNumber == ((Account)_comboBoxAccounts.SelectedItem).AccountNumber) == null))
+            if (SelectedAccountIncorrect())
             {
-                _labelError.Text = GetString("selectedIncorrectAccount");
-                _buttonSave.Enabled = false;
-                return false;
+                return ShowErrorMessageAndReturnFalse("selectedIncorrectAccount");
             }
-            if (_paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name
-                                                 && x.Description == paymentMethod.Description
-                                                 && x.Account != null
-                                                 && x.Account.AccountNumber != null
-                                                 && paymentMethod.Account != null
-                                                 && paymentMethod.Account.AccountNumber != null
-                                                 && x.Account.AccountNumber == paymentMethod.Account.AccountNumber)
-                               != null)
+            if (CurrentPaymentMethodAlredyHave(paymentMethod))
             {
-                _labelError.Text = GetString("alreadyHave");
-                _buttonSave.Enabled = false;
-                return false;
+                return ShowErrorMessageAndReturnFalse("alreadyHave");
             }
 
             return true;
+        }
+
+        private bool ShowErrorMessageAndReturnFalse(string errorMessage)
+        {
+            MessageBox.Show(GetString(errorMessage));
+            return false;
+        }
+
+        private bool SelectedAccountIncorrect()
+        {
+            return _comboBoxAccounts.Text != ""
+                   && (_comboBoxAccounts.SelectedItem == null
+                       || _accounts.FirstOrDefault(x => x.AccountNumber == ((Account) _comboBoxAccounts.SelectedItem).AccountNumber) == null);
+        }
+
+        private bool CurrentPaymentMethodAlredyHave(AccountingPaymentMethod paymentMethod)
+        {
+            return _paymentMethods.FirstOrDefault(x => x.Name == paymentMethod.Name
+                                                       && x.Description == paymentMethod.Description
+                                                       && x.Account != null
+                                                       && x.Account.AccountNumber != null
+                                                       && paymentMethod.Account != null
+                                                       && paymentMethod.Account.AccountNumber != null
+                                                       && x.Account.AccountNumber == paymentMethod.Account.AccountNumber)
+                                    != null;
         }
 
         private AccountingPaymentMethod GetNewPaymentMethodFromForm()
@@ -156,14 +166,16 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private bool UpdatePaymentMethod()
         {
-            if (!ValidatePaymentMethod())
-                return false;
+            var validResult = ValidatePaymentMethod();
 
-            SetNewValuesToCurrentPaymentMethod();
+            if (validResult)
+            {
+                SetNewValuesToCurrentPaymentMethod();
+                Services.GetPaymentMethodServices().Update(_paymentMethod);
+                return true;
+            }
 
-            Services.GetPaymentMethodServices().Update(_paymentMethod);
-
-            return true;
+            return false;
         }
 
         private void SetNewValuesToCurrentPaymentMethod()
@@ -172,16 +184,6 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             _paymentMethod.Name = paymentMethod.Name;
             _paymentMethod.Description = paymentMethod.Description;
             _paymentMethod.Account = paymentMethod.Account;
-        }
-        
-        private void PaymentMethodChanged(object sender, System.EventArgs e)
-        {
-            ValidatePaymentMethod();
-        }
-
-        private void PaymentMethodChanged(object sender, KeyEventArgs e)
-        {
-            ValidatePaymentMethod();
         }
     }
 }

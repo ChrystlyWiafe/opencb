@@ -105,30 +105,28 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
         private bool ValidateEntryFee(Fee entryFee)
         {
-            string errorMessage;
-
             if (string.IsNullOrEmpty(entryFee.Name))
             {
-                errorMessage = GetString("nameEmpty");
-                MessageBox.Show(errorMessage);
-                return false;
+                return ShowErrorMessageAndReturnFalse("nameEmpty");
             }
 
             if (MinMaxIsZero(entryFee))
             {
-                errorMessage = GetString("minMaxIsZero");
-                MessageBox.Show(errorMessage);
-                return false;
+                return ShowErrorMessageAndReturnFalse("minMaxIsZero");
             }
 
             if (MinGreaterMax())
             {
-                errorMessage = GetString("minGreaterMax");
-                MessageBox.Show(errorMessage);
-                return false;
+                return ShowErrorMessageAndReturnFalse("minGreaterMax");
             }
 
             return true;
+        }
+
+        private bool ShowErrorMessageAndReturnFalse(string errorMessage)
+        {
+            MessageBox.Show(GetString(errorMessage));
+            return false;
         }
 
         private static bool MinMaxIsZero(Fee entryFee)

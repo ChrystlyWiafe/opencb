@@ -61,7 +61,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select any entry fee.
+        ///   Looks up a localized string similar to Please select any payment method.
         /// </summary>
         internal static string needToSelectPaymentMethod {
             get {

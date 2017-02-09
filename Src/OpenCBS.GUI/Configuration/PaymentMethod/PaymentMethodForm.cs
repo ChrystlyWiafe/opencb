@@ -78,12 +78,12 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
         
         private void EditPaymentMethod()
         {
-            EditSelectedEntryFee();
+            EditSelectedPaymentMethod();
 
             DisplayPaymentMethods();
         }
 
-        private void EditSelectedEntryFee()
+        private void EditSelectedPaymentMethod()
         {
             var firstSelectedPaymentMethod = GetFirstSelectedPaymentMethod();
             var editPaymentMethodForm = new PaymentMethodAddEdit(firstSelectedPaymentMethod, _paymentMethods);
@@ -97,7 +97,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private void DoubleClickToListView(object sender, MouseEventArgs e)
         {
-            EditSelectedEntryFee();
+            EditSelectedPaymentMethod();
 
             DisplayPaymentMethods();
         }
