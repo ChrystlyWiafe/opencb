@@ -96,7 +96,7 @@ namespace OpenCBS.GUI.Configuration
             {
                                                        Id =
                                                            ServicesProvider.GetInstance().GetPaymentMethodServices().
-                                                           GetPaymentMethodByName(pm.Name).Id,
+                                                           GetPaymentMethodById(pm.Id).Id,
                                                        Name = pm.Name,
                                                        LinkId = _paymentMethod == null ? 0 : _paymentMethod.LinkId,
                                                        Branch = branch
