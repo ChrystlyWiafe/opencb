@@ -1,6 +1,6 @@
 ﻿namespace OpenCBS.GUI.Configuration.PaymentMethod
 {
-    partial class PaymentMethodAddEdit
+    sealed partial class PaymentMethodAddEdit
     {
         /// <summary>
         /// Required designer variable.

@@ -294,5 +294,10 @@ namespace OpenCBS.Manager
         {
             return _cache.FirstOrDefault(val => val.Name.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0);
         }
+
+        public Branch FindBranchByCode(string code)
+        {
+            return _cache.FirstOrDefault(val => val.Code == code);
+        }
     }
 }

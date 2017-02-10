@@ -7,7 +7,7 @@ using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 
 namespace OpenCBS.GUI.Configuration.PaymentMethod
 {
-    public partial class PaymentMethodAddEdit : SweetBaseForm
+    public sealed partial class PaymentMethodAddEdit : SweetBaseForm
     {
         private readonly AccountingPaymentMethod _paymentMethod;
         private readonly List<AccountingPaymentMethod> _paymentMethods;
@@ -25,8 +25,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
             ConfigureAccountsView();
             FillFieldsAccounts();
-
-            // ReSharper disable once VirtualMemberCallInContructor
+            
             Text = GetString("titleAdd");
         }
 
@@ -40,7 +39,6 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             FillFieldsAccounts();
             FillFieldsPaymentMethod(paymentMethod);
 
-            // ReSharper disable once VirtualMemberCallInContructor
             Text = GetString("titleEdit");
         }
 

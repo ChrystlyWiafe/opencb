@@ -180,10 +180,13 @@ namespace OpenCBS.GUI.Contracts
 
         private void FillComboBoxPaymentMethods()
         {
-            List<PaymentMethod> paymentMethods =
-                ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-            foreach (PaymentMethod method in paymentMethods)
+            var branchId = ServicesProvider.GetInstance().GetBranchService().FindBranchByCode(Loan.BranchCode).Id;
+            var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(branchId);
+
+            foreach (var method in paymentMethods)
+            {
                 cmbPaymentMethod.Items.Add(method);
+            }
 
             cmbPaymentMethod.SelectedItem = paymentMethods[0];
         }
