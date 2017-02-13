@@ -2435,7 +2435,7 @@ namespace OpenCBS.GUI.Clients
 
             foreach (User user in _subordinates)
             {
-                if (user.UserRole.RoleName == "LOF" && !user.IsDeleted && !user.UserRole.IsDeleted)
+                //if (user.UserRole.RoleName == "LOF" && !user.IsDeleted && !user.UserRole.IsDeleted)
                     _loanOfficerComboBox.Items.Add(user);
             }
             // set favoutite loan officer
@@ -2471,10 +2471,10 @@ namespace OpenCBS.GUI.Clients
                 else
                     _loanOfficerComboBox.SelectedIndex = 0;
             }
-            if (_loanOfficerComboBox.Items.Count == 0)
-                _labelLoanOffecerInfo.Text = MultiLanguageStrings.GetString(Ressource.ClientForm, "EmptyLoanOfficer.Text");
-            else
-                _labelLoanOffecerInfo.Text = string.Empty;
+            //if (_loanOfficerComboBox.Items.Count == 0)
+            //    _labelLoanOffecerInfo.Text = MultiLanguageStrings.GetString(Ressource.ClientForm, "EmptyLoanOfficer.Text");
+            //else
+            //    _labelLoanOffecerInfo.Text = string.Empty;
         }
 
         private void InitializeFundingLine()
@@ -3579,7 +3579,7 @@ namespace OpenCBS.GUI.Clients
             {
                 if (item.Tag is LoanEntryFee)
                 {
-                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                     credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                 }
             }
