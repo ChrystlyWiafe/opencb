@@ -125,8 +125,14 @@ namespace OpenCBS.GUI.Contracts
                     item.SubItems.Add(_accumulatedAmount.ToString());
 
                     cbPaymentMethods.Items.Clear();
-                    List<PaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-                    item.SubItems.Add(methods[0].Name);
+                    var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(_village.Branch.Id);
+                    if (paymentMethods.Count == 0)
+                    {
+                        Fail("NoPaymentMethods");
+                        Close();
+                        return;
+                    }
+                    item.SubItems.Add(paymentMethods[0].Name);
 
                     item.SubItems.Add(loan.Comments);
                     item.SubItems.Add("");
@@ -188,9 +194,9 @@ namespace OpenCBS.GUI.Contracts
             if (e.SubItem == IdxPaymentMethod)
             {
                 cbPaymentMethods.Items.Clear();
-                List<PaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
+                var methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(_village.Branch.Id);
 
-                foreach (PaymentMethod method in methods)
+                foreach (var method in methods)
                     cbPaymentMethods.Items.Add(method);
                 
                 lvMembers.StartEditing(cbPaymentMethods, e.Item, e.SubItem);
