@@ -1634,8 +1634,6 @@ namespace OpenCBS.Services
                         copyOfLoan.NbOfInstallments,
                         copyOfLoan,
                         transaction);
-
-
                     copyOfLoan.GivenTranches.Add(trancheEvent);
 
                     // Invoke interceptors
