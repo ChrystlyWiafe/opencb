@@ -183,4 +183,7 @@
   <data name="allScheduleTypes" xml:space="preserve">
     <value>Todos los tipos</value>
   </data>
+  <data name="messageForTranche" xml:space="preserve">
+    <value>No se puede desembolsar un tramo en el día de desembolso</value>
+  </data>
 </root>

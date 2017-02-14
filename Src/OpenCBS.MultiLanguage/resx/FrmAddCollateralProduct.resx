@@ -165,4 +165,7 @@
   <data name="typeString" xml:space="preserve">
     <value>String</value>
   </data>
+  <data name="messageForTranche" xml:space="preserve">
+    <value>A tranche can't be disbursed on the disbursement day</value>
+  </data>
 </root>

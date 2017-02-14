@@ -1624,11 +1624,18 @@ namespace OpenCBS.Services
                         _loanManager.UpdateLoan(copyOfLoan, transaction);
                     }
                     //in the feature might be combine UpdateLoan + UpdateLoanWithinTranche
+                    if (loan.StartDate.Date == loan.LastEventDate.Date)
+                    {
+                        MessageBox.Show(MultiLanguageStrings.GetString("FrmAddCollateralProduct", "messageForTranche"));
+                        return loan;
+                    }
                     _loanManager.UpdateLoanWithinTranche(
                         trancheConfiguration.InterestRate / 100,
                         copyOfLoan.NbOfInstallments,
                         copyOfLoan,
                         transaction);
+
+
                     copyOfLoan.GivenTranches.Add(trancheEvent);
 
                     // Invoke interceptors
@@ -1661,7 +1668,7 @@ namespace OpenCBS.Services
                     SetClientStatus(copyOfLoan, client);
                     return copyOfLoan;
                 }
-                catch
+                catch(Exception error)
                 {
                     transaction.Rollback();
                     throw;
