@@ -4086,6 +4086,8 @@ namespace OpenCBS.GUI.Clients
             try
             {
                 var loanDisbursementForm = new LoanDisbursementForm(_credit);
+                if (loanDisbursementForm.IsDisposed)
+                    return;
 
                 foreach (var initializer in _applicationController.GetAllInstances<IDisbursementFormInitializer>())
                 {
@@ -4235,6 +4237,8 @@ namespace OpenCBS.GUI.Clients
                 if (_oClientType == OClientTypes.Group) client = _groupUserControl.Group;
 
                 var creditContractRepayForm = new CreditContractRepayForm(_credit, client);
+                if (creditContractRepayForm.IsDisposed)
+                    return;
 
                 foreach (var initializer in _applicationController.GetAllInstances<IRepaymentControlInitializer>())
                 {

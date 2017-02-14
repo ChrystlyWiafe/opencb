@@ -20,7 +20,6 @@
 // Contact: contact@opencbs.com
 
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain;
@@ -182,6 +181,13 @@ namespace OpenCBS.GUI.Contracts
         {
             var branchId = ServicesProvider.GetInstance().GetBranchService().FindBranchByCode(Loan.BranchCode).Id;
             var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(branchId);
+
+            if (paymentMethods.Count == 0)
+            {
+                Fail("NoPaymentMethods");
+                Close();
+                return;
+            }
 
             foreach (var method in paymentMethods)
             {

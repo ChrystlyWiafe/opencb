@@ -186,4 +186,7 @@
   <data name="Savings.Text" xml:space="preserve">
     <value>Savings</value>
   </data>
+  <data name="NoPaymentMethods" xml:space="preserve">
+    <value>There are no payment methods for this branch</value>
+  </data>
 </root>

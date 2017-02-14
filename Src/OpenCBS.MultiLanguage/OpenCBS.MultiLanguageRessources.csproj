@@ -182,6 +182,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmFundingLineEvent.resx</DependentUpon>
     </Compile>
+    <Compile Include="resx\LoanDisbursementForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanDisbursementForm.resx</DependentUpon>
+    </Compile>
     <Compile Include="resx\LoanSharesForm.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,6 +290,12 @@
       <LastGenOutput>EntryFeesForm.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="resx\LoanDisbursementForm.fr.resx" />
+    <EmbeddedResource Include="resx\LoanDisbursementForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoanDisbursementForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resx\LoanDisbursementForm.RU-ru.resx" />
     <EmbeddedResource Include="resx\PaymentMethodAddEdit.es-Es.resx" />
     <EmbeddedResource Include="resx\PaymentMethodAddEdit.fr.resx" />
     <EmbeddedResource Include="resx\PaymentMethodAddEdit.pt.resx" />
