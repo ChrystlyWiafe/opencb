@@ -223,7 +223,8 @@ namespace OpenCBS.GUI.Configuration
                         val.Key.ToString() == OGeneralSettings.USE_MANDATORY_SAVING_ACCOUNT ||
                         val.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                         val.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
-                        val.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN)
+                        val.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
+                        val.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
                     {
                         listViewItem.SubItems.Add(val.Value.ToString().Trim() == "1" ? "Yes" : "No");
                     }
@@ -1208,7 +1209,8 @@ namespace OpenCBS.GUI.Configuration
                 entry.Key.ToString() == OGeneralSettings.USE_MANDATORY_SAVING_ACCOUNT ||
                 entry.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                 entry.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
-                entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN)
+                entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
+                entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
             {
                 groupBoxValue.Visible = true;
                 cbxValue.Visible = false;
@@ -1298,7 +1300,8 @@ namespace OpenCBS.GUI.Configuration
                      entry.Key.ToString() == OGeneralSettings.USE_MANDATORY_SAVING_ACCOUNT ||
                      entry.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                      entry.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
-                     entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN)
+                     entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
+                     entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
             {
                 radioButtonYes.Checked = entry.Value.ToString() == "1";
                 radioButtonNo.Checked = entry.Value.ToString() == "0";

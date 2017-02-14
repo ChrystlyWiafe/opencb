@@ -100,6 +100,7 @@ namespace OpenCBS.Shared.Settings
             _defaultParamList.Add(OGeneralSettings.SHORT_DATE_FORMAT, "dd-MM-yyyy");
             _defaultParamList.Add(OGeneralSettings.ID_NUMBER_IS_MANDATORY, 1);
             _defaultParamList.Add(OGeneralSettings.COPY_DATA_OF_CUSTOM_FIELD_FROM_PREVIOUS_LOAN, 0);
+            _defaultParamList.Add(OGeneralSettings.USE_ACCRUALS_VALIDATION, 0);
         }
 
         #region Internal stuff
@@ -404,6 +405,12 @@ namespace OpenCBS.Shared.Settings
                 return GetSpecificParameter(OGeneralSettings.ENFORCE_ID_PATTERN).ToString() == "1";
             }
         }
+
+        public bool UseAccrualsValidation
+        {
+            get { return GetSpecificParameter(OGeneralSettings.USE_ACCRUALS_VALIDATION).ToString() == "1"; }
+        }
+
         public bool DoNotSkipNonWorkingDays
         {
             get

@@ -3,6 +3,7 @@ using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.Interface.View;
+using OpenCBS.ArchitectureV2.Startup;
 
 namespace OpenCBS.ArchitectureV2.Presenter
 {
