@@ -2165,7 +2165,7 @@ namespace OpenCBS.GUI.Products
                     var alredyHaveFee = ((EntryFee)_listViewCreditProductEntryFees.Items[i].Tag).Copy();
                     if (fee.Id == alredyHaveFee.Id)
                     {
-                        MessageBox.Show(GetString(@"EntryFeeAlreadyHave"));
+                        Fail(GetString(@"EntryFeeAlreadyHave"));
                         return;
                     }
                 }

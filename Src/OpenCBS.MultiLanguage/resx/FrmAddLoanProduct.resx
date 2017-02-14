@@ -247,6 +247,6 @@
     <value>All</value>
   </data>
   <data name="EntryFeeAlreadyHave" xml:space="preserve">
-    <value>Entry fee already have</value>
+    <value>Entry fee already exists</value>
   </data>
 </root>
