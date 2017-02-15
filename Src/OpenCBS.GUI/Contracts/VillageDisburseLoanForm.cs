@@ -79,20 +79,24 @@ namespace OpenCBS.GUI.Contracts
         {
             lvMembers.Items.Clear();
             _fLServices.EmptyTemporaryFLAmountsStorage();
-            ApplicationSettings dataParam = ApplicationSettings.GetInstance(string.Empty);
-            int decimalPlaces = dataParam.InterestRateDecimalPlaces;
+            var dataParam = ApplicationSettings.GetInstance(string.Empty);
+            var decimalPlaces = dataParam.InterestRateDecimalPlaces;
             foreach (VillageMember member in _village.NonDisbursedMembers)
             {
-                foreach (Loan loan in member.ActiveLoans)
+                foreach (var loan in member.ActiveLoans)
                 {
                     if (loan.ContractStatus == OContractStatus.Active ||
                         loan.ContractStatus == OContractStatus.Refused ||
                         loan.ContractStatus == OContractStatus.Abandoned
                         ) continue;
+
                     _hasMember = true;
-                    Person person = member.Tiers as Person;
-                    ListViewItem item = new ListViewItem(person.Name) {Tag = loan};
-                    item.UseItemStyleForSubItems = true;
+                    var person = member.Tiers as Person;
+                    var item = new ListViewItem(person.Name)
+                    {
+                        Tag = loan,
+                        UseItemStyleForSubItems = true
+                    };
                     item.SubItems.Add(person.IdentificationData);
 
                     ListViewItem.ListViewSubItem subitem;
@@ -181,8 +185,8 @@ namespace OpenCBS.GUI.Contracts
                 
                 total += customExchangeRate.Rate == 0 ? 0 : (OCurrency)Convert.ToDecimal(item.SubItems[IdxAmount].Tag) / customExchangeRate.Rate;
             }
-                _itemTotal.SubItems[IdxAmount].Text = total.GetFormatedValue(ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().UseCents);
-                _itemTotal.SubItems[IdxCurrency].Text = ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().Code;
+            _itemTotal.SubItems[IdxAmount].Text = total.GetFormatedValue(ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().UseCents);
+            _itemTotal.SubItems[IdxCurrency].Text = ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().Code;
         }
 
         private void lvMembers_SubItemClicked(object sender, SubItemEventArgs e)
