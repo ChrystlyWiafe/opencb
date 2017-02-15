@@ -121,10 +121,10 @@
     <value>This payment method already exists</value>
   </data>
   <data name="nameEmpty" xml:space="preserve">
-    <value>Name is empty</value>
+    <value>Field "Name" is empty</value>
   </data>
   <data name="selectedIncorrectAccount" xml:space="preserve">
-    <value>Selected an incorrect account</value>
+    <value>An incorrect(Wrong) account was selected</value>
   </data>
   <data name="titleAdd" xml:space="preserve">
     <value>Add payment method</value>

@@ -70,7 +70,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name is empty.
+        ///   Looks up a localized string similar to Field &quot;Name&quot; is empty.
         /// </summary>
         internal static string nameEmpty {
             get {
@@ -79,7 +79,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected an incorrect account.
+        ///   Looks up a localized string similar to An incorrect(Wrong) account was selected.
         /// </summary>
         internal static string selectedIncorrectAccount {
             get {
