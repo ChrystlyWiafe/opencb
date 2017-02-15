@@ -223,9 +223,10 @@
     <Compile Include="Service\RepaymentSettings.cs" />
     <Compile Include="Service\RepaymentService.cs" />
     <Compile Include="Service\SettingsService.cs" />
+    <Compile Include="Startup\CheckFuseboxProcess.cs" />
     <Compile Include="TinyMessenger.cs" />
-    <Compile Include="UpdatePasswordRegistry.cs" />
-    <Compile Include="UpdatePasswordProcess.cs" />
+    <Compile Include="Startup\UpdatePasswordRegistry.cs" />
+    <Compile Include="Startup\UpdatePasswordProcess.cs" />
     <Compile Include="View\AlertsView.cs">
       <SubType>Form</SubType>
     </Compile>

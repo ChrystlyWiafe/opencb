@@ -7,7 +7,7 @@ using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.CoreDomain;
 using OpenCBS.Manager;
 
-namespace OpenCBS.ArchitectureV2
+namespace OpenCBS.ArchitectureV2.Startup
 {
     internal class UpdatePasswordProcess : IStartupProcess
     {

@@ -153,6 +153,15 @@
   <data name="CALCULATION_LATE_FEES_DURING_PUBLIC_HOLIDAYS.Unit" xml:space="preserve">
     <value />
   </data>
+  <data name="USE_ACCRUALS_VALIDATION.Explanation" xml:space="preserve">
+    <value>Allows to stop OpenCBS application launch before Fusebox accruing?</value>
+  </data>
+  <data name="USE_ACCRUALS_VALIDATION.Title" xml:space="preserve">
+    <value>Use accruals validation</value>
+  </data>
+  <data name="USE_ACCRUALS_VALIDATION.Unit" xml:space="preserve">
+    <value />
+  </data>
   <data name="CITY_MANDATORY.Explanation" xml:space="preserve">
     <value>Determines whether a city must be chosen (or entered) for addresses</value>
   </data>
