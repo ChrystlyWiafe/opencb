@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="minGreaterMax" xml:space="preserve">
-    <value>Minimum plus grand maximum</value>
+    <value>Le minimum est plus élevé que le maximum</value>
   </data>
   <data name="minMaxIsZero" xml:space="preserve">
-    <value>Min et max ne peuvent pas être zéro</value>
+    <value>Min et Max ne peuvent être égaux a zéro</value>
   </data>
   <data name="nameAlredyHave" xml:space="preserve">
-    <value>Ce nom déjà utilisé</value>
+    <value>Ce nom est déjà utilisé</value>
   </data>
   <data name="nameEmpty" xml:space="preserve">
-    <value>Le nom ne peut pas être vide</value>
+    <value>Le champ “Nom” ne peut être vide</value>
   </data>
   <data name="titleAdd" xml:space="preserve">
-    <value>Ajouter un droit d'entrée</value>
+    <value>Ajouter droit d’entrée</value>
   </data>
   <data name="titleEdit" xml:space="preserve">
-    <value>Modifier le droit d'entrée</value>
+    <value>Editer droit d’entrée</value>
   </data>
 </root>

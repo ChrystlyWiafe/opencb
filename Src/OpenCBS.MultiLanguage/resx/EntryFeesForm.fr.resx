@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="areUSure" xml:space="preserve">
-    <value>Êtes-vous sûr?</value>
+    <value>Etes-vous sûr?</value>
   </data>
   <data name="deleteSelectedEntryFee" xml:space="preserve">
-    <value>Supprimer le droit d'entrée sélectionné</value>
+    <value>Effacer les droits d’entrée sélectionnés?</value>
   </data>
   <data name="needToSelectFee" xml:space="preserve">
-    <value>Veuillez sélectionner les frais d'inscription</value>
+    <value>Veuillez sélectionner un droit d’entrée</value>
   </data>
 </root>

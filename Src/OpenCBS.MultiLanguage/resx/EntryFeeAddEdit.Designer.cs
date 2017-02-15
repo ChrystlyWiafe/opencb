@@ -61,7 +61,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minimum greater maximum.
+        ///   Looks up a localized string similar to Minimum is greater than maximum.
         /// </summary>
         internal static string minGreaterMax {
             get {
@@ -70,7 +70,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Min and max cannot be zero.
+        ///   Looks up a localized string similar to Min and max cannot be equal to zero.
         /// </summary>
         internal static string minMaxIsZero {
             get {
@@ -79,7 +79,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This name already used.
+        ///   Looks up a localized string similar to This name is already in use.
         /// </summary>
         internal static string nameAlredyHave {
             get {
@@ -88,7 +88,7 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name cannot be empty.
+        ///   Looks up a localized string similar to Field &quot;Name&quot; cannot be empty.
         /// </summary>
         internal static string nameEmpty {
             get {
