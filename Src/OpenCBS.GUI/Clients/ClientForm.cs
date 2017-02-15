@@ -6528,6 +6528,8 @@ namespace OpenCBS.GUI.Clients
                 ServicesProvider.GetInstance().GetContractServices().CheckLoanForTranche(_credit);
 
                 var addTrancheForm = new AddTrancheForm(_credit, _client);
+                if(addTrancheForm.IsDisposed)
+                    return;
                 addTrancheForm.ShowDialog();
 
                 if (addTrancheForm.DialogResult != DialogResult.Cancel)
