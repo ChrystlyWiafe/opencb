@@ -5866,6 +5866,8 @@ namespace OpenCBS.GUI.Clients
         private void buttonSavingDeposit_Click(object sender, EventArgs e)
         {
             var savingEvent = new SavingsOperationForm(_saving, OSavingsOperation.Credit);
+            if (savingEvent.IsDisposed)
+                return;
             savingEvent.ShowDialog();
             _saving = SavingServices.GetSaving(_saving.Id);
             DisplaySavingEvent(_saving);
@@ -5883,6 +5885,8 @@ namespace OpenCBS.GUI.Clients
         private void buttonSavingWithDraw_Click(object sender, EventArgs e)
         {
             var savingsOperationForm = new SavingsOperationForm(_saving, OSavingsOperation.Debit);
+            if (savingsOperationForm.IsDisposed)
+                return;
             savingsOperationForm.ShowDialog();
             _saving = SavingServices.GetSaving(_saving.Id);
             DisplaySavingEvent(_saving);
@@ -6303,6 +6307,8 @@ namespace OpenCBS.GUI.Clients
         {
             _saving.Client = _client;
             var savingEvent = new SavingsOperationForm(_saving, OSavingsOperation.Transfer);
+            if (savingEvent.IsDisposed)
+                return;
             savingEvent.ShowDialog();
             _saving = SavingServices.GetSaving(_saving.Id);
             DisplaySavingEvent(_saving);
