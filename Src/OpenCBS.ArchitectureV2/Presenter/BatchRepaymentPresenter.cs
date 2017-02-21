@@ -8,7 +8,10 @@ using OpenCBS.ArchitectureV2.Interface.Repository;
 using OpenCBS.ArchitectureV2.Interface.View;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.ArchitectureV2.Model;
+using OpenCBS.Controls;
 using OpenCBS.CoreDomain;
+using OpenCBS.Enums;
+using OpenCBS.ExceptionsHandler;
 using OpenCBS.Extensions;
 using OpenCBS.Services;
 using OpenCBS.Shared;
@@ -22,6 +25,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
         private readonly IVillageBankRepository _villageBankRepository;
         private readonly IConnectionProvider _connectionProvider;
         private readonly IApplicationController _applicationController;
+        private readonly TranslationService _translationService;
         private List<Loan> _loans;
         private int _villageBankId;
         private bool _addaction;
@@ -38,17 +42,35 @@ namespace OpenCBS.ArchitectureV2.Presenter
             _villageBankRepository = villageBankRepository;
             _connectionProvider = connectionProvider;
             _applicationController = applicationController;
+
+            _translationService = new TranslationService();
+            _translationService.Reload();
         }
 
         public void Run(int villageBankId)
         {
             _villageBankId = villageBankId;
             _view.Attach(this);
-            ModifyTotal();
-            _view.PaymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-            _loans = _loanRepository.GetVillageBankLoans(villageBankId);
-            _view.SetLoans(_loans);
-            _view.Run();
+            try
+            {
+                ModifyTotal();
+                var villageBank = ServicesProvider.GetInstance().GetClientServices().FindTiers(_villageBankId, OClientTypes.Village);
+                var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(villageBank.Branch.Id);
+
+                if (paymentMethods.Count == 0)
+                {
+                    throw new OpenCbsException(_translationService.Translate("There are no payment methods for this branch"));
+                }
+
+                _view.PaymentMethods = paymentMethods;
+                _loans = _loanRepository.GetVillageBankLoans(villageBankId);
+                _view.SetLoans(_loans);
+                _view.Run();
+            }
+            catch (Exception error)
+            {
+                new frmShowError(CustomExceptionHandler.ShowExceptionText(error)).ShowDialog();
+            }
         }
 
         public object View

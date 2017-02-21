@@ -69,7 +69,7 @@ namespace OpenCBS.GUI.Configuration
             _isNew = paymentMethod == null;
             _paymentMethod = paymentMethod;
 
-            List<AccountingPaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
+            var methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
             cmbPaymentMethod.Items.Clear();
             cmbPaymentMethod.ValueMember = "Id";
             cmbPaymentMethod.DisplayMember = "Name";

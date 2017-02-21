@@ -718,7 +718,9 @@ namespace OpenCBS.GUI.Clients
 
         private void buttonLoanDisbursment_Click(object sender, EventArgs e)
         {
-            VillageDisburseLoanForm frm = new VillageDisburseLoanForm(_village);
+            var frm = new VillageDisburseLoanForm(_village);
+            if(frm.IsDisposed)
+                return;
             if (DialogResult.OK == frm.ShowDialog())
             {
                 DisplayMembers();

@@ -79,20 +79,24 @@ namespace OpenCBS.GUI.Contracts
         {
             lvMembers.Items.Clear();
             _fLServices.EmptyTemporaryFLAmountsStorage();
-            ApplicationSettings dataParam = ApplicationSettings.GetInstance(string.Empty);
-            int decimalPlaces = dataParam.InterestRateDecimalPlaces;
+            var dataParam = ApplicationSettings.GetInstance(string.Empty);
+            var decimalPlaces = dataParam.InterestRateDecimalPlaces;
             foreach (VillageMember member in _village.NonDisbursedMembers)
             {
-                foreach (Loan loan in member.ActiveLoans)
+                foreach (var loan in member.ActiveLoans)
                 {
                     if (loan.ContractStatus == OContractStatus.Active ||
                         loan.ContractStatus == OContractStatus.Refused ||
                         loan.ContractStatus == OContractStatus.Abandoned
                         ) continue;
+
                     _hasMember = true;
-                    Person person = member.Tiers as Person;
-                    ListViewItem item = new ListViewItem(person.Name) {Tag = loan};
-                    item.UseItemStyleForSubItems = true;
+                    var person = member.Tiers as Person;
+                    var item = new ListViewItem(person.Name)
+                    {
+                        Tag = loan,
+                        UseItemStyleForSubItems = true
+                    };
                     item.SubItems.Add(person.IdentificationData);
 
                     ListViewItem.ListViewSubItem subitem;
@@ -125,8 +129,14 @@ namespace OpenCBS.GUI.Contracts
                     item.SubItems.Add(_accumulatedAmount.ToString());
 
                     cbPaymentMethods.Items.Clear();
-                    List<PaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-                    item.SubItems.Add(methods[0].Name);
+                    var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(_village.Branch.Id);
+                    if (paymentMethods.Count == 0)
+                    {
+                        Fail("NoPaymentMethods");
+                        Close();
+                        return;
+                    }
+                    item.SubItems.Add(paymentMethods[0].Name);
 
                     item.SubItems.Add(loan.Comments);
                     item.SubItems.Add("");
@@ -175,8 +185,8 @@ namespace OpenCBS.GUI.Contracts
                 
                 total += customExchangeRate.Rate == 0 ? 0 : (OCurrency)Convert.ToDecimal(item.SubItems[IdxAmount].Tag) / customExchangeRate.Rate;
             }
-                _itemTotal.SubItems[IdxAmount].Text = total.GetFormatedValue(ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().UseCents);
-                _itemTotal.SubItems[IdxCurrency].Text = ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().Code;
+            _itemTotal.SubItems[IdxAmount].Text = total.GetFormatedValue(ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().UseCents);
+            _itemTotal.SubItems[IdxCurrency].Text = ServicesProvider.GetInstance().GetCurrencyServices().GetPivot().Code;
         }
 
         private void lvMembers_SubItemClicked(object sender, SubItemEventArgs e)
@@ -188,9 +198,9 @@ namespace OpenCBS.GUI.Contracts
             if (e.SubItem == IdxPaymentMethod)
             {
                 cbPaymentMethods.Items.Clear();
-                List<PaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
+                var methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(_village.Branch.Id);
 
-                foreach (PaymentMethod method in methods)
+                foreach (var method in methods)
                     cbPaymentMethods.Items.Add(method);
                 
                 lvMembers.StartEditing(cbPaymentMethods, e.Item, e.SubItem);

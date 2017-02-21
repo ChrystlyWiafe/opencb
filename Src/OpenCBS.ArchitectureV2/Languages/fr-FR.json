@@ -76,5 +76,6 @@
   "SIRET": "SIRET",
   "The same payment method already exists.": "Le même mode de paiement existe déjà.",
   "Type": "Type",
-  "Volunteer": "Bénévole"
+  "Volunteer": "Bénévole",
+  "There are no payment methods for this branch": "Dans cette succursale il n'y a pas de méthode de paiement"
 }

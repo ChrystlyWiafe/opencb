@@ -29,7 +29,6 @@ using OpenCBS.CoreDomain.Contracts.Savings;
 using OpenCBS.CoreDomain.Products;
 using OpenCBS.Enums;
 using OpenCBS.ExceptionsHandler;
-using OpenCBS.ExceptionsHandler.Exceptions.SavingExceptions;
 using OpenCBS.Services;
 using OpenCBS.Shared;
 using OpenCBS.GUI.UserControl;
@@ -71,7 +70,6 @@ namespace OpenCBS.GUI.Contracts
 
             dtpDate.Format = DateTimePickerFormat.Custom;
             dtpDate.CustomFormat = ApplicationSettings.GetInstance("").SHORT_DATE_FORMAT;
-
         }
 
         private void SwitchBookingDirection()
@@ -233,27 +231,24 @@ namespace OpenCBS.GUI.Contracts
             dtpDate.Value = TimeProvider.Now;
 
             _pendingSavingsMode = ServicesProvider.GetInstance().GetGeneralSettings().PendingSavingsMode.ToUpper();
-            var paymentMethods =
-                  ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
+            var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(_saving.Branch.Id);
+
+            if (paymentMethods.Count == 0)
+            {
+                Fail("NoPaymentMethods");
+                Close();
+                return;
+            }
+
             foreach (var method in paymentMethods)
                 cbSavingsMethod.Items.Add(method);
             cbSavingsMethod.SelectedItem = paymentMethods[0];
-            //cbSavingsMethod.DataBind(typeof(OPaymentMethods), Ressource.SavingsOperationForm, false);
-            // cbSavingsMethod.DataBind(typeof(OSavingsMethods), Ressource.FrmAddSavingEvent, false);
 
             switch (_bookingDirection)
             {
                 case OSavingsOperation.Credit:
                     {
-                        //switch (cbSavingsMethod.SelectedValue.ToString())
-                        //{
-                        //    case "Cheque":
-                        //        _flatFees = ((SavingBookContract)_saving).ChequeDepositFees;
-                        //        break;
-                        //    default:
                         _flatFees = ((SavingBookContract)_saving).DepositFees;
-                        //  break;
-                        //}
                         break;
                     }
                 case OSavingsOperation.Debit:
