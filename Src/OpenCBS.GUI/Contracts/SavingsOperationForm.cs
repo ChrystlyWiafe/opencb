@@ -314,7 +314,16 @@ namespace OpenCBS.GUI.Contracts
                         {
                             var paymentMethod = (PaymentMethod)cbSavingsMethod.SelectedItem;
 
-                            OSavingsMethods savingsMethod = (OSavingsMethods)Enum.Parse(typeof(OSavingsMethods), paymentMethod.Name);
+                            OSavingsMethods savingsMethod;
+                            try
+                            {
+                                savingsMethod = (OSavingsMethods)Enum.Parse(typeof(OSavingsMethods), paymentMethod.Name);
+                            }
+                            catch (Exception)
+                            {
+                                savingsMethod = OSavingsMethods.Cash;
+                            }
+                            
                             if (_saving is SavingBookContract)
                             {
                                 if (savingsMethod == OSavingsMethods.Cheque)

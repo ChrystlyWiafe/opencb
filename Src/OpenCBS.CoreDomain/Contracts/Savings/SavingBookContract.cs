@@ -248,7 +248,8 @@ namespace OpenCBS.CoreDomain.Contracts.Savings
                 TellerId = tellerId,
                 ProductType = typeof(SavingsBookProduct),
                 SavingsMethod = savingsMethod,
-                ParentId = parentId
+                ParentId = parentId,
+                PaymentMethod = paymentMethod
             };
             Events.Add(withdrawEvent);
             events.Add(withdrawEvent);

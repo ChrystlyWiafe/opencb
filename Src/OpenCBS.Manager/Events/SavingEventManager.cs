@@ -131,7 +131,11 @@ namespace OpenCBS.Manager.Events
 	        c.AddParam("@is_fired", pSavingEvent.IsFired);
 	        c.AddParam("@related_contract_code", pSavingEvent is SavingTransferEvent ? ((SavingTransferEvent)pSavingEvent).RelatedContractCode : null);
 	        c.AddParam("@fees", pSavingEvent is ISavingsFees ? ((ISavingsFees)pSavingEvent).Fee : null);
-            if (pSavingEvent.PaymentMethod != null && pSavingEvent.PaymentsMethod.Id != 0)
+            if (pSavingEvent.PaymentMethod != null)
+            {
+                c.AddParam("@savings_method", pSavingEvent.PaymentMethod.Id);
+            }
+            else if (pSavingEvent.PaymentsMethod != null && pSavingEvent.PaymentsMethod.Id != 0)
             {
                 c.AddParam("@savings_method", pSavingEvent.PaymentsMethod.Id);
             }
