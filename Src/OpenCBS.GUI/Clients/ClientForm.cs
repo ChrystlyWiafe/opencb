@@ -5667,18 +5667,18 @@ namespace OpenCBS.GUI.Clients
             {
                 nudDownInterestRate.Value = nudDownInterestRate.Minimum = nudDownInterestRate.Maximum = (decimal)pSaving.InterestRate * 100;
 
-                SavingBookContract s = (SavingBookContract)pSaving;
+                var tempSaving = (SavingBookContract)pSaving;
 
-                nudWithdrawFees.Value = nudWithdrawFees.Minimum = nudWithdrawFees.Maximum = s.FlatWithdrawFees.HasValue ?
-                    s.FlatWithdrawFees.Value : (decimal)s.RateWithdrawFees.Value * 100;
+                nudWithdrawFees.Value = nudWithdrawFees.Minimum = nudWithdrawFees.Maximum = tempSaving.FlatWithdrawFees.HasValue ?
+                    tempSaving.FlatWithdrawFees.Value : (decimal)tempSaving.RateWithdrawFees.Value * 100;
 
-                nudTransferFees.Value = nudTransferFees.Minimum = nudTransferFees.Maximum = s.FlatTransferFees.HasValue ?
-                    s.FlatTransferFees.Value : (decimal)s.RateTransferFees.Value * 100;
+                nudTransferFees.Value = nudTransferFees.Minimum = nudTransferFees.Maximum = tempSaving.FlatTransferFees.HasValue ?
+                    tempSaving.FlatTransferFees.Value : (decimal)tempSaving.RateTransferFees.Value * 100;
 
                 nudIbtFee.Minimum = 0;
                 nudIbtFee.Maximum = 999999999;
-                nudIbtFee.Value = s.FlatInterBranchTransferFee.HasValue ? (s.FlatInterBranchTransferFee.Value == 0 ? nudIbtFee.Minimum : s.FlatInterBranchTransferFee.Value)
-                    : Convert.ToDecimal((s.RateInterBranchTransferFee == null ? Convert.ToDouble(nudIbtFee.Minimum) : s.RateInterBranchTransferFee.Value));
+                nudIbtFee.Value = tempSaving.FlatInterBranchTransferFee.HasValue ? (tempSaving.FlatInterBranchTransferFee.Value == 0 ? nudIbtFee.Minimum : tempSaving.FlatInterBranchTransferFee.Value)
+                    : Convert.ToDecimal((tempSaving.RateInterBranchTransferFee == null ? Convert.ToDouble(nudIbtFee.Minimum) : tempSaving.RateInterBranchTransferFee.Value));
 
                 nudDepositFees.Value = nudDepositFees.Minimum = nudDepositFees.Maximum = ((SavingBookContract)pSaving).DepositFees.Value;
                 nudChequeDepositFees.Value = nudChequeDepositFees.Minimum = nudChequeDepositFees.Maximum = ((SavingBookContract)pSaving).ChequeDepositFees.Value;
@@ -5698,41 +5698,44 @@ namespace OpenCBS.GUI.Clients
             lvSavingEvent.Items.Clear();
             IEnumerable<SavingEvent> events = pSaving.Events.OrderBy(item => item.Date.Date);
 
-            bool useCents = pSaving.Product.Currency.UseCents;
-            foreach (SavingEvent e in events)
+            var useCents = pSaving.Product.Currency.UseCents;
+            foreach (var savingEvent in events)
             {
-                ListViewItem item = new ListViewItem(e.Date.ToString("dd/MM/yyyy HH:mm:ss"));
-                //                item.SubItems.Add(e.Fee.GetFormatedValue(useCents));
-                string amt = e.Amount.GetFormatedValue(useCents);
-                item.SubItems.Add(e.IsDebit ? amt : string.Empty);
-                item.SubItems.Add(e.IsDebit ? string.Empty : amt);
-                item.SubItems.Add(e.ExtraInfo);
-                item.SubItems.Add(e.Code);
+                var item = new ListViewItem(savingEvent.Date.ToString("dd/MM/yyyy HH:mm:ss"));
+                var amt = savingEvent.Amount.GetFormatedValue(useCents);
+                item.SubItems.Add(savingEvent.IsDebit ? amt : string.Empty);
+                item.SubItems.Add(savingEvent.IsDebit ? string.Empty : amt);
+                item.SubItems.Add(savingEvent.ExtraInfo);
+                item.SubItems.Add(savingEvent.Code);
                 string method;
-                if (e.SavingsMethod.HasValue)
-                    method = GetString("SavingsOperationForm", e.SavingsMethod + ".Text");
+                if (savingEvent.PaymentMethod != null)
+                {
+                    method = savingEvent.PaymentMethod.Name;
+                }
                 else
-                    method = e.PaymentsMethod == null
-                        ? "-"
-                        : GetString("SavingsOperationForm", e.PaymentsMethod.Name + ".Text");
+                {
+                    method = savingEvent.SavingsMethod.HasValue
+                        ? GetString("SavingsOperationForm", savingEvent.SavingsMethod.Value + ".Text")
+                        : "-";
+                }
                 item.SubItems.Add(method);
-                item.SubItems.Add(e.User.Name);
-                item.SubItems.Add(e.Description);
-                item.SubItems.Add(e.CancelDate.HasValue ? e.CancelDate.Value.ToString("dd/MM/yyyy HH:mm:ss") : string.Empty);
+                item.SubItems.Add(savingEvent.User.Name);
+                item.SubItems.Add(savingEvent.Description);
+                item.SubItems.Add(savingEvent.CancelDate.HasValue ? savingEvent.CancelDate.Value.ToString("dd/MM/yyyy HH:mm:ss") : string.Empty);
 
-                if (e.IsPending)
+                if (savingEvent.IsPending)
                 {
                     item.BackColor = Color.Orange;
                     item.ForeColor = Color.White;
                 }
 
-                if (e.Deleted)
+                if (savingEvent.Deleted)
                 {
                     item.BackColor = Color.FromArgb(188, 209, 199);
                     item.ForeColor = Color.White;
                 }
 
-                item.Tag = e;
+                item.Tag = savingEvent;
                 lvSavingEvent.Items.Add(item);
             }
         }
