@@ -1,9 +1,11 @@
 using System.Globalization;
 using System.Windows.Forms;
+using OpenCBS.Controls;
 using OpenCBS.CoreDomain.FundingLines;
 using OpenCBS.GUI.UserControl;
 using OpenCBS.Services;
 using OpenCBS.Shared.Settings;
+using PrintButton = OpenCBS.GUI.UserControl.PrintButton;
 
 namespace OpenCBS.GUI.Clients
 {
@@ -324,6 +326,7 @@ namespace OpenCBS.GUI.Clients
             this.buttonManualSchedule = new System.Windows.Forms.Button();
             this.buttonAddTranche = new System.Windows.Forms.Button();
             this.btnWriteOff = new System.Windows.Forms.Button();
+            this.btnActions = new ListViewButton();
             this.btnPrintLoanRepayment = new OpenCBS.GUI.UserControl.PrintButton();
             this.tabPageEvents = new System.Windows.Forms.TabPage();
             this.lvEvents = new OpenCBS.GUI.UserControl.ListViewEx();
@@ -2292,6 +2295,7 @@ namespace OpenCBS.GUI.Clients
             this.flowLayoutPanel8.Controls.Add(this.buttonAddTranche);
             this.flowLayoutPanel8.Controls.Add(this.btnWriteOff);
             this.flowLayoutPanel8.Controls.Add(this.btnPrintLoanRepayment);
+            this.flowLayoutPanel8.Controls.Add(this.btnActions);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             // 
             // buttonLoanRepaymentRepay
@@ -2323,6 +2327,12 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.btnWriteOff, "btnWriteOff");
             this.btnWriteOff.Name = "btnWriteOff";
             this.btnWriteOff.Click += new System.EventHandler(this.btnWriteOff_Click);
+            // 
+            // 
+            // btnActions
+            // 
+            resources.ApplyResources(this.btnActions, "btnActions");
+            this.btnActions.Name = "btnActions";
             // 
             // btnPrintLoanRepayment
             // 
@@ -4271,5 +4281,6 @@ namespace OpenCBS.GUI.Clients
         private Label label2;
         private TabPage tabPageTermDeposit;
         private Label _labelLoanOffecerInfo;
+        private ListViewButton btnActions;
     }
 }

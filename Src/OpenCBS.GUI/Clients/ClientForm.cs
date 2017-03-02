@@ -1969,6 +1969,7 @@ namespace OpenCBS.GUI.Clients
             buttonLoanRepaymentRepay.Enabled = !pCredit.Closed;
             btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
             InitLoanRepaymentButtons();
+            InitActionsListViewButton();
         }
 
         private void InitLoanDetails(bool isNew, bool disbursed, bool validated)
@@ -6066,6 +6067,39 @@ namespace OpenCBS.GUI.Clients
                 flowLayoutPanel8.Controls.Add(button);
             }
         }
+        private void InitActionsListViewButton()
+        {
+            var actions = new List<KeyValuePair<string, EventHandler>>()
+            {
+                new KeyValuePair<string, EventHandler>("Penalty Suspension", (sender, e) =>
+                {
+                    MessageBox.Show("Penalty Suspension");
+                }),
+                new KeyValuePair<string, EventHandler>("Penalty Recovery", (sender, e) =>
+                {
+                     MessageBox.Show("Penalty Recovery");
+                }),
+                new KeyValuePair<string, EventHandler>("Penalty Write off", (sender, e) =>
+                {
+                     MessageBox.Show("Penalty Write off");
+                }),
+                new KeyValuePair<string, EventHandler>("Interest Suspension", (sender, e) =>
+                {
+                     MessageBox.Show("Interest Suspension");
+                }),
+                new KeyValuePair<string, EventHandler>("Interest Recovery", (sender, e) =>
+                {
+                     MessageBox.Show("Interest Recovery");
+                }),
+                new KeyValuePair<string, EventHandler>("Interest Write off", (sender, e) =>
+                {
+                     MessageBox.Show("Interest Write off");
+                }),
+            };
+
+            btnActions.Actions = actions;
+        }
+
 
         private void InitLoanEventsPrintButton()
         {
