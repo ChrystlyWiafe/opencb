@@ -7565,6 +7565,12 @@ namespace OpenCBS.GUI.Clients
                 tab.Refresh();
                 LoanTabs.Add(tab);
             }
+
+            var extentions = _applicationController.GetAllInstances<IClientFormInitializer>();
+            foreach (var extention in extentions)
+            {
+                extention.Refresh(this, _credit);
+            }
         }
 
 
