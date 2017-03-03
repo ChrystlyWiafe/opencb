@@ -22,7 +22,7 @@ using System.Reflection;
 
 [assembly: AssemblyCompany("Open Octopus Ltd.")]
 [assembly: AssemblyProduct("OPENCBS")]
-[assembly: AssemblyVersion("17.2.build.0")]
+[assembly: AssemblyVersion("17.3.build.0")]
 [assembly: AssemblyGitRevision("revision")]
 
 [AttributeUsage(AttributeTargets.Assembly)]
