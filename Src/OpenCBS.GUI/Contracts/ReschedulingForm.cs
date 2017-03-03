@@ -48,15 +48,13 @@ namespace OpenCBS.GUI.Contracts
 
         public void InitializeRescheduleComponents()
         {
-            startDateTimePicker.Value = Contract.StartDate.Date;
-            firstRepaymentDateTimePicker.Value = Contract.GetFirstRepaymentDate();
-            //startDateTimePicker.Value = TimeProvider.Now > Contract.GetLastRepaymentDate()
-            //    ? TimeProvider.Now : Contract.GetLastRepaymentDate();
-            //firstRepaymentDateTimePicker.Value = startDateTimePicker
-            //        .Value
-            //        .Date
-            //        .AddMonths(_contract.InstallmentType.NbOfMonths)
-            //        .AddDays(_contract.InstallmentType.NbOfDays);
+            startDateTimePicker.Value = TimeProvider.Now > Contract.GetLastRepaymentDate()
+                ? TimeProvider.Now : Contract.GetLastRepaymentDate();
+            firstRepaymentDateTimePicker.Value = startDateTimePicker
+                    .Value
+                    .Date
+                    .AddMonths(_contract.InstallmentType.NbOfMonths)
+                    .AddDays(_contract.InstallmentType.NbOfDays);
             contractCodeLabel.Text = Contract.Code;
             _interestRateTextBox.Amount = Contract.InterestRate * 100;
             installmentsNumericUpDown.Minimum = 1;
