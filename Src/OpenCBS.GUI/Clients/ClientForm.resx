@@ -2943,6 +2943,30 @@
   <data name="&gt;&gt;tabPageProject.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+    <data name="_loanDetailsScheduleControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_loanDetailsScheduleControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="_loanDetailsScheduleControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1229, 259</value>
+  </data>
+  <data name="_loanDetailsScheduleControl.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;_loanDetailsScheduleControl.Name" xml:space="preserve">
+    <value>_loanDetailsScheduleControl</value>
+  </data>
+  <data name="&gt;&gt;_loanDetailsScheduleControl.Type" xml:space="preserve">
+    <value>OpenCBS.Controls.ScheduleControl, OpenCBS.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_loanDetailsScheduleControl.Parent" xml:space="preserve">
+    <value>tabPageInstallments</value>
+  </data>
+  <data name="&gt;&gt;_loanDetailsScheduleControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tabPageInstallments.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
   </data>
@@ -6379,6 +6403,30 @@ Max:
   </data>
   <data name="&gt;&gt;tabPageCreditCommitee.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+    <data name="_repaymentScheduleControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_repaymentScheduleControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_repaymentScheduleControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1241, 334</value>
+  </data>
+  <data name="_repaymentScheduleControl.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;_repaymentScheduleControl.Name" xml:space="preserve">
+    <value>_repaymentScheduleControl</value>
+  </data>
+  <data name="&gt;&gt;_repaymentScheduleControl.Type" xml:space="preserve">
+    <value>OpenCBS.Controls.ScheduleControl, OpenCBS.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_repaymentScheduleControl.Parent" xml:space="preserve">
+    <value>tabPageRepayments</value>
+  </data>
+  <data name="&gt;&gt;_repaymentScheduleControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="flowLayoutPanel8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
