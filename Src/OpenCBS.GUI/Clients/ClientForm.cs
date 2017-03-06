@@ -6178,7 +6178,7 @@ namespace OpenCBS.GUI.Clients
                 {
                     MessageBox.Show("Interest Write off");
                 },
-                Enabled = false
+                Enabled = true
             });
 
             btnActions.Actions = actions;

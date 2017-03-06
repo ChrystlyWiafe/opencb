@@ -61,7 +61,7 @@ namespace OpenCBS.Controls
                 ToolStripMenuItem item = new ToolStripMenuItem(action.Title)
                 {
                     ForeColor = Color.FromArgb(0, 81, 152),
-                    Enabled = !action.Enabled
+                    Enabled = action.Enabled
                 };
                 item.Click += action.EventHandler;
                 Menu.Items.Add(item);
