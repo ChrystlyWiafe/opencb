@@ -931,6 +931,12 @@
     <Compile Include="UserControl\AutocompletionComboBox\ToolStripCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControl\AccrualStateOkCancelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\AccrualStateOkCancelForm.Designer.cs">
+      <DependentUpon>AccrualStateOkCancelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\WriteOffOkCancelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2432,6 +2438,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\TernDepositUserControl.resx">
       <DependentUpon>TernDepositUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\AccrualStateOkCancelForm.pt.resx">
+      <DependentUpon>AccrualStateOkCancelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\AccrualStateOkCancelForm.resx">
+      <DependentUpon>AccrualStateOkCancelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\AccrualStateOkCancelForm.ru-RU.resx">
+      <DependentUpon>AccrualStateOkCancelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\WriteOffOkCancelForm.pt.resx">
       <DependentUpon>WriteOffOkCancelForm.cs</DependentUpon>

@@ -315,6 +315,28 @@ namespace OpenCBS.CoreDomain.Events
             return eventList;
         }
 
+        public List<Event> GetPenaltyAccrualModeEvents()
+        {
+            List<Event> l = (from e in _list
+                             where 
+                                e.Deleted == false 
+                                && (e.Code == "SPLE" || e.Code == "RPLE")
+                             orderby e.Date
+                             select e).ToList();
+            return l;
+        }
+
+        public List<Event> GetInterestAccrualModeEvents()
+        {
+            List<Event> l = (from e in _list
+                             where
+                                !e.Deleted
+                                && (e.Code == "SILE" || e.Code == "RILE")
+                             orderby e.Date
+                             select e).ToList();
+            return l;
+        }
+
         public bool IsLastEvent(Event e)
         {
             for (int i = _list.Count - 1; i >= 0; i--)

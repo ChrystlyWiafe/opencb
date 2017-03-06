@@ -1,4 +1,6 @@
-﻿namespace OpenCBS.CoreDomain.Events.Loan
+﻿using OpenCBS.Shared;
+
+namespace OpenCBS.CoreDomain.Events.Loan
 {
     public class NonAccrualPenaltyEvent : Event
     {
@@ -8,6 +10,7 @@
             set { _code = value; }
         }
         public override string Description { get; set; }
+        public OCurrency Penalty { get; set; }
 
         public override Event Copy()
         {

@@ -2814,6 +2814,126 @@ namespace OpenCBS.Services
             return loans.Where(loan => loan.ContractStatus == OContractStatus.Active).ToList();
         }
 
+        public void StopPenalty(Loan loan, DateTime date, string comment)
+        {
+            using (SqlConnection conn = _loanManager.GetConnection())
+            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            {
+                try
+                {
+                    var stopPenaltyLoanEvent = loan.StopPenalty(date,comment);
+                    stopPenaltyLoanEvent.User = User.CurrentUser;
+
+                    _ePs.FireEvent(stopPenaltyLoanEvent, loan, sqlTransaction);
+
+                    CallInterceptor(new Dictionary<string, object>
+                    {
+                        {"Loan", loan},
+                        {"Event", stopPenaltyLoanEvent},
+                        {"SqlTransaction", sqlTransaction}
+                    });
+
+                    if (sqlTransaction != null)
+                        sqlTransaction.Commit();
+                }
+                catch (Exception)
+                {
+                    if (sqlTransaction != null) sqlTransaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        public void RecoverPenalty(Loan loan, DateTime date, string comment)
+        {
+            using (SqlConnection conn = _loanManager.GetConnection())
+            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            {
+                try
+                {
+                    var recoverPenaltyLoanEvent = loan.RecoverPenalty(date, comment);
+                    recoverPenaltyLoanEvent.User = User.CurrentUser;
+
+                    _ePs.FireEvent(recoverPenaltyLoanEvent, loan, sqlTransaction);
+
+                    CallInterceptor(new Dictionary<string, object>
+                    {
+                        {"Loan", loan},
+                        {"Event", recoverPenaltyLoanEvent},
+                        {"SqlTransaction", sqlTransaction}
+                    });
+
+                    if (sqlTransaction != null)
+                        sqlTransaction.Commit();
+                }
+                catch (Exception)
+                {
+                    if (sqlTransaction != null) sqlTransaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        public void StopInterest(Loan loan, DateTime date, string comment)
+        {
+            using (SqlConnection conn = _loanManager.GetConnection())
+            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            {
+                try
+                {
+                    var stopInterestLoanEvent = loan.StopInterest(date, comment);
+                    stopInterestLoanEvent.User = User.CurrentUser;
+
+                    _ePs.FireEvent(stopInterestLoanEvent, loan, sqlTransaction);
+
+                    CallInterceptor(new Dictionary<string, object>
+                    {
+                        {"Loan", loan},
+                        {"Event", stopInterestLoanEvent},
+                        {"SqlTransaction", sqlTransaction}
+                    });
+
+                    if (sqlTransaction != null)
+                        sqlTransaction.Commit();
+                }
+                catch (Exception)
+                {
+                    if (sqlTransaction != null) sqlTransaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        public void RecoverInterest(Loan loan, DateTime date, string comment)
+        {
+            using (SqlConnection conn = _loanManager.GetConnection())
+            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            {
+                try
+                {
+                    var recoverInterestLoanEvent = loan.RecoverInterest(date, comment);
+                    recoverInterestLoanEvent.User = User.CurrentUser;
+
+                    _ePs.FireEvent(recoverInterestLoanEvent, loan, sqlTransaction);
+
+                    CallInterceptor(new Dictionary<string, object>
+                    {
+                        {"Loan", loan},
+                        {"Event", recoverInterestLoanEvent},
+                        {"SqlTransaction", sqlTransaction}
+                    });
+
+                    if (sqlTransaction != null)
+                        sqlTransaction.Commit();
+                }
+                catch (Exception)
+                {
+                    if (sqlTransaction != null) sqlTransaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
         public void WriteOff(Loan loan, DateTime onDate, int writeOffMethodId, string comment)
         {
             using (SqlConnection conn = _loanManager.GetConnection())
