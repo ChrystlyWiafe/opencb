@@ -6113,7 +6113,6 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.StopPenalty(_credit, TimeProvider.Now, form.Comment);
-                    MessageBox.Show("Penalty Stop");
                 },
                 Enabled = !_credit.IsStopPenaltyAccrualState 
                     && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty"))
@@ -6127,20 +6126,9 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.RecoverPenalty(_credit, TimeProvider.Now, form.Comment);
-                    MessageBox.Show("Penalty Recovery");
                 },
                 Enabled = _credit.IsStopPenaltyAccrualState
                              && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverPenalty"))
-            });
-
-            actions.Add(new ListViewButtonModel()
-            {
-                Title = "Penalty Write Off",
-                EventHandler = (sender, e) =>
-                {
-                    MessageBox.Show("Penalty Write Off");
-                },
-                Enabled = true
             });
 
             actions.Add(new ListViewButtonModel
@@ -6151,7 +6139,6 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.StopInterest(_credit, TimeProvider.Now, form.Comment);
-                    MessageBox.Show("Interest Suspension");
                 },
                 Enabled = !_credit.IsStopInterestAccrualState
                  && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
@@ -6165,25 +6152,18 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.RecoverInterest(_credit, TimeProvider.Now, form.Comment);
-                    MessageBox.Show("Interest Recovery");
                 },
                 Enabled = _credit.IsStopInterestAccrualState
                              && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverInterest"))
             });
 
-            actions.Add(new ListViewButtonModel()
+            var initializers = _applicationController.GetAllInstances<IActionsButtonInitializer>();
+            foreach (var initializer in initializers)
             {
-                Title = "Interest Write Off",
-                EventHandler = (sender, e) =>
-                {
-                    MessageBox.Show("Interest Write off");
-                },
-                Enabled = true
-            });
-
+                actions.AddRange(initializer.GetActions(_credit));
+            }
             btnActions.Actions = actions;
         }
-
 
         private void InitLoanEventsPrintButton()
         {

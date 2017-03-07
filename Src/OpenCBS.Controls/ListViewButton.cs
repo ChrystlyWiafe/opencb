@@ -41,6 +41,7 @@ namespace OpenCBS.Controls
                 actions = value;
                 InitializeMenu();
             }
+            get { return actions; }
         }
 
         public ListViewButton()
