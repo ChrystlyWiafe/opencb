@@ -69,3 +69,48 @@ IF (SELECT TOP 1 [method_name] FROM dbo.[ActionItems] WHERE [method_name] = 'Rec
 		FROM dbo.Roles r
     END
 GO
+
+IF (NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NonAccrualInterestEvents]')))
+    BEGIN
+        CREATE TABLE dbo.NonAccrualInterestEvents
+        (
+            id int null
+            , interest money null
+        )
+    END
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualInterestEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualInterestEvents]'))
+    ALTER TABLE [dbo].[NonAccrualInterestEvents] DROP CONSTRAINT [FK_NonAccrualInterestEvents_ContractEvents]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualInterestEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualInterestEvents]'))
+    ALTER TABLE [dbo].[NonAccrualInterestEvents] WITH NOCHECK ADD CONSTRAINT [FK_NonAccrualInterestEvents_ContractEvents] FOREIGN KEY([id])
+    REFERENCES [dbo].[ContractEvents] ([id])
+GO
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualInterestEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualInterestEvents]'))
+    ALTER TABLE [dbo].[NonAccrualInterestEvents] NOCHECK CONSTRAINT [FK_NonAccrualInterestEvents_ContractEvents]
+GO
+
+IF (NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NonAccrualPenaltyEvents]')))
+    BEGIN
+        CREATE TABLE dbo.NonAccrualPenaltyEvents
+        (
+            id int not null
+            , penalty money not null
+        ) ON [PRIMARY]
+    END
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualPenaltyEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualPenaltyEvents]'))
+    ALTER TABLE [dbo].[NonAccrualPenaltyEvents] DROP CONSTRAINT [FK_NonAccrualPenaltyEvents_ContractEvents]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualPenaltyEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualPenaltyEvents]'))
+    ALTER TABLE [dbo].[NonAccrualPenaltyEvents] WITH NOCHECK ADD CONSTRAINT [FK_NonAccrualPenaltyEvents_ContractEvents] FOREIGN KEY([id])
+    REFERENCES [dbo].[ContractEvents] ([id])
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualPenaltyEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualPenaltyEvents]'))
+    ALTER TABLE [dbo].[NonAccrualPenaltyEvents] NOCHECK CONSTRAINT [FK_NonAccrualPenaltyEvents_ContractEvents]
+GO
