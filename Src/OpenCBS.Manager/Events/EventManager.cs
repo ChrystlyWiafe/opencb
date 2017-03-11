@@ -170,9 +170,15 @@ namespace OpenCBS.Manager.Events
                     
                     LoanPenaltyAccrualEvents.id AS lpae_id,
                     LoanPenaltyAccrualEvents.penalty AS lpae_penalty,
+
+                    NonAccrualPenaltyEvents.id AS nape_id,
+                    NonAccrualPenaltyEvents.penalty AS nape_penalty,
                                            
                     AccrualInterestLoanEvents.id AS aile_id,
                     AccrualInterestLoanEvents.interest AS aile_interest,
+
+                    NonAccrualInterestEvents.id AS naie_id,
+                    NonAccrualInterestEvents.interest AS naie_interest,
                     
                     LoanTransitionEvents.id AS glll_id,
                     LoanTransitionEvents.amount AS glll_amount,
@@ -231,6 +237,8 @@ namespace OpenCBS.Manager.Events
                     LEFT OUTER JOIN PenaltyWriteOffEvents ON ContractEvents.id = PenaltyWriteOffEvents.id
                     LEFT OUTER JOIN InterestWriteOffEvents ON ContractEvents.id = InterestWriteOffEvents.id
                     LEFT OUTER JOIN BounceWriteOffEvents ON ContractEvents.id = BounceWriteOffEvents.id
+                    LEFT OUTER JOIN NonAccrualInterestEvents ON ContractEvents.id = NonAccrualInterestEvents.id
+                    LEFT OUTER JOIN NonAccrualPenaltyEvents ON ContractEvents.id = NonAccrualPenaltyEvents.id
                     WHERE (ContractEvents.contract_id = @id)
                     ORDER BY ContractEvents.id";
             var connection = tx != null ? tx.Connection : GetConnection();
@@ -1293,6 +1301,10 @@ namespace OpenCBS.Manager.Events
                 //{
                 //    e = GetOutOfBalancePenaltyAccrualEvent(r);
             }
+            else if (r.GetNullInt("nape_id").HasValue)
+            {
+                e = GetNonAccrualPenaltyEvent(r);
+            }
             else if (r.GetNullInt("bfae_id").HasValue)
             {
                 e = GetBounceFeeAccrualEvent(r);
@@ -1300,6 +1312,10 @@ namespace OpenCBS.Manager.Events
             else if (r.GetNullInt("aile_id").HasValue)
             {
                 e = GetLoanInterestAccrualEvent(r);
+            }
+            else if (r.GetNullInt("naie_id").HasValue)
+            {
+                e = GetNonAccrualInterestEvent(r);
             }
             else if (r.GetNullInt("glll_id").HasValue)
             {
@@ -1548,6 +1564,15 @@ namespace OpenCBS.Manager.Events
             };
         }
 
+        private static NonAccrualPenaltyEvent GetNonAccrualPenaltyEvent(OpenCbsReader r)
+        {
+            return new NonAccrualPenaltyEvent
+            {
+                Id = r.GetInt("nape_id"),
+                Penalty = r.GetMoney("nape_penalty"),
+            };
+        }
+
         private static BounceFeeAccrualEvent GetBounceFeeAccrualEvent(OpenCbsReader r)
         {
             return new BounceFeeAccrualEvent
@@ -1581,6 +1606,15 @@ namespace OpenCBS.Manager.Events
             {
                 Id = r.GetInt("aile_id"),
                 Interest = r.GetMoney("aile_interest"),
+            };
+        }
+
+        private static NonAccrualInterestEvent GetNonAccrualInterestEvent(OpenCbsReader r)
+        {
+            return new NonAccrualInterestEvent
+            {
+                Id = r.GetInt("naie_id"),
+                Interest = r.GetMoney("naie_interest"),
             };
         }
 

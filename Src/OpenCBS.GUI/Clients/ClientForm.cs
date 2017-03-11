@@ -4386,7 +4386,8 @@ namespace OpenCBS.GUI.Clients
             {
                 if (!chxSystemEvents.Checked && (displayEvent is AccruedInterestEvent || displayEvent is LoanPenaltyAccrualEvent ||
                     displayEvent is LoanInterestAccrualEvent || displayEvent is LoanTransitionEvent || displayEvent is CreditInsuranceEvent ||
-                    displayEvent is LoanValidationEvent || displayEvent is LoanCloseEvent || displayEvent is BounceFeeAccrualEvent)) continue;
+                    displayEvent is LoanValidationEvent || displayEvent is LoanCloseEvent || displayEvent is BounceFeeAccrualEvent ||
+                    displayEvent is NonAccrualInterestEvent || displayEvent is NonAccrualPenaltyEvent)) continue;
 
                 var listViewItem = new ListViewItem(displayEvent.Date.ToString());
                 listViewItem.SubItems.Add(displayEvent.EntryDate.ToShortDateString());
