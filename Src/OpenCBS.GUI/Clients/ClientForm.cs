@@ -3663,7 +3663,7 @@ namespace OpenCBS.GUI.Clients
                 {
                     if (item.Tag is LoanEntryFee)
                     {
-                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                         _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                     }
                 }
