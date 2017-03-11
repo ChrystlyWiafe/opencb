@@ -419,6 +419,24 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             set { _interestRate = value; }
         }
 
+        public bool IsStopPenaltyAccrualState
+        {
+            get
+            {
+                var e = _events.GetPenaltyAccrualModeEvents().LastOrDefault();
+                return e is StopPenaltyLoanEvent;
+            }
+        }
+
+        public bool IsStopInterestAccrualState
+        {
+            get
+            {
+                var e = _events.GetInterestAccrualModeEvents().LastOrDefault();
+                return e is StopInterestLoanEvent;
+            }
+        }
+
         public int NbOfInstallmentsWhereInterestNotRepay
         {
             get
@@ -3030,6 +3048,62 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
             Events.Add(loanCloseEvent);
             return loanCloseEvent;
+        }
+
+        public StopPenaltyLoanEvent StopPenalty(DateTime onDate,string comment)
+        {
+            var stopPenaltyLoanEvent = new StopPenaltyLoanEvent()
+            {
+                Date = onDate,
+                ClientType = _clientType,
+                IsFired = false,
+                Cancelable = true,
+                Comment = comment
+            };
+            Events.Add(stopPenaltyLoanEvent);
+            return stopPenaltyLoanEvent;
+        }
+
+        public RecoveryPenaltyLoanEvent RecoverPenalty(DateTime onDate,string comment)
+        {
+            var recoverPenaltyLoanEvent = new RecoveryPenaltyLoanEvent()
+            {
+                Date = onDate,
+                ClientType = _clientType,
+                IsFired = false,
+                Cancelable = true,
+                Comment = comment
+            };
+            Events.Add(recoverPenaltyLoanEvent);
+            return recoverPenaltyLoanEvent;
+        }
+
+        public StopInterestLoanEvent StopInterest(DateTime onDate,string comment)
+        {
+            var stopInterestLoanEvent = new StopInterestLoanEvent()
+            {
+                Date = onDate,
+                ClientType = _clientType,
+                IsFired = false,
+                Cancelable = true,
+                Comment = comment
+            };
+            Events.Add(stopInterestLoanEvent);
+            return stopInterestLoanEvent;
+        }
+
+        public RecoveryInterestLoanEvent RecoverInterest(DateTime onDate,string comment)
+        {
+            var recoverInterestLoanEvent = new RecoveryInterestLoanEvent()
+            {
+                Date = onDate,
+                ClientType = _clientType,
+                IsFired = false,
+                Cancelable = true,
+                Comment = comment
+            };
+            Events.Add(recoverInterestLoanEvent);
+            return recoverInterestLoanEvent;
         }
     }
 }

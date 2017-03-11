@@ -64,6 +64,7 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="IActionsButtonInitializer.cs" />
     <Compile Include="IClientFormInitializer.cs" />
     <Compile Include="ICorporateInterceptor.cs" />
     <Compile Include="IDisbursementInitializer.cs" />

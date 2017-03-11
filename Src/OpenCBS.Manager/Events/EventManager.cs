@@ -982,6 +982,36 @@ namespace OpenCBS.Manager.Events
             }
         }
 
+        public void AddLoanEvent(StopPenaltyLoanEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
+        public void AddLoanEvent(RecoveryPenaltyLoanEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
+        public void AddLoanEvent(StopInterestLoanEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
+        public void AddLoanEvent(RecoveryInterestLoanEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
+        public void AddLoanEvent(NonAccrualPenaltyEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
+        public void AddLoanEvent(NonAccrualInterestEvent pEvent, int contractId, SqlTransaction transaction)
+        {
+            pEvent.Id = AddLoanEventHead(pEvent, contractId, transaction);
+        }
+
         public void AddTellerEvent(TellerEvent tellerEvent, SqlTransaction sqlTransaction)
         {
             const string sql =
@@ -1247,7 +1277,7 @@ namespace OpenCBS.Manager.Events
             {
                 e = GetCreditInsuranceEvent(r);
             }
-            else if (r.GetString("code").StartsWith("S"))
+            else if (r.GetString("code").StartsWith("S") && r.GetString("code") != "SPLE" && r.GetString("code") != "SILE" )
             {
                 e = GetSavingEvent(r);
             }
@@ -1295,6 +1325,14 @@ namespace OpenCBS.Manager.Events
                     e = new LoanCloseEvent { Id = r.GetInt("event_id") };
                 else if (r.GetString("code").Equals("MSCE"))
                     e = new ManualScheduleChangeEvent { Id = r.GetInt("event_id") };
+                else if (r.GetString("code").Equals("SPLE"))
+                    e = new StopPenaltyLoanEvent() { Id = r.GetInt("event_id") };
+                else if (r.GetString("code").Equals("SILE"))
+                    e = new StopInterestLoanEvent() { Id = r.GetInt("event_id") };
+                else if (r.GetString("code").Equals("RPLE"))
+                    e = new RecoveryPenaltyLoanEvent() { Id = r.GetInt("event_id") };
+                else if (r.GetString("code").Equals("RILE"))
+                    e = new RecoveryInterestLoanEvent() { Id = r.GetInt("event_id") };
                 else
                     e = new RegEvent { Id = r.GetInt("event_id") };
             }

@@ -24,22 +24,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using OpenCBS.Controls.Models;
 using OpenCBS.Reports;
 
 namespace OpenCBS.Controls
 {
     public partial class ListViewButton : Button
     {
-        private List<KeyValuePair<string,EventHandler>> actions;
+        private List<ListViewButtonModel> actions;
         private ContextMenuStrip Menu;
 
-        public List<KeyValuePair<string, EventHandler>> Actions
+        public List<ListViewButtonModel> Actions
         {
             set
             {
                 actions = value;
                 InitializeMenu();
             }
+            get { return actions; }
         }
 
         public ListViewButton()
@@ -57,11 +59,12 @@ namespace OpenCBS.Controls
 
             foreach (var action in actions)
             {
-                ToolStripMenuItem item = new ToolStripMenuItem(action.Key)
+                ToolStripMenuItem item = new ToolStripMenuItem(action.Title)
                 {
-                    ForeColor = Color.FromArgb(0, 81, 152)
+                    ForeColor = Color.FromArgb(0, 81, 152),
+                    Enabled = action.Enabled
                 };
-                item.Click += action.Value;
+                item.Click += action.EventHandler;
                 Menu.Items.Add(item);
             }
         }

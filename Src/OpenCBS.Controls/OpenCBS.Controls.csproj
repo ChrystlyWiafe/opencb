@@ -66,6 +66,7 @@
     <Compile Include="LoaderControl.Designer.cs">
       <DependentUpon>LoaderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListViewButtonModel.cs" />
     <Compile Include="PrintButton.cs">
       <SubType>Component</SubType>
     </Compile>

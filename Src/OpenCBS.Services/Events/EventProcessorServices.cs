@@ -171,6 +171,30 @@ namespace OpenCBS.Services.Events
             {
                 LoanTransitionEventOrigination((LoanTransitionEvent)e, contract, sqlTransac);
             }
+            else if (e is StopPenaltyLoanEvent)
+            {
+                StopPenaltyLoanEventOrigination((StopPenaltyLoanEvent)e, contract, sqlTransac);
+            }
+            else if (e is RecoveryPenaltyLoanEvent)
+            {
+                RecoveryPenaltyLoanEventOrigination((RecoveryPenaltyLoanEvent)e, contract, sqlTransac);
+            }
+            else if (e is StopInterestLoanEvent)
+            {
+                StopInterestLoanEventOrigination((StopInterestLoanEvent)e, contract, sqlTransac);
+            }
+            else if (e is RecoveryInterestLoanEvent)
+            {
+                RecoveryInterestLoanEventOrigination((RecoveryInterestLoanEvent)e, contract, sqlTransac);
+            }
+            else if (e is NonAccrualInterestEvent)
+            {
+                NonAccrualInterestEventOrigination((NonAccrualInterestEvent)e, contract, sqlTransac);
+            }
+            else if (e is NonAccrualPenaltyEvent)
+            {
+                NonAccrualPenaltyEventOrigination((NonAccrualPenaltyEvent)e, contract, sqlTransac);
+            }
             //else if (e is OutOfBalanceInterestAccrualEvent)
             //{
             //    OutOfBalanceInterestAccrualEventOrigination((OutOfBalanceInterestAccrualEvent)e, contract, sqlTransac);
@@ -392,6 +416,36 @@ namespace OpenCBS.Services.Events
         private void LoanTransitionEventOrigination(LoanTransitionEvent loanTransitionEvent, Loan contract, SqlTransaction sqlTransac)
         {
             _eventManagement.AddLoanEvent(loanTransitionEvent, contract.Id, sqlTransac);
+        }
+
+        private void StopPenaltyLoanEventOrigination(StopPenaltyLoanEvent stopPenaltyLoanEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(stopPenaltyLoanEvent, contract.Id, sqlTransac);
+        }
+
+        private void RecoveryPenaltyLoanEventOrigination(RecoveryPenaltyLoanEvent recoveryPenaltyLoanEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(recoveryPenaltyLoanEvent, contract.Id, sqlTransac);
+        }
+
+        private void StopInterestLoanEventOrigination(StopInterestLoanEvent stopInterestLoanEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(stopInterestLoanEvent, contract.Id, sqlTransac);
+        }
+
+        private void RecoveryInterestLoanEventOrigination(RecoveryInterestLoanEvent recoveryInterestLoanEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(recoveryInterestLoanEvent, contract.Id, sqlTransac);
+        }
+
+        private void NonAccrualPenaltyEventOrigination(NonAccrualPenaltyEvent nonAccrualPenaltyEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(nonAccrualPenaltyEvent, contract.Id, sqlTransac);
+        }
+
+        private void NonAccrualInterestEventOrigination(NonAccrualInterestEvent nonAccrualInterestEvent, Loan contract, SqlTransaction sqlTransac)
+        {
+            _eventManagement.AddLoanEvent(nonAccrualInterestEvent, contract.Id, sqlTransac);
         }
 
         //private void OutOfBalanceInterestAccrualEventOrigination(OutOfBalanceInterestAccrualEvent outOfBalanceInterestAccrualEvent, Loan contract, SqlTransaction sqlTransac)

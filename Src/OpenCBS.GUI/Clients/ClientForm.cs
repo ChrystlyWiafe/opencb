@@ -32,6 +32,7 @@ using BrightIdeasSoftware;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Event;
 using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.Controls.Models;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.CoreDomain.Clients;
@@ -4356,7 +4357,11 @@ namespace OpenCBS.GUI.Clients
                     //|| e is OutOfBalanceInterestAccrualEvent
                     //|| e is OutOfBalancePenaltyAccrualEvent
                     || e is LoanInterestAccrualEvent
-                    || e is LoanTransitionEvent)
+                    || e is LoanTransitionEvent
+                    || e is StopInterestLoanEvent
+                    || e is StopPenaltyLoanEvent
+                    || e is RecoveryInterestLoanEvent
+                    || e is RecoveryPenaltyLoanEvent)
                 {
                     e.Cancelable = true;
                     if (e is LoanDisbursmentEvent)
@@ -4478,6 +4483,17 @@ namespace OpenCBS.GUI.Clients
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
                 }
+                else if (displayEvent is NonAccrualPenaltyEvent)
+                {
+                    NonAccrualPenaltyEvent _event = displayEvent as NonAccrualPenaltyEvent;
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add(_event.Penalty.GetFormatedValue(pCredit.UseCents));
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                }
                 else if (displayEvent is BounceFeeAccrualEvent)
                 {
                     BounceFeeAccrualEvent _event = displayEvent as BounceFeeAccrualEvent;
@@ -4533,6 +4549,17 @@ namespace OpenCBS.GUI.Clients
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
                 }
+                else if (displayEvent is NonAccrualInterestEvent)
+                {
+                    NonAccrualInterestEvent _event = displayEvent as NonAccrualInterestEvent;
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add(_event.Interest.GetFormatedValue(pCredit.UseCents));
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                }
                 else if (displayEvent is LoanTransitionEvent)
                 {
                     var _event = displayEvent as LoanTransitionEvent;
@@ -4548,7 +4575,11 @@ namespace OpenCBS.GUI.Clients
                          || displayEvent is WriteOffEvent
                          || displayEvent is LoanValidationEvent
                          || displayEvent is LoanCloseEvent
-                         || displayEvent is ManualScheduleChangeEvent)
+                         || displayEvent is ManualScheduleChangeEvent
+                         || displayEvent is StopPenaltyLoanEvent
+                         || displayEvent is RecoveryPenaltyLoanEvent
+                         || displayEvent is StopInterestLoanEvent
+                         || displayEvent is RecoveryInterestLoanEvent)
                 {
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
@@ -6067,39 +6098,76 @@ namespace OpenCBS.GUI.Clients
                 flowLayoutPanel8.Controls.Add(button);
             }
         }
+
         private void InitActionsListViewButton()
         {
-            var actions = new List<KeyValuePair<string, EventHandler>>()
-            {
-                new KeyValuePair<string, EventHandler>("Penalty Suspension", (sender, e) =>
-                {
-                    MessageBox.Show("Penalty Suspension");
-                }),
-                new KeyValuePair<string, EventHandler>("Penalty Recovery", (sender, e) =>
-                {
-                     MessageBox.Show("Penalty Recovery");
-                }),
-                new KeyValuePair<string, EventHandler>("Penalty Write off", (sender, e) =>
-                {
-                     MessageBox.Show("Penalty Write off");
-                }),
-                new KeyValuePair<string, EventHandler>("Interest Suspension", (sender, e) =>
-                {
-                     MessageBox.Show("Interest Suspension");
-                }),
-                new KeyValuePair<string, EventHandler>("Interest Recovery", (sender, e) =>
-                {
-                     MessageBox.Show("Interest Recovery");
-                }),
-                new KeyValuePair<string, EventHandler>("Interest Write off", (sender, e) =>
-                {
-                     MessageBox.Show("Interest Write off");
-                }),
-            };
+            if (_credit == null) return;
+            var loanService = ServiceProvider.GetContractServices();
+            var actions = new List<ListViewButtonModel>();
 
+            actions.Add(new ListViewButtonModel
+            {
+                Title = "Penalty Stop",
+                EventHandler = (sender, e) =>
+                {
+                    var form = new AccrualStateOkCancelForm();
+                    if (form.ShowDialog() != DialogResult.OK) return;
+                    loanService.StopPenalty(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
+                },
+                Enabled = !_credit.IsStopPenaltyAccrualState 
+                    && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = "Penalty Recovery",
+                EventHandler = (sender, e) =>
+                {
+                    var form = new AccrualStateOkCancelForm();
+                    if (form.ShowDialog() != DialogResult.OK) return;
+                    loanService.RecoverPenalty(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
+                },
+                Enabled = _credit.IsStopPenaltyAccrualState
+                             && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverPenalty"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = "Interest Stop",
+                EventHandler = (sender, e) =>
+                {
+                    var form = new AccrualStateOkCancelForm();
+                    if (form.ShowDialog() != DialogResult.OK) return;
+                    loanService.StopInterest(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
+                },
+                Enabled = !_credit.IsStopInterestAccrualState
+                 && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = "Interest Recovery",
+                EventHandler = (sender, e) =>
+                {
+                    var form = new AccrualStateOkCancelForm();
+                    if (form.ShowDialog() != DialogResult.OK) return;
+                    loanService.RecoverInterest(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
+                },
+                Enabled = _credit.IsStopInterestAccrualState
+                             && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverInterest"))
+            });
+
+            var initializers = _applicationController.GetAllInstances<IActionsButtonInitializer>();
+            foreach (var initializer in initializers)
+            {
+                actions.AddRange(initializer.GetActions(_credit));
+            }
             btnActions.Actions = actions;
         }
-
 
         private void InitLoanEventsPrintButton()
         {

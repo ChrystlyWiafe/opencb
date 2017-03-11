@@ -11,6 +11,7 @@ namespace OpenCBS.CoreDomain.Events.Loan
         }
         public override string Description { get; set; }
         public OCurrency Penalty { get; set; }
+
         public override Event Copy()
         {
             return (NonAccrualPenaltyEvent)MemberwiseClone();
