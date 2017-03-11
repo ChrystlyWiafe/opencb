@@ -424,7 +424,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             get
             {
                 var e = _events.GetPenaltyAccrualModeEvents().LastOrDefault();
-                return e == null || e is StopPenaltyLoanEvent;
+                return e is StopPenaltyLoanEvent;
             }
         }
 
@@ -433,7 +433,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             get
             {
                 var e = _events.GetInterestAccrualModeEvents().LastOrDefault();
-                return e == null || e is StopInterestLoanEvent;
+                return e is StopInterestLoanEvent;
             }
         }
 

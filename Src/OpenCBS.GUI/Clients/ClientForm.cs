@@ -6113,6 +6113,7 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.StopPenalty(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
                 },
                 Enabled = !_credit.IsStopPenaltyAccrualState 
                     && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty"))
@@ -6126,6 +6127,7 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.RecoverPenalty(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
                 },
                 Enabled = _credit.IsStopPenaltyAccrualState
                              && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverPenalty"))
@@ -6139,6 +6141,7 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.StopInterest(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
                 },
                 Enabled = !_credit.IsStopInterestAccrualState
                  && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
@@ -6152,6 +6155,7 @@ namespace OpenCBS.GUI.Clients
                     var form = new AccrualStateOkCancelForm();
                     if (form.ShowDialog() != DialogResult.OK) return;
                     loanService.RecoverInterest(_credit, TimeProvider.Now, form.Comment);
+                    InitializeTabPageLoanRepayment(_credit);
                 },
                 Enabled = _credit.IsStopInterestAccrualState
                              && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverInterest"))
