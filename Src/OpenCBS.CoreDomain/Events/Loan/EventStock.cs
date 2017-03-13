@@ -359,7 +359,9 @@ namespace OpenCBS.CoreDomain.Events
                 {
                     Event e = eventList[i];
                     if (!e.Deleted && !(e is LoanEntryFeeEvent) && !(e is CreditInsuranceEvent) &&
-                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent) && !(e is BounceFeeAccrualEvent))
+                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent)
+                        && !(e is BounceFeeAccrualEvent) && !(e is NonAccrualInterestEvent)
+                        && !(e is NonAccrualPenaltyEvent))
                     {
                         return e;
                     }
