@@ -6,7 +6,7 @@ namespace OpenCBS.CoreDomain.Events.Loan
     {
         public override string Code
         {
-            get { return "NALE"; }
+            get { return "NAPE"; }
             set { _code = value; }
         }
         public override string Description { get; set; }
