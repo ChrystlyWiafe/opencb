@@ -2309,6 +2309,30 @@ namespace OpenCBS.Services
                         }
                     }
 
+                    if (evnt.Code == "RILE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "AILE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
+                    if (evnt.Code == "RPLE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "LPAE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
                     CancelSavingsEvent(cancelledEvent, sqlTransaction);
 
                     CallInterceptor(new Dictionary<string, object>
