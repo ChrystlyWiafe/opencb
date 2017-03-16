@@ -20,7 +20,6 @@
 // Contact: contact@opencbs.com
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain.Accounting;
@@ -221,9 +220,17 @@ namespace OpenCBS.GUI.Contracts
 
         private void FillComboBoxPaymentMethods()
         {
-            List<PaymentMethod> paymentMethods =
-                ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-            foreach (PaymentMethod method in paymentMethods)
+            var branchId = ServicesProvider.GetInstance().GetBranchService().FindBranchByCode(_contract.BranchCode).Id;
+            var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(branchId);
+
+            if (paymentMethods.Count == 0)
+            {
+                Fail("NoPaymentMethods");
+                Close();
+                return;
+            }
+
+            foreach (var method in paymentMethods)
                 cmbPaymentMethod.Items.Add(method);
 
             cmbPaymentMethod.SelectedItem = paymentMethods[0];

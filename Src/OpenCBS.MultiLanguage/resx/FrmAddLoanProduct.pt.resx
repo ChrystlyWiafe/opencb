@@ -236,4 +236,7 @@ das joías?</value>
   <data name="allScheduleTypes" xml:space="preserve">
     <value>Todos os tipos</value>
   </data>
+  <data name="EntryFeeAlreadyHave" xml:space="preserve">
+    <value>Taxa de inscrição já</value>
+  </data>
 </root>

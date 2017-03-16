@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -47,6 +48,7 @@ namespace OpenCBS.Services
 	/// </summary>
     public class ProductServices : MarshalByRefObject
 	{
+		private EntryFeeServices _entryFeeServices;
 		private LoanProductManager _productManager;
 	    private FundingLineManager _fundingLineManager;
 		private InstallmentTypeManager _installmentTypeManager;
@@ -78,6 +80,7 @@ namespace OpenCBS.Services
         public ProductServices(User user)
         {
             _user = user;
+            _entryFeeServices = new EntryFeeServices(user);
             _productManager = new LoanProductManager(user);
             _installmentTypeManager = new InstallmentTypeManager(user);
             _fundingLineManager = new FundingLineManager(user);
@@ -95,7 +98,7 @@ namespace OpenCBS.Services
 	            try
 	            {
 	                package.Id = _productManager.Add(package, transaction);
-	                _productManager.InsertEntryFees(package.EntryFees, package.Id, transaction);
+                    _entryFeeServices.SaveNewEntryFeeListToLoanProduct(package.EntryFees, package.Id, transaction);
 	                LoanProductInterceptorSave(new Dictionary<string, object>
 	                {
 	                    {"LoanProduct", package},
@@ -155,7 +158,7 @@ namespace OpenCBS.Services
                 return _productManager.SelectEntryFeesAccordingCycle(product.Id, loanCycle, false);
             }
             else
-                return _productManager.SelectEntryFeesWithoutCycles(product.Id, false);
+                return _entryFeeServices.SelectAllEntryFeeFromLoanProduct(product.Id);
         }
 
         public List<MaturityCycle> GetMaturityCycleParams(int productId, int cycleId)
@@ -440,10 +443,15 @@ namespace OpenCBS.Services
 
 	    public EntryFee GetEntryFeeById (int entryFeeId)
         {
-          return  _productManager.SelectEntryFeeById(entryFeeId);
+          return  _entryFeeServices.SelectEntryFeeById(entryFeeId);
         }
 
-	    public void UpdatePackage(LoanProduct pPackage, bool updateContracts)
+        public List<LoanEntryFee> SelectAllEntryFeeFromLoanProduct(int loanId, IDbTransaction tx = null)
+        {
+            return _entryFeeServices.SelectAllLoanEntryFeeFromLoanProduct(loanId, tx);
+        }
+
+        public void UpdatePackage(LoanProduct pPackage, bool updateContracts)
 	    {
 	        using (var connection = _productManager.GetConnection())
 	        using (var transaction = connection.BeginTransaction())
@@ -451,8 +459,7 @@ namespace OpenCBS.Services
 	            try
 	            {
 	                _productManager.UpdatePackage(pPackage, updateContracts, transaction);
-	                _productManager.DeleteEntryFees(pPackage, transaction);
-	                _productManager.InsertEntryFees(pPackage.EntryFees, pPackage.Id, transaction);
+                    _entryFeeServices.SaveNewEntryFeeListToLoanProduct(pPackage.EntryFees, pPackage.Id, transaction);
 	                LoanProductInterceptorUpdate(new Dictionary<string, object>
 	                {
 	                    {"LoanProduct", pPackage},
@@ -578,12 +585,12 @@ namespace OpenCBS.Services
 	    public void GetEntryFees(LoanProduct package)
 	    {
 	        if (!package.UseEntryFeesCycles)
-	            package.EntryFees = _productManager.SelectEntryFeesWithoutCycles(package.Id, false);
-	        else
+                package.EntryFees = _entryFeeServices.SelectAllEntryFeeFromLoanProduct(package.Id);
+            else
 	        {
-	            package.EntryFeeCycles = _productManager.SelectEntryFeeCycles(package.Id, false);
-	            package.EntryFees = _productManager.SelectEntryFeesWithCycles(package.Id, false);
-	        }
+                package.EntryFees = _entryFeeServices.SelectAllEntryFeeFromLoanProduct(package.Id);
+                package.EntryFeeCycles = package.EntryFees.Where(x => x.CycleId != null).Select(x => x.CycleId.Value).Distinct().ToList();
+            }
 	    }
 
 	    public LoanProduct FindProductByName(string name)
@@ -638,26 +645,26 @@ namespace OpenCBS.Services
             return true;
         }
 
-        public List<LoanProduct> FindAllPackages(bool selectDeleted,OClientTypes pClientType)
+        public List<LoanProduct> FindAllPackages(bool selectDeleted, OClientTypes pClientType)
         {
-            List<LoanProduct> retval = _productManager.SelectAllPackages(selectDeleted,pClientType);
-            foreach (LoanProduct product in retval)
+            var retval = _productManager.SelectAllPackages(selectDeleted,pClientType);
+            foreach (var product in retval)
             {
                 if (null == product.FundingLine) continue;
                 product.FundingLine.Currency = new CurrencyServices(_user).GetCurrency(product.FundingLine.Currency.Id);
 
                 if (product.UseEntryFeesCycles)
                 {
-                    product.EntryFeeCycles = _productManager.SelectEntryFeeCycles(product.Id, false);
-                    product.EntryFees = _productManager.SelectEntryFeesWithCycles(product.Id, false);
+                    product.EntryFees = _entryFeeServices.SelectAllEntryFeeFromLoanProduct(product.Id);
+                    product.EntryFeeCycles = product.EntryFees.Where(x => x.CycleId != null).Select(x => x.CycleId.Value).Distinct().ToList();
                 }
                 else
                 {
-                    product.EntryFees = _productManager.SelectEntryFeesWithoutCycles(product.Id, false);
+                    product.EntryFees = _entryFeeServices.SelectAllEntryFeeFromLoanProduct(product.Id);
                 }
             }
             return retval;
-        }	
+        }
 
 		public List<InstallmentType> FindAllInstallmentTypes()
 		{
@@ -767,18 +774,6 @@ namespace OpenCBS.Services
                 throw new OpenCbsPackageSaveException(OpenCbsPackageSaveExceptionEnum.LOCMaturityHaveBeenFilledIncorrectly);
         }
 
-        private static void CheckValueForPackageEntryFees(LoanProduct pPackage)
-		{
-            if (pPackage.EntryFees == null) 
-                return;
-            
-            foreach (EntryFee entryFee in pPackage.EntryFees)
-            {
-                if (!ServicesHelper.CheckMinMaxAndValueCorrectlyFilled(entryFee.Min, entryFee.Max, entryFee.Value))
-                    throw new OpenCbsPackageSaveException(OpenCbsPackageSaveExceptionEnum.EntryFeesBadlyInformed);
-            }
-		}
-
         private static void CheckCumpolsorySavingSettings(LoanProduct pPackage)
         {
             if (!ServicesHelper.CheckMinMaxAndValueCorrectlyFilled(pPackage.CompulsoryAmountMin, pPackage.CompulsoryAmountMax, pPackage.CompulsoryAmount))
@@ -862,7 +857,6 @@ namespace OpenCBS.Services
             CheckValueForPackageNonRepaymentPenalties(pPackage);
             CheckValueForPackageAnticipatedTotalRepaymentPenalties(pPackage);
 		    CheckValuesForPackageAnticipatedPartialRepaymentPenalties(pPackage);
-            CheckValueForPackageEntryFees(pPackage);
             CheckValueForPackageGracePeriod(pPackage);
             CheckValueForPackageNumberOfInstallments(pPackage);
             CheckValueForFundingLine(pPackage);
@@ -1027,5 +1021,10 @@ namespace OpenCBS.Services
                        select item.Value).FirstOrDefault();
             if (creator != null) creator.Delete(interceptorParams);
         }
+
+	    public List<LoanEntryFee> SelectAllEntryFeeFromCredit(int loanId)
+	    {
+	        return _entryFeeServices.SelectAllLoanEntryFeeFromCredit(loanId);
+	    }
 	}
 }

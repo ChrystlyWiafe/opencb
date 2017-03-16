@@ -117,16 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tabPageMainParameters.Text" xml:space="preserve">
+    <value>Основные параметры</value>
+  </data>
+  <data name="tabPageFees.Text" xml:space="preserve">
+    <value>Пеня</value>
+  </data>
+  <data name="tabPageCommissions.Text" xml:space="preserve">
+    <value>Вступительный взнос</value>
+  </data>
+  <data name="tabPageOptionalParameters.Text" xml:space="preserve">
+    <value>Дополнительные параметры</value>
+  </data>
+  <data name="tabLOC.Text" xml:space="preserve">
+    <value>Кредитная линия</value>
+  </data>
+  <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
+    <value>Поручители и залоги</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gbAdvancedParameters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 279</value>
+  </data>
+  <data name="gbAdvancedParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>765, 315</value>
+  </data>
+  <data name="gbAdvancedParameters.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gbAdvancedParameters.Text" xml:space="preserve">
+    <value>Дополнительные параметры</value>
+  </data>
   <data name="cbUseLoanCycle.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbUseLoanCycle.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="cbUseLoanCycle.Text" xml:space="preserve">
     <value>Использовать цикл кредита</value>
+  </data>
+  <data name="groupBoxNumberOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 106</value>
+  </data>
+  <data name="groupBoxNumberOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 85</value>
+  </data>
+  <data name="groupBoxNumberOfInstallments.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxNumberOfInstallments.Text" xml:space="preserve">
+    <value>Количество выплат*</value>
   </data>
   <data name="labelNbIMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 57</value>
@@ -164,27 +209,6 @@
   <data name="textBoxNbOfInstallmentMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
   </data>
-  <data name="groupBoxNumberOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 106</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 85</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBoxNumberOfInstallments.Text" xml:space="preserve">
-    <value>Количество выплат*</value>
-  </data>
-  <data name="labelRateOr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 16</value>
-  </data>
-  <data name="labelRateOr.Text" xml:space="preserve">
-    <value>или значение</value>
-  </data>
-  <data name="textBoxRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 38</value>
-  </data>
   <data name="groupBoxInterestRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 106</value>
   </data>
@@ -196,6 +220,27 @@
   </data>
   <data name="groupBoxInterestRate.Text" xml:space="preserve">
     <value>Ставка процента (% за период)*</value>
+  </data>
+  <data name="labelRateOr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
+  </data>
+  <data name="labelRateOr.Text" xml:space="preserve">
+    <value>или значение</value>
+  </data>
+  <data name="textBoxRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 38</value>
+  </data>
+  <data name="groupBoxAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 26</value>
+  </data>
+  <data name="groupBoxAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 80</value>
+  </data>
+  <data name="groupBoxAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBoxAmount.Text" xml:space="preserve">
+    <value>  Сумма*</value>
   </data>
   <data name="labelLoanCycle.Location" type="System.Drawing.Point, System.Drawing">
     <value>504, 35</value>
@@ -245,17 +290,20 @@
   <data name="textBoxAmountMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBoxAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 26</value>
+  <data name="panelAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 74</value>
   </data>
-  <data name="groupBoxAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 80</value>
+  <data name="panelAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 234</value>
   </data>
-  <data name="groupBoxAmount.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="panelAmountCycles.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="groupBoxAmount.Text" xml:space="preserve">
-    <value>  Сумма*</value>
+  <data name="groupBoxAmountCycle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 90</value>
+  </data>
+  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
+    <value>Параметры цикла</value>
   </data>
   <data name="textBoxCycleMax.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -265,12 +313,6 @@
   </data>
   <data name="textBoxCycleMin.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="groupBoxAmountCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 90</value>
-  </data>
-  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
-    <value>Параметры цикла</value>
   </data>
   <data name="colCycle.Text" xml:space="preserve">
     <value>Цикл</value>
@@ -329,14 +371,17 @@
   <data name="lblCycleObjects.Text" xml:space="preserve">
     <value>Объекты цикла:</value>
   </data>
-  <data name="panelAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 74</value>
+  <data name="groupBoxAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 16</value>
   </data>
-  <data name="panelAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 234</value>
+  <data name="groupBoxAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 56</value>
   </data>
-  <data name="panelAmountCycles.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="groupBoxAmountCycles.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBoxAmountCycles.Text" xml:space="preserve">
+    <value>Циклы кредита</value>
   </data>
   <data name="comboBoxLoanCyclesName.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 24</value>
@@ -356,33 +401,6 @@
   <data name="buttonNewAmountCycles.Text" xml:space="preserve">
     <value>Новый цикл</value>
   </data>
-  <data name="groupBoxAmountCycles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 16</value>
-  </data>
-  <data name="groupBoxAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 56</value>
-  </data>
-  <data name="groupBoxAmountCycles.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBoxAmountCycles.Text" xml:space="preserve">
-    <value>Циклы кредита</value>
-  </data>
-  <data name="gbAdvancedParameters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 279</value>
-  </data>
-  <data name="gbAdvancedParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>765, 315</value>
-  </data>
-  <data name="gbAdvancedParameters.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="gbAdvancedParameters.Text" xml:space="preserve">
-    <value>Дополнительные параметры</value>
-  </data>
-  <data name="cmbInterestScheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 24</value>
-  </data>
   <data name="groupBoxRoundingType.Location" type="System.Drawing.Point, System.Drawing">
     <value>635, 13</value>
   </data>
@@ -392,6 +410,9 @@
   <data name="groupBoxRoundingType.Text" xml:space="preserve">
     <value>Схема начисления*</value>
   </data>
+  <data name="cmbInterestScheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 24</value>
+  </data>
   <data name="textBoxCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 50</value>
   </data>
@@ -400,6 +421,12 @@
   </data>
   <data name="label32.Text" xml:space="preserve">
     <value>Код *:</value>
+  </data>
+  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Привязать продукт к фондовой линии и валюте*</value>
   </data>
   <data name="comboBoxCurrencies.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 23</value>
@@ -413,11 +440,14 @@
   <data name="comboBoxFundingLine.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 24</value>
   </data>
-  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 13</value>
   </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Привязать продукт к фондовой линии и валюте*</value>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 86</value>
+  </data>
+  <data name="groupBoxChargeInterestWithinGracePeriod.Text" xml:space="preserve">
+    <value>Начислять проценты в течении льготного периода*</value>
   </data>
   <data name="radioButtonChargeInterestNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 56</value>
@@ -437,14 +467,14 @@
   <data name="radioButtonChargeInterestYes.Text" xml:space="preserve">
     <value>Да</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 13</value>
+  <data name="groupBoxType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 104</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 86</value>
+  <data name="groupBoxType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 52</value>
   </data>
-  <data name="groupBoxChargeInterestWithinGracePeriod.Text" xml:space="preserve">
-    <value>Начислять проценты в течении льготного периода*</value>
+  <data name="groupBoxType.Text" xml:space="preserve">
+    <value>Тип потребителя*</value>
   </data>
   <data name="clientTypeIndivCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 24</value>
@@ -491,20 +521,23 @@
   <data name="clientTypeAllCheckBox.Text" xml:space="preserve">
     <value>Все</value>
   </data>
-  <data name="groupBoxType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 104</value>
-  </data>
-  <data name="groupBoxType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 52</value>
-  </data>
-  <data name="groupBoxType.Text" xml:space="preserve">
-    <value>Тип потребителя*</value>
-  </data>
   <data name="groupBoxInterestRateType.Size" type="System.Drawing.Size, System.Drawing">
     <value>383, 111</value>
   </data>
   <data name="groupBoxInterestRateType.Text" xml:space="preserve">
     <value>Тип графика*</value>
+  </data>
+  <data name="groupBoxGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 162</value>
+  </data>
+  <data name="groupBoxGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 111</value>
+  </data>
+  <data name="groupBoxGracePeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBoxGracePeriod.Text" xml:space="preserve">
+    <value>Льготный период (погашения)*</value>
   </data>
   <data name="labelGPMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 67</value>
@@ -530,18 +563,6 @@
   <data name="textBoxGracePeriodMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 34</value>
   </data>
-  <data name="groupBoxGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 162</value>
-  </data>
-  <data name="groupBoxGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 111</value>
-  </data>
-  <data name="groupBoxGracePeriod.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="groupBoxGracePeriod.Text" xml:space="preserve">
-    <value>Льготный период (погашения)*</value>
-  </data>
   <data name="comboBoxInstallmentType.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 75</value>
   </data>
@@ -563,11 +584,11 @@
   <data name="labelName.Text" xml:space="preserve">
     <value>Название продукта *:</value>
   </data>
-  <data name="groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="gbAnticipatedRepayment.Text" xml:space="preserve">
+    <value>Штрафы за полное и частично досрочное погашение</value>
   </data>
-  <data name="tabPageMainParameters.Text" xml:space="preserve">
-    <value>Основные параметры</value>
+  <data name="groupBoxAPR.Text" xml:space="preserve">
+    <value>Штраф за частичное досрочное погашение *:</value>
   </data>
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 45</value>
@@ -584,7 +605,7 @@
   <data name="label42.Text" xml:space="preserve">
     <value>или</value>
   </data>
-  <data name="groupBoxAPR.Text" xml:space="preserve">
+  <data name="groupBoxPartialAnticipatedRepaymentBase.Text" xml:space="preserve">
     <value>Штраф за частичное досрочное погашение *:</value>
   </data>
   <data name="rbPrepaidPrincipal.Size" type="System.Drawing.Size, System.Drawing">
@@ -605,8 +626,8 @@
   <data name="rbPartialRemainingInterest.Text" xml:space="preserve">
     <value>% на оставшийся процент</value>
   </data>
-  <data name="groupBoxPartialAnticipatedRepaymentBase.Text" xml:space="preserve">
-    <value>Штраф за частичное досрочное погашение *:</value>
+  <data name="groupBoxTotalAnticipatedRepaymentBase.Text" xml:space="preserve">
+    <value>Штраф за полное досрочное погашение *:</value>
   </data>
   <data name="rbRemainingOLB.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 20</value>
@@ -620,8 +641,8 @@
   <data name="rbRemainingInterest.Text" xml:space="preserve">
     <value>% на оставшийся процент</value>
   </data>
-  <data name="groupBoxTotalAnticipatedRepaymentBase.Text" xml:space="preserve">
-    <value>Штраф за полное досрочное погашение *:</value>
+  <data name="groupBoxAnticipatedRepayment.Text" xml:space="preserve">
+    <value> Штрафы за дорочное погашение *:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 37</value>
@@ -656,11 +677,8 @@
   <data name="textBoxAnticipatedRepaymentPenaltiesMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBoxAnticipatedRepayment.Text" xml:space="preserve">
-    <value> Штрафы за дорочное погашение *:</value>
-  </data>
-  <data name="gbAnticipatedRepayment.Text" xml:space="preserve">
-    <value>Штрафы за полное и частично досрочное погашение</value>
+  <data name="groupBoxLateFees.Text" xml:space="preserve">
+    <value>Пеня на просрочку (% в день)</value>
   </data>
   <data name="labelLateFeeGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 192</value>
@@ -673,6 +691,9 @@
   </data>
   <data name="textBoxGracePeriodLateFee.Location" type="System.Drawing.Point, System.Drawing">
     <value>395, 189</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>От суммы кредита*</value>
   </data>
   <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 39</value>
@@ -701,8 +722,8 @@
   <data name="tBInitialAmountMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>От суммы кредита*</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>От просроченной суммы*</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 39</value>
@@ -731,8 +752,8 @@
   <data name="tBOverduePrincipalMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>От просроченной суммы*</value>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>От КП*</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 39</value>
@@ -761,8 +782,8 @@
   <data name="tBOLBMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>От КП*</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>От просроченного процента*</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 39</value>
@@ -791,71 +812,53 @@
   <data name="tBOverdueInterestMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>От просроченного процента*</value>
+  <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 16</value>
   </data>
-  <data name="groupBoxLateFees.Text" xml:space="preserve">
-    <value>Пеня на просрочку (% в день)</value>
+  <data name="label55.Text" xml:space="preserve">
+    <value>Доступные вступительные взносы</value>
   </data>
-  <data name="swbtnEntryFeesRemoveCycle.Text" xml:space="preserve">
-    <value>Удалить</value>
+  <data name="label54.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 305</value>
   </data>
-  <data name="swbtnEntryFeesAddCycle.Text" xml:space="preserve">
-    <value>Добавить</value>
+  <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 16</value>
   </data>
-  <data name="chEntryFeeName.Text" xml:space="preserve">
+  <data name="label54.Text" xml:space="preserve">
+    <value>Вступительные взносы этого продукта (max 9)</value>
+  </data>
+  <data name="chName.Text" xml:space="preserve">
     <value>Название</value>
   </data>
-  <data name="chEntryFeeValue.Text" xml:space="preserve">
-    <value>Значение</value>
+  <data name="chMin.Text" xml:space="preserve">
+    <value>Минимум</value>
   </data>
-  <data name="chEntryFeeRate.Text" xml:space="preserve">
-    <value>Ставка</value>
+  <data name="chMax.Text" xml:space="preserve">
+    <value>Максимум</value>
   </data>
-  <data name="chEntryFeeIsAdded.Text" xml:space="preserve">
-    <value>Добавлена</value>
+  <data name="chRate.Text" xml:space="preserve">
+    <value>Процент</value>
   </data>
-  <data name="chEntryFeeCycleId.Text" xml:space="preserve">
-    <value>Цикл</value>
+  <data name="chMaxSum.Text" xml:space="preserve">
+    <value>Максимальная сумма</value>
   </data>
-  <data name="chEntryFeeNewId.Text" xml:space="preserve">
-    <value>Новый Id</value>
+  <data name="ch2Name.Text" xml:space="preserve">
+    <value>Название</value>
   </data>
-  <data name="chEntryFeeIndex.Text" xml:space="preserve">
-    <value>Индекс</value>
+  <data name="ch2Min.Text" xml:space="preserve">
+    <value>Минимум</value>
   </data>
-  <data name="nudEntryFeescycleFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 18</value>
+  <data name="ch2Max.Text" xml:space="preserve">
+    <value>Максимум</value>
   </data>
-  <data name="lblEntryFeesFromCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 16</value>
+  <data name="ch2Rate.Text" xml:space="preserve">
+    <value>Процент</value>
   </data>
-  <data name="lblEntryFeesFromCycle.Text" xml:space="preserve">
-    <value>Число</value>
+  <data name="ch2MaxSum.Text" xml:space="preserve">
+    <value>Максимальная сумма</value>
   </data>
-  <data name="cbEnableEntryFeesCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 20</value>
-  </data>
-  <data name="cbEnableEntryFeesCycle.Text" xml:space="preserve">
-    <value>На основе цикла</value>
-  </data>
-  <data name="lblEntryFeesCycle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 21</value>
-  </data>
-  <data name="lblEntryFeesCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 16</value>
-  </data>
-  <data name="lblEntryFeesCycle.Text" xml:space="preserve">
-    <value>Цикл кредита:</value>
-  </data>
-  <data name="cmbEntryFeesCycles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 19</value>
-  </data>
-  <data name="groupBoxEntryFees.Text" xml:space="preserve">
-    <value>Вступительные взносы (до 10-ти записей)</value>
-  </data>
-  <data name="tabPageFees.Text" xml:space="preserve">
-    <value>Пеня</value>
+  <data name="groupBoxExoticProducts.Text" xml:space="preserve">
+    <value>Нетипичный продукт</value>
   </data>
   <data name="labelTotalExoticInstallments.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
@@ -868,6 +871,12 @@
   </data>
   <data name="buttonSaveExoticProduct.Text" xml:space="preserve">
     <value>Сохранить</value>
+  </data>
+  <data name="groupBoxExoticInstallmentProperties.Text" xml:space="preserve">
+    <value>Свойства нетипичных платежей</value>
+  </data>
+  <data name="panelExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 75</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 44</value>
@@ -905,12 +914,6 @@
   <data name="label10.Text" xml:space="preserve">
     <value>Основная сумма:</value>
   </data>
-  <data name="panelExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 75</value>
-  </data>
-  <data name="groupBoxExoticInstallmentProperties.Text" xml:space="preserve">
-    <value>Свойства нетипичных платежей</value>
-  </data>
   <data name="buttonIncreaseExoticInstallment.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -941,9 +944,6 @@
   <data name="buttonNewExoticProduct.Text" xml:space="preserve">
     <value>Новый нетипичный продукт</value>
   </data>
-  <data name="groupBoxExoticProducts.Text" xml:space="preserve">
-    <value>Нетипичный продукт</value>
-  </data>
   <data name="checkBoxUseExceptionalInstallmen.Text" xml:space="preserve">
     <value>Использовать нетипичные продукты</value>
   </data>
@@ -956,8 +956,8 @@
   <data name="checkBoxFlexPackage.Text" xml:space="preserve">
     <value>Разрешить изменение графика</value>
   </data>
-  <data name="tabPageOptionalParameters.Text" xml:space="preserve">
-    <value>Дополнительные параметры</value>
+  <data name="drawNumGroupBox.Text" xml:space="preserve">
+    <value>Количество траншей</value>
   </data>
   <data name="textBoxNumOfDrawings.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 22</value>
@@ -968,14 +968,14 @@
   <data name="drawingNumberLabel.Text" xml:space="preserve">
     <value>Количество траншей в кредитной линии:</value>
   </data>
-  <data name="drawNumGroupBox.Text" xml:space="preserve">
-    <value>Количество траншей</value>
-  </data>
   <data name="useLOCCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>326, 24</value>
   </data>
   <data name="useLOCCheckBox.Text" xml:space="preserve">
     <value>Использовать кредитную линию</value>
+  </data>
+  <data name="maxLOCMaturityGroupBox.Text" xml:space="preserve">
+    <value>Максимальная длительность кредитной линии</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 44</value>
@@ -995,8 +995,8 @@
   <data name="textBoxLOCMaturity.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 41</value>
   </data>
-  <data name="maxLOCMaturityGroupBox.Text" xml:space="preserve">
-    <value>Максимальная длительность кредитной линии</value>
+  <data name="maxLOCAmountGroupBox.Text" xml:space="preserve">
+    <value>Максимальная сумма кредитной линии</value>
   </data>
   <data name="labelLOCAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>524, 44</value>
@@ -1019,12 +1019,6 @@
   <data name="textBoxAmountUnderLOC.Location" type="System.Drawing.Point, System.Drawing">
     <value>382, 41</value>
   </data>
-  <data name="maxLOCAmountGroupBox.Text" xml:space="preserve">
-    <value>Максимальная сумма кредитной линии</value>
-  </data>
-  <data name="tabLOC.Text" xml:space="preserve">
-    <value>Кредитная линия</value>
-  </data>
   <data name="cbUseCompulsorySavings.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 293</value>
   </data>
@@ -1033,6 +1027,15 @@
   </data>
   <data name="cbUseCompulsorySavings.Text" xml:space="preserve">
     <value>Использовать обязательное накопление</value>
+  </data>
+  <data name="gbCSAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 319</value>
+  </data>
+  <data name="gbCSAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 115</value>
+  </data>
+  <data name="gbCSAmount.Text" xml:space="preserve">
+    <value>Сумма обязательного накопления</value>
   </data>
   <data name="rbCompulsoryAmountRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 22</value>
@@ -1082,20 +1085,14 @@
   <data name="txbCompulsoryAmountValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>342, 65</value>
   </data>
-  <data name="gbCSAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 319</value>
-  </data>
-  <data name="gbCSAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>747, 115</value>
-  </data>
-  <data name="gbCSAmount.Text" xml:space="preserve">
-    <value>Сумма обязательного накопления</value>
-  </data>
   <data name="checkBoxSetSepCollGuar.Size" type="System.Drawing.Size, System.Drawing">
     <value>394, 20</value>
   </data>
   <data name="checkBoxSetSepCollGuar.Text" xml:space="preserve">
     <value>Установить раздельные значения для поручителей и залогов</value>
+  </data>
+  <data name="groupBoxTotGuarColl.Text" xml:space="preserve">
+    <value>В сумме</value>
   </data>
   <data name="textBoxCollGuar.Location" type="System.Drawing.Point, System.Drawing">
     <value>339, 24</value>
@@ -1115,8 +1112,11 @@
   <data name="label33.Text" xml:space="preserve">
     <value>Минимальный процент поручительства + залоги</value>
   </data>
-  <data name="groupBoxTotGuarColl.Text" xml:space="preserve">
-    <value>В сумме</value>
+  <data name="groupBoxSepGuarColl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 163</value>
+  </data>
+  <data name="groupBoxSepGuarColl.Text" xml:space="preserve">
+    <value>Раздельно</value>
   </data>
   <data name="label49.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 96</value>
@@ -1151,50 +1151,11 @@
   <data name="labelMinPercGuar.Text" xml:space="preserve">
     <value>Минимальный процент для поручителей:</value>
   </data>
-  <data name="groupBoxSepGuarColl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 163</value>
-  </data>
-  <data name="groupBoxSepGuarColl.Text" xml:space="preserve">
-    <value>Раздельно</value>
-  </data>
   <data name="checkBoxGuarCollRequired.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 20</value>
   </data>
   <data name="checkBoxGuarCollRequired.Text" xml:space="preserve">
     <value>Использовать поручителей и залоги</value>
-  </data>
-  <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
-    <value>Поручители и залоги</value>
-  </data>
-  <data name="label53.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 59</value>
-  </data>
-  <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 24</value>
-  </data>
-  <data name="tbCreditInsuranceMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 56</value>
-  </data>
-  <data name="tbCreditInsuranceMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 21</value>
-  </data>
-  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 16</value>
-  </data>
-  <data name="label50.Text" xml:space="preserve">
-    <value>Макс:</value>
-  </data>
-  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
-  </data>
-  <data name="label51.Text" xml:space="preserve">
-    <value>Мин:</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Страхование займов</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Страхование</value>
   </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Использовать сумму цикла</value>

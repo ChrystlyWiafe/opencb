@@ -44,6 +44,9 @@ namespace OpenCBS.Services
         LocationServices GetLocationServices();
         PicturesServices GetPicturesServices();
         ProductServices GetProductServices();
+        EntryFeeServices GetEntryFeeServices();
+        AccountService GetAccountService();
+        BookingService GetBookingService();
         CollateralProductServices GetCollateralProductServices();
         SettingsImportExportServices GetSettingsImportExportServices();
         ProjectServices GetProjectServices();

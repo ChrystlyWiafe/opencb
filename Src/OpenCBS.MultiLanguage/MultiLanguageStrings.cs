@@ -95,7 +95,11 @@ namespace OpenCBS.MultiLanguageRessources
         ClientControl,
         MyInforamtionForm,
         PrintButton,
-        PersonUserControlCountries
+        PersonUserControlCountries,
+        EntryFeesForm,
+        EntryFeeAddEdit,
+        PaymentMethodForm,
+        PaymentMethodAddEdit
     }
 
     /// <summary>

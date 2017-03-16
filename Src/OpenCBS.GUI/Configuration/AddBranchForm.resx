@@ -456,16 +456,10 @@
   <data name="columnHeaderPaymentMethod.Width" type="System.Int32, mscorlib">
     <value>208</value>
   </data>
-  <data name="columnHeaderAccount.Text" xml:space="preserve">
-    <value>Account</value>
+  <data name="columnHeaderAccountNumber.Text" xml:space="preserve">
+    <value>Account Number</value>
   </data>
-  <data name="columnHeaderAccount.Width" type="System.Int32, mscorlib">
-    <value>267</value>
-  </data>
-  <data name="columnHeaderDate.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="columnHeaderDate.Width" type="System.Int32, mscorlib">
+  <data name="columnHeaderAccountNumber.Width" type="System.Int32, mscorlib">
     <value>140</value>
   </data>
   <data name="lvPaymentMethods.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -505,7 +499,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnDeletePaymentMethod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 84</value>
+    <value>24, 55</value>
   </data>
   <data name="btnDeletePaymentMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 23</value>
@@ -535,7 +529,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnEditPaymentMethod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 55</value>
+    <value>24, 113</value>
   </data>
   <data name="btnEditPaymentMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 23</value>
@@ -545,6 +539,9 @@
   </data>
   <data name="btnEditPaymentMethod.Text" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="btnEditPaymentMethod.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;btnEditPaymentMethod.Name" xml:space="preserve">
     <value>btnEditPaymentMethod</value>
@@ -652,7 +649,7 @@
     <value>tabControl</value>
   </data>
   <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>OpenCBS.GUI.Configuration.TablessControl, OpenCBS.GUI, Version=17.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1288,22 +1285,16 @@
   <data name="&gt;&gt;columnHeaderPaymentMethod.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeaderAccount.Name" xml:space="preserve">
-    <value>columnHeaderAccount</value>
+  <data name="&gt;&gt;columnHeaderAccountNumber.Name" xml:space="preserve">
+    <value>columnHeaderAccountNumber</value>
   </data>
-  <data name="&gt;&gt;columnHeaderAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderDate.Name" xml:space="preserve">
-    <value>columnHeaderDate</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeaderAccountNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddBranchForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetOkCancelForm, OpenCBS.GUI, Version=16.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetOkCancelForm, OpenCBS.GUI, Version=17.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

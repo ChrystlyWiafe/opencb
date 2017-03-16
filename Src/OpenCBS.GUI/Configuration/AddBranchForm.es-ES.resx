@@ -223,8 +223,8 @@
   <data name="columnHeaderAccount.Text" xml:space="preserve">
     <value>Cuenta</value>
   </data>
-  <data name="columnHeaderDate.Text" xml:space="preserve">
-    <value>Fecha</value>
+  <data name="columnHeaderAccountNumber.Text" xml:space="preserve">
+    <value>Número de cuenta</value>
   </data>
   <data name="lvPaymentMethods.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 197</value>

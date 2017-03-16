@@ -157,5 +157,10 @@ namespace OpenCBS.Services
         {
             return _manager.SelectBranchByName(name);
         }
+
+        public Branch FindBranchByCode(string code)
+        {
+            return _manager.FindBranchByCode(code);
+        }
     }
 }

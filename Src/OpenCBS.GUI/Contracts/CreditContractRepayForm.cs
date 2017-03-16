@@ -22,15 +22,12 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain.Clients;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Contracts.Loans.Installments;
-using OpenCBS.CoreDomain.Contracts.Loans.LoanRepayment;
-using OpenCBS.CoreDomain.Contracts.Savings;
 using OpenCBS.CoreDomain.Events;
 using OpenCBS.CoreDomain.Events.Loan;
 using OpenCBS.GUI.Accounting;
@@ -40,10 +37,8 @@ using OpenCBS.Services;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.Shared;
 using OpenCBS.CoreDomain.Accounting;
-using OpenCBS.CoreDomain;
 using OpenCBS.Enums;
 using OpenCBS.GUI.UserControl;
-using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.GUI.Contracts
 {
@@ -126,12 +121,21 @@ namespace OpenCBS.GUI.Contracts
 
         private void FillComboBoxPaymentMethods()
         {
-            List<PaymentMethod> paymentMethods =
-                ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
-            foreach (PaymentMethod method in paymentMethods)
+            var branchId = ServicesProvider.GetInstance().GetBranchService().FindBranchByCode(_loan.BranchCode).Id;
+            var paymentMethods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(branchId);
+
+            if (paymentMethods.Count == 0)
+            {
+                Fail("NoPaymentMethods");
+                Close();
+                return;
+            }
+
+            foreach (var method in paymentMethods)
             {
                 cmbPaymentMethod.Items.Add(method);
             }
+
             cmbPaymentMethod.SelectedItem = paymentMethods[0];
         }
 

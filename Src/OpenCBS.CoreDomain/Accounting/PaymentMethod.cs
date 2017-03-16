@@ -20,6 +20,7 @@
 // Contact: contact@opencbs.com
 
 using System;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.Enums;
 using OpenCBS.MultiLanguageRessources;
 
@@ -45,6 +46,8 @@ namespace OpenCBS.CoreDomain.Accounting
         public int LinkId { get; set; }
         public Branch Branch { get; set; }
         public DateTime Date { get; set; }
+        public Account Account { get; set; }
+        public string AccountNumber { get; set; }
 
         public PaymentMethod()
         {

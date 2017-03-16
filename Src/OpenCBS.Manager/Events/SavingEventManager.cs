@@ -131,7 +131,11 @@ namespace OpenCBS.Manager.Events
 	        c.AddParam("@is_fired", pSavingEvent.IsFired);
 	        c.AddParam("@related_contract_code", pSavingEvent is SavingTransferEvent ? ((SavingTransferEvent)pSavingEvent).RelatedContractCode : null);
 	        c.AddParam("@fees", pSavingEvent is ISavingsFees ? ((ISavingsFees)pSavingEvent).Fee : null);
-            if (pSavingEvent.PaymentMethod != null && pSavingEvent.PaymentsMethod.Id != 0)
+            if (pSavingEvent.PaymentMethod != null)
+            {
+                c.AddParam("@savings_method", pSavingEvent.PaymentMethod.Id);
+            }
+            else if (pSavingEvent.PaymentsMethod != null && pSavingEvent.PaymentsMethod.Id != 0)
             {
                 c.AddParam("@savings_method", pSavingEvent.PaymentsMethod.Id);
             }
@@ -429,8 +433,10 @@ namespace OpenCBS.Manager.Events
                                   ON SavingEvents.contract_id = sc.id
 				                WHERE SavingEvents.contract_id = @id 
                                 ORDER BY SavingEvents.id";
-            using (SqlConnection conn = GetConnection())
-            using(OpenCbsCommand c = new OpenCbsCommand(q, conn))
+
+            var paymentMethodManager = new PaymentMethodManager(User.CurrentUser);
+            using (var conn = GetConnection())
+            using(var c = new OpenCbsCommand(q, conn))
             {
                 c.AddParam("@id", pSavingId);
 
@@ -438,10 +444,13 @@ namespace OpenCBS.Manager.Events
                 {
                     if(r == null || r.Empty) return new List<SavingEvent>();
 
-                    List<SavingEvent> eventList = new List<SavingEvent>();
+                    var eventList = new List<SavingEvent>();
                     while (r.Read())
                     {
-                        eventList.Add(ReadEvent(r, pProduct));
+                        var savingEvent = ReadEvent(r, pProduct);
+                        if (savingEvent.PaymentMethod != null && savingEvent.PaymentMethod.Id > 0)
+                            savingEvent.PaymentMethod = paymentMethodManager.SelectPaymentMethodById(savingEvent.PaymentMethod.Id);
+                        eventList.Add(savingEvent);
                     }
                     return eventList;
                 }
@@ -475,7 +484,9 @@ namespace OpenCBS.Manager.Events
 	            e.ProductType = pProduct.GetType();
 
 	        if (r.GetNullSmallInt("savings_method").HasValue)
-	            e.SavingsMethod = (OSavingsMethods)r.GetNullSmallInt("savings_method").Value;
+	        {
+	            e.PaymentMethod = new PaymentMethod {Id = r.GetNullSmallInt("savings_method").Value };
+	        }
             
 	        e.IsPending = r.GetBool("pending");
 	        e.PendingEventId = r.GetNullInt("pending_event_id");

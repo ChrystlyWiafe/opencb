@@ -33,6 +33,8 @@ namespace OpenCBS.GUI.Configuration
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPaymentMethodForm));
             this.lblPaymentMethod = new System.Windows.Forms.Label();
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.lblAccountNumberTitle = new System.Windows.Forms.Label();
+            this.lblAccountNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPaymentMethod
@@ -42,15 +44,28 @@ namespace OpenCBS.GUI.Configuration
             // 
             // cmbPaymentMethod
             // 
-            this.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.cmbPaymentMethod, "cmbPaymentMethod");
+            this.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPaymentMethod.FormattingEnabled = true;
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
+            this.cmbPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentMethod_SelectedIndexChanged);
+            // 
+            // lblAccountNumberTitle
+            // 
+            resources.ApplyResources(this.lblAccountNumberTitle, "lblAccountNumberTitle");
+            this.lblAccountNumberTitle.Name = "lblAccountNumberTitle";
+            // 
+            // lblAccountNumber
+            // 
+            resources.ApplyResources(this.lblAccountNumber, "lblAccountNumber");
+            this.lblAccountNumber.Name = "lblAccountNumber";
             // 
             // AddPaymentMethodForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblAccountNumber);
+            this.Controls.Add(this.lblAccountNumberTitle);
             this.Controls.Add(this.cmbPaymentMethod);
             this.Controls.Add(this.lblPaymentMethod);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -61,6 +76,8 @@ namespace OpenCBS.GUI.Configuration
             this.Load += new System.EventHandler(this.AddPaymentMethodForm_Load);
             this.Controls.SetChildIndex(this.lblPaymentMethod, 0);
             this.Controls.SetChildIndex(this.cmbPaymentMethod, 0);
+            this.Controls.SetChildIndex(this.lblAccountNumberTitle, 0);
+            this.Controls.SetChildIndex(this.lblAccountNumber, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,5 +86,7 @@ namespace OpenCBS.GUI.Configuration
         #endregion
         private System.Windows.Forms.Label lblPaymentMethod;
         private System.Windows.Forms.ComboBox cmbPaymentMethod;
+        private System.Windows.Forms.Label lblAccountNumberTitle;
+        private System.Windows.Forms.Label lblAccountNumber;
     }
 }

@@ -198,6 +198,7 @@
   "Teller": "Teller",
   "Timesheet": "Timesheet",
   "TIN": "TIN",
+  "The same payment method already exists.": "The same payment method already exists.",
   "This province already exists.": "This province already exists.",
   "This district already exists.": "This district already exists.",
   "This city already exists.": "This city already exists.",
@@ -215,5 +216,6 @@
   "Yes": "Yes",
   "You dont't have permission.": "You dont't have permission.",
   "You should enter a name": "You should enter a name.",
-  "Expand all": "Expand all"
+  "Expand all": "Expand all",
+  "There are no payment methods for this branch": "There are no payment methods for this branch"
 }

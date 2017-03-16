@@ -243,4 +243,7 @@
   <data name="allInstallmentTypes" xml:space="preserve">
     <value>Все типы</value>
   </data>
+  <data name="EntryFeeAlreadyHave" xml:space="preserve">
+    <value>Вступительный взнос уже есть</value>
+  </data>
 </root>

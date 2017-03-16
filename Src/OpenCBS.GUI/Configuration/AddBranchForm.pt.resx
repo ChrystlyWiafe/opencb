@@ -176,8 +176,8 @@
   <data name="columnHeaderPaymentMethod.Text" xml:space="preserve">
     <value>método de pagamento</value>
   </data>
-  <data name="columnHeaderDate.Text" xml:space="preserve">
-    <value>data</value>
+  <data name="columnHeaderAccountNumber.Text" xml:space="preserve">
+    <value>Número da conta</value>
   </data>
   <data name="btnDeletePaymentMethod.Text" xml:space="preserve">
     <value>Apagar

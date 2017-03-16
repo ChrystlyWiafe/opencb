@@ -204,6 +204,7 @@
   "Teller": "Касса",
   "Timesheet": "Табель посещаемости",
   "TIN": "ИНН",
+  "There are no payment methods for this branch": "В текущем филиале нету методов оплаты",
   "This province already exists.": "Эта провинция уже существует.",
   "This district already exists.": "Этот район уже существует.",
   "This city already exists.": "Этот город уже существует.",
@@ -244,6 +245,7 @@
   "Result": "Результат",
   "Search Client": "Поиск клиента",
   "SIRET": "SIRET",
+  "The same payment method already exists.": "Такой тип платежа уже существует.",
   "Type": "Тип",
   "Volunteer": "Волонтер"
 }

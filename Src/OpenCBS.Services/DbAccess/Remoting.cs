@@ -229,6 +229,21 @@ namespace OpenCBS.Services
             return _remoteOperation.GetProductServices(CurrentUser);
         }
 
+        public EntryFeeServices GetEntryFeeServices()
+        {
+            throw new NotImplementedException();
+        }
+
+        public AccountService GetAccountService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BookingService GetBookingService()
+        {
+            throw new NotImplementedException();
+        }
+
         public CollateralProductServices GetCollateralProductServices()
         {
             // TO DO: This could be later implemented for remoting

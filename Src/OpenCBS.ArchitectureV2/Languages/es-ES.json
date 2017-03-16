@@ -54,9 +54,11 @@
   "page(s)": "página(s)",
   "Passport number": "Número de pasaporte",
   "Previous": "Anterior",
+  "Reports": "Informes",
   "Result": "Resultado",
   "Search Client": "Buscar un cliente",
   "SIRET": "SIRET",
+  "The same payment method already exists.": "El mismo método de pago ya existe.",
   "Type": "Tipo",
   "Volunteer": "Voluntario"
 }

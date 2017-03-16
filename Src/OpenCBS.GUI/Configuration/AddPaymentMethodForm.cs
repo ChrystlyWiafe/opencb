@@ -26,16 +26,17 @@ using OpenCBS.Services;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.GUI.UserControl;
+using AccountingPaymentMethod = OpenCBS.CoreDomain.Accounting.PaymentMethod;
 
 namespace OpenCBS.GUI.Configuration
 {
     public partial class AddPaymentMethodForm : SweetOkCancelForm
     {
         private bool _isNew;
-        private PaymentMethod _paymentMethod;
+        private AccountingPaymentMethod _paymentMethod;
         private Branch branch;
 
-        public PaymentMethod PaymentMethod
+        public AccountingPaymentMethod PaymentMethod
         {
             get
             {
@@ -49,10 +50,11 @@ namespace OpenCBS.GUI.Configuration
             Initialize(null);
         }
 
-        public AddPaymentMethodForm(PaymentMethod paymentMethod)
+        public AddPaymentMethodForm(AccountingPaymentMethod paymentMethod)
         {
             InitializeComponent();
             Initialize(paymentMethod);
+            branch = paymentMethod.Branch;
         }
 
         public AddPaymentMethodForm(Branch tBranch)
@@ -62,12 +64,12 @@ namespace OpenCBS.GUI.Configuration
             branch = tBranch;
         }
 
-        private void Initialize(PaymentMethod paymentMethod)
+        private void Initialize(AccountingPaymentMethod paymentMethod)
         {
             _isNew = paymentMethod == null;
             _paymentMethod = paymentMethod;
 
-            List<PaymentMethod> methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
+            var methods = ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethods();
             cmbPaymentMethod.Items.Clear();
             cmbPaymentMethod.ValueMember = "Id";
             cmbPaymentMethod.DisplayMember = "Name";
@@ -89,12 +91,12 @@ namespace OpenCBS.GUI.Configuration
         private void AddPaymentMethodForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult.OK != DialogResult) return;
-            PaymentMethod pm = cmbPaymentMethod.SelectedItem as PaymentMethod;
-            _paymentMethod = new PaymentMethod
-                                                   {
+            AccountingPaymentMethod pm = cmbPaymentMethod.SelectedItem as AccountingPaymentMethod;
+            _paymentMethod = new AccountingPaymentMethod
+            {
                                                        Id =
                                                            ServicesProvider.GetInstance().GetPaymentMethodServices().
-                                                           GetPaymentMethodByName(pm.Name).Id,
+                                                           GetPaymentMethodById(pm.Id).Id,
                                                        Name = pm.Name,
                                                        LinkId = _paymentMethod == null ? 0 : _paymentMethod.LinkId,
                                                        Branch = branch
@@ -105,6 +107,19 @@ namespace OpenCBS.GUI.Configuration
                 e.Cancel = true;
                 return;
             }
+        }
+
+        private void cmbPaymentMethod_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            var currentPaymentMethod = (AccountingPaymentMethod) cmbPaymentMethod.SelectedItem;
+            currentPaymentMethod.Account =
+                ServicesProvider.GetInstance().GetAccountService().SelectAccountByNumber(currentPaymentMethod.AccountNumber);
+            lblAccountNumber.Text = GetAccountNumber(currentPaymentMethod);
+        }
+        private string GetAccountNumber(AccountingPaymentMethod paymentMethod)
+        {
+            if (paymentMethod == null || paymentMethod.Account == null) return "";
+            return string.Format("{0} - {1}", paymentMethod.Account.AccountNumber, paymentMethod.Account.Label);
         }
     }
 }

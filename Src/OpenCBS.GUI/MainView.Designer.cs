@@ -83,12 +83,14 @@ namespace OpenCBS.GUI
             this.menuItemLocations = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFundingLines = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInstallmentTypes = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparatorConfig2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
             this.currenciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparatorConfig3 = new System.Windows.Forms.ToolStripSeparator();
             this.miContractCode = new System.Windows.Forms.ToolStripMenuItem();
             this.collateralProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entryFeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemDatabaseControlPanel = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,6 +127,12 @@ namespace OpenCBS.GUI
             this.loanCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._modulesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._aboutModulesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAccounting = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewBooking = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewChartOfAccounts = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewBalances = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewTurnoverBalances = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewAccountMovements = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -258,6 +266,7 @@ namespace OpenCBS.GUI
             this.mnuClients,
             this._viewItem,
             this._modulesMenuItem,
+            this.mnuAccounting,
             this.reportsToolStripMenuItem,
             this.mnuWindow,
             this.mnuHelp});
@@ -275,12 +284,14 @@ namespace OpenCBS.GUI
             this.menuItemLocations,
             this.toolStripMenuItemFundingLines,
             this.toolStripMenuItemInstallmentTypes,
+            this.paymentMethodToolStripMenuItem,
             this.toolStripSeparatorConfig2,
             this.menuItemExchangeRate,
             this.currenciesToolStripMenuItem,
             this.toolStripSeparatorConfig3,
             this.miContractCode,
             this.collateralProductsToolStripMenuItem,
+            this.entryFeesToolStripMenuItem,
             this.toolStripSeparator1,
             this.menuItemSetting,
             this.menuItemDatabaseControlPanel,
@@ -329,6 +340,12 @@ namespace OpenCBS.GUI
             this.toolStripMenuItemInstallmentTypes.Name = "toolStripMenuItemInstallmentTypes";
             this.toolStripMenuItemInstallmentTypes.Click += new System.EventHandler(this.toolStripMenuItemInstallmentTypes_Click);
             // 
+            // paymentMethodToolStripMenuItem
+            // 
+            resources.ApplyResources(this.paymentMethodToolStripMenuItem, "paymentMethodToolStripMenuItem");
+            this.paymentMethodToolStripMenuItem.Name = "paymentMethodToolStripMenuItem";
+            this.paymentMethodToolStripMenuItem.Click += new System.EventHandler(this.paymentMethodToolStripMenuItem_Click);
+            // 
             // toolStripSeparatorConfig2
             // 
             resources.ApplyResources(this.toolStripSeparatorConfig2, "toolStripSeparatorConfig2");
@@ -363,6 +380,12 @@ namespace OpenCBS.GUI
             resources.ApplyResources(this.collateralProductsToolStripMenuItem, "collateralProductsToolStripMenuItem");
             this.collateralProductsToolStripMenuItem.Name = "collateralProductsToolStripMenuItem";
             this.collateralProductsToolStripMenuItem.Click += new System.EventHandler(this.collateralProductsToolStripMenuItem_Click);
+            // 
+            // entryFeesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.entryFeesToolStripMenuItem, "entryFeesToolStripMenuItem");
+            this.entryFeesToolStripMenuItem.Name = "entryFeesToolStripMenuItem";
+            this.entryFeesToolStripMenuItem.Click += new System.EventHandler(this.entryFeesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -617,6 +640,47 @@ namespace OpenCBS.GUI
             this._aboutModulesMenuItem.Name = "_aboutModulesMenuItem";
             this._aboutModulesMenuItem.Click += new System.EventHandler(this._aboutModulesMenuItem_Click);
             // 
+            // mnuAccounting
+            // 
+            resources.ApplyResources(this.mnuAccounting, "mnuAccounting");
+            this.mnuAccounting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNewBooking,
+            this.mnuNewChartOfAccounts,
+            this.mnuNewBalances,
+            this.mnuNewTurnoverBalances,
+            this.mnuNewAccountMovements});
+            this.mnuAccounting.Name = "mnuAccounting";
+            // 
+            // mnuNewBooking
+            // 
+            resources.ApplyResources(this.mnuNewBooking, "mnuNewBooking");
+            this.mnuNewBooking.Name = "mnuNewBooking";
+            this.mnuNewBooking.Click += new System.EventHandler(this.mnuNewBooking_Click);
+            // 
+            // mnuNewChartOfAccounts
+            // 
+            resources.ApplyResources(this.mnuNewChartOfAccounts, "mnuNewChartOfAccounts");
+            this.mnuNewChartOfAccounts.Name = "mnuNewChartOfAccounts";
+            this.mnuNewChartOfAccounts.Click += new System.EventHandler(this.mnuNewChartOfAccounts_Click);
+            // 
+            // mnuNewBalances
+            // 
+            resources.ApplyResources(this.mnuNewBalances, "mnuNewBalances");
+            this.mnuNewBalances.Name = "mnuNewBalances";
+            this.mnuNewBalances.Click += new System.EventHandler(this.mnuNewBalances_Click);
+            // 
+            // mnuNewTurnoverBalances
+            // 
+            resources.ApplyResources(this.mnuNewTurnoverBalances, "mnuNewTurnoverBalances");
+            this.mnuNewTurnoverBalances.Name = "mnuNewTurnoverBalances";
+            this.mnuNewTurnoverBalances.Click += new System.EventHandler(this.mnuNewTurnoverBalances_Click);
+            // 
+            // mnuNewAccountMovements
+            // 
+            resources.ApplyResources(this.mnuNewAccountMovements, "mnuNewAccountMovements");
+            this.mnuNewAccountMovements.Name = "mnuNewAccountMovements";
+            this.mnuNewAccountMovements.Click += new System.EventHandler(this.mnuNewAccountMovements_Click);
+            // 
             // reportsToolStripMenuItem
             // 
             resources.ApplyResources(this.reportsToolStripMenuItem, "reportsToolStripMenuItem");
@@ -740,5 +804,13 @@ namespace OpenCBS.GUI
         private ToolStripMenuItem portugueseToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem loanCalculatorToolStripMenuItem;
+        private ToolStripMenuItem entryFeesToolStripMenuItem;
+        private ToolStripMenuItem paymentMethodToolStripMenuItem;
+        private ToolStripMenuItem mnuAccounting;
+        private ToolStripMenuItem mnuNewBooking;
+        private ToolStripMenuItem mnuNewChartOfAccounts;
+        private ToolStripMenuItem mnuNewBalances;
+        private ToolStripMenuItem mnuNewTurnoverBalances;
+        private ToolStripMenuItem mnuNewAccountMovements;
     }
 }

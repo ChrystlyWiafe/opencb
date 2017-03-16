@@ -200,8 +200,8 @@
   <data name="columnHeaderAccount.Text" xml:space="preserve">
     <value>Счет</value>
   </data>
-  <data name="columnHeaderDate.Text" xml:space="preserve">
-    <value>Дата</value>
+  <data name="columnHeaderAccountNumber.Text" xml:space="preserve">
+    <value>Номер счета</value>
   </data>
   <data name="btnDeletePaymentMethod.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 84</value>

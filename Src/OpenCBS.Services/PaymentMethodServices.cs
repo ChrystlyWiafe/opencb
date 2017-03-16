@@ -19,10 +19,13 @@
 // Website: http://www.opencbs.com
 // Contact: contact@opencbs.com
 
+using System;
 using System.Collections.Generic;
+using System.Data;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.Manager;
 using OpenCBS.CoreDomain;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.Services
 {
@@ -52,6 +55,37 @@ namespace OpenCBS.Services
         public List<PaymentMethod> GetAllPaymentMethods()
         {
             return _paymentMethodManager.SelectPaymentMethods();
+        }
+
+        public List<PaymentMethod> GetAllNonCashsPaymentMethods(IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+            try
+            {
+                var result = _paymentMethodManager.GetAllNonCashsPaymentMethods(tx);
+                var accountService = new AccountService(_user);
+                foreach (var paymentMethod in result)
+                {
+                    if (paymentMethod.AccountNumber == null)
+                        continue;
+                    paymentMethod.Account = accountService.SelectAccountByNumber(paymentMethod.AccountNumber, tx);
+                }
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return result;
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
         }
 
         public List<PaymentMethod> GetAllPaymentMethodsForClosure()
@@ -84,15 +118,63 @@ namespace OpenCBS.Services
             _paymentMethodManager.AddPaymentMethodToBranch(paymentMethod);
         }
 
+        public bool ExistsLinkBranchesPaymentMethods(PaymentMethod paymentMethod)
+        {
+            return _paymentMethodManager.ExistsLinkBranchesPaymentMethods(paymentMethod);
+        }
+
         public void Delete(PaymentMethod paymentMethod)
         {
             _paymentMethodManager.DeletePaymentMethodFromBranch(paymentMethod);
         }
 
-        public void Update(PaymentMethod paymentMethod)
+        public void UpdatePaymentMethodFromBranch(PaymentMethod paymentMethod)
         {
             _paymentMethodManager.UpdatePaymentMethodFromBranch(paymentMethod);
         }
+
+        public void Update(PaymentMethod paymentMethod, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+            try
+            {
+                _paymentMethodManager.Update(paymentMethod, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
+        public void Save(PaymentMethod paymentMethod, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+            try
+            {
+                _paymentMethodManager.Save(paymentMethod, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
     }
 }
-    
