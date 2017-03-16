@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Globalization;
@@ -2862,123 +2863,107 @@ namespace OpenCBS.Services
             return loans.Where(loan => loan.ContractStatus == OContractStatus.Active).ToList();
         }
 
-        public void StopPenalty(Loan loan, DateTime date, string comment)
+        public void StopPenalty(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
         {
-            using (SqlConnection conn = _loanManager.GetConnection())
-            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
             {
-                try
+                var stopPenaltyLoanEvent = loan.StopPenalty(date, comment);
+                stopPenaltyLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(stopPenaltyLoanEvent, loan, tx);
+
+                CallInterceptor(new Dictionary<string, object>
                 {
-                    var stopPenaltyLoanEvent = loan.StopPenalty(date,comment);
-                    stopPenaltyLoanEvent.User = User.CurrentUser;
+                    {"Loan", loan},
+                    {"Event", stopPenaltyLoanEvent},
+                    {"SqlTransaction", tx}
+                });
 
-                    _ePs.FireEvent(stopPenaltyLoanEvent, loan, sqlTransaction);
-
-                    CallInterceptor(new Dictionary<string, object>
-                    {
-                        {"Loan", loan},
-                        {"Event", stopPenaltyLoanEvent},
-                        {"SqlTransaction", sqlTransaction}
-                    });
-
-                    if (sqlTransaction != null)
-                        sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    if (sqlTransaction != null) sqlTransaction.Rollback();
-                    throw;
-                }
+                tx.Commit();
+            }
+            catch (Exception)
+            {
+                tx.Rollback();
+                throw;
             }
         }
 
-        public void RecoverPenalty(Loan loan, DateTime date, string comment)
+        public void RecoverPenalty(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
         {
-            using (SqlConnection conn = _loanManager.GetConnection())
-            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
             {
-                try
+                var recoverPenaltyLoanEvent = loan.RecoverPenalty(date, comment);
+                recoverPenaltyLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(recoverPenaltyLoanEvent, loan, tx);
+
+                CallInterceptor(new Dictionary<string, object>
                 {
-                    var recoverPenaltyLoanEvent = loan.RecoverPenalty(date, comment);
-                    recoverPenaltyLoanEvent.User = User.CurrentUser;
+                    {"Loan", loan},
+                    {"Event", recoverPenaltyLoanEvent},
+                    {"SqlTransaction", tx}
+                });
 
-                    _ePs.FireEvent(recoverPenaltyLoanEvent, loan, sqlTransaction);
-
-                    CallInterceptor(new Dictionary<string, object>
-                    {
-                        {"Loan", loan},
-                        {"Event", recoverPenaltyLoanEvent},
-                        {"SqlTransaction", sqlTransaction}
-                    });
-
-                    if (sqlTransaction != null)
-                        sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    if (sqlTransaction != null) sqlTransaction.Rollback();
-                    throw;
-                }
+                tx.Commit();
+            }
+            catch (Exception)
+            {
+                tx.Rollback();
+                throw;
             }
         }
 
-        public void StopInterest(Loan loan, DateTime date, string comment)
+        public void StopInterest(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
         {
-            using (SqlConnection conn = _loanManager.GetConnection())
-            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
             {
-                try
+                var stopInterestLoanEvent = loan.StopInterest(date, comment);
+                stopInterestLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(stopInterestLoanEvent, loan, tx);
+
+                CallInterceptor(new Dictionary<string, object>
                 {
-                    var stopInterestLoanEvent = loan.StopInterest(date, comment);
-                    stopInterestLoanEvent.User = User.CurrentUser;
+                    {"Loan", loan},
+                    {"Event", stopInterestLoanEvent},
+                    {"SqlTransaction", tx}
+                });
 
-                    _ePs.FireEvent(stopInterestLoanEvent, loan, sqlTransaction);
-
-                    CallInterceptor(new Dictionary<string, object>
-                    {
-                        {"Loan", loan},
-                        {"Event", stopInterestLoanEvent},
-                        {"SqlTransaction", sqlTransaction}
-                    });
-
-                    if (sqlTransaction != null)
-                        sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    if (sqlTransaction != null) sqlTransaction.Rollback();
-                    throw;
-                }
+                tx.Commit();
+            }
+            catch (Exception)
+            {
+                tx.Rollback();
+                throw;
             }
         }
 
-        public void RecoverInterest(Loan loan, DateTime date, string comment)
+        public void RecoverInterest(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
         {
-            using (SqlConnection conn = _loanManager.GetConnection())
-            using (SqlTransaction sqlTransaction = conn.BeginTransaction())
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
             {
-                try
+                var recoverInterestLoanEvent = loan.RecoverInterest(date, comment);
+                recoverInterestLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(recoverInterestLoanEvent, loan, tx);
+
+                CallInterceptor(new Dictionary<string, object>
                 {
-                    var recoverInterestLoanEvent = loan.RecoverInterest(date, comment);
-                    recoverInterestLoanEvent.User = User.CurrentUser;
+                    {"Loan", loan},
+                    {"Event", recoverInterestLoanEvent},
+                    {"SqlTransaction", tx}
+                });
 
-                    _ePs.FireEvent(recoverInterestLoanEvent, loan, sqlTransaction);
-
-                    CallInterceptor(new Dictionary<string, object>
-                    {
-                        {"Loan", loan},
-                        {"Event", recoverInterestLoanEvent},
-                        {"SqlTransaction", sqlTransaction}
-                    });
-
-                    if (sqlTransaction != null)
-                        sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    if (sqlTransaction != null) sqlTransaction.Rollback();
-                    throw;
-                }
+                tx.Commit();
+            }
+            catch (Exception)
+            {
+                tx.Rollback();
+                throw;
             }
         }
 
