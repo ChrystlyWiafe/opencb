@@ -101,6 +101,7 @@ namespace OpenCBS.Shared.Settings
             _defaultParamList.Add(OGeneralSettings.ID_NUMBER_IS_MANDATORY, 1);
             _defaultParamList.Add(OGeneralSettings.COPY_DATA_OF_CUSTOM_FIELD_FROM_PREVIOUS_LOAN, 0);
             _defaultParamList.Add(OGeneralSettings.USE_ACCRUALS_VALIDATION, 0);
+            _defaultParamList.Add(OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON, 0);
         }
 
         #region Internal stuff
@@ -409,6 +410,14 @@ namespace OpenCBS.Shared.Settings
         public bool UseAccrualsValidation
         {
             get { return GetSpecificParameter(OGeneralSettings.USE_ACCRUALS_VALIDATION).ToString() == "1"; }
+        }
+
+        public bool ShowSpecialFunctionsButton
+        {
+            get
+            {
+                return GetSpecificParameter(OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON).ToString() == "1";
+            }
         }
 
         public bool DoNotSkipNonWorkingDays

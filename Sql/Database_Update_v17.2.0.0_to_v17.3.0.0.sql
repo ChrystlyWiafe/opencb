@@ -114,3 +114,9 @@ GO
 IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_NonAccrualPenaltyEvents_ContractEvents]') AND parent_object_id = OBJECT_ID(N'[dbo].[NonAccrualPenaltyEvents]'))
     ALTER TABLE [dbo].[NonAccrualPenaltyEvents] NOCHECK CONSTRAINT [FK_NonAccrualPenaltyEvents_ContractEvents]
 GO
+
+IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'SHOW_SPECIAL_FUNCTIONS_BUTTON') IS NULL
+    BEGIN
+        INSERT INTO [GeneralParameters]([key], [value]) VALUES('SHOW_SPECIAL_FUNCTIONS_BUTTON', 0)
+    END
+GO

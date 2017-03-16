@@ -6103,6 +6103,11 @@ namespace OpenCBS.GUI.Clients
         private void InitActionsListViewButton()
         {
             if (_credit == null) return;
+            if (!ApplicationSettings.GetInstance(User.CurrentUser.Md5).ShowSpecialFunctionsButton)
+            {
+                btnActions.Visible = false;
+                return;
+            }
             var loanService = ServiceProvider.GetContractServices();
             var actions = new List<ListViewButtonModel>();
 
