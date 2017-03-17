@@ -2873,6 +2873,8 @@ namespace OpenCBS.Services
 
                 _ePs.FireEvent(stopPenaltyLoanEvent, loan, tx);
 
+                DeleteSubsequentEvents(loan, date, "LPAE", tx);
+
                 CallInterceptor(new Dictionary<string, object>
                 {
                     {"Loan", loan},
@@ -2883,11 +2885,12 @@ namespace OpenCBS.Services
                 if (transaction == null)
                     tx.Commit();
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 if (transaction == null)
                     tx.Rollback();
-                throw;
+
+                throw new Exception(error.Message);
             }
         }
 
@@ -2901,6 +2904,8 @@ namespace OpenCBS.Services
 
                 _ePs.FireEvent(recoverPenaltyLoanEvent, loan, tx);
 
+                DeleteSubsequentEvents(loan, date, "NAPE", tx);
+
                 CallInterceptor(new Dictionary<string, object>
                 {
                     {"Loan", loan},
@@ -2911,11 +2916,12 @@ namespace OpenCBS.Services
                 if (transaction == null)
                     tx.Commit();
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 if (transaction == null)
                     tx.Rollback();
-                throw;
+
+                throw new Exception(error.Message);
             }
         }
 
@@ -2929,6 +2935,8 @@ namespace OpenCBS.Services
 
                 _ePs.FireEvent(stopInterestLoanEvent, loan, tx);
 
+                DeleteSubsequentEvents(loan, date, "AILE", tx);
+
                 CallInterceptor(new Dictionary<string, object>
                 {
                     {"Loan", loan},
@@ -2939,11 +2947,12 @@ namespace OpenCBS.Services
                 if (transaction == null)
                     tx.Commit();
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 if (transaction == null)
                     tx.Rollback();
-                throw;
+
+                throw new Exception(error.Message);
             }
         }
 
@@ -2957,6 +2966,8 @@ namespace OpenCBS.Services
 
                 _ePs.FireEvent(recoverInterestLoanEvent, loan, tx);
 
+                DeleteSubsequentEvents(loan, date, "NAIE", tx);
+
                 CallInterceptor(new Dictionary<string, object>
                 {
                     {"Loan", loan},
@@ -2967,37 +2978,38 @@ namespace OpenCBS.Services
                 if (transaction == null)
                     tx.Commit();
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 if (transaction == null)
                     tx.Rollback();
-                throw;
+
+                throw new Exception(error.Message);
             }
         }
 
 
-        public void DeleteSubsequentEvents(Loan loan, DateTime date, string eventCode, IDbTransaction transaction = null)
+        private void DeleteSubsequentEvents(Loan loan, DateTime date, string eventCode, IDbTransaction transaction = null)
         {
             var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
             try
             {
-                var events =
-                    loan.Events.GetEvents()
-                        .Where(val => val.Deleted == false && val.Date > date && val.Code == eventCode);
+                var events = loan.Events.GetEvents().Where(val => val.Deleted == false && val.Date > date && val.Code == eventCode);
 
                 foreach (var @event in events)
                 {
                     _ePs.CancelFireEvent(@event, tx, loan, loan.Product.Currency.Id);
+                    @event.Deleted = true;
                 }
 
                 if (transaction == null)
                     tx.Commit();
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 if (transaction == null)
                     tx.Rollback();
-                throw;
+
+                throw new Exception(error.Message);
             }
         }
 
