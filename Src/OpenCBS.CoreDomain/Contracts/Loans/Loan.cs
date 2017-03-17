@@ -3057,7 +3057,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
         public StopPenaltyLoanEvent StopPenalty(DateTime onDate,string comment)
         {
-            var stopPenaltyLoanEvent = new StopPenaltyLoanEvent()
+            var stopPenaltyLoanEvent = new StopPenaltyLoanEvent
             {
                 Date = onDate,
                 ClientType = _clientType,
@@ -3071,7 +3071,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
         public RecoveryPenaltyLoanEvent RecoverPenalty(DateTime onDate,string comment)
         {
-            var recoverPenaltyLoanEvent = new RecoveryPenaltyLoanEvent()
+            var recoverPenaltyLoanEvent = new RecoveryPenaltyLoanEvent
             {
                 Date = onDate,
                 ClientType = _clientType,
@@ -3085,7 +3085,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
         public StopInterestLoanEvent StopInterest(DateTime onDate,string comment)
         {
-            var stopInterestLoanEvent = new StopInterestLoanEvent()
+            var stopInterestLoanEvent = new StopInterestLoanEvent
             {
                 Date = onDate,
                 ClientType = _clientType,
@@ -3099,7 +3099,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
         public RecoveryInterestLoanEvent RecoverInterest(DateTime onDate,string comment)
         {
-            var recoverInterestLoanEvent = new RecoveryInterestLoanEvent()
+            var recoverInterestLoanEvent = new RecoveryInterestLoanEvent
             {
                 Date = onDate,
                 ClientType = _clientType,
