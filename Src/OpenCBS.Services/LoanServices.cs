@@ -2880,11 +2880,13 @@ namespace OpenCBS.Services
                     {"SqlTransaction", tx}
                 });
 
-                tx.Commit();
+                if (transaction == null)
+                    tx.Commit();
             }
             catch (Exception)
             {
-                tx.Rollback();
+                if (transaction == null)
+                    tx.Rollback();
                 throw;
             }
         }
@@ -2906,11 +2908,13 @@ namespace OpenCBS.Services
                     {"SqlTransaction", tx}
                 });
 
-                tx.Commit();
+                if (transaction == null)
+                    tx.Commit();
             }
             catch (Exception)
             {
-                tx.Rollback();
+                if (transaction == null)
+                    tx.Rollback();
                 throw;
             }
         }
@@ -2932,11 +2936,13 @@ namespace OpenCBS.Services
                     {"SqlTransaction", tx}
                 });
 
-                tx.Commit();
+                if (transaction == null)
+                    tx.Commit();
             }
             catch (Exception)
             {
-                tx.Rollback();
+                if (transaction == null)
+                    tx.Rollback();
                 throw;
             }
         }
@@ -2958,11 +2964,39 @@ namespace OpenCBS.Services
                     {"SqlTransaction", tx}
                 });
 
-                tx.Commit();
+                if (transaction == null)
+                    tx.Commit();
             }
             catch (Exception)
             {
-                tx.Rollback();
+                if (transaction == null)
+                    tx.Rollback();
+                throw;
+            }
+        }
+
+
+        public void DeleteSubsequentEvents(Loan loan, DateTime date, string eventCode, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var events =
+                    loan.Events.GetEvents()
+                        .Where(val => val.Deleted == false && val.Date > date && val.Code == eventCode);
+
+                foreach (var @event in events)
+                {
+                    _ePs.CancelFireEvent(@event, tx, loan, loan.Product.Currency.Id);
+                }
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception)
+            {
+                if (transaction == null)
+                    tx.Rollback();
                 throw;
             }
         }
