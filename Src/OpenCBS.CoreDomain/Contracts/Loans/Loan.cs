@@ -2531,6 +2531,11 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             return Events.GetLastLoanNonDeletedEvent;
         }
 
+        public Event GetLastByDateNonDeletedEvent()
+        {
+            return Events.GetLastByDateNonDeletedEvent;
+        }
+
         public IEnumerable<Installment> NonRepaidInstallments
         {
             get

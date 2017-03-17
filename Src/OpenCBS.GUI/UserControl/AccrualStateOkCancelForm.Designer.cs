@@ -35,6 +35,8 @@
             this.btnOk = new System.Windows.Forms.Button();
             this._commentTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this._dtPickerEventDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tabButtons.SuspendLayout();
             this.SuspendLayout();
@@ -75,12 +77,26 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // _dtPickerEventDate
+            // 
+            resources.ApplyResources(this._dtPickerEventDate, "_dtPickerEventDate");
+            this._dtPickerEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this._dtPickerEventDate.Name = "_dtPickerEventDate";
+            this._dtPickerEventDate.Value = new System.DateTime(2017, 3, 22, 0, 0, 0, 0);
+            // 
             // AccrualStateOkCancelForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this._dtPickerEventDate);
             this.Controls.Add(this._commentTextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -103,5 +119,7 @@
         protected System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.TextBox _commentTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker _dtPickerEventDate;
     }
 }

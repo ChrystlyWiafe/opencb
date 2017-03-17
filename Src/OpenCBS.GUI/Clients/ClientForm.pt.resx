@@ -1013,6 +1013,9 @@
   <data name="btnPrintLoanRepayment.Text" xml:space="preserve">
     <value>Imprimir</value>
   </data>
+  <data name="btnActions.Text" xml:space="preserve">
+    <value>Função Especial</value>
+  </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Data</value>
   </data>

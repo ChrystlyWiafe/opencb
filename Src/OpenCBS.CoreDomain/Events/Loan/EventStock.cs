@@ -369,6 +369,28 @@ namespace OpenCBS.CoreDomain.Events
                 return null;
             }
         }
+
+        public Event GetLastByDateNonDeletedEvent
+        {
+            get
+            {
+                var eventList = _list.OrderBy(val => val.Date).ToList();
+                for (int i = eventList.Count - 1; i >= 0; i--)
+                {
+                    Event e = eventList[i];
+                    if (!e.Deleted && !(e is LoanEntryFeeEvent) && !(e is CreditInsuranceEvent) &&
+                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent)
+                        && !(e is BounceFeeAccrualEvent) && !(e is NonAccrualInterestEvent)
+                        && !(e is NonAccrualPenaltyEvent) && !(e is AccruedInterestEvent) 
+                        && !(e is LoanTransitionEvent) && !(e is LoanValidationEvent))
+                    {
+                        return e;
+                    }
+                }
+                return null;
+            }
+        }
+
         public Event GetLastSavingNonDeletedEvent
         {
             get

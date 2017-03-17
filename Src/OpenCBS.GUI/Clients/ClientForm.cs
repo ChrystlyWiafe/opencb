@@ -6113,13 +6113,23 @@ namespace OpenCBS.GUI.Clients
 
             actions.Add(new ListViewButtonModel
             {
-                Title = "Penalty Stop",
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "StopPenaltyOperationTitle.Text"),
                 EventHandler = (sender, e) =>
                 {
-                    var form = new AccrualStateOkCancelForm();
-                    if (form.ShowDialog() != DialogResult.OK) return;
-                    loanService.StopPenalty(_credit, TimeProvider.Now, form.Comment);
-                    InitializeTabPageLoanRepayment(_credit);
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateStopPenaltyLoanEvent.Text"));
+
+                        loanService.StopPenalty(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
                 },
                 Enabled = !_credit.IsStopPenaltyAccrualState 
                     && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty"))
@@ -6127,44 +6137,81 @@ namespace OpenCBS.GUI.Clients
 
             actions.Add(new ListViewButtonModel
             {
-                Title = "Penalty Recovery",
+
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "RecoverPenaltyOperationTitle.Text"),
                 EventHandler = (sender, e) =>
                 {
-                    var form = new AccrualStateOkCancelForm();
-                    if (form.ShowDialog() != DialogResult.OK) return;
-                    loanService.RecoverPenalty(_credit, TimeProvider.Now, form.Comment);
-                    InitializeTabPageLoanRepayment(_credit);
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateRecoverPenaltyLoanEvent.Text"));
+
+                        loanService.RecoverPenalty(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
                 },
                 Enabled = _credit.IsStopPenaltyAccrualState
-                             && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverPenalty"))
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices",
+                              "RecoverPenalty"))
             });
 
             actions.Add(new ListViewButtonModel
             {
-                Title = "Interest Stop",
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "StopInterestOperationTitle.Text"),
                 EventHandler = (sender, e) =>
                 {
-                    var form = new AccrualStateOkCancelForm();
-                    if (form.ShowDialog() != DialogResult.OK) return;
-                    loanService.StopInterest(_credit, TimeProvider.Now, form.Comment);
-                    InitializeTabPageLoanRepayment(_credit);
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateStopInterestLoanEvent.Text"));
+
+                        loanService.StopInterest(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
                 },
                 Enabled = !_credit.IsStopInterestAccrualState
-                 && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
             });
 
             actions.Add(new ListViewButtonModel
             {
-                Title = "Interest Recovery",
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "RecoverInterestOperationTitle.Text"),
                 EventHandler = (sender, e) =>
                 {
-                    var form = new AccrualStateOkCancelForm();
-                    if (form.ShowDialog() != DialogResult.OK) return;
-                    loanService.RecoverInterest(_credit, TimeProvider.Now, form.Comment);
-                    InitializeTabPageLoanRepayment(_credit);
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateRecoverInterestLoanEvent.Text"));
+
+                        loanService.RecoverInterest(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
+
                 },
                 Enabled = _credit.IsStopInterestAccrualState
-                             && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverInterest"))
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices",
+                              "RecoverInterest"))
             });
 
             var initializers = _applicationController.GetAllInstances<IActionsButtonInitializer>();
