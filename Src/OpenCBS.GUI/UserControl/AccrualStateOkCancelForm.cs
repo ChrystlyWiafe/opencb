@@ -9,7 +9,7 @@ namespace OpenCBS.GUI.UserControl
         public AccrualStateOkCancelForm()
         {
             InitializeComponent();
-            _dtPickerEventDate.Value = TimeProvider.Today;
+            _dtPickerEventDate.Value = TimeProvider.Now;
         }
 
         public string Comment
@@ -19,7 +19,12 @@ namespace OpenCBS.GUI.UserControl
 
         public DateTime EventDate
         {
-            get { return _dtPickerEventDate.Value.Date; }
+            get
+            {
+                return
+                    _dtPickerEventDate.Value.AddSeconds(-_dtPickerEventDate.Value.Second)
+                        .AddMilliseconds(-_dtPickerEventDate.Value.Millisecond);
+            }
         }
 
     }

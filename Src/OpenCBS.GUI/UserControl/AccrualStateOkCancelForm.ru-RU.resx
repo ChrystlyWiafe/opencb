@@ -125,7 +125,7 @@
     <value>Комментарий</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 17</value>
+    <value>151, 17</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
