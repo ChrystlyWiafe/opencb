@@ -78,6 +78,7 @@ namespace OpenCBS.Enums
         public static readonly string ID_NUMBER_IS_MANDATORY = "ID_NUMBER_IS_MANDATORY";
         public static readonly string COPY_DATA_OF_CUSTOM_FIELD_FROM_PREVIOUS_LOAN = "COPY_DATA_OF_CUSTOM_FIELD_FROM_PREVIOUS_LOAN";
         public static readonly string USE_ACCRUALS_VALIDATION = "USE_ACCRUALS_VALIDATION";
+        public static readonly string SHOW_SPECIAL_FUNCTIONS_BUTTON = "SHOW_SPECIAL_FUNCTIONS_BUTTON";
     }
 }
 
