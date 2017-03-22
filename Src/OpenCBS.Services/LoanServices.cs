@@ -2986,8 +2986,7 @@ namespace OpenCBS.Services
                 throw new Exception(error.Message);
             }
         }
-
-
+        
         private void DeleteSubsequentEvents(Loan loan, DateTime date, string eventCode, IDbTransaction transaction = null)
         {
             var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
