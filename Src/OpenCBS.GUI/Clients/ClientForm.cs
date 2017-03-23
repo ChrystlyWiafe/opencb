@@ -1968,7 +1968,7 @@ namespace OpenCBS.GUI.Clients
             }
             SetAddTrancheButton(pCredit);
             buttonLoanRepaymentRepay.Enabled = !pCredit.Closed;
-            btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
+            btnActions.Enabled = btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
             InitLoanRepaymentButtons();
             InitActionsListViewButton();
         }
@@ -4186,6 +4186,7 @@ namespace OpenCBS.GUI.Clients
                 btnWriteOff.Enabled = false;
                 buttonManualSchedule.Enabled = false;
                 buttonAddTranche.Enabled = false;
+                btnActions.Enabled = false;
             }
             DisplaySavings(_client.Savings);
             //            if (MdiParent != null)
@@ -4283,6 +4284,7 @@ namespace OpenCBS.GUI.Clients
                         buttonReschedule.Enabled = false;
                         btnWriteOff.Enabled = false;
                         buttonManualSchedule.Enabled = false;
+                        btnActions.Enabled = false;
                     }
                     LoadLoanDetailsExtensions();
                     //                    if (MdiParent != null)
@@ -6756,6 +6758,7 @@ namespace OpenCBS.GUI.Clients
                     buttonLoanReschedule.Enabled = false;
                     buttonReschedule.Enabled = false;
                     btnWriteOff.Enabled = false;
+                    btnActions.Enabled = false;
                 }
             }
 
@@ -7269,6 +7272,7 @@ namespace OpenCBS.GUI.Clients
                 WriteOff(form.OptionId, form.Comment);
                 buttonManualSchedule.Enabled = false;
                 buttonLoanReschedule.Enabled = false;
+                btnActions.Enabled = false;
             }
             catch (Exception ex)
             {
