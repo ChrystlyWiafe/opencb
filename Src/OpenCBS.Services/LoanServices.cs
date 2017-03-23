@@ -2083,7 +2083,7 @@ namespace OpenCBS.Services
 
                         contract.GivenTranches.Remove(trancheEventToDelete);
 
-                        if (contract.AllInstallmentsRepaid)
+                        if (contract.AllInstallmentsRepaid && contract.CalculateDailyAccrualUnpaidPenalties(TimeProvider.Now) <= 0)
                         {
                             contract.ContractStatus = OContractStatus.Closed;
                             contract.Closed = true;
@@ -2134,7 +2134,8 @@ namespace OpenCBS.Services
                         }
                     }
 
-                    if (!contract.WrittenOff && !contract.AllInstallmentsRepaid)
+                    if ((!contract.WrittenOff && !contract.AllInstallmentsRepaid) ||
+                        contract.CalculateDailyAccrualUnpaidPenalties(TimeProvider.Now) > 0)
                     {
                         contract.Closed = false;
 
@@ -2143,8 +2144,8 @@ namespace OpenCBS.Services
                         else
                         {
                             contract.ContractStatus = evnt is LoanValidationEvent
-                                                          ? OContractStatus.Pending
-                                                          : OContractStatus.Active;
+                                ? OContractStatus.Pending
+                                : OContractStatus.Active;
                         }
 
                     }
@@ -3204,7 +3205,8 @@ namespace OpenCBS.Services
                         loan.NbOfInstallments = loan.InstallmentList.Count;
                         _loanManager.UpdateLoan(loan, sqlTransaction);
                     }
-                    if ( newInstallments.All(installment => installment.IsRepaid))
+                    if ( newInstallments.All(installment => installment.IsRepaid) &&
+                        loan.CalculateDailyAccrualUnpaidPenalties(TimeProvider.Now) <= 0)
                     {
                         _ePs.FireEvent(loan.GetCloseEvent(repayEvent.Date), loan, sqlTransaction);
                         loan.Closed = true;

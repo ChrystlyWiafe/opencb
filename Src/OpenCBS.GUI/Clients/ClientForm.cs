@@ -4165,7 +4165,8 @@ namespace OpenCBS.GUI.Clients
                 DisplayContracts(_project.Credits);
             }
 
-            if (_credit.InstallmentList[_credit.InstallmentList.Count - 1].IsRepaid)
+            if (_credit.InstallmentList[_credit.InstallmentList.Count - 1].IsRepaid
+                && _credit.CalculateDailyAccrualUnpaidPenalties(TimeProvider.Now) <= 0)
             {
                 buttonLoanRepaymentRepay.Enabled = false;
                 buttonLoanReschedule.Enabled = false;

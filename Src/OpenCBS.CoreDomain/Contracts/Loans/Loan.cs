@@ -689,7 +689,12 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                                     .Aggregate<RepaymentEvent, OCurrency>(0,
                                                                           (current, e) => current + e.Penalties)
                                     .Value;
-            var penalty = accruedPenalty - paidPenalty;
+            var waivedPenalty = Events.OfType<PenaltyWriteOffEvent>().ToList()
+                                    .Where(e => !e.Deleted && e.Date <= date)
+                                    .Aggregate<PenaltyWriteOffEvent, OCurrency>(0,
+                                                                          (current, e) => current + e.Amount)
+                                    .Value;
+            var penalty = accruedPenalty - paidPenalty - waivedPenalty;
             penalty = UseCents ? Math.Round(penalty, 2) : Math.Round(penalty);
             return penalty < 0 ? 0 : penalty;
         }
