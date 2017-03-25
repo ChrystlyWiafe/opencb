@@ -86,11 +86,6 @@ namespace OpenCBS.GUI.UserControl
             set { _corporate = value; }
         }
 
-        private void InitializeSubscriptions()
-        {
-            _applicationController.Subscribe<SearchClientNotification>(this,OnSearchNotification);
-        }
-
         private void InitializeCorporate()
         {
             dateTimePickerDateOfCreate.Value = TimeProvider.Today;
@@ -308,7 +303,6 @@ namespace OpenCBS.GUI.UserControl
             Client = _corporate;
             InitDocuments();
             LoadExtensions();
-            InitializeSubscriptions();
         }
 
         private void LoadExtensions()
@@ -394,21 +388,18 @@ namespace OpenCBS.GUI.UserControl
 
         private void BtnSelectContactClick(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
-        }
-
-        private void OnSearchNotification(SearchClientNotification searchClientNotification)
-        {
-            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
+            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+                                    SearchClientForm.GetInstance(OClientTypes.Person, true,_applicationController))
             {
+                searchClientForm.ShowForm();
                 var contact = new Contact();
                 try
                 {
-                    if (searchClientNotification.Client != null)
-                        contact.Tiers = searchClientNotification.Client;
+                    if (searchClientForm.Client != null)
+                        contact.Tiers = searchClientForm.Client;
 
                     if (!ServicesProvider.GetInstance().GetClientServices().ClientCanBeAddToCorporate(
-                        searchClientNotification.Client, Corporate)) return;
+                        searchClientForm.Client, Corporate)) return;
 
                     if (contact.Tiers != null)
                         Corporate.Contacts.Add(contact);

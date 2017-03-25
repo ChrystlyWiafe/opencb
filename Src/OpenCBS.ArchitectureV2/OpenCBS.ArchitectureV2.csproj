@@ -247,6 +247,7 @@
     <Compile Include="EventInterceptor.cs" />
     <Compile Include="Event\DisbursementNotification.cs" />
     <Compile Include="Interface\IAfterLoginHook.cs" />
+    <Compile Include="Interface\ISearchClientForm.cs" />
     <Compile Include="Interface\IStartupProcess.cs" />
     <Compile Include="Command\ShowSearchCommand.cs" />
     <Compile Include="Command\EditVillageBankCommand.cs" />

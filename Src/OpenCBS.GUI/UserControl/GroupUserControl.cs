@@ -1322,54 +1322,50 @@ namespace OpenCBS.GUI.UserControl
 
         private void buttonSelectAMember_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
+            SelectAMember();
+            if (ButtonBadClientClick != null)
+                ButtonBadClientClick(this, e);
         }
 
-        private void OnSearchNotification(SearchClientNotification searchClientNotification)
+        private void SelectAMember()
         {
-            if (GroupHasActiveContracts() && searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
+            if (GroupHasActiveContracts())
             {
-                try
+                using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+                                    SearchClientForm.GetInstance(OClientTypes.Person, true, _applicationController))
                 {
-                    if (group.Id != 0)
-                        ServicesProvider.GetInstance().GetClientServices().CheckMaxNumberOfMembers(group);
-                    if (
-                        ServicesProvider.GetInstance()
-                            .GetClientServices()
-                            .ClientIsAPerson(searchClientNotification.Client))
+                    searchClientForm.ShowForm();
+                    try
                     {
-                        Member pers = new Member
+                        if (group.Id != 0)
+                            ServicesProvider.GetInstance().GetClientServices().CheckMaxNumberOfMembers(group);
+                        if (ServicesProvider.GetInstance().GetClientServices().ClientIsAPerson(searchClientForm.Client))
                         {
-                            Tiers = searchClientNotification.Client,
-                            LoanShareAmount = 0,
-                            CurrentlyIn = true,
-                            IsLeader = false,
-                            JoinedDate = TimeProvider.Today
-                        };
+                            Member pers = new Member
+                            {
+                                Tiers = searchClientForm.Client,
+                                LoanShareAmount = 0,
+                                CurrentlyIn = true,
+                                IsLeader = false,
+                                JoinedDate = TimeProvider.Today
+                            };
 
-                        if (
-                            ServicesProvider.GetInstance()
-                                .GetClientServices()
-                                .ClientCanBeAddToAGroup(searchClientNotification.Client, group))
-                        {
-                            group.AddMember(pers);
-                            DisplayMembers();
-                            if (group.Id != 0)
-                                ServicesProvider.GetInstance()
-                                    .GetContractServices()
-                                    .DeleteLoanShareAmountWhereNotDisbursed(group.Id);
-                            if (MembersChanged != null) MembersChanged(this, null);
-                            if (group.Id != 0)
-                                buttonSave_Click(this, null);
-
+                            if (ServicesProvider.GetInstance().GetClientServices().ClientCanBeAddToAGroup(searchClientForm.Client, group))
+                            {
+                                group.AddMember(pers);
+                                DisplayMembers();
+                                if (group.Id != 0)
+                                    ServicesProvider.GetInstance().GetContractServices().DeleteLoanShareAmountWhereNotDisbursed(group.Id);
+                                if (MembersChanged != null) MembersChanged(this, null);
+                                if (group.Id != 0)
+                                    buttonSave_Click(this, null);
+                            }
                         }
                     }
-                    if (ButtonBadClientClick != null)
-                        ButtonBadClientClick(this, new EventArgs());
-                }
-                catch (Exception ex)
-                {
-                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
                 }
             }
         }
@@ -1416,17 +1412,17 @@ namespace OpenCBS.GUI.UserControl
         }
         #endregion
 
-        private void InitializeSubscriptions()
-        {
-            _applicationController.Subscribe<SearchClientNotification>(this,OnSearchNotification);
-        }
+        //private void InitializeSubscriptions()
+        //{
+        //    _applicationController.Subscribe<SearchClientNotification>(this,OnSearchNotification);
+        //}
 
         private void GroupUserControl_Load(object sender, EventArgs e)
         {
             Tabs = tabControlGroupInfo;
             Client = group;
             InitDocuments();
-            InitializeSubscriptions();
+            //InitializeSubscriptions();
             groupBoxFirstAddress.Size = new Size(tabPageBusinessAddress.Width / 2, tabPageBusinessAddress.Height);
 
              

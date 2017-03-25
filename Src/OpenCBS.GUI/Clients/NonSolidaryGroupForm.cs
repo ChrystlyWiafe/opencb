@@ -322,51 +322,42 @@ namespace OpenCBS.GUI.Clients
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
-        }
+            ISearchClientForm frm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+                                    SearchClientForm.GetInstance(OClientTypes.Person, true,_applicationController);
+            
+            frm.ShowForm();
+            if (DialogResult.OK != frm.DialogResult) return;
 
-        private void OnSearchNotification(SearchClientNotification searchClientNotification)
-        {
-            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
+            try
             {
-                try
+                var clientServices = ServicesProvider.GetInstance().GetClientServices();
+                var client = frm.Client;
+                if (clientServices.ClientIsAPerson(client))
                 {
-                    var clientServices = ServicesProvider.GetInstance().GetClientServices();
-                    var client = searchClientNotification.Client;
-                    if (clientServices.ClientIsAPerson(client))
+                    var personId = client.Id;
+                    clientServices.CheckPersonGroupCount(personId);
+                    var member = new VillageMember { Tiers = client, JoinedDate = TimeProvider.Now, CurrentlyIn = true, IsLeader = false, IsSaved = false };
+                    member.ActiveLoans = ServicesProvider.GetInstance().GetContractServices().
+                        FindActiveContracts(personId);
+
+                    List<ISavingsContract> savingsContracts =
+                        ServicesProvider.GetInstance().GetSavingServices().GetSavingsByClientId(member.Tiers.Id);
+
+                    foreach (ISavingsContract contract in savingsContracts)
                     {
-                        var personId = client.Id;
-                        clientServices.CheckPersonGroupCount(personId);
-                        var member = new VillageMember
-                        {
-                            Tiers = client,
-                            JoinedDate = TimeProvider.Now,
-                            CurrentlyIn = true,
-                            IsLeader = false,
-                            IsSaved = false
-                        };
-                        member.ActiveLoans = ServicesProvider.GetInstance().GetContractServices().
-                            FindActiveContracts(personId);
-
-                        List<ISavingsContract> savingsContracts =
-                            ServicesProvider.GetInstance().GetSavingServices().GetSavingsByClientId(member.Tiers.Id);
-
-                        foreach (ISavingsContract contract in savingsContracts)
-                        {
-                            member.Tiers.Savings.Add(contract);
-                        }
-
-                        clientServices.AddExistingMember(_village, member);
-                        membersSaved = false;
-                        DisplayMembers();
-                        DisplayLoans();
-                        DisplaySavings();
+                        member.Tiers.Savings.Add(contract);
                     }
+
+                    clientServices.AddExistingMember(_village, member);
+                    membersSaved = false;
+                    DisplayMembers();
+                    DisplayLoans();
+                    DisplaySavings();
                 }
-                catch (Exception ex)
-                {
-                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
-                }
+            }
+            catch (Exception ex)
+            {
+                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
             }
         }
 
@@ -947,7 +938,6 @@ namespace OpenCBS.GUI.Clients
         private void InitializeSubscriptions()
         {
             _applicationController.Subscribe<FastRepaymentDoneMessage>(this, OnFastRepaymentDone);
-            _applicationController.Subscribe<SearchClientNotification>(this, OnSearchNotification);
         }
 
         private void LoadExtensions()

@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
@@ -197,15 +198,9 @@ namespace OpenCBS.GUI.Contracts
             propertyGrid.Refresh();
         }
 
-        private void InitializeSubscriptions()
-        {
-            _applicationController.Subscribe<SearchClientNotification>(this,OnSearchNotification);
-        }
-
         private void ContractCollateralForm_Load(object sender, EventArgs e)
         {
             propertyGrid.SelectedObject = myProperties;
-            InitializeSubscriptions();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -306,38 +301,42 @@ namespace OpenCBS.GUI.Contracts
             }
         }
 
-        private void OnSearchNotification(SearchClientNotification searchClientNotification)
+        private Person SelectOwner()
         {
-            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Collateral)
+            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+                                    SearchClientForm.GetInstance(OClientTypes.Person, true, _applicationController))
             {
+                searchClientForm.ShowForm();
+
                 try
                 {
-                    Person client;
-                    if (ServicesProvider.GetInstance()
-                        .GetClientServices()
-                        .ClientIsAPerson(searchClientNotification.Client)
-                        && !searchClientNotification.Client.Active)
-                        client = (Person) searchClientNotification.Client;
+                    if (ServicesProvider.GetInstance().GetClientServices().ClientIsAPerson(searchClientForm.Client)
+                        && !searchClientForm.Client.Active)
+                        return (Person)searchClientForm.Client;
                     else
-                        client = null;
+                        return null;
 
-                    if (client != null)
-                    {
-                        myProperties.SetPropertyValueByName(propertyGrid.SelectedGridItem.Label, client);
-                        propertyGrid.Refresh();
-                    }
+                    //else
+                    //  textBoxName.Text = String.Empty;
 
                 }
                 catch (Exception ex)
                 {
                     new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    return null;
                 }
             }
         }
 
         private void buttonSelectOwner_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Collateral));
+            IClient owner = SelectOwner();
+            if (owner != null)
+            {
+                //textBoxOwner.Text = ((Person)owner).Name;
+                myProperties.SetPropertyValueByName(propertyGrid.SelectedGridItem.Label, owner);
+                propertyGrid.Refresh();
+            }
         }
 
         private void propertyGrid_SelectedGridItemChanged(object sender, SelectedGridItemChangedEventArgs e)

@@ -25,6 +25,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.CoreDomain.Clients;
 using OpenCBS.CoreDomain.SearchResult;
 using OpenCBS.GUI.UserControl;
@@ -39,7 +40,7 @@ namespace OpenCBS.GUI
     using OpenCBS.CoreDomain;
     using OpenCBS.CoreDomain.Contracts.Loans;
 
-    public class SearchClientForm : SweetBaseForm
+    public class SearchClientForm : SweetBaseForm,ISearchClientForm
     {
         private GroupBox groupBoxSearchParameters;
         private Button buttonCancel;
@@ -57,7 +58,6 @@ namespace OpenCBS.GUI
         private Control _mdiForm;
         private bool _closeAfterSelect;
         private string _query;
-        private OSearchClientVariants _searchClientVariant;
         private static SearchClientForm _theUniqueInstance1;
         private static SearchClientForm _theUniqueInstance3;
         private TableLayoutPanel tableLayoutPanel1;
@@ -85,6 +85,7 @@ namespace OpenCBS.GUI
         private ImageList imageListSort;
         private ListViewSorter Sorter;
         private readonly IApplicationController _applicationController;
+        private readonly ITranslationService _translationService;
         public bool ViewSearchCorporate
         {
             get { return _viewSearchCorporate; }
@@ -94,6 +95,11 @@ namespace OpenCBS.GUI
         public IClient Client
         {
             get { return _client; }
+        }
+
+        public bool IsDefaultForm
+        {
+            get { return true; }
         }
 
         private void Initialization(Control pMDIForm, bool pCloseAfterSelect)
@@ -136,13 +142,6 @@ namespace OpenCBS.GUI
             }
         }
 
-        public static SearchClientForm GetInstance(Control pMDIForm, IApplicationController applicationController, OSearchClientVariants searchClientVariant)
-        {
-            if (_theUniqueInstance1 == null)
-                return _theUniqueInstance1 = new SearchClientForm(pMDIForm, applicationController, searchClientVariant);
-            
-            return _theUniqueInstance1;
-        }
 
         public static SearchClientForm GetInstance(Control pMDIForm, IApplicationController applicationController)
         {
@@ -152,17 +151,12 @@ namespace OpenCBS.GUI
             return _theUniqueInstance1;
         }
 
-        public static SearchClientForm GetInstance(OClientTypes pTiersEnum, bool includeNotactiveOnly, IApplicationController applicatinController, OSearchClientVariants searchClientVariants)
+        public static SearchClientForm GetInstance(OClientTypes pTiersEnum, bool includeNotactiveOnly, IApplicationController applicationController)
         {
             if (_theUniqueInstance3 == null)
-                return _theUniqueInstance3 = new SearchClientForm(pTiersEnum, includeNotactiveOnly, applicatinController, searchClientVariants);
-            
-            return _theUniqueInstance3;
-        }
+                return _theUniqueInstance3 = new SearchClientForm(pTiersEnum, includeNotactiveOnly, applicationController);
 
-        public static SearchClientForm GetInstanceForVillage(IApplicationController applicationController, OSearchClientVariants searchClientVariants)
-        {
-            return new SearchClientForm(OClientTypes.Person, true, applicationController, searchClientVariants);
+            return _theUniqueInstance3;
         }
 
         private int test;
@@ -176,15 +170,19 @@ namespace OpenCBS.GUI
             RunInitializers();
         }
 
-        private SearchClientForm(Control pMDIForm, IApplicationController applicationController,
-            OSearchClientVariants searchClientVariants) : this(pMDIForm, applicationController)
+        public SearchClientForm(IApplicationController applicationController, ITranslationService translationService)
         {
-            _searchClientVariant = searchClientVariants;
+            _applicationController = applicationController;
+            _translationService = translationService;
         }
 
-        protected SearchClientForm(OClientTypes pTiersEnum, bool inludeOnlyNotactive, IApplicationController applicationController, OSearchClientVariants searchClientVariants)
+        public SearchClientForm(IApplicationController applicationController)
         {
-            _searchClientVariant = searchClientVariants;
+            _applicationController = applicationController;
+        }
+
+        protected SearchClientForm(OClientTypes pTiersEnum, bool inludeOnlyNotactive, IApplicationController applicationController)
+        {
             _clientType = pTiersEnum;
             InitializeComponent();
             Initialization(null, true);
@@ -193,6 +191,31 @@ namespace OpenCBS.GUI
             _applicationController = applicationController;
             RunInitializers();
         }
+
+        public void Initialize(Control pMdiForm)
+        {
+            InitializeComponent();
+            Initialization(pMdiForm, false);
+            test = 1;
+            RunInitializers();
+        }
+
+        public void Initialize(OClientTypes pTiersEnum, bool includeNotactiveOnly)
+        {
+            _clientType = pTiersEnum;
+            InitializeComponent();
+            Initialization(null, true);
+            WatchCorporate(pTiersEnum, includeNotactiveOnly);
+            test = 2;
+            RunInitializers();
+        }
+
+        public new void ShowForm()
+        {
+            this.ShowDialog();
+        }
+
+        public DialogResult DialogResult { get; set; }
 
         private void RunInitializers()
         {
@@ -644,7 +667,7 @@ namespace OpenCBS.GUI
 
             if (_closeAfterSelect)
             {
-                DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
                 Close();
             }
         }
@@ -681,7 +704,6 @@ namespace OpenCBS.GUI
                 else
                 {
                     DialogResult = DialogResult.OK;
-                    _applicationController.Publish(new SearchClientNotification(this,_client,_searchClientVariant));
                 }
                 Close();
             }

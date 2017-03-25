@@ -21,6 +21,7 @@
 
 using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
@@ -273,14 +274,11 @@ namespace OpenCBS.GUI
 
         private void SelectAGuarantor()
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, false, OSearchClientVariants.Guarantor));
-        }
-
-        private void OnSearchNotification(SearchClientNotification searchClientNotification)
-        {
-            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Guarantor)
+            using (var searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+                                    SearchClientForm.GetInstance(OClientTypes.Person, false,_applicationController))
             {
-                _guarantor.Tiers = searchClientNotification.Client;
+                searchClientForm.ShowForm();
+                _guarantor.Tiers = searchClientForm.Client;
 
                 try
                 {
@@ -298,7 +296,7 @@ namespace OpenCBS.GUI
                 }
             }
         }
-        
+
         private void buttonSelectAMember_Click(object sender, EventArgs e)
         {
             SelectAGuarantor();
@@ -369,14 +367,8 @@ namespace OpenCBS.GUI
             _guarantor.Description = textBoxDesc.Text;
         }
 
-        private void InitializeSubscriptions()
-        {
-            _applicationController.Subscribe<SearchClientNotification>(this, OnSearchNotification);
-        }
-
         private void AddGuarantorForm_Load(object sender, EventArgs e)
         {
-            InitializeSubscriptions();
         }
     }
 }
