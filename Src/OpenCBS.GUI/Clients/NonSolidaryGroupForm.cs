@@ -322,8 +322,9 @@ namespace OpenCBS.GUI.Clients
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            ISearchClientForm frm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault() ??
+            ISearchClientForm frm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
                                     SearchClientForm.GetInstance(OClientTypes.Person, true,_applicationController);
+            frm.Initialize(OClientTypes.Person, true);
             
             frm.ShowForm();
             if (DialogResult.OK != frm.DialogResult) return;

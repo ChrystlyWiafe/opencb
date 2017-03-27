@@ -6,15 +6,13 @@ namespace OpenCBS.ArchitectureV2.CommandData
 {
     public class SearchClientNotification:ITinyMessage
     {
-        public SearchClientNotification(object sender, IClient client, OSearchClientVariants searchClientVariant)
+        public SearchClientNotification(object sender, IClient client)
         {
             Sender = sender;
             Client = client;
-            SearchClientVariant = searchClientVariant;
         }
 
         public IClient Client { get; set; }
         public object Sender { get; set; }
-        public OSearchClientVariants SearchClientVariant { get; set; }
     }
 }

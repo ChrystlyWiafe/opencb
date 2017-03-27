@@ -388,15 +388,17 @@ namespace OpenCBS.GUI.UserControl
 
         private void BtnSelectContactClick(object sender, EventArgs e)
         {
-            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault() ??
+            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
                                     SearchClientForm.GetInstance(OClientTypes.Person, true,_applicationController))
             {
+                searchClientForm.Initialize(OClientTypes.Person, true);
                 searchClientForm.ShowForm();
                 var contact = new Contact();
                 try
                 {
                     if (searchClientForm.Client != null)
                         contact.Tiers = searchClientForm.Client;
+                    else return;
 
                     if (!ServicesProvider.GetInstance().GetClientServices().ClientCanBeAddToCorporate(
                         searchClientForm.Client, Corporate)) return;

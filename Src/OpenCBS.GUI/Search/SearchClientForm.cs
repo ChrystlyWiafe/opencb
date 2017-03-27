@@ -194,20 +194,10 @@ namespace OpenCBS.GUI
 
         public void Initialize(Control pMdiForm)
         {
-            InitializeComponent();
-            Initialization(pMdiForm, false);
-            test = 1;
-            RunInitializers();
         }
 
         public void Initialize(OClientTypes pTiersEnum, bool includeNotactiveOnly)
         {
-            _clientType = pTiersEnum;
-            InitializeComponent();
-            Initialization(null, true);
-            WatchCorporate(pTiersEnum, includeNotactiveOnly);
-            test = 2;
-            RunInitializers();
         }
 
         public new void ShowForm()
