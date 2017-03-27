@@ -2178,7 +2178,7 @@ namespace OpenCBS.GUI.Clients
                     Tag = entryFee
                 };
 
-                OCurrency feeValue = entryFee.FeeValue;
+                OCurrency feeValue = entryFee.FeeValue < entryFee.ProductEntryFee.Min ? entryFee.ProductEntryFee.Min : entryFee.FeeValue;
                 if (entryFee.ProductEntryFee.IsRate)
                     item.SubItems.Add(feeValue.GetFormatedValue(true));
                 else
@@ -2435,10 +2435,10 @@ namespace OpenCBS.GUI.Clients
 
             foreach (User user in _subordinates)
             {
-                if (user.UserRole.RoleName == "LOF" && !user.IsDeleted && !user.UserRole.IsDeleted)
+                //if (user.UserRole.RoleName == "LOF" && !user.IsDeleted && !user.UserRole.IsDeleted)
                     _loanOfficerComboBox.Items.Add(user);
             }
-            // set favoutite loan officer
+
             if (_credit.LoanOfficer != null)
             {
                 _loanOfficerComboBox.Text = _credit.LoanOfficer.Name;
@@ -3579,7 +3579,7 @@ namespace OpenCBS.GUI.Clients
             {
                 if (item.Tag is LoanEntryFee)
                 {
-                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                    ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                     credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                 }
             }
@@ -3663,7 +3663,7 @@ namespace OpenCBS.GUI.Clients
                 {
                     if (item.Tag is LoanEntryFee)
                     {
-                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[3].Text);
+                        ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
                         _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                     }
                 }
@@ -7221,8 +7221,11 @@ namespace OpenCBS.GUI.Clients
                                 item.SubItems[1].Text = (100m * feeAmount / _credit.Amount).GetFormatedValue(_credit.Product.Currency.UseCents);
                                 e.DisplayText = item.SubItems[1].Text;
                             }
-                            item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            else
+                                item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
+
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            ((LoanEntryFee)item.Tag).FeeValue = Convert.ToDecimal(item.SubItems[1].Text);
                         }
                         else
                         {
@@ -7235,7 +7238,9 @@ namespace OpenCBS.GUI.Clients
                                 item.SubItems[1].Text = (100m * feeAmount / _credit.Amount).GetFormatedValue(_credit.Product.Currency.UseCents);
                                 e.DisplayText = item.SubItems[1].Text;
                             }
-                            item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            else
+                                item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                         }
                     }
@@ -7306,6 +7311,37 @@ namespace OpenCBS.GUI.Clients
                 if (_credit.LoanEntryFeesList != null)
                 {
                     _credit.LoanEntryFeesList.Clear();
+                    
+                    foreach (ListViewItem item in lvEntryFees.Items)
+                    {
+                        if (item.Tag is LoanEntryFee)
+                        {
+                            var entryFee = (LoanEntryFee)item.Tag;
+                            OCurrency feeAmount = entryFee.FeeValue < entryFee.ProductEntryFee.Min ? entryFee.ProductEntryFee.Min : entryFee.FeeValue;
+
+                            if (entryFee.ProductEntryFee.IsRate)
+                            {
+                                feeAmount = amount * feeAmount / 100;
+
+                                if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
+                                {
+                                    feeAmount = entryFee.ProductEntryFee.MaxSum;                                    
+                                }
+                                entryFee.FeeValue = feeAmount.Value * 100 / nudLoanAmount.Value;
+                            }
+                            else
+                            {
+                                if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
+                                {
+                                    feeAmount = entryFee.ProductEntryFee.MaxSum;
+                                }
+                                entryFee.FeeValue = feeAmount.Value;
+                            }
+                            OCurrency rateValue = entryFee.FeeValue;
+                            item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                        }
+                    }
 
                     foreach (ListViewItem item in lvEntryFees.Items)
                     {
@@ -7315,37 +7351,6 @@ namespace OpenCBS.GUI.Clients
                         }
                         else if (item.Tag.Equals("TotalFees"))
                             ShowTotalFeesInListViewByNudLoanAmount(item);
-                    }
-
-                    foreach (ListViewItem item in lvEntryFees.Items)
-                    {
-                        if (item.Tag is LoanEntryFee)
-                        {
-                            var entryFee = (LoanEntryFee)item.Tag;
-                            OCurrency feeAmount = entryFee.FeeValue;
-
-                            if (entryFee.ProductEntryFee.IsRate)
-                            {
-                                feeAmount = amount * entryFee.FeeValue / 100;
-
-                                if (feeAmount > entryFee.ProductEntryFee.MaxSum)
-                                {
-                                    feeAmount = entryFee.ProductEntryFee.MaxSum;
-                                    entryFee.FeeValue = feeAmount.Value * 100 / nudLoanAmount.Value;
-                                }
-                            }
-                            else
-                            {
-                                if (feeAmount > entryFee.ProductEntryFee.MaxSum)
-                                {
-                                    feeAmount = entryFee.ProductEntryFee.MaxSum;
-                                    entryFee.FeeValue = feeAmount.Value * 100 / nudLoanAmount.Value;
-                                }
-                            }
-                            OCurrency rateValue = entryFee.FeeValue;
-                            item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
-                            item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
-                        }
                     }
                 }
             }

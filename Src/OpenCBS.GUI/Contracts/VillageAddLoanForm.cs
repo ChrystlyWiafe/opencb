@@ -759,6 +759,7 @@ namespace OpenCBS.GUI.Contracts
                     }
                     
                     e.DisplayText = Math.Round(i * 100, decimalPlaces).ToString();
+                    e.Item.SubItems[e.SubItem].Text = e.DisplayText;
                     e.Item.SubItems[e.SubItem].Tag = i;
                     break;
 
@@ -789,6 +790,7 @@ namespace OpenCBS.GUI.Contracts
                         temp1 = temp1 > _product.NbOfInstallmentsMax ? _product.NbOfInstallmentsMax : temp1;
                     }
                     e.DisplayText = temp1.ToString();
+                    e.Item.SubItems[e.SubItem].Text = e.DisplayText;
                     e.Item.SubItems[e.SubItem].Tag = temp1;
                     break;
                     
