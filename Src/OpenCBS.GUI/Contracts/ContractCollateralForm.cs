@@ -303,7 +303,7 @@ namespace OpenCBS.GUI.Contracts
 
         private Person SelectOwner()
         {
-            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault() ??
                                     SearchClientForm.GetInstance(OClientTypes.Person, true, _applicationController))
             {
                 searchClientForm.ShowForm();

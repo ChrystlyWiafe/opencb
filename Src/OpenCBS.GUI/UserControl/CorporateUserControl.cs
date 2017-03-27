@@ -388,7 +388,7 @@ namespace OpenCBS.GUI.UserControl
 
         private void BtnSelectContactClick(object sender, EventArgs e)
         {
-            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+            using (ISearchClientForm searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault() ??
                                     SearchClientForm.GetInstance(OClientTypes.Person, true,_applicationController))
             {
                 searchClientForm.ShowForm();

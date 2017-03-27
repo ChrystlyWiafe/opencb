@@ -17,8 +17,5 @@ namespace OpenCBS.ArchitectureV2.Interface
         IClient Client { get; }
 
         DialogResult DialogResult { get; }
-
-        bool IsDefaultForm { get; }
-
     }
 }

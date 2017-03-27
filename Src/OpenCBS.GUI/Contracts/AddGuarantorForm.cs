@@ -274,7 +274,7 @@ namespace OpenCBS.GUI
 
         private void SelectAGuarantor()
         {
-            using (var searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault(val => !val.IsDefaultForm) ??
+            using (var searchClientForm = _applicationController.GetAllInstances<ISearchClientForm>().FirstOrDefault() ??
                                     SearchClientForm.GetInstance(OClientTypes.Person, false,_applicationController))
             {
                 searchClientForm.ShowForm();
