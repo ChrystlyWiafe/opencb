@@ -7209,7 +7209,7 @@ namespace OpenCBS.GUI.Clients
                     if (e.Item.Index == item.Index)
                     {
                         ((LoanEntryFee)item.Tag).FeeValue = inputFee.Value;
-                        var maxSum = ((LoanEntryFee) item.Tag).ProductEntryFee.MaxSum;
+                        var maxSum = ((LoanEntryFee)item.Tag).ProductEntryFee.MaxSum;
                         if (((LoanEntryFee)item.Tag).ProductEntryFee.IsRate)
                         {
                             OCurrency feeAmount = loanAmount * inputFee / 100;
@@ -7223,7 +7223,6 @@ namespace OpenCBS.GUI.Clients
                             }
                             else
                                 item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
-
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                             ((LoanEntryFee)item.Tag).FeeValue = Convert.ToDecimal(item.SubItems[1].Text);
                         }
@@ -7240,7 +7239,6 @@ namespace OpenCBS.GUI.Clients
                             }
                             else
                                 item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
-                            
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                         }
                     }
