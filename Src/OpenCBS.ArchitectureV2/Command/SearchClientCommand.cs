@@ -22,11 +22,11 @@ namespace OpenCBS.ArchitectureV2.Command
             Form form ;
             if (commandData.OpeningNewClientForm)
             {
-                 form = (Form) viewType.GetMethod("GetInstance", new[] { typeof(Control), typeof(IApplicationController) }).Invoke(null, new object[] { null, _applicationController });
+                 form = (Form) viewType.GetMethod("GetInstance", new[] { typeof(Control), typeof(IApplicationController) }).Invoke(null, new object[] { null, _applicationController});
             }
             else
             {
-                form = (Form) viewType.GetMethod("GetInstance", new[] { typeof(OClientTypes),typeof(bool), typeof(IApplicationController) }).Invoke(null, new object[] { commandData.TiersType,commandData.IncludeNotactiveOnly, _applicationController });
+                form = (Form) viewType.GetMethod("GetInstance", new[] { typeof(OClientTypes),typeof(bool), typeof(IApplicationController), typeof(OSearchClientVariants) }).Invoke(null, new object[] { commandData.TiersType,commandData.IncludeNotactiveOnly, _applicationController, commandData.SearchClientVariant});
             }
             form.BringToFront();
             form.WindowState = FormWindowState.Normal;

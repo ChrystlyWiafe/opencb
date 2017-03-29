@@ -1322,12 +1322,12 @@ namespace OpenCBS.GUI.UserControl
 
         private void buttonSelectAMember_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true));
+            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
         }
 
         private void OnSearchNotification(SearchClientNotification searchClientNotification)
         {
-            if (GroupHasActiveContracts())
+            if (GroupHasActiveContracts() && searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
             {
                 try
                 {

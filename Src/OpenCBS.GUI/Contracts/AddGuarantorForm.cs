@@ -273,11 +273,13 @@ namespace OpenCBS.GUI
 
         private void SelectAGuarantor()
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, false));
+            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, false, OSearchClientVariants.Guarantor));
         }
 
         private void OnSearchNotification(SearchClientNotification searchClientNotification)
         {
+            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Guarantor)
+            {
                 _guarantor.Tiers = searchClientNotification.Client;
 
                 try
@@ -294,6 +296,7 @@ namespace OpenCBS.GUI
                 {
                     new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
                 }
+            }
         }
         
         private void buttonSelectAMember_Click(object sender, EventArgs e)

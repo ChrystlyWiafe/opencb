@@ -394,28 +394,31 @@ namespace OpenCBS.GUI.UserControl
 
         private void BtnSelectContactClick(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true));
+            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
         }
 
         private void OnSearchNotification(SearchClientNotification searchClientNotification)
         {
-            var contact = new Contact();
-            try
+            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
             {
-                if (searchClientNotification.Client != null)
-                    contact.Tiers = searchClientNotification.Client;
+                var contact = new Contact();
+                try
+                {
+                    if (searchClientNotification.Client != null)
+                        contact.Tiers = searchClientNotification.Client;
 
-                if (!ServicesProvider.GetInstance().GetClientServices().ClientCanBeAddToCorporate(
-                    searchClientNotification.Client, Corporate)) return;
+                    if (!ServicesProvider.GetInstance().GetClientServices().ClientCanBeAddToCorporate(
+                        searchClientNotification.Client, Corporate)) return;
 
-                if (contact.Tiers != null)
-                    Corporate.Contacts.Add(contact);
+                    if (contact.Tiers != null)
+                        Corporate.Contacts.Add(contact);
 
-                DisplayListContactCorporate(Corporate.Contacts);
-            }
-            catch (Exception ex)
-            {
-                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    DisplayListContactCorporate(Corporate.Contacts);
+                }
+                catch (Exception ex)
+                {
+                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                }
             }
         }
 

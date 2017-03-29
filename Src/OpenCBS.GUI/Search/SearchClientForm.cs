@@ -57,6 +57,7 @@ namespace OpenCBS.GUI
         private Control _mdiForm;
         private bool _closeAfterSelect;
         private string _query;
+        private OSearchClientVariants _searchClientVariant;
         private static SearchClientForm _theUniqueInstance1;
         private static SearchClientForm _theUniqueInstance3;
         private TableLayoutPanel tableLayoutPanel1;
@@ -135,25 +136,33 @@ namespace OpenCBS.GUI
             }
         }
 
-        public static SearchClientForm GetInstance(Control pMDIForm, IApplicationController applicationController)
+        public static SearchClientForm GetInstance(Control pMDIForm, IApplicationController applicationController, OSearchClientVariants searchClientVariant)
         {
             if (_theUniqueInstance1 == null)
-                return _theUniqueInstance1 = new SearchClientForm(pMDIForm, applicationController);
+                return _theUniqueInstance1 = new SearchClientForm(pMDIForm, applicationController, searchClientVariant);
             
             return _theUniqueInstance1;
         }
 
-        public static SearchClientForm GetInstance(OClientTypes pTiersEnum, bool includeNotactiveOnly, IApplicationController applicatinController)
+        public static SearchClientForm GetInstance(Control pMDIForm, IApplicationController applicationController)
+        {
+            if (_theUniqueInstance1 == null)
+                return _theUniqueInstance1 = new SearchClientForm(pMDIForm, applicationController);
+
+            return _theUniqueInstance1;
+        }
+
+        public static SearchClientForm GetInstance(OClientTypes pTiersEnum, bool includeNotactiveOnly, IApplicationController applicatinController, OSearchClientVariants searchClientVariants)
         {
             if (_theUniqueInstance3 == null)
-                return _theUniqueInstance3 = new SearchClientForm(pTiersEnum, includeNotactiveOnly, applicatinController);
+                return _theUniqueInstance3 = new SearchClientForm(pTiersEnum, includeNotactiveOnly, applicatinController, searchClientVariants);
             
             return _theUniqueInstance3;
         }
 
-        public static SearchClientForm GetInstanceForVillage(IApplicationController applicationController)
+        public static SearchClientForm GetInstanceForVillage(IApplicationController applicationController, OSearchClientVariants searchClientVariants)
         {
-            return new SearchClientForm(OClientTypes.Person, true, applicationController);
+            return new SearchClientForm(OClientTypes.Person, true, applicationController, searchClientVariants);
         }
 
         private int test;
@@ -166,9 +175,16 @@ namespace OpenCBS.GUI
             _applicationController = applicationController;
             RunInitializers();
         }
-    
-        protected SearchClientForm(OClientTypes pTiersEnum, bool inludeOnlyNotactive, IApplicationController applicationController)
+
+        private SearchClientForm(Control pMDIForm, IApplicationController applicationController,
+            OSearchClientVariants searchClientVariants) : this(pMDIForm, applicationController)
         {
+            _searchClientVariant = searchClientVariants;
+        }
+
+        protected SearchClientForm(OClientTypes pTiersEnum, bool inludeOnlyNotactive, IApplicationController applicationController, OSearchClientVariants searchClientVariants)
+        {
+            _searchClientVariant = searchClientVariants;
             _clientType = pTiersEnum;
             InitializeComponent();
             Initialization(null, true);
@@ -665,7 +681,7 @@ namespace OpenCBS.GUI
                 else
                 {
                     DialogResult = DialogResult.OK;
-                    _applicationController.Publish(new SearchClientNotification(this,_client));
+                    _applicationController.Publish(new SearchClientNotification(this,_client,_searchClientVariant));
                 }
                 Close();
             }

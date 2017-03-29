@@ -322,41 +322,51 @@ namespace OpenCBS.GUI.Clients
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true));
+            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Member));
         }
 
         private void OnSearchNotification(SearchClientNotification searchClientNotification)
         {
-            try
+            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Member)
             {
-                var clientServices = ServicesProvider.GetInstance().GetClientServices();
-                var client = searchClientNotification.Client;
-                if (clientServices.ClientIsAPerson(client))
+                try
                 {
-                    var personId = client.Id;
-                    clientServices.CheckPersonGroupCount(personId);
-                    var member = new VillageMember { Tiers = client, JoinedDate = TimeProvider.Now, CurrentlyIn = true, IsLeader = false, IsSaved = false };
-                    member.ActiveLoans = ServicesProvider.GetInstance().GetContractServices().
-                        FindActiveContracts(personId);
-
-                    List<ISavingsContract> savingsContracts =
-                        ServicesProvider.GetInstance().GetSavingServices().GetSavingsByClientId(member.Tiers.Id);
-
-                    foreach (ISavingsContract contract in savingsContracts)
+                    var clientServices = ServicesProvider.GetInstance().GetClientServices();
+                    var client = searchClientNotification.Client;
+                    if (clientServices.ClientIsAPerson(client))
                     {
-                        member.Tiers.Savings.Add(contract);
-                    }
+                        var personId = client.Id;
+                        clientServices.CheckPersonGroupCount(personId);
+                        var member = new VillageMember
+                        {
+                            Tiers = client,
+                            JoinedDate = TimeProvider.Now,
+                            CurrentlyIn = true,
+                            IsLeader = false,
+                            IsSaved = false
+                        };
+                        member.ActiveLoans = ServicesProvider.GetInstance().GetContractServices().
+                            FindActiveContracts(personId);
 
-                    clientServices.AddExistingMember(_village, member);
-                    membersSaved = false;
-                    DisplayMembers();
-                    DisplayLoans();
-                    DisplaySavings();
+                        List<ISavingsContract> savingsContracts =
+                            ServicesProvider.GetInstance().GetSavingServices().GetSavingsByClientId(member.Tiers.Id);
+
+                        foreach (ISavingsContract contract in savingsContracts)
+                        {
+                            member.Tiers.Savings.Add(contract);
+                        }
+
+                        clientServices.AddExistingMember(_village, member);
+                        membersSaved = false;
+                        DisplayMembers();
+                        DisplayLoans();
+                        DisplaySavings();
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                catch (Exception ex)
+                {
+                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                }
             }
         }
 

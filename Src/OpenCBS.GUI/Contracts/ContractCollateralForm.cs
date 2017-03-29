@@ -308,32 +308,36 @@ namespace OpenCBS.GUI.Contracts
 
         private void OnSearchNotification(SearchClientNotification searchClientNotification)
         {
-
-            try
+            if (searchClientNotification.SearchClientVariant == OSearchClientVariants.Collateral)
             {
-                Person client;
-                if (ServicesProvider.GetInstance().GetClientServices().ClientIsAPerson(searchClientNotification.Client)
-                    && !searchClientNotification.Client.Active)
-                    client = (Person) searchClientNotification.Client;
-                else
-                    client = null;
-
-                if (client != null)
+                try
                 {
-                    myProperties.SetPropertyValueByName(propertyGrid.SelectedGridItem.Label, client);
-                    propertyGrid.Refresh();
-                }
+                    Person client;
+                    if (ServicesProvider.GetInstance()
+                        .GetClientServices()
+                        .ClientIsAPerson(searchClientNotification.Client)
+                        && !searchClientNotification.Client.Active)
+                        client = (Person) searchClientNotification.Client;
+                    else
+                        client = null;
 
-            }
-            catch (Exception ex)
-            {
-                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    if (client != null)
+                    {
+                        myProperties.SetPropertyValueByName(propertyGrid.SelectedGridItem.Label, client);
+                        propertyGrid.Refresh();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                }
             }
         }
 
         private void buttonSelectOwner_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true));
+            _applicationController.Execute(new SearchClientCommandData(OClientTypes.Person, true, OSearchClientVariants.Collateral));
         }
 
         private void propertyGrid_SelectedGridItemChanged(object sender, SelectedGridItemChangedEventArgs e)
