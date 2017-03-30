@@ -71,8 +71,6 @@ namespace OpenCBS.GUI.Contracts
 
         private void CheckModification()
         {
-            _disableFees = false;
-
             if (ServicesProvider.GetInstance().GetGeneralSettings().ModifyEntryFee)
             {
                 try
@@ -204,7 +202,6 @@ namespace OpenCBS.GUI.Contracts
             _loan.Comments = tbComment.Text;
             try
             {
-                DistributeEntryFees();
                 // If disbursement goes to savings
                 if (cmbPaymentMethod.Text == OPaymentMethods.Savings.ToString())
                 {
@@ -250,15 +247,6 @@ namespace OpenCBS.GUI.Contracts
             finally
             {
                 Close();
-            }
-        }
-
-        private void DistributeEntryFees()
-        {
-            if (_loan.LoanEntryFeesList != null && _loan.LoanEntryFeesList.Count == 1)
-            {
-                _loan.LoanEntryFeesList[0].ProductEntryFee.IsRate = false;
-                _loan.LoanEntryFeesList[0].FeeValue = Convert.ToDecimal(tbEntryFee.Text);
             }
         }
 

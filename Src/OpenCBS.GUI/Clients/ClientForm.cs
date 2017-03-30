@@ -2214,8 +2214,8 @@ namespace OpenCBS.GUI.Clients
             itemTotal.SubItems.Add(total);
             itemTotal.SubItems.Add("");
             itemTotal.SubItems.Add("");
-            ShowTotalFeesInListView(itemTotal);
             lvEntryFees.Items.Add(itemTotal);
+            ShowTotalFeesInListViewByNudLoanAmount();
         }
 
         /// <summary>
@@ -7202,18 +7202,16 @@ namespace OpenCBS.GUI.Clients
             lblMinMaxEntryFees.Visible = true;
         }
 
-        private void ShowTotalFeesInListView(ListViewItem item)
+        private void ShowTotalFeesInListViewByNudLoanAmount()
         {
-            OCurrency total = 0;
-            total = _credit.Amount.HasValue ? _credit.GetSumOfFees() : _credit.GetSumOfFees(nudLoanAmount.Value);
-            item.SubItems[3].Text = total.GetFormatedValue(_credit.Product.Currency.UseCents) + @" " + _credit.Product.Currency.Code;
-        }
-
-        private void ShowTotalFeesInListViewByNudLoanAmount(ListViewItem item)
-        {
-            OCurrency total = 0;
-            total =  _credit.GetSumOfFees(nudLoanAmount.Value);
-            item.SubItems[3].Text = total.GetFormatedValue(_credit.Product.Currency.UseCents) + @" " + _credit.Product.Currency.Code;
+            OCurrency totalEntryFeeValue = 0m;
+            foreach (ListViewItem item in lvEntryFees.Items)
+            {
+                if (item.Tag.Equals("TotalFees"))
+                    item.SubItems[3].Text = totalEntryFeeValue.GetFormatedValue(_credit.Product.Currency.UseCents) + @" " + _credit.Product.Currency.Code;
+                else
+                    totalEntryFeeValue += Convert.ToDecimal(item.SubItems[3].Text);
+            }
         }
 
         private void lvEntryFees_SubItemEndEditing(object sender, SubItemEndEditingEventArgs e)
@@ -7263,11 +7261,8 @@ namespace OpenCBS.GUI.Clients
                         }
                     }
                 }
-                else if (item.Tag.Equals("TotalFees"))
-                {
-                    ShowTotalFeesInListViewByNudLoanAmount(item);
-                }
             }
+            ShowTotalFeesInListViewByNudLoanAmount();
         }
 
         private void buttonViewCollateral_Click(object sender, EventArgs e)
@@ -7360,16 +7355,7 @@ namespace OpenCBS.GUI.Clients
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                         }
                     }
-
-                    foreach (ListViewItem item in lvEntryFees.Items)
-                    {
-                        if (item.Tag is LoanEntryFee)
-                        {
-                            _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
-                        }
-                        else if (item.Tag.Equals("TotalFees"))
-                            ShowTotalFeesInListViewByNudLoanAmount(item);
-                    }
+                    ShowTotalFeesInListViewByNudLoanAmount();
                 }
             }
         }
