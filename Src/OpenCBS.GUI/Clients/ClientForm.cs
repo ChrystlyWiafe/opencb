@@ -4700,6 +4700,8 @@ namespace OpenCBS.GUI.Clients
 
         private void DeleteEvent()
         {
+            
+
             if (_credit.FundingLine == null && comboBoxLoanFundingLine.Tag == null)
             {
                 MessageBox.Show(MultiLanguageStrings.GetString(Ressource.ClientForm, "ContractIsReadOnly.Text"));
@@ -4710,6 +4712,12 @@ namespace OpenCBS.GUI.Clients
                 LoanServices cServices = ServicesProvider.GetInstance().GetContractServices();
 
                 Event foundEvent = _credit.GetLastNonDeletedEvent();
+
+                if (!ApplicationSettings.GetInstance(User.CurrentUser.Md5).ShowSpecialFunctionsButton)
+                {
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
+                }
+
                 if (!cServices.CanCancelSavingEvents(foundEvent.Id))
                     throw new OpenCbsException("This loan event has saving events which are not last");
 
