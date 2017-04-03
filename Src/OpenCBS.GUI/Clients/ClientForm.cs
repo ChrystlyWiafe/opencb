@@ -4713,7 +4713,12 @@ namespace OpenCBS.GUI.Clients
 
                 Event foundEvent = _credit.GetLastNonDeletedEvent();
 
-                if (!ApplicationSettings.GetInstance(User.CurrentUser.Md5).ShowSpecialFunctionsButton)
+                if (foundEvent.Code == "SPLE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty")))
+                {
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
+                }
+
+                if (foundEvent.Code == "SILE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest")))
                 {
                     throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
                 }
