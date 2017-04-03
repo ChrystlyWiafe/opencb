@@ -1027,7 +1027,7 @@
     <value>btnPrintGuarantors</value>
   </data>
   <data name="&gt;&gt;btnPrintGuarantors.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnPrintGuarantors.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -3133,7 +3133,7 @@
     <value>btnPrintLoanDetails</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanDetails.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanDetails.Parent" xml:space="preserve">
     <value>loanDetailsButtonsPanel</value>
@@ -4204,7 +4204,7 @@
     <value>eacLoan</value>
   </data>
   <data name="&gt;&gt;eacLoan.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.EconomicActivityControl, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.EconomicActivityControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;eacLoan.Parent" xml:space="preserve">
     <value>tableLayoutPanel4</value>
@@ -5293,7 +5293,7 @@
     <value>lvEntryFees</value>
   </data>
   <data name="&gt;&gt;lvEntryFees.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvEntryFees.Parent" xml:space="preserve">
     <value>groupBoxEntryFees</value>
@@ -6594,13 +6594,49 @@ Max:
     <value>btnPrintLoanRepayment</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanRepayment.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanRepayment.Parent" xml:space="preserve">
     <value>flowLayoutPanel8</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanRepayment.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="btnActions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC2SURBVDhPpc2hDoMwFIVhHgO1ZI+HQGAQNegaTBE0
+        QVWRoAiiAQNvsAeZ3Tp51jtJ75LdTHzmz21PBuAvbJRgowQbJdgowUaJJBzHgW3bsCwLpmmCcw5936Nt
+        23C+JUnw3j/pg33fsa7r56NhGNA0ze18S5IQV/O4+hjHEfM8w1oLpVSoqup6viVJIMaYXGv96roOdV2H
+        siwv3B1hI4mreVy9F0Xx9TFhowQbJdgowUYJNv4O2Rvq9/HAPudiTgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnActions.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>879, 3</value>
+  </data>
+  <data name="btnActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 28</value>
+  </data>
+  <data name="btnActions.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnActions.Text" xml:space="preserve">
+    <value>Special Func.</value>
+  </data>
+  <data name="&gt;&gt;btnActions.Name" xml:space="preserve">
+    <value>btnActions</value>
+  </data>
+  <data name="&gt;&gt;btnActions.Type" xml:space="preserve">
+    <value>OpenCBS.Controls.ListViewButton, OpenCBS.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnActions.Parent" xml:space="preserve">
+    <value>flowLayoutPanel8</value>
+  </data>
+  <data name="&gt;&gt;btnActions.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="flowLayoutPanel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -6624,7 +6660,7 @@ Max:
     <value>tabPageRepayments</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel8.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="tabPageRepayments.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
@@ -6810,7 +6846,7 @@ Max:
     <value>lvEvents</value>
   </data>
   <data name="&gt;&gt;lvEvents.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvEvents.Parent" xml:space="preserve">
     <value>tabPageEvents</value>
@@ -6870,7 +6906,7 @@ Max:
     <value>btnPrintLoanEvents</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanEvents.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnPrintLoanEvents.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -6997,7 +7033,7 @@ Max:
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        HQAAAk1TRnQBSQFMAgEBBQEAAbQBKgG0ASoBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HQAAAk1TRnQBSQFMAgEBBQEAAcQBKgHEASoBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -10263,7 +10299,7 @@ Max:
     <value>btnPrintSavings</value>
   </data>
   <data name="&gt;&gt;btnPrintSavings.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnPrintSavings.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
@@ -11643,7 +11679,7 @@ Max:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControlPerson.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="columnHeader26.Text" xml:space="preserve">
     <value>Fees</value>
@@ -13245,6 +13281,6 @@ Max:
     <value>ClientForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetForm, OpenCBS.GUI, Version=16.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

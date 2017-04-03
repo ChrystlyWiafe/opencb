@@ -221,8 +221,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="resx\AccrualStateOkCancelForm.resx" />
     <EmbeddedResource Include="resx\AddBranchForm.es-ES.resx" />
     <EmbeddedResource Include="resx\AddBranchForm.pt.resx" />
+    <EmbeddedResource Include="resx\AccrualStateOkCancelForm.ru-RU.resx" />
     <EmbeddedResource Include="resx\AddBranchForm.ru-RU.resx" />
     <EmbeddedResource Include="resx\AddBranchForm.fr.resx" />
     <EmbeddedResource Include="resx\AddBranchForm.resx">

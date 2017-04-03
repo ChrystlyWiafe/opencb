@@ -32,6 +32,7 @@ using BrightIdeasSoftware;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Event;
 using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.Controls.Models;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.CoreDomain.Clients;
@@ -1961,8 +1962,9 @@ namespace OpenCBS.GUI.Clients
             }
             SetAddTrancheButton(pCredit);
             buttonLoanRepaymentRepay.Enabled = !pCredit.Closed;
-            btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
+            btnActions.Enabled = btnWriteOff.Enabled = !pCredit.Closed && !pCredit.WrittenOff;
             InitLoanRepaymentButtons();
+            InitActionsListViewButton();
         }
 
         private void InitLoanDetails(bool isNew, bool disbursed, bool validated)
@@ -4180,6 +4182,7 @@ namespace OpenCBS.GUI.Clients
                 btnWriteOff.Enabled = false;
                 buttonManualSchedule.Enabled = false;
                 buttonAddTranche.Enabled = false;
+                btnActions.Enabled = false;
             }
             DisplaySavings(_client.Savings);
             //            if (MdiParent != null)
@@ -4279,6 +4282,7 @@ namespace OpenCBS.GUI.Clients
                         buttonReschedule.Enabled = false;
                         btnWriteOff.Enabled = false;
                         buttonManualSchedule.Enabled = false;
+                        btnActions.Enabled = false;
                     }
                     LoadLoanDetailsExtensions();
                     //                    if (MdiParent != null)
@@ -4353,7 +4357,11 @@ namespace OpenCBS.GUI.Clients
                     //|| e is OutOfBalanceInterestAccrualEvent
                     //|| e is OutOfBalancePenaltyAccrualEvent
                     || e is LoanInterestAccrualEvent
-                    || e is LoanTransitionEvent)
+                    || e is LoanTransitionEvent
+                    || e is StopInterestLoanEvent
+                    || e is StopPenaltyLoanEvent
+                    || e is RecoveryInterestLoanEvent
+                    || e is RecoveryPenaltyLoanEvent)
                 {
                     e.Cancelable = true;
                     if (e is LoanDisbursmentEvent)
@@ -4378,7 +4386,8 @@ namespace OpenCBS.GUI.Clients
             {
                 if (!chxSystemEvents.Checked && (displayEvent is AccruedInterestEvent || displayEvent is LoanPenaltyAccrualEvent ||
                     displayEvent is LoanInterestAccrualEvent || displayEvent is LoanTransitionEvent || displayEvent is CreditInsuranceEvent ||
-                    displayEvent is LoanValidationEvent || displayEvent is LoanCloseEvent || displayEvent is BounceFeeAccrualEvent)) continue;
+                    displayEvent is LoanValidationEvent || displayEvent is LoanCloseEvent || displayEvent is BounceFeeAccrualEvent ||
+                    displayEvent is NonAccrualInterestEvent || displayEvent is NonAccrualPenaltyEvent)) continue;
 
                 var listViewItem = new ListViewItem(displayEvent.Date.ToString());
                 listViewItem.SubItems.Add(displayEvent.EntryDate.ToShortDateString());
@@ -4475,6 +4484,17 @@ namespace OpenCBS.GUI.Clients
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
                 }
+                else if (displayEvent is NonAccrualPenaltyEvent)
+                {
+                    NonAccrualPenaltyEvent _event = displayEvent as NonAccrualPenaltyEvent;
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add(_event.Penalty.GetFormatedValue(pCredit.UseCents));
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                }
                 else if (displayEvent is BounceFeeAccrualEvent)
                 {
                     BounceFeeAccrualEvent _event = displayEvent as BounceFeeAccrualEvent;
@@ -4530,6 +4550,17 @@ namespace OpenCBS.GUI.Clients
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
                 }
+                else if (displayEvent is NonAccrualInterestEvent)
+                {
+                    NonAccrualInterestEvent _event = displayEvent as NonAccrualInterestEvent;
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add(_event.Interest.GetFormatedValue(pCredit.UseCents));
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                    listViewItem.SubItems.Add("-");
+                }
                 else if (displayEvent is LoanTransitionEvent)
                 {
                     var _event = displayEvent as LoanTransitionEvent;
@@ -4545,7 +4576,11 @@ namespace OpenCBS.GUI.Clients
                          || displayEvent is WriteOffEvent
                          || displayEvent is LoanValidationEvent
                          || displayEvent is LoanCloseEvent
-                         || displayEvent is ManualScheduleChangeEvent)
+                         || displayEvent is ManualScheduleChangeEvent
+                         || displayEvent is StopPenaltyLoanEvent
+                         || displayEvent is RecoveryPenaltyLoanEvent
+                         || displayEvent is StopInterestLoanEvent
+                         || displayEvent is RecoveryInterestLoanEvent)
                 {
                     listViewItem.SubItems.Add("-");
                     listViewItem.SubItems.Add("-");
@@ -4663,6 +4698,8 @@ namespace OpenCBS.GUI.Clients
 
         private void DeleteEvent()
         {
+            
+
             if (_credit.FundingLine == null && comboBoxLoanFundingLine.Tag == null)
             {
                 MessageBox.Show(MultiLanguageStrings.GetString(Ressource.ClientForm, "ContractIsReadOnly.Text"));
@@ -4673,6 +4710,17 @@ namespace OpenCBS.GUI.Clients
                 LoanServices cServices = ServicesProvider.GetInstance().GetContractServices();
 
                 Event foundEvent = _credit.GetLastNonDeletedEvent();
+
+                if (foundEvent.Code == "SPLE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty")))
+                {
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
+                }
+
+                if (foundEvent.Code == "SILE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest")))
+                {
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
+                }
+
                 if (!cServices.CanCancelSavingEvents(foundEvent.Id))
                     throw new OpenCbsException("This loan event has saving events which are not last");
 
@@ -6072,6 +6120,128 @@ namespace OpenCBS.GUI.Clients
             }
         }
 
+        private void InitActionsListViewButton()
+        {
+            if (_credit == null) return;
+            if (!ApplicationSettings.GetInstance(User.CurrentUser.Md5).ShowSpecialFunctionsButton)
+            {
+                btnActions.Visible = false;
+                return;
+            }
+            var loanService = ServiceProvider.GetContractServices();
+            var actions = new List<ListViewButtonModel>();
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "StopPenaltyOperationTitle.Text"),
+                EventHandler = (sender, e) =>
+                {
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateStopPenaltyLoanEvent.Text"));
+
+                        loanService.StopPenalty(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
+                },
+                Enabled = !_credit.IsStopPenaltyAccrualState 
+                    && User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "RecoverPenaltyOperationTitle.Text"),
+                EventHandler = (sender, e) =>
+                {
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateRecoverPenaltyLoanEvent.Text"));
+
+                        loanService.RecoverPenalty(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
+                },
+                Enabled = _credit.IsStopPenaltyAccrualState
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices",
+                              "RecoverPenalty"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "StopInterestOperationTitle.Text"),
+                EventHandler = (sender, e) =>
+                {
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateStopInterestLoanEvent.Text"));
+
+                        loanService.StopInterest(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
+                },
+                Enabled = !_credit.IsStopInterestAccrualState
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest"))
+            });
+
+            actions.Add(new ListViewButtonModel
+            {
+                Title = ML.GetString(Ressource.AccrualStateOkCancelForm, "RecoverInterestOperationTitle.Text"),
+                EventHandler = (sender, e) =>
+                {
+                    try
+                    {
+                        var form = new AccrualStateOkCancelForm();
+                        if (form.ShowDialog() != DialogResult.OK) return;
+                        if (_credit.GetLastByDateNonDeletedEvent().Date > form.EventDate)
+                            throw new OpenCbsContractException(ML.GetString(Ressource.AccrualStateOkCancelForm, "IncorrectDateRecoverInterestLoanEvent.Text"));
+
+                        loanService.RecoverInterest(_credit, form.EventDate, form.Comment);
+                        InitializeTabPageLoanRepayment(_credit);
+                    }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
+
+                },
+                Enabled = _credit.IsStopInterestAccrualState
+                          &&
+                          User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices",
+                              "RecoverInterest"))
+            });
+
+            var initializers = _applicationController.GetAllInstances<IActionsButtonInitializer>();
+            foreach (var initializer in initializers)
+            {
+                actions.AddRange(initializer.GetActions(_credit));
+            }
+            btnActions.Actions = actions;
+        }
+
         private void InitLoanEventsPrintButton()
         {
             InitPrintButton(AttachmentPoint.LoanEvents, btnPrintLoanEvents);
@@ -6610,6 +6780,7 @@ namespace OpenCBS.GUI.Clients
                     buttonLoanReschedule.Enabled = false;
                     buttonReschedule.Enabled = false;
                     btnWriteOff.Enabled = false;
+                    btnActions.Enabled = false;
                 }
             }
 
@@ -7123,6 +7294,7 @@ namespace OpenCBS.GUI.Clients
                 WriteOff(form.OptionId, form.Comment);
                 buttonManualSchedule.Enabled = false;
                 buttonLoanReschedule.Enabled = false;
+                btnActions.Enabled = false;
             }
             catch (Exception ex)
             {

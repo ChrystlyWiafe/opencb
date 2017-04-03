@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Globalization;
@@ -2279,6 +2280,54 @@ namespace OpenCBS.Services
                         }
                     }
 
+                    if (evnt.Code == "SPLE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "NAPE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
+                    if (evnt.Code == "SILE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "NAIE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
+                    if (evnt.Code == "RILE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "AILE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
+                    if (evnt.Code == "RPLE")
+                    {
+                        foreach (Event cie in contract.Events)
+                        {
+                            if (!cie.Deleted && cie.Code == "LPAE" && cie.Date > evnt.Date)
+                            {
+                                _ePs.CancelFireEvent(cie, sqlTransaction, contract, contract.Product.Currency.Id);
+                                cie.Deleted = true;
+                            }
+                        }
+                    }
+
                     CancelSavingsEvent(cancelledEvent, sqlTransaction);
 
                     CallInterceptor(new Dictionary<string, object>
@@ -2805,6 +2854,155 @@ namespace OpenCBS.Services
         {
             var loans = _loanManager.SelectLoansByClientId(clientId);
             return loans.Where(loan => loan.ContractStatus == OContractStatus.Active).ToList();
+        }
+
+        public void StopPenalty(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var stopPenaltyLoanEvent = loan.StopPenalty(date, comment);
+                stopPenaltyLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(stopPenaltyLoanEvent, loan, tx);
+
+                DeleteSubsequentEvents(loan, date, "LPAE", tx);
+
+                CallInterceptor(new Dictionary<string, object>
+                {
+                    {"Loan", loan},
+                    {"Event", stopPenaltyLoanEvent},
+                    {"SqlTransaction", tx}
+                });
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
+        public void RecoverPenalty(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var recoverPenaltyLoanEvent = loan.RecoverPenalty(date, comment);
+                recoverPenaltyLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(recoverPenaltyLoanEvent, loan, tx);
+
+                DeleteSubsequentEvents(loan, date, "NAPE", tx);
+
+                CallInterceptor(new Dictionary<string, object>
+                {
+                    {"Loan", loan},
+                    {"Event", recoverPenaltyLoanEvent},
+                    {"SqlTransaction", tx}
+                });
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
+        public void StopInterest(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var stopInterestLoanEvent = loan.StopInterest(date, comment);
+                stopInterestLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(stopInterestLoanEvent, loan, tx);
+
+                DeleteSubsequentEvents(loan, date, "AILE", tx);
+
+                CallInterceptor(new Dictionary<string, object>
+                {
+                    {"Loan", loan},
+                    {"Event", stopInterestLoanEvent},
+                    {"SqlTransaction", tx}
+                });
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
+        public void RecoverInterest(Loan loan, DateTime date, string comment, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var recoverInterestLoanEvent = loan.RecoverInterest(date, comment);
+                recoverInterestLoanEvent.User = User.CurrentUser;
+
+                _ePs.FireEvent(recoverInterestLoanEvent, loan, tx);
+
+                DeleteSubsequentEvents(loan, date, "NAIE", tx);
+
+                CallInterceptor(new Dictionary<string, object>
+                {
+                    {"Loan", loan},
+                    {"Event", recoverInterestLoanEvent},
+                    {"SqlTransaction", tx}
+                });
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+        
+        private void DeleteSubsequentEvents(Loan loan, DateTime date, string eventCode, IDbTransaction transaction = null)
+        {
+            var tx = transaction as SqlTransaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                var events = loan.Events.GetEvents().Where(val => val.Deleted == false && val.Date > date && val.Code == eventCode);
+
+                foreach (var @event in events)
+                {
+                    _ePs.CancelFireEvent(@event, tx, loan, loan.Product.Currency.Id);
+                    @event.Deleted = true;
+                }
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
         }
 
         public void WriteOff(Loan loan, DateTime onDate, int writeOffMethodId, string comment)

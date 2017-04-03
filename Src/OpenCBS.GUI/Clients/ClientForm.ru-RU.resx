@@ -866,6 +866,9 @@
   <data name="btnPrintLoanRepayment.Location" type="System.Drawing.Point, System.Drawing">
     <value>773, 3</value>
   </data>
+    <data name="btnActions.Text" xml:space="preserve">
+    <value>Спец. функции</value>
+  </data>
   <data name="btnPrintLoanRepayment.Text" xml:space="preserve">
     <value>Печать</value>
   </data>

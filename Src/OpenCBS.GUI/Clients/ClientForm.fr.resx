@@ -927,6 +927,9 @@
   <data name="btnWriteOff.Text" xml:space="preserve">
     <value>Passer en perte</value>
   </data>
+  <data name="btnActions.Text" xml:space="preserve">
+    <value>Fonction spéciale</value>
+  </data>
   <data name="btnPrintLoanRepayment.Location" type="System.Drawing.Point, System.Drawing">
     <value>773, 3</value>
   </data>

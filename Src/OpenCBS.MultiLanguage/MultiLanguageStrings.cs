@@ -27,6 +27,7 @@ namespace OpenCBS.MultiLanguageRessources
 {
     public enum Ressource
     {
+        AccrualStateOkCancelForm,
         AddGuarantorForm,
         FrmAddLoanProduct,
         AddressUserControl,

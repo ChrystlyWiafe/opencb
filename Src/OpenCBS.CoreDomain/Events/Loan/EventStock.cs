@@ -315,6 +315,28 @@ namespace OpenCBS.CoreDomain.Events
             return eventList;
         }
 
+        public List<Event> GetPenaltyAccrualModeEvents()
+        {
+            List<Event> l = (from e in _list
+                             where 
+                                e.Deleted == false 
+                                && (e.Code == "SPLE" || e.Code == "RPLE")
+                             orderby e.Date
+                             select e).ToList();
+            return l;
+        }
+
+        public List<Event> GetInterestAccrualModeEvents()
+        {
+            List<Event> l = (from e in _list
+                             where
+                                !e.Deleted
+                                && (e.Code == "SILE" || e.Code == "RILE")
+                             orderby e.Date
+                             select e).ToList();
+            return l;
+        }
+
         public bool IsLastEvent(Event e)
         {
             for (int i = _list.Count - 1; i >= 0; i--)
@@ -337,7 +359,9 @@ namespace OpenCBS.CoreDomain.Events
                 {
                     Event e = eventList[i];
                     if (!e.Deleted && !(e is LoanEntryFeeEvent) && !(e is CreditInsuranceEvent) &&
-                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent) && !(e is BounceFeeAccrualEvent))
+                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent)
+                        && !(e is BounceFeeAccrualEvent) && !(e is NonAccrualInterestEvent)
+                        && !(e is NonAccrualPenaltyEvent))
                     {
                         return e;
                     }
@@ -345,6 +369,28 @@ namespace OpenCBS.CoreDomain.Events
                 return null;
             }
         }
+
+        public Event GetLastByDateNonDeletedEvent
+        {
+            get
+            {
+                var eventList = _list.OrderBy(val => val.Date).ToList();
+                for (int i = eventList.Count - 1; i >= 0; i--)
+                {
+                    Event e = eventList[i];
+                    if (!e.Deleted && !(e is LoanEntryFeeEvent) && !(e is CreditInsuranceEvent) &&
+                        !(e is LoanPenaltyAccrualEvent) && !(e is LoanInterestAccrualEvent)
+                        && !(e is BounceFeeAccrualEvent) && !(e is NonAccrualInterestEvent)
+                        && !(e is NonAccrualPenaltyEvent) && !(e is AccruedInterestEvent) 
+                        && !(e is LoanTransitionEvent) && !(e is LoanValidationEvent))
+                    {
+                        return e;
+                    }
+                }
+                return null;
+            }
+        }
+
         public Event GetLastSavingNonDeletedEvent
         {
             get
