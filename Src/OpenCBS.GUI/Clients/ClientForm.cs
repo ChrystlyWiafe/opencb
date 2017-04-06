@@ -4718,14 +4718,16 @@ namespace OpenCBS.GUI.Clients
                 Event foundEvent = _credit.GetLastNonDeletedEvent();
 
                 if (foundEvent.Code == "SPLE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopPenalty")))
-                {
                     throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
-                }
 
                 if (foundEvent.Code == "SILE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "StopInterest")))
-                {
                     throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
-                }
+
+                if (foundEvent.Code == "RPLE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverPenalty")))
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
+
+                if (foundEvent.Code == "RILE" && !User.CurrentUser.UserRole.IsActionAllowed(new ActionItemObject("LoanServices", "RecoverInterest")))
+                    throw new OpenCbsException(@"You can not work with a special event " + foundEvent.Code);
 
                 if (!cServices.CanCancelSavingEvents(foundEvent.Id))
                     throw new OpenCbsException("This loan event has saving events which are not last");
