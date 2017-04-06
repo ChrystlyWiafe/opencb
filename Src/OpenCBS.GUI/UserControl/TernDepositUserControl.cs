@@ -604,7 +604,7 @@ namespace OpenCBS.GUI.UserControl
             {
                 if (!_saving.HasCancelableEvents()) return;
 
-                const string message = "Confirm CancelLast Event";
+                const string message = "Сonfirm the last event cancellation";
                 const string caption = "Confirm";
                 var res = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
                 if (res != DialogResult.Yes) return;
