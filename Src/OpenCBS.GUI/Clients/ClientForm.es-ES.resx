@@ -902,6 +902,9 @@
   <data name="colValue.Text" xml:space="preserve">
     <value>Valor</value>
   </data>
+  <data name="colCalculated.Text" xml:space="preserve">
+    <value>Сalculado</value>
+  </data>
   <data name="colAmount.Text" xml:space="preserve">
     <value>Monto</value>
   </data>

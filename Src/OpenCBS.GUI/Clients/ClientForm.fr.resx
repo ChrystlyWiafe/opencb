@@ -755,6 +755,9 @@
   <data name="colValue.Text" xml:space="preserve">
     <value>Valeur</value>
   </data>
+  <data name="colCalculated.Text" xml:space="preserve">
+    <value>Сalculé</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="colValue.Width" type="System.Int32, mscorlib">
     <value>92</value>

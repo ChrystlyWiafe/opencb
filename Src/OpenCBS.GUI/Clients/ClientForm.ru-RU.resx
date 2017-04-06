@@ -713,6 +713,9 @@
   <data name="colValue.Text" xml:space="preserve">
     <value>Значение</value>
   </data>
+  <data name="colCalculated.Text" xml:space="preserve">
+    <value>Вычислено</value>
+  </data>
   <data name="colAmount.Text" xml:space="preserve">
     <value>Сумма</value>
   </data>
