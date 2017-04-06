@@ -533,6 +533,8 @@ namespace OpenCBS.GUI.Clients
             this.menuPendingSavingEvents = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuItemConfirmPendingSavingEvent = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCancelPendingSavingEvent = new System.Windows.Forms.ToolStripMenuItem();
+            this.colCalculated = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
             this.splitContainer10.Panel2.SuspendLayout();
@@ -1460,7 +1462,7 @@ namespace OpenCBS.GUI.Clients
             this.tclLoanDetails.SelectedIndex = 0;
             // 
             // tabPageInstallments
-            // 
+            //
             this.tabPageInstallments.Controls.Add(this._loanDetailsScheduleControl);
             resources.ApplyResources(this.tabPageInstallments, "tabPageInstallments");
             this.tabPageInstallments.Name = "tabPageInstallments";
@@ -2009,6 +2011,8 @@ namespace OpenCBS.GUI.Clients
             this.colName,
             this.colValue,
             this.colType,
+            this.colCalculated,
+            this.colMax,
             this.colAmount});
             resources.ApplyResources(this.lvEntryFees, "lvEntryFees");
             this.lvEntryFees.DoubleClickActivation = true;
@@ -2274,7 +2278,7 @@ namespace OpenCBS.GUI.Clients
             this.tabControlRepayments.SelectedIndex = 0;
             // 
             // tabPageRepayments
-            // 
+            //
             this.tabPageRepayments.Controls.Add(this._repaymentScheduleControl);
             this.tabPageRepayments.Controls.Add(this.flowLayoutPanel8);
             resources.ApplyResources(this.tabPageRepayments, "tabPageRepayments");
@@ -3692,6 +3696,14 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.menuItemCancelPendingSavingEvent, "menuItemCancelPendingSavingEvent");
             this.menuItemCancelPendingSavingEvent.Click += new System.EventHandler(this.menuItemCancelPendingSavingEvent_Click);
             // 
+            // colCalculated
+            // 
+            resources.ApplyResources(this.colCalculated, "colCalculated");
+            // 
+            // colMax
+            // 
+            resources.ApplyResources(this.colMax, "colMax");
+            // 
             // ClientForm
             // 
             resources.ApplyResources(this, "$this");
@@ -4282,5 +4294,7 @@ namespace OpenCBS.GUI.Clients
         private TabPage tabPageTermDeposit;
         private Label _labelLoanOffecerInfo;
         private ListViewButton btnActions;
+        private ColumnHeader colCalculated;
+        private ColumnHeader colMax;
     }
 }

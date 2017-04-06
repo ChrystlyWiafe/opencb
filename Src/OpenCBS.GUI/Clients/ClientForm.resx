@@ -5260,10 +5260,25 @@
     <value>Right</value>
   </data>
   <data name="colValue.Width" type="System.Int32, mscorlib">
-    <value>89</value>
+    <value>82</value>
   </data>
   <data name="colType.Text" xml:space="preserve">
     <value />
+  </data>
+  <data name="colCalculated.Text" xml:space="preserve">
+    <value>Calculated</value>
+  </data>
+  <data name="colCalculated.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="colCalculated.Width" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="colMax.Text" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="colMax.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="colAmount.Text" xml:space="preserve">
     <value>Amount</value>
@@ -5272,7 +5287,7 @@
     <value>Right</value>
   </data>
   <data name="colAmount.Width" type="System.Int32, mscorlib">
-    <value>96</value>
+    <value>88</value>
   </data>
   <data name="lvEntryFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -5284,7 +5299,7 @@
     <value>3, 18</value>
   </data>
   <data name="lvEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 134</value>
+    <value>611, 134</value>
   </data>
   <data name="lvEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5304,11 +5319,14 @@
   <data name="lblMinMaxEntryFees.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="lblMinMaxEntryFees.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblMinMaxEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>512, 18</value>
+    <value>620, 18</value>
   </data>
   <data name="lblMinMaxEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 43</value>
+    <value>103, 43</value>
   </data>
   <data name="lblMinMaxEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5334,7 +5352,7 @@ Max:
     <value>1</value>
   </data>
   <data name="numEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 83</value>
+    <value>623, 95</value>
   </data>
   <data name="numEntryFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
@@ -7033,7 +7051,7 @@ Max:
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        HQAAAk1TRnQBSQFMAgEBBQEAAcQBKgHEASoBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HQAAAk1TRnQBSQFMAgEBBQEAAcwBKgHMASoBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -13276,6 +13294,18 @@ Max:
   </data>
   <data name="&gt;&gt;menuItemCancelPendingSavingEvent.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colCalculated.Name" xml:space="preserve">
+    <value>colCalculated</value>
+  </data>
+  <data name="&gt;&gt;colCalculated.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colMax.Name" xml:space="preserve">
+    <value>colMax</value>
+  </data>
+  <data name="&gt;&gt;colMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ClientForm</value>
