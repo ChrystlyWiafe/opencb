@@ -2135,7 +2135,7 @@ namespace OpenCBS.Manager.Clients
 			         SELECT pers.id as id
                             ,Tiers.client_type_code AS type
                             ,pers.last_name + SPACE(1) + pers.first_name AS name
-                            ,Tiers.active
+                            ,active.active
                             ,Tiers.loan_cycle AS loan_cycle
                             ,dis.name AS district
                             ,Tiers.city AS city
@@ -2171,9 +2171,19 @@ namespace OpenCBS.Manager.Clients
 			         FROM Persons pers
                           INNER JOIN Tiers ON pers.id = Tiers.id
                           INNER JOIN Districts dis ON dis.id = Tiers.district_id 
+                          LEFT JOIN 
+	                          (
+		                          SELECT 
+			                          t.id
+			                          , cast(count(case c.status when 5 then 1 else null end) as bit) active
+		                          FROM dbo.Tiers t
+		                          LEFT JOIN dbo.Projects pr ON pr.tiers_id = t.id
+		                          LEFT JOIN dbo.Contracts c ON pr.id = c.project_id
+		                          GROUP BY t.id
+	                          ) active ON active.id = Tiers.id 
 			         WHERE ( pers.identification_data LIKE @passport OR pers.first_name LIKE @name
                           OR pers.last_name LIKE @name OR dis.name LIKE @district OR Tiers.city LIKE @city )  
-                          and active {0} @active and 1 = @includePersons
+                          and active.active {0} @active and 1 = @includePersons
                         and Tiers.branch_id in (
                             select branch_id
                             from dbo.UsersBranches
@@ -2185,7 +2195,7 @@ namespace OpenCBS.Manager.Clients
 			         SELECT  Villages.id
                             ,Tiers.client_type_code AS type
                             ,Villages.name as name
-                            ,Tiers.active
+                            ,active.active
                             ,Tiers.loan_cycle AS loan_cycle
                             ,Districts.name AS district
                             ,Tiers.city AS city
@@ -2195,8 +2205,18 @@ namespace OpenCBS.Manager.Clients
 			         FROM Villages 
 				          INNER JOIN Tiers ON Villages.id = Tiers.id
 				          INNER JOIN Districts ON Districts.id = Tiers.district_id
+                          LEFT JOIN 
+	                          (
+		                          SELECT 
+			                          t.id
+			                          , cast(count(case c.status when 5 then 1 else null end) as bit) active
+		                          FROM dbo.Tiers t
+		                          LEFT JOIN dbo.Projects pr ON pr.tiers_id = t.id
+		                          LEFT JOIN dbo.Contracts c ON pr.id = c.project_id
+		                          GROUP BY t.id
+	                          ) active ON active.id = Tiers.id 
 			         WHERE (Villages.name LIKE @name OR Districts.name  LIKE  @district OR Tiers.city  LIKE @city ) 
-                          and active {0} @active and 1 = @includeVillages
+                          and active.active {0} @active and 1 = @includeVillages
                         and Tiers.branch_id in (
                             select branch_id
                             from dbo.UsersBranches
@@ -2208,7 +2228,7 @@ namespace OpenCBS.Manager.Clients
 			         SELECT Groups.id
                            ,Tiers.client_type_code AS type
                            ,Groups.name as name
-                           ,Tiers.active
+                           ,active.active
                            ,Tiers.loan_cycle AS loan_cycle
                            ,Districts.name AS district
                            ,Tiers.city AS city
@@ -2218,8 +2238,18 @@ namespace OpenCBS.Manager.Clients
 			         FROM Groups
 				          INNER JOIN Tiers ON Groups.id = Tiers.id 
 				          INNER JOIN Districts ON Districts.id = Tiers.district_id 
+                          LEFT JOIN 
+	                          (
+		                          SELECT 
+			                          t.id
+			                          , cast(count(case c.status when 5 then 1 else null end) as bit) active
+		                          FROM dbo.Tiers t
+		                          LEFT JOIN dbo.Projects pr ON pr.tiers_id = t.id
+		                          LEFT JOIN dbo.Contracts c ON pr.id = c.project_id
+		                          GROUP BY t.id
+	                          ) active ON active.id = Tiers.id 
 			         WHERE (Groups.name LIKE @name OR Districts.name LIKE  @district OR Tiers.city LIKE @city ) 
-                          AND active {0} @active AND 1 = @includeGroups
+                          AND active.active {0} @active AND 1 = @includeGroups
                           AND Tiers.branch_id in (
                             select branch_id
                             from dbo.UsersBranches
