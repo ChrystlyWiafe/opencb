@@ -35,6 +35,7 @@ namespace OpenCBS.GUI.Contracts
         private string _amountFormatString;
         private int _rounding;
         private Installment _total;
+        private readonly Loan _originalLoan;
 
         public Loan Loan { get; set; }
 
@@ -48,6 +49,8 @@ namespace OpenCBS.GUI.Contracts
             InitializeComponent();
             olvSchedule.RowFormatter = FormatRow;
             Loan = loan;
+            _originalLoan = loan.Copy();
+            btnOK.Enabled = false;
             InitializeSchedule();
 
             ObjectListView.EditorRegistry.Register(typeof(DateTime), delegate
@@ -235,8 +238,9 @@ namespace OpenCBS.GUI.Contracts
             olvSchedule.RefreshObjects(Loan.InstallmentList);
             olvSchedule.RefreshObject(_total);
 
-            btnOK.Enabled = CheckPrincipal(e.ListViewItem.Index);
-            var foreColor = !btnOK.Enabled ? Color.Red : Color.Black;
+            var checkPrincipal = CheckPrincipal(e.ListViewItem.Index);
+            btnOK.Enabled = checkPrincipal && IsChangedLoan();
+            var foreColor = !checkPrincipal ? Color.Red : Color.Black;
             for (var i = 0; i <= Loan.InstallmentList.Count - 1; i++)
                 if (!Loan.InstallmentList[i].IsRepaid)
                 {
@@ -289,6 +293,15 @@ namespace OpenCBS.GUI.Contracts
             for (var i = indexOfChangedItem; i < Loan.InstallmentList.Count; i++)
                 capital += Loan.InstallmentList[i].CapitalRepayment.Value;
             return capital == Loan.InstallmentList[indexOfChangedItem].OLB.Value;
+        }
+
+        private bool IsChangedLoan()
+        {
+            if (_originalLoan.InstallmentList.Count == Loan.InstallmentList.Count)
+                for (var i = 0; i < _originalLoan.InstallmentList.Count; i++)
+                    if (!_originalLoan.InstallmentList[i].Equals(Loan.InstallmentList[i]))
+                        return true;
+            return false;
         }
     }
 }
