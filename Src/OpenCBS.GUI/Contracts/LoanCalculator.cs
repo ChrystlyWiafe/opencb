@@ -285,7 +285,7 @@ namespace OpenCBS.GUI.Clients
             InitializeFundingLine();
             _credit.FundingLine = _fundingLine;
             _credit.LoanOfficer = User.CurrentUser;
-      
+            labelCurrencyValue.Text = pPackage.Currency.Name;
             SetPackageValuesForLoanDetails(_credit, true);
             InitializeEntryFees();
         }
@@ -1036,7 +1036,7 @@ namespace OpenCBS.GUI.Clients
 
         public void Print()
         {
-            _applicationController.Execute(new ExtendedPrintControlCommandData { Control = _loanDetailsScheduleControl1.Control , AdditionalValues = GetReportData(), StartPosition = "A9"});
+            _applicationController.Execute(new ExtendedPrintControlCommandData { Control = _loanDetailsScheduleControl1.Control , AdditionalValues = GetReportData(), StartPosition = "A10"});
         }
 
         private Dictionary<string,string> GetReportData()
@@ -1062,6 +1062,9 @@ namespace OpenCBS.GUI.Clients
 
             result.Add("B7", "EIR:");
             result.Add("C7", GetXIRRStr());
+
+            result.Add("B8", "Currency:");
+            result.Add("C8", _credit.Product.Currency.Name);
 
             var i = 1;
             foreach (var loanEntryFee in _credit.LoanEntryFeesList)
