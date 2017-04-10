@@ -1,44 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using BrightIdeasSoftware;
 using OpenCBS.ArchitectureV2.CommandData;
-using OpenCBS.ArchitectureV2.Event;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.CoreDomain;
-using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.CoreDomain.Clients;
-using OpenCBS.CoreDomain.Contracts;
 using OpenCBS.CoreDomain.Contracts.Collaterals;
 using OpenCBS.CoreDomain.Contracts.Guarantees;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Contracts.Loans.Installments;
 using OpenCBS.CoreDomain.Contracts.Savings;
-using OpenCBS.CoreDomain.Events;
-using OpenCBS.CoreDomain.Events.Loan;
-using OpenCBS.CoreDomain.Events.Saving;
 using OpenCBS.CoreDomain.FundingLines;
 using OpenCBS.CoreDomain.Online;
 using OpenCBS.CoreDomain.Products;
-using OpenCBS.CoreDomain.Products.Collaterals;
 using OpenCBS.Enums;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.Extensions;
-using OpenCBS.GUI.Contracts;
 using OpenCBS.GUI.Tools;
 using OpenCBS.GUI.UserControl;
 using OpenCBS.MultiLanguageRessources;
-using OpenCBS.Reports;
 using OpenCBS.Services;
 using OpenCBS.Shared;
 using OpenCBS.Shared.Settings;
-using Group = OpenCBS.CoreDomain.Clients.Group;
 
 namespace OpenCBS.GUI.Clients
 {
@@ -47,43 +33,29 @@ namespace OpenCBS.GUI.Clients
     {
         #region *** Fields ***
         private LoanProduct _product;
-        private Project _project;
         private Group _group;
         private Loan _credit;
-        private Guarantee _guarantee;
         private Person _person;
         private readonly Form _mdiParent;
 
         private OClientTypes _oClientType;
-        private PersonUserControl _personUserControl;
-        private GroupUserControl _groupUserControl;
         private readonly bool _closeFormAfterSave;
         private List<LoanShare> _loanShares;
-        private List<User> _users;
         private FundingLine _fundingLine;
         private Corporate _corporate;
-        private CorporateUserControl _corporateUserControl;
         private List<FollowUp> _followUpList = new List<FollowUp>();
-        private SavingsBookProduct _savingsBookProduct;
-        private SavingBookContract _saving;
         private bool _toChangeAlignDate;
         private int? _gracePeriodOfLateFees;
         private string _title;
         private Client _client;
         private DateTime _firstInstallmentDate;
 
-        OCurrency _totalGuarantorAmount = 0;
-        OCurrency _totalCollateralAmount = 0;
-
         private List<Guarantor> _listGuarantors;
         private List<ContractCollateral> _collaterals;
         private string _typeOfFee;
-        private DoubleValueRange _anticipatedTotalFeesValueRange;
-        private DoubleValueRange _anticipatedPartialFeesValueRange;
 
         private DateTime _oldDisbursmentDate;
         private DateTime _oldFirstInstalmentDate;
-        private bool _changeDisDateBool;
 
         [ImportMany(typeof(ILoanTabs), RequiredCreationPolicy = CreationPolicy.NonShared)]
         public List<ILoanTabs> LoanTabs { get; set; }
@@ -204,24 +176,9 @@ namespace OpenCBS.GUI.Clients
             _oClientType = OClientTypes.Person;
         }
 
-        public Project Project
-        {
-            set { _project = value; }
-        }
-
         private static IServices ServiceProvider
         {
             get { return ServicesProvider.GetInstance(); }
-        }
-
-        private static SavingServices SavingServices
-        {
-            get { return ServiceProvider.GetSavingServices(); }
-        }
-
-        public Person Person
-        {
-            get { return _person; }
         }
 
         private void InitializeTitle(string title)
@@ -461,46 +418,7 @@ namespace OpenCBS.GUI.Clients
             InitializePackageGracePeriod(pLoan.Product, pForCreation);
             InitializeAmount(pLoan, pForCreation);
             InitializePackageInterestRate(pLoan, pForCreation);
-            //InitializePackageFundingLineAndCorporate(pLoan.Product.FundingLine, _credit.FundingLine, pForCreation, comboBoxLoanFundingLine);
             InitializePackageNumberOfInstallments(pLoan, pForCreation);
-            //InitializePackageAnticipatedTotalRepaymentsPenalties(pLoan.Product, pForCreation);
-            //InitializePackageAnticipatedPartialRepaymentsPenalties(pLoan.Product, pForCreation);
-            //InitializePackageNonRepaymentPenalties(pLoan.Product, pForCreation);
-            //InitializePackageLoanCompulsorySavings(pLoan.Product, pForCreation);
-            _changeDisDateBool = false;
-        }
-
-        private void InitializePackageFundingLineAndCorporate(Object packageObj, Object creditObj, bool pForCreation,
-                                                               ComboBox cmbFundingCorporateDetails)
-        {
-            cmbFundingCorporateDetails.Enabled = true;
-            cmbFundingCorporateDetails.ForeColor = Color.Black;
-            cmbFundingCorporateDetails.Font = new Font(Font, FontStyle.Regular);
-
-            if (pForCreation)
-            {
-                if (packageObj != null)
-                {
-                    cmbFundingCorporateDetails.Text = packageObj.ToString();
-                    cmbFundingCorporateDetails.Tag = packageObj;
-                    return;
-                }
-                cmbFundingCorporateDetails.Enabled = true;
-                cmbFundingCorporateDetails.Text = "";
-                cmbFundingCorporateDetails.Tag = null;
-                return;
-            }
-            if (creditObj != null)
-            {
-                cmbFundingCorporateDetails.Text = creditObj.ToString();
-                cmbFundingCorporateDetails.Tag = creditObj;
-                return;
-            }
-            cmbFundingCorporateDetails.Text = MultiLanguageStrings.GetString(Ressource.ClientForm, "ContractIsReadOnly.Text");
-            cmbFundingCorporateDetails.ForeColor = System.Drawing.Color.Red;
-            cmbFundingCorporateDetails.Font = new Font(this.Font, FontStyle.Bold);
-            MessageBox.Show(MultiLanguageStrings.GetString(Ressource.ClientForm, "ContractIsReadOnly.Text"));
-            cmbFundingCorporateDetails.Tag = null;
         }
 
         private void InitializePackageNumberOfInstallments(Loan credit, bool pForCreation)
@@ -888,72 +806,6 @@ namespace OpenCBS.GUI.Clients
             return null;
         }
 
-        private Loan CreateLoan()
-        {
-            var credit = new Loan(_product,
-                                       ServicesHelper.ConvertStringToDecimal(nudLoanAmount.Text, _product.UseCents),
-                                       nudInterestRate.Value / 100m,
-                                       Convert.ToInt32(nudLoanNbOfInstallments.Value),
-                                       Convert.ToInt32(numericUpDownLoanGracePeriod.Value),
-                                       dateLoanStart.Value,
-                                       dtpDateOfFirstInstallment.Value,
-                                       User.CurrentUser,
-                                       ServicesProvider.GetInstance().GetGeneralSettings(),
-                                       ServicesProvider.GetInstance().GetNonWorkingDate(),
-                                       CoreDomainProvider.GetInstance().GetProvisioningTable())
-            {
-                Guarantors = _listGuarantors,
-                Collaterals = _collaterals,
-                LoanShares = _loanShares,
-                InstallmentType = (InstallmentType)_installmentTypeComboBox.SelectedItem,
-                ScheduleType = GetScheduleType(),
-                ScriptName = GetScriptName()
-            };
-            credit.LoanOfficer = User.CurrentUser;
-            credit.FundingLine = _fundingLine;
-            credit.EconomicActivityId = 1;
-            credit.InstallmentList = ServicesProvider.GetInstance().GetContractServices().SimulateScheduleCreation(credit);
-
-            _toChangeAlignDate = false;
-            credit.FirstInstallmentDate = dtpDateOfFirstInstallment.Value;
-            _toChangeAlignDate = true;
-
-            _firstInstallmentDate = dtpDateOfFirstInstallment.Value;
-
-            credit.AlignDisbursementDate = credit.CalculateAlignDisbursementDate(_firstInstallmentDate);
-
-            //credit.AnticipatedTotalRepaymentPenalties = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanAnticipatedTotalFees.Text, true, -1).Value;
-            //credit.AnticipatedPartialRepaymentPenalties = ServicesHelper.ConvertStringToNullableDouble(tbLoanAnticipatedPartialFees.Text, true, -1).Value;
-            //credit.NonRepaymentPenalties.InitialAmount = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnAmount.Text, true, -1).Value;
-            //credit.NonRepaymentPenalties.OLB = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOLB.Text, true, -1).Value;
-            //credit.NonRepaymentPenalties.OverDueInterest = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOverdueInterest.Text, true, -1).Value;
-            //credit.NonRepaymentPenalties.OverDuePrincipal = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOverduePrincipal.Text, true, -1).Value;
-            credit.GracePeriod = Convert.ToInt32(numericUpDownLoanGracePeriod.Value);
-            credit.GracePeriodOfLateFees = Convert.ToInt32(_gracePeriodOfLateFees);
-
-            credit.LoanEntryFeesList = new List<LoanEntryFee>();
-
-            if (credit.Product.CycleId != null)
-            {
-                credit.AmountMin = _product.AmountMin;
-                credit.AmountMax = _product.AmountMax;
-                credit.InterestRateMin = _product.InterestRateMin;
-                credit.InterestRateMax = _product.InterestRateMax;
-                credit.NmbOfInstallmentsMin = _product.NbOfInstallmentsMin;
-                credit.NmbOfInstallmentsMax = _product.NbOfInstallmentsMax;
-                credit.LoanCycle = _client.LoanCycle;
-            }
-
-            //credit.Insurance = decimal.Parse(tbInsurance.Text);
-            if (_credit != null && _credit.ScheduleChangedManually)
-            {
-                credit.ScheduleChangedManually = _credit.ScheduleChangedManually;
-                credit.InstallmentList = _credit.InstallmentList;
-            }
-            //credit.EconomicActivity = eacLoan.Activity;
-            return credit;
-        }
-
         private Loan CreateAndSetContract()
         {
                 _credit.Guarantors = _listGuarantors;
@@ -973,12 +825,6 @@ namespace OpenCBS.GUI.Clients
                     _credit.AlignDisbursementDate = _credit.CalculateAlignDisbursementDate(_credit.FirstInstallmentDate);
                 }
                 _credit.EconomicActivityId = 1;
-                //_credit.AnticipatedTotalRepaymentPenalties = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanAnticipatedTotalFees.Text, true, -1).Value;
-                //_credit.AnticipatedPartialRepaymentPenalties = ServicesHelper.ConvertStringToNullableDouble(tbLoanAnticipatedPartialFees.Text, true, -1).Value;
-                //_credit.NonRepaymentPenalties.InitialAmount = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnAmount.Text, true, -1).Value;
-                //_credit.NonRepaymentPenalties.OLB = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOLB.Text, true, -1).Value;
-                //_credit.NonRepaymentPenalties.OverDueInterest = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOverdueInterest.Text, true, -1).Value;
-                //_credit.NonRepaymentPenalties.OverDuePrincipal = ServicesHelper.ConvertStringToNullableDouble(textBoxLoanLateFeesOnOverduePrincipal.Text, true, -1).Value;
                 _credit.GracePeriod = Convert.ToInt32(numericUpDownLoanGracePeriod.Value);
                 _credit.GracePeriodOfLateFees = _gracePeriodOfLateFees;
 
@@ -1220,7 +1066,6 @@ namespace OpenCBS.GUI.Clients
 
         private void dateLoanStart_ValueChanged(object sender, EventArgs e)
         {
-            _changeDisDateBool = true;
             dtpDateOfFirstInstallment.Value = GetFirstInstallmentDate();
             _oldFirstInstalmentDate = dtpDateOfFirstInstallment.Value;
             try

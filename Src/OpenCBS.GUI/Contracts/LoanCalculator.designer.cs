@@ -713,21 +713,13 @@ namespace OpenCBS.GUI.Clients
         protected override void Dispose(bool disposing)
         {
             _product = null;
-            _project = null;
             _credit = null;
-            _guarantee = null;
             _person = null;
-            _personUserControl = null;
-            _groupUserControl = null;
 
             _loanShares = null;
-            _users = null;
             _fundingLine = null;
             _corporate = null;
-            _corporateUserControl = null;
             _followUpList = null;
-            _savingsBookProduct = null;
-            _saving = null;
 
             _client = null;
 
