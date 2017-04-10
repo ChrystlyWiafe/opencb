@@ -1014,6 +1014,7 @@ namespace OpenCBS.GUI.Clients
                 ServicesProvider.GetInstance().GetContractServices().CheckLoanFilling(credit);
                 DisplayInstallments(ref credit);
                 InitializeEntryFees();
+                labelXirrValue.Text = GetXIRRStr();
                 var extentions = _applicationController.GetAllInstances<IClientFormInitializer>();
                 foreach (var extention in extentions)
                 {
@@ -1031,7 +1032,7 @@ namespace OpenCBS.GUI.Clients
 
         public void Print()
         {
-            _applicationController.Execute(new ExtendedPrintControlCommandData { Control = _loanDetailsScheduleControl1.Control , AdditionalValues = GetReportData(), StartPosition = "A8"});
+            _applicationController.Execute(new ExtendedPrintControlCommandData { Control = _loanDetailsScheduleControl1.Control , AdditionalValues = GetReportData(), StartPosition = "A9"});
 
         }
 
@@ -1056,8 +1057,75 @@ namespace OpenCBS.GUI.Clients
             result.Add("B6", "Schedule type:");
             result.Add("C6", GetString("FrmAddLoanProduct", _credit.ScheduleType+".Text"));
 
+            result.Add("B7", "EIR:");
+            result.Add("C7", GetXIRRStr());
+
+            var i = 1;
+            foreach (var loanEntryFee in _credit.LoanEntryFeesList)
+            {
+                result.Add("E" + i, loanEntryFee.ProductEntryFee.Name);
+                result.Add("F" + i, GetEntryFeeValue(loanEntryFee).GetFormatedValue(_credit.Product.Currency.UseCents));
+                i++;
+            }
             return result;
         }
+
+        private OCurrency GetEntryFeeValue(LoanEntryFee entryFee)
+        {
+            OCurrency feeValue;
+            OCurrency loanAmount = nudLoanAmount.Value;
+            OCurrency maxSum = entryFee.ProductEntryFee.MaxSum;
+            OCurrency feeAmount = entryFee.FeeValue < entryFee.ProductEntryFee.Min
+                ? entryFee.ProductEntryFee.Min
+                : entryFee.FeeValue;
+
+            if (entryFee.ProductEntryFee.IsRate)
+                feeValue = feeAmount*loanAmount/100m;
+            else
+                feeValue = feeAmount;
+
+            if (feeValue > maxSum && maxSum > 0)
+                feeValue = maxSum;
+
+                return feeValue;
+        }
+
+        private double GetXIRR()
+        {
+            var startDate = _credit.StartDate;
+            var cashFlows =
+                _credit.InstallmentList.Select(
+                    val =>
+                        new
+                        {
+                            N = -(val.ExpectedDate - startDate).TotalDays,
+                            Amount = Convert.ToDouble(val.CapitalRepayment.Value + val.InterestsRepayment.Value)
+                        }).ToList();
+            decimal amount = _credit.InstallmentList.Sum(val => val.CapitalRepayment.Value);
+            double rate = 0;
+            double err = 0.00000001;
+            var i = 0;
+            while (i < 10 && amount > 0)
+            {
+                var val = cashFlows.Sum(t => t.Amount*Math.Pow(1 + rate, t.N));
+                var pval = cashFlows.Sum(t => t.Amount*t.N*Math.Pow(1 + rate, t.N - 1));
+                var temp = rate - val/pval;
+                if (Math.Abs(temp - rate) < err)
+                {
+                    rate = temp;
+                    break;
+                }
+                rate = temp;
+                i++;
+            }
+            return rate;
+        }
+
+        private string GetXIRRStr()
+        {
+            return Math.Round(GetXIRR()*100, 2) + "%";
+        }
+
         private void DisplayInstallments(ref Loan pCredit)
         {
             FillInstallmentListForScheduleControl("loanDetailsScheduleControl", _credit);

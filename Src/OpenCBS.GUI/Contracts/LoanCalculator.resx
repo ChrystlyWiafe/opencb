@@ -328,7 +328,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonLoanPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 427</value>
+    <value>194, 443</value>
   </data>
   <data name="buttonLoanPreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 36</value>
@@ -349,7 +349,7 @@
     <value>tableLayoutPanel4</value>
   </data>
   <data name="&gt;&gt;buttonLoanPreview.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="gbxLoanDetails.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -365,6 +365,984 @@
   </data>
   <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="labelXirrValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelXirrValue.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelXirrValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelXirrValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelXirrValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 263</value>
+  </data>
+  <data name="labelXirrValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
+  </data>
+  <data name="labelXirrValue.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="labelXirrValue.Text" xml:space="preserve">
+    <value>                    </value>
+  </data>
+  <data name="labelXirrValue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelXirrValue.Name" xml:space="preserve">
+    <value>labelXirrValue</value>
+  </data>
+  <data name="&gt;&gt;labelXirrValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelXirrValue.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelXirrValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelXirrTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelXirrTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelXirrTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelXirrTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelXirrTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 263</value>
+  </data>
+  <data name="labelXirrTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 16</value>
+  </data>
+  <data name="labelXirrTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="labelXirrTitle.Text" xml:space="preserve">
+    <value>EIR:</value>
+  </data>
+  <data name="labelXirrTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelXirrTitle.Name" xml:space="preserve">
+    <value>labelXirrTitle</value>
+  </data>
+  <data name="&gt;&gt;labelXirrTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelXirrTitle.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelXirrTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numEntryFees.Name" xml:space="preserve">
+    <value>numEntryFees</value>
+  </data>
+  <data name="&gt;&gt;numEntryFees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numEntryFees.Parent" xml:space="preserve">
+    <value>groupBoxEntryFees</value>
+  </data>
+  <data name="&gt;&gt;numEntryFees.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lvEntryFees.Name" xml:space="preserve">
+    <value>lvEntryFees</value>
+  </data>
+  <data name="&gt;&gt;lvEntryFees.Type" xml:space="preserve">
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lvEntryFees.Parent" xml:space="preserve">
+    <value>groupBoxEntryFees</value>
+  </data>
+  <data name="&gt;&gt;lvEntryFees.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblMinMaxEntryFees.Name" xml:space="preserve">
+    <value>lblMinMaxEntryFees</value>
+  </data>
+  <data name="&gt;&gt;lblMinMaxEntryFees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMinMaxEntryFees.Parent" xml:space="preserve">
+    <value>groupBoxEntryFees</value>
+  </data>
+  <data name="&gt;&gt;lblMinMaxEntryFees.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxEntryFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="groupBoxEntryFees.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="groupBoxEntryFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 282</value>
+  </data>
+  <data name="groupBoxEntryFees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 155</value>
+  </data>
+  <data name="groupBoxEntryFees.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="groupBoxEntryFees.Text" xml:space="preserve">
+    <value>Entry fees</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEntryFees.Name" xml:space="preserve">
+    <value>groupBoxEntryFees</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEntryFees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEntryFees.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEntryFees.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Loan Product:</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_scheduleTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 176</value>
+  </data>
+  <data name="_scheduleTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="_scheduleTypeComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeComboBox.Name" xml:space="preserve">
+    <value>_scheduleTypeComboBox</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeComboBox.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeComboBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_installmentTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 146</value>
+  </data>
+  <data name="_installmentTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="_installmentTypeComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeComboBox.Name" xml:space="preserve">
+    <value>_installmentTypeComboBox</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeComboBox.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeComboBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="_installmentTypeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_installmentTypeLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="_installmentTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="_installmentTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_installmentTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 143</value>
+  </data>
+  <data name="_installmentTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 30</value>
+  </data>
+  <data name="_installmentTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="_installmentTypeLabel.Text" xml:space="preserve">
+    <value>Installment type:</value>
+  </data>
+  <data name="_installmentTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeLabel.Name" xml:space="preserve">
+    <value>_installmentTypeLabel</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;_installmentTypeLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelDateOffirstInstallment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDateOffirstInstallment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelDateOffirstInstallment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelDateOffirstInstallment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelDateOffirstInstallment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 231</value>
+  </data>
+  <data name="labelDateOffirstInstallment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 32</value>
+  </data>
+  <data name="labelDateOffirstInstallment.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="labelDateOffirstInstallment.Text" xml:space="preserve">
+    <value>Preferred first installment date:</value>
+  </data>
+  <data name="labelDateOffirstInstallment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelDateOffirstInstallment.Name" xml:space="preserve">
+    <value>labelDateOffirstInstallment</value>
+  </data>
+  <data name="&gt;&gt;labelDateOffirstInstallment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDateOffirstInstallment.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelDateOffirstInstallment.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelLoanAmountMinMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.5pt</value>
+  </data>
+  <data name="labelLoanAmountMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 30</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 28</value>
+  </data>
+  <data name="labelLoanAmountMinMax.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Text" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="labelLoanAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmountMinMax.Name" xml:space="preserve">
+    <value>labelLoanAmountMinMax</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmountMinMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmountMinMax.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmountMinMax.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.5pt</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 114</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 29</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Text" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Name" xml:space="preserve">
+    <value>labelLoanNbOfInstallmentsMinMax</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dtpDateOfFirstInstallment.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="dtpDateOfFirstInstallment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 234</value>
+  </data>
+  <data name="dtpDateOfFirstInstallment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 22</value>
+  </data>
+  <data name="dtpDateOfFirstInstallment.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dtpDateOfFirstInstallment.Name" xml:space="preserve">
+    <value>dtpDateOfFirstInstallment</value>
+  </data>
+  <data name="&gt;&gt;dtpDateOfFirstInstallment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpDateOfFirstInstallment.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;dtpDateOfFirstInstallment.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.5pt</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 86</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 28</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Text" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Name" xml:space="preserve">
+    <value>labelLoanGracePeriodMinMax</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriodMinMax.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelLoanAmount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelLoanAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 30</value>
+  </data>
+  <data name="labelLoanAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 28</value>
+  </data>
+  <data name="labelLoanAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelLoanAmount.Text" xml:space="preserve">
+    <value>Amount:</value>
+  </data>
+  <data name="labelLoanAmount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmount.Name" xml:space="preserve">
+    <value>labelLoanAmount</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmount.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanAmount.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelLoanInterestRate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanInterestRate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanInterestRate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelLoanInterestRate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanInterestRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="labelLoanInterestRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 28</value>
+  </data>
+  <data name="labelLoanInterestRate.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelLoanInterestRate.Text" xml:space="preserve">
+    <value>Interest rate:</value>
+  </data>
+  <data name="labelLoanInterestRate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanInterestRate.Name" xml:space="preserve">
+    <value>labelLoanInterestRate</value>
+  </data>
+  <data name="&gt;&gt;labelLoanInterestRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanInterestRate.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanInterestRate.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="dateLoanStart.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="dateLoanStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 206</value>
+  </data>
+  <data name="dateLoanStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 22</value>
+  </data>
+  <data name="dateLoanStart.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dateLoanStart.Name" xml:space="preserve">
+    <value>dateLoanStart</value>
+  </data>
+  <data name="&gt;&gt;dateLoanStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateLoanStart.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;dateLoanStart.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 114</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 29</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.Text" xml:space="preserve">
+    <value>Number of installments:</value>
+  </data>
+  <data name="labelLoanNbOfInstallments.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallments.Name" xml:space="preserve">
+    <value>labelLoanNbOfInstallments</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallments.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanNbOfInstallments.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelLoanStartDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanStartDate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanStartDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelLoanStartDate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="labelLoanStartDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanStartDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 203</value>
+  </data>
+  <data name="labelLoanStartDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="labelLoanStartDate.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="labelLoanStartDate.Text" xml:space="preserve">
+    <value>Disbursement date:</value>
+  </data>
+  <data name="labelLoanStartDate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanStartDate.Name" xml:space="preserve">
+    <value>labelLoanStartDate</value>
+  </data>
+  <data name="&gt;&gt;labelLoanStartDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanStartDate.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanStartDate.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.5pt</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 58</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="lbLoanInterestRateMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbLoanInterestRateMinMax.Name" xml:space="preserve">
+    <value>lbLoanInterestRateMinMax</value>
+  </data>
+  <data name="&gt;&gt;lbLoanInterestRateMinMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbLoanInterestRateMinMax.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;lbLoanInterestRateMinMax.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelLoanGracePeriod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLoanGracePeriod.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="labelLoanGracePeriod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="labelLoanGracePeriod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLoanGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 86</value>
+  </data>
+  <data name="labelLoanGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 28</value>
+  </data>
+  <data name="labelLoanGracePeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="labelLoanGracePeriod.Text" xml:space="preserve">
+    <value>Grace period:</value>
+  </data>
+  <data name="labelLoanGracePeriod.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriod.Name" xml:space="preserve">
+    <value>labelLoanGracePeriod</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriod.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelLoanGracePeriod.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="numericUpDownLoanGracePeriod.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDownLoanGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 89</value>
+  </data>
+  <data name="numericUpDownLoanGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 22</value>
+  </data>
+  <data name="numericUpDownLoanGracePeriod.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="numericUpDownLoanGracePeriod.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Name" xml:space="preserve">
+    <value>numericUpDownLoanGracePeriod</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownLoanGracePeriod.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="nudLoanNbOfInstallments.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nudLoanNbOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 117</value>
+  </data>
+  <data name="nudLoanNbOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 22</value>
+  </data>
+  <data name="nudLoanNbOfInstallments.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="nudLoanNbOfInstallments.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;nudLoanNbOfInstallments.Name" xml:space="preserve">
+    <value>nudLoanNbOfInstallments</value>
+  </data>
+  <data name="&gt;&gt;nudLoanNbOfInstallments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudLoanNbOfInstallments.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;nudLoanNbOfInstallments.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lblDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblDay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.5pt</value>
+  </data>
+  <data name="lblDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 231</value>
+  </data>
+  <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 32</value>
+  </data>
+  <data name="lblDay.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="lblDay.Text" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="lblDay.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblDay.Name" xml:space="preserve">
+    <value>lblDay</value>
+  </data>
+  <data name="&gt;&gt;lblDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDay.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;lblDay.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="nudLoanAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 33</value>
+  </data>
+  <data name="nudLoanAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="nudLoanAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="nudLoanAmount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="nudLoanAmount.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;nudLoanAmount.Name" xml:space="preserve">
+    <value>nudLoanAmount</value>
+  </data>
+  <data name="&gt;&gt;nudLoanAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudLoanAmount.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;nudLoanAmount.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="nudInterestRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 61</value>
+  </data>
+  <data name="nudInterestRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="nudInterestRate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="nudInterestRate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;nudInterestRate.Name" xml:space="preserve">
+    <value>nudInterestRate</value>
+  </data>
+  <data name="&gt;&gt;nudInterestRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudInterestRate.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;nudInterestRate.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="_scheduleTypeLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="_scheduleTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="_scheduleTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 173</value>
+  </data>
+  <data name="_scheduleTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
+  <data name="_scheduleTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="_scheduleTypeLabel.Text" xml:space="preserve">
+    <value>Schedule type:</value>
+  </data>
+  <data name="_scheduleTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeLabel.Name" xml:space="preserve">
+    <value>_scheduleTypeLabel</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;_scheduleTypeLabel.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="cmbPackages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 3</value>
+  </data>
+  <data name="cmbPackages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="cmbPackages.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cmbPackages.Name" xml:space="preserve">
+    <value>cmbPackages</value>
+  </data>
+  <data name="&gt;&gt;cmbPackages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbPackages.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;cmbPackages.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 443</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 36</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="tableLayoutPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 18</value>
+  </data>
+  <data name="tableLayoutPanel4.RowCount" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1257, 608</value>
+  </data>
+  <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Name" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Parent" xml:space="preserve">
+    <value>gbxLoanDetails</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelXirrValue" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelXirrTitle" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxEntryFees" Row="10" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeComboBox" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelDateOffirstInstallment" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmountMinMax" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallmentsMinMax" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dtpDateOfFirstInstallment" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriodMinMax" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmount" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanInterestRate" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dateLoanStart" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallments" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanStartDate" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lbLoanInterestRateMinMax" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriod" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="numericUpDownLoanGracePeriod" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanNbOfInstallments" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblDay" Row="8" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanAmount" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudInterestRate" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cmbPackages" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonLoanPreview" Row="11" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnPrint" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gbxLoanDetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbxLoanDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 36</value>
+  </data>
+  <data name="gbxLoanDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1263, 629</value>
+  </data>
+  <data name="gbxLoanDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbxLoanDetails.Name" xml:space="preserve">
+    <value>gbxLoanDetails</value>
+  </data>
+  <data name="&gt;&gt;gbxLoanDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxLoanDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxLoanDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="numEntryFees.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 64</value>
@@ -499,870 +1477,6 @@ Max:
   </data>
   <data name="&gt;&gt;lblMinMaxEntryFees.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="groupBoxEntryFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="groupBoxEntryFees.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="groupBoxEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 266</value>
-  </data>
-  <data name="groupBoxEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 155</value>
-  </data>
-  <data name="groupBoxEntryFees.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="groupBoxEntryFees.Text" xml:space="preserve">
-    <value>Entry fees</value>
-  </data>
-  <data name="&gt;&gt;groupBoxEntryFees.Name" xml:space="preserve">
-    <value>groupBoxEntryFees</value>
-  </data>
-  <data name="&gt;&gt;groupBoxEntryFees.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxEntryFees.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;groupBoxEntryFees.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 30</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Loan Product:</value>
-  </data>
-  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="_scheduleTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 176</value>
-  </data>
-  <data name="_scheduleTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 24</value>
-  </data>
-  <data name="_scheduleTypeComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeComboBox.Name" xml:space="preserve">
-    <value>_scheduleTypeComboBox</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeComboBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="_installmentTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 146</value>
-  </data>
-  <data name="_installmentTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 24</value>
-  </data>
-  <data name="_installmentTypeComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeComboBox.Name" xml:space="preserve">
-    <value>_installmentTypeComboBox</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeComboBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="_installmentTypeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="_installmentTypeLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="_installmentTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="_installmentTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="_installmentTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 143</value>
-  </data>
-  <data name="_installmentTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 30</value>
-  </data>
-  <data name="_installmentTypeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="_installmentTypeLabel.Text" xml:space="preserve">
-    <value>Installment type:</value>
-  </data>
-  <data name="_installmentTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeLabel.Name" xml:space="preserve">
-    <value>_installmentTypeLabel</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeLabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;_installmentTypeLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelDateOffirstInstallment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDateOffirstInstallment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelDateOffirstInstallment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelDateOffirstInstallment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelDateOffirstInstallment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 231</value>
-  </data>
-  <data name="labelDateOffirstInstallment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 32</value>
-  </data>
-  <data name="labelDateOffirstInstallment.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="labelDateOffirstInstallment.Text" xml:space="preserve">
-    <value>Preferred first installment date:</value>
-  </data>
-  <data name="labelDateOffirstInstallment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelDateOffirstInstallment.Name" xml:space="preserve">
-    <value>labelDateOffirstInstallment</value>
-  </data>
-  <data name="&gt;&gt;labelDateOffirstInstallment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelDateOffirstInstallment.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelDateOffirstInstallment.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="labelLoanAmountMinMax.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanAmountMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanAmountMinMax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.5pt</value>
-  </data>
-  <data name="labelLoanAmountMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanAmountMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 30</value>
-  </data>
-  <data name="labelLoanAmountMinMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 28</value>
-  </data>
-  <data name="labelLoanAmountMinMax.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="labelLoanAmountMinMax.Text" xml:space="preserve">
-    <value>???</value>
-  </data>
-  <data name="labelLoanAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmountMinMax.Name" xml:space="preserve">
-    <value>labelLoanAmountMinMax</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmountMinMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmountMinMax.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmountMinMax.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.5pt</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 114</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 29</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.Text" xml:space="preserve">
-    <value>???</value>
-  </data>
-  <data name="labelLoanNbOfInstallmentsMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Name" xml:space="preserve">
-    <value>labelLoanNbOfInstallmentsMinMax</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallmentsMinMax.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="dtpDateOfFirstInstallment.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <data name="dtpDateOfFirstInstallment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 234</value>
-  </data>
-  <data name="dtpDateOfFirstInstallment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="dtpDateOfFirstInstallment.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;dtpDateOfFirstInstallment.Name" xml:space="preserve">
-    <value>dtpDateOfFirstInstallment</value>
-  </data>
-  <data name="&gt;&gt;dtpDateOfFirstInstallment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpDateOfFirstInstallment.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;dtpDateOfFirstInstallment.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.5pt</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 86</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 28</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.Text" xml:space="preserve">
-    <value>???</value>
-  </data>
-  <data name="labelLoanGracePeriodMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Name" xml:space="preserve">
-    <value>labelLoanGracePeriodMinMax</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriodMinMax.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriodMinMax.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="labelLoanAmount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanAmount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelLoanAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
-  </data>
-  <data name="labelLoanAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 28</value>
-  </data>
-  <data name="labelLoanAmount.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="labelLoanAmount.Text" xml:space="preserve">
-    <value>Amount:</value>
-  </data>
-  <data name="labelLoanAmount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmount.Name" xml:space="preserve">
-    <value>labelLoanAmount</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmount.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanAmount.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="labelLoanInterestRate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanInterestRate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanInterestRate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelLoanInterestRate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanInterestRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 58</value>
-  </data>
-  <data name="labelLoanInterestRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 28</value>
-  </data>
-  <data name="labelLoanInterestRate.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="labelLoanInterestRate.Text" xml:space="preserve">
-    <value>Interest rate:</value>
-  </data>
-  <data name="labelLoanInterestRate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanInterestRate.Name" xml:space="preserve">
-    <value>labelLoanInterestRate</value>
-  </data>
-  <data name="&gt;&gt;labelLoanInterestRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanInterestRate.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanInterestRate.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="dateLoanStart.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <data name="dateLoanStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 206</value>
-  </data>
-  <data name="dateLoanStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="dateLoanStart.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;dateLoanStart.Name" xml:space="preserve">
-    <value>dateLoanStart</value>
-  </data>
-  <data name="&gt;&gt;dateLoanStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateLoanStart.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;dateLoanStart.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 114</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 29</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.Text" xml:space="preserve">
-    <value>Number of installments:</value>
-  </data>
-  <data name="labelLoanNbOfInstallments.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallments.Name" xml:space="preserve">
-    <value>labelLoanNbOfInstallments</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallments.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallments.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanNbOfInstallments.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="labelLoanStartDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanStartDate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanStartDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelLoanStartDate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="labelLoanStartDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 203</value>
-  </data>
-  <data name="labelLoanStartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
-  </data>
-  <data name="labelLoanStartDate.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="labelLoanStartDate.Text" xml:space="preserve">
-    <value>Disbursement date:</value>
-  </data>
-  <data name="labelLoanStartDate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanStartDate.Name" xml:space="preserve">
-    <value>labelLoanStartDate</value>
-  </data>
-  <data name="&gt;&gt;labelLoanStartDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanStartDate.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanStartDate.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.5pt</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 58</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 28</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="lbLoanInterestRateMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbLoanInterestRateMinMax.Name" xml:space="preserve">
-    <value>lbLoanInterestRateMinMax</value>
-  </data>
-  <data name="&gt;&gt;lbLoanInterestRateMinMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbLoanInterestRateMinMax.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;lbLoanInterestRateMinMax.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="labelLoanGracePeriod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLoanGracePeriod.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelLoanGracePeriod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="labelLoanGracePeriod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLoanGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 86</value>
-  </data>
-  <data name="labelLoanGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 28</value>
-  </data>
-  <data name="labelLoanGracePeriod.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="labelLoanGracePeriod.Text" xml:space="preserve">
-    <value>Grace period:</value>
-  </data>
-  <data name="labelLoanGracePeriod.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriod.Name" xml:space="preserve">
-    <value>labelLoanGracePeriod</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriod.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;labelLoanGracePeriod.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="numericUpDownLoanGracePeriod.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDownLoanGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 89</value>
-  </data>
-  <data name="numericUpDownLoanGracePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="numericUpDownLoanGracePeriod.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="numericUpDownLoanGracePeriod.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Name" xml:space="preserve">
-    <value>numericUpDownLoanGracePeriod</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLoanGracePeriod.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLoanGracePeriod.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="nudLoanNbOfInstallments.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="nudLoanNbOfInstallments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 117</value>
-  </data>
-  <data name="nudLoanNbOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="nudLoanNbOfInstallments.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="nudLoanNbOfInstallments.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;nudLoanNbOfInstallments.Name" xml:space="preserve">
-    <value>nudLoanNbOfInstallments</value>
-  </data>
-  <data name="&gt;&gt;nudLoanNbOfInstallments.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudLoanNbOfInstallments.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;nudLoanNbOfInstallments.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lblDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lblDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.5pt</value>
-  </data>
-  <data name="lblDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 231</value>
-  </data>
-  <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 32</value>
-  </data>
-  <data name="lblDay.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="lblDay.Text" xml:space="preserve">
-    <value>???</value>
-  </data>
-  <data name="lblDay.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDay.Name" xml:space="preserve">
-    <value>lblDay</value>
-  </data>
-  <data name="&gt;&gt;lblDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDay.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;lblDay.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="nudLoanAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 33</value>
-  </data>
-  <data name="nudLoanAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="nudLoanAmount.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="nudLoanAmount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="nudLoanAmount.ThousandsSeparator" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;nudLoanAmount.Name" xml:space="preserve">
-    <value>nudLoanAmount</value>
-  </data>
-  <data name="&gt;&gt;nudLoanAmount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudLoanAmount.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;nudLoanAmount.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="nudInterestRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 61</value>
-  </data>
-  <data name="nudInterestRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="nudInterestRate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="nudInterestRate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;nudInterestRate.Name" xml:space="preserve">
-    <value>nudInterestRate</value>
-  </data>
-  <data name="&gt;&gt;nudInterestRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudInterestRate.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;nudInterestRate.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="_scheduleTypeLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="_scheduleTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="_scheduleTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 173</value>
-  </data>
-  <data name="_scheduleTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 30</value>
-  </data>
-  <data name="_scheduleTypeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="_scheduleTypeLabel.Text" xml:space="preserve">
-    <value>Schedule type:</value>
-  </data>
-  <data name="_scheduleTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeLabel.Name" xml:space="preserve">
-    <value>_scheduleTypeLabel</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeLabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;_scheduleTypeLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="cmbPackages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 3</value>
-  </data>
-  <data name="cmbPackages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 24</value>
-  </data>
-  <data name="cmbPackages.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;cmbPackages.Name" xml:space="preserve">
-    <value>cmbPackages</value>
-  </data>
-  <data name="&gt;&gt;cmbPackages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbPackages.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;cmbPackages.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 427</value>
-  </data>
-  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 36</value>
-  </data>
-  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnPrint.Text" xml:space="preserve">
-    <value>Print</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
-    <value>btnPrint</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="tableLayoutPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt, style=Bold</value>
-  </data>
-  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 18</value>
-  </data>
-  <data name="tableLayoutPanel4.RowCount" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1257, 579</value>
-  </data>
-  <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel4.Name" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel4.Parent" xml:space="preserve">
-    <value>gbxLoanDetails</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBoxEntryFees" Row="9" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeComboBox" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelDateOffirstInstallment" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmountMinMax" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallmentsMinMax" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dtpDateOfFirstInstallment" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriodMinMax" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmount" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanInterestRate" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dateLoanStart" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallments" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanStartDate" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lbLoanInterestRateMinMax" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriod" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="numericUpDownLoanGracePeriod" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanNbOfInstallments" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblDay" Row="8" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanAmount" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudInterestRate" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cmbPackages" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonLoanPreview" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnPrint" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="gbxLoanDetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="gbxLoanDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 36</value>
-  </data>
-  <data name="gbxLoanDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1263, 600</value>
-  </data>
-  <data name="gbxLoanDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;gbxLoanDetails.Name" xml:space="preserve">
-    <value>gbxLoanDetails</value>
-  </data>
-  <data name="&gt;&gt;gbxLoanDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxLoanDetails.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxLoanDetails.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="dtpTernDepositDateEnd.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1688,15 +1802,6 @@ Max:
   <data name="olvColumnLACExportedBalance.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
-  </data>
-  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
@@ -1729,6 +1834,30 @@ Max:
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Absolute,20" /&gt;&lt;Rows Styles="" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="labelTitleRepayment.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 15.75pt, style=Italic</value>
@@ -2066,7 +2195,7 @@ Max:
     <value>66</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1263, 636</value>
+    <value>1263, 665</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
