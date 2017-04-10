@@ -1312,6 +1312,11 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                         feeAmount = _amount.Value*fee.FeeValue/100;
                 else
                     feeAmount = fee.FeeValue;
+
+                if (feeAmount > fee.ProductEntryFee.MaxSum && fee.ProductEntryFee.MaxSum > 0 &&
+                    fee.ProductEntryFee.MaxSum != null)
+                    feeAmount = fee.ProductEntryFee.MaxSum;
+
                 entryFees.Add(feeAmount);
             }
             return entryFees;
