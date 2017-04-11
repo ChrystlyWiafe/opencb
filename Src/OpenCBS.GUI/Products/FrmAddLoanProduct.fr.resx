@@ -133,6 +133,9 @@
   <data name="tabPageCommissions.Size" type="System.Drawing.Size, System.Drawing">
     <value>792, 615</value>
   </data>
+  <data name="tabPageCommissions.Text" xml:space="preserve">
+    <value>Commissions de prêt</value>
+  </data>
   <data name="tabPageOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
     <value>792, 615</value>
   </data>

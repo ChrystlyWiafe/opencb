@@ -1182,7 +1182,7 @@
     <value>952, 611</value>
   </data>
   <data name="tabPageCommissions.Text" xml:space="preserve">
-    <value>Comisiones</value>
+    <value>Comisiones de préstamo</value>
   </data>
   <data name="groupBoxExoticProducts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>

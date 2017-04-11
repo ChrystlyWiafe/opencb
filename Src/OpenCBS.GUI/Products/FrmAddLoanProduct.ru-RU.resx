@@ -124,7 +124,7 @@
     <value>Пеня</value>
   </data>
   <data name="tabPageCommissions.Text" xml:space="preserve">
-    <value>Вступительный взнос</value>
+    <value>Вступительный взнос кредита</value>
   </data>
   <data name="tabPageOptionalParameters.Text" xml:space="preserve">
     <value>Дополнительные параметры</value>
