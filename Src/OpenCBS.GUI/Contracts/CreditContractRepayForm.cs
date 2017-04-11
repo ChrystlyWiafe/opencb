@@ -418,9 +418,9 @@ namespace OpenCBS.GUI.Contracts
             {
                 bool isNotPaid = true;
 
-                if (_date.Date < TimeProvider.Now)
+                if (_date.Date < TimeProvider.Today)
                     ServicesProvider.GetInstance().GetContractServices().PerformBackDateOperations();
-                else if (_date.Date > TimeProvider.Now)
+                else if (_date.Date > TimeProvider.Today)
                     ServicesProvider.GetInstance().GetContractServices().PerformFutureDateOperations();
 
                 if (_disableInterests || _disableFees || !_keepExpectedInstallment)
