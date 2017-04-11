@@ -3584,7 +3584,7 @@ namespace OpenCBS.GUI.Clients
                     credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                 }
             }
-            InitializeEntryFees();
+
             if (credit.Product.CycleId != null)
             {
                 credit.AmountMin = _product.AmountMin;
