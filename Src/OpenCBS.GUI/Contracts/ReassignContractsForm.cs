@@ -94,7 +94,6 @@ namespace OpenCBS.GUI.Contracts
             _users = ServicesProvider.GetInstance()
                                      .GetUserServices()
                                      .FindAll(_incudeDeletedUsersCheckBox.Checked)
-                                     .Where(item => item.UserRole.RoleName == "LOF")
                                      .OrderBy(item => item.LastName)
                                      .ThenBy(item => item.FirstName)
                                      .ToList();
