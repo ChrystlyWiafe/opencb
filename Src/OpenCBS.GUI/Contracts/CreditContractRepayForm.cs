@@ -498,7 +498,6 @@ namespace OpenCBS.GUI.Contracts
             catch (Exception ex)
             {
                 new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
-                throw;
             }
         }
 
