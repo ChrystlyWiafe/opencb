@@ -945,15 +945,22 @@ namespace OpenCBS.GUI.Clients
         private double GetXIRR()
         {
             var startDate = _credit.StartDate;
+            var totalFeesAmount = GetTotalFeesInListViewByNudLoanAmount();
             var cashFlows =
                 _credit.InstallmentList.Select(
                     val =>
                         new
                         {
-                            N = -(val.ExpectedDate - startDate).TotalDays,
+                            N = -(val.ExpectedDate - startDate).TotalDays/365.0,
                             Amount = Convert.ToDouble(val.CapitalRepayment.Value + val.InterestsRepayment.Value)
                         }).ToList();
-            decimal amount = _credit.InstallmentList.Sum(val => val.CapitalRepayment.Value);
+            decimal amount = (_credit.InstallmentList.Sum(val => val.CapitalRepayment.Value) - totalFeesAmount.Value);
+            cashFlows.Insert(0,new
+            {
+                N = 0.0,
+                Amount = -Convert.ToDouble(amount)
+            });
+
             double rate = 0;
             double err = 0.00000001;
             var i = 0;
@@ -1177,6 +1184,17 @@ namespace OpenCBS.GUI.Clients
             }
         }
 
+        private OCurrency GetTotalFeesInListViewByNudLoanAmount()
+        {
+            OCurrency totalEntryFeeValue = 0m;
+            foreach (ListViewItem item in lvEntryFees.Items)
+            {
+                if (!item.Tag.Equals("TotalFees"))
+                    totalEntryFeeValue += Convert.ToDecimal(item.SubItems[5].Text);
+            }
+            return totalEntryFeeValue;
+        }
+
         private void lvEntryFees_SubItemEndEditing(object sender, SubItemEndEditingEventArgs e)
         {
             _credit.LoanEntryFeesList.Clear();
@@ -1201,7 +1219,7 @@ namespace OpenCBS.GUI.Clients
                             {
                                 feeAmount = maxSum;
                                 numEntryFees.Minimum = 0;
-                                numEntryFees.Value = 100m * feeAmount.Value / _credit.Amount.Value;
+                                numEntryFees.Value = 100m * feeAmount.Value / (_credit.Amount.HasValue ?_credit.Amount.Value : loanAmount.Value);
                             }
                             else
                                 item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
@@ -1217,7 +1235,7 @@ namespace OpenCBS.GUI.Clients
                             {
                                 feeAmount = maxSum;
                                 numEntryFees.Minimum = 0;
-                                numEntryFees.Value = 100m * feeAmount.Value / _credit.Amount.Value;
+                                numEntryFees.Value = 100m * feeAmount.Value / (_credit.Amount.HasValue ? _credit.Amount.Value : loanAmount.Value);
                             }
                             else
                                 item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
