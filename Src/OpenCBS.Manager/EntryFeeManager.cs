@@ -175,7 +175,7 @@ namespace OpenCBS.Manager
         public List<LoanEntryFee> SelectAllLoanEntryFeeFromCredit(int loanId, IDbTransaction transaction)
         {
             const string query = @"SELECT
-                                    id ID
+                                    id Id
                                     , [entry_fee_id] ProductEntryFeeId
                                     , [fee_value] FeeValue
                                   FROM [dbo].[CreditEntryFees] 
