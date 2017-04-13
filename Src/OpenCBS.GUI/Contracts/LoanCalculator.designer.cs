@@ -48,6 +48,7 @@ namespace OpenCBS.GUI.Clients
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoanCalculator));
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.panelUserControl = new System.Windows.Forms.Panel();
@@ -59,6 +60,20 @@ namespace OpenCBS.GUI.Clients
             this.gbxLoanDetails = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this._loanDetailsScheduleControl1 = new OpenCBS.Controls.ScheduleControl();
+            this.labelCurrencyValue = new System.Windows.Forms.Label();
+            this.labelCurrencyTitle = new System.Windows.Forms.Label();
+            this.labelXirrValue = new System.Windows.Forms.Label();
+            this.labelXirrTitle = new System.Windows.Forms.Label();
+            this.groupBoxEntryFees = new System.Windows.Forms.GroupBox();
+            this.numEntryFees = new System.Windows.Forms.NumericUpDown();
+            this.lvEntryFees = new OpenCBS.GUI.UserControl.ListViewEx();
+            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCalculated = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblMinMaxEntryFees = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this._scheduleTypeComboBox = new System.Windows.Forms.ComboBox();
             this._installmentTypeComboBox = new System.Windows.Forms.ComboBox();
@@ -127,6 +142,8 @@ namespace OpenCBS.GUI.Clients
             this.splitContainer6.SuspendLayout();
             this.gbxLoanDetails.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.groupBoxEntryFees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntryFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLoanGracePeriod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLoanNbOfInstallments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLoanAmount)).BeginInit();
@@ -186,6 +203,11 @@ namespace OpenCBS.GUI.Clients
             // 
             resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
             this.tableLayoutPanel4.Controls.Add(this._loanDetailsScheduleControl1, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labelCurrencyValue, 1, 10);
+            this.tableLayoutPanel4.Controls.Add(this.labelCurrencyTitle, 0, 10);
+            this.tableLayoutPanel4.Controls.Add(this.labelXirrValue, 1, 9);
+            this.tableLayoutPanel4.Controls.Add(this.labelXirrTitle, 0, 9);
+            this.tableLayoutPanel4.Controls.Add(this.groupBoxEntryFees, 0, 11);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this._scheduleTypeComboBox, 1, 6);
             this.tableLayoutPanel4.Controls.Add(this._installmentTypeComboBox, 1, 5);
@@ -209,8 +231,8 @@ namespace OpenCBS.GUI.Clients
             this.tableLayoutPanel4.Controls.Add(this.nudInterestRate, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this._scheduleTypeLabel, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.cmbPackages, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.buttonLoanPreview, 1, 9);
-            this.tableLayoutPanel4.Controls.Add(this.btnPrint, 0, 9);
+            this.tableLayoutPanel4.Controls.Add(this.buttonLoanPreview, 1, 12);
+            this.tableLayoutPanel4.Controls.Add(this.btnPrint, 0, 12);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
             // _loanDetailsScheduleControl1
@@ -219,6 +241,93 @@ namespace OpenCBS.GUI.Clients
             this._loanDetailsScheduleControl1.Name = "_loanDetailsScheduleControl1";
             this.tableLayoutPanel4.SetRowSpan(this._loanDetailsScheduleControl1, 20);
             this._loanDetailsScheduleControl1.ShowOlbAfterRepayment = false;
+            // labelCurrencyValue
+            // 
+            resources.ApplyResources(this.labelCurrencyValue, "labelCurrencyValue");
+            this.labelCurrencyValue.BackColor = System.Drawing.Color.Transparent;
+            this.labelCurrencyValue.Name = "labelCurrencyValue";
+            // 
+            // labelCurrencyTitle
+            // 
+            resources.ApplyResources(this.labelCurrencyTitle, "labelCurrencyTitle");
+            this.labelCurrencyTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelCurrencyTitle.Name = "labelCurrencyTitle";
+            // 
+            // labelXirrValue
+            // 
+            resources.ApplyResources(this.labelXirrValue, "labelXirrValue");
+            this.labelXirrValue.BackColor = System.Drawing.Color.Transparent;
+            this.labelXirrValue.Name = "labelXirrValue";
+            // 
+            // labelXirrTitle
+            // 
+            resources.ApplyResources(this.labelXirrTitle, "labelXirrTitle");
+            this.labelXirrTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelXirrTitle.Name = "labelXirrTitle";
+            // 
+            // groupBoxEntryFees
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.groupBoxEntryFees, 3);
+            this.groupBoxEntryFees.Controls.Add(this.numEntryFees);
+            this.groupBoxEntryFees.Controls.Add(this.lvEntryFees);
+            this.groupBoxEntryFees.Controls.Add(this.lblMinMaxEntryFees);
+            resources.ApplyResources(this.groupBoxEntryFees, "groupBoxEntryFees");
+            this.groupBoxEntryFees.Name = "groupBoxEntryFees";
+            this.groupBoxEntryFees.TabStop = false;
+            // 
+            // numEntryFees
+            // 
+            resources.ApplyResources(this.numEntryFees, "numEntryFees");
+            this.numEntryFees.Name = "numEntryFees";
+            // 
+            // lvEntryFees
+            // 
+            this.lvEntryFees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colName,
+            this.colValue,
+            this.colType,
+            this.colCalculated,
+            this.colMax,
+            this.colAmount});
+            resources.ApplyResources(this.lvEntryFees, "lvEntryFees");
+            this.lvEntryFees.DoubleClickActivation = true;
+            this.lvEntryFees.FullRowSelect = true;
+            this.lvEntryFees.GridLines = true;
+            this.lvEntryFees.Name = "lvEntryFees";
+            this.lvEntryFees.UseCompatibleStateImageBehavior = false;
+            this.lvEntryFees.View = System.Windows.Forms.View.Details;
+            this.lvEntryFees.SubItemClicked += new OpenCBS.GUI.UserControl.SubItemEventHandler(this.lvEntryFees_SubItemClicked);
+            this.lvEntryFees.SubItemEndEditing += new OpenCBS.GUI.UserControl.SubItemEndEditingEventHandler(this.lvEntryFees_SubItemEndEditing);
+            this.lvEntryFees.Click += new System.EventHandler(this.lvEntryFees_Click);
+            // 
+            // colName
+            // 
+            resources.ApplyResources(this.colName, "colName");
+            // 
+            // colValue
+            // 
+            resources.ApplyResources(this.colValue, "colValue");
+            // 
+            // colType
+            // 
+            resources.ApplyResources(this.colType, "colType");
+            // 
+            // colCalculated
+            // 
+            resources.ApplyResources(this.colCalculated, "colCalculated");
+            // 
+            // colMax
+            // 
+            resources.ApplyResources(this.colMax, "colMax");
+            // 
+            // colAmount
+            // 
+            resources.ApplyResources(this.colAmount, "colAmount");
+            // 
+            // lblMinMaxEntryFees
+            // 
+            resources.ApplyResources(this.lblMinMaxEntryFees, "lblMinMaxEntryFees");
+            this.lblMinMaxEntryFees.Name = "lblMinMaxEntryFees";
             // 
             // label3
             // 
@@ -583,6 +692,8 @@ namespace OpenCBS.GUI.Clients
             this.gbxLoanDetails.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.groupBoxEntryFees.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numEntryFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLoanGracePeriod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLoanNbOfInstallments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLoanAmount)).EndInit();
@@ -602,21 +713,13 @@ namespace OpenCBS.GUI.Clients
         protected override void Dispose(bool disposing)
         {
             _product = null;
-            _project = null;
             _credit = null;
-            _guarantee = null;
             _person = null;
-            _personUserControl = null;
-            _groupUserControl = null;
 
             _loanShares = null;
-            _users = null;
             _fundingLine = null;
             _corporate = null;
-            _corporateUserControl = null;
             _followUpList = null;
-            _savingsBookProduct = null;
-            _saving = null;
 
             _client = null;
 
@@ -671,5 +774,19 @@ namespace OpenCBS.GUI.Clients
         private Label label3;
         private Controls.ScheduleControl _loanDetailsScheduleControl1;
         private Button btnPrint;
+        private Label lblMinMaxEntryFees;
+        private GroupBox groupBoxEntryFees;
+        private ListViewEx lvEntryFees;
+        private ColumnHeader colName;
+        private ColumnHeader colValue;
+        private ColumnHeader colType;
+        private ColumnHeader colCalculated;
+        private ColumnHeader colMax;
+        private ColumnHeader colAmount;
+        private NumericUpDown numEntryFees;
+        private Label labelXirrValue;
+        private Label labelXirrTitle;
+        private Label labelCurrencyValue;
+        private Label labelCurrencyTitle;
     }
 }
