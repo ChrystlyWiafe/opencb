@@ -7517,7 +7517,7 @@ namespace OpenCBS.GUI.Clients
                             if (entryFee.ProductEntryFee.IsRate)
                             {
                                 feeAmount = amount * feeAmount / 100;
-
+                                item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                                 if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
                                 {
                                     feeAmount = entryFee.ProductEntryFee.MaxSum;
@@ -7526,6 +7526,7 @@ namespace OpenCBS.GUI.Clients
                             }
                             else
                             {
+                                item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                                 if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
                                 {
                                     feeAmount = entryFee.ProductEntryFee.MaxSum;
