@@ -738,7 +738,7 @@ namespace OpenCBS.GUI.Clients
                     }
                 }
             }
-
+            _credit.Amount = nudLoanAmount.Value;
             nudLoanAmount.Text = nudLoanAmount.Value.ToString(); //Workaround for text emptyness
         }
 
@@ -1218,7 +1218,7 @@ namespace OpenCBS.GUI.Clients
                             {
                                 feeAmount = maxSum;
                                 numEntryFees.Minimum = 0;
-                                numEntryFees.Value = 100m * feeAmount.Value / (_credit.Amount.HasValue ?_credit.Amount.Value : loanAmount.Value);
+                                numEntryFees.Value = 100m*feeAmount.Value/_credit.Amount.Value;//(_credit.Amount.HasValue ?_credit.Amount.Value : loanAmount.Value);
                             }
                             else
                                 item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
@@ -1234,7 +1234,7 @@ namespace OpenCBS.GUI.Clients
                             {
                                 feeAmount = maxSum;
                                 numEntryFees.Minimum = 0;
-                                numEntryFees.Value = 100m * feeAmount.Value / (_credit.Amount.HasValue ? _credit.Amount.Value : loanAmount.Value);
+                                numEntryFees.Value = 100m*feeAmount.Value/_credit.Amount.Value;//(_credit.Amount.HasValue ? _credit.Amount.Value : loanAmount.Value);
                             }
                             else
                                 item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
@@ -1246,5 +1246,60 @@ namespace OpenCBS.GUI.Clients
             }
             ShowTotalFeesInListViewByNudLoanAmount();
         }
+
+        private void nudLoanAmount_ValueChanged(object sender, EventArgs e)
+        {
+            OCurrency amount = 0;
+            if (_credit != null)
+            {
+                decimal loanAmount;
+                if (decimal.TryParse(nudLoanAmount.Text, out loanAmount))
+                    amount = ServicesHelper.ConvertStringToDecimal(nudLoanAmount.Text, 0, _credit.Product.UseCents);
+
+
+                if (_credit.LoanEntryFeesList != null)
+                {
+                    //_credit.LoanEntryFeesList.Clear();
+
+                    foreach (ListViewItem item in lvEntryFees.Items)
+                    {
+                        if (item.Tag is LoanEntryFee)
+                        {
+                            var entryFee = (LoanEntryFee)item.Tag;
+                            OCurrency feeAmount = entryFee.FeeValue < entryFee.ProductEntryFee.Min
+                                ? entryFee.ProductEntryFee.Min
+                                : entryFee.FeeValue;
+
+                            if (entryFee.ProductEntryFee.IsRate)
+                            {
+                                feeAmount = amount * feeAmount / 100;
+                                item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                                entryFee.FeeValue = feeAmount.Value * 100 / nudLoanAmount.Value;
+                                if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
+                                {
+                                    feeAmount = entryFee.ProductEntryFee.MaxSum;
+                                }
+                            }
+                            else
+                            {
+                                item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                                entryFee.FeeValue = feeAmount.Value;
+                                if (feeAmount > entryFee.ProductEntryFee.MaxSum && entryFee.ProductEntryFee.MaxSum > 0m)
+                                {
+                                    feeAmount = entryFee.ProductEntryFee.MaxSum;
+                                }
+                            }
+                            OCurrency rateValue = entryFee.FeeValue;
+                            item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            item.SubItems[5].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                        }
+                    }
+                    ShowTotalFeesInListViewByNudLoanAmount();
+                }
+            }
+            if(_credit!=null && _credit.Amount.HasValue)
+            Preview();
+        }
+        }
+        
     }
-}

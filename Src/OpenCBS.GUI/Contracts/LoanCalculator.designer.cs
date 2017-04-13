@@ -454,6 +454,7 @@ namespace OpenCBS.GUI.Clients
             // 
             resources.ApplyResources(this.nudLoanAmount, "nudLoanAmount");
             this.nudLoanAmount.Name = "nudLoanAmount";
+            this.nudLoanAmount.ValueChanged += new System.EventHandler(this.nudLoanAmount_ValueChanged);
             // 
             // nudInterestRate
             // 
