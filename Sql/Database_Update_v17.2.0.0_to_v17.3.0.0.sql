@@ -35,6 +35,7 @@ IF (SELECT TOP 1 [component_name] FROM dbo.[MenuItems] WHERE [component_name] = 
 				END
 		FROM dbo.Roles r
     END
+GO
 
 IF (SELECT TOP 1 [method_name] FROM dbo.[ActionItems] WHERE [method_name] = 'StopPenalty') IS NULL
     BEGIN				
@@ -52,6 +53,7 @@ IF (SELECT TOP 1 [method_name] FROM dbo.[ActionItems] WHERE [method_name] = 'Sto
 		FROM dbo.Roles r
     END
 GO
+
 IF (SELECT TOP 1 [method_name] FROM dbo.[ActionItems] WHERE [method_name] = 'StopInterest') IS NULL
     BEGIN				
 		INSERT INTO [dbo].[ActionItems]([class_name], [method_name]) VALUES ('LoanServices', 'StopInterest')
