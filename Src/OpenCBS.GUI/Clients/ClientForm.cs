@@ -3883,6 +3883,9 @@ namespace OpenCBS.GUI.Clients
                                             foreach (var tab in LoanTabs) tab.Save(credit, tx);
                                             foreach (var extension in LoanExtensions) extension.Save(credit, tx);
                                         });
+                        _credit.LoanEntryFeesList =
+                            ServicesProvider.GetInstance().GetContractServices().GetInstalledLoanEntryFees(credit);
+                        InitializeEntryFees();
                     }
                     catch (OpenCBS.ExceptionsHandler.Exceptions.CustomFieldsExceptions.CustomFieldsAreNotFilledCorrectlyException)
                     {
@@ -3925,7 +3928,9 @@ namespace OpenCBS.GUI.Clients
                     {
                         LoanTabs.ForEach(e => e.Save(credit, tx));
                     });
-
+                    _credit.LoanEntryFeesList =
+                        ServicesProvider.GetInstance().GetContractServices().GetInstalledLoanEntryFees(credit);
+                    InitializeEntryFees();
                     if (_oClientType == OClientTypes.Group)
                     {
                         int nbOfMembers = _groupUserControl.Group.Members.Count;
