@@ -1027,11 +1027,15 @@ namespace OpenCBS.GUI.UserControl
                 {
                     if (contract.Disbursed && !contract.Closed)
                     {
-                        string message = MultiLanguageStrings.GetString(Ressource.GroupUserControl, "CantModifyGroup");
-                        MessageBox.Show(message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         IsModified = false;
                     }
                 }
+            }
+
+            if (!IsModified)
+            {
+                string message = MultiLanguageStrings.GetString(Ressource.GroupUserControl, "CantModifyGroup");
+                MessageBox.Show(message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             return IsModified;
