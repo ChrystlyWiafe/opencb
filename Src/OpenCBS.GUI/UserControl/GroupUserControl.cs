@@ -1047,47 +1047,40 @@ namespace OpenCBS.GUI.UserControl
 
         private void AddMembers()
         {
-            if (!group.Active)
+            if (GroupHasActiveContracts())
             {
-                if (GroupHasActiveContracts())
+                ClientForm personForm = new ClientForm(OClientTypes.Person, _mdiParent, true, _applicationController);
+                if (DialogResult.OK == personForm.ShowDialog())
                 {
-                    ClientForm personForm = new ClientForm(OClientTypes.Person, _mdiParent, true, _applicationController);
-                    if (DialogResult.OK == personForm.ShowDialog())
+                    try
                     {
-                        try
+                        if (group.Id != 0)
+                            ServicesProvider.GetInstance().GetClientServices().CheckMaxNumberOfMembers(group);
+                        Person pers = personForm.Person;
+                        if (ServicesProvider.GetInstance().GetClientServices().ClientIsAPerson(pers))
                         {
-                            if (group.Id != 0)
-                                ServicesProvider.GetInstance().GetClientServices().CheckMaxNumberOfMembers(group);
-                            Person pers = personForm.Person;
-                            if (ServicesProvider.GetInstance().GetClientServices().ClientIsAPerson(pers))
+                            group.AddMember(new Member
                             {
-                                group.AddMember(new Member
-                                                    {
-                                                        Tiers = pers,
-                                                        LoanShareAmount = 0,
-                                                        CurrentlyIn = true,
-                                                        IsLeader = false,
-                                                        JoinedDate = TimeProvider.Today
-                                                    });
-                                DisplayMembers();
-                                ServicesProvider.GetInstance().GetContractServices().DeleteLoanShareAmountWhereNotDisbursed(group.Id);
-                                if (MembersChanged != null) MembersChanged(this, null);
-                                if (group.Id != 0)
-                                    buttonSave_Click(this, null);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                                Tiers = pers,
+                                LoanShareAmount = 0,
+                                CurrentlyIn = true,
+                                IsLeader = false,
+                                JoinedDate = TimeProvider.Today
+                            });
+                            DisplayMembers();
+                            ServicesProvider.GetInstance()
+                                .GetContractServices()
+                                .DeleteLoanShareAmountWhereNotDisbursed(group.Id);
+                            if (MembersChanged != null) MembersChanged(this, null);
+                            if (group.Id != 0)
+                                buttonSave_Click(this, null);
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show(MultiLanguageStrings.GetString(Ressource.GroupUserControl, "CannotAddRemoveMember.Text"), "",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
             }
         }
 
