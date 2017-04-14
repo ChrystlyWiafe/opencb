@@ -1025,7 +1025,7 @@ namespace OpenCBS.GUI.UserControl
             {
                 foreach (Loan contract in project.Credits)
                 {
-                    if (contract.Disbursed && !contract.Closed)
+                    if (contract.Disbursed && !contract.Closed && !contract.WrittenOff)
                     {
                         IsModified = false;
                     }
