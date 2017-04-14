@@ -207,7 +207,7 @@ namespace OpenCBS.GUI.Clients
             this.tableLayoutPanel4.Controls.Add(this.labelCurrencyTitle, 0, 10);
             this.tableLayoutPanel4.Controls.Add(this.labelXirrValue, 1, 9);
             this.tableLayoutPanel4.Controls.Add(this.labelXirrTitle, 0, 9);
-            this.tableLayoutPanel4.Controls.Add(this.groupBoxEntryFees, 0, 11);
+            this.tableLayoutPanel4.Controls.Add(this.groupBoxEntryFees, 3, 14);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this._scheduleTypeComboBox, 1, 6);
             this.tableLayoutPanel4.Controls.Add(this._installmentTypeComboBox, 1, 5);
@@ -239,7 +239,7 @@ namespace OpenCBS.GUI.Clients
             // 
             resources.ApplyResources(this._loanDetailsScheduleControl1, "_loanDetailsScheduleControl1");
             this._loanDetailsScheduleControl1.Name = "_loanDetailsScheduleControl1";
-            this.tableLayoutPanel4.SetRowSpan(this._loanDetailsScheduleControl1, 20);
+            this.tableLayoutPanel4.SetRowSpan(this._loanDetailsScheduleControl1, 13);
             this._loanDetailsScheduleControl1.ShowOlbAfterRepayment = false;
             // labelCurrencyValue
             // 
@@ -267,7 +267,6 @@ namespace OpenCBS.GUI.Clients
             // 
             // groupBoxEntryFees
             // 
-            this.tableLayoutPanel4.SetColumnSpan(this.groupBoxEntryFees, 3);
             this.groupBoxEntryFees.Controls.Add(this.numEntryFees);
             this.groupBoxEntryFees.Controls.Add(this.lvEntryFees);
             this.groupBoxEntryFees.Controls.Add(this.lblMinMaxEntryFees);

@@ -307,7 +307,7 @@
     <value>0, 36</value>
   </data>
   <data name="loanDetailsButtonsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1263, 0</value>
+    <value>1211, 0</value>
   </data>
   <data name="loanDetailsButtonsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -328,7 +328,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonLoanPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 459</value>
+    <value>194, 298</value>
   </data>
   <data name="buttonLoanPreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 36</value>
@@ -523,10 +523,10 @@
     <value>3</value>
   </data>
   <data name="numEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 64</value>
+    <value>566, 74</value>
   </data>
   <data name="numEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 22</value>
+    <value>129, 22</value>
   </data>
   <data name="numEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -550,7 +550,7 @@
     <value>Name</value>
   </data>
   <data name="colName.Width" type="System.Int32, mscorlib">
-    <value>78</value>
+    <value>142</value>
   </data>
   <data name="colValue.Text" xml:space="preserve">
     <value>Value</value>
@@ -559,13 +559,13 @@
     <value>Right</value>
   </data>
   <data name="colValue.Width" type="System.Int32, mscorlib">
-    <value>56</value>
+    <value>70</value>
   </data>
   <data name="colType.Text" xml:space="preserve">
     <value />
   </data>
   <data name="colType.Width" type="System.Int32, mscorlib">
-    <value>58</value>
+    <value>67</value>
   </data>
   <data name="colCalculated.Text" xml:space="preserve">
     <value>Calculated</value>
@@ -574,7 +574,7 @@
     <value>Right</value>
   </data>
   <data name="colCalculated.Width" type="System.Int32, mscorlib">
-    <value>76</value>
+    <value>96</value>
   </data>
   <data name="colMax.Text" xml:space="preserve">
     <value>Max</value>
@@ -583,7 +583,7 @@
     <value>Right</value>
   </data>
   <data name="colMax.Width" type="System.Int32, mscorlib">
-    <value>52</value>
+    <value>68</value>
   </data>
   <data name="colAmount.Text" xml:space="preserve">
     <value>Amount</value>
@@ -592,7 +592,7 @@
     <value>Right</value>
   </data>
   <data name="colAmount.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>103</value>
   </data>
   <data name="lvEntryFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -604,7 +604,7 @@
     <value>3, 18</value>
   </data>
   <data name="lvEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 134</value>
+    <value>552, 179</value>
   </data>
   <data name="lvEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -628,10 +628,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblMinMaxEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 18</value>
+    <value>563, 18</value>
   </data>
   <data name="lblMinMaxEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 43</value>
+    <value>132, 43</value>
   </data>
   <data name="lblMinMaxEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -663,10 +663,10 @@ Max:
     <value>Arial, 9.75pt</value>
   </data>
   <data name="groupBoxEntryFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 298</value>
+    <value>501, 340</value>
   </data>
   <data name="groupBoxEntryFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 155</value>
+    <value>701, 200</value>
   </data>
   <data name="groupBoxEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -1440,7 +1440,7 @@ Max:
     <value>NoControl</value>
   </data>
   <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 459</value>
+    <value>3, 298</value>
   </data>
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 36</value>
@@ -1476,7 +1476,7 @@ Max:
     <value>20</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1257, 624</value>
+    <value>1205, 676</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
@@ -1494,7 +1494,7 @@ Max:
     <value>0</value>
   </data>
   <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelCurrencyValue" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelCurrencyTitle" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelXirrValue" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelXirrTitle" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxEntryFees" Row="11" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeComboBox" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelDateOffirstInstallment" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmountMinMax" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallmentsMinMax" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dtpDateOfFirstInstallment" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriodMinMax" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmount" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanInterestRate" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dateLoanStart" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallments" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanStartDate" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lbLoanInterestRateMinMax" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriod" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="numericUpDownLoanGracePeriod" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanNbOfInstallments" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblDay" Row="8" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanAmount" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudInterestRate" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cmbPackages" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonLoanPreview" Row="12" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnPrint" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelCurrencyValue" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelCurrencyTitle" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelXirrValue" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelXirrTitle" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxEntryFees" Row="14" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeComboBox" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="_installmentTypeLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelDateOffirstInstallment" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmountMinMax" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallmentsMinMax" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dtpDateOfFirstInstallment" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriodMinMax" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanAmount" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanInterestRate" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dateLoanStart" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanNbOfInstallments" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanStartDate" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lbLoanInterestRateMinMax" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelLoanGracePeriod" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="numericUpDownLoanGracePeriod" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanNbOfInstallments" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblDay" Row="8" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="nudLoanAmount" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nudInterestRate" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_scheduleTypeLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cmbPackages" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonLoanPreview" Row="12" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnPrint" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,96,Absolute,12,Absolute,23,Absolute,17,Absolute,8,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="gbxLoanDetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1503,7 +1503,7 @@ Max:
     <value>0, 36</value>
   </data>
   <data name="gbxLoanDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1263, 645</value>
+    <value>1211, 697</value>
   </data>
   <data name="gbxLoanDetails.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2222,7 +2222,7 @@ Max:
     <value>66</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1263, 681</value>
+    <value>1211, 733</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
