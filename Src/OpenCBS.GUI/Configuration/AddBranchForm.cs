@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
 using OpenCBS.ExceptionsHandler;
@@ -41,12 +42,14 @@ namespace OpenCBS.GUI.Configuration
         private string tempCode;
         private string tempAddress;
         private string tempDescription;
+        private List<AccountingPaymentMethod> _tempPaymentMethods; 
         public bool EditBranch;
         private TranslationService _translationService;
 
         public AddBranchForm(bool editBranch)
         {
             EditBranch = editBranch;
+            _tempPaymentMethods = new List<AccountingPaymentMethod>();
             InitializeComponent();
         }
 
@@ -64,10 +67,6 @@ namespace OpenCBS.GUI.Configuration
         {
             Debug.Assert(Branch != null, "Branch is null");
             Text = IsNew ? GetString("add") : GetString("edit");
-            if (IsNew)
-            {
-                tabControl.TabPages.Remove(tabPageAddPaymentMethod);
-            }
             tempName = Branch.Name;
             tempCode = Branch.Code;
             tempAddress = Branch.Address;
@@ -104,6 +103,12 @@ namespace OpenCBS.GUI.Configuration
                 if (IsNew)
                 {
                     ServicesProvider.GetInstance().GetBranchService().Add(Branch);
+                    var paymentMethodService = ServicesProvider.GetInstance().GetPaymentMethodServices();
+                    foreach (var paymentMethod in _tempPaymentMethods)
+                    {
+                        paymentMethod.Branch = Branch;
+                        paymentMethodService.AddPaymentMethodToBranch(paymentMethod);
+                    }
                 }
                 else
                 {
@@ -120,8 +125,9 @@ namespace OpenCBS.GUI.Configuration
         public void LoadPaymentMethods()
         {
             lvPaymentMethods.Items.Clear();
-            List<AccountingPaymentMethod> methods =
-                ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(Branch.Id);
+            List<AccountingPaymentMethod> methods = IsNew
+                ? _tempPaymentMethods
+                : ServicesProvider.GetInstance().GetPaymentMethodServices().GetAllPaymentMethodsOfBranch(Branch.Id);
             foreach (AccountingPaymentMethod method in methods)
             {
                 method.Account =
@@ -140,11 +146,23 @@ namespace OpenCBS.GUI.Configuration
             if (DialogResult.OK != frm.ShowDialog()) return;
             try
             {
-                var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
-                if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
-                    paymentMethodServices.AddPaymentMethodToBranch(frm.PaymentMethod);
+                if (!IsNew)
+                {
+                    var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
+                    if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
+                        paymentMethodServices.AddPaymentMethodToBranch(frm.PaymentMethod);
+                    else
+                        throw new OpenCbsException(
+                            _translationService.Translate("The same payment method already exists."));
+                }
                 else
-                    throw new OpenCbsException(_translationService.Translate("The same payment method already exists."));
+                {
+                    if (_tempPaymentMethods.All(val => val.Name != frm.PaymentMethod.Name))
+                        _tempPaymentMethods.Add(frm.PaymentMethod);
+                    else
+                        throw new OpenCbsException(
+                            _translationService.Translate("The same payment method already exists."));
+                }
 
             }
             catch (Exception ex)
@@ -161,8 +179,10 @@ namespace OpenCBS.GUI.Configuration
             AccountingPaymentMethod paymentMethod = lvPaymentMethods.SelectedItems[0].Tag as AccountingPaymentMethod;
             Debug.Assert(paymentMethod != null, "Payment method not selected!");
             if (!Confirm("confirmDelete")) return;
-            ServicesProvider.GetInstance().GetPaymentMethodServices().Delete(paymentMethod);
-
+            if (IsNew)
+                _tempPaymentMethods.Remove(paymentMethod);
+            else
+                ServicesProvider.GetInstance().GetPaymentMethodServices().Delete(paymentMethod);
             LoadPaymentMethods();
         }
 
@@ -176,11 +196,22 @@ namespace OpenCBS.GUI.Configuration
             if (DialogResult.OK != frm.ShowDialog()) return;
             try
             {
-                var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
-                if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
-                    paymentMethodServices.UpdatePaymentMethodFromBranch(frm.PaymentMethod);
+                if (!IsNew)
+                {
+                    var paymentMethodServices = ServicesProvider.GetInstance().GetPaymentMethodServices();
+                    if (!paymentMethodServices.ExistsLinkBranchesPaymentMethods(frm.PaymentMethod))
+                        paymentMethodServices.UpdatePaymentMethodFromBranch(frm.PaymentMethod);
+                    else
+                        throw new OpenCbsException(_translationService.Translate("The same payment method already exists."));
+                }
                 else
-                    throw new OpenCbsException(_translationService.Translate("The same payment method already exists."));
+                {
+                    if (_tempPaymentMethods.All(val => val.Name != paymentMethod.Name))
+                        _tempPaymentMethods.Add(paymentMethod);
+                    else
+                        throw new OpenCbsException(
+                            _translationService.Translate("The same payment method already exists."));
+                }
             }
             catch(Exception ex)
             {

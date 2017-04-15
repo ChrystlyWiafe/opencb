@@ -31,7 +31,7 @@ namespace OpenCBS.GUI.Configuration
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBranchForm));
-            this.tabControl = new TablessControl(EditBranch);
+            this.tabControl = new TablessControl(true);
             this.tabPageAddBranches = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();

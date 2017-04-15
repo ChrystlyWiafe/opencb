@@ -99,7 +99,9 @@ namespace OpenCBS.GUI.Configuration
                                                            GetPaymentMethodById(pm.Id).Id,
                                                        Name = pm.Name,
                                                        LinkId = _paymentMethod == null ? 0 : _paymentMethod.LinkId,
-                                                       Branch = branch
+                                                       Branch = branch,
+                                                       AccountNumber = pm.AccountNumber,
+                                                       Account = pm.Account
                                                    };
             if (string.IsNullOrEmpty(_paymentMethod.Name))
             {
