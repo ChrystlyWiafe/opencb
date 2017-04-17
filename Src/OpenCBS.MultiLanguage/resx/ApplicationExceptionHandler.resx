@@ -339,7 +339,7 @@ You must complete either "min" and "max" or "value". Amount cannot be null (Main
     <value>This person already has an open contract</value>
   </data>
   <data name="OTE18.Text" xml:space="preserve">
-    <value>This person is a leader in a group</value>
+    <value>This person is a leader in another group</value>
   </data>
   <data name="OTE19.Text" xml:space="preserve">
     <value>Name is empty</value>
