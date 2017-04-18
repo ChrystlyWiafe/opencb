@@ -155,3 +155,9 @@ IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'SHOW_SPECIAL_
         INSERT INTO [GeneralParameters]([key], [value]) VALUES('SHOW_SPECIAL_FUNCTIONS_BUTTON', 0)
     END
 GO
+
+IF col_length('dbo.EntryFees','account_number') IS NULL
+    BEGIN
+        ALTER TABLE dbo.EntryFees ADD account_number VARCHAR(32) NOT NULL
+    END
+GO
