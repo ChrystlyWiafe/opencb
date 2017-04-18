@@ -30,6 +30,7 @@ namespace OpenCBS.Manager
                                 ,[rate] IsRate
                                 ,[max_sum] MaxSum
                                 ,[is_deleted] IsDeleted
+                                ,[account_number] AccountNumber
                             FROM
                                 [dbo].[EntryFees]";
 
@@ -69,13 +70,15 @@ namespace OpenCBS.Manager
                                         min,
                                         max, 
                                         rate, 
-                                        max_sum)
+                                        max_sum, 
+                                        account_number)
                                    VALUES
                                        (@Name,
                                         @Min,
                                         @Max,
                                         @IsRate,
-                                        @MaxSum)";
+                                        @MaxSum,
+                                        @AccountNumber)";
 
             transaction.Connection.Execute(query, entryFee, transaction);
         }
@@ -117,7 +120,8 @@ namespace OpenCBS.Manager
                                         min = @Min,
                                         max = @Max, 
                                         rate = @IsRate, 
-                                        max_sum = @MaxSum
+                                        max_sum = @MaxSum,
+                                        account_number = @AccountNumber
                                    where
                                         id = @Id";
 

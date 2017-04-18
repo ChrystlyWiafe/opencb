@@ -51,6 +51,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
+                item.SubItems.Add(fee.AccountNumber);
 
                 if (fee.IsDeleted)
                 {

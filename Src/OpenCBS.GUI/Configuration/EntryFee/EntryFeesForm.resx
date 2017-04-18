@@ -142,7 +142,7 @@
     <value>Name</value>
   </data>
   <data name="chName.Width" type="System.Int32, mscorlib">
-    <value>478</value>
+    <value>421</value>
   </data>
   <data name="chMin.Text" xml:space="preserve">
     <value>Min</value>
@@ -168,6 +168,12 @@
   <data name="chMaxSum.Width" type="System.Int32, mscorlib">
     <value>110</value>
   </data>
+  <data name="chAccount.Text" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="chAccount.Width" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
   <data name="_listViewEntryFee.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -178,7 +184,7 @@
     <value>0, 0</value>
   </data>
   <data name="_listViewEntryFee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 702</value>
+    <value>1040, 690</value>
   </data>
   <data name="_listViewEntryFee.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -349,7 +355,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 702</value>
+    <value>1255, 690</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
     <value>1040</value>
@@ -478,7 +484,7 @@
     <value>1</value>
   </data>
   <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 753</value>
+    <value>1255, 741</value>
   </data>
   <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
     <value>47</value>
@@ -505,7 +511,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 753</value>
+    <value>1255, 741</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Entry Fees</value>
@@ -546,10 +552,16 @@
   <data name="&gt;&gt;chMaxSum.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;chAccount.Name" xml:space="preserve">
+    <value>chAccount</value>
+  </data>
+  <data name="&gt;&gt;chAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EntryFeesForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=16.12.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

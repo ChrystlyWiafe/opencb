@@ -28,5 +28,10 @@ namespace OpenCBS.CoreDomain.Accounting.Model
         {
             return MemberwiseClone();
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", AccountNumber, Label);
+        }
     }
 }

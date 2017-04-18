@@ -61,6 +61,15 @@ namespace OpenCBS.MultiLanguageRessources.resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have to fill the account number field..
+        /// </summary>
+        internal static string accountEmpty {
+            get {
+                return ResourceManager.GetString("accountEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minimum is greater than maximum.
         /// </summary>
         internal static string minGreaterMax {

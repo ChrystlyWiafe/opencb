@@ -37,6 +37,7 @@
             this.chMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chRate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chMaxSum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._checkBoxShowDeleted = new System.Windows.Forms.CheckBox();
             this._buttonAdd = new System.Windows.Forms.Button();
             this._buttonDelete = new System.Windows.Forms.Button();
@@ -82,7 +83,8 @@
             this.chMin,
             this.chMax,
             this.chRate,
-            this.chMaxSum});
+            this.chMaxSum,
+            this.chAccount});
             resources.ApplyResources(this._listViewEntryFee, "_listViewEntryFee");
             this._listViewEntryFee.FullRowSelect = true;
             this._listViewEntryFee.GridLines = true;
@@ -116,6 +118,10 @@
             // chMaxSum
             // 
             resources.ApplyResources(this.chMaxSum, "chMaxSum");
+            // 
+            // chAccount
+            // 
+            resources.ApplyResources(this.chAccount, "chAccount");
             // 
             // _checkBoxShowDeleted
             // 
@@ -210,5 +216,6 @@
         private System.Windows.Forms.CheckBox _checkBoxShowDeleted;
         private System.Windows.Forms.Button _buttonClose;
         private System.Windows.Forms.Label lblRoles;
+        private System.Windows.Forms.ColumnHeader chAccount;
     }
 }

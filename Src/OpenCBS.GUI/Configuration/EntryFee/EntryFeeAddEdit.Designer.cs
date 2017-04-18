@@ -44,6 +44,8 @@
             this._numericUpDownMax = new System.Windows.Forms.NumericUpDown();
             this._numericUpDownMaxSum = new System.Windows.Forms.NumericUpDown();
             this._timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this._comboBoxAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMaxSum)).BeginInit();
@@ -98,12 +100,12 @@
             // 
             // _comboBoxRate
             // 
+            resources.ApplyResources(this._comboBoxRate, "_comboBoxRate");
             this._comboBoxRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._comboBoxRate.FormattingEnabled = true;
             this._comboBoxRate.Items.AddRange(new object[] {
             resources.GetString("_comboBoxRate.Items"),
             resources.GetString("_comboBoxRate.Items1")});
-            resources.ApplyResources(this._comboBoxRate, "_comboBoxRate");
             this._comboBoxRate.Name = "_comboBoxRate";
             this._comboBoxRate.SelectedIndexChanged += new System.EventHandler(this.RateChanged);
             // 
@@ -137,15 +139,28 @@
             0});
             this._numericUpDownMaxSum.Name = "_numericUpDownMaxSum";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // _comboBoxAccount
+            // 
+            resources.ApplyResources(this._comboBoxAccount, "_comboBoxAccount");
+            this._comboBoxAccount.FormattingEnabled = true;
+            this._comboBoxAccount.Name = "_comboBoxAccount";
+            // 
             // EntryFeeAddEdit
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this._comboBoxAccount);
             this.Controls.Add(this._numericUpDownMaxSum);
             this.Controls.Add(this._numericUpDownMax);
             this.Controls.Add(this._numericUpDownMin);
             this.Controls.Add(this._comboBoxRate);
             this.Controls.Add(this._buttonSave);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this._labelMaxSum);
             this.Controls.Add(this._labelRate);
             this.Controls.Add(this._labelMax);
@@ -182,5 +197,7 @@
         private System.Windows.Forms.NumericUpDown _numericUpDownMax;
         private System.Windows.Forms.NumericUpDown _numericUpDownMaxSum;
         private System.Windows.Forms.Timer _timer;
+        private System.Windows.Forms.Label label1;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox _comboBoxAccount;
     }
 }
