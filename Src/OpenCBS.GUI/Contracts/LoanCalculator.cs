@@ -1300,6 +1300,11 @@ namespace OpenCBS.GUI.Clients
             if(_credit!=null && _credit.Amount.HasValue)
             Preview();
         }
+
+        private void LoanCalculator_Load(object sender, EventArgs e)
+        {
+            Preview();
         }
+    }
         
     }

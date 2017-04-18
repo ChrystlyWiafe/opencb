@@ -679,6 +679,7 @@ namespace OpenCBS.GUI.Clients
             this.Controls.Add(this.loanDetailsButtonsPanel);
             this.Controls.Add(this.gbxLoanDetails);
             this.Name = "LoanCalculator";
+            this.Load += new System.EventHandler(this.LoanCalculator_Load);
             this.Controls.SetChildIndex(this.gbxLoanDetails, 0);
             this.Controls.SetChildIndex(this.loanDetailsButtonsPanel, 0);
             this.splitContainer3.Panel2.ResumeLayout(false);
