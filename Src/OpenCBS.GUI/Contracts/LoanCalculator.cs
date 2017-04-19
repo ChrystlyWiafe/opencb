@@ -808,50 +808,49 @@ namespace OpenCBS.GUI.Clients
 
         private Loan CreateAndSetContract()
         {
-                _credit.Guarantors = _listGuarantors;
-                _credit.Collaterals = _collaterals;
-                _credit.LoanShares = _loanShares;
-                _credit.Amount = ServicesHelper.ConvertStringToDecimal(nudLoanAmount.Text, _credit.UseCents);
-                _credit.StartDate = dateLoanStart.Value;
-                _credit.FirstInstallmentDate = dtpDateOfFirstInstallment.Value;
-                dtpDateOfFirstInstallment.Value = _credit.FirstInstallmentDate;
-                _credit.InterestRate = ServicesHelper.ConvertStringToNullableDecimal(nudInterestRate.Text, true, -1).Value;
-                _credit.NbOfInstallments = Convert.ToInt32(nudLoanNbOfInstallments.Value);
-                _credit.InstallmentType = (InstallmentType)_installmentTypeComboBox.SelectedItem;
-                _credit.ScheduleType = GetScheduleType();
-                _credit.ScriptName = GetScriptName();
-                if (_credit.ContractStatus == OContractStatus.Pending)
+            _credit.Guarantors = _listGuarantors;
+            _credit.Collaterals = _collaterals;
+            _credit.LoanShares = _loanShares;
+            _credit.Amount = ServicesHelper.ConvertStringToDecimal(nudLoanAmount.Text, _credit.UseCents);
+            _credit.StartDate = dateLoanStart.Value;
+            _credit.FirstInstallmentDate = dtpDateOfFirstInstallment.Value;
+            dtpDateOfFirstInstallment.Value = _credit.FirstInstallmentDate;
+            _credit.InterestRate = ServicesHelper.ConvertStringToNullableDecimal(nudInterestRate.Text, true, -1).Value;
+            _credit.NbOfInstallments = Convert.ToInt32(nudLoanNbOfInstallments.Value);
+            _credit.InstallmentType = (InstallmentType) _installmentTypeComboBox.SelectedItem;
+            _credit.ScheduleType = GetScheduleType();
+            _credit.ScriptName = GetScriptName();
+            if (_credit.ContractStatus == OContractStatus.Pending)
+            {
+                _credit.AlignDisbursementDate = _credit.CalculateAlignDisbursementDate(_credit.FirstInstallmentDate);
+            }
+            _credit.EconomicActivityId = 1;
+            _credit.GracePeriod = Convert.ToInt32(numericUpDownLoanGracePeriod.Value);
+            _credit.GracePeriodOfLateFees = _gracePeriodOfLateFees;
+
+            _credit.LoanOfficer = User.CurrentUser;
+            _credit.LoanInitialOfficer = _credit.LoanOfficer;
+
+            if (!_credit.Disbursed && !_credit.ScheduleChangedManually)
+                _credit.InstallmentList =
+                    ServicesProvider.GetInstance().GetContractServices().SimulateScheduleCreation(_credit) ??
+                    new List<Installment>();
+
+            _credit.LoanEntryFeesList = new List<LoanEntryFee>();
+            foreach (ListViewItem item in lvEntryFees.Items)
+            {
+                if (item.Tag is LoanEntryFee)
                 {
-                    _credit.AlignDisbursementDate = _credit.CalculateAlignDisbursementDate(_credit.FirstInstallmentDate);
+                    ((LoanEntryFee) item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
+                    _credit.LoanEntryFeesList.Add((LoanEntryFee) item.Tag);
                 }
-                _credit.EconomicActivityId = 1;
-                _credit.GracePeriod = Convert.ToInt32(numericUpDownLoanGracePeriod.Value);
-                _credit.GracePeriodOfLateFees = _gracePeriodOfLateFees;
+            }
 
-                _credit.LoanOfficer = User.CurrentUser;
-                _credit.LoanInitialOfficer = _credit.LoanOfficer;
-
-                if (!_credit.Disbursed && !_credit.ScheduleChangedManually)
-                    _credit.InstallmentList =
-                        ServicesProvider.GetInstance().GetContractServices().SimulateScheduleCreation(_credit);
-
-                    _credit.LoanEntryFeesList = new List<LoanEntryFee>();
-                    foreach (ListViewItem item in lvEntryFees.Items)
-                    {
-                        if (item.Tag is LoanEntryFee)
-                        {
-                            ((LoanEntryFee)item.Tag).FeeValue = decimal.Parse(item.SubItems[1].Text);
-                            _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
-                        }
-                    }
-                    if (!_credit.Disbursed && !_credit.ScheduleChangedManually)
-                        _credit.InstallmentList =
-                            ServicesProvider.GetInstance().GetContractServices().SimulateScheduleCreation(_credit);
-                    if (_credit.InstallmentList != null && _credit.InstallmentList.Count > 0)
-                    {
-                        var firstInstallment = _credit.InstallmentList.First();
-                        _credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
-                    }
+            if (_credit.InstallmentList != null && _credit.InstallmentList.Count > 0)
+            {
+                var firstInstallment = _credit.InstallmentList.First();
+                _credit.InitialEmi = firstInstallment.CapitalRepayment + firstInstallment.InterestsRepayment;
+            }
 
             return _credit;
         }
@@ -864,11 +863,6 @@ namespace OpenCBS.GUI.Clients
                 ServicesProvider.GetInstance().GetContractServices().CheckLoanFilling(credit);
                 DisplayInstallments(ref credit);
                 labelXirrValue.Text = GetXIRRStr();
-                var extentions = _applicationController.GetAllInstances<IClientFormInitializer>();
-                foreach (var extention in extentions)
-                {
-                    extention.Refresh(this);
-                }
                 return credit;
             }
             catch (Exception ex)
