@@ -158,6 +158,60 @@ GO
 
 IF col_length('dbo.EntryFees','account_number') IS NULL
     BEGIN
-        ALTER TABLE dbo.EntryFees ADD account_number VARCHAR(32) NOT NULL
+        ALTER TABLE dbo.EntryFees ADD account_number VARCHAR(32) REFERENCES dbo.Accounts(accounts_number) NOT NULL
+    END
+GO
+
+IF col_length('dbo.Packages','principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','interest_accrued_but_not_due_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD interest_accrued_but_not_due_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','interest_due_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD interest_due_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','interest_due_but_not_received_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD interest_due_but_not_received_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','interest_income_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD interest_income_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','tax_on_interests_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD tax_on_interests_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','accrued_penalty_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD accrued_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','penalty_income_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD penalty_income_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','tax_on_penalty_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD tax_on_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO

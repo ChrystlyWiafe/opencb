@@ -27,6 +27,7 @@ using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans.Installments;
 using OpenCBS.CoreDomain.FundingLines;
 using OpenCBS.CoreDomain.LoanCycles;
@@ -36,6 +37,7 @@ using OpenCBS.ExceptionsHandler;
 using OpenCBS.GUI.UserControl;
 using OpenCBS.MultiLanguageRessources;
 using OpenCBS.Services;
+using OpenCBS.Services.Accounting;
 using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.GUI.Products
@@ -54,6 +56,7 @@ namespace OpenCBS.GUI.Products
         private List<CycleObject> _cycleObjects = new List<CycleObject>();
         private Cycle _editedParam;
         private List<EntryFee> _allEntryFees;
+	    private List<Account> _accounts;
 
         #region Constructors
         public FrmAddLoanProduct()
@@ -67,6 +70,7 @@ namespace OpenCBS.GUI.Products
             if (_product.RateCycleParams == null) _product.RateCycleParams = new List<RateCycle>();
             if (_product.MaturityCycleParams == null) _product.MaturityCycleParams = new List<MaturityCycle>();
             _buttonAddEntryFee.Enabled = _listViewCreditProductEntryFees.Items.Count < 9;
+            InitializeAccounts();
         }
 
         public FrmAddLoanProduct(LoanProduct pPackage)
@@ -99,6 +103,7 @@ namespace OpenCBS.GUI.Products
             FillListViewAllEntryFees();
             _ischangeFee = false;
             _buttonAddEntryFee.Enabled = _listViewCreditProductEntryFees.Items.Count < 9;
+            InitializeAccounts();
         }
 
         private void InitializeEntryFees(LoanProduct pPackage)
@@ -572,6 +577,42 @@ namespace OpenCBS.GUI.Products
                     txbCompulsoryAmountMax.Text = pack.CompulsoryAmountMax.ToString();
                 }
             }
+        }
+
+	    private void InitializeAccounts()
+	    {
+	        var accountService = new AccountService(User.CurrentUser);
+	        _accounts = accountService.SelectAccounts().ToList();
+
+            comboBoxAccruedPenaltyAccount.DataSource = new List<Account>(_accounts);
+            comboBoxInterestAccruedButNotDueAccount.DataSource = new List<Account>(_accounts);
+            comboBoxInterestDueAccount.DataSource = new List<Account>(_accounts);
+            comboBoxInterestDueButNoteReceivedAccount.DataSource = new List<Account>(_accounts);
+            comboBoxInterestIncomeAccount.DataSource = new List<Account>(_accounts);
+            comboBoxPrincipalAccount.DataSource = new List<Account>(_accounts);
+            comboBoxTaxOnInterestsAccount.DataSource = new List<Account>(_accounts);
+            comboBoxTaxOnPenaltyAccount.DataSource = new List<Account>(_accounts);
+            comboBoxPenaltyIncomeAccount.DataSource = new List<Account>(_accounts);
+
+            comboBoxAccruedPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber ==_product.AccruedPenaltyAccountNumber);
+            comboBoxInterestAccruedButNotDueAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestAccruedButNotDueAccountNumber);
+            comboBoxInterestDueAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestDueAccountNumber);
+            comboBoxInterestDueButNoteReceivedAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestDueButNotReceivedAccountNumber);
+            comboBoxInterestIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestIncomeAccountNumber);
+            comboBoxPrincipalAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PrincipalAccountNumber);
+            comboBoxTaxOnInterestsAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnInterestsAccountNumber);
+            comboBoxTaxOnPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnPenaltyAccountNumber);
+            comboBoxPenaltyIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PenaltyIncomeAccountNumber);
+
+	        comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
+	        comboBoxPenaltyIncomeAccount.SelectedIndexChanged += comboBoxPenaltyIncomeAccount_SelectedIndexChanged;
+            comboBoxAccruedPenaltyAccount.SelectedIndexChanged += comboBoxAccruedPenaltyAccount_SelectedIndexChanged;
+            comboBoxTaxOnInterestsAccount.SelectedIndexChanged += comboBoxTaxOnInterestsAccount_SelectedIndexChanged;
+            comboBoxInterestIncomeAccount.SelectedIndexChanged += comboBoxInterestIncomeAccount_SelectedIndexChanged;
+            comboBoxInterestDueButNoteReceivedAccount.SelectedIndexChanged += comboBoxInterestDueBotNoteReceivedAccount_SelectedIndexChanged;
+            comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
+            comboBoxPrincipalAccount.SelectedIndexChanged += comboBoxPrincipalAccount_SelectedIndexChanged;
+            comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
         }
 
         private void InitializeTextBox()
@@ -2199,6 +2240,69 @@ namespace OpenCBS.GUI.Products
 
             MessageBox.Show(MultiLanguageStrings.GetString(Ressource.EntryFeesForm, "needToSelectFee")
                             , "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void comboBoxPrincipalAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxPrincipalAccount.SelectedValue as Account;
+            _product.PrincipalAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxInterestAccruedButNotDueAccount.SelectedValue as Account;
+            _product.InterestAccruedButNotDueAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxInterestDueAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxInterestDueAccount.SelectedValue as Account;
+            _product.InterestDueAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxInterestDueBotNoteReceivedAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxInterestDueButNoteReceivedAccount.SelectedValue as Account;
+            _product.InterestDueButNotReceivedAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxInterestIncomeAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxInterestIncomeAccount.SelectedValue as Account;
+            _product.InterestIncomeAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxTaxOnInterestsAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxTaxOnInterestsAccount.SelectedValue as Account;
+            _product.TaxOnInterestsAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxAccruedPenaltyAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxAccruedPenaltyAccount.SelectedValue as Account;
+            _product.AccruedPenaltyAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxPenaltyIncomeAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxPenaltyIncomeAccount.SelectedValue as Account;
+            _product.PenaltyIncomeAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxTaxOnPenaltyAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxTaxOnPenaltyAccount.SelectedValue as Account;
+            _product.TaxOnPenaltyAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
         }
     }
 }

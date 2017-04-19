@@ -158,6 +158,16 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@use_entry_fees_cycles", package.UseEntryFeesCycles);
             c.AddParam("@interestScheme", package.InterestScheme);
             c.AddParam("@scriptName", package.ScriptName);
+
+            c.AddParam("@principalAccount", package.PrincipalAccountNumber);
+            c.AddParam("@interestAccruedButNotDueAccount", package.InterestAccruedButNotDueAccountNumber);
+            c.AddParam("@interestDueAccount", package.InterestDueAccountNumber);
+            c.AddParam("@interestDueButNotReceivedAccount", package.InterestDueButNotReceivedAccountNumber);
+            c.AddParam("@interestIncomeAccount", package.InterestIncomeAccountNumber);
+            c.AddParam("@taxOnInterestsAccount", package.TaxOnInterestsAccountNumber);
+            c.AddParam("@accruedPenaltyAccount", package.AccruedPenaltyAccountNumber);
+            c.AddParam("@penaltyIncomeAccount", package.PenaltyIncomeAccountNumber);
+            c.AddParam("@taxOnPenaltyAccount", package.TaxOnPenaltyAccountNumber);
         }
 
         private void FireProductLoaded(LoanProduct product)
@@ -244,7 +254,16 @@ namespace OpenCBS.Manager.Products
                 ,[insurance_max]
                 ,[use_entry_fees_cycles]
                 ,[interest_scheme]
-                ,[script_name])
+                ,[script_name]
+                ,[principal_account]
+                ,[interest_accrued_but_not_due_account]
+                ,[interest_due_account]
+                ,[interest_due_but_not_received_account]
+                ,[interest_income_account]
+                ,[tax_on_interests_account]
+                ,[accrued_penalty_account]
+                ,[penalty_income_account]
+                ,[tax_on_penalty_account])
                 VALUES
                 (@deleted
                 ,@name
@@ -314,7 +333,16 @@ namespace OpenCBS.Manager.Products
                 ,@insurance_max
                 ,@use_entry_fees_cycles
                 ,@interestScheme
-                ,@scriptName)
+                ,@scriptName
+                ,@principalAccount
+                ,@interestAccruedButNotDueAccount
+                ,@interestDueAccount
+                ,@interestDueButNotReceivedAccount
+                ,@interestIncomeAccount
+                ,@taxOnInterestsAccount
+                ,@accruedPenaltyAccount
+                ,@penaltyIncomeAccount
+                ,@taxOnPenaltyAccount)
                 SELECT SCOPE_IDENTITY()";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -424,6 +452,15 @@ namespace OpenCBS.Manager.Products
                 ,[use_entry_fees_cycles] = @use_entry_fees_cycles
                 ,[interest_scheme] = @interestScheme
                 ,[script_name] = @scriptName
+                ,[principal_account] = @principalAccount
+                ,[interest_accrued_but_not_due_account] = @interestAccruedButNotDueAccount
+                ,[interest_due_account] = @interestDueAccount
+                ,[interest_due_but_not_received_account] = @interestDueButNotReceivedAccount
+                ,[interest_income_account] = @interestIncomeAccount
+                ,[tax_on_interests_account] = @taxOnInterestsAccount
+                ,[accrued_penalty_account] = @accruedPenaltyAccount
+                ,[penalty_income_account] = @penaltyIncomeAccount
+                ,[tax_on_penalty_account] = @taxOnPenaltyAccount
                 WHERE id = @packageId";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -1171,6 +1208,17 @@ namespace OpenCBS.Manager.Products
             package.CreditInsuranceMax = r.GetDecimal("insurance_max");
             package.InterestScheme = (OInterestScheme)r.GetInt("interest_scheme");
             package.ScriptName = r.GetString("script_name");
+
+            package.AccruedPenaltyAccountNumber = r.GetString("accrued_penalty_account");
+            package.InterestAccruedButNotDueAccountNumber = r.GetString("interest_accrued_but_not_due_account");
+            package.InterestDueAccountNumber = r.GetString("interest_due_account");
+            package.InterestDueButNotReceivedAccountNumber = r.GetString("interest_due_but_not_received_account");
+            package.InterestIncomeAccountNumber = r.GetString("interest_income_account");
+            package.PenaltyIncomeAccountNumber = r.GetString("penalty_income_account");
+            package.PrincipalAccountNumber = r.GetString("principal_account");
+            package.TaxOnInterestsAccountNumber = r.GetString("tax_on_interests_account");
+            package.TaxOnPenaltyAccountNumber = r.GetString("tax_on_penalty_account");
+
             return package;
         }
 

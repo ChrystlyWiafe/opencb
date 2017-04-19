@@ -152,6 +152,17 @@ namespace OpenCBS.CoreDomain.Products
         public int? CompulsoryAmountMin { get; set; }
         public int? CompulsoryAmountMax { get; set; }
 
+        //Accounts
+        public string PrincipalAccountNumber { get; set; }
+        public string InterestAccruedButNotDueAccountNumber { get; set; }
+        public string InterestDueAccountNumber { get; set; }
+        public string InterestDueButNotReceivedAccountNumber { get; set; }
+        public string InterestIncomeAccountNumber { get; set; }
+        public string TaxOnInterestsAccountNumber { get; set; }
+        public string AccruedPenaltyAccountNumber { get; set; }
+        public string PenaltyIncomeAccountNumber { get; set; }
+        public string TaxOnPenaltyAccountNumber { get; set; }
+
 	    public NonRepaymentPenaltiesNullableValues NonRepaymentPenalties
         {
             get { return _nonRepaymentPenalties; }
