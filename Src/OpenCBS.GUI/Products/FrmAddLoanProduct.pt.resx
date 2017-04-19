@@ -718,6 +718,57 @@
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantias</value>
   </data>
+  <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 16</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>Imposto sobre a penalidade</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 16</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>Penalização</value>
+  </data>
+  <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 16</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>Penalidade acumulada</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 16</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>Imposto sobre os interesses</value>
+  </data>
+  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Receitas de juros</value>
+  </data>
+  <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 16</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Juros devidos, mas não recebidos</value>
+  </data>
+  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Juros devidos</value>
+  </data>
+  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 16</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>Juros vencidos e não devidos</value>
+  </data>
+  <data name="tabAccounts.Text" xml:space="preserve">
+    <value>Contas de empréstimos</value>
+  </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Use valor do cíclo</value>
   </data>

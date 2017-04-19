@@ -485,6 +485,7 @@ namespace OpenCBS.GUI.Products
             // 
             // tabCreditInsurance
             // 
+            resources.ApplyResources(this.tabCreditInsurance, "tabCreditInsurance");
             this.tabCreditInsurance.Controls.Add(this.tabPageMainParameters);
             this.tabCreditInsurance.Controls.Add(this.tabPageFees);
             this.tabCreditInsurance.Controls.Add(this.tabPageCommissions);
@@ -492,18 +493,18 @@ namespace OpenCBS.GUI.Products
             this.tabCreditInsurance.Controls.Add(this.tabLOC);
             this.tabCreditInsurance.Controls.Add(this.tabGuarantorsCollaterals);
             this.tabCreditInsurance.Controls.Add(this.tabAccounts);
-            resources.ApplyResources(this.tabCreditInsurance, "tabCreditInsurance");
             this.tabCreditInsurance.Name = "tabCreditInsurance";
             this.tabCreditInsurance.SelectedIndex = 0;
             // 
             // tabPageMainParameters
             // 
-            this.tabPageMainParameters.Controls.Add(this.groupBox);
             resources.ApplyResources(this.tabPageMainParameters, "tabPageMainParameters");
+            this.tabPageMainParameters.Controls.Add(this.groupBox);
             this.tabPageMainParameters.Name = "tabPageMainParameters";
             // 
             // groupBox
             // 
+            resources.ApplyResources(this.groupBox, "groupBox");
             this.groupBox.Controls.Add(this.gbAdvancedParameters);
             this.groupBox.Controls.Add(this.groupBoxRoundingType);
             this.groupBox.Controls.Add(this.textBoxCode);
@@ -517,19 +518,18 @@ namespace OpenCBS.GUI.Products
             this.groupBox.Controls.Add(this.labelInstallmentType);
             this.groupBox.Controls.Add(this.textBoxName);
             this.groupBox.Controls.Add(this.labelName);
-            resources.ApplyResources(this.groupBox, "groupBox");
             this.groupBox.Name = "groupBox";
             this.groupBox.TabStop = false;
             // 
             // gbAdvancedParameters
             // 
+            resources.ApplyResources(this.gbAdvancedParameters, "gbAdvancedParameters");
             this.gbAdvancedParameters.Controls.Add(this.cbUseLoanCycle);
             this.gbAdvancedParameters.Controls.Add(this.groupBoxNumberOfInstallments);
             this.gbAdvancedParameters.Controls.Add(this.groupBoxInterestRate);
             this.gbAdvancedParameters.Controls.Add(this.groupBoxAmount);
             this.gbAdvancedParameters.Controls.Add(this.panelAmountCycles);
             this.gbAdvancedParameters.Controls.Add(this.groupBoxAmountCycles);
-            resources.ApplyResources(this.gbAdvancedParameters, "gbAdvancedParameters");
             this.gbAdvancedParameters.Name = "gbAdvancedParameters";
             this.gbAdvancedParameters.TabStop = false;
             // 
@@ -541,13 +541,13 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxNumberOfInstallments
             // 
+            resources.ApplyResources(this.groupBoxNumberOfInstallments, "groupBoxNumberOfInstallments");
             this.groupBoxNumberOfInstallments.Controls.Add(this.labelNbIMax);
             this.groupBoxNumberOfInstallments.Controls.Add(this.labelNbIMin);
             this.groupBoxNumberOfInstallments.Controls.Add(this.labelNbIOr);
             this.groupBoxNumberOfInstallments.Controls.Add(this.textBoxNbOfInstallmentMax);
             this.groupBoxNumberOfInstallments.Controls.Add(this.textBoxNbOfInstallment);
             this.groupBoxNumberOfInstallments.Controls.Add(this.textBoxNbOfInstallmentMin);
-            resources.ApplyResources(this.groupBoxNumberOfInstallments, "groupBoxNumberOfInstallments");
             this.groupBoxNumberOfInstallments.Name = "groupBoxNumberOfInstallments";
             this.groupBoxNumberOfInstallments.TabStop = false;
             // 
@@ -591,13 +591,13 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxInterestRate
             // 
+            resources.ApplyResources(this.groupBoxInterestRate, "groupBoxInterestRate");
             this.groupBoxInterestRate.Controls.Add(this.labelRateMax);
             this.groupBoxInterestRate.Controls.Add(this.labelRateMin);
             this.groupBoxInterestRate.Controls.Add(this.labelRateOr);
             this.groupBoxInterestRate.Controls.Add(this.textBoxRateMax);
             this.groupBoxInterestRate.Controls.Add(this.textBoxRate);
             this.groupBoxInterestRate.Controls.Add(this.textBoxRateMin);
-            resources.ApplyResources(this.groupBoxInterestRate, "groupBoxInterestRate");
             this.groupBoxInterestRate.Name = "groupBoxInterestRate";
             this.groupBoxInterestRate.TabStop = false;
             // 
@@ -641,6 +641,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxAmount
             // 
+            resources.ApplyResources(this.groupBoxAmount, "groupBoxAmount");
             this.groupBoxAmount.Controls.Add(this.labelLoanCycle);
             this.groupBoxAmount.Controls.Add(this.labelLoanCycleMax);
             this.groupBoxAmount.Controls.Add(this.labelLoanCycleMin);
@@ -650,7 +651,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxAmount.Controls.Add(this.textBoxAmountMax);
             this.groupBoxAmount.Controls.Add(this.textBoxAmount);
             this.groupBoxAmount.Controls.Add(this.textBoxAmountMin);
-            resources.ApplyResources(this.groupBoxAmount, "groupBoxAmount");
             this.groupBoxAmount.Name = "groupBoxAmount";
             this.groupBoxAmount.TabStop = false;
             // 
@@ -708,6 +708,7 @@ namespace OpenCBS.GUI.Products
             // 
             // panelAmountCycles
             // 
+            resources.ApplyResources(this.panelAmountCycles, "panelAmountCycles");
             this.panelAmountCycles.Controls.Add(this.groupBoxAmountCycle);
             this.panelAmountCycles.Controls.Add(this.cbxCycleObjects);
             this.panelAmountCycles.Controls.Add(this.listViewLoanCycles);
@@ -716,16 +717,15 @@ namespace OpenCBS.GUI.Products
             this.panelAmountCycles.Controls.Add(this.buttonCancelAmountCycles);
             this.panelAmountCycles.Controls.Add(this.buttonAddAmountCycle);
             this.panelAmountCycles.Controls.Add(this.lblCycleObjects);
-            resources.ApplyResources(this.panelAmountCycles, "panelAmountCycles");
             this.panelAmountCycles.Name = "panelAmountCycles";
             // 
             // groupBoxAmountCycle
             // 
+            resources.ApplyResources(this.groupBoxAmountCycle, "groupBoxAmountCycle");
             this.groupBoxAmountCycle.Controls.Add(this.label29);
             this.groupBoxAmountCycle.Controls.Add(this.textBoxCycleMax);
             this.groupBoxAmountCycle.Controls.Add(this.label30);
             this.groupBoxAmountCycle.Controls.Add(this.textBoxCycleMin);
-            resources.ApplyResources(this.groupBoxAmountCycle, "groupBoxAmountCycle");
             this.groupBoxAmountCycle.Name = "groupBoxAmountCycle";
             this.groupBoxAmountCycle.TabStop = false;
             // 
@@ -736,8 +736,8 @@ namespace OpenCBS.GUI.Products
             // 
             // textBoxCycleMax
             // 
-            this.textBoxCycleMax.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.textBoxCycleMax, "textBoxCycleMax");
+            this.textBoxCycleMax.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxCycleMax.Name = "textBoxCycleMax";
             this.textBoxCycleMax.TextChanged += new System.EventHandler(this.textBoxCycleMax_TextChanged);
             this.textBoxCycleMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGracePeriodMin_KeyPress);
@@ -750,8 +750,8 @@ namespace OpenCBS.GUI.Products
             // 
             // textBoxCycleMin
             // 
-            this.textBoxCycleMin.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.textBoxCycleMin, "textBoxCycleMin");
+            this.textBoxCycleMin.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxCycleMin.Name = "textBoxCycleMin";
             this.textBoxCycleMin.TextChanged += new System.EventHandler(this.textBoxCycleMin_TextChanged);
             this.textBoxCycleMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGracePeriodMin_KeyPress);
@@ -759,10 +759,10 @@ namespace OpenCBS.GUI.Products
             // 
             // cbxCycleObjects
             // 
+            resources.ApplyResources(this.cbxCycleObjects, "cbxCycleObjects");
             this.cbxCycleObjects.DisplayMember = "CycleObject.Name";
             this.cbxCycleObjects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCycleObjects.DropDownWidth = 175;
-            resources.ApplyResources(this.cbxCycleObjects, "cbxCycleObjects");
             this.cbxCycleObjects.FormattingEnabled = true;
             this.cbxCycleObjects.Name = "cbxCycleObjects";
             this.cbxCycleObjects.ValueMember = "CycleObject.Id";
@@ -770,12 +770,12 @@ namespace OpenCBS.GUI.Products
             // 
             // listViewLoanCycles
             // 
+            resources.ApplyResources(this.listViewLoanCycles, "listViewLoanCycles");
             this.listViewLoanCycles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colCycle,
             this.colMin,
             this.colMax});
             this.listViewLoanCycles.DoubleClickActivation = false;
-            resources.ApplyResources(this.listViewLoanCycles, "listViewLoanCycles");
             this.listViewLoanCycles.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listViewLoanCycles.FullRowSelect = true;
             this.listViewLoanCycles.GridLines = true;
@@ -829,27 +829,27 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxAmountCycles
             // 
+            resources.ApplyResources(this.groupBoxAmountCycles, "groupBoxAmountCycles");
             this.groupBoxAmountCycles.Controls.Add(this.comboBoxLoanCyclesName);
             this.groupBoxAmountCycles.Controls.Add(this.label31);
             this.groupBoxAmountCycles.Controls.Add(this.buttonNewAmountCycles);
-            resources.ApplyResources(this.groupBoxAmountCycles, "groupBoxAmountCycles");
             this.groupBoxAmountCycles.Name = "groupBoxAmountCycles";
             this.groupBoxAmountCycles.TabStop = false;
             // 
             // comboBoxLoanCyclesName
             // 
+            resources.ApplyResources(this.comboBoxLoanCyclesName, "comboBoxLoanCyclesName");
             this.comboBoxLoanCyclesName.DisplayMember = "Name";
             this.comboBoxLoanCyclesName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLoanCyclesName.ForeColor = System.Drawing.SystemColors.WindowText;
-            resources.ApplyResources(this.comboBoxLoanCyclesName, "comboBoxLoanCyclesName");
             this.comboBoxLoanCyclesName.Name = "comboBoxLoanCyclesName";
             this.comboBoxLoanCyclesName.ValueMember = "Id";
             this.comboBoxLoanCyclesName.SelectedIndexChanged += new System.EventHandler(this.comboBoxLoanCyclesName_SelectedIndexChanged);
             // 
             // label31
             // 
-            this.label31.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label31, "label31");
+            this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Name = "label31";
             // 
             // buttonNewAmountCycles
@@ -860,15 +860,15 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxRoundingType
             // 
-            this.groupBoxRoundingType.Controls.Add(this.cmbInterestScheme);
             resources.ApplyResources(this.groupBoxRoundingType, "groupBoxRoundingType");
+            this.groupBoxRoundingType.Controls.Add(this.cmbInterestScheme);
             this.groupBoxRoundingType.Name = "groupBoxRoundingType";
             this.groupBoxRoundingType.TabStop = false;
             // 
             // cmbInterestScheme
             // 
-            this.cmbInterestScheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.cmbInterestScheme, "cmbInterestScheme");
+            this.cmbInterestScheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInterestScheme.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbInterestScheme.FormattingEnabled = true;
             this.cmbInterestScheme.Name = "cmbInterestScheme";
@@ -889,34 +889,34 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox10
             // 
+            resources.ApplyResources(this.groupBox10, "groupBox10");
             this.groupBox10.Controls.Add(this.comboBoxCurrencies);
             this.groupBox10.Controls.Add(this.comboBoxFundingLine);
-            resources.ApplyResources(this.groupBox10, "groupBox10");
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.TabStop = false;
             // 
             // comboBoxCurrencies
             // 
+            resources.ApplyResources(this.comboBoxCurrencies, "comboBoxCurrencies");
             this.comboBoxCurrencies.DisplayMember = "Currency.Name";
             this.comboBoxCurrencies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxCurrencies, "comboBoxCurrencies");
             this.comboBoxCurrencies.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxCurrencies.Name = "comboBoxCurrencies";
             this.comboBoxCurrencies.SelectedIndexChanged += new System.EventHandler(this.comboBoxCurrencies_SelectedIndexChanged);
             // 
             // comboBoxFundingLine
             // 
-            this.comboBoxFundingLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBoxFundingLine, "comboBoxFundingLine");
+            this.comboBoxFundingLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFundingLine.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxFundingLine.Name = "comboBoxFundingLine";
             this.comboBoxFundingLine.SelectedIndexChanged += new System.EventHandler(this.comboBoxFundingLine_SelectedIndexChanged);
             // 
             // groupBoxChargeInterestWithinGracePeriod
             // 
+            resources.ApplyResources(this.groupBoxChargeInterestWithinGracePeriod, "groupBoxChargeInterestWithinGracePeriod");
             this.groupBoxChargeInterestWithinGracePeriod.Controls.Add(this.radioButtonChargeInterestNo);
             this.groupBoxChargeInterestWithinGracePeriod.Controls.Add(this.radioButtonChargeInterestYes);
-            resources.ApplyResources(this.groupBoxChargeInterestWithinGracePeriod, "groupBoxChargeInterestWithinGracePeriod");
             this.groupBoxChargeInterestWithinGracePeriod.Name = "groupBoxChargeInterestWithinGracePeriod";
             this.groupBoxChargeInterestWithinGracePeriod.TabStop = false;
             // 
@@ -929,20 +929,20 @@ namespace OpenCBS.GUI.Products
             // 
             // radioButtonChargeInterestYes
             // 
-            this.radioButtonChargeInterestYes.Checked = true;
             resources.ApplyResources(this.radioButtonChargeInterestYes, "radioButtonChargeInterestYes");
+            this.radioButtonChargeInterestYes.Checked = true;
             this.radioButtonChargeInterestYes.Name = "radioButtonChargeInterestYes";
             this.radioButtonChargeInterestYes.TabStop = true;
             this.radioButtonChargeInterestYes.CheckedChanged += new System.EventHandler(this.radioButtonChargeInterestYes_CheckedChanged);
             // 
             // groupBoxType
             // 
+            resources.ApplyResources(this.groupBoxType, "groupBoxType");
             this.groupBoxType.Controls.Add(this.clientTypeIndivCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeVillageCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeCorpCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeGroupCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeAllCheckBox);
-            resources.ApplyResources(this.groupBoxType, "groupBoxType");
             this.groupBoxType.Name = "groupBoxType";
             this.groupBoxType.TabStop = false;
             // 
@@ -983,16 +983,16 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxInterestRateType
             // 
-            this.groupBoxInterestRateType.Controls.Add(this.cmbInterestRateType);
             resources.ApplyResources(this.groupBoxInterestRateType, "groupBoxInterestRateType");
+            this.groupBoxInterestRateType.Controls.Add(this.cmbInterestRateType);
             this.groupBoxInterestRateType.Name = "groupBoxInterestRateType";
             this.groupBoxInterestRateType.TabStop = false;
             // 
             // cmbInterestRateType
             // 
+            resources.ApplyResources(this.cmbInterestRateType, "cmbInterestRateType");
             this.cmbInterestRateType.DisplayMember = "installmentType.Name";
             this.cmbInterestRateType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cmbInterestRateType, "cmbInterestRateType");
             this.cmbInterestRateType.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbInterestRateType.Name = "cmbInterestRateType";
             this.cmbInterestRateType.SelectedIndexChanged += new System.EventHandler(this.cmbInterestRateType_SelectedIndexChanged);
@@ -1000,13 +1000,13 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxGracePeriod
             // 
+            resources.ApplyResources(this.groupBoxGracePeriod, "groupBoxGracePeriod");
             this.groupBoxGracePeriod.Controls.Add(this.labelGPMax);
             this.groupBoxGracePeriod.Controls.Add(this.labelGPMin);
             this.groupBoxGracePeriod.Controls.Add(this.labelGPOr);
             this.groupBoxGracePeriod.Controls.Add(this.textBoxGracePeriodMax);
             this.groupBoxGracePeriod.Controls.Add(this.textBoxGracePeriod);
             this.groupBoxGracePeriod.Controls.Add(this.textBoxGracePeriodMin);
-            resources.ApplyResources(this.groupBoxGracePeriod, "groupBoxGracePeriod");
             this.groupBoxGracePeriod.Name = "groupBoxGracePeriod";
             this.groupBoxGracePeriod.TabStop = false;
             // 
@@ -1053,9 +1053,9 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxInstallmentType
             // 
+            resources.ApplyResources(this.comboBoxInstallmentType, "comboBoxInstallmentType");
             this.comboBoxInstallmentType.DisplayMember = "installmentType.Name";
             this.comboBoxInstallmentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxInstallmentType, "comboBoxInstallmentType");
             this.comboBoxInstallmentType.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxInstallmentType.Name = "comboBoxInstallmentType";
             this.comboBoxInstallmentType.SelectionChangeCommitted += new System.EventHandler(this.comboBoxInstallmentType_SelectionChangeCommitted);
@@ -1081,23 +1081,24 @@ namespace OpenCBS.GUI.Products
             // 
             // tabPageFees
             // 
+            resources.ApplyResources(this.tabPageFees, "tabPageFees");
             this.tabPageFees.Controls.Add(this.gbAnticipatedRepayment);
             this.tabPageFees.Controls.Add(this.groupBoxLateFees);
-            resources.ApplyResources(this.tabPageFees, "tabPageFees");
             this.tabPageFees.Name = "tabPageFees";
             // 
             // gbAnticipatedRepayment
             // 
+            resources.ApplyResources(this.gbAnticipatedRepayment, "gbAnticipatedRepayment");
             this.gbAnticipatedRepayment.Controls.Add(this.groupBoxAPR);
             this.gbAnticipatedRepayment.Controls.Add(this.groupBoxPartialAnticipatedRepaymentBase);
             this.gbAnticipatedRepayment.Controls.Add(this.groupBoxTotalAnticipatedRepaymentBase);
             this.gbAnticipatedRepayment.Controls.Add(this.groupBoxAnticipatedRepayment);
-            resources.ApplyResources(this.gbAnticipatedRepayment, "gbAnticipatedRepayment");
             this.gbAnticipatedRepayment.Name = "gbAnticipatedRepayment";
             this.gbAnticipatedRepayment.TabStop = false;
             // 
             // groupBoxAPR
             // 
+            resources.ApplyResources(this.groupBoxAPR, "groupBoxAPR");
             this.groupBoxAPR.Controls.Add(this.label43);
             this.groupBoxAPR.Controls.Add(this.label40);
             this.groupBoxAPR.Controls.Add(this.label42);
@@ -1105,7 +1106,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxAPR.Controls.Add(this.label41);
             this.groupBoxAPR.Controls.Add(this.textBoxAnticipatedPartialRepaiment);
             this.groupBoxAPR.Controls.Add(this.textBoxAnticipatedPartialRepaimentMin);
-            resources.ApplyResources(this.groupBoxAPR, "groupBoxAPR");
             this.groupBoxAPR.Name = "groupBoxAPR";
             this.groupBoxAPR.TabStop = false;
             // 
@@ -1149,10 +1149,10 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxPartialAnticipatedRepaymentBase
             // 
+            resources.ApplyResources(this.groupBoxPartialAnticipatedRepaymentBase, "groupBoxPartialAnticipatedRepaymentBase");
             this.groupBoxPartialAnticipatedRepaymentBase.Controls.Add(this.rbPrepaidPrincipal);
             this.groupBoxPartialAnticipatedRepaymentBase.Controls.Add(this.rbPartialRemainingOLB);
             this.groupBoxPartialAnticipatedRepaymentBase.Controls.Add(this.rbPartialRemainingInterest);
-            resources.ApplyResources(this.groupBoxPartialAnticipatedRepaymentBase, "groupBoxPartialAnticipatedRepaymentBase");
             this.groupBoxPartialAnticipatedRepaymentBase.Name = "groupBoxPartialAnticipatedRepaymentBase";
             this.groupBoxPartialAnticipatedRepaymentBase.TabStop = false;
             // 
@@ -1179,9 +1179,9 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxTotalAnticipatedRepaymentBase
             // 
+            resources.ApplyResources(this.groupBoxTotalAnticipatedRepaymentBase, "groupBoxTotalAnticipatedRepaymentBase");
             this.groupBoxTotalAnticipatedRepaymentBase.Controls.Add(this.rbRemainingOLB);
             this.groupBoxTotalAnticipatedRepaymentBase.Controls.Add(this.rbRemainingInterest);
-            resources.ApplyResources(this.groupBoxTotalAnticipatedRepaymentBase, "groupBoxTotalAnticipatedRepaymentBase");
             this.groupBoxTotalAnticipatedRepaymentBase.Name = "groupBoxTotalAnticipatedRepaymentBase";
             this.groupBoxTotalAnticipatedRepaymentBase.TabStop = false;
             // 
@@ -1201,6 +1201,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxAnticipatedRepayment
             // 
+            resources.ApplyResources(this.groupBoxAnticipatedRepayment, "groupBoxAnticipatedRepayment");
             this.groupBoxAnticipatedRepayment.Controls.Add(this.label2);
             this.groupBoxAnticipatedRepayment.Controls.Add(this.label3);
             this.groupBoxAnticipatedRepayment.Controls.Add(this.label4);
@@ -1208,7 +1209,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxAnticipatedRepayment.Controls.Add(this.textBoxAnticipatedRepaymentPenaltiesMax);
             this.groupBoxAnticipatedRepayment.Controls.Add(this.textBoxAnticipatedRepaymentPenalties);
             this.groupBoxAnticipatedRepayment.Controls.Add(this.textBoxAnticipatedRepaymentPenaltiesMin);
-            resources.ApplyResources(this.groupBoxAnticipatedRepayment, "groupBoxAnticipatedRepayment");
             this.groupBoxAnticipatedRepayment.Name = "groupBoxAnticipatedRepayment";
             this.groupBoxAnticipatedRepayment.TabStop = false;
             // 
@@ -1252,13 +1252,13 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxLateFees
             // 
+            resources.ApplyResources(this.groupBoxLateFees, "groupBoxLateFees");
             this.groupBoxLateFees.Controls.Add(this.labelLateFeeGracePeriod);
             this.groupBoxLateFees.Controls.Add(this.textBoxGracePeriodLateFee);
             this.groupBoxLateFees.Controls.Add(this.groupBox8);
             this.groupBoxLateFees.Controls.Add(this.groupBox5);
             this.groupBoxLateFees.Controls.Add(this.groupBox7);
             this.groupBoxLateFees.Controls.Add(this.groupBox6);
-            resources.ApplyResources(this.groupBoxLateFees, "groupBoxLateFees");
             this.groupBoxLateFees.Name = "groupBoxLateFees";
             this.groupBoxLateFees.TabStop = false;
             // 
@@ -1275,6 +1275,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox8
             // 
+            resources.ApplyResources(this.groupBox8, "groupBox8");
             this.groupBox8.Controls.Add(this.label25);
             this.groupBox8.Controls.Add(this.label26);
             this.groupBox8.Controls.Add(this.label27);
@@ -1282,7 +1283,6 @@ namespace OpenCBS.GUI.Products
             this.groupBox8.Controls.Add(this.tBInitialAmountMax);
             this.groupBox8.Controls.Add(this.tBInitialAmountValue);
             this.groupBox8.Controls.Add(this.tBInitialAmountMin);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.TabStop = false;
             // 
@@ -1328,6 +1328,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox5
             // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label15);
@@ -1335,7 +1336,6 @@ namespace OpenCBS.GUI.Products
             this.groupBox5.Controls.Add(this.tBOverduePrincipalMax);
             this.groupBox5.Controls.Add(this.tBOverduePrincipalValue);
             this.groupBox5.Controls.Add(this.tBOverduePrincipalMin);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
@@ -1381,6 +1381,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox7
             // 
+            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
@@ -1388,7 +1389,6 @@ namespace OpenCBS.GUI.Products
             this.groupBox7.Controls.Add(this.tBOLBMax);
             this.groupBox7.Controls.Add(this.tBOLBValue);
             this.groupBox7.Controls.Add(this.tBOLBMin);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.TabStop = false;
             // 
@@ -1434,6 +1434,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox6
             // 
+            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label19);
@@ -1441,7 +1442,6 @@ namespace OpenCBS.GUI.Products
             this.groupBox6.Controls.Add(this.tBOverdueInterestMax);
             this.groupBox6.Controls.Add(this.tBOverdueInterestValue);
             this.groupBox6.Controls.Add(this.tBOverdueInterestMin);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
@@ -1487,6 +1487,7 @@ namespace OpenCBS.GUI.Products
             // 
             // tabPageCommissions
             // 
+            resources.ApplyResources(this.tabPageCommissions, "tabPageCommissions");
             this.tabPageCommissions.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageCommissions.Controls.Add(this.label55);
             this.tabPageCommissions.Controls.Add(this.label54);
@@ -1494,7 +1495,6 @@ namespace OpenCBS.GUI.Products
             this.tabPageCommissions.Controls.Add(this._listViewAllEntryFees);
             this.tabPageCommissions.Controls.Add(this._buttonAddEntryFee);
             this.tabPageCommissions.Controls.Add(this._buttonDeleteEntryFee);
-            resources.ApplyResources(this.tabPageCommissions, "tabPageCommissions");
             this.tabPageCommissions.Name = "tabPageCommissions";
             // 
             // label55
@@ -1509,6 +1509,7 @@ namespace OpenCBS.GUI.Products
             // 
             // _listViewCreditProductEntryFees
             // 
+            resources.ApplyResources(this._listViewCreditProductEntryFees, "_listViewCreditProductEntryFees");
             this._listViewCreditProductEntryFees.BackColor = System.Drawing.SystemColors.Window;
             this._listViewCreditProductEntryFees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
@@ -1516,7 +1517,6 @@ namespace OpenCBS.GUI.Products
             this.chMax,
             this.chRate,
             this.chMaxSum});
-            resources.ApplyResources(this._listViewCreditProductEntryFees, "_listViewCreditProductEntryFees");
             this._listViewCreditProductEntryFees.FullRowSelect = true;
             this._listViewCreditProductEntryFees.GridLines = true;
             this._listViewCreditProductEntryFees.HideSelection = false;
@@ -1547,6 +1547,7 @@ namespace OpenCBS.GUI.Products
             // 
             // _listViewAllEntryFees
             // 
+            resources.ApplyResources(this._listViewAllEntryFees, "_listViewAllEntryFees");
             this._listViewAllEntryFees.BackColor = System.Drawing.SystemColors.Window;
             this._listViewAllEntryFees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ch2Name,
@@ -1554,7 +1555,6 @@ namespace OpenCBS.GUI.Products
             this.ch2Max,
             this.ch2Rate,
             this.ch2MaxSum});
-            resources.ApplyResources(this._listViewAllEntryFees, "_listViewAllEntryFees");
             this._listViewAllEntryFees.FullRowSelect = true;
             this._listViewAllEntryFees.GridLines = true;
             this._listViewAllEntryFees.HideSelection = false;
@@ -1599,29 +1599,30 @@ namespace OpenCBS.GUI.Products
             // 
             // tabPageOptionalParameters
             // 
-            this.tabPageOptionalParameters.Controls.Add(this.groupBoxDetailsOptionalParameters);
             resources.ApplyResources(this.tabPageOptionalParameters, "tabPageOptionalParameters");
+            this.tabPageOptionalParameters.Controls.Add(this.groupBoxDetailsOptionalParameters);
             this.tabPageOptionalParameters.Name = "tabPageOptionalParameters";
             // 
             // groupBoxDetailsOptionalParameters
             // 
+            resources.ApplyResources(this.groupBoxDetailsOptionalParameters, "groupBoxDetailsOptionalParameters");
             this.groupBoxDetailsOptionalParameters.Controls.Add(this.groupBoxExoticProducts);
             this.groupBoxDetailsOptionalParameters.Controls.Add(this.groupBox4);
             this.groupBoxDetailsOptionalParameters.Controls.Add(this.groupBox12);
-            resources.ApplyResources(this.groupBoxDetailsOptionalParameters, "groupBoxDetailsOptionalParameters");
             this.groupBoxDetailsOptionalParameters.Name = "groupBoxDetailsOptionalParameters";
             this.groupBoxDetailsOptionalParameters.TabStop = false;
             // 
             // groupBoxExoticProducts
             // 
+            resources.ApplyResources(this.groupBoxExoticProducts, "groupBoxExoticProducts");
             this.groupBoxExoticProducts.Controls.Add(this.panelExoticProduct);
             this.groupBoxExoticProducts.Controls.Add(this.groupBox2);
-            resources.ApplyResources(this.groupBoxExoticProducts, "groupBoxExoticProducts");
             this.groupBoxExoticProducts.Name = "groupBoxExoticProducts";
             this.groupBoxExoticProducts.TabStop = false;
             // 
             // panelExoticProduct
             // 
+            resources.ApplyResources(this.panelExoticProduct, "panelExoticProduct");
             this.panelExoticProduct.Controls.Add(this.panel1);
             this.panelExoticProduct.Controls.Add(this.labelTotalInterest);
             this.panelExoticProduct.Controls.Add(this.labelTotalPrincipal);
@@ -1633,13 +1634,12 @@ namespace OpenCBS.GUI.Products
             this.panelExoticProduct.Controls.Add(this.buttonRemoveExoticInstallment);
             this.panelExoticProduct.Controls.Add(this.buttonAddExoticInstallment);
             this.panelExoticProduct.Controls.Add(this.listViewExoticInstallments);
-            resources.ApplyResources(this.panelExoticProduct, "panelExoticProduct");
             this.panelExoticProduct.Name = "panelExoticProduct";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Name = "panel1";
             // 
             // labelTotalInterest
@@ -1671,13 +1671,14 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxExoticInstallmentProperties
             // 
-            this.groupBoxExoticInstallmentProperties.Controls.Add(this.panelExoticInstallment);
             resources.ApplyResources(this.groupBoxExoticInstallmentProperties, "groupBoxExoticInstallmentProperties");
+            this.groupBoxExoticInstallmentProperties.Controls.Add(this.panelExoticInstallment);
             this.groupBoxExoticInstallmentProperties.Name = "groupBoxExoticInstallmentProperties";
             this.groupBoxExoticInstallmentProperties.TabStop = false;
             // 
             // panelExoticInstallment
             // 
+            resources.ApplyResources(this.panelExoticInstallment, "panelExoticInstallment");
             this.panelExoticInstallment.Controls.Add(this.label12);
             this.panelExoticInstallment.Controls.Add(this.label11);
             this.panelExoticInstallment.Controls.Add(this.textBoxExoticInstallmentInterest);
@@ -1685,7 +1686,6 @@ namespace OpenCBS.GUI.Products
             this.panelExoticInstallment.Controls.Add(this.label9);
             this.panelExoticInstallment.Controls.Add(this.label10);
             this.panelExoticInstallment.ForeColor = System.Drawing.SystemColors.WindowText;
-            resources.ApplyResources(this.panelExoticInstallment, "panelExoticInstallment");
             this.panelExoticInstallment.Name = "panelExoticInstallment";
             // 
             // label12
@@ -1724,9 +1724,9 @@ namespace OpenCBS.GUI.Products
             // 
             // panelExoticProductNavigationButtons
             // 
+            resources.ApplyResources(this.panelExoticProductNavigationButtons, "panelExoticProductNavigationButtons");
             this.panelExoticProductNavigationButtons.Controls.Add(this.buttonDecreaseExoticInstallment);
             this.panelExoticProductNavigationButtons.Controls.Add(this.buttonIncreaseExoticInstallment);
-            resources.ApplyResources(this.panelExoticProductNavigationButtons, "panelExoticProductNavigationButtons");
             this.panelExoticProductNavigationButtons.Name = "panelExoticProductNavigationButtons";
             // 
             // buttonDecreaseExoticInstallment
@@ -1755,11 +1755,11 @@ namespace OpenCBS.GUI.Products
             // 
             // listViewExoticInstallments
             // 
+            resources.ApplyResources(this.listViewExoticInstallments, "listViewExoticInstallments");
             this.listViewExoticInstallments.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            resources.ApplyResources(this.listViewExoticInstallments, "listViewExoticInstallments");
             this.listViewExoticInstallments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(56)))));
             this.listViewExoticInstallments.FullRowSelect = true;
             this.listViewExoticInstallments.GridLines = true;
@@ -1783,17 +1783,17 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.buttonNewExoticProduct);
             this.groupBox2.Controls.Add(this.comboBoxExoticProduct);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label6, "label6");
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Name = "label6";
             // 
             // buttonNewExoticProduct
@@ -1804,17 +1804,17 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxExoticProduct
             // 
+            resources.ApplyResources(this.comboBoxExoticProduct, "comboBoxExoticProduct");
             this.comboBoxExoticProduct.DisplayMember = "exoticProduct.Name";
             this.comboBoxExoticProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxExoticProduct, "comboBoxExoticProduct");
             this.comboBoxExoticProduct.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxExoticProduct.Name = "comboBoxExoticProduct";
             this.comboBoxExoticProduct.SelectedIndexChanged += new System.EventHandler(this.comboBoxExoticProduct_SelectedIndexChanged);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.checkBoxUseExceptionalInstallmen);
             resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Controls.Add(this.checkBoxUseExceptionalInstallmen);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
@@ -1826,8 +1826,8 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.checkBoxFlexPackage);
             resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.Controls.Add(this.checkBoxFlexPackage);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.TabStop = false;
             // 
@@ -1839,25 +1839,25 @@ namespace OpenCBS.GUI.Products
             // 
             // tabLOC
             // 
+            resources.ApplyResources(this.tabLOC, "tabLOC");
             this.tabLOC.Controls.Add(this.drawNumGroupBox);
             this.tabLOC.Controls.Add(this.useLOCCheckBox);
             this.tabLOC.Controls.Add(this.maxLOCMaturityGroupBox);
             this.tabLOC.Controls.Add(this.maxLOCAmountGroupBox);
-            resources.ApplyResources(this.tabLOC, "tabLOC");
             this.tabLOC.Name = "tabLOC";
             // 
             // drawNumGroupBox
             // 
+            resources.ApplyResources(this.drawNumGroupBox, "drawNumGroupBox");
             this.drawNumGroupBox.Controls.Add(this.textBoxNumOfDrawings);
             this.drawNumGroupBox.Controls.Add(this.drawingNumberLabel);
-            resources.ApplyResources(this.drawNumGroupBox, "drawNumGroupBox");
             this.drawNumGroupBox.Name = "drawNumGroupBox";
             this.drawNumGroupBox.TabStop = false;
             // 
             // textBoxNumOfDrawings
             // 
-            this.textBoxNumOfDrawings.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.textBoxNumOfDrawings, "textBoxNumOfDrawings");
+            this.textBoxNumOfDrawings.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxNumOfDrawings.Name = "textBoxNumOfDrawings";
             this.textBoxNumOfDrawings.TextChanged += new System.EventHandler(this.textBoxNumOfDrawings_TextChanged);
             this.textBoxNumOfDrawings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumOfDrawings_KeyPress);
@@ -1875,6 +1875,7 @@ namespace OpenCBS.GUI.Products
             // 
             // maxLOCMaturityGroupBox
             // 
+            resources.ApplyResources(this.maxLOCMaturityGroupBox, "maxLOCMaturityGroupBox");
             this.maxLOCMaturityGroupBox.Controls.Add(this.label45);
             this.maxLOCMaturityGroupBox.Controls.Add(this.label46);
             this.maxLOCMaturityGroupBox.Controls.Add(this.label47);
@@ -1882,7 +1883,6 @@ namespace OpenCBS.GUI.Products
             this.maxLOCMaturityGroupBox.Controls.Add(this.textBoxLOCMaturityMax);
             this.maxLOCMaturityGroupBox.Controls.Add(this.textBoxLOCMaturity);
             this.maxLOCMaturityGroupBox.Controls.Add(this.textBoxLOCMaturityMin);
-            resources.ApplyResources(this.maxLOCMaturityGroupBox, "maxLOCMaturityGroupBox");
             this.maxLOCMaturityGroupBox.Name = "maxLOCMaturityGroupBox";
             this.maxLOCMaturityGroupBox.TabStop = false;
             // 
@@ -1930,6 +1930,7 @@ namespace OpenCBS.GUI.Products
             // 
             // maxLOCAmountGroupBox
             // 
+            resources.ApplyResources(this.maxLOCAmountGroupBox, "maxLOCAmountGroupBox");
             this.maxLOCAmountGroupBox.Controls.Add(this.labelLOCAmount);
             this.maxLOCAmountGroupBox.Controls.Add(this.labelLOCMaxAmount);
             this.maxLOCAmountGroupBox.Controls.Add(this.labelLOCMinAmount);
@@ -1940,7 +1941,6 @@ namespace OpenCBS.GUI.Products
             this.maxLOCAmountGroupBox.Controls.Add(this.textBoxAmountUnderLOCMax);
             this.maxLOCAmountGroupBox.Controls.Add(this.textBoxAmountUnderLOC);
             this.maxLOCAmountGroupBox.Controls.Add(this.textBoxAmountUnderLOCMin);
-            resources.ApplyResources(this.maxLOCAmountGroupBox, "maxLOCAmountGroupBox");
             this.maxLOCAmountGroupBox.Name = "maxLOCAmountGroupBox";
             this.maxLOCAmountGroupBox.TabStop = false;
             // 
@@ -2003,13 +2003,13 @@ namespace OpenCBS.GUI.Products
             // 
             // tabGuarantorsCollaterals
             // 
+            resources.ApplyResources(this.tabGuarantorsCollaterals, "tabGuarantorsCollaterals");
             this.tabGuarantorsCollaterals.Controls.Add(this.cbUseCompulsorySavings);
             this.tabGuarantorsCollaterals.Controls.Add(this.gbCSAmount);
             this.tabGuarantorsCollaterals.Controls.Add(this.checkBoxSetSepCollGuar);
             this.tabGuarantorsCollaterals.Controls.Add(this.groupBoxTotGuarColl);
             this.tabGuarantorsCollaterals.Controls.Add(this.groupBoxSepGuarColl);
             this.tabGuarantorsCollaterals.Controls.Add(this.checkBoxGuarCollRequired);
-            resources.ApplyResources(this.tabGuarantorsCollaterals, "tabGuarantorsCollaterals");
             this.tabGuarantorsCollaterals.Name = "tabGuarantorsCollaterals";
             // 
             // cbUseCompulsorySavings
@@ -2020,6 +2020,7 @@ namespace OpenCBS.GUI.Products
             // 
             // gbCSAmount
             // 
+            resources.ApplyResources(this.gbCSAmount, "gbCSAmount");
             this.gbCSAmount.Controls.Add(this.rbCompulsoryAmountRate);
             this.gbCSAmount.Controls.Add(this.rbCompulsoryAmountFlat);
             this.gbCSAmount.Controls.Add(this.lbCompulsoryAmountType);
@@ -2030,7 +2031,6 @@ namespace OpenCBS.GUI.Products
             this.gbCSAmount.Controls.Add(this.txbCompulsoryAmountMax);
             this.gbCSAmount.Controls.Add(this.txbCompulsoryAmountValue);
             this.gbCSAmount.Controls.Add(this.txbCompulsoryAmountMin);
-            resources.ApplyResources(this.gbCSAmount, "gbCSAmount");
             this.gbCSAmount.Name = "gbCSAmount";
             this.gbCSAmount.TabStop = false;
             // 
@@ -2099,10 +2099,10 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxTotGuarColl
             // 
+            resources.ApplyResources(this.groupBoxTotGuarColl, "groupBoxTotGuarColl");
             this.groupBoxTotGuarColl.Controls.Add(this.textBoxCollGuar);
             this.groupBoxTotGuarColl.Controls.Add(this.label34);
             this.groupBoxTotGuarColl.Controls.Add(this.label33);
-            resources.ApplyResources(this.groupBoxTotGuarColl, "groupBoxTotGuarColl");
             this.groupBoxTotGuarColl.Name = "groupBoxTotGuarColl";
             this.groupBoxTotGuarColl.TabStop = false;
             // 
@@ -2125,6 +2125,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxSepGuarColl
             // 
+            resources.ApplyResources(this.groupBoxSepGuarColl, "groupBoxSepGuarColl");
             this.groupBoxSepGuarColl.Controls.Add(this.textBoxColl);
             this.groupBoxSepGuarColl.Controls.Add(this.textBoxGuar);
             this.groupBoxSepGuarColl.Controls.Add(this.label49);
@@ -2132,7 +2133,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxSepGuarColl.Controls.Add(this.label35);
             this.groupBoxSepGuarColl.Controls.Add(this.labelMinPercColl);
             this.groupBoxSepGuarColl.Controls.Add(this.labelMinPercGuar);
-            resources.ApplyResources(this.groupBoxSepGuarColl, "groupBoxSepGuarColl");
             this.groupBoxSepGuarColl.Name = "groupBoxSepGuarColl";
             this.groupBoxSepGuarColl.TabStop = false;
             // 
@@ -2183,6 +2183,7 @@ namespace OpenCBS.GUI.Products
             // 
             // tabAccounts
             // 
+            resources.ApplyResources(this.tabAccounts, "tabAccounts");
             this.tabAccounts.Controls.Add(this.comboBoxTaxOnPenaltyAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
             this.tabAccounts.Controls.Add(this.label60);
@@ -2201,19 +2202,18 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.comboBoxInterestAccruedButNotDueAccount);
             this.tabAccounts.Controls.Add(this.label59);
             this.tabAccounts.Controls.Add(this.label50);
-            resources.ApplyResources(this.tabAccounts, "tabAccounts");
             this.tabAccounts.Name = "tabAccounts";
             // 
             // comboBoxTaxOnPenaltyAccount
             // 
-            this.comboBoxTaxOnPenaltyAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxTaxOnPenaltyAccount, "comboBoxTaxOnPenaltyAccount");
+            this.comboBoxTaxOnPenaltyAccount.FormattingEnabled = true;
             this.comboBoxTaxOnPenaltyAccount.Name = "comboBoxTaxOnPenaltyAccount";
             // 
             // comboBoxPenaltyIncomeAccount
             // 
-            this.comboBoxPenaltyIncomeAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxPenaltyIncomeAccount, "comboBoxPenaltyIncomeAccount");
+            this.comboBoxPenaltyIncomeAccount.FormattingEnabled = true;
             this.comboBoxPenaltyIncomeAccount.Name = "comboBoxPenaltyIncomeAccount";
             // 
             // label60
@@ -2228,8 +2228,8 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxAccruedPenaltyAccount
             // 
-            this.comboBoxAccruedPenaltyAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxAccruedPenaltyAccount, "comboBoxAccruedPenaltyAccount");
+            this.comboBoxAccruedPenaltyAccount.FormattingEnabled = true;
             this.comboBoxAccruedPenaltyAccount.Name = "comboBoxAccruedPenaltyAccount";
             // 
             // label57
@@ -2239,8 +2239,8 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxTaxOnInterestsAccount
             // 
-            this.comboBoxTaxOnInterestsAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxTaxOnInterestsAccount, "comboBoxTaxOnInterestsAccount");
+            this.comboBoxTaxOnInterestsAccount.FormattingEnabled = true;
             this.comboBoxTaxOnInterestsAccount.Name = "comboBoxTaxOnInterestsAccount";
             // 
             // label56
@@ -2250,8 +2250,8 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxInterestIncomeAccount
             // 
-            this.comboBoxInterestIncomeAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestIncomeAccount, "comboBoxInterestIncomeAccount");
+            this.comboBoxInterestIncomeAccount.FormattingEnabled = true;
             this.comboBoxInterestIncomeAccount.Name = "comboBoxInterestIncomeAccount";
             // 
             // label53
@@ -2261,8 +2261,8 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxInterestDueButNoteReceivedAccount
             // 
-            this.comboBoxInterestDueButNoteReceivedAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestDueButNoteReceivedAccount, "comboBoxInterestDueButNoteReceivedAccount");
+            this.comboBoxInterestDueButNoteReceivedAccount.FormattingEnabled = true;
             this.comboBoxInterestDueButNoteReceivedAccount.Name = "comboBoxInterestDueButNoteReceivedAccount";
             // 
             // label52
@@ -2272,8 +2272,8 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxInterestDueAccount
             // 
-            this.comboBoxInterestDueAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestDueAccount, "comboBoxInterestDueAccount");
+            this.comboBoxInterestDueAccount.FormattingEnabled = true;
             this.comboBoxInterestDueAccount.Name = "comboBoxInterestDueAccount";
             // 
             // label51
@@ -2283,14 +2283,14 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxPrincipalAccount
             // 
-            this.comboBoxPrincipalAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxPrincipalAccount, "comboBoxPrincipalAccount");
+            this.comboBoxPrincipalAccount.FormattingEnabled = true;
             this.comboBoxPrincipalAccount.Name = "comboBoxPrincipalAccount";
             // 
             // comboBoxInterestAccruedButNotDueAccount
             // 
-            this.comboBoxInterestAccruedButNotDueAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestAccruedButNotDueAccount, "comboBoxInterestAccruedButNotDueAccount");
+            this.comboBoxInterestAccruedButNotDueAccount.FormattingEnabled = true;
             this.comboBoxInterestAccruedButNotDueAccount.Name = "comboBoxInterestAccruedButNotDueAccount";
             // 
             // label59
@@ -2316,8 +2316,8 @@ namespace OpenCBS.GUI.Products
             // 
             // radioButtonSpecifiedAmount
             // 
-            this.radioButtonSpecifiedAmount.Checked = true;
             resources.ApplyResources(this.radioButtonSpecifiedAmount, "radioButtonSpecifiedAmount");
+            this.radioButtonSpecifiedAmount.Checked = true;
             this.radioButtonSpecifiedAmount.Name = "radioButtonSpecifiedAmount";
             this.radioButtonSpecifiedAmount.TabStop = true;
             // 
@@ -2345,22 +2345,22 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label7);
             resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Name = "label7";
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.buttonCancel);
             this.groupBox1.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 

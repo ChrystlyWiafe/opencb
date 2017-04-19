@@ -645,10 +645,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageMainParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageMainParameters.Text" xml:space="preserve">
     <value>Parámetros Principales</value>
@@ -1119,7 +1119,7 @@
     <value>Interereses por Mora (% por día)</value>
   </data>
   <data name="tabPageFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageFees.Text" xml:space="preserve">
     <value>Cargos</value>
@@ -1179,7 +1179,7 @@
     <value>748, 207</value>
   </data>
   <data name="tabPageCommissions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageCommissions.Text" xml:space="preserve">
     <value>Comisiones de préstamo</value>
@@ -1404,10 +1404,10 @@
     <value>179, 88</value>
   </data>
   <data name="groupBoxDetailsOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabPageOptionalParameters.Text" xml:space="preserve">
     <value>Parámetros Opcionales</value>
@@ -1560,7 +1560,7 @@
     <value>Monto Total por Linea de Crédito (Incluye Monto Desembolsado)</value>
   </data>
   <data name="tabLOC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabLOC.Text" xml:space="preserve">
     <value>Linea de Crédito</value>
@@ -1719,16 +1719,70 @@
     <value>Usar Garantes y Garantías</value>
   </data>
   <data name="tabGuarantorsCollaterals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 611</value>
+    <value>952, 610</value>
   </data>
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantías</value>
   </data>
+  <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 16</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>Impuesto sobre la penalización</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 16</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>Ingresos penales</value>
+  </data>
+  <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 16</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>Pena acumulada</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 16</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>Impuesto sobre los intereses</value>
+  </data>
+  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Ingresos por intereses</value>
+  </data>
+  <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Intereses debidos pero no recibidos</value>
+  </data>
+  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 16</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Interés debido</value>
+  </data>
+  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 16</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>Intereses devengados pero no vencidos</value>
+  </data>
+  <data name="tabAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 610</value>
+  </data>
+  <data name="tabAccounts.Text" xml:space="preserve">
+    <value>Cuentas de préstamos</value>
+  </data>
   <data name="tabCreditInsurance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 651</value>
+    <value>960, 650</value>
   </data>
   <data name="splitter2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 650</value>
+    <value>0, 649</value>
   </data>
   <data name="splitter2.Size" type="System.Drawing.Size, System.Drawing">
     <value>960, 1</value>
@@ -1785,13 +1839,13 @@
     <value>Guardar</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 651</value>
+    <value>0, 650</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>960, 59</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>960, 710</value>
+    <value>960, 709</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
