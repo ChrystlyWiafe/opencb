@@ -2500,6 +2500,18 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             return null;
         }
 
+        public Installment GetLastNotFullyRepaidInstallment()
+        {
+            for (int i = InstallmentList.Count - 1; i >= 0; i--)
+            {
+                if (!InstallmentList[i].IsRepaid)
+                {
+                    return InstallmentList[i];
+                }
+            }
+            return null;
+        }
+
         public OCurrency CalculateDuePenaltiesForInstallment(int pNumber, DateTime pDate)
         {
             if (pNumber < 1) return 0;

@@ -6,6 +6,7 @@ using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Events;
+using OpenCBS.CoreDomain.Events.Loan;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.Services;
 using OpenCBS.Shared;
@@ -22,6 +23,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         private readonly CoreDomain.Events.Loan.Event _event;
         private readonly SqlTransaction _transaction;
         private readonly string[] _repaymentTypes = {"RBLE", "RGLE", "APR", "ATR", "APTR"};
+        private const decimal TaxDefaultValue = 0.14m;
 
         public EventInterceptorService(IDictionary<string, object> parameters)
         {
@@ -96,15 +98,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 var paymentMethodAccountNumber = disbursment.PaymentMethod.AccountNumber;
 
-                list.Add(new BookingEntry
-                {
-                    Credit = new Account {AccountNumber = paymentMethodAccountNumber},
-                    Debit = new Account {AccountNumber = product.PrincipalAccountNumber},
-                    Amount = disbursment.Amount.Value,
-                    Description = "Loan disbursement"
-                });
-
-
                 foreach (var commission in disbursment.Commissions)
                 {
                     var entryFeeAccountNumber =
@@ -118,7 +111,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = "Commision repayment (Registration Fee)"
+                        Description = "Commission repayment (Registration Fee)"
                     });
                     list.Add(new BookingEntry
                     {
@@ -128,6 +121,15 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Description = "Income on commision (Registration Fee)"
                     });
                 }
+
+
+                list.Add(new BookingEntry
+                {
+                    Credit = new Account { AccountNumber = paymentMethodAccountNumber },
+                    Debit = new Account { AccountNumber = product.PrincipalAccountNumber },
+                    Amount = disbursment.Amount.Value,
+                    Description = "Loan disbursement"
+                });
             }
 
             //Repayment Event
@@ -136,15 +138,18 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 var repayment = (RepaymentEvent) eEvent;
                 var paymentMethodAccountNumber = repayment.PaymentMethod.AccountNumber;
 
-                list.Add(new BookingEntry
+                if (repayment.Principal.Value > 0m)
                 {
-                    Debit = new Account {AccountNumber = paymentMethodAccountNumber},
-                    Credit = new Account {AccountNumber = product.PrincipalAccountNumber},
-                    Amount = repayment.Principal.Value,
-                    Description = "Repayment of principal"
-                });
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account {AccountNumber = paymentMethodAccountNumber},
+                        Credit = new Account {AccountNumber = product.PrincipalAccountNumber},
+                        Amount = repayment.Principal.Value,
+                        Description = "Repayment of principal"
+                    });
+                }
 
-                if (repayment.Interests.Value > 0)
+                if (repayment.Interests.Value > 0m)
                 {
                     list.Add(new BookingEntry
                     {
@@ -161,23 +166,89 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Amount = repayment.Interests.Value,
                         Description = "Interest income"
                     });
+
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = product.InterestAccruedButNotDueAccountNumber },
+                        Credit = new Account { AccountNumber = product.InterestIncomeAccountNumber },
+                        Amount = repayment.Interests.Value,
+                        Description = "Tax on interest"
+                    });
+                }
+
+                if (repayment.Penalties.Value > 0m)
+                {
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = product.InterestAccruedButNotDueAccountNumber },
+                        Credit = new Account { AccountNumber = product.InterestIncomeAccountNumber },
+                        Amount = repayment.Interests.Value,
+                        Description = "Repayment of penalty"
+                    });
+
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = product.InterestAccruedButNotDueAccountNumber },
+                        Credit = new Account { AccountNumber = product.InterestIncomeAccountNumber },
+                        Amount = repayment.Interests.Value,
+                        Description = "Tax on penalty"
+                    });
                 }
             }
 
-            //Accrual Event
+            //Accrual Interest Event
             else if (eEvent.Code == "AILE")
             {
                 var accrual = (LoanInterestAccrualEvent) eEvent;
-                return new List<BookingEntry>
-                {
+
+                list.Add(
                     new BookingEntry
                     {
                         Debit = new Account {AccountNumber = product.InterestDueButNotReceivedAccountNumber},
                         Credit = new Account {AccountNumber = product.InterestAccruedButNotDueAccountNumber},
                         Amount = accrual.Interest.Value,
                         Description = "Interest accrual for " + _contractCode
-                    }
-                };
+                    });
+
+                var lastNonRepaidInstallment = loan.GetLastNotFullyRepaidInstallment();
+                if (lastNonRepaidInstallment.ExpectedDate.Date == accrual.Date.Date)
+                {
+                    // TODO Need to know an account for balance
+                    list.Add(
+                        new BookingEntry
+                        {
+                            Debit = new Account {AccountNumber = product.InterestDueButNotReceivedAccountNumber},
+                            Credit = new Account {AccountNumber = product.InterestAccruedButNotDueAccountNumber},
+                            Amount = accrual.Interest.Value,
+                            Description = "Interest accrual for " + _contractCode
+                        });
+                }
+                else if (lastNonRepaidInstallment.ExpectedDate.Date > accrual.Date.Date)
+                {
+                    // TODO Need to know an account for balance
+                    list.Add(
+                        new BookingEntry
+                        {
+                            Debit = new Account {AccountNumber = product.InterestDueButNotReceivedAccountNumber},
+                            Credit = new Account {AccountNumber = product.InterestAccruedButNotDueAccountNumber},
+                            Amount = accrual.Interest.Value,
+                            Description = "Interest accrual for " + _contractCode
+                        });
+                }
+            }
+
+            //Accrual Penalty Event
+            else if (eEvent.Code == "LPAE")
+            {
+                var accrual = (LoanPenaltyAccrualEvent) eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account {AccountNumber = product.InterestDueButNotReceivedAccountNumber},
+                    Credit = new Account {AccountNumber = product.InterestAccruedButNotDueAccountNumber},
+                    Amount = accrual.Penalty.Value,
+                    Description = "Penalty accrual for " + _contractCode
+                });
             }
 
             return list;
