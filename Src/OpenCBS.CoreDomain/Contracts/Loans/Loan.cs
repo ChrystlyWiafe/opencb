@@ -1220,7 +1220,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             e.Interest = GetTotalInterestDue();
             if (!pDisableFees)
             {
-                List<OCurrency> entryFees = GetEntryFees();
+                var entryFees = GetLoanEntryFeesFinalAmounts();
                 if (entryFees != null)
                 {
                     e.Commissions = new List<LoanEntryFeeEvent>();
@@ -1230,14 +1230,15 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                                                                   {
                                                                       Fee =
                                                                           Product.Currency.UseCents
-                                                                              ? Math.Round(entryFees[i].Value, 2)
-                                                                              : Math.Round(entryFees[i].Value,
+                                                                              ? Math.Round(entryFees[i].Item2.Value, 2)
+                                                                              : Math.Round(entryFees[i].Item2.Value,
                                                                                            MidpointRounding.AwayFromZero),
                                                                       Code = "LEE" + (!string.IsNullOrEmpty(LoanEntryFeesList[i].Index)?LoanEntryFeesList[i].Index:i.ToString()),
                                                                       DisbursementEventId = e.Id,
                                                                       Cancelable = true,
                                                                       User = User.CurrentUser,
-                                                                      Date = e.Date
+                                                                      Date = e.Date,
+                                                                      LoanEntryFee = entryFees[i].Item1
                                                                   };
                         e.Commissions.Add(loanEntryFeeEvent);
 
@@ -1318,6 +1319,32 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                     feeAmount = fee.ProductEntryFee.MaxSum;
 
                 entryFees.Add(feeAmount);
+            }
+            return entryFees;
+        }
+
+        public List<Tuple<LoanEntryFee,OCurrency>> GetLoanEntryFeesFinalAmounts()
+        {
+            List<Tuple<LoanEntryFee, OCurrency>> entryFees = new List<Tuple<LoanEntryFee, OCurrency>>();
+            if (LoanEntryFeesList == null) return null;
+            foreach (LoanEntryFee fee in LoanEntryFeesList)
+            {
+                OCurrency feeAmount;
+                if (fee.ProductEntryFee.IsRate)
+
+                    if (fee.ProductEntryFee.Value != null)
+                        feeAmount = _amount.Value * fee.ProductEntryFee.Value / 100.00m;
+                    else
+                        feeAmount = _amount.Value * fee.FeeValue / 100;
+                else
+                    feeAmount = fee.FeeValue;
+
+                if (feeAmount > fee.ProductEntryFee.MaxSum && fee.ProductEntryFee.MaxSum > 0 &&
+                    fee.ProductEntryFee.MaxSum != null)
+                    feeAmount = fee.ProductEntryFee.MaxSum;
+
+
+                entryFees.Add(new Tuple<LoanEntryFee, OCurrency>(fee, feeAmount));
             }
             return entryFees;
         }

@@ -234,5 +234,30 @@ namespace OpenCBS.Services
                 throw new Exception(error.Message);
             }
         }
+
+        public string GetEntryFeeAccountNumberByLoanProductEntryFeeId(int loanProductEntryFeeId, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+
+            try
+            {
+                var result = _entryFeeManager.GetEntryFeeAccountNumberByLoanProductEntryFeeId(loanProductEntryFeeId, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return result;
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

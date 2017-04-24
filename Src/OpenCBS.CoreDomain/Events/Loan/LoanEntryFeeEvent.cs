@@ -19,6 +19,7 @@
 // Website: http://www.opencbs.com
 // Contact: contact@opencbs.com
 
+using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Events.Loan;
 using OpenCBS.Shared;
 
@@ -34,6 +35,7 @@ namespace OpenCBS.CoreDomain.Events
             Date = TimeProvider.Today;
         }
         public OCurrency Fee { get; set; }
+        public LoanEntryFee LoanEntryFee { get; set; }
         public int DisbursementEventId { get; set; }
         public override string Code
         {

@@ -38,14 +38,19 @@ namespace OpenCBS.Extensions
         private MefContainer()
         {
             var extensionsFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+            var architecture = Path.Combine(extensionsFolder, "OpenCBS.ArchitectureV2.dll");
             extensionsFolder = Path.Combine(extensionsFolder, "Extensions");
             var catalog = new AggregateCatalog(
                     new AssemblyCatalog(Assembly.GetExecutingAssembly()),
                     new AssemblyCatalog(Assembly.GetAssembly(typeof(DatabaseConnection)))
                 );
+            
 
             if (Directory.Exists(extensionsFolder))
                 catalog.Catalogs.Add(new DirectoryCatalog(extensionsFolder));
+
+            if (File.Exists(architecture))
+                catalog.Catalogs.Add(new AssemblyCatalog(architecture));
 
 #if SAMPLE_EXTENSIONS
             var samples = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;

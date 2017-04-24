@@ -77,7 +77,6 @@
     <Compile Include="IRepaymentControlInitializer.cs" />
     <Compile Include="ISavingInterceptor.cs" />
     <Compile Include="ILoanInterceptor.cs" />
-    <Compile Include="DefaultEventInterceptor.cs" />
     <Compile Include="ContractCodeGenerator.cs" />
     <Compile Include="Host.cs" />
     <Compile Include="IContractCodeGenerator.cs" />

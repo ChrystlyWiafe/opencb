@@ -189,5 +189,17 @@ namespace OpenCBS.Manager
             var result = transaction.Connection.Query<LoanEntryFee>(query, new { loanId }, transaction).ToList();
             return result;
         }
+
+        public string GetEntryFeeAccountNumberByLoanProductEntryFeeId(int loanProductEntryFeeId, IDbTransaction transaction)
+        {
+            const string sql = @"
+                        select top 1
+                            account_number
+                        from dbo.EntryFees ef
+                        where ef.id = @Id
+                            and ef.is_deleted = 0
+                    ";
+            return transaction.Connection.Query<string>(sql, new { Id = loanProductEntryFeeId }, transaction).FirstOrDefault();
+        }
     }
 }
