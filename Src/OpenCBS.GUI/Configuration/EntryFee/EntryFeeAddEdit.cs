@@ -23,6 +23,9 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             InitializeComponent();
             var bookingService = new BookingService(User.CurrentUser);
             _accounts = bookingService.SelectAllAccounts().ToList();
+            var emptyAccount = new Account();
+            _accounts.Insert(0, emptyAccount);
+
             _comboBoxAccount.DataSource = _accounts;
             if (entryFee != null)
             {
