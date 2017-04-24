@@ -583,6 +583,8 @@ namespace OpenCBS.GUI.Products
 	    {
 	        var accountService = new AccountService(User.CurrentUser);
 	        _accounts = accountService.SelectAccounts().ToList();
+	        var emptyAccount = new Account();
+	        _accounts.Insert(0, emptyAccount);
 
             comboBoxAccruedPenaltyAccount.DataSource = new List<Account>(_accounts);
             comboBoxInterestAccruedButNotDueAccount.DataSource = new List<Account>(_accounts);
