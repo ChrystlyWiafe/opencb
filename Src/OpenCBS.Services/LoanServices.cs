@@ -1188,7 +1188,7 @@ namespace OpenCBS.Services
             // Get the part of the schedule that comes before the rescheduling date...
             var newSchedule =
                 from installment in schedule
-                where installment.ExpectedDate <= rescheduleConfiguration.StartDate
+                where installment.ExpectedDate.Date <= rescheduleConfiguration.StartDate
                 select installment;
 
             var reschedulingDateTime = rescheduleConfiguration.StartDate
@@ -1220,7 +1220,7 @@ namespace OpenCBS.Services
             // 2. To store amounts of interest paid, those for installments after date of rescheduling.
             var overpaidInterest = (
                 from installment in schedule
-                where installment.ExpectedDate > rescheduleConfiguration.StartDate
+                where installment.ExpectedDate.Date > rescheduleConfiguration.StartDate
                 select installment
             ).Sum(installment => installment.PaidInterests.Value);
 
