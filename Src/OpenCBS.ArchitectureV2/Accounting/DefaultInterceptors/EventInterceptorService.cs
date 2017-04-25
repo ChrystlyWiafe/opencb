@@ -40,7 +40,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             else
             {
                 _loanId = (int) parameters["LoanId"];
-                _loan = ServicesProvider.GetInstance().GetContractServices().SelectLoan(_loanId, true, true, true);
                 _clientId = (int) parameters["ClientId"];
                 _branchId = (int) parameters["BranchId"];
                 _contractCode = parameters.ContainsKey("ContractCode") ? (string) parameters["ContractCode"] : "";
@@ -84,7 +83,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
         public IEnumerable<BookingEntry> GetBookingEntries(Loan loan, CoreDomain.Events.Loan.Event eEvent)
         {
-            if (loan.Product == null)
+            if (loan == null || loan.Product == null)
                 throw new OpenCbsException("Loan product is empty");
 
             var product = loan.Product;
@@ -195,7 +194,11 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Description = "Interest accrual for " + _contractCode
                     });
 
-                var lastNonRepaidInstallment = loan.GetLastNotFullyRepaidInstallment();
+                var lastNonRepaidInstallment =
+                    ServicesProvider.GetInstance()
+                        .GetContractServices()
+                        .GetLastNotFullyRepaidInstallment(_loanId, _transaction);
+
                 if (lastNonRepaidInstallment.ExpectedDate.Date == accrual.Date.Date)
                 {
                     var account = new Account() {AccountNumber = product.InterestAccruedButNotDueAccountNumber};

@@ -3485,5 +3485,30 @@ namespace OpenCBS.Services
                     throw;
                 }
         }
+
+        public Installment GetLastNotFullyRepaidInstallment(int loanId, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+
+            try
+            {
+                var installments = _instalmentManager.SelectInstallments(loanId, (SqlTransaction)transaction);
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return installments.OrderBy(item => item.Number).LastOrDefault(item => !item.IsRepaid);
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
     }
 }
