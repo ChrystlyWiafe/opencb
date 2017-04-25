@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using OpenCBS.GUI.UserControl;
 using Fee = OpenCBS.CoreDomain.EntryFee;
 
@@ -61,10 +62,10 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         private void UpdateLocalEntryFee()
         {
             _entryFee.Name = _textBoxName.Text;
-            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : _numericUpDownMin.Value;
-            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : _numericUpDownMax.Value;
+            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : FloorToCents(_numericUpDownMin.Value);
+            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : FloorToCents(_numericUpDownMax.Value);
             _entryFee.IsRate = IsRate;
-            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : _numericUpDownMaxSum.Value;
+            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : FloorToCents(_numericUpDownMaxSum.Value);
         }
 
         private void FillFieldsByEntryFee(Fee entryFee)
@@ -146,12 +147,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             var fee = new Fee
                         {
                             Name = _textBoxName.Text,
-                            Min = _numericUpDownMin.Text == "" ? 0m : _numericUpDownMin.Value,
-                            Max = _numericUpDownMax.Text == "" ? 0m : _numericUpDownMax.Value,
+                            Min = _numericUpDownMin.Text == "" ? 0m : FloorToCents(_numericUpDownMin.Value),
+                            Max = _numericUpDownMax.Text == "" ? 0m : FloorToCents(_numericUpDownMax.Value),
                             IsRate = IsRate,
-                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : _numericUpDownMaxSum.Value
+                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : FloorToCents(_numericUpDownMaxSum.Value)
                         };
             return fee;
+        }
+
+        private decimal FloorToCents(decimal value)
+        {
+            return Math.Floor(value*100m)/100m;
         }
     }
 }
