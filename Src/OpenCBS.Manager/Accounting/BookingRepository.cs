@@ -343,6 +343,62 @@ namespace OpenCBS.Manager.Accounting
             return tx.Connection.Query<decimal>(query, new {date, number = account.AccountNumber}, tx).FirstOrDefault();
         }
 
+        public decimal GetAccountBalanceByLoanId(DateTime date, Account account, int loanId, IDbTransaction tx)
+        {
+            const string query = @"
+                    select 
+                        case 
+                            when a.is_debit = 1
+                            then isnull(b.endDebit, 0) - isnull(b.endCredit, 0)
+                            else isnull(b.endCredit, 0) - isnull(b.endDebit, 0)
+                        end Balance
+                    from 
+                    (
+                        select 
+                            t.account_number account
+                            , sum(isnull(endDebit.amount, 0)) endDebit
+                            , sum(isnull(endCredit.amount, 0)) endCredit
+                        from 
+                            dbo.Accounts t
+                        left join 
+                        (
+                            select 
+                                DebitAccount account
+                                , sum(isnull(amount, 0)) amount
+                            from 
+                                dbo.Booking
+                            where 
+                                cast(Date as date) <= cast(@date as date) 
+                                and IsDeleted = 0
+                                and LoanId = @loanId
+                            group by 
+                                DebitAccount 
+                        ) endDebit on endDebit.account = t.account_number
+                        left join 
+                        (
+                            select 
+                                CreditAccount account
+                                , sum(isnull(amount, 0)) amount
+                            from 
+                                dbo.Booking 
+                            where 
+                                cast(Date as date) <= cast(@date as date) 
+                                and IsDeleted = 0
+                                and LoanId = @loanId
+                            group by 
+                                CreditAccount
+                        ) endCredit on endCredit.account = t.account_number
+                        group by 
+                            t.account_number
+                    ) b
+                    left join 
+                        dbo.Accounts a on a.account_number = b.account
+                    where 
+                        a.account_number = @number
+                    ";
+            return tx.Connection.Query<decimal>(query, new { date, number = account.AccountNumber, loanId }, tx).FirstOrDefault();
+        }
+
         public IEnumerable<Account> SelectAllAccounts(IDbTransaction tx)
         {
             const string query = @"

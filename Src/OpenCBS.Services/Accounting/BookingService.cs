@@ -136,6 +136,31 @@ namespace OpenCBS.Services.Accounting
             }
         }
 
+        public decimal GetAccountBalanceByLoanId(DateTime date, Account account,int loanId, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+
+            try
+            {
+                var result = _repository.GetAccountBalanceByLoanId(date, account, loanId, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return result;
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
         public void DeleteBookingsByEvent(IDictionary<string, object> entity, IDbTransaction transaction = null)
         {
             // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
