@@ -844,7 +844,8 @@ namespace OpenCBS.Services
                                     Id = repayEvent.Id,
                                     Date = repayEvent.Date,
                                     PaymentMethodId = paymentMethod.Id,
-                                    Comment = repayEvent.Comment
+                                    Comment = repayEvent.Comment,
+                                    PaymentMethod = paymentMethod
                                 }
                             },
                             {"SqlTransaction", sqlTransaction}
@@ -863,7 +864,8 @@ namespace OpenCBS.Services
                                 Id = repayEvent.Id,
                                 Date = repayEvent.Date,
                                 PaymentMethodId = paymentMethod.Id,
-                                Comment = repayEvent.Comment
+                                Comment = repayEvent.Comment,
+                                PaymentMethod = paymentMethod
                             }
                         },
                         {"SqlTransaction", sqlTransaction}
