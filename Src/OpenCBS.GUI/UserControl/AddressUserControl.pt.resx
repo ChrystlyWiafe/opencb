@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,17 +112,17 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelDistrict.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 16</value>
   </data>
   <data name="labelDistrict.Text" xml:space="preserve">
-    <value>Distrito:</value>
+    <value>Distrito*:</value>
   </data>
   <data name="labelComments.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 16</value>
@@ -134,13 +134,13 @@
     <value>57, 16</value>
   </data>
   <data name="labelCity.Text" xml:space="preserve">
-    <value>Cidade:</value>
+    <value>Cidade*:</value>
   </data>
   <data name="labelProvince.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 16</value>
   </data>
   <data name="labelProvince.Text" xml:space="preserve">
-    <value>Província:</value>
+    <value>Província*:</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelHomePhone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -159,13 +159,13 @@
     <value>78, 16</value>
   </data>
   <data name="labelPersonalPhone.Text" xml:space="preserve">
-    <value>Telemovel:</value>
+    <value>Telemóvel:</value>
   </data>
   <data name="labelEMail.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 16</value>
   </data>
   <data name="labelEMail.Text" xml:space="preserve">
-    <value>Carta-E:</value>
+    <value>Email:</value>
   </data>
   <data name="labelZipCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 16</value>
@@ -186,6 +186,6 @@
     <value>90, 23</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
-    <value>Selecione</value>
+    <value>Seleccionar</value>
   </data>
 </root>
