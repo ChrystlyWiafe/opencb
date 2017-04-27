@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -161,7 +161,7 @@
 </value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>Confirme a criação</value>
+    <value>Confirmar a criação</value>
   </data>
   <data name="chName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -179,22 +179,22 @@
     <value>Juro</value>
   </data>
   <data name="chGracePeriod.Text" xml:space="preserve">
-    <value>Período de carencia</value>
+    <value>Período de carência</value>
   </data>
   <data name="chInstallments.Text" xml:space="preserve">
     <value>Prestações</value>
   </data>
   <data name="chLoanOfficer.Text" xml:space="preserve">
-    <value>Oficial de crédito</value>
+    <value>Agente de crédito</value>
   </data>
   <data name="chCreationDate.Text" xml:space="preserve">
     <value>Data de Criação</value>
   </data>
   <data name="chFundingLine.Text" xml:space="preserve">
-    <value>Linha de finanças</value>
+    <value>Linha de financiamento</value>
   </data>
   <data name="chAvailableFunds.Text" xml:space="preserve">
-    <value>Quantia do FD (fundos disponsiveis) remanescente</value>
+    <value>Quantia do FD (fundos disponíveis) remanescente</value>
   </data>
   <data name="chCompulsorySavings.Text" xml:space="preserve">
     <value>Poupança obrigatória</value>
