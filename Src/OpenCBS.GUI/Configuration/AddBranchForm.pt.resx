@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -140,7 +140,7 @@
     <value>Descrição</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Adicionar uma filial</value>
+    <value>Adicionar Sucursal</value>
   </data>
   <data name="tabPageAddBranches.Text" xml:space="preserve">
     <value>Adicionar sucursal</value>
@@ -149,44 +149,45 @@
     <value>Id</value>
   </data>
   <data name="chName.Text" xml:space="preserve">
-    <value>nome</value>
+    <value>Nome</value>
   </data>
   <data name="chAccount.Text" xml:space="preserve">
-    <value>conta</value>
+    <value>Conta</value>
   </data>
   <data name="chDescription.Text" xml:space="preserve">
-    <value>descrição</value>
+    <value>Descrição</value>
   </data>
   <data name="btnRemoveTeller.Text" xml:space="preserve">
-    <value>Apagar
-</value>
+    <value>Remover Caixa</value>
   </data>
   <data name="btnEditTeller.Text" xml:space="preserve">
-    <value>editar</value>
+    <value>Editar Caixa</value>
   </data>
   <data name="btnAddTeller.Text" xml:space="preserve">
-    <value>adicionar</value>
+    <value>Adicionar Caixa</value>
   </data>
   <data name="tabPageAddTellers.Text" xml:space="preserve">
-    <value>Adicionar contadores</value>
+    <value>Adicionar Caixas</value>
   </data>
   <data name="columnHeaderId.Text" xml:space="preserve">
     <value>Id</value>
   </data>
   <data name="columnHeaderPaymentMethod.Text" xml:space="preserve">
-    <value>método de pagamento</value>
+    <value>Método de pagamento</value>
   </data>
   <data name="columnHeaderAccountNumber.Text" xml:space="preserve">
-    <value>Número da conta</value>
+    <value>Costa</value>
   </data>
   <data name="btnDeletePaymentMethod.Text" xml:space="preserve">
-    <value>Apagar
-</value>
+    <value>Apagar</value>
   </data>
   <data name="btnAddPaymentMethod.Text" xml:space="preserve">
-    <value>adicionar</value>
+    <value>Adicionar</value>
   </data>
   <data name="tabPageAddPaymentMethod.Text" xml:space="preserve">
     <value>Adicionar método de pagamento</value>
+  </data>
+  <data name="btnEditPaymentMethod.Text" xml:space="preserve">
+    <value>Editar</value>
   </data>
 </root>

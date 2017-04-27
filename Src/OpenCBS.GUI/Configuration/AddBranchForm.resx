@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -657,9 +657,6 @@
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
   </data>
@@ -1297,4 +1294,34 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SweetOkCancelForm, OpenCBS.GUI, Version=17.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="chName.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chAccount.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chDescription.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRemoveTeller.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEditTeller.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAddTeller.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageAddTellers.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderAccount.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chTeller.Text" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
