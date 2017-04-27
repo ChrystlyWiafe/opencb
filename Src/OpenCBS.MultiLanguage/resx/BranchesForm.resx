@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -122,5 +122,8 @@
   </data>
   <data name="confirmDelete" xml:space="preserve">
     <value>Are you sure you want to delete the branch?</value>
+  </data>
+  <data name="There_are_active_loans_in_this_branch" xml:space="preserve">
+    <value />
   </data>
 </root>
