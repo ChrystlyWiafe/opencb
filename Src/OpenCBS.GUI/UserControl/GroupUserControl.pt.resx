@@ -354,13 +354,13 @@
     <value>Imprimir</value>
   </data>
   <data name="buttonAddGroupSponsor.Text" xml:space="preserve">
-    <value>Adicionar</value>
+    <value>Adicionar Grupo responsável</value>
   </data>
   <data name="buttonAddMembres.Text" xml:space="preserve">
     <value>Adicionar novo</value>
   </data>
   <data name="buttonAddProject.Text" xml:space="preserve">
-    <value>Add projecto</value>
+    <value>Adicionar projecto</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
@@ -381,19 +381,19 @@
     <value>Definir como lider</value>
   </data>
   <data name="buttonSelectAMember.Text" xml:space="preserve">
-    <value>Procura cliente</value>
+    <value>Seleccionar Dia do encontro</value>
   </data>
   <data name="buttonSelectGroupSponsor.Text" xml:space="preserve">
-    <value>Procurar</value>
+    <value>Seleccionar Grupo responsável</value>
   </data>
   <data name="buttonViewMember.Text" xml:space="preserve">
     <value>Ver membro</value>
   </data>
   <data name="buttonViewProject.Text" xml:space="preserve">
-    <value>Veja projecto</value>
+    <value>Ver projecto</value>
   </data>
   <data name="cbMeetingDay.Text" xml:space="preserve">
-    <value>Dia de encontros</value>
+    <value>Seleccionar Dia do encontro</value>
   </data>
   <data name="cmbWeekDay.Items" xml:space="preserve">
     <value>Domingo</value>
@@ -432,19 +432,19 @@
     <value>N° de BI</value>
   </data>
   <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Nascimento</value>
+    <value>Data de Nascimento</value>
   </data>
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Sexo</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Chefe de familia</value>
+    <value>Data de adesão</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Dependentes</value>
+    <value>Data restante</value>
   </data>
   <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Desde</value>
+    <value>Lista negra</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
     <value>Lista negra</value>
@@ -456,13 +456,13 @@
     <value>Código</value>
   </data>
   <data name="columnHeaderDateOfBirth.Text" xml:space="preserve">
-    <value>Nascimento</value>
+    <value>Data de Nascimento</value>
   </data>
   <data name="columnHeaderDependents.Text" xml:space="preserve">
     <value>Dependentes</value>
   </data>
   <data name="columnHeaderLoanCycle.Text" xml:space="preserve">
-    <value>Cíclo</value>
+    <value>Ciclo</value>
   </data>
   <data name="columnHeaderName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -480,7 +480,7 @@
     <value>Comentários</value>
   </data>
   <data name="groupBoxAmountCycle.Text" xml:space="preserve">
-    <value>cliente</value>
+    <value>Ciclo de montante</value>
   </data>
   <data name="groupBoxCivilStatus.Text" xml:space="preserve">
     <value>Situação civil</value>
@@ -492,49 +492,49 @@
     <value>Outra IMF(s)</value>
   </data>
   <data name="groupBoxSecondaryAddress.Text" xml:space="preserve">
-    <value>Negócios</value>
+    <value>Sede da Empresa</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Sucursal</value>
   </data>
   <data name="labelCommentsTypeActivity.Text" xml:space="preserve">
-    <value>Comentários:</value>
+    <value>Comentários Tipo de Actividade:</value>
   </data>
   <data name="labelCurrency1.Text" xml:space="preserve">
-    <value>MZN</value>
+    <value>AKZ</value>
   </data>
   <data name="labelCurrency2.Text" xml:space="preserve">
-    <value>MZN</value>
+    <value>AKZ</value>
   </data>
   <data name="labelDateOfEstablishment.Text" xml:space="preserve">
     <value>Data de estabelecimento:</value>
   </data>
   <data name="labelGroupCycle.Text" xml:space="preserve">
-    <value>Cíclo do grupo:</value>
+    <value>Ciclo do grupo:</value>
   </data>
   <data name="labelGroupSponsor.Text" xml:space="preserve">
-    <value>Doador do grupo</value>
+    <value>Patrocinador do grupo</value>
   </data>
   <data name="labelName.Text" xml:space="preserve">
     <value>Nome: *</value>
   </data>
   <data name="labelOtherOrganizationAmount.Text" xml:space="preserve">
-    <value>Valor:</value>
+    <value>Valor de outra organização:</value>
   </data>
   <data name="labelOtherOrganizationDebts.Text" xml:space="preserve">
-    <value>Débito:</value>
+    <value>Débito a outra organização:</value>
   </data>
   <data name="labelOtherOrganizationName.Text" xml:space="preserve">
-    <value>Nome:</value>
+    <value>Nome de outra organização:</value>
   </data>
   <data name="lblWeekDay.Text" xml:space="preserve">
     <value>Dia do encontro</value>
   </data>
   <data name="linkLabelChangePhoto.Text" xml:space="preserve">
-    <value>Mude foto</value>
+    <value>Alterar foto</value>
   </data>
   <data name="linkLabelChangePhoto2.Text" xml:space="preserve">
-    <value>Mude foto</value>
+    <value>Alterar foto</value>
   </data>
   <data name="radioButtonBadClient.Text" xml:space="preserve">
     <value>Lista negra</value>
