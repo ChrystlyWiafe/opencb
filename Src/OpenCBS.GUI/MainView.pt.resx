@@ -147,7 +147,7 @@
 </value>
   </data>
   <data name="colAlerts_Address.Text" xml:space="preserve">
-    <value>Endereco</value>
+    <value>Cidade</value>
   </data>
   <data name="colAlerts_City.Text" xml:space="preserve">
     <value>Cidade</value>
@@ -162,13 +162,13 @@
     <value>77, 20</value>
   </data>
   <data name="mainStatusBarLblUserName.Text" xml:space="preserve">
-    <value>Utilizador</value>
+    <value>Nome de Utilizador</value>
   </data>
   <data name="branchesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
   <data name="branchesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sucursais</value>
+    <value>Configurar Sucursais</value>
   </data>
   <data name="toolStripSeparatorConfig1.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 6</value>
@@ -183,13 +183,13 @@
     <value>226, 22</value>
   </data>
   <data name="loanPurposeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Finalidade do Empréstimo</value>
+    <value>Finalidade do Crédito</value>
   </data>
   <data name="menuItemLocations.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
   <data name="menuItemLocations.Text" xml:space="preserve">
-    <value>Provincias, distritos e cidades</value>
+    <value>Províncias, distritos e cidades</value>
   </data>
   <data name="toolStripMenuItemFundingLines.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -216,13 +216,13 @@
     <value>226, 22</value>
   </data>
   <data name="menuItemExchangeRate.Text" xml:space="preserve">
-    <value>Taxa de cambio</value>
+    <value>Taxa de câmbio</value>
   </data>
   <data name="currenciesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
   <data name="currenciesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Moeda</value>
+    <value>Moedas</value>
   </data>
   <data name="toolStripSeparatorConfig3.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 6</value>
@@ -237,7 +237,7 @@
     <value>226, 22</value>
   </data>
   <data name="collateralProductsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Colateral</value>
+    <value>Garantias</value>
   </data>
   <data name="entryFeesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -252,7 +252,7 @@
     <value>226, 22</value>
   </data>
   <data name="menuItemSetting.Text" xml:space="preserve">
-    <value>Configuracoes gerais</value>
+    <value>Configurações gerais</value>
   </data>
   <data name="menuItemDatabaseControlPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -294,7 +294,7 @@
     <value>128, 22</value>
   </data>
   <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Portugues</value>
+    <value>Português</value>
   </data>
   <data name="languagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -330,7 +330,7 @@
     <value>178, 22</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Text" xml:space="preserve">
-    <value>Trocar senha</value>
+    <value>Trocar palavra pass</value>
   </data>
   <data name="mnuSecurity.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 20</value>
@@ -366,7 +366,7 @@
     <value>220, 22</value>
   </data>
   <data name="mnuNewGroup.Text" xml:space="preserve">
-    <value>Grupo solidario</value>
+    <value>Novo Grupo solidário</value>
   </data>
   <data name="mnuNewVillage.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -411,7 +411,7 @@
     <value>61, 20</value>
   </data>
   <data name="mnuClients.Text" xml:space="preserve">
-    <value>Clientes</value>
+    <value>Cliente e Contracto</value>
   </data>
   <data name="_startPageItem.Text" xml:space="preserve">
     <value>Página inicial</value>
@@ -432,7 +432,7 @@
     <value>154, 22</value>
   </data>
   <data name="_aboutModulesMenuItem.Text" xml:space="preserve">
-    <value>Sobre Módulos</value>
+    <value>Sobre os Módulos</value>
   </data>
   <data name="_modulesMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -450,7 +450,7 @@
     <value>226, 22</value>
   </data>
   <data name="mnuNewChartOfAccounts.Text" xml:space="preserve">
-    <value>Plano de Contas</value>
+    <value>Plano de contabilidade</value>
   </data>
   <data name="mnuNewBalances.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -486,19 +486,19 @@
     <value>56, 20</value>
   </data>
   <data name="mnuWindow.Text" xml:space="preserve">
-    <value>Janelas</value>
+    <value>Janela</value>
   </data>
   <data name="userGuideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
   <data name="userGuideToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guia do usuário</value>
+    <value>Guia de utilizador </value>
   </data>
   <data name="contactMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
   <data name="contactMenuItem.Text" xml:space="preserve">
-    <value>Contate-nos...</value>
+    <value>Contacte-nos</value>
   </data>
   <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
@@ -516,7 +516,7 @@
     <value>193, 22</value>
   </data>
   <data name="visitOpenCBScomToolStripMenuItem.Text" xml:space="preserve">
-    <value>Visita OPENCBS.com</value>
+    <value>Visite OPENCBS.com</value>
   </data>
   <data name="mnuHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 20</value>
@@ -1121,5 +1121,8 @@
         VDEyOjE2OjU0KzA4OjAwAxvRswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNS0wNlQxMjoxNjo1NCsw
         ODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="loanCalculatorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Calculadora de Crédito</value>
   </data>
 </root>

@@ -1694,9 +1694,6 @@
   <data name="menuItemAddUser.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItemFundingLines.Name" xml:space="preserve">
-    <value>toolStripMenuItemFundingLines</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1284, 733</value>
   </data>
@@ -1784,9 +1781,6 @@
   <data name="mainStatusBarLblDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 20</value>
   </data>
-  <data name="menuItemSetting.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="mnuNewBooking.Text" xml:space="preserve">
     <value>Transactions</value>
   </data>
@@ -1801,9 +1795,6 @@
   </data>
   <data name="&gt;&gt;nIUpdateAvailable.Name" xml:space="preserve">
     <value>nIUpdateAvailable</value>
-  </data>
-  <data name="_aboutModulesMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 22</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Text" xml:space="preserve">
     <value>Change Password</value>
