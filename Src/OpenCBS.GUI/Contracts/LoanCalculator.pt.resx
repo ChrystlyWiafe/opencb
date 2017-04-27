@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -134,13 +134,13 @@
     <value>Transformação:</value>
   </data>
   <data name="lProjectCorporateName.Text" xml:space="preserve">
-    <value>Nome:</value>
+    <value>Nome da empresa</value>
   </data>
   <data name="lProjectCorporateSIRET.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 16</value>
   </data>
   <data name="lProjectCorporateSIRET.Text" xml:space="preserve">
-    <value>Nº de registro:</value>
+    <value>Nº de registo:</value>
   </data>
   <data name="lProjectJuridicStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 16</value>
@@ -167,10 +167,10 @@
     <value>32, 16</value>
   </data>
   <data name="lProjectFinancialPlanType.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Tipo de Plano Financeiro</value>
   </data>
   <data name="lProjectFinancialPlanAmount.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor do Plano Financeiro</value>
   </data>
   <data name="listViewProjectFollowUp.Size" type="System.Drawing.Size, System.Drawing">
     <value>1223, 220</value>
@@ -192,7 +192,7 @@
     <value>N° das tarefas 2</value>
   </data>
   <data name="columnHeaderprojectPersonalSituation.Text" xml:space="preserve">
-    <value>Situáção pessoal</value>
+    <value>Situação pessoal</value>
   </data>
   <data name="columnHeaderProjectActivity.Text" xml:space="preserve">
     <value>Actividade</value>
@@ -231,7 +231,7 @@
     <value>1243, 16</value>
   </data>
   <data name="lblCollaterals.Text" xml:space="preserve">
-    <value>Lista de garantias</value>
+    <value>Garantias</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>290</value>
@@ -252,22 +252,22 @@
     <value>3, 243</value>
   </data>
   <data name="btnPrintGuarantors.Text" xml:space="preserve">
-    <value>Imprimir</value>
+    <value>Imprimir Fiadores</value>
   </data>
   <data name="pnlGuarantorButtons.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 268</value>
   </data>
   <data name="buttonSelectAGarantors.Text" xml:space="preserve">
-    <value>Adicionar</value>
+    <value>Seleccionar Fiadores</value>
   </data>
   <data name="buttonModifyAGarantors.Text" xml:space="preserve">
-    <value>Modificar</value>
+    <value>Modificar Fiadores</value>
   </data>
   <data name="buttonViewAGarantors.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="buttonViewAGarantors.Text" xml:space="preserve">
-    <value>Veja</value>
+    <value>Visualizar Fiadores</value>
   </data>
   <data name="buttonDelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 100</value>
@@ -282,7 +282,7 @@
     <value>79, 16</value>
   </data>
   <data name="lblCreditCurrency.Text" xml:space="preserve">
-    <value>Moeda: ......</value>
+    <value>Moeda</value>
   </data>
   <data name="columnHeader19.Text" xml:space="preserve">
     <value>Nome</value>
@@ -291,34 +291,34 @@
     <value>Quantia</value>
   </data>
   <data name="columnHeader25.Text" xml:space="preserve">
-    <value>% do emprestimo</value>
+    <value>% do empréstimo</value>
   </data>
   <data name="columnHeaderColDesc.Text" xml:space="preserve">
     <value>Descrição</value>
   </data>
   <data name="buttonAddCollateral.Text" xml:space="preserve">
-    <value>Adicionar</value>
+    <value>Adicionar Garantia</value>
   </data>
   <data name="buttonModifyCollateral.Text" xml:space="preserve">
-    <value>Modificar</value>
+    <value>Modificar Garantia</value>
   </data>
   <data name="buttonViewCollateral.Text" xml:space="preserve">
-    <value>Veja</value>
+    <value>Visualizar Garantia</value>
   </data>
   <data name="buttonDelCollateral.Text" xml:space="preserve">
-    <value>Apagar</value>
+    <value>Apagar Garantia</value>
   </data>
   <data name="panelLoansContracts.Size" type="System.Drawing.Size, System.Drawing">
     <value>1249, 259</value>
   </data>
   <data name="labelLoansContracts.Text" xml:space="preserve">
-    <value>Empréstimos</value>
+    <value>Contractos de Créditos</value>
   </data>
   <data name="panelSavingsContracts.Size" type="System.Drawing.Size, System.Drawing">
     <value>1249, 267</value>
   </data>
   <data name="labelSavingsContracts.Text" xml:space="preserve">
-    <value>Poupança</value>
+    <value>Crontractos de Poupança</value>
   </data>
   <data name="splitContainerContracts.SplitterDistance" type="System.Int32, mscorlib">
     <value>259</value>
@@ -330,7 +330,7 @@
     <value>Projecto</value>
   </data>
   <data name="tabPageLoansDetails.Text" xml:space="preserve">
-    <value>Detalhes do empréstimo</value>
+    <value>Detalhes do Crédito</value>
   </data>
   <data name="tabPageAdvancedSettings.Text" xml:space="preserve">
     <value>Configurações avançadas</value>
@@ -342,7 +342,7 @@
     <value>Reembolso do empréstimo</value>
   </data>
   <data name="tabPageLoanGuarantees.Text" xml:space="preserve">
-    <value>Fiadors e garantias</value>
+    <value>Garantias do crédito</value>
   </data>
   <data name="tabPageSavingDetails.Text" xml:space="preserve">
     <value>Detalhes da Poupança</value>
@@ -483,31 +483,31 @@
 </value>
   </data>
   <data name="labelProjectDate.Text" xml:space="preserve">
-    <value>Data:</value>
+    <value>Data do Projecto</value>
   </data>
   <data name="buttonProjectSelectPurpose.Text" xml:space="preserve">
-    <value>Selecione</value>
+    <value>Seleccionar Propósito</value>
   </data>
   <data name="labelProjectPurpose.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 16</value>
   </data>
   <data name="labelProjectPurpose.Text" xml:space="preserve">
-    <value>Tipo:</value>
+    <value>Propósito de Projecto</value>
   </data>
   <data name="labelProjectName.Text" xml:space="preserve">
-    <value>Nome:</value>
+    <value>Nomedo Projecto</value>
   </data>
   <data name="labelProjectCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
   </data>
   <data name="labelProjectCode.Text" xml:space="preserve">
-    <value>Código:</value>
+    <value>Código do Projecto</value>
   </data>
   <data name="labelFirstProjectName.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 16</value>
   </data>
   <data name="labelFirstProjectName.Text" xml:space="preserve">
-    <value>Objectivo</value>
+    <value>Nome do Projecto</value>
   </data>
   <data name="buttonProjectSave.Text" xml:space="preserve">
     <value>Gravar projecto</value>
@@ -516,13 +516,13 @@
     <value>Contratos</value>
   </data>
   <data name="columnProductType.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Tipo de Produto</value>
   </data>
   <data name="columnHeaderId.Text" xml:space="preserve">
     <value>Código</value>
   </data>
   <data name="columnHeaderStatus.Text" xml:space="preserve">
-    <value>Situação</value>
+    <value>Estado </value>
   </data>
   <data name="columnHeaderAmount.Text" xml:space="preserve">
     <value>Quantia</value>
@@ -546,25 +546,25 @@
     <value>Data criada</value>
   </data>
   <data name="columnHeaderStartDate.Text" xml:space="preserve">
-    <value>Data inícial</value>
+    <value>Data inicial</value>
   </data>
   <data name="columnHeaderCloseDate.Text" xml:space="preserve">
-    <value>Data do encerramento</value>
+    <value>Data de fim</value>
   </data>
   <data name="buttonProjectAddContract.Text" xml:space="preserve">
-    <value>Adicionar emprestimo</value>
+    <value>Adicionar Contracto</value>
   </data>
   <data name="buttonProjectViewContract.Text" xml:space="preserve">
-    <value>Veja contracto</value>
+    <value>Visualizar Contracto</value>
   </data>
   <data name="tabPageProjectAnalyses.Text" xml:space="preserve">
-    <value>Análizes</value>
+    <value>Análises do Projecto</value>
   </data>
   <data name="labelProjectConcurrence.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 16</value>
   </data>
   <data name="labelProjectConcurrence.Text" xml:space="preserve">
-    <value>Concorencia:</value>
+    <value>Concorrência:</value>
   </data>
   <data name="labelProjectMarket.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 16</value>
@@ -582,10 +582,10 @@
     <value>95, 16</value>
   </data>
   <data name="labelProjectAbilities.Text" xml:space="preserve">
-    <value>Competencias:</value>
+    <value>Competências:</value>
   </data>
   <data name="tabPageCorporate.Text" xml:space="preserve">
-    <value>Empresa criada</value>
+    <value>Empresa</value>
   </data>
   <data name="tabPageFollowUp.Text" xml:space="preserve">
     <value>Seguimento</value>
@@ -594,7 +594,7 @@
     <value>Prestações</value>
   </data>
   <data name="columnHeaderLoanDate.Text" xml:space="preserve">
-    <value>Data</value>
+    <value>Data do Crédito</value>
   </data>
   <data name="columnHeaderLoanIP.Text" xml:space="preserve">
     <value>Pagamento de juros</value>
@@ -609,22 +609,22 @@
     <value>SEP</value>
   </data>
   <data name="btnSaveLoan.Text" xml:space="preserve">
-    <value>Gravar</value>
+    <value>Gravar Crédito</value>
   </data>
   <data name="buttonLoanPreview.Text" xml:space="preserve">
-    <value>Prever</value>
+    <value>Previsualização</value>
   </data>
   <data name="buttonLoanDisbursment.Text" xml:space="preserve">
-    <value>Desembolsar</value>
+    <value>Desembolso do Crédito</value>
   </data>
   <data name="btnPrintLoanDetails.Text" xml:space="preserve">
-    <value>Imprimir</value>
+    <value>Imprimir Detalhes do Crédito</value>
   </data>
   <data name="btnLoanShares.Text" xml:space="preserve">
-    <value>Repartição</value>
+    <value>Acções do Crédito</value>
   </data>
   <data name="btnEditSchedule.Text" xml:space="preserve">
-    <value>Editar tabela</value>
+    <value>Editar Calendário</value>
   </data>
   <data name="_scheduleTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 182</value>
@@ -645,7 +645,7 @@
     <value>160, 29</value>
   </data>
   <data name="lblEconomicActivity.Text" xml:space="preserve">
-    <value>Objectivo do empréstimo*:</value>
+    <value>Actividade Económica</value>
   </data>
   <data name="labelDateOffirstInstallment.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 58</value>
@@ -672,7 +672,7 @@
     <value>121, 30</value>
   </data>
   <data name="labelLoanContractCode.Text" xml:space="preserve">
-    <value>Código do contrato:</value>
+    <value>Código do contracto</value>
   </data>
   <data name="textBoxLoanContractCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 3</value>
@@ -702,7 +702,7 @@
     <value>123, 28</value>
   </data>
   <data name="labelLoanStartDate.Text" xml:space="preserve">
-    <value>Dia de desembolso:</value>
+    <value>Data de desembolso:</value>
   </data>
   <data name="lbLoanInterestRateMinMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>314, 58</value>
@@ -711,7 +711,7 @@
     <value>127, 30</value>
   </data>
   <data name="labelLoanGracePeriod.Text" xml:space="preserve">
-    <value>Período de carencia:</value>
+    <value>Período de carência:</value>
   </data>
   <data name="numericUpDownLoanGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 93</value>
@@ -732,7 +732,7 @@
     <value>111, 16</value>
   </data>
   <data name="labelLoanLoanOfficer.Text" xml:space="preserve">
-    <value>Oficial de Crédito:</value>
+    <value>Agente de Crédito:</value>
   </data>
   <data name="labelLoanFundingLine.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 90</value>
@@ -741,7 +741,7 @@
     <value>109, 30</value>
   </data>
   <data name="labelLoanFundingLine.Text" xml:space="preserve">
-    <value>Linha de finanças</value>
+    <value>Linha de financiamento</value>
   </data>
   <data name="comboBoxLoanFundingLine.Location" type="System.Drawing.Point, System.Drawing">
     <value>590, 93</value>
@@ -753,7 +753,7 @@
     <value>78, 30</value>
   </data>
   <data name="labelLoanPurpose.Text" xml:space="preserve">
-    <value>Comentário:</value>
+    <value>Propósito do Crédito</value>
   </data>
   <data name="textBoxLoanPurpose.Location" type="System.Drawing.Point, System.Drawing">
     <value>590, 152</value>
@@ -771,7 +771,7 @@
     <value>111, 31</value>
   </data>
   <data name="_scheduleTypeLabel.Text" xml:space="preserve">
-    <value>Tipo de cobrança:</value>
+    <value>Tipo de calendarização:</value>
   </data>
   <data name="tableLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 31</value>
@@ -780,7 +780,7 @@
     <value>740, 93</value>
   </data>
   <data name="groupBoxAnticipatedRepaymentPenalties.Text" xml:space="preserve">
-    <value>Comissões sobre pagamentos prematuros</value>
+    <value>Comissões sobre pagamentos antecipados</value>
   </data>
   <data name="lblEarlyPartialRepaimentBase.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 28</value>
@@ -816,7 +816,7 @@
     <value>478, 77</value>
   </data>
   <data name="groupBoxLoanLateFees.Text" xml:space="preserve">
-    <value>Juros de moura</value>
+    <value>Juros de mora </value>
   </data>
   <data name="tableLayoutPanel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>472, 56</value>
@@ -831,7 +831,7 @@
     <value>172, 28</value>
   </data>
   <data name="labelLoanLateFeesOnAmount.Text" xml:space="preserve">
-    <value>Quantia total do empréstimo</value>
+    <value>Juros de  mora sobre a quantia</value>
   </data>
   <data name="textBoxLoanLateFeesOnAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>181, 3</value>
@@ -843,7 +843,7 @@
     <value>110, 28</value>
   </data>
   <data name="labelLoanLateFeesOnOverduePrincipal.Text" xml:space="preserve">
-    <value>Capital em atraso</value>
+    <value>Juros de mora em atraso</value>
   </data>
   <data name="labelLoanLateFeesOnOLB.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 0</value>
@@ -867,7 +867,7 @@
     <value>101, 28</value>
   </data>
   <data name="labelLoanLateFeesOnOverdueInterest.Text" xml:space="preserve">
-    <value>Juros em atraso</value>
+    <value>Juros de mora sobre juros em atraso</value>
   </data>
   <data name="textBoxLoanLateFeesOnOverdueInterest.Location" type="System.Drawing.Point, System.Drawing">
     <value>395, 31</value>
@@ -876,25 +876,25 @@
     <value>444, 28</value>
   </data>
   <data name="groupBoxEntryFees.Text" xml:space="preserve">
-    <value>Jóias</value>
+    <value>Comissão de entrada</value>
   </data>
   <data name="colName.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
   <data name="colValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor</value>
   </data>
   <data name="colAmount.Text" xml:space="preserve">
     <value>Quantia</value>
   </data>
   <data name="btnUpdateSettings.Text" xml:space="preserve">
-    <value>Gravar</value>
+    <value>Actualizar Configurações</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Poupança compulsória</value>
   </data>
   <data name="lbCompulsorySavingsAmount.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Quantia da Poupança Obrigatória</value>
   </data>
   <data name="lbCompulsorySavings.Text" xml:space="preserve">
     <value>Poupança obrigatória</value>
@@ -903,7 +903,7 @@
     <value>59, 33</value>
   </data>
   <data name="linkCompulsorySavings.Text" xml:space="preserve">
-    <value>Detalhes</value>
+    <value>Poupança obrigatória</value>
   </data>
   <data name="labelComments.Text" xml:space="preserve">
     <value>Comentários</value>
@@ -975,7 +975,7 @@
     <value>40, 13</value>
   </data>
   <data name="lblLocCurrencyMin.Text" xml:space="preserve">
-    <value>Moeda</value>
+    <value>Mínimo Moeda</value>
   </data>
   <data name="lblLocCurrencyMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>292, 13</value>
@@ -984,7 +984,7 @@
     <value>40, 15</value>
   </data>
   <data name="lblLocCurrencyMax.Text" xml:space="preserve">
-    <value>Moeda</value>
+    <value>Máximo Moeda</value>
   </data>
   <data name="tabPageRepayments.Text" xml:space="preserve">
     <value>Tabela de Reembolsos</value>
@@ -993,10 +993,10 @@
     <value>Movimentos</value>
   </data>
   <data name="buttonLoanRepaymentRepay.Text" xml:space="preserve">
-    <value>Reembolsar</value>
+    <value>Reembolsar Reemboldo do Crédito</value>
   </data>
   <data name="buttonLoanReschedule.Text" xml:space="preserve">
-    <value>Reprogramar</value>
+    <value>Reprogramação do Crédito</value>
   </data>
   <data name="buttonManualSchedule.Text" xml:space="preserve">
     <value>Programação manual</value>
@@ -1005,13 +1005,13 @@
     <value>Adicionar prestação</value>
   </data>
   <data name="btnWriteOff.Text" xml:space="preserve">
-    <value>Abater</value>
+    <value>Cancelar Dívida</value>
   </data>
   <data name="btnPrintLoanRepayment.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="btnPrintLoanRepayment.Text" xml:space="preserve">
-    <value>Imprimir</value>
+    <value>Imprimir reeemboldo do Crédito</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Data</value>
@@ -1032,10 +1032,10 @@
     <value>Comissões</value>
   </data>
   <data name="colPenalties.Text" xml:space="preserve">
-    <value>Juros de moura</value>
+    <value>Penalizações</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Cancelavel</value>
+    <value>Cancelável</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
     <value>Utilizador</value>
@@ -1047,7 +1047,7 @@
     <value>ID</value>
   </data>
   <data name="colNumber.Text" xml:space="preserve">
-    <value>Número de prestação</value>
+    <value>Número</value>
   </data>
   <data name="columnHeader30.Text" xml:space="preserve">
     <value>Comentário</value>
@@ -1059,25 +1059,25 @@
     <value>Cancelar data</value>
   </data>
   <data name="btnPrintLoanEvents.Text" xml:space="preserve">
-    <value>Imprimir os movimentos</value>
+    <value>Imprimir os movimentos do crédito</value>
   </data>
   <data name="btnWaiveFee.Text" xml:space="preserve">
-    <value>Exonerar as comissões atrasadas</value>
+    <value>Exonerar comissões</value>
   </data>
   <data name="btnDeleteEvent.Text" xml:space="preserve">
-    <value>Apage o evento mais recente</value>
+    <value>Apagar Movimento</value>
   </data>
   <data name="richTextBoxStatus.Text" xml:space="preserve">
-    <value>Situação:</value>
+    <value>Estado</value>
   </data>
   <data name="lblLoanStatus.Text" xml:space="preserve">
-    <value>Situação do reembolso</value>
+    <value>Estado do Crédito</value>
   </data>
   <data name="tabPageSavingsAmountsAndFees.Text" xml:space="preserve">
-    <value>Comissões e limites</value>
+    <value>Comissões e taxas de Poupança</value>
   </data>
   <data name="groupBoxSavingBalance.Text" xml:space="preserve">
-    <value>Saldo</value>
+    <value>Saldo da poupança</value>
   </data>
   <data name="lbBalanceMaxValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 22</value>
@@ -1086,7 +1086,7 @@
     <value>50, 16</value>
   </data>
   <data name="lbBalanceMaxValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Máximo do saldo</value>
   </data>
   <data name="lbBalanceMinValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 3</value>
@@ -1095,13 +1095,13 @@
     <value>50, 16</value>
   </data>
   <data name="lbBalanceMinValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Mínimo do Saldo </value>
   </data>
   <data name="lbBalanceMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 16</value>
   </data>
   <data name="lbBalanceMax.Text" xml:space="preserve">
-    <value>Máx :</value>
+    <value>Saldo Máximo</value>
   </data>
   <data name="groupBoxSavingDeposit.Text" xml:space="preserve">
     <value>Depósito</value>
@@ -1113,7 +1113,7 @@
     <value>50, 16</value>
   </data>
   <data name="lbDepositMaxValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Máximo do depósito</value>
   </data>
   <data name="lbDepositMinValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 3</value>
@@ -1122,16 +1122,16 @@
     <value>50, 16</value>
   </data>
   <data name="lbDepositMinValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Mínimo do depósito</value>
   </data>
   <data name="lbDepositmax.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 16</value>
   </data>
   <data name="lbDepositmax.Text" xml:space="preserve">
-    <value>Máx :</value>
+    <value>Depósito Máximo</value>
   </data>
   <data name="groupBoxSavingWithdraw.Text" xml:space="preserve">
-    <value>Levantar</value>
+    <value>Levantamento de Poupança</value>
   </data>
   <data name="lbWithdrawMaxValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 22</value>
@@ -1140,13 +1140,13 @@
     <value>50, 16</value>
   </data>
   <data name="lbWithdrawMaxValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Máximo do Levantamento</value>
   </data>
   <data name="lbWithdrawMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 16</value>
   </data>
   <data name="lbWithdrawMin.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Levantamento Mínimo</value>
   </data>
   <data name="lbWithdrawMinValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 3</value>
@@ -1155,16 +1155,16 @@
     <value>50, 16</value>
   </data>
   <data name="lbWithdrawMinValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor Mínimo do Levantamento</value>
   </data>
   <data name="lbWithdrawMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 16</value>
   </data>
   <data name="lbWithdrawMax.Text" xml:space="preserve">
-    <value>Máx :</value>
+    <value>Levantamento Máximo</value>
   </data>
   <data name="groupBoxSavingTransfer.Text" xml:space="preserve">
-    <value>Transferencia</value>
+    <value>Transferência de Poupança</value>
   </data>
   <data name="labelSavingTransferMaxValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 22</value>
@@ -1173,7 +1173,7 @@
     <value>53, 16</value>
   </data>
   <data name="labelSavingTransferMaxValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor Máximo da Transferência da poupança</value>
   </data>
   <data name="labelSavingTransferMinValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 0</value>
@@ -1182,7 +1182,7 @@
     <value>53, 19</value>
   </data>
   <data name="labelSavingTransferMinValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor Mínimo da Transferência da poupança</value>
   </data>
   <data name="gbInterest.Text" xml:space="preserve">
     <value>Juros</value>
@@ -1194,13 +1194,13 @@
     <value>50, 16</value>
   </data>
   <data name="lbInterestBasedOnValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Juros com base no Valor</value>
   </data>
   <data name="lbInterestAccrual.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 16</value>
   </data>
   <data name="lbInterestAccrual.Text" xml:space="preserve">
-    <value>Acumulado :</value>
+    <value>Acréscimo de Juro</value>
   </data>
   <data name="lbInterestPostingValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 22</value>
@@ -1209,13 +1209,13 @@
     <value>50, 16</value>
   </data>
   <data name="lbInterestPostingValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor do lançamento de Juro</value>
   </data>
   <data name="lbInterestBasedOn.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 19</value>
   </data>
   <data name="lbInterestBasedOn.Text" xml:space="preserve">
-    <value>Baseado em :</value>
+    <value>Juro baseado em :</value>
   </data>
   <data name="lbInterestAccrualValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 3</value>
@@ -1224,16 +1224,16 @@
     <value>53, 16</value>
   </data>
   <data name="lbInterestAccrualValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor do acréscimo do juro</value>
   </data>
   <data name="lbInterestPosting.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 16</value>
   </data>
   <data name="lbInterestPosting.Text" xml:space="preserve">
-    <value>Lançamento</value>
+    <value>Lançamento de Juro</value>
   </data>
   <data name="gbDepositInterest.Text" xml:space="preserve">
-    <value>Juros</value>
+    <value>Juros de Depósito</value>
   </data>
   <data name="lbPeriodicityValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 22</value>
@@ -1242,13 +1242,13 @@
     <value>50, 16</value>
   </data>
   <data name="lbPeriodicityValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor de Periodicidade</value>
   </data>
   <data name="lbAccrualDeposit.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 16</value>
   </data>
   <data name="lbAccrualDeposit.Text" xml:space="preserve">
-    <value>Acumulado:</value>
+    <value>Depósito de Acréscimo</value>
   </data>
   <data name="lbAccrualDepositValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 3</value>
@@ -1257,7 +1257,7 @@
     <value>50, 16</value>
   </data>
   <data name="lbAccrualDepositValue.Text" xml:space="preserve">
-    <value>quantia</value>
+    <value>Valor do acréscimo de Depósito</value>
   </data>
   <data name="lbPeriodicity.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 16</value>
@@ -1269,7 +1269,7 @@
     <value>162, 16</value>
   </data>
   <data name="lbTransferFees.Text" xml:space="preserve">
-    <value>Comissões de tranferencia</value>
+    <value>Comissões de transferência</value>
   </data>
   <data name="lbDepositFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 16</value>
@@ -1287,10 +1287,10 @@
     <value>212, 16</value>
   </data>
   <data name="lbChequeDepositFees.Text" xml:space="preserve">
-    <value>Comissões  de deposito de cheque</value>
+    <value>Comissões  de depósito de cheque</value>
   </data>
   <data name="lbAgioFees.Text" xml:space="preserve">
-    <value>Ágio</value>
+    <value>Comissões de Ágio</value>
   </data>
   <data name="lbCloseFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 16</value>
@@ -1302,22 +1302,22 @@
     <value>152, 16</value>
   </data>
   <data name="lbOverdraftFees.Text" xml:space="preserve">
-    <value>Comissões a descoberta</value>
+    <value>Comissões de descoberto</value>
   </data>
   <data name="lbManagementFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 16</value>
   </data>
   <data name="lbManagementFees.Text" xml:space="preserve">
-    <value>Comissões de administração</value>
+    <value>Comissões de gestão</value>
   </data>
   <data name="lblInterBranchTransfer.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 25</value>
   </data>
   <data name="lblInterBranchTransfer.Text" xml:space="preserve">
-    <value>Comissões  das transferencias intra-sucursal</value>
+    <value>Comissões  de transferência intra-sucursal</value>
   </data>
   <data name="tabPageSavingsEvents.Text" xml:space="preserve">
-    <value>Movimentos</value>
+    <value>Movimentos da Poupança</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
     <value>Data</value>
@@ -1332,7 +1332,7 @@
     <value>Crédito</value>
   </data>
   <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Transferência </value>
+    <value>Transferência</value>
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
     <value>Código</value>
@@ -1350,13 +1350,13 @@
     <value>Cancelar data</value>
   </data>
   <data name="tabPageLoans.Text" xml:space="preserve">
-    <value>Empréstimos</value>
+    <value>Créditos</value>
   </data>
   <data name="olvColumnContractCode.Text" xml:space="preserve">
-    <value>Código</value>
+    <value>Código do Contracto</value>
   </data>
   <data name="olvColumnStatus.Text" xml:space="preserve">
-    <value>Situação</value>
+    <value>Estado</value>
   </data>
   <data name="olvColumnAmount.Text" xml:space="preserve">
     <value>Quantia</value>
@@ -1392,7 +1392,7 @@
     <value>91, 13</value>
   </data>
   <data name="lblLimitOfTermDepositPeriod.Text" xml:space="preserve">
-    <value>Limite do período</value>
+    <value>Limite do período de Depósito a Prazo</value>
   </data>
   <data name="tbTargetAccount2.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 61</value>
@@ -1404,7 +1404,7 @@
     <value>71, 16</value>
   </data>
   <data name="lbRollover2.Text" xml:space="preserve">
-    <value>Renovação</value>
+    <value>Prorrogação</value>
   </data>
   <data name="btSearchContract2.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 61</value>
@@ -1413,7 +1413,7 @@
     <value>114, 28</value>
   </data>
   <data name="btSearchContract2.Text" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Procurar</value>
   </data>
   <data name="lblTermTransferToAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 16</value>
@@ -1425,7 +1425,7 @@
     <value>Actualizar</value>
   </data>
   <data name="buttonSaveSaving.Text" xml:space="preserve">
-    <value>Gravar</value>
+    <value>Gravar Poupança</value>
   </data>
   <data name="buttonFirstDeposit.Text" xml:space="preserve">
     <value>Primeiro depósito</value>
@@ -1440,10 +1440,10 @@
     <value>Operações</value>
   </data>
   <data name="btCancelLastSavingEvent.Text" xml:space="preserve">
-    <value>Cancele último movimento</value>
+    <value>Cancelar último movimento da Poupança</value>
   </data>
   <data name="btnPrintSavings.Text" xml:space="preserve">
-    <value>Imprimir</value>
+    <value>Imprimir Poupança</value>
   </data>
   <data name="groupBoxSaving.Text" xml:space="preserve">
     <value>Administração</value>
@@ -1464,7 +1464,7 @@
     <value>38, 32</value>
   </data>
   <data name="lbEntryFees.Text" xml:space="preserve">
-    <value>Jóias</value>
+    <value>Comissões de Entrada</value>
   </data>
   <data name="labelInitialAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 32</value>
@@ -1500,7 +1500,7 @@
     <value>60, 23</value>
   </data>
   <data name="lBSavingBalance.Text" xml:space="preserve">
-    <value>Saldo</value>
+    <value>Saldo da Poupança</value>
   </data>
   <data name="tBSavingCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 13</value>
@@ -1515,7 +1515,7 @@
     <value>85, 32</value>
   </data>
   <data name="labelInterestRate.Text" xml:space="preserve">
-    <value>Taxa de juros</value>
+    <value>Taxa de juro</value>
   </data>
   <data name="nudDownInterestRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>714, 77</value>
@@ -1557,7 +1557,7 @@
     <value>170, 22</value>
   </data>
   <data name="savingTransferToolStripMenuItem.Text" xml:space="preserve">
-    <value>Transferencia</value>
+    <value>Transferência</value>
   </data>
   <data name="specialOperationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 22</value>
@@ -1572,7 +1572,7 @@
     <value>Saldo exportado</value>
   </data>
   <data name="labelTitleRepayment.Text" xml:space="preserve">
-    <value>Situação do reembolso</value>
+    <value>Estado do reembolso</value>
   </data>
   <data name="buttonPrintSchedule.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1590,7 +1590,7 @@
 </value>
   </data>
   <data name="buttonPrintSchedule.Text" xml:space="preserve">
-    <value>Imprimir tabela de reembolso</value>
+    <value>Imprimir Calendarização</value>
   </data>
   <data name="buttonReschedule.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1655,7 +1655,7 @@
 </value>
   </data>
   <data name="buttonRepay.Text" xml:space="preserve">
-    <value>Confirme reembolso</value>
+    <value>Confirmar reembolso</value>
   </data>
   <data name="columnHeaderDate.Text" xml:space="preserve">
     <value>Data</value>
@@ -1673,19 +1673,19 @@
     <value>Comissões</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Cancelavel</value>
+    <value>Cancelável</value>
   </data>
   <data name="labelExchangeRate.Text" xml:space="preserve">
     <value>Taxa de câmbio:</value>
   </data>
   <data name="toolStripMenuItemEditComment.Text" xml:space="preserve">
-    <value>Edite comentário</value>
+    <value>Editar comentário</value>
   </data>
   <data name="toolStripMenuItemCancelPending.Text" xml:space="preserve">
-    <value>Cancele prestação pendente</value>
+    <value>Cancelar prestação pendente</value>
   </data>
   <data name="toolStripMenuItemConfirmPending.Text" xml:space="preserve">
-    <value>Confirme prestção pendente</value>
+    <value>Confirmar prestção pendente</value>
   </data>
   <data name="menuPendingSavingEvents.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 48</value>
@@ -1694,13 +1694,13 @@
     <value>242, 22</value>
   </data>
   <data name="menuItemConfirmPendingSavingEvent.Text" xml:space="preserve">
-    <value>Confirme movimento pendente</value>
+    <value>Confirmar poupança pendente</value>
   </data>
   <data name="menuItemCancelPendingSavingEvent.Size" type="System.Drawing.Size, System.Drawing">
     <value>242, 22</value>
   </data>
   <data name="menuItemCancelPendingSavingEvent.Text" xml:space="preserve">
-    <value>Cancele movimento pendente</value>
+    <value>Cancelar poupança pendente</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2301,6 +2301,63 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Individual</value>
+    <value>Indivídui</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Produto de Crédito</value>
+  </data>
+  <data name="labelLoanAmountMinMax.Text" xml:space="preserve">
+    <value>Mínimo e Máximo do valor do crédito</value>
+  </data>
+  <data name="labelLoanNbOfInstallmentsMinMax.Text" xml:space="preserve">
+    <value>Número Mínimo e Máximo de Prestações</value>
+  </data>
+  <data name="labelLoanGracePeriodMinMax.Text" xml:space="preserve">
+    <value>Período de carência:</value>
+  </data>
+  <data name="lblDay.Text" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="lblTernDepositDateStarted.Text" xml:space="preserve">
+    <value>Data iniciada</value>
+  </data>
+  <data name="lblTernDepositDateEnd.Text" xml:space="preserve">
+    <value>Data de fim de contrato</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Quantia prevista</value>
+  </data>
+  <data name="colIsDeleted.Text" xml:space="preserve">
+    <value>Apagada</value>
+  </data>
+  <data name="lbBalanceMin.Text" xml:space="preserve">
+    <value>Saldo Mínimo</value>
+  </data>
+  <data name="lbDepositMin.Text" xml:space="preserve">
+    <value>Depósito Mínimo</value>
+  </data>
+  <data name="chxSystemEvents.Text" xml:space="preserve">
+    <value>Movimentos do sistema</value>
+  </data>
+  <data name="lProjectFinancialPlanTotalAmount.Text" xml:space="preserve">
+    <value>Valor total do plano financeiro</value>
+  </data>
+  <data name="columnHeaderLoanN.Text" xml:space="preserve">
+    <value>Crédito</value>
+  </data>
+  <data name="labelLocMin.Text" xml:space="preserve">
+    <value>Mínimo Loc</value>
+  </data>
+  <data name="labelLocMax.Text" xml:space="preserve">
+    <value>Máximo Loc</value>
+  </data>
+  <data name="colOverduePrincipal.Text" xml:space="preserve">
+    <value>Capital vencido</value>
+  </data>
+  <data name="colOverdueDays.Text" xml:space="preserve">
+    <value>Dias Vencidos</value>
   </data>
 </root>
