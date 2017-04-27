@@ -8,6 +8,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public sealed partial class EntryFeeAddEdit : SweetBaseForm
     {
         private readonly Fee _entryFee;
+        private const int Decimals = 2;
 
         private bool IsRate {
             get { return _comboBoxRate.SelectedIndex == 0; }
@@ -62,10 +63,10 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         private void UpdateLocalEntryFee()
         {
             _entryFee.Name = _textBoxName.Text;
-            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : FloorToCents(_numericUpDownMin.Value);
-            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : FloorToCents(_numericUpDownMax.Value);
+            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : Math.Round(_numericUpDownMin.Value, Decimals);
+            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals);
             _entryFee.IsRate = IsRate;
-            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : FloorToCents(_numericUpDownMaxSum.Value);
+            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals);
         }
 
         private void FillFieldsByEntryFee(Fee entryFee)
@@ -147,17 +148,12 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             var fee = new Fee
                         {
                             Name = _textBoxName.Text,
-                            Min = _numericUpDownMin.Text == "" ? 0m : FloorToCents(_numericUpDownMin.Value),
-                            Max = _numericUpDownMax.Text == "" ? 0m : FloorToCents(_numericUpDownMax.Value),
+                            Min = _numericUpDownMin.Text == "" ? 0m : Math.Round(_numericUpDownMin.Value,Decimals),
+                            Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals),
                             IsRate = IsRate,
-                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : FloorToCents(_numericUpDownMaxSum.Value)
+                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals)
                         };
             return fee;
-        }
-
-        private decimal FloorToCents(decimal value)
-        {
-            return Math.Floor(value*100m)/100m;
         }
     }
 }
