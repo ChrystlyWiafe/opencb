@@ -7506,6 +7506,9 @@ namespace OpenCBS.GUI.Clients
                         btnSaveLoan.Enabled = false;
                         return;
                     }
+
+                    if (amount < nudLoanAmount.Minimum) amount = nudLoanAmount.Minimum;
+                    if (amount > nudLoanAmount.Maximum) amount = nudLoanAmount.Maximum;
                 }
 
                 if (_credit.LoanEntryFeesList != null)

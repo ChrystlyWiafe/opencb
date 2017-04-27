@@ -3,74 +3,74 @@ SET     [value] = 'v17.1.0.0'
 WHERE   [name] = 'VERSION'
 GO
 
-if col_length('dbo.Credit','initial_emi') IS NULL
-    begin
-        alter table dbo.Credit add initial_emi decimal(18,2) null
-    end
+IF col_length('dbo.Credit','initial_emi') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Credit ADD initial_emi DECIMAL(18,2) NULL
+    END
 GO
 
-if col_length('dbo.PaymentMethods','accountNumber') IS NULL
-    begin
-        alter table dbo.PaymentMethods add accountNumber varchar(32) null
-    end
+IF col_length('dbo.PaymentMethods','accountNumber') IS NULL
+    BEGIN
+        ALTER TABLE dbo.PaymentMethods ADD accountNumber VARCHAR(32) NULL
+    END
 GO
 
-if col_length('dbo.Accounts','start_date') IS NULL
-    begin
-        alter table dbo.Accounts add [start_date] decimal(18,2) null
-    end
+IF col_length('dbo.Accounts','start_date') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Accounts ADD [start_date] DATETIME NULL
+    END
 GO
 
-if col_length('dbo.Accounts','close_date') IS NULL
-    begin
-        alter table dbo.Accounts add close_date decimal(18,2) null
-    end
+IF col_length('dbo.Accounts','close_date') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Accounts ADD close_date DATETIME NULL
+    END
 GO
 
-if col_length('dbo.Accounts','can_be_negative') IS NULL
-    begin
-        alter table dbo.Accounts add can_be_negative bit default(0)
-    end
+IF col_length('dbo.Accounts','can_be_negative') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Accounts ADD can_be_negative BIT DEFAULT(0)
+    END
 GO
 
-if col_length('dbo.Accounts','type') IS NULL
-    begin
-        alter table dbo.Accounts add [type] decimal(18,2) null
-    end
+IF col_length('dbo.Accounts','type') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Accounts ADD [type] TINYINT NULL
+    END
 GO
 
-if col_length('dbo.Accounts','is_direct') IS NULL
-    begin
-        alter table dbo.Accounts add is_direct decimal(18,2) null
-    end
+IF col_length('dbo.Accounts','is_direct') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Accounts ADD is_direct BIT NULL
+    END
 GO
 
-if col_length('dbo.Booking','AdvanceId') IS NULL
-    begin
-        alter table dbo.Booking add AdvanceId decimal(18,2) null
-    end
+IF col_length('dbo.Booking','AdvanceId') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD AdvanceId INT NULL
+    END
 GO
 
-if col_length('dbo.Booking','StaffId') IS NULL
-    begin
-        alter table dbo.Booking add StaffId decimal(18,2) null
-    end
+IF col_length('dbo.Booking','StaffId') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD StaffId INT NULL
+    END
 GO
 
-if col_length('dbo.Booking','IsManualEditable') IS NULL
-    begin
-        alter table dbo.Booking add IsManualEditable decimal(18,2) null
-    end
+IF col_length('dbo.Booking','IsManualEditable') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD IsManualEditable BIT NULL
+    END
 GO
 
-if col_length('dbo.Booking','doc1') IS NULL
-    begin
-        alter table dbo.Booking add doc1 decimal(18,2) null
-    end
+IF col_length('dbo.Booking','doc1') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD doc1 VARCHAR(255) NULL
+    END
 GO
 
-if col_length('dbo.Booking','doc2') IS NULL
-    begin
-        alter table dbo.Booking add doc2 decimal(18,2) null
-    end
+IF col_length('dbo.Booking','doc2') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD doc2 VARCHAR(255) NULL
+    END
 GO

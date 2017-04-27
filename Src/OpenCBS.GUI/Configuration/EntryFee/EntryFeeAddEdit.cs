@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using OpenCBS.GUI.UserControl;
 using Fee = OpenCBS.CoreDomain.EntryFee;
 
@@ -7,6 +8,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public sealed partial class EntryFeeAddEdit : SweetBaseForm
     {
         private readonly Fee _entryFee;
+        private const int Decimals = 2;
 
         private bool IsRate {
             get { return _comboBoxRate.SelectedIndex == 0; }
@@ -61,10 +63,10 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         private void UpdateLocalEntryFee()
         {
             _entryFee.Name = _textBoxName.Text;
-            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : _numericUpDownMin.Value;
-            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : _numericUpDownMax.Value;
+            _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : Math.Round(_numericUpDownMin.Value, Decimals);
+            _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals);
             _entryFee.IsRate = IsRate;
-            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : _numericUpDownMaxSum.Value;
+            _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals);
         }
 
         private void FillFieldsByEntryFee(Fee entryFee)
@@ -146,10 +148,10 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             var fee = new Fee
                         {
                             Name = _textBoxName.Text,
-                            Min = _numericUpDownMin.Text == "" ? 0m : _numericUpDownMin.Value,
-                            Max = _numericUpDownMax.Text == "" ? 0m : _numericUpDownMax.Value,
+                            Min = _numericUpDownMin.Text == "" ? 0m : Math.Round(_numericUpDownMin.Value,Decimals),
+                            Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals),
                             IsRate = IsRate,
-                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : _numericUpDownMaxSum.Value
+                            MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals)
                         };
             return fee;
         }

@@ -1250,6 +1250,8 @@ namespace OpenCBS.GUI.Clients
                 if (decimal.TryParse(nudLoanAmount.Text, out loanAmount))
                     amount = ServicesHelper.ConvertStringToDecimal(nudLoanAmount.Text, 0, _credit.Product.UseCents);
 
+                if (amount < nudLoanAmount.Minimum) amount = nudLoanAmount.Minimum;
+                if (amount > nudLoanAmount.Maximum) amount = nudLoanAmount.Maximum;
 
                 if (_credit.LoanEntryFeesList != null)
                 {
