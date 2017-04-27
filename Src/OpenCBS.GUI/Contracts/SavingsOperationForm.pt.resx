@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="rbxCredit.Size" type="System.Drawing.Size, System.Drawing">
@@ -155,28 +155,28 @@
     <value>Gravar</value>
   </data>
   <data name="btnSearchContract.Text" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Pesquisar</value>
   </data>
   <data name="cbxPending.Text" xml:space="preserve">
-    <value>Marcar como pendente</value>
+    <value>Marcar transacção como pendente</value>
   </data>
   <data name="dtpDate.CustomFormat" xml:space="preserve">
     <value>dd/MM/yyyy HH:mm:ss</value>
   </data>
   <data name="lbAmountMinMax.Text" xml:space="preserve">
-    <value>...</value>
+    <value>Valor mínimo e máximo</value>
   </data>
   <data name="lbAmountMinMaxCurrencyPivot.Text" xml:space="preserve">
-    <value>...</value>
+    <value>Pivô de mínimo e máximo de moeda</value>
   </data>
   <data name="lblAmount.Text" xml:space="preserve">
-    <value>Quantia final:</value>
+    <value>Valor líquido</value>
   </data>
   <data name="lblAmountFeesMinMax.Text" xml:space="preserve">
-    <value>...</value>
+    <value>Valor Mínimo e Máximo de comissões </value>
   </data>
   <data name="lblClientName.Text" xml:space="preserve">
-    <value>xxxx</value>
+    <value>Nome do cliente</value>
   </data>
   <data name="lblDate.Text" xml:space="preserve">
     <value>Data:</value>
@@ -191,7 +191,7 @@
     <value>Transferência intra-sucursal</value>
   </data>
   <data name="lblPaymentMethod.Text" xml:space="preserve">
-    <value>Trasacção em:</value>
+    <value>Transacção em:</value>
   </data>
   <data name="lblSavingCurrency.Text" xml:space="preserve">
     <value>Moeda</value>
@@ -200,7 +200,7 @@
     <value>Moeda</value>
   </data>
   <data name="lblTotalAmount.Text" xml:space="preserve">
-    <value>Quantia para pagar:</value>
+    <value>Valor total</value>
   </data>
   <data name="lblTotalSavingCurrency.Text" xml:space="preserve">
     <value>Moeda</value>
@@ -213,5 +213,8 @@
   </data>
   <data name="rbxDebit.Text" xml:space="preserve">
     <value>Débito</value>
+  </data>
+  <data name="_chequeNumberLabel.Text" xml:space="preserve">
+    <value>Número do cheque</value>
   </data>
 </root>
