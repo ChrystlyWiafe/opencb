@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="groupBoxEvents.Size" type="System.Drawing.Size, System.Drawing">
@@ -206,7 +206,7 @@
     <value>Desenhar gráfico assumindo que todos emp são pagos hoje</value>
   </data>
   <data name="tabPageFundingLines.Text" xml:space="preserve">
-    <value>Fundos</value>
+    <value>Linhas de Financiamento</value>
   </data>
   <data name="columnHeaderBeginDate.Text" xml:space="preserve">
     <value>Data inicial</value>
@@ -230,19 +230,19 @@
     <value>Adicionar</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>Deletar</value>
+    <value>Apagar</value>
   </data>
   <data name="tabPageFundingLineDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>1149, 670</value>
   </data>
   <data name="tabPageFundingLineDetails.Text" xml:space="preserve">
-    <value>Detalhes do fundo</value>
+    <value>Detalhes da Linha de Financiamento</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1143, 662</value>
   </data>
   <data name="groupBoxFundingLines.Text" xml:space="preserve">
-    <value>Fundo</value>
+    <value>Linha de Financiamento</value>
   </data>
   <data name="columnHeaderCorporateName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -257,10 +257,9 @@
     <value>Responsabilidade financeira</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Fundo</value>
+    <value>Linhas de Financiamento</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>Gravar 
-</value>
+    <value>Gravar</value>
   </data>
 </root>
