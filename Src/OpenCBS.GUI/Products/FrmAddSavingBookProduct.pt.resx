@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,29 +112,29 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="tabPageMainParameters.Text" xml:space="preserve">
-    <value>Parametros principais</value>
+    <value>Opções Principais</value>
   </data>
   <data name="gbFrequency.Text" xml:space="preserve">
-    <value>Frequencia</value>
+    <value>Frequência</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbCalculAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 16</value>
   </data>
   <data name="lbCalculAmount.Text" xml:space="preserve">
-    <value>Calcular com base em:</value>
+    <value>Calcular valor com base em:</value>
   </data>
   <data name="lbPosting.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 16</value>
   </data>
   <data name="lbPosting.Text" xml:space="preserve">
-    <value>Postar:</value>
+    <value>Lançamento</value>
   </data>
   <data name="lbAccrual.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 26</value>
@@ -143,10 +143,10 @@
     <value>67, 16</value>
   </data>
   <data name="lbAccrual.Text" xml:space="preserve">
-    <value>Acumular:</value>
+    <value>Acréscimo</value>
   </data>
   <data name="groupBoxCurrency.Text" xml:space="preserve">
-    <value>Definir moéda</value>
+    <value>Anexar produto à moeda</value>
   </data>
   <data name="lbCodeSavingProduct.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 17</value>
@@ -161,13 +161,13 @@
     <value>Nome</value>
   </data>
   <data name="gbClientType.Text" xml:space="preserve">
-    <value>Atribuir a clientes específicos</value>
+    <value>Anexar produto a tipo de cliente específico</value>
   </data>
   <data name="clientTypeVillageCheckBox.Text" xml:space="preserve">
-    <value>Grupo não sol.</value>
+    <value>Grupo não solidário</value>
   </data>
   <data name="clientTypeGroupCheckBox.Text" xml:space="preserve">
-    <value>Grupo sol.</value>
+    <value>Grupo solidário</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="clientTypeAllCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -189,7 +189,7 @@
     <value>Saldo</value>
   </data>
   <data name="gbInterestRate.Text" xml:space="preserve">
-    <value>Taxas de juros</value>
+    <value>Taxa de juros</value>
   </data>
   <data name="lbYearlyInterestRate.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 16</value>
@@ -219,7 +219,7 @@
     <value>Transacções</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
-    <value>Parámentro de depósito</value>
+    <value>Parâmetro de depósito</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -231,7 +231,7 @@
     <value>Transacção:</value>
   </data>
   <data name="gbDeposit.Text" xml:space="preserve">
-    <value>Depósito monitário</value>
+    <value>Depósito em numerário</value>
   </data>
   <data name="gtDepositFees.Text" xml:space="preserve">
     <value>Taxa de depósito numerário</value>
@@ -258,22 +258,22 @@
     <value>67, 16</value>
   </data>
   <data name="lbDepositFees.Text" xml:space="preserve">
-    <value>ou   Valor:</value>
+    <value>ou   Valor:</value>
   </data>
   <data name="gbTransferFees.Text" xml:space="preserve">
-    <value>Taxa de tranferir</value>
+    <value>Taxa de tranferência</value>
   </data>
   <data name="rbRateTransferFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
   </data>
   <data name="rbRateTransferFees.Text" xml:space="preserve">
-    <value>Taxa</value>
+    <value>Taxa de Comissões de transferência</value>
   </data>
   <data name="rbFlatTransferFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 20</value>
   </data>
   <data name="rbFlatTransferFees.Text" xml:space="preserve">
-    <value>Fixo</value>
+    <value>Fixo de Comissões de transferência</value>
   </data>
   <data name="lbTransferFeesValue.Text" xml:space="preserve">
     <value>ou valor:</value>
@@ -309,16 +309,16 @@
     <value>Tipo:</value>
   </data>
   <data name="gbTransfer.Text" xml:space="preserve">
-    <value>Transferencia</value>
+    <value>Transferência</value>
   </data>
   <data name="gbWithDrawing.Text" xml:space="preserve">
-    <value>Levantamento</value>
+    <value>Valor de Levantamento</value>
   </data>
   <data name="tabPageManagement.Text" xml:space="preserve">
-    <value>Taxas</value>
+    <value>Comissões</value>
   </data>
   <data name="gbReopenFees.Text" xml:space="preserve">
-    <value>Taxa de reabertura</value>
+    <value>Comissões de reabertura</value>
   </data>
   <data name="rbRateReopenFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -342,7 +342,7 @@
     <value>ou valor:</value>
   </data>
   <data name="gtManagementFees.Text" xml:space="preserve">
-    <value>Emolumentos</value>
+    <value>Comissões administrativas</value>
   </data>
   <data name="rbRateManagementFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -369,7 +369,7 @@
     <value>ou   Valor:</value>
   </data>
   <data name="gtCloseFees.Text" xml:space="preserve">
-    <value>Taxa de fecho</value>
+    <value>Taxa de encerramento</value>
   </data>
   <data name="rbRateCloseFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -396,7 +396,7 @@
     <value>ou   Valor:</value>
   </data>
   <data name="gbEntryFees.Text" xml:space="preserve">
-    <value>Taxas iniciais</value>
+    <value>Comissões de entrada</value>
   </data>
   <data name="rbRateEntryFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -423,7 +423,7 @@
     <value>ou   Valor:</value>
   </data>
   <data name="tabPageOverdraft.Text" xml:space="preserve">
-    <value>Saque a descoberto</value>
+    <value>Descoberto</value>
   </data>
   <data name="gtAgioFees.Text" xml:space="preserve">
     <value>Ágio</value>
@@ -453,7 +453,7 @@
     <value>ou   Valor:</value>
   </data>
   <data name="gtOverdraftFees.Text" xml:space="preserve">
-    <value>Taxa fixa de overdraft</value>
+    <value>Comissões fixas de descoberto</value>
   </data>
   <data name="rbRateOverdraftFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -480,7 +480,7 @@
     <value>Depósito a prazo</value>
   </data>
   <data name="gpPostingFrequency.Text" xml:space="preserve">
-    <value>Postagem de freqüência</value>
+    <value>Lançamento de frequência</value>
   </data>
   <data name="gbNumberOfPeriods.Text" xml:space="preserve">
     <value>Número de períodos</value>
@@ -489,7 +489,7 @@
     <value>181, 20</value>
   </data>
   <data name="checkBoxUseTermDeposit.Text" xml:space="preserve">
-    <value>Use os depósitos a prazo</value>
+    <value>Usar os depósitos a prazo</value>
   </data>
   <data name="btSavingProduct.Text" xml:space="preserve">
     <value>Gravar</value>
@@ -498,30 +498,165 @@
     <value>Fechar</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Poupanças</value>
+    <value>Produto Caderneta de Poupanças</value>
   </data>
   <data name="clientTypeCorpCheckBox.Text" xml:space="preserve">
-    <value>Corp.</value>
+    <value>Empresa</value>
   </data>
   <data name="clientTypeIndivCheckBox.Text" xml:space="preserve">
-    <value>Ind.</value>
+    <value>Particular</value>
   </data>
   <data name="lbInitialAmonutMax.Text" xml:space="preserve">
-    <value>Max:</value>
+    <value>Máx:</value>
   </data>
   <data name="lbInitialAmountMin.Text" xml:space="preserve">
-    <value>Min:</value>
+    <value>Mín:</value>
   </data>
   <data name="lbBalanceMax.Text" xml:space="preserve">
-    <value>Max:</value>
+    <value>Máx:</value>
   </data>
   <data name="lbBalanceMin.Text" xml:space="preserve">
-    <value>Min:</value>
+    <value>Mín:</value>
   </data>
   <data name="lbInterestRateMax.Text" xml:space="preserve">
     <value>Max:</value>
   </data>
   <data name="lbInterestRateMin.Text" xml:space="preserve">
-    <value>Min:</value>
+    <value>Mín:</value>
+  </data>
+  <data name="lblMaxOfTermDepositPeriods.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lblMinOfTermDepositPeriods.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="_savingRadioButton.Text" xml:space="preserve">
+    <value>Poupança</value>
+  </data>
+  <data name="_shortTermDepositRadioButton.Text" xml:space="preserve">
+    <value>Depósito a prazo</value>
+  </data>
+  <data name="_personalAccountRadioButton.Text" xml:space="preserve">
+    <value>Conta pessoal</value>
+  </data>
+  <data name="_renewModeAutoRadioButton.Text" xml:space="preserve">
+    <value>Automático</value>
+  </data>
+  <data name="_renewModeManualRadioButton.Text" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="_renewModeLabel.Text" xml:space="preserve">
+    <value>Renovar modo</value>
+  </data>
+  <data name="rbInterRateTransferFees.Text" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="rbInterFlatTransferFees.Text" xml:space="preserve">
+    <value>Fixo</value>
+  </data>
+  <data name="lbInterTransferFeesValue.Text" xml:space="preserve">
+    <value>ou valor:</value>
+  </data>
+  <data name="lbInterTransferFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbInterTransferFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbInterTransferFeesType.Text" xml:space="preserve">
+    <value>Tipo:</value>
+  </data>
+  <data name="gbInterTransferFees.Text" xml:space="preserve">
+    <value>Comissão de transferência inter-sucursal</value>
+  </data>
+  <data name="lbDepositMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbDepositMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbDepositFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbDepositFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="rbIntraRateTransferFees.Text" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="rbIntraFlatTransferFees.Text" xml:space="preserve">
+    <value>Fixo</value>
+  </data>
+  <data name="lbIntraTransferFeesValue.Text" xml:space="preserve">
+    <value>ou valor:</value>
+  </data>
+  <data name="lbIntraTransferFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbIntraTransferFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbIntraTransferFeesType.Text" xml:space="preserve">
+    <value>Tipo:</value>
+  </data>
+  <data name="gbIntraTransferFees.Text" xml:space="preserve">
+    <value>Comissão de transferência intra-sucursal</value>
+  </data>
+  <data name="lbWithdrawFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbWithdrawFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbTransferMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbTransferMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbWithDrawingMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbWithDrawingMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbReopenFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbReopenFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbManagementFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbManagementFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbCloseFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbCloseFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbEntryFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbEntryFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="cbAgioFeesFreq.Items" xml:space="preserve">
+    <value>Diário</value>
+  </data>
+  <data name="lbAgioFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbAgioFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="lbOverdraftFeesMax.Text" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="lbOverdraftFeesMin.Text" xml:space="preserve">
+    <value>Mín</value>
   </data>
 </root>
