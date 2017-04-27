@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="False.Text" xml:space="preserve">
     <value>False</value>
@@ -152,5 +152,17 @@
   </data>
   <data name="tabLoanDetails.Text" xml:space="preserve">
     <value>Loan details tab</value>
+  </data>
+  <data name="ar-MA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value />
+  </data>
+  <data name="fr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ru-RU" xml:space="preserve">
+    <value />
   </data>
 </root>
