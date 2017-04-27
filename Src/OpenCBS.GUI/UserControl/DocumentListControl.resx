@@ -118,27 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnAdd.Text" xml:space="preserve">
-    <value>Adicionar</value>
+    <value />
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>Apagar</value>
+    <value />
   </data>
   <data name="btnView.Text" xml:space="preserve">
-    <value>Visualizar</value>
+    <value />
   </data>
   <data name="colComment.Text" xml:space="preserve">
-    <value>Comentário</value>
+    <value />
   </data>
   <data name="colDate.Text" xml:space="preserve">
-    <value>Data</value>
+    <value />
   </data>
   <data name="colFile.Text" xml:space="preserve">
-    <value>Ficheiro</value>
+    <value />
   </data>
   <data name="colName.Text" xml:space="preserve">
-    <value>Nome</value>
+    <value />
   </data>
   <data name="colUser.Text" xml:space="preserve">
-    <value>Utilizador</value>
+    <value />
   </data>
 </root>
