@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,33 +112,33 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="buttonEdit" xml:space="preserve">
     <value>Editar</value>
   </data>
   <data name="buttonSave" xml:space="preserve">
-    <value>Salvar</value>
+    <value>Guardar</value>
   </data>
   <data name="city.Text" xml:space="preserve">
-    <value>A cidade</value>
+    <value>Cidade</value>
   </data>
   <data name="district.Text" xml:space="preserve">
-    <value>O districto</value>
+    <value>Distrito</value>
   </data>
   <data name="NeedToDeleteAllCities.Text" xml:space="preserve">
-    <value>Em primeiro lugar, tem que apagar todas as cidades neste districto!</value>
+    <value>Em primeiro lugar, tem que apagar todas as cidades neste distrito!</value>
   </data>
   <data name="NeedToDeleteAllDistrinctsAndCities.Text" xml:space="preserve">
-    <value>Em primeiro lugar, tem que apagar todas os districtos e cidades da província!</value>
+    <value>Primeiro tem de apagar todos os distritos e cidades desta província!</value>
   </data>
   <data name="province.Text" xml:space="preserve">
-    <value>A província</value>
+    <value>Província</value>
   </data>
   <data name="WrongSelection.Text" xml:space="preserve">
-    <value>Seleção errada</value>
+    <value>Selecção errada</value>
   </data>
 </root>
