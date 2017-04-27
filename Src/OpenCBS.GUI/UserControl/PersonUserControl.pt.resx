@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,16 +124,16 @@
     <value>Código</value>
   </data>
   <data name="columnHeaderStatus.Text" xml:space="preserve">
-    <value>Situação</value>
+    <value>Estado</value>
   </data>
   <data name="columnHeaderAmount.Text" xml:space="preserve">
     <value>Quantia</value>
   </data>
   <data name="columnHeaderInterestRate.Text" xml:space="preserve">
-    <value>Taxa de câmbio</value>
+    <value>Taxa de juro</value>
   </data>
   <data name="columnHeaderInstallmentType.Text" xml:space="preserve">
-    <value>Tipo de prestações</value>
+    <value>Tipo de prestação</value>
   </data>
   <data name="columnHeaderNbOfInstallments.Text" xml:space="preserve">
     <value>Número de prestações</value>
@@ -182,7 +182,7 @@
 </value>
   </data>
   <data name="buttonProjectViewContract.Text" xml:space="preserve">
-    <value>Veja contracto</value>
+    <value>Visualizar contracto</value>
   </data>
   <data name="buttonProjectAddContract.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -200,7 +200,7 @@
 </value>
   </data>
   <data name="buttonProjectAddContract.Text" xml:space="preserve">
-    <value>Adicionar Empréstimo</value>
+    <value>Adicionar Crédito</value>
   </data>
   <data name="columnHeaderId.Text" xml:space="preserve">
     <value>BI</value>
@@ -212,13 +212,13 @@
     <value>Nome</value>
   </data>
   <data name="columnHeaderNbOfCredits.Text" xml:space="preserve">
-    <value>Número  de empréstimos</value>
+    <value>Número  de Créditos</value>
   </data>
   <data name="columnHeaderNbOfGuarantees.Text" xml:space="preserve">
     <value>Número de garantias</value>
   </data>
   <data name="buttonViewProject.Text" xml:space="preserve">
-    <value>Veja projecto</value>
+    <value>Visualizar projecto</value>
   </data>
   <data name="buttonAddProject.Text" xml:space="preserve">
     <value>Adicionar projecto</value>
@@ -227,7 +227,7 @@
     <value>Residência*</value>
   </data>
   <data name="groupBoxSecondaryAddress.Text" xml:space="preserve">
-    <value>Negócio / Trabalho</value>
+    <value>Endereço de Negócio / Trabalho</value>
   </data>
   <data name="tabPageAddress.Text" xml:space="preserve">
     <value>Endereço</value>
@@ -260,7 +260,7 @@
     <value>229, 16</value>
   </data>
   <data name="labelSponsor1.Text" xml:space="preserve">
-    <value>Quem lhe informou sobre o programa?</value>
+    <value>Quem o informou sobre o programa?</value>
   </data>
   <data name="tabPage1FollowUp.Text" xml:space="preserve">
     <value>Seguimento</value>
@@ -278,16 +278,16 @@
     <value>tipo de grupo</value>
   </data>
   <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Dia do estabelecimento</value>
+    <value>Data de estabelecimento</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Data de entrada</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Data de saída</value>
+    <value>Data restante</value>
   </data>
   <data name="tabPageGroupMember.Text" xml:space="preserve">
-    <value>Membro do</value>
+    <value>Membro de</value>
   </data>
   <data name="imageListEconomicInfo.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -679,13 +679,13 @@
     <value>71, 20</value>
   </data>
   <data name="lblBranch.Text" xml:space="preserve">
-    <value>Sucursais:</value>
+    <value>Sucursal</value>
   </data>
   <data name="lblEconomicActivity.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 16</value>
   </data>
   <data name="lblEconomicActivity.Text" xml:space="preserve">
-    <value>Actividades económicas:*</value>
+    <value>Actividade económica:*</value>
   </data>
   <data name="eacPerson.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 142</value>
@@ -709,7 +709,7 @@
     <value>131, 16</value>
   </data>
   <data name="labelLoanCycle.Text" xml:space="preserve">
-    <value>Cíclo de empréstimo:</value>
+    <value>Ciclo de crédito:</value>
   </data>
   <data name="labelFatherName.Location" type="System.Drawing.Point, System.Drawing">
     <value>335, 91</value>
@@ -721,10 +721,10 @@
     <value>Nome de Pai</value>
   </data>
   <data name="changePhotoLinkLabel2.Text" xml:space="preserve">
-    <value>Mude foto...</value>
+    <value>Alterar foto...</value>
   </data>
   <data name="changePhotoLinkLabel.Text" xml:space="preserve">
-    <value>Mude foto...</value>
+    <value>Alterar foto...</value>
   </data>
   <data name="dateTimePickerDateOfBirth.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 64</value>
@@ -766,7 +766,7 @@
     <value>66, 16</value>
   </data>
   <data name="labelFirstName.Text" xml:space="preserve">
-    <value>Prenom: *</value>
+    <value>Nome: *</value>
   </data>
   <data name="textBoxFirstName.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 12</value>
@@ -775,7 +775,7 @@
     <value>Situação civil</value>
   </data>
   <data name="comboBox1.Items" xml:space="preserve">
-    <value>soleteiro</value>
+    <value>Solteiro</value>
   </data>
   <data name="comboBox1.Items1" xml:space="preserve">
     <value>casado</value>
@@ -784,28 +784,28 @@
     <value>viúva/viúvo</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Familia</value>
+    <value>Situação Familiar</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Doador</value>
+    <value>Patrocinador</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>Primeiro contracto</value>
+    <value>Primeiro contacto</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Habitação</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>N'úmero de CAF</value>
+    <value>Número de CAF</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>NUIT</value>
+    <value>Número de Segurança Social</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>Escolaridade:</value>
+    <value>Nível de Escolaridade:</value>
   </data>
   <data name="comboBox3.Items" xml:space="preserve">
-    <value>soleteiro</value>
+    <value>Solteiro</value>
   </data>
   <data name="comboBox3.Items1" xml:space="preserve">
     <value>casado</value>
@@ -814,25 +814,25 @@
     <value>viúva / viúvo</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>Situação da familia</value>
+    <value>Situação familiar</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>Parceiro</value>
+    <value>Patrocinador</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Primeiro contacto</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Residencial</value>
+    <value>Habitação</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Número de CAF</value>
   </data>
   <data name="label21.Text" xml:space="preserve">
-    <value>BI</value>
+    <value>Número de Segurança Social</value>
   </data>
   <data name="label22.Text" xml:space="preserve">
-    <value>Escolaridade:</value>
+    <value>Nível de Escolaridade:</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>BI</value>
@@ -883,7 +883,7 @@
 </value>
   </data>
   <data name="button2.Text" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Pesquisar</value>
   </data>
   <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -919,7 +919,7 @@
 </value>
   </data>
   <data name="button4.Text" xml:space="preserve">
-    <value>Procurar</value>
+    <value>Pesquisar</value>
   </data>
   <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -937,7 +937,7 @@
 </value>
   </data>
   <data name="button5.Text" xml:space="preserve">
-    <value>Veja projecto</value>
+    <value>Visualizar projecto</value>
   </data>
   <data name="button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -973,7 +973,7 @@
 </value>
   </data>
   <data name="button7.Text" xml:space="preserve">
-    <value>Veja projecto</value>
+    <value>Visualizar projecto</value>
   </data>
   <data name="button8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -991,7 +991,7 @@
 </value>
   </data>
   <data name="button8.Text" xml:space="preserve">
-    <value>Add projecto</value>
+    <value>Adicionar projecto</value>
   </data>
   <data name="button9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1009,7 +1009,7 @@
 </value>
   </data>
   <data name="button9.Text" xml:space="preserve">
-    <value>Veja projecto</value>
+    <value>Visualizar projecto</value>
   </data>
   <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1063,7 +1063,7 @@
 </value>
   </data>
   <data name="button12.Text" xml:space="preserve">
-    <value>Veja contracto</value>
+    <value>Visualizar contracto</value>
   </data>
   <data name="button13.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1081,7 +1081,7 @@
 </value>
   </data>
   <data name="button13.Text" xml:space="preserve">
-    <value>Adicionar empréstimo</value>
+    <value>Adicionar crédito</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>762, 300</value>
