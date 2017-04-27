@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -164,5 +164,32 @@
   </data>
   <data name="typeString" xml:space="preserve">
     <value>String</value>
+  </data>
+  <data name="Liste" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Nombre" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Propriétaire" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Texte" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Дата" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Залогодатель" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Список" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Строка" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Число" xml:space="preserve">
+    <value />
   </data>
 </root>
