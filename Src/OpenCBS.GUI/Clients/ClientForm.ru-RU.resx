@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -869,7 +869,7 @@
   <data name="btnPrintLoanRepayment.Location" type="System.Drawing.Point, System.Drawing">
     <value>773, 3</value>
   </data>
-    <data name="btnActions.Text" xml:space="preserve">
+  <data name="btnActions.Text" xml:space="preserve">
     <value>Спец. функции</value>
   </data>
   <data name="btnPrintLoanRepayment.Text" xml:space="preserve">

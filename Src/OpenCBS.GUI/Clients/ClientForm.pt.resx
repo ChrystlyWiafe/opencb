@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1563,7 +1563,7 @@
     <value>170, 22</value>
   </data>
   <data name="savingTransferToolStripMenuItem.Text" xml:space="preserve">
-    <value>Transferencia</value>
+    <value>Transferência</value>
   </data>
   <data name="specialOperationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 22</value>
@@ -1578,7 +1578,7 @@
     <value>Saldo exportado</value>
   </data>
   <data name="labelTitleRepayment.Text" xml:space="preserve">
-    <value>Situação do reembolso</value>
+    <value>Estado do Reembolso</value>
   </data>
   <data name="buttonPrintSchedule.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1679,7 +1679,7 @@
     <value>Comissões</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Cancelavel</value>
+    <value>Cancelável</value>
   </data>
   <data name="labelExchangeRate.Text" xml:space="preserve">
     <value>Taxa de câmbio:</value>
@@ -1691,7 +1691,7 @@
     <value>Cancele prestação pendente</value>
   </data>
   <data name="toolStripMenuItemConfirmPending.Text" xml:space="preserve">
-    <value>Confirme prestção pendente</value>
+    <value>Confirme prestação pendente</value>
   </data>
   <data name="menuPendingSavingEvents.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 48</value>
@@ -2307,6 +2307,9 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Individual</value>
+    <value>Indivíduo</value>
+  </data>
+  <data name="tabPageTermDeposit.Text" xml:space="preserve">
+    <value>Depósito a prazo</value>
   </data>
 </root>
