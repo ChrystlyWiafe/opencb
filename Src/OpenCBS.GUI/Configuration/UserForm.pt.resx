@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,13 +112,13 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="colUsername.Text" xml:space="preserve">
-    <value>Usuário</value>
+    <value>Nome de Utilizador</value>
   </data>
   <data name="colRole.Text" xml:space="preserve">
     <value>Função</value>
@@ -130,7 +130,7 @@
     <value>Apelido</value>
   </data>
   <data name="cHMail.Text" xml:space="preserve">
-    <value>Contacto</value>
+    <value>Email</value>
   </data>
   <data name="btnNew.Text" xml:space="preserve">
     <value>Novo</value>
@@ -139,25 +139,25 @@
     <value>Gravar</value>
   </data>
   <data name="btnSubordinates.Text" xml:space="preserve">
-    <value>Subordinantes</value>
+    <value>Subordinados</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
     <value>Apagar</value>
   </data>
   <data name="gbAddUser.Text" xml:space="preserve">
-    <value>Add utilizador</value>
+    <value>Adicionar utilizador</value>
   </data>
   <data name="lblRole.Text" xml:space="preserve">
-    <value>Função</value>
+    <value>Função*</value>
   </data>
   <data name="lbComfirmPassword.Text" xml:space="preserve">
-    <value>Senha de novo: *</value>
+    <value>Confirmar Palavra Passe: *</value>
   </data>
   <data name="lblMail.Text" xml:space="preserve">
-    <value>Carta-E</value>
+    <value>Email</value>
   </data>
   <data name="lblPassword.Text" xml:space="preserve">
-    <value>Senha*</value>
+    <value>Palavra passe*</value>
   </data>
   <data name="lblFirstName.Text" xml:space="preserve">
     <value>Primeiro nome*</value>
@@ -166,9 +166,8 @@
     <value>Apelido*</value>
   </data>
   <data name="lblUsername.Text" xml:space="preserve">
-    <value>Usuário*</value>
+    <value>Nome de Utilizador*</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Text" xml:space="preserve">
     <value>Utilizadores</value>
   </data>
@@ -179,12 +178,12 @@
     <value>Sexo</value>
   </data>
   <data name="colSubordinates.Text" xml:space="preserve">
-    <value>subordinados</value>
+    <value>Subordinados</value>
   </data>
   <data name="colPhone.Text" xml:space="preserve">
-    <value>telefone</value>
+    <value>Telefone</value>
   </data>
   <data name="lblPhone.Text" xml:space="preserve">
-    <value>número de telefone</value>
+    <value>Número de telefone</value>
   </data>
 </root>
