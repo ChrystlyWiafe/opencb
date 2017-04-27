@@ -1222,6 +1222,9 @@
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="colEntryFee.Text" xml:space="preserve">
+    <value />
+  </data>
   <metadata name="disburseLoansStatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 36</value>
   </metadata>
