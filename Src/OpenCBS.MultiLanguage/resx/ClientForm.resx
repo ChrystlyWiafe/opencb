@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -353,5 +353,32 @@
   </data>
   <data name="EmptyLoanOfficer.Text" xml:space="preserve">
     <value>No users with the role "LOF"</value>
+  </data>
+  <data name="GroupBad.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PersonBad.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LoanPostponed.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CorporateBad.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CurrentInstallmentIsNotFullyRepaid.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LoanIsFlatForTranche.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TrancheMaturityError.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLoanStatus.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SavingsPending.Text1" xml:space="preserve">
+    <value />
   </data>
 </root>
