@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,58 +112,57 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="amountCommitted" xml:space="preserve">
-    <value>Este lançamento não pode ser apagado porque parte
- do dinheiro já foi cometido.</value>
+    <value>Este lançamento não pode ser apagado porque parte do dinheiro já foi comprometido.</value>
   </data>
   <data name="graph" xml:space="preserve">
-    <value>Previsão do numerário em mão</value>
+    <value>Previsão do fundo de maneio</value>
   </data>
   <data name="graphCurve" xml:space="preserve">
-    <value>Numerário  estimado no mão</value>
+    <value>Fundo de maneio esperado </value>
   </data>
   <data name="graphX" xml:space="preserve">
-    <value>Os dias</value>
+    <value>Dias</value>
   </data>
   <data name="graphY" xml:space="preserve">
-    <value>O saldo</value>
+    <value>Saldo</value>
   </data>
   <data name="notSaved" xml:space="preserve">
-    <value>Salvar a linha de financiamento em primeiro lugar.</value>
+    <value>Guardar primeiro a linha de financiamento.</value>
   </data>
   <data name="save" xml:space="preserve">
-    <value>Salvar</value>
+    <value>Guardar</value>
   </data>
   <data name="select" xml:space="preserve">
-    <value>Selecione …</value>
+    <value>Seleccione …</value>
   </data>
   <data name="typeCommitment" xml:space="preserve">
-    <value>O compromisso</value>
+    <value>Compromisso</value>
   </data>
   <data name="typeDisbursment" xml:space="preserve">
-    <value>O desembolso</value>
+    <value>Desembolso</value>
   </data>
   <data name="typeEntry" xml:space="preserve">
-    <value>O lançamento</value>
+    <value>Entrada</value>
   </data>
   <data name="typeGuarantee" xml:space="preserve">
-    <value>A garantia</value>
+    <value>Garantia</value>
   </data>
   <data name="typeLoan" xml:space="preserve">
-    <value>O empréstimo</value>
+    <value>Crédito</value>
   </data>
   <data name="typeRepay" xml:space="preserve">
-    <value>O reembolso</value>
+    <value>Reembolso</value>
   </data>
   <data name="update" xml:space="preserve">
     <value>Actualizar</value>
   </data>
   <data name="wrongType" xml:space="preserve">
-    <value>So pode apagar os lançamentos</value>
+    <value>Só pode apagar os movimentos do tipo "Entrada".</value>
   </data>
 </root>
