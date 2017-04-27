@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -577,9 +577,6 @@ Tem que creditar este movimento</value>
   <data name="OpenCbsCorporateExceptionCodeIsEmpty.Text" xml:space="preserve">
     <value>O código não está preenchido</value>
   </data>
-  <data name="OpenCbsCorporateExceptionDistricIsEmpty.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="OpenCbsCorporateExceptionDistrictIsEmpty.Text" xml:space="preserve">
     <value>O distrito não está preenchido</value>
   </data>
@@ -884,9 +881,6 @@ Se não quiser usar taxas de joías, apagar a linha.</value>
   </data>
   <data name="PackageExceptionExoticProductNameAlreadyExist" xml:space="preserve">
     <value>O nome do produto exótico já existe!</value>
-  </data>
-  <data name="PackageExceptionExoticProductNameIsNull.Text" xml:space="preserve">
-    <value />
   </data>
   <data name="PackageExceptionGracePeriodGroupBadlyInformed.Text" xml:space="preserve">
     <value>A quantia do período de carência não está preenchida ou é incorreta.
@@ -1372,7 +1366,7 @@ Deve completar ou "min" e "max" ou o
 Deve completar "min" e "max". 
 (Transações guia)</value>
   </data>
-    <data name="SavingRepaymentAmountIsInvalid.Text" xml:space="preserve">
+  <data name="SavingRepaymentAmountIsInvalid.Text" xml:space="preserve">
     <value>O montante do depósito ou do equilíbrio fora de alcance.</value>
   </data>
   <data name="SavingsEventCannotBeCanceled.Text" xml:space="preserve">
