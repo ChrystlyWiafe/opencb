@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccountExceptionAccountIsNull.Text" xml:space="preserve">
-    <value>Selecione uma conta</value>
+    <value>Seleccione uma conta</value>
   </data>
   <data name="AccountExceptionCannotBeDeleted.Text" xml:space="preserve">
     <value>Esta conta não pode ser apagado, é uma conta padrão</value>
@@ -130,13 +130,13 @@
     <value>A descrição da conta é inválida</value>
   </data>
   <data name="AccountExceptionIncorrectAmountFormat.Text" xml:space="preserve">
-    <value>Deve lançar uma quantia decimal positivo</value>
+    <value>Deve lançar um valor de montante decimal positivo</value>
   </data>
   <data name="AccountExceptionIsUsed.Text" xml:space="preserve">
     <value>Não pode apagar uma conta que tem movimentos</value>
   </data>
   <data name="AccountExceptionLabelIsNull.Text" xml:space="preserve">
-    <value>O novo rótulo não está preenchido</value>
+    <value>A nova etiqueta não está preenchida</value>
   </data>
   <data name="AccountExceptionLocalNumberIsNull.Text" xml:space="preserve">
     <value>O número de conta local não está preenchido</value>
@@ -293,16 +293,16 @@ obrigatória, ajuste o "valor" para 0
 (Garantias guia)</value>
   </data>
   <data name="ContractExceptionAmountIsNull.Text" xml:space="preserve">
-    <value>Valor do contrato não está preenchido</value>
+    <value>O valor do contracto não está preenchido</value>
   </data>
   <data name="ContractExceptionAnticipatedRepaymentPenaltiesIsNull.Text" xml:space="preserve">
-    <value>Os juros de moura de reembolsos antecipados não estão  preenchidos</value>
+    <value>As penalizações para reembolsos antecipados não estão  preenchidas</value>
   </data>
   <data name="ContractExceptionBeneficiaryIsActive.Text" xml:space="preserve">
     <value>Este cliente já está activo</value>
   </data>
   <data name="ContractExceptionBeneficiaryIsAllowOneLoans.Text" xml:space="preserve">
-    <value>Este cliente apenas lhe é permito um empréstimo</value>
+    <value>A este cliente é apenas permitido um crédito.</value>
   </data>
   <data name="ContractExceptionBeneficiaryIsBad.Text" xml:space="preserve">
     <value>É um cliente não fiável. Não pode criar um
@@ -312,10 +312,10 @@ empréstimo para um cliente não fiável</value>
     <value>O contracto do beneficiário não está preenchido</value>
   </data>
   <data name="ContractExceptionContractIsNull.Text" xml:space="preserve">
-    <value>Por favor seleccione um contrato</value>
+    <value>Por favor seleccione um contracto</value>
   </data>
   <data name="ContractExceptionCorporateIsNull.Text" xml:space="preserve">
-    <value>O contrato corporativo não está preenchido</value>
+    <value>O contracto corporativo não está preenchido</value>
   </data>
   <data name="ContractExceptionCreditCommiteeCommentNotModified.Text" xml:space="preserve">
     <value>Comentário não está preenchido</value>
@@ -334,22 +334,22 @@ abertura e a primeira prestação</value>
     <value>Não é possível apagar este evento</value>
   </data>
   <data name="ContractExceptionFundingLineIsNull.Text" xml:space="preserve">
-    <value>A linha de contrato de financiamento não está preenchida</value>
+    <value>A linha de contracto de financiamento não está preenchida</value>
   </data>
   <data name="ContractExceptionGracePeriodIsNull.Text" xml:space="preserve">
-    <value>O prazo de carência não está preenchido</value>
+    <value>O período de carência não está preenchido</value>
   </data>
   <data name="ContractExceptionInstallmentTypeIsNull.Text" xml:space="preserve">
-    <value>O tipo de prestação não está preenchida</value>
+    <value>O tipo de prestação não está preenchido ou é incorreto (guia Parâmetros Principais)</value>
   </data>
   <data name="ContractExceptionInterestRateIsNull.Text" xml:space="preserve">
-    <value>A taxa de juros não está preenchida ou incorrecta.
-Deve completar ou "min" e "Max" ou "quantia". 
+    <value>A taxa de juros não está preenchida ou é incorrecta.
 A taxa de juros não pode ser nulo
-(Parâmetros Principais)</value>
+(Parâmetros Principais)
+</value>
   </data>
   <data name="ContractExceptionLoanOfficerIsNull.Text" xml:space="preserve">
-    <value>O oficial de crédito não está selecionado</value>
+    <value>O agente de crédito não está seleccionado</value>
   </data>
   <data name="ContractExceptionNonRepaymentPenaltiesIsNull.Text" xml:space="preserve">
     <value>A comissão de atraso não está preenchida</value>
@@ -409,7 +409,7 @@ de abertura e a data da primeira prestação</value>
     <value>Impossível modificar ou apagar</value>
   </data>
   <data name="DOAExceptionHasChildrens.Text" xml:space="preserve">
-    <value>Esta actividade tem vários níveis é impossível apagar</value>
+    <value>Esta actividade tem vários níveis, é impossível apagar</value>
   </data>
   <data name="DOAExceptionNameIsNull.Text" xml:space="preserve">
     <value>O nome não está preenchido</value>
@@ -418,22 +418,22 @@ de abertura e a data da primeira prestação</value>
     <value>O novo nome não está preenchido</value>
   </data>
   <data name="DOAExceptionNoSelect.Text" xml:space="preserve">
-    <value>Deve escolher o domínio de actividade,antes</value>
+    <value>Deve anteriormente escolher a actividade económica</value>
   </data>
   <data name="errorTitle.Text" xml:space="preserve">
-    <value>Erro de aplicação.</value>
+    <value>Erro da aplicação.</value>
   </data>
   <data name="ExchangeRateExceptionCurrencyIsEmpty.Text" xml:space="preserve">
     <value>A moeda não foi selecionada.</value>
   </data>
   <data name="ExchangeRateExceptionDateIsNull.Text" xml:space="preserve">
-    <value>Por favor selecionar uma data.</value>
+    <value>Por favor seleccionar uma data.</value>
   </data>
   <data name="ExchangeRateExceptionExchangeRateIsNull.Text" xml:space="preserve">
     <value>Para esta data, a taxa de câmbio não está preenchida.</value>
   </data>
   <data name="ExchangeRateExceptionRateIsEmpty.Text" xml:space="preserve">
-    <value>A taxa não é preenchida.</value>
+    <value>A taxa não está preenchida.</value>
   </data>
   <data name="ExchangeRateExceptionThisCurrencyIsPivot.Text" xml:space="preserve">
     <value>Esta moeda é de pivô e não pode ter taxa
@@ -461,7 +461,7 @@ empréstimos</value>
     <value>Essa prestação já foi paga</value>
   </data>
   <data name="InstallmentExceptionInstallmentIsNull.Text" xml:space="preserve">
-    <value>Antes, deve selecionar uma prestação!</value>
+    <value>Antes, deve seleccionar uma prestação!</value>
   </data>
   <data name="InstallmentExceptionNotFirstInstallmentToCancelRepay.Text" xml:space="preserve">
     <value>Não pode cancelar esta reembolso, porque 
@@ -663,31 +663,28 @@ financiamento com nome diferente / objectivo.</value>
     <value>Caracters permitidos: 0-9 e - (traço)</value>
   </data>
   <data name="OTE1.Text" xml:space="preserve">
-    <value>Deve primeiro selecionar um cliente</value>
+    <value>Deve primeiro seleccionar um cliente</value>
   </data>
   <data name="OTE10.Text" xml:space="preserve">
-    <value>Se quiser um endereço secundário, o
-campo "distrito" deve estar preenchido</value>
+    <value>Se quiser um endereço secundário, o campo "distrito" deve estar preenchido.</value>
   </data>
   <data name="OTE11.Text" xml:space="preserve">
-    <value>Se quiser um endereço secundário, a
-cidade deve estar indicada</value>
+    <value>Se quiser um endereço secundário, a </value>
   </data>
   <data name="OTE12.Text" xml:space="preserve">
-    <value>Se quiser um endereço secundário, o primeiro deve estar  preenchido</value>
+    <value>cidade não deve estar em branco</value>
   </data>
   <data name="OTE13.Text" xml:space="preserve">
-    <value>Por favor seleccione um distrito válido</value>
+    <value>Se quiser um endereço secundário, o primeiro deve estar  preenchido</value>
   </data>
   <data name="OTE14.Text" xml:space="preserve">
-    <value>Por favor seleccione um distrito
-secundário correcto</value>
+    <value>Por favor seleccione um distrito válido</value>
   </data>
   <data name="OTE15.Text" xml:space="preserve">
-    <value>Por favor, seleccione uma pessoa</value>
+    <value>Por favor seleccione um distrito</value>
   </data>
   <data name="OTE16.Text" xml:space="preserve">
-    <value>Essa pessoa já está em um grupo</value>
+    <value>secundário correcto</value>
   </data>
   <data name="OTE17.Text" xml:space="preserve">
     <value>Essa pessoa já tem um contrato aberto</value>
@@ -699,65 +696,63 @@ secundário correcto</value>
     <value>O nome não está preenchido</value>
   </data>
   <data name="OTE2.Text" xml:space="preserve">
-    <value>O domínio da actividade não está preenchido</value>
+    <value>A actividade económica não está preenchida</value>
   </data>
   <data name="OTE20.Text" xml:space="preserve">
-    <value>Selecione um líder</value>
+    <value>Seleccione um líder</value>
   </data>
   <data name="OTE21.Text" xml:space="preserve">
     <value>O número de dependentes deve ser escrito
-numéricamente</value>
+numericamente
+</value>
   </data>
   <data name="OTE22.Text" xml:space="preserve">
-    <value>O número de filho(a)s deve ser escrito
-numéricamente</value>
+    <value>O número de filhos deve ser escrito
+numericamente
+</value>
   </data>
   <data name="OTE23.Text" xml:space="preserve">
-    <value>O número de filho(a)s com educação básica deve ser escrito numéricamente</value>
+    <value>O número de filhos com educação básica deve ser escrito numericamente</value>
   </data>
   <data name="OTE24.Text" xml:space="preserve">
-    <value>O número de anos de experiência no sector econômico
-deve ser escrito númericamente</value>
+    <value>O número de anos de experiência na actividade económica deve ser escrito numericamente</value>
   </data>
   <data name="OTE25.Text" xml:space="preserve">
-    <value>Número de pessoas que trabalham no âmbito
-desta actividade deve ser escrito numéricamente</value>
+    <value>O número de pessoas que trabalham no âmbito
+desta actividade deve ser escrito numericamente
+</value>
   </data>
   <data name="OTE26.Text" xml:space="preserve">
     <value>O montante recebido de outras organizações
-deve ser escrito numéricamente</value>
+deve ser escrito numericamente
+</value>
   </data>
   <data name="OTE27.Text" xml:space="preserve">
-    <value>As dívidas de outras organizaçoes deve ser escrito
-numéricamente</value>
+    <value>As dívidas de outras organizaçoes deve ser escrito numericamente</value>
   </data>
   <data name="OTE28.Text" xml:space="preserve">
-    <value>O tamanho da casa deve ser escrito numéricamente</value>
+    <value>O tamanho da casa deve ser escrito numericamente</value>
   </data>
   <data name="OTE29.Text" xml:space="preserve">
-    <value>O número de anos vivendo na casa deve ser
-escrito numéricamente</value>
+    <value>O número de anos em que vive na casa deve ser escrito numericamente</value>
   </data>
   <data name="OTE3.Text" xml:space="preserve">
     <value>O primeiro endereço não está preenchido</value>
   </data>
   <data name="OTE30.Text" xml:space="preserve">
-    <value>O tamanho do terreno aonde a casa está construída
-deve ser escrito numéricamente</value>
+    <value>O tamanho do terreno onde a casa está construída deve ser escrito numericamente</value>
   </data>
   <data name="OTE31.Text" xml:space="preserve">
-    <value>A quantia de gado que possede deve ser escrita
-numéricamente</value>
+    <value>A quantia de gado que possui deve ser escrita numericamente</value>
   </data>
   <data name="OTE32.Text" xml:space="preserve">
-    <value>A renda mensal deve ser escrita numéricamente</value>
+    <value>A rendimento mensal deve ser escrito numericamente</value>
   </data>
   <data name="OTE33.Text" xml:space="preserve">
-    <value>As despesas mensais devem ser escritas numéricamente</value>
+    <value>As despesas mensais devem ser escritas numericamente</value>
   </data>
   <data name="OTE34.Text" xml:space="preserve">
-    <value>Deve ter pelo menos {0} pessoas em um
-grupo</value>
+    <value>Deve ter pelo menos {0} pessoas num grupo</value>
   </data>
   <data name="OTE35.Text" xml:space="preserve">
     <value>Esta identificaçã já está sendo usado</value>
@@ -792,7 +787,7 @@ verifique seus dados.</value>
     <value>O sexo (masculino, feminino) não está preenchido</value>
   </data>
   <data name="OTE6.Text" xml:space="preserve">
-    <value>O número do passaporte não está preenchido</value>
+    <value>O número de identificação não está preenchido</value>
   </data>
   <data name="OTE7.Text" xml:space="preserve">
     <value>O sobrenome não está preenchido</value>
@@ -801,7 +796,7 @@ verifique seus dados.</value>
     <value>A cidade não está preenchida</value>
   </data>
   <data name="OTE9.Text" xml:space="preserve">
-    <value>O ciclo de quantidade não está preenchido</value>
+    <value>O ciclo de quantia não está preenchido</value>
   </data>
   <data name="OUE1.Text" xml:space="preserve">
     <value>Deve primeiro escolher um utilizador.</value>
@@ -841,9 +836,9 @@ Deve completar ou "min" e "max" ou 
     <value>Este produto já foi apagado</value>
   </data>
   <data name="PackageExceptionAmountBadlyInformed.Text" xml:space="preserve">
-    <value>O valor do montante não está preenchido ou incorrecto.
-Deve completar ou "min" e "max" ou "valor". 
-O montante nao pode ser nulo (parâmetros principais).</value>
+    <value>O valor do montante não está preenchido ou é incorrecto.
+Deve completar com "min" e "max" ou "valor". O montante nao pode ser nulo (parâmetros principais).
+</value>
   </data>
   <data name="PackageExceptionAmountCycleStockIsBad.Text" xml:space="preserve">
     <value>O ciclo de quantia não está preenchido</value>
@@ -857,21 +852,22 @@ antes de salvar</value>
   </data>
   <data name="PackageExceptionAnticipatedTotalRepaymentPenaltiesBadlyInformed.Text" xml:space="preserve">
     <value>Multas de reembolso anticipado não está preenchido ou é incorrecto.
-Deve completar ou "min" e "max" ou "valor". Se não quiser usar taxas, lançar "quantia" para 0</value>
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas, lançar "quantia" para 0 (Parâmetro Taxas)
+</value>
   </data>
   <data name="PackageExceptionEntryFeesBadlyInformed.Text" xml:space="preserve">
-    <value>Valor de taxa de joías não está preenchido ou incorreto.
-Deve completar ou "min" e "max" ou "valor". 
-Se não quiser usar taxas de joías, apagar a linha.</value>
+    <value>Comissões de Entrada não estão preenchidas ou são incorrectas.
+Deve completar com "min" e "max" ou "valor".  Se não quiser usar comissões de entrada, apagar a linha.
+</value>
   </data>
   <data name="PackageExceptionExoticInstallmentIsBad.Text" xml:space="preserve">
-    <value>Deve escolhar uma prestação antes de apagar</value>
+    <value>Deve seleccionar uma prestação antes de apagar</value>
   </data>
   <data name="PackageExceptionExoticInstallmentIsNull.Text" xml:space="preserve">
-    <value>O capital, juros, e commissões são nulos</value>
+    <value>O capital, juros e commissões são nulos</value>
   </data>
   <data name="PackageExceptionExoticProductContainsNoInstallment.Text" xml:space="preserve">
-    <value>Não existem prestações neste horário exótico, não pode salvá-lo</value>
+    <value>Não existem prestações neste calendário exótico, não pode guardá-lo</value>
   </data>
   <data name="PackageExceptionExoticProductInIncorrect.Text" xml:space="preserve">
     <value>Em prestações exóticas, o coeficiente dos juros e capital deve ser de 100</value>
@@ -884,8 +880,8 @@ Se não quiser usar taxas de joías, apagar a linha.</value>
   </data>
   <data name="PackageExceptionGracePeriodGroupBadlyInformed.Text" xml:space="preserve">
     <value>A quantia do período de carência não está preenchida ou é incorreta.
-Deve completar ou "min" e "max"  ou "quantia". Se não quiser usar o período de carência, 
-defina "quantia" para 0 (guia Parâmetros Principais).</value>
+Deve completar com "min" e "max"  ou "quantia". Se não quiser usar o período de carência, defina "quantia" para 0 (guia Parâmetros Principais).
+</value>
   </data>
   <data name="PackageExceptionGuarantedAmountBadlyInformed.Text" xml:space="preserve">
     <value>Deve lançar valores mínimos e máximos ou um valor fixo para a quantia garantida</value>
@@ -897,7 +893,7 @@ defina "quantia" para 0 (guia Parâmetros Principais).</value>
     <value>O tipo de prestação não está preenchido ou é incorreto (guia Parâmetros Principais)</value>
   </data>
   <data name="PackageExceptionInstallmentTypeIsNull.Text" xml:space="preserve">
-    <value>O tipo de prestação não está preenchido ou é incorreto (guia Parâmetros Principais)</value>
+    <value>O tipo de prestação não está preenchido ou é incorrecto (guia Parâmetros Principais)</value>
   </data>
   <data name="PackageExceptionInstallmentTypeNameAlreadyExist.Text" xml:space="preserve">
     <value>Este nome já existe</value>
@@ -912,9 +908,7 @@ apagado porque ele é usado para  
 empréstimo ou produto de poupança!</value>
   </data>
   <data name="PackageExceptionInterestRateGroupBadlyInformed.Text" xml:space="preserve">
-    <value>O valor da taxa de juros não está preenchido ou incorreto.
-Deve completar ou "min" e "max" ou "valor". 
-A taxa de juros não pode ser nula (guia Parâmetros Principais).</value>
+    <value>Deve completar com "min" e "max" ou "valor". A taxa de juros não pode ser nula (guia Parâmetros Principais).</value>
   </data>
   <data name="PackageExceptionNameAlreadyExist.Text" xml:space="preserve">
     <value>Este nome já existe para outro produto
@@ -922,7 +916,8 @@ de crédito (Parâmetros guia Principal)</value>
   </data>
   <data name="PackageExceptionNameIsNull.Text" xml:space="preserve">
     <value>O nome do produto de crédito não está preenchido
-(guia Parâmetros Principais)</value>
+(guia Parâmetros Principais)
+</value>
   </data>
   <data name="PackageExceptionNonRepaymentPenaltiesBadlyInformed.Text" xml:space="preserve">
     <value>Os juros de moura de reembolso atrasado não foram preenchidos ou estão incorrectos.
@@ -932,8 +927,8 @@ todos os campos "quantia" para 0 (taxas de tabulação).</value>
   </data>
   <data name="PackageExceptionNumberOfInstallmentBadlyInformed.Text" xml:space="preserve">
     <value>O número de prestações não está preenchido ou é incorreto.
-Deve completar ou "min" e "max" ou "valor". O número de prestações não 
-pode ser nulo (guia Parâmetros Principais)</value>
+Deve completar ou "min" e "max" ou "valor". O número de prestações não pode ser nulo (guia Parâmetros Principais)
+</value>
   </data>
   <data name="PackageExceptionPackageIsNull.Text" xml:space="preserve">
     <value>Por favor seleccione um produto</value>
@@ -1018,7 +1013,7 @@ Deve completar ou "min" e "max" ou 
     <value>A quantia deve ser uma quantia numérica</value>
   </data>
   <data name="RepayExceptionMaxPastDueDaysReached.Text" xml:space="preserve">
-    <value>Não pode fazer um reembolso de um empréstimo que tem mais de 180 dias de atraso</value>
+    <value>Não pode fazer um reembolso de um empréstimo com mais de 180 dias de atraso</value>
   </data>
   <data name="RepayExceptionNegativeAmount.Text" xml:space="preserve">
     <value>A quantia não pode ser negativa</value>
@@ -1033,7 +1028,7 @@ Deve completar ou "min" e "max" ou 
     <value>A SQL fonte para o relatório não está definido</value>
   </data>
   <data name="ReportsExceptionsNoResult.Text" xml:space="preserve">
-    <value>nenhum resultado</value>
+    <value>Nenhum resultado</value>
   </data>
   <data name="RoleHasUsers.Text" xml:space="preserve">
     <value>Não pode apagar a transação, que tem usuários 
@@ -1393,7 +1388,7 @@ Deve completar "min" e "max". 
     <value>O campo do nome da pergunta não está preenchido</value>
   </data>
   <data name="sqlError.Text" xml:space="preserve">
-    <value>Erro ao tentar ler ou escrever no banco de dados, contacte o seu administrador de TI</value>
+    <value>Erro ao tentar ler ou escrever na base de dados, contacte o seu administrador de TI</value>
   </data>
   <data name="TooMuchPersonsInThisGroup.Text" xml:space="preserve">
     <value>Deve ter um número máximos de dez pessoas {0} no grupo</value>
