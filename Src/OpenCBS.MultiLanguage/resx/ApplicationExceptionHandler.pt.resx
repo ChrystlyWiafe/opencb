@@ -121,7 +121,7 @@
     <value>Seleccione uma conta</value>
   </data>
   <data name="AccountExceptionCannotBeDeleted.Text" xml:space="preserve">
-    <value>Esta conta não pode ser apagado, é uma conta padrão</value>
+    <value>Esta conta não pode ser apagada, é uma conta padrão</value>
   </data>
   <data name="AccountExceptionCurrencyIsNull.Text" xml:space="preserve">
     <value>Por favor, forneça a identificação da moeda para a tabela de contas</value>
@@ -169,7 +169,7 @@
     <value>A conta específica é inválida</value>
   </data>
   <data name="ActionProhibitedForUser.Text" xml:space="preserve">
-    <value>Não tem autoridade para realizar esta ação</value>
+    <value>Não tem permissão para realizar esta {0} acção</value>
   </data>
   <data name="AddEntryFeeCycleError.Text" xml:space="preserve">
     <value>O ciclo que está a lançar já existe.</value>
@@ -178,10 +178,9 @@
     <value>A idade do cliente deve estar entre {0} e {1} anos</value>
   </data>
   <data name="AgioFeesIsInvalid.Text" xml:space="preserve">
-    <value>O Agio (câmbio) do valor das tarifas não está preenchido ou inválido.
-Deve completar ou "min" e "Max" ou "valor". 
-Se não quiser usar Agios, definir"valor" 
-para 0 (Overdraft guia).</value>
+    <value>O valor das taxas de ágio não está preenchido ou é inválido.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar ágios, defina "valor" para 0 (guia Descoberto)
+</value>
   </data>
   <data name="AllInstallmentRepaid.Text" xml:space="preserve">
     <value>Este contrato foi totalmente reembolsado</value>
@@ -227,11 +226,10 @@ O valor máximo que pode transferir é {3}</value>
     <value>Existe uma sucursal com este nome.</value>
   </data>
   <data name="BusinessBankBicCodeIsWrong.Text" xml:space="preserve">
-    <value>O BIC do banco  está errado
-(Bancos guia)</value>
+    <value>O BIC do negócio  está errado (guia Bancos)</value>
   </data>
   <data name="BusinessBankIbanIsWrong.Text" xml:space="preserve">
-    <value>Negócios Iban Banco está errado (Bancos guia)</value>
+    <value>O IBAN do negócio está errado (guia Bancos)</value>
   </data>
   <data name="CannotGetDataSource.Text" xml:space="preserve">
     <value>Problema com a execução do procedimento de texto, contacte o suporte
@@ -249,19 +247,17 @@ O valor máximo que pode transferir é {3}</value>
     <value>Deve escolher uma data anterior à de hoje</value>
   </data>
   <data name="ChequeDepositFeesIsInvalid" xml:space="preserve">
-    <value>As taxas de depósito para cheque não estão preenchidas  
-ou incorrectas.
-Deve completar ou "min" e "Max" ou 
-"valor". Se não quiser usar taxas, definir"valor" para 0 (Transações guia)</value>
+    <value>As taxas de depósito de cheque não estão preenchidas ou estão incorrectas.  
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="ChequeDepositIsInvalid" xml:space="preserve">
-    <value>Os valores de depósitos de cheques não estão preenchidos
-ou incorrectos.
-Deve completar "min" e "max"</value>
+    <value>Os valores de depósito de cheques não estão preenchidos ou estão incorrectos.
+Deve completar "min" e "max"
+</value>
   </data>
   <data name="ClientTypeIsEmpty.Text" xml:space="preserve">
-    <value>Por favor, anexar o produto a um tipo de cliente 
-específico (Parâmetros Principais)</value>
+    <value>Por favor, anexar o produto a um tipo de cliente específico (Parâmetros Principais)</value>
   </data>
   <data name="CollateralExceptionAlreadyExist.Text" xml:space="preserve">
     <value>Este nome já existe</value>
@@ -375,10 +371,10 @@ A taxa de juros não pode ser nulo
     <value>A moeda da linha de financiamento não corresponde à moeda do produto de crédito</value>
   </data>
   <data name="CustomExportFileExtensionIsIncorrect.Text" xml:space="preserve">
-    <value>Extensão de arquivo está incorreto</value>
+    <value>A Extensão do ficheiro está incorrecta</value>
   </data>
   <data name="CustomExportFileNameIsEmpty.Text" xml:space="preserve">
-    <value>Nome do arquivo não está preenchido</value>
+    <value>O nome do ficheiro não está preenchido</value>
   </data>
   <data name="CustomExportSomeRequiredFieldsAreMissing.Text" xml:space="preserve">
     <value>Faltam alguns campos obrigatórios </value>
@@ -474,10 +470,10 @@ para este empréstimo, por favor, faça a
 configuração manualmente.</value>
   </data>
   <data name="LoanScaleTableMax.Text" xml:space="preserve">
-    <value>Por favor, faça o lançamento do valor máximo segundo a tabela de empréstimo.</value>
+    <value>Por favor, faça o lançamento do valor máximo para a tabela de empréstimo.</value>
   </data>
   <data name="LoanScaleTableMin.Text" xml:space="preserve">
-    <value>Por favor, faça o lançamento do valor mínimo segundo a tabela de empréstimo.</value>
+    <value>Por favor, faça o lançamento do valor mínimo para a tabela de empréstimo.</value>
   </data>
   <data name="LoanShareAmountIsEmpty.Text" xml:space="preserve">
     <value>O montante da acção do empréstimo não está preenchida!</value>
@@ -518,17 +514,16 @@ Deve completar ou "min" e "Max" ou 
 contém símbolos impróprios.</value>
   </data>
   <data name="OpenCbsBookingExceptionDebitAndCreditAccountAreIdentical.Text" xml:space="preserve">
-    <value>As contas de débito e de crédito não podem
-referir-se a mesma conta</value>
+    <value>As contas de débito e de crédito não podem</value>
   </data>
   <data name="OpenCbsBookingExceptionsCreditAccountIsEmpty.Text" xml:space="preserve">
-    <value>A conta de crédito não está preenchida</value>
+    <value>referir-se à mesma conta</value>
   </data>
   <data name="OpenCbsBookingExceptionsDebitAccountIsEmpty.Text" xml:space="preserve">
-    <value>A conta de débito  não está preenchida</value>
+    <value>A conta de crédito não está preenchida</value>
   </data>
   <data name="OpenCbsBookingExceptionsNameIsEmpty.Text" xml:space="preserve">
-    <value>O nome não está preenchido</value>
+    <value>A conta de débito  não está preenchida</value>
   </data>
   <data name="OpenCbsCorporateEventExceptionAmountIsBigger.Text" xml:space="preserve">
     <value>A quantia é excessiva (apenas quantias inferiores a 100 milhões)</value>
@@ -808,10 +803,9 @@ deve ser escrito numericamente
     <value>O utilizador tem contractos, por favor reatribuir</value>
   </data>
   <data name="OverdraftFeesIsInvalid.Text" xml:space="preserve">
-    <value>Os honorários pre-estabelecidos do saldo
-negativo não estão preenchidos ou são incorrectos.
-Deve completar ou "min" e "max" ou 
-"valor". Se nao quer utilizar as taxas do saldo negativo, lançar o "valor" a 0 ( Saldo Negativo).</value>
+    <value>O valor das taxas de descoberto fixo não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de descoberto, defina "valor" para 0 (guia Descoberto)
+</value>
   </data>
   <data name="PackageExceptionAlreadyDeleted.Text" xml:space="preserve">
     <value>Este produto já foi apagado</value>
@@ -921,15 +915,13 @@ Deve completar ou "min" e "max" ou "valor". O número de prestações não 
     <value>A frequência de lançar para um deposito de prazo ainda nao está estabelecida</value>
   </data>
   <data name="PersonalBankBicCodeIsWrong.Text" xml:space="preserve">
-    <value>O banco de dados (BIC) do pessoal está errado
-(Bancos guia)</value>
+    <value>O BIC do pessoal está errado (guia Bancos)</value>
   </data>
   <data name="PersonalBankIbanIsWrong.Text" xml:space="preserve">
-    <value>O Pessoal Iban Banco está errado
-(Bancos guia)</value>
+    <value>O IBAN do Pessoal está errado (guia Bancos)</value>
   </data>
   <data name="PersonIsInTheGroup.Text" xml:space="preserve">
-    <value>A pessoa já está em outro grupo</value>
+    <value>A pessoa já está noutro grupo</value>
   </data>
   <data name="PicturesNotAllowed" xml:space="preserve">
     <value>As manipulações de fotografias não são
@@ -972,14 +964,14 @@ permitidos no banco de dados</value>
     <value>A taxa não está preenchida</value>
   </data>
   <data name="ReopenFeesIsInvalid" xml:space="preserve">
-    <value>Reabrir as taxas, os valores não estão preenchidos ou são incorretos.
-Deve completar ou "min" e "Max" ou 
-"valor". Se não quiser usar reabrir honorários, definir "valor" para 0 (guia Taxas).</value>
+    <value>Os valores das taxas de reabertura não estão preenchidos ou estão incorrectos.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de reabertura, defina "valor" para 0 (guia Taxas)
+</value>
   </data>
   <data name="ReopenFeesMinIsInvalid" xml:space="preserve">
-    <value>Reabrir taxas: os valores mínimo não estão preenchidos ou são incorrectos.
-Deve completar ou "min" e "max" ou 
-"valor". Se não quiser usar reabrir taxas, definir "valor" para 0 (guia Taxas)</value>
+    <value>Os valores mínimos das taxas de reabertura não estão preenchidos ou estão incorrectos.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de reabertura, defina "valor" para 0 (guia Taxas)
+</value>
   </data>
   <data name="RepayExceptionAmountGreaterThanTotalRemainingAmount.Text" xml:space="preserve">
     <value>A quantia restante é menor do que a quantia especificada</value>
@@ -994,7 +986,7 @@ Deve completar ou "min" e "max" ou 
     <value>A quantia não pode ser negativa</value>
   </data>
   <data name="RepaymentBeforeDisburse.Text" xml:space="preserve">
-    <value>Não é possível fazer um reembolso antes da data do desembolso</value>
+    <value>Não é possível fazer um reembolso antes da data de desembolso</value>
   </data>
   <data name="RepaymentBeforeLastEventDate.Text" xml:space="preserve">
     <value>Nao pode reembolsar antes do dia de reembolso último</value>
@@ -1007,11 +999,10 @@ Deve completar ou "min" e "max" ou 
     <value>Nenhum resultado</value>
   </data>
   <data name="RoleHasUsers.Text" xml:space="preserve">
-    <value>Não pode apagar a transação, que tem usuários 
-conectados a ele.</value>
+    <value>Não pode apagar uma função com utilizadores a ela associados </value>
   </data>
   <data name="RoleIsNull.Text" xml:space="preserve">
-    <value>A transacção não foi selecionada. Por favor, selecione a função que quer apagar</value>
+    <value>A função não foi seleccionada. Por favor, seleccione a função que quer apagar</value>
   </data>
   <data name="SavingBalanceIsInvalid.Text" xml:space="preserve">
     <value>O saldo é inválido</value>
@@ -1020,7 +1011,7 @@ conectados a ele.</value>
     <value>O saldo da poupança obrigatória é inválido</value>
   </data>
   <data name="SavingContractCompulsorySavingsLinkedToLoan.Text" xml:space="preserve">
-    <value>O contrato de poupança obrigatória já está ligada a um empréstimo</value>
+    <value>O contrato de poupança obrigatória já está associado a um crédito</value>
   </data>
   <data name="SavingContractForTransferIdenticals.Text" xml:space="preserve">
     <value>Os dois contractos des transferência são idênticos</value>
@@ -1032,7 +1023,7 @@ conectados a ele.</value>
     <value>O contrato é nulo</value>
   </data>
   <data name="SavingContractLoanDoesNotAcceptSavings.Text" xml:space="preserve">
-    <value>O contrato de empréstimo não aceita poupança compulsória</value>
+    <value>O contrato de crédito não aceita poupança obrigatória</value>
   </data>
   <data name="SavingContractLoanHasNotSameClient.Text" xml:space="preserve">
     <value>O cliente de crédito não é o mesmo que o cliente da poupança obrigatória</value>
@@ -1056,13 +1047,13 @@ conectados a ele.</value>
     <value>A conta de transferência não pertence ao mesmo cliente</value>
   </data>
   <data name="SavingContractRolloverTransferAccountIsClosed.Text" xml:space="preserve">
-    <value>A conta de transferências está fechado</value>
+    <value>A conta de transferência está fechada</value>
   </data>
   <data name="SavingContractRolloverTransferAccountIsInvalid.Text" xml:space="preserve">
     <value>A conta de transferência é inválida</value>
   </data>
   <data name="SavingContractRolloverTransferAccountIsSavingDepositOrCompulsorySavings.Text" xml:space="preserve">
-    <value>A conta de transferência é uma conta de depósito de poupança ou uma conta de poupança compulsória</value>
+    <value>A conta de transferência é uma conta de depósito de poupança ou uma conta de poupança obrigatória</value>
   </data>
   <data name="SavingContractTransferFeesIsInvalid.Text" xml:space="preserve">
     <value>As taxas de transferência são inválidas</value>
@@ -1092,12 +1083,14 @@ conectados a ele.</value>
     <value>A base de cálculo da quantia é nula</value>
   </data>
   <data name="SavingProductCloseFeesIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas para fechar a conta não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou "valor". Se não quiser usar taxas para fechar a conta, definir "valor" para 0 (guia Taxas)</value>
+    <value>O valor das taxas de encerramento não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de encerramento, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductCloseFeesMinIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas para fechar a conta não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou "valor". Se não quiser usar as taxas estipuladas, definir "valor" para 0 (guia Taxas)</value>
+    <value>O valor das taxas de encerramento não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de encerramento, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductCodeIsEmpty.Text" xml:space="preserve">
     <value>O código do produto não está preenchido (Parâmetros principais)</value>
@@ -1108,14 +1101,14 @@ Deve completar "min" e "max". O valor do depósito deve ser positivo (guia T
 </value>
   </data>
   <data name="SavingProductDepositFeesIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de depósito não estão preenchidas ou estão incorretos.
-Deve completar ou "min" e "max" ou "valor". Se não quiser usar as taxas de 
-depósito, definir "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de depósito não estão preenchidas ou estão incorrectas.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de depósito, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductDepositFeesMinIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de depósito não está preenchido ou é incorreto.
-Deve completar ou "min" e "max" ou o "valor". 
-Se não quiser usar as taxas de depósito, definir "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de depósito não estão preenchidas ou estão incorrectas.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de depósito, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductDepositMinAmountIsInvalid.Text" xml:space="preserve">
     <value>O depósito em numerário não está preenchido ou está incorreto.
@@ -1145,14 +1138,14 @@ Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas d
 </value>
   </data>
   <data name="SavingProductFlatTransferFeesMinIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais do banco não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência intra-sucursal não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia Transações)
+</value>
   </data>
   <data name="SavingProductFlatTransferFeesMinMaxIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais do banco não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência intra-sucursal não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia Transações)
+</value>
   </data>
   <data name="SavingProductFlatWithdrawFeesIsInvalid.Text" xml:space="preserve">
     <value>O valor das taxas de levantamento não está preenchido ou está incorrecto.
@@ -1248,12 +1241,13 @@ Deve completar com "min" e "max" ou "valor". Se  não quiser usar a taxa 
   </data>
   <data name="SavingProductManagementFeesIsInvalid.Text" xml:space="preserve">
     <value>O valor das taxas administrativas não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou o "valor". Se não quiser usar as comissões administrativas, defina "valor" para 0 (guia taxas)</value>
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas administrativas, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductManagementFeesMinIsInvalid.Text" xml:space="preserve">
     <value>O valor das taxas administrativas não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou o "valor". Se não quiser usar as comissões administrativas, 
-defina "valor" para 0 (guia taxas)</value>
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas administrativas, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductNameIsEmpty.Text" xml:space="preserve">
     <value>O nome do produto deve estar preenchido (Parâmetros Principais)
@@ -1269,23 +1263,22 @@ defina "valor" para 0 (guia taxas)</value>
     <value>Os números do períodos mínimo ou máximo são inválidos</value>
   </data>
   <data name="SavingProductPeriodicityIsEmpty.Text" xml:space="preserve">
-    <value>Por favor, selecione a frequência 
-adequada para este produto.</value>
+    <value>Por favor, seleccione a periodicidade adequada para este produto</value>
   </data>
   <data name="SavingProductRateTransferFeesIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou o
-"valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia taxas)</value>
+    <value>O valor das taxas de transferência intra-sucursal não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia Transações)
+</value>
   </data>
   <data name="SavingProductRateTransferFeesMinIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou o
-"valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia taxas)</value>
+    <value>O valor das taxas de transferência intra-sucursal não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia Transações)
+</value>
   </data>
   <data name="SavingProductRateTransferFeesMinMaxIsInvalid.Text" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou o
-"valor". Se não quiser usar as taxas de transferência, ponha o "valor" para 0 (guia taxas)</value>
+    <value>O valor das taxas de transferência intra-sucursal não está preenchido ou está incorrecto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (guia Transações)
+</value>
   </data>
   <data name="SavingProductRateWithdrawFeesIsInvalid.Text" xml:space="preserve">
     <value>O valor das taxas de levantamento não está preenchido ou está incorreto.
@@ -1313,17 +1306,16 @@ Deve completar "min" e "max". (guia Transacções)
 </value>
   </data>
   <data name="SavingProductTransferFeesTypeEmpty.Text" xml:space="preserve">
-    <value>A transferência do tipo de taxas não está
-preenchida</value>
+    <value>A tipo de comissão de transferência não está prrenchido </value>
   </data>
   <data name="SavingProductWithdrawalFeesIsInvalid.Text" xml:space="preserve">
-    <value>Fechar, as taxas de levantamento e transferência estão inválidas</value>
+    <value>Fechar, as taxas de levantamento e transferência são inválidas</value>
   </data>
   <data name="SavingProductWithdrawalFeesMinIsInvalid.Text" xml:space="preserve">
-    <value>Fechar, as taxas do levantamento e da transferência de min  estão inválidas</value>
+    <value>Fechar, o mínimo das taxas de levantamento e de transferência são inválidas</value>
   </data>
   <data name="SavingProductWithdrawalFeesMinMaxIsInvalid.Text" xml:space="preserve">
-    <value>Fechar, As taxas do levantamento e da transferência de min ou max  estão inválidas</value>
+    <value>Fechar, o mínimo ou máximo das taxas de levantamento e de transferência são inválidas</value>
   </data>
   <data name="SavingProductWithdrawAmountIsInvalid.Text" xml:space="preserve">
     <value>O valor do levantamento não está preenchido ou está incorrecto.
@@ -1373,10 +1365,10 @@ Deve completar "min" e "max".  (guia Transacções)
     <value>Deve ter um número máximos de dez pessoas {0} no grupo</value>
   </data>
   <data name="TrancheAmountError.Text" xml:space="preserve">
-    <value>Não pode adicionar uma tranche nova com tal valor!</value>
+    <value>Não pode adicionar uma prestação nova com este valor!</value>
   </data>
   <data name="TrancheDateError.Text" xml:space="preserve">
-    <value>Por favor, verificar a data da tranche!</value>
+    <value>Por favor, verificar a data da prestação!</value>
   </data>
   <data name="TransferAccountHasWrongCurrency.Text" xml:space="preserve">
     <value>A moeda esta diferente, por favor selecionar um contracto que tem o mesmo moeda como a moeda do contrato actual</value>
