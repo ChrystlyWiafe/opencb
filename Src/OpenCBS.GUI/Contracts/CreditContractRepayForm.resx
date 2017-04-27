@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -568,7 +568,7 @@
     <value>58</value>
   </data>
   <data name="_lbECAmountToGoBackNormal.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Amount to go back normal</value>
   </data>
   <data name="_lbECAmountToGoBackNormal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -601,7 +601,7 @@
     <value>56</value>
   </data>
   <data name="_lbECAmountMinMax.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Amount Min and Max</value>
   </data>
   <data name="_lbECAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -718,7 +718,7 @@
     <value>48</value>
   </data>
   <data name="_lbICAmountMinMax.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Amount Min and Max</value>
   </data>
   <data name="_lbICAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -751,7 +751,7 @@
     <value>49</value>
   </data>
   <data name="lblAmountToGoBackNormal.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Amount to go back normal</value>
   </data>
   <data name="lblAmountToGoBackNormal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1012,7 +1012,7 @@
     <value>55</value>
   </data>
   <data name="_lbECPrincipal.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Principal:</value>
   </data>
   <data name="_lbECPrincipal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1048,7 +1048,7 @@
     <value>3</value>
   </data>
   <data name="_lbICPrincipal.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Principal:</value>
   </data>
   <data name="_lbICPrincipal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1114,7 +1114,7 @@
     <value>53</value>
   </data>
   <data name="lbCInterest.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Interest</value>
   </data>
   <data name="lbCInterest.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1144,7 +1144,7 @@
     <value>52</value>
   </data>
   <data name="textBoxInterest.Text" xml:space="preserve">
-    <value>0</value>
+    <value>Interest</value>
   </data>
   <data name="textBoxInterest.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1180,7 +1180,7 @@
     <value>4</value>
   </data>
   <data name="lbInterest.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Interest</value>
   </data>
   <data name="lbInterest.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1213,7 +1213,7 @@
     <value>1</value>
   </data>
   <data name="labelRepayInterest.Text" xml:space="preserve">
-    <value>Interest:</value>
+    <value>Repay Interest:</value>
   </data>
   <data name="&gt;&gt;labelRepayInterest.Name" xml:space="preserve">
     <value>labelRepayInterest</value>
@@ -1297,7 +1297,7 @@
     <value>52</value>
   </data>
   <data name="_lbECCommissions.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Commissions:</value>
   </data>
   <data name="_lbECCommissions.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1333,7 +1333,7 @@
     <value>38</value>
   </data>
   <data name="_lbICCommisions.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Commissions:</value>
   </data>
   <data name="_lbICCommisions.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1363,7 +1363,7 @@
     <value>54</value>
   </data>
   <data name="textBoxCommission.Text" xml:space="preserve">
-    <value>0</value>
+    <value>Commissions:</value>
   </data>
   <data name="textBoxCommission.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1399,7 +1399,7 @@
     <value>51</value>
   </data>
   <data name="_lbECFees.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Fees</value>
   </data>
   <data name="_lbECFees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1435,7 +1435,7 @@
     <value>53</value>
   </data>
   <data name="_lbICFees.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Fees</value>
   </data>
   <data name="_lbICFees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1465,7 +1465,7 @@
     <value>50</value>
   </data>
   <data name="textBoxPenalties.Text" xml:space="preserve">
-    <value>0</value>
+    <value>Penalties</value>
   </data>
   <data name="textBoxPenalties.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1498,7 +1498,7 @@
     <value>37</value>
   </data>
   <data name="labelRepayCommissions.Text" xml:space="preserve">
-    <value>Commissions:</value>
+    <value>Repay Commissions:</value>
   </data>
   <data name="&gt;&gt;labelRepayCommissions.Name" xml:space="preserve">
     <value>labelRepayCommissions</value>
@@ -1561,7 +1561,7 @@
     <value>2</value>
   </data>
   <data name="labelRepayFees.Text" xml:space="preserve">
-    <value>Penalties:</value>
+    <value>Repay Fees:</value>
   </data>
   <data name="&gt;&gt;labelRepayFees.Name" xml:space="preserve">
     <value>labelRepayFees</value>
@@ -1947,12 +1947,6 @@
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBoxButton" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="listViewRepayments" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxDetails" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,329,Percent,100,Absolute,63" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>48</value>
-  </metadata>
   <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
     <value>6, 15</value>
   </data>
@@ -2626,4 +2620,10 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=16.10.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>48</value>
+  </metadata>
 </root>
