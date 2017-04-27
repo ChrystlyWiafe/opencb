@@ -124,13 +124,13 @@
     <value>Activo</value>
   </data>
   <data name="Deleted" xml:space="preserve">
-    <value>Deleted</value>
+    <value>Apagado</value>
   </data>
   <data name="Pending" xml:space="preserve">
     <value>Pendente</value>
   </data>
   <data name="Postponed" xml:space="preserve">
-    <value>A]diado</value>
+    <value>Adiado</value>
   </data>
   <data name="Refused" xml:space="preserve">
     <value>Rejeitado</value>
