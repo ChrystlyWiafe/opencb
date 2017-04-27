@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,47 +112,46 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="All.Text" xml:space="preserve">
     <value>Todos</value>
   </data>
   <data name="alreadyAnEventForThisDate.Text" xml:space="preserve">
-    <value>O último reembolso foi também para esta data! 
-Pode confirmar este reembolso?</value>
+    <value>O último reembolso também foi nesta data! Confirma este pagamento? </value>
   </data>
   <data name="AlreadyAnLodeEventForThisDate.Text" xml:space="preserve">
-    <value>Este desembolso foi também para esta data. Confirma este reembolso?</value>
+    <value>O  desembolso foi também nesta data. Confirma este pagamento?</value>
   </data>
   <data name="AlreadyAnRoleEventForThisDate.Text" xml:space="preserve">
-    <value>O último reembolso foi também para esta data! Confirma este reembolso?</value>
+    <value>A última reprogramação também foi nesta data! Confirma este pagamento?</value>
   </data>
   <data name="amount.Text" xml:space="preserve">
-    <value>a quantia</value>
+    <value>Montante para normalizar</value>
   </data>
   <data name="amountToGoNormal.Text" xml:space="preserve">
-    <value>A quantia para voltar a normalizar,</value>
+    <value>Montante para normalizar</value>
   </data>
   <data name="Cash.Text" xml:space="preserve">
-    <value>O numerário</value>
+    <value>Numerário</value>
   </data>
   <data name="Cheque.Text" xml:space="preserve">
-    <value>O cheque</value>
+    <value>Cheque</value>
   </data>
   <data name="DebitCard.Text" xml:space="preserve">
-    <value>A cartão de débito</value>
+    <value>Cartão de débito</value>
   </data>
   <data name="DirectDebit.Text" xml:space="preserve">
-    <value>O débito directo</value>
+    <value>Débito directo</value>
   </data>
   <data name="InitialAmount.Text" xml:space="preserve">
-    <value>A quantia total do empréstimo</value>
+    <value>Montante total do empréstimo</value>
   </data>
   <data name="Latedays.Text" xml:space="preserve">
-    <value>os dias de atraso</value>
+    <value>Dias de atraso</value>
   </data>
   <data name="max.Text" xml:space="preserve">
     <value>Max:</value>
@@ -161,28 +160,30 @@ Pode confirmar este reembolso?</value>
     <value>Min:</value>
   </data>
   <data name="OverDueInterest.Text" xml:space="preserve">
-    <value>Os juros vencidos</value>
+    <value>Juros vencidos</value>
   </data>
   <data name="OverDuePrincipall.Text" xml:space="preserve">
-    <value>O capital vencido</value>
+    <value>Capital vencido</value>
   </data>
   <data name="PastDueDegradationNeedful.Text" xml:space="preserve">
-    <value>Atenção, este empréstimo está atrasado.  O OpenCBS precisa de actualizar o razão geral antes de prosseguir. Quer continuar?</value>
+    <value>Atenção, este empréstimo está atrasado.  O OpenCBS precisa de actualizar o livro razão geral antes de prosseguir. Quer continuar?</value>
   </data>
   <data name="Penalty.Text" xml:space="preserve">
-    <value>Os juros de moura</value>
+    <value>Juros de mora</value>
   </data>
   <data name="Voucher.Text" xml:space="preserve">
-    <value>O comprovante</value>
+    <value>Comprovativo</value>
   </data>
   <data name="WireTransfer.Text" xml:space="preserve">
-    <value>A transferência telegrafica</value>
+    <value>Transferência electrónica</value>
   </data>
   <data name="Withdrawal.Text" xml:space="preserve">
-    <value>O levantamento</value>
+    <value>Levantamento</value>
   </data>
   <data name="WriteOffDegradationNeedful.Text" xml:space="preserve">
-    <value>Atenção, este empréstimo está atrasado (deveria 
-ser abatido). O OpenCBS precisa de actualizar o razão geral antes de prosseguir. Quer continuar?</value>
+    <value>Atenção, este empréstimo está atrasado (deveria ser cancelado). O OpenCBS precisa de actualizar o livro razão geral antes de prosseguir. Quer continuar?</value>
+  </data>
+  <data name="Savings.Text" xml:space="preserve">
+    <value>Poupanças</value>
   </data>
 </root>
