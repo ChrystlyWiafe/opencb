@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -125,10 +125,10 @@
     <value>127, 20</value>
   </data>
   <data name="checkBoxShowDeletedProduct.Text" xml:space="preserve">
-    <value>Mostre apagados</value>
+    <value>Produtos apagados</value>
   </data>
   <data name="buttonAddPackage.Text" xml:space="preserve">
-    <value>Adicione</value>
+    <value>Adicionar</value>
   </data>
   <data name="buttonDeletePackage.Text" xml:space="preserve">
     <value>Apagar</value>
@@ -143,7 +143,7 @@
     <value>Taxa de juro</value>
   </data>
   <data name="frequencyHeader.Text" xml:space="preserve">
-    <value>Freqüência</value>
+    <value>Frequência</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -744,6 +744,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Produtos</value>
+    <value>Produtos de crédito</value>
   </data>
 </root>
