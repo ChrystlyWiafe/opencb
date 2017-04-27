@@ -251,9 +251,6 @@
   <data name="extra_amount_2.Width" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
-  <metadata name="_scheduleContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="_scheduleContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 26</value>
@@ -300,9 +297,6 @@
   <data name="menuItemCopy.Text" xml:space="preserve">
     <value>Copy all to clipboard</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -411,4 +405,16 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="exchangedAmountColumn.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="exchangeRateColumn.Text" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="_scheduleContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
