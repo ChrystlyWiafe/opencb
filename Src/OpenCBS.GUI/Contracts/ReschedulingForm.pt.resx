@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,14 +121,14 @@
     <value>Cancelar</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
-    <value>Está bem</value>
+    <value>Correcto</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="interestRateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
   </data>
   <data name="interestRateLabel.Text" xml:space="preserve">
-    <value>Taxa de juros:</value>
+    <value>Nova Taxa de juros:</value>
   </data>
   <data name="startDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 16</value>
@@ -140,7 +140,7 @@
     <value>136, 16</value>
   </data>
   <data name="newInstallmentsLabel.Text" xml:space="preserve">
-    <value>Número de prestação:</value>
+    <value>Número total de prestações futuras:</value>
   </data>
   <data name="chargeInterestDuringGracePeriodCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>289, 20</value>
@@ -152,21 +152,24 @@
     <value>125, 16</value>
   </data>
   <data name="titleRescheduleContractLabel.Text" xml:space="preserve">
-    <value>Código do contrato: </value>
+    <value>Código do contracto:</value>
   </data>
   <data name="firstRepaymentOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 16</value>
   </data>
   <data name="firstRepaymentOnLabel.Text" xml:space="preserve">
-    <value>Primeiro reembolso:</value>
+    <value>Data do Primeiro reembolso:</value>
   </data>
   <data name="gracePeriodLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 16</value>
   </data>
   <data name="gracePeriodLabel.Text" xml:space="preserve">
-    <value>Período de carencia:</value>
+    <value>Período de carência:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Adicionar prestação</value>
+    <value>reprogramação do Contracto</value>
+  </data>
+  <data name="contractCodeLabel.Text" xml:space="preserve">
+    <value>Código do contracto:</value>
   </data>
 </root>
