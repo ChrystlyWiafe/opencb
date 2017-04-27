@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -576,12 +576,6 @@
   <data name="&gt;&gt;listPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 16</value>
   </data>
@@ -1285,4 +1279,73 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SweetForm, OpenCBS.GUI, Version=15.4.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="btnAssing.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonClose.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBoxAll.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderAmount.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderClient.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderCloseDate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderContract.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderCreateDate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderDate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderInstallmentType.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderInterestRate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderStartDate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbLoanOffficers.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCaption.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFrom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTo.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStripStatusLabelTotal.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderClientDistrict.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderContractId.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeaderOLB.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblContractFilter.Text" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>
