@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="And.Text" xml:space="preserve">
     <value>e</value>
   </data>
   <data name="Balance.Text" xml:space="preserve">
-    <value>O saldo</value>
+    <value>Saldo</value>
   </data>
   <data name="BasedOn.Text" xml:space="preserve">
     <value>Baseado em</value>
@@ -133,78 +133,81 @@
     <value>Diário</value>
   </data>
   <data name="Deposit.Text" xml:space="preserve">
-    <value>O depósito</value>
+    <value>Depósito</value>
   </data>
   <data name="EndOfDay.Text" xml:space="preserve">
-    <value>O fim do dia</value>
+    <value>Fim do dia</value>
   </data>
   <data name="EndOfMonth.Text" xml:space="preserve">
-    <value>O fim do mês</value>
+    <value>Fim do mês</value>
   </data>
   <data name="EndOfWeek.Text" xml:space="preserve">
-    <value>O fim de semana</value>
+    <value>Fim da semana</value>
   </data>
   <data name="EndOfYear.Text" xml:space="preserve">
-    <value>O fim do ano</value>
+    <value>Fim do ano</value>
   </data>
   <data name="EntryFees.Text" xml:space="preserve">
-    <value>As joías</value>
+    <value>Comissões de entrada</value>
   </data>
   <data name="InitialAmount.Text" xml:space="preserve">
-    <value>A quantia inicial</value>
+    <value>Montante inicial</value>
   </data>
   <data name="InterestAccrualFrequency.Text" xml:space="preserve">
-    <value>A frequência da acumulação de juros</value>
+    <value>Frequência do acréscimo de juros</value>
   </data>
   <data name="InterestBase.Text" xml:space="preserve">
-    <value>O base de dados de juros</value>
+    <value>Base de juros</value>
   </data>
   <data name="InterestFrequency.Text" xml:space="preserve">
-    <value>A frequência de juros</value>
+    <value>Frequência dos juros</value>
   </data>
   <data name="InterestRate.Text" xml:space="preserve">
-    <value>A taxa de juros</value>
+    <value>Taxa de juros</value>
   </data>
   <data name="MinimalAmount.Text" xml:space="preserve">
-    <value>A quantia mínima</value>
+    <value>Montante mínimo</value>
   </data>
   <data name="ModifiSavingProduct.Text" xml:space="preserve">
-    <value>A cadernata modificada</value>
+    <value>Produto de caderneta de poupança modificada</value>
   </data>
   <data name="ModifiSTDP.Text" xml:space="preserve">
-    <value>O depósito de prazo modificado</value>
+    <value>Produto de depósito a prazo modificado</value>
   </data>
   <data name="Monthly.Text" xml:space="preserve">
-    <value>mensal</value>
+    <value>Mensal</value>
   </data>
   <data name="NumberofPeriods.Text" xml:space="preserve">
-    <value>O número de períodos</value>
+    <value>Número de períodos</value>
   </data>
   <data name="Periodicity.Text" xml:space="preserve">
     <value>Periodicidade</value>
   </data>
   <data name="SaveSavingProduct.Text" xml:space="preserve">
-    <value>A cadernata de poupança salvada</value>
+    <value>Produto caderneta de poupança guardada</value>
   </data>
   <data name="SaveSTDP.Text" xml:space="preserve">
-    <value>O produto de depósito a prazo salvado</value>
+    <value>Produto de depósito a prazo guardado</value>
   </data>
   <data name="SavingBookProduct.Text" xml:space="preserve">
-    <value>O produto da caderneta de poupança</value>
+    <value>Produto de caderneta de poupança</value>
   </data>
   <data name="TermDepositProduct.Text" xml:space="preserve">
-    <value>O produto de depósito a prazo</value>
+    <value>Produto de depósito a prazo</value>
   </data>
   <data name="Transfer.Text" xml:space="preserve">
-    <value>A transferência</value>
+    <value>Transferência</value>
   </data>
   <data name="Weekly.Text" xml:space="preserve">
     <value>Semanal</value>
   </data>
   <data name="Withdrawing.Text" xml:space="preserve">
-    <value>O levantamento</value>
+    <value>Levantamento</value>
   </data>
   <data name="Yearly.Text" xml:space="preserve">
     <value>Anual</value>
+  </data>
+  <data name="DeleteConfirmation.Text" xml:space="preserve">
+    <value>Quer mesmo apagar o produto de poupança seleccionado?</value>
   </data>
 </root>
