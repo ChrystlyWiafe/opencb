@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,12 +112,11 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
@@ -125,36 +124,35 @@
     <value>De:</value>
   </data>
   <data name="lblTo.Text" xml:space="preserve">
-    <value>à:</value>
+    <value>A</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Promotor:</value>
+    <value>Subordinado</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="chkShowDelinquentLoans.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 20</value>
   </data>
   <data name="chkShowDelinquentLoans.Text" xml:space="preserve">
-    <value>Mostrar deliquentes</value>
+    <value>Mostrar crédito em incumprimento</value>
   </data>
   <data name="labelDisbursedIn.Text" xml:space="preserve">
-    <value>Desembolso:</value>
+    <value>Desembolso em:</value>
   </data>
   <data name="labelShowIn.Text" xml:space="preserve">
-    <value>Mostrar:</value>
+    <value>Mostrar em:</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Fixas de reembolso</value>
+    <value>Folha de recolha de reembolso</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Nome da sucursal
-</value>
+    <value>Nome da sucursal</value>
   </data>
   <data name="btnOk.Text" xml:space="preserve">
-    <value>Está bem 
-</value>
+    <value>Correcto</value>
   </data>
 </root>
