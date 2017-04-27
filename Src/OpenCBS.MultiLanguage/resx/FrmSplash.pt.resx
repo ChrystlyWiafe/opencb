@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,53 +112,53 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Backup.Text" xml:space="preserve">
-    <value>banco de dados de backup</value>
+    <value>Base de dados de backup</value>
   </data>
   <data name="BackupProcess.Text" xml:space="preserve">
-    <value>Quer fazer backup do banco de dados antes  da actualização?</value>
+    <value>Quer fazer backup da base de dados antes  da actualização?</value>
   </data>
   <data name="CheckAccountingSettings.Text" xml:space="preserve">
-    <value>Verifique as configurações de contabilidade …</value>
+    <value>Verificar as configurações de contabilidade …</value>
   </data>
   <data name="CheckApplicationSettings.Text" xml:space="preserve">
-    <value>Verifique as configurações da aplicacão ...</value>
+    <value>Verificar as configurações da aplicacão …</value>
   </data>
   <data name="CheckCrystalReportInstall.Text" xml:space="preserve">
-    <value>Verifique a instalação do Crystal Report…</value>
+    <value>Verificar a instalação do Crystal Report…</value>
   </data>
   <data name="CheckDatabaseConnection.Text" xml:space="preserve">
-    <value>Verifique a conexão do banco de dados ...</value>
+    <value>Verificar a ligação à base de dados ...</value>
   </data>
   <data name="CheckDatabaseSchema.Text" xml:space="preserve">
-    <value>Confira o esquema de banco de dados ...</value>
+    <value>Verificar o esquema da base de dados ...</value>
   </data>
   <data name="CheckDatabaseVersion.Text" xml:space="preserve">
-    <value>Verificar a versão do banco de dados ...</value>
+    <value>Verificar a versão da base de dados ...</value>
   </data>
   <data name="CheckRunningEnvironnement.Text" xml:space="preserve">
-    <value>Verifique a execução do meio ambiente ...</value>
+    <value>Verificar o funcionamento do meio ambiente ...</value>
   </data>
   <data name="CheckSQLServerConnection.Text" xml:space="preserve">
-    <value>Verifique a conexão de SQLServer ...</value>
+    <value>Verificar a ligação ao SQLServer ...</value>
   </data>
   <data name="CheckTechnicalSettings.Text" xml:space="preserve">
-    <value>Verifique as configurações técnicas …</value>
+    <value>Verificar as configurações técnicas …</value>
   </data>
   <data name="NoCrystalReportsInstalled.Text" xml:space="preserve">
-    <value>O OpenCBS determinou que não tem o
- Crystal Report no seu computador!.
-Para operacionalar o OpenCBS bem, deve instalá-lo!</value>
+    <value>OpenCBS determinou que não tem o  Crystal Report no seu computador!.
+De forma a que o OpenCBs funcione adequadamente deve instalá-lo!
+</value>
   </data>
   <data name="UpdateDetails.Text" xml:space="preserve">
-    <value>O banco de dados está sendo actualizado, aguarde até a conclusão</value>
+    <value>A base de dados está a ser actualizada, por favor aguarde até à conclusão</value>
   </data>
   <data name="UpdateFrom.Text" xml:space="preserve">
-    <value>Actualizar o banco de dados {0} para {1}</value>
+    <value>Actualizar a base de dados de {0} a {1}</value>
   </data>
 </root>
