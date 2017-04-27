@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,12 +112,42 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="operationCorrectlyEffectued.Text" xml:space="preserve">
     <value>Operação executada correctamente</value>
+  </data>
+  <data name="AccruedInterestEventsProcessing.Text" xml:space="preserve">
+    <value>Processamento de movimento de acréscimo de juros</value>
+  </data>
+  <data name="AccruedInterestIsBeingProcessedForContract.Text" xml:space="preserve">
+    <value>Acréscimo de juros a ser processado para o contracto</value>
+  </data>
+  <data name="Done.Text" xml:space="preserve">
+    <value>Feito</value>
+  </data>
+  <data name="LoanClosureProcessing.Text" xml:space="preserve">
+    <value>Processamento do encerramento do crédito</value>
+  </data>
+  <data name="LoanEventProcessing.Text" xml:space="preserve">
+    <value>Processamento do movimento de crédito</value>
+  </data>
+  <data name="OverdueEventsProcessing.Text" xml:space="preserve">
+    <value>Processamento de movimentos vencidos</value>
+  </data>
+  <data name="ReversalTransactionProcessing.Text" xml:space="preserve">
+    <value>Processamento de transação de reversão</value>
+  </data>
+  <data name="runClosure.Text" xml:space="preserve">
+    <value>Executar Encerramento</value>
+  </data>
+  <data name="SavingsClosureProcessing.Text" xml:space="preserve">
+    <value>Processamento de encerramento de poupança</value>
+  </data>
+  <data name="SavingsEventProcessing.Text" xml:space="preserve">
+    <value>Processamento de movimento de poupança</value>
   </data>
 </root>
