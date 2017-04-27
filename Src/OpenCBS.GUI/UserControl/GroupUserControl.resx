@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -2049,6 +2049,69 @@
   </data>
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonViewMember.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageCustomizableFields.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddGroupSponsor.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonSelectGroupSponsor.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBoxOtherOrganization.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelCommentsTypeActivity.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelCurrency1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelCurrency2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelGroupSponsor.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelOtherOrganizationAmount.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelOtherOrganizationDebts.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelOtherOrganizationName.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radioButtonBadClient.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radioButtonExperienceWithOtherOrganization.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageEconomicSituation.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageFollowUp.Text" xml:space="preserve">
+    <value />
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
