@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,18 +112,129 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Businessphone.Text" xml:space="preserve">
-    <value>O telefone de negócios</value>
+    <value>Telefone profissional</value>
   </data>
   <data name="buttonUpdate.Text" xml:space="preserve">
-    <value>actualizar</value>
+    <value>Actualizar</value>
   </data>
   <data name="Cellphone.Text" xml:space="preserve">
-    <value>celular</value>
+    <value>Telemóvel</value>
+  </data>
+  <data name="BusinessCityEmpty.Text" xml:space="preserve">
+    <value>Cidade da sede da empresa não está preenchida</value>
+  </data>
+  <data name="BusinessCountryEmpty.Text" xml:space="preserve">
+    <value>País da sede da empresa não está preenchido</value>
+  </data>
+  <data name="comboBoxTypeOfActivity.Text" xml:space="preserve">
+    <value>Tipo de Actividade</value>
+  </data>
+  <data name="DateOfBirthEmpty.Text" xml:space="preserve">
+    <value>A data de nascimento não está preenchida</value>
+  </data>
+  <data name="EconomicActivityEmpty.Text" xml:space="preserve">
+    <value>A actividade económica não está preenchida</value>
+  </data>
+  <data name="ExperienceEmpty.Text" xml:space="preserve">
+    <value>A experiência não está preenchida</value>
+  </data>
+  <data name="HouseSizeEmpty.Text" xml:space="preserve">
+    <value>O tamanho da habitação não está preenchido</value>
+  </data>
+  <data name="HouseTimeLivingInEmpty.Text" xml:space="preserve">
+    <value>Há quanto tempo vive na habitação não está preenchido </value>
+  </data>
+  <data name="IdentificationDataEmpty.Text" xml:space="preserve">
+    <value>Dados de identificação não estão preenchidos</value>
+  </data>
+  <data name="labelAmountAndCycleCaracteristics.Text" xml:space="preserve">
+    <value>Características da quantia e ciclo</value>
+  </data>
+  <data name="labelAmountBeetweenCycleCaracteristics.Text" xml:space="preserve">
+    <value>Características da quantia entre ciclo</value>
+  </data>
+  <data name="LandPlotSizeEmpty.Text" xml:space="preserve">
+    <value>Tamanho do terreno não está preenchido</value>
+  </data>
+  <data name="LivestockKindOfAnimalEmpty.Text" xml:space="preserve">
+    <value>O tipo de gado não está preenchido</value>
+  </data>
+  <data name="LivestockNumberEmpty.Text" xml:space="preserve">
+    <value>Número de cabeças de gado não está preenhido</value>
+  </data>
+  <data name="messageBoxErrors.Text" xml:space="preserve">
+    <value>Mensagem de erro</value>
+  </data>
+  <data name="messageBoxPersonSaved.Text" xml:space="preserve">
+    <value>Mensagem de Pessoa guardada</value>
+  </data>
+  <data name="MonthlyExpenditureEmpty.Text" xml:space="preserve">
+    <value>Despesa mensal não está preenchida</value>
+  </data>
+  <data name="MonthlyIncomeEmpty.Text" xml:space="preserve">
+    <value>Rendimento mensal não está preenchido</value>
+  </data>
+  <data name="NameEmpty.Text" xml:space="preserve">
+    <value>O nome não está preenchido</value>
+  </data>
+  <data name="OtherOrganizationNameEmpty.Text" xml:space="preserve">
+    <value>Nome de outra organização não está preenchido</value>
+  </data>
+  <data name="PrivateAddressEmpty.Text" xml:space="preserve">
+    <value>Endereço particular não está preenchido</value>
+  </data>
+  <data name="PrivateCityEmpty.Text" xml:space="preserve">
+    <value>Cidade particular não está preenchida</value>
+  </data>
+  <data name="PrivateCountryEmpty.Text" xml:space="preserve">
+    <value>País particular não está preenchido</value>
+  </data>
+  <data name="SexEmpty.Text" xml:space="preserve">
+    <value>Sexo/ Género não está preenchido</value>
+  </data>
+  <data name="sexF.Text" xml:space="preserve">
+    <value>Sexo/ género</value>
+  </data>
+  <data name="sexM.Text" xml:space="preserve">
+    <value>Sexo/ género</value>
+  </data>
+  <data name="textBoxDateOfBirth.Text" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="textErrorDateOfBirthIsEmpty.Text" xml:space="preserve">
+    <value>A data de nascimento não está preenchida</value>
+  </data>
+  <data name="textErrorDistrictIsEmpty.Text" xml:space="preserve">
+    <value>O distrito não está preenchido</value>
+  </data>
+  <data name="textErrorEconomicActivityIsEmpty.Text" xml:space="preserve">
+    <value>A actividade económica não está preenchida</value>
+  </data>
+  <data name="textErrorExperienceIsEmpty.Text" xml:space="preserve">
+    <value>A experiência não está preenchida</value>
+  </data>
+  <data name="textErrorIdDataIsEmpty.Text" xml:space="preserve">
+    <value>Os dados de ID não estão preenchidos</value>
+  </data>
+  <data name="textErrorMonthlyExpenditureIsEmpty.Text" xml:space="preserve">
+    <value>A despesa mensal não está preenchida</value>
+  </data>
+  <data name="textErrorMonthlyIncomeIsEmpty.Text" xml:space="preserve">
+    <value>O rendimento mensal não está preenchido</value>
+  </data>
+  <data name="textErrorNameIsEmpty.Text" xml:space="preserve">
+    <value>O nome não está preenchido</value>
+  </data>
+  <data name="textErrorSexIsEmpty.Text" xml:space="preserve">
+    <value>O sexo/ género não está preenchido</value>
+  </data>
+  <data name="textErrorVillageIsEmpty.Text" xml:space="preserve">
+    <value>A cidade não está preenchida</value>
   </data>
 </root>
