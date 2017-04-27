@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelStartPosition.Size" type="System.Drawing.Size, System.Drawing">
@@ -128,13 +128,13 @@
     <value>64, 17</value>
   </data>
   <data name="checkBoxAlignRight.Text" xml:space="preserve">
-    <value>A direita</value>
+    <value>Alinhar à direita</value>
   </data>
   <data name="ColumnOriginalValue.HeaderText" xml:space="preserve">
-    <value>Original</value>
+    <value>Valor Original</value>
   </data>
   <data name="ColumnReplacementValue.HeaderText" xml:space="preserve">
-    <value>Substituição</value>
+    <value>Valor de Substituição</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
