@@ -133,7 +133,7 @@
     <value>Deve lançar um valor de montante decimal positivo</value>
   </data>
   <data name="AccountExceptionIsUsed.Text" xml:space="preserve">
-    <value>Não pode apagar uma conta que tem movimentos</value>
+    <value>Não pode apagar uma conta que tem transacções</value>
   </data>
   <data name="AccountExceptionLabelIsNull.Text" xml:space="preserve">
     <value>A nova etiqueta não está preenchida</value>
@@ -172,10 +172,10 @@
     <value>Não tem permissão para realizar esta {0} acção</value>
   </data>
   <data name="AddEntryFeeCycleError.Text" xml:space="preserve">
-    <value>O ciclo que está a lançar já existe.</value>
+    <value>A conta da poupança obrigatória não está activa!</value>
   </data>
   <data name="AgeIsNotInRange.Text" xml:space="preserve">
-    <value>A idade do cliente deve estar entre {0} e {1} anos</value>
+    <value>O ciclo que inseriu já existe.</value>
   </data>
   <data name="AgioFeesIsInvalid.Text" xml:space="preserve">
     <value>O valor das taxas de ágio não está preenchido ou é inválido.
@@ -186,20 +186,19 @@ Deve completar com "min" e "max" ou "valor". Se não quiser usar ágios, d
     <value>Este contrato foi totalmente reembolsado</value>
   </data>
   <data name="AmountCanNotBeZero.Text" xml:space="preserve">
-    <value>O valor montante não pode ser zero.</value>
+    <value>O valor do montante não pode ser zero.</value>
   </data>
   <data name="BadFundingLineID.Text" xml:space="preserve">
     <value>A identificação da linha de financiamento é inválida.</value>
   </data>
   <data name="BalanceOnCurrentSavingAccount" xml:space="preserve">
-    <value>O saldo corrente nas contas de poupança de {0} 
+    <value>O saldo na conta de poupança actual de {0} 
 abrange as quantidades de {1} de {2}empréstimo (s). 
-O valor máximo que você pode retirar é {3}</value>
+O valor máximo que você pode retirar é {3}
+</value>
   </data>
   <data name="BalanceOnCurrentSavingAccountForTransfer" xml:space="preserve">
-    <value>O saldo corrente na conta de poupança de {0} 
-abrange as quantidades de {1} de {2}empréstimo (s). 
-O valor máximo que pode transferir é {3}</value>
+    <value>O saldo na conta de poupança actual de {0} cobre as quantias de {1} para {2} crédito(s). O montante máximo que pode transferir é {3}</value>
   </data>
   <data name="BirthDateIsWrong.Text" xml:space="preserve">
     <value>A data de nascimento do cliente é inválida</value>
@@ -211,16 +210,16 @@ O valor máximo que pode transferir é {3}</value>
     <value>O endereço da sucursal não está preenchido</value>
   </data>
   <data name="BranchCodeIsEmpty.Text" xml:space="preserve">
-    <value>O código da agência bancária não está preenchida</value>
+    <value>O código da sucursal não está preenchido</value>
   </data>
   <data name="BranchIsEmpty" xml:space="preserve">
-    <value>Tem que escolher um sucursal para o cliente.</value>
+    <value>Tem que seleccionar uma sucursal para o cliente.</value>
   </data>
   <data name="BranchNameIsEmpty.Text" xml:space="preserve">
-    <value>O nome da agência bancária não está preenchida</value>
+    <value>O nome da sucursal não está preenchido</value>
   </data>
   <data name="BranchSameCodeException" xml:space="preserve">
-    <value>Existe uam sucursal com este código.</value>
+    <value>Existe uma sucursal com este código.</value>
   </data>
   <data name="BranchSameNameException" xml:space="preserve">
     <value>Existe uma sucursal com este nome.</value>
@@ -281,12 +280,9 @@ Deve completar "min" e "max"
     <value>A conta da poupança obrigatória não está activa!</value>
   </data>
   <data name="CompulsorySavingSettingsEmpty.Text" xml:space="preserve">
-    <value>As definições de poupança obrigatória não estão 
-preenchidas ou incorrectas.
-Deve completar ou "min" e "Max" ou 
-"valor". Se  não quiser usar poupança
-obrigatória, ajuste o "valor" para 0
-(Garantias guia)</value>
+    <value>As configurações de poupança obrigatória não estão preenchidas ou estão incorrectas. 
+Deve completar com "min" e "max" ou "valor". Se não quiser usar poupanças obrigatórias, defina "valor" para 0 (guia Garantias)
+</value>
   </data>
   <data name="ContractExceptionAmountIsNull.Text" xml:space="preserve">
     <value>O valor do contracto não está preenchido</value>
@@ -322,7 +318,7 @@ obrigatória, ajuste o "valor" para 0
     <value>A comissão para a 'originação' não está preenchida</value>
   </data>
   <data name="ContractExceptionEventCommentIsEmpty.Text" xml:space="preserve">
-    <value>O comentário do evento não está preenchido!</value>
+    <value>O comentário ao movimento não está preenchido!</value>
   </data>
   <data name="ContractExceptionEventNotCancelable.Text" xml:space="preserve">
     <value>Não é possível apagar este movimento</value>
@@ -365,7 +361,7 @@ A taxa de juros não pode ser nulo
     <value>Por favor, escolha moeda para produto de crédito</value>
   </data>
   <data name="CurrencyIsEmptyForSavingProduct.Text" xml:space="preserve">
-    <value>Por favor,selecione uma moeda pelo produto das poupanças</value>
+    <value>Por favor, seleccionar uma moeda para o produto de poupança</value>
   </data>
   <data name="CurrencyMisMatch.Text" xml:space="preserve">
     <value>A moeda da linha de financiamento não corresponde à moeda do produto de crédito</value>
@@ -380,13 +376,10 @@ A taxa de juros não pode ser nulo
     <value>Faltam alguns campos obrigatórios </value>
   </data>
   <data name="CycleParametersAreNotFilled.Text" xml:space="preserve">
-    <value>É necessário lançar pelo menos um
-parâmetro para cada objecto ciclo.  ????</value>
+    <value>É necessário inserir pelo menos um parâmetro para cada objecto do ciclo.</value>
   </data>
   <data name="CycleParametersAreWrong.Text" xml:space="preserve">
-    <value>Alguns dos parâmetros do ciclo foram
-preenchidos incorrectamente. Por favor,
-verifique que os valores Min e Max foram preenchidos correctamente.</value>
+    <value>Alguns dos parâmetros do ciclo foram preenchidos incorrectamente. Por favor, verifique se os valores Min e Max foram preenchidos correctamente.</value>
   </data>
   <data name="DecimalAmount.Text" xml:space="preserve">
     <value>Deve usar uma moeda sem centavos.  A quantia usada não pode incluir centavos.</value>
@@ -434,19 +427,16 @@ verifique que os valores Min e Max foram preenchidos correctamente.</value>
     <value>A lista de campos não está preenchida!</value>
   </data>
   <data name="FieldIsMandatory.Text" xml:space="preserve">
-    <value>Alguns campos são de preenchimento
-obrigatório!</value>
+    <value>É obrigatório um campo personalizável antes de guardar</value>
   </data>
   <data name="FieldIsNotUnique.Text" xml:space="preserve">
-    <value>Alguns campos não são únicos e valor já existe!</value>
+    <value>Alguns campos não são únicos e o valor já existe!</value>
   </data>
   <data name="GracePeriodOfLateFeesIsNotFilled.Text" xml:space="preserve">
-    <value>O período de carência para juros de moura por atraso 
-não está preenchido</value>
+    <value>O período de carência para juros de mora não está preenchido </value>
   </data>
   <data name="GuarantorMaxLoansCoveredExceed.Text" xml:space="preserve">
-    <value>Um fiador não pode garantir mais de {0} 
-empréstimos</value>
+    <value>Um fiador não pode assumir mais do que {0} créditos </value>
   </data>
   <data name="InstallmentExceptionInstallmentAlreadyRepaid.Text" xml:space="preserve">
     <value>Essa prestação já foi paga</value>
@@ -462,12 +452,11 @@ empréstimos</value>
   </data>
   <data name="InsuranceBadlyFilled.Text" xml:space="preserve">
     <value>Os valores de seguro de crédito estão errados. 
-Por favor, verifique e tente novamente.</value>
+Por favor, verifique e tente novamente.
+</value>
   </data>
   <data name="LoanHasNoCompulsorySavingsError.Text" xml:space="preserve">
-    <value>A conta de poupança obrigatória é necessária 
-para este empréstimo, por favor, faça a
-configuração manualmente.</value>
+    <value>É necessária uma conta poupança obrigatória para este crédito, por favor configure-a manualmente. </value>
   </data>
   <data name="LoanScaleTableMax.Text" xml:space="preserve">
     <value>Por favor, faça o lançamento do valor máximo para a tabela de empréstimo.</value>
@@ -482,26 +471,25 @@ configuração manualmente.</value>
     <value>A data da validação pelo CC é posterior à data esperada de desembolso. Por favor, altere uma dessas duas datas </value>
   </data>
   <data name="LOCAmountHaveBeenFilledIncorrectly.Text" xml:space="preserve">
-    <value>O valor sob LOC não está preenchida ou incorreto.
-Deve completar ou "min" e "Max" ou 
-"valor". (Linha de guia de Crédito)</value>
+    <value>O valor sob LOC não está preenchido ou está incorrecto.
+Deve completar com "min" e "Max" ou "valor". (guia Linha de Crédito) 
+</value>
   </data>
   <data name="LOCFieldsAreNotFilled.Text" xml:space="preserve">
-    <value>Alguns campos na linha de guia de crédito 
-não estão preenchidos ou incorretos.
-Deve completar ou "min" e "Max" ou 
-"quantia". (Linha de guia de Crédito)</value>
+    <value>Alguns campos na guia de linha de crédito não estão preenchidos ou estão incorrectos. 
+Deve completar com "min" e "Max" ou "valor". (guia Linha de Crédito) 
+</value>
   </data>
   <data name="LOCMaturityHaveBeenFilledIncorrectly.Text" xml:space="preserve">
-    <value>A trancha de vencida não está preenchida ou incorreta.
-Deve completar ou "min" e "Max" ou 
-"quantia". (Guia da linha de crédito).</value>
+    <value>A maturidade da prestação não está preenchida ou está incorrecta.
+Deve completar com "min" e "Max" ou "valor". (guia Linha de Crédito) 
+</value>
   </data>
   <data name="ManualEntrySameAccount.Text" xml:space="preserve">
     <value>As contas são iguais</value>
   </data>
   <data name="MaturityCanNotBeZero.Text" xml:space="preserve">
-    <value>Número de prestações não pode ser zero.</value>
+    <value>O número de prestações não pode ser zero.</value>
   </data>
   <data name="MaximumCurrencyLimitReached.Text" xml:space="preserve">
     <value>OpenCBS permite apenas até 2 moedas. Não pode adicionar mais</value>
@@ -510,8 +498,9 @@ Deve completar ou "min" e "Max" ou 
     <value>O campo deve ser menor do que o máximo ou maior do que o mínimo</value>
   </data>
   <data name="NumberFieldIsNotANumber.Text" xml:space="preserve">
-    <value>O campo personalizado do tipo de número
-contém símbolos impróprios.</value>
+    <value>O campo personalizado do tipo de número contém símbolos impróprios. O formato esperado é 0,0.
+
+</value>
   </data>
   <data name="OpenCbsBookingExceptionDebitAndCreditAccountAreIdentical.Text" xml:space="preserve">
     <value>As contas de débito e de crédito não podem</value>
@@ -876,9 +865,7 @@ Deve completar com "min" e "max"  ou "quantia". Se não quiser usar o per
     <value>Um outro tipo de prestação com os mesmos valores já existe</value>
   </data>
   <data name="PackageExceptionInstallmentTypeValuesAreUsed.Text" xml:space="preserve">
-    <value>Este tipo de prestação não pode ser
-apagado porque ele é usado para  
-empréstimo ou produto de poupança!</value>
+    <value>Este tipo de prestação não pode ser apagado porque é usado para produtos de crédito ou poupanças!</value>
   </data>
   <data name="PackageExceptionInterestRateGroupBadlyInformed.Text" xml:space="preserve">
     <value>Deve completar com "min" e "max" ou "valor". A taxa de juros não pode ser nula (guia Parâmetros Principais).</value>
@@ -912,7 +899,7 @@ Deve completar ou "min" e "max" ou "valor". O número de prestações não 
     <value>A conta mestra não tem o mesmo tipo</value>
   </data>
   <data name="PeriodicityIsNotSet.Text" xml:space="preserve">
-    <value>A frequência de lançar para um deposito de prazo ainda nao está estabelecida</value>
+    <value>A frequência de lançamento para um depósito a prazo ainda nao está definida</value>
   </data>
   <data name="PersonalBankBicCodeIsWrong.Text" xml:space="preserve">
     <value>O BIC do pessoal está errado (guia Bancos)</value>
@@ -924,11 +911,10 @@ Deve completar ou "min" e "max" ou "valor". O número de prestações não 
     <value>A pessoa já está noutro grupo</value>
   </data>
   <data name="PicturesNotAllowed" xml:space="preserve">
-    <value>As manipulações de fotografias não são
-permitidos no banco de dados</value>
+    <value>A manipulação de imagens não é permitida nesta base de dados</value>
   </data>
   <data name="PostingFrequencyIsInvalid.Text" xml:space="preserve">
-    <value>O número de prestações não é correto.</value>
+    <value>O número de prestações não está correcto.</value>
   </data>
   <data name="ProjectExceptionAimIsNull.Text" xml:space="preserve">
     <value>O objectivo do projeto não está preenchido</value>
@@ -989,7 +975,7 @@ Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de 
     <value>Não é possível fazer um reembolso antes da data de desembolso</value>
   </data>
   <data name="RepaymentBeforeLastEventDate.Text" xml:space="preserve">
-    <value>Nao pode reembolsar antes do dia de reembolso último</value>
+    <value>Nao pode reembolsar antes da data do último  reembolso</value>
   </data>
   <data name="ReportProcedureSourceEmpty.Text" xml:space="preserve">
     <value>A fonte SQL para o relatório não está definido
@@ -1116,8 +1102,7 @@ Deve completar "min" e "max". O valor do depósito deve ser uma quantia posit
 </value>
   </data>
   <data name="SavingProductDuplicateProductCode.Text" xml:space="preserve">
-    <value>Um produto de poupança com o código de 
-contrato já existe (parâmetros guia Principal)</value>
+    <value>Um produto de poupança com o mesmo código de contracto já existe (guia Parâmetros Principais) </value>
   </data>
   <data name="SavingProductDuplicateProductName.Text" xml:space="preserve">
     <value>Este nome já existe (Parâmetros principais)</value>
@@ -1188,34 +1173,34 @@ Deve completar "min" e "max". O montante inicial não pode ser nulo (Parâme
 </value>
   </data>
   <data name="SavingProductInterBranchFlatTransferFeesIsInvalid" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência entre sucursais não está preenchido ou está incorreto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterBranchFlatTransferFeesMinIsInvalid" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais do bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência entre sucursais não está preenchido ou está incorreto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterBranchFlatTransferFeesMinMaxIsInvalid" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência entre sucursais não está preenchido ou está incorreto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterBranchRateTransferFeesIsInvalid" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais do bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência entre sucursais não está preenchido ou está incorreto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterBranchRateTransferFeesMinIsInvalid" xml:space="preserve">
-    <value>O valor das taxas de transferência entre sucursais  bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+    <value>O valor das taxas de transferência entre sucursais não está preenchido ou está incorreto.
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterBranchRateTransferFeesMinMaxIsInvalid" xml:space="preserve">
     <value>O valor das taxas de transferência entre sucursais  bancárias não está preenchido ou está incorreto.
-Deve completar ou "min" e "max" ou 
-o "valor". Se não quiser usar as taxas de transferência, defina o "valor" para 0 (Transações guia)</value>
+Deve completar com "min" e "max" ou "valor". Se não quiser usar taxas de transferência, defina "valor" para 0 (guia Transacções)
+</value>
   </data>
   <data name="SavingProductInterestBaseIncompatibleFrequency.Text" xml:space="preserve">
     <value>A base dos juros é incompatível com a frequência dos juros.</value>
@@ -1336,10 +1321,10 @@ Deve completar "min" e "max". (guia Transacções)
     <value>O montante do depósito ou do equilíbrio fora de alcance.</value>
   </data>
   <data name="SavingsEventCannotBeCanceled.Text" xml:space="preserve">
-    <value>Este lançamento de poupança não pode ser cancelado!</value>
+    <value>Este movimento de poupança não pode ser cancelado!</value>
   </data>
   <data name="SavingsEventCommentIsEmpty.Text" xml:space="preserve">
-    <value>O comentário do lançamento não está preenchido!</value>
+    <value>O comentário ao movimento não está preenchido!</value>
   </data>
   <data name="SavingTransferAmountIsInvalid.Text" xml:space="preserve">
     <value>O montante da transferência não está preenchido ou está incorrecto.
@@ -1356,13 +1341,13 @@ Deve completar "min" e "max".  (guia Transacções)
     <value>As taxas de levantamento são inválidas</value>
   </data>
   <data name="ScoringQuestionNameException" xml:space="preserve">
-    <value>O campo do nome da pergunta não está preenchido</value>
+    <value>O campo do nome de uma pergunta não está preenchido</value>
   </data>
   <data name="sqlError.Text" xml:space="preserve">
     <value>Erro ao tentar ler ou escrever na base de dados, contacte o seu administrador de TI</value>
   </data>
   <data name="TooMuchPersonsInThisGroup.Text" xml:space="preserve">
-    <value>Deve ter um número máximos de dez pessoas {0} no grupo</value>
+    <value>Deve ter um número máximo de {0} pessoas no grupo</value>
   </data>
   <data name="TrancheAmountError.Text" xml:space="preserve">
     <value>Não pode adicionar uma prestação nova com este valor!</value>
@@ -1371,18 +1356,107 @@ Deve completar "min" e "max".  (guia Transacções)
     <value>Por favor, verificar a data da prestação!</value>
   </data>
   <data name="TransferAccountHasWrongCurrency.Text" xml:space="preserve">
-    <value>A moeda esta diferente, por favor selecionar um contracto que tem o mesmo moeda como a moeda do contrato actual</value>
+    <value>A moeda da conta alvo é diferente, por favor seleccionar um contracto com a mesma moeda que o contracto actual
+</value>
   </data>
   <data name="WrongEvent.Text" xml:space="preserve">
-    <value>É  um lançamento errado </value>
+    <value>A idade do cliente deve estar entre {0} e {1} anos</value>
   </data>
   <data name="WrongIDPattern.Text" xml:space="preserve">
     <value>O número de identificação que lançou não coincide com o padrão de ID das Configurações Gerais.</value>
   </data>
   <data name="ZeroFee.Text" xml:space="preserve">
-    <value>As comissões são nulas. Não pode desistir delas!</value>
+    <value>É  um movimento errado </value>
   </data>
   <data name="BetweenZeroAndSix.Text" xml:space="preserve">
+    <value>A entrada permitida é entre 0 e 6.</value>
+  </data>
+  <data name="LoadExtensionError.Text" xml:space="preserve">
+    <value>Ocorreu um erro ao carregar as extensões. Por favor, tente remover as extensões com problemas e reinicie o OpenCbs.
+</value>
+  </data>
+  <data name="SelectBeforeConf.Text" xml:space="preserve">
+    <value>Deve seleccionar uma transacção antes de confirmar a operação.</value>
+  </data>
+  <data name="OpenCbsNotDeletableClosure.Text" xml:space="preserve">
+    <value>Não pode pagar esse encerramento porque as transacções foram exportadas.</value>
+  </data>
+  <data name="FieldNameCanNotContainComma.Text" xml:space="preserve">
+    <value>Não pode inserir vírgula no campo nome ou no campo descrição. Por favor remova a vírgula e tente novamente.</value>
+  </data>
+  <data name="FieldLimited.Text" xml:space="preserve">
+    <value>Este campo personalizado é limitado a 300 caracteres. O texto será cortado.</value>
+  </data>
+  <data name="AccountImportIdExist.Text" xml:space="preserve">
+    <value>Alguns ids de conta do ficheiro importado já existem.</value>
+  </data>
+  <data name="AccountImportNumbersExist.Text" xml:space="preserve">
+    <value>Alguns números de conta do ficheiro importado já existem.</value>
+  </data>
+  <data name="OperationOutsideCurrentFiscalYear.Text" xml:space="preserve">
+    <value>A operação está fora do actual ano fiscal.</value>
+  </data>
+  <data name="TellerAccountIsEmpty.Text" xml:space="preserve">
+    <value>O nome do Caixa já existe, por favor renomeie.</value>
+  </data>
+  <data name="TellerNameIsExists.Text" xml:space="preserve">
+    <value>Quantias máximas e mínimas devem ser preenchidas correctamente. </value>
+  </data>
+  <data name="TellerAmountMinMaxIsInvalid.Text" xml:space="preserve">
+    <value>A sucursal não está definida. Deve criar primeiro uma nova sucursal.</value>
+  </data>
+  <data name="TellerBranchIsEmpty.Text" xml:space="preserve">
+    <value>A moeda não está definida. Deve criar primeiro uma nova moeda.</value>
+  </data>
+  <data name="TellerCurrencyIsEmpty.Text" xml:space="preserve">
+    <value>O nome do Caixa não está preenchido.</value>
+  </data>
+  <data name="TellerNameIsEmpty.Text" xml:space="preserve">
+    <value>O utilizador não está definido. Deve criar primeiro um novo utilizador.</value>
+  </data>
+  <data name="TellerUserIsEmpty.Text" xml:space="preserve">
+    <value>O utilizador tem o caixa, por favor apague ou reatribua o caixa primeiro</value>
+  </data>
+  <data name="OUE10.Text" xml:space="preserve">
+    <value>O propósito do crédito não está definido.</value>
+  </data>
+  <data name="EconomicActivityNotSet.Text" xml:space="preserve">
+    <value>A prestação actual não está paga na totalidade</value>
+  </data>
+  <data name="CurrentInstallmentIsNotFullyRepaid.Text" xml:space="preserve">
+    <value>Não pode adicionar parcela a um crédito fixo</value>
+  </data>
+  <data name="LoanIsFlatForTranche.Text" xml:space="preserve">
+    <value>Não pode adicionar mais parcelas, por favor actualize o produto!</value>
+  </data>
+  <data name="TrancheMaturityError.Text" xml:space="preserve">
+    <value>O crédito já está pago.</value>
+  </data>
+  <data name="LoanAlreadyDisbursed.Text" xml:space="preserve">
+    <value>Não pode haver duas contas com o mesmo número. Digite outro número de conta.</value>
+  </data>
+  <data name="DuplicatedAccount.Text" xml:space="preserve">
+    <value>A localização não estar por preencher.</value>
+  </data>
+  <data name="OpenCbsEmptyLocationException.Text" xml:space="preserve">
+    <value>A cidade é usada por um ou mais clientes.</value>
+  </data>
+  <data name="OpenCbsCityUsedException.Text" xml:space="preserve">
+    <value>O distrito é usado por um ou mais clientes.</value>
+  </data>
+  <data name="OpenCbsDistrictUsedException.Text" xml:space="preserve">
+    <value>Já existe caixa-forte para esta sucursal  </value>
+  </data>
+  <data name="TellerVaultExists.Text" xml:space="preserve">
+    <value>Por favor insira o código postal num formato válido.</value>
+  </data>
+  <data name="IncorrectZipCodeFormat.Text" xml:space="preserve">
+    <value>Por favor insira o telefone num formato válido.</value>
+  </data>
+  <data name="IncorrectCityPhoneFormat.Text" xml:space="preserve">
+    <value>Por favor insira o telemóvel num formato válido.</value>
+  </data>
+  <data name="IncorrectMobilePhoneFormat.Text" xml:space="preserve">
     <value>A entrada permitida é entre 0 e 6.</value>
   </data>
 </root>
