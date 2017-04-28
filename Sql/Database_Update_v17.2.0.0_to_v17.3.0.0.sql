@@ -158,7 +158,7 @@ GO
 
 IF col_length('dbo.EntryFees','account_number') IS NULL
     BEGIN
-        ALTER TABLE dbo.EntryFees ADD account_number VARCHAR(32) REFERENCES dbo.Accounts(account_number) NOT NULL
+        ALTER TABLE dbo.EntryFees ADD account_number VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
 
