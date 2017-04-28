@@ -186,7 +186,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     {
                         Debit = new Account { AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account { AccountNumber = _product.PenaltyIncomeAccountNumber },
-                        Amount = repayment.Interests.Value,
+                        Amount = repayment.Penalties.Value,
                         Description = "Repayment of penalty",
                         LoanEventId = repayment.Id
                     });
@@ -237,6 +237,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         ServicesProvider.GetInstance()
                             .GetBookingService()
                             .GetAccountBalanceByLoanId(accrual.Date, account, _loanId, _transaction);
+                    balance += accrual.Interest.Value;
 
                     list.Add(
                         new BookingEntry
