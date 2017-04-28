@@ -577,6 +577,11 @@ namespace OpenCBS.GUI.Products
                     txbCompulsoryAmountMax.Text = pack.CompulsoryAmountMax.ToString();
                 }
             }
+
+            if (pack.TaxValue.HasValue)
+            {
+                textBoxTaxValue.Text = (pack.TaxValue.Value*100.0).ToString();
+            }
         }
 
 	    private void InitializeAccounts()
@@ -632,6 +637,7 @@ namespace OpenCBS.GUI.Products
             textBoxAmount.Text = "";
             textBoxAmountMin.Text = "";
             textBoxAmountMax.Text = "";
+            textBoxTaxValue.Text = "";
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -2304,6 +2310,12 @@ namespace OpenCBS.GUI.Products
         {
             var account = comboBoxTaxOnPenaltyAccount.SelectedValue as Account;
             _product.TaxOnPenaltyAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void textBoxTaxValue_TextChanged(object sender, EventArgs e)
+        {
+            _product.TaxValue = ServicesHelper.ConvertStringToNullableDouble(textBoxTaxValue.Text, true);
             buttonSave.Enabled = true;
         }
     }

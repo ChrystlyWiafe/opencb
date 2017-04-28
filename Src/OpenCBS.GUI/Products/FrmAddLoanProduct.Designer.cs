@@ -399,8 +399,11 @@ namespace OpenCBS.GUI.Products
             this.labelMinPercGuar = new System.Windows.Forms.Label();
             this.checkBoxGuarCollRequired = new System.Windows.Forms.CheckBox();
             this.tabAccounts = new System.Windows.Forms.TabPage();
+            this.textBoxTaxValue = new System.Windows.Forms.TextBox();
             this.comboBoxTaxOnPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxPenaltyIncomeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.comboBoxAccruedPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
@@ -2184,8 +2187,11 @@ namespace OpenCBS.GUI.Products
             // tabAccounts
             // 
             resources.ApplyResources(this.tabAccounts, "tabAccounts");
+            this.tabAccounts.Controls.Add(this.textBoxTaxValue);
             this.tabAccounts.Controls.Add(this.comboBoxTaxOnPenaltyAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
+            this.tabAccounts.Controls.Add(this.label62);
+            this.tabAccounts.Controls.Add(this.label61);
             this.tabAccounts.Controls.Add(this.label60);
             this.tabAccounts.Controls.Add(this.label58);
             this.tabAccounts.Controls.Add(this.comboBoxAccruedPenaltyAccount);
@@ -2204,6 +2210,12 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.label50);
             this.tabAccounts.Name = "tabAccounts";
             // 
+            // textBoxTaxValue
+            // 
+            resources.ApplyResources(this.textBoxTaxValue, "textBoxTaxValue");
+            this.textBoxTaxValue.Name = "textBoxTaxValue";
+            this.textBoxTaxValue.TextChanged += new System.EventHandler(this.textBoxTaxValue_TextChanged);
+            // 
             // comboBoxTaxOnPenaltyAccount
             // 
             resources.ApplyResources(this.comboBoxTaxOnPenaltyAccount, "comboBoxTaxOnPenaltyAccount");
@@ -2215,6 +2227,16 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.comboBoxPenaltyIncomeAccount, "comboBoxPenaltyIncomeAccount");
             this.comboBoxPenaltyIncomeAccount.FormattingEnabled = true;
             this.comboBoxPenaltyIncomeAccount.Name = "comboBoxPenaltyIncomeAccount";
+            // 
+            // label62
+            // 
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.Name = "label62";
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.Name = "label61";
             // 
             // label60
             // 
@@ -2622,5 +2644,8 @@ namespace OpenCBS.GUI.Products
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxInterestAccruedButNotDueAccount;
         private Label label59;
         private Label label50;
+        private TextBox textBoxTaxValue;
+        private Label label61;
+        private Label label62;
     }
 }

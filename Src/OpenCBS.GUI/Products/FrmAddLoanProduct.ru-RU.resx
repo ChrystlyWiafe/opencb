@@ -1157,6 +1157,12 @@
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Поручители и залоги</value>
   </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 16</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Налоговая стоимость</value>
+  </data>
   <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 16</value>
   </data>

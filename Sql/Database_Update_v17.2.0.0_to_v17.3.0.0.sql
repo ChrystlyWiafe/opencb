@@ -215,3 +215,9 @@ IF col_length('dbo.Packages','tax_on_penalty_account') IS NULL
 		ALTER TABLE dbo.Packages ADD tax_on_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
+
+IF col_length('dbo.Packages','tax_value') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD tax_value FLOAT NULL
+    END
+GO

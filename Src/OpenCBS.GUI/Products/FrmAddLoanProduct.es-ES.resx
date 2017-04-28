@@ -1724,6 +1724,12 @@
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantías</value>
   </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Valor impositivo</value>
+  </data>
   <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 16</value>
   </data>

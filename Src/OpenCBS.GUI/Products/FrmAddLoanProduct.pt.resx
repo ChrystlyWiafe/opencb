@@ -718,6 +718,12 @@
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantias</value>
   </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Valor fiscal</value>
+  </data>
   <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 16</value>
   </data>

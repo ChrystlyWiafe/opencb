@@ -1112,6 +1112,12 @@
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garants, gages, épargne obligatoire</value>
   </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 16</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Valeur fiscale</value>
+  </data>
   <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 16</value>
   </data>
