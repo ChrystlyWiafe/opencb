@@ -590,9 +590,6 @@ namespace OpenCBS.Services
                     loanDisbursmentEvent.PaymentMethodId = method.Id;
                     CallInterceptor(new Dictionary<string, object>
                     {
-                        {"BranchId", pLoan.Project.Client.Branch.Id},
-                        {"ClientId", pLoan.Project.Client.Id},
-                        {"LoanId", pLoan.Id},
                         {"Loan", pLoan},
                         {"Event", loanDisbursmentEvent},
                         {"SqlTransaction", sqlTransaction}
@@ -600,9 +597,6 @@ namespace OpenCBS.Services
                     if (loanDisbursmentEvent.Commissions != null && loanDisbursmentEvent.Commissions.Count != 0)
                         CallInterceptor(new Dictionary<string, object>
                         {
-                            {"BranchId", pLoan.Project.Client.Branch.Id},
-                            {"ClientId", pLoan.Project.Client.Id},
-                            {"LoanId", pLoan.Id},
                             {"Loan", pLoan},
                             {
                                 "Event", new LoanEntryFeeEvent
@@ -838,9 +832,6 @@ namespace OpenCBS.Services
                     if (repayEvent.Code == "RBLE")
                         CallInterceptor(new Dictionary<string, object>
                         {
-                            {"BranchId", savedContract.Project.Client.Branch.Id},
-                            {"ClientId", savedContract.Project.Client.Id},
-                            {"LoanId", savedContract.Id},
                             {"Loan", savedContract},
                             {
                                 "Event", new BadLoanRepaymentEvent
@@ -861,9 +852,6 @@ namespace OpenCBS.Services
                         });
                     CallInterceptor(new Dictionary<string, object>
                     {
-                        {"BranchId", savedContract.Project.Client.Branch.Id},
-                        {"ClientId", savedContract.Project.Client.Id},
-                        {"LoanId", savedContract.Id},
                         {"Loan", savedContract},
                         {
                             "Event", new RepaymentEvent
@@ -1979,9 +1967,6 @@ namespace OpenCBS.Services
                         _ePs.CancelFireEvent(evnt, sqlTransaction, contract, contract.Product.Currency.Id);
                         CallInterceptor(new Dictionary<string, object>
                         {
-                            {"BranchId", contract.Project.Client.Branch.Id},
-                            {"ClientId", contract.Project.Client.Id},
-                            {"LoanId", contract.Id},
                             {"Event", evnt},
                             {"Loan", contract},
                             {"RecoveryAccount", true},
@@ -2023,9 +2008,6 @@ namespace OpenCBS.Services
                                     tempService.DeleteEvent(savingEvent);
                                     CallInterceptor(new Dictionary<string, object>
                                     {
-                                        {"BranchId", contract.Project.Client.Branch.Id},
-                                        {"ClientId", contract.Project.Client.Id},
-                                        {"LoanId", contract.Id},
                                         {"Event", savingEvent},
                                         {"Loan", contract},
                                         {"Deleted", true},
@@ -2352,9 +2334,6 @@ namespace OpenCBS.Services
 
                     CallInterceptor(new Dictionary<string, object>
                     {
-                        {"BranchId", contract.Project.Client.Branch.Id},
-                        {"ClientId", contract.Project.Client.Id},
-                        {"LoanId", contract.Id},
                         {"Loan", contract},
                         {"Event", cancelledEvent},
                         {"Deleted", true},
@@ -2510,9 +2489,6 @@ namespace OpenCBS.Services
                         _ePs.FireEvent(lve, tempLoan, sqlTransaction);
                         CallInterceptor(new Dictionary<string, object>
                             {
-                                {"BranchId", tempLoan.Project.Client.Branch.Id},
-                                {"ClientId", tempLoan.Project.Client.Id},
-                                {"LoanId", tempLoan.Id},
                                 {"Loan", tempLoan},
                                 {"Event", lve},
                                 {"SqlTransaction", sqlTransaction}

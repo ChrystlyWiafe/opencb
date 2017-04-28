@@ -28,20 +28,39 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
         public EventInterceptorService(IDictionary<string, object> parameters)
         {
-            ValidateParameters(parameters);
-            _loanId = (int) parameters["LoanId"];
-            _clientId = (int) parameters["ClientId"];
-            _branchId = (int) parameters["BranchId"];
-            _event = (CoreDomain.Events.Loan.Event) parameters["Event"];
-            _transaction = (SqlTransaction) parameters["SqlTransaction"];
-            _contractCode = parameters.ContainsKey("ContractCode") ? (string)parameters["ContractCode"] : "";
+            try
+            {
+                if (parameters.ContainsKey("Loan"))
+                {
+                    var loan = (Loan) parameters["Loan"];
+                    _product = ((Loan) parameters["Loan"]).Product;
+                    _loanId = loan.Id;
+                    _clientId = loan.Project.Client.Id;
+                    _branchId = loan.Project.Client.Branch.Id;
+                }
+                else
+                {
+                    if (!parameters.ContainsKey("Product") || !parameters.ContainsKey("LoanId") ||
+                        !parameters.ContainsKey("ClientId") || !parameters.ContainsKey("BranchId"))
+                        throw new OpenCbsException();
 
-            if (parameters.ContainsKey("Product"))
-                _product = (LoanProduct) parameters["Product"];
-            if (parameters.ContainsKey("Loan"))
-                _product = ((Loan) parameters["Loan"]).Product;
+                    _product = (LoanProduct) parameters["Product"];
+                    _loanId = (int) parameters["LoanId"];
+                    _clientId = (int) parameters["ClientId"];
+                    _branchId = (int) parameters["BranchId"];
+                }
 
-            _taxValue = _product!=null && _product.TaxValue.HasValue ? Convert.ToDecimal(_product.TaxValue.Value) : 0m;
+                _taxValue = _product != null && _product.TaxValue.HasValue
+                    ? Convert.ToDecimal(_product.TaxValue.Value)
+                    : 0m;
+                _contractCode = parameters.ContainsKey("ContractCode") ? (string) parameters["ContractCode"] : "";
+                _event = (CoreDomain.Events.Loan.Event) parameters["Event"];
+                _transaction = (SqlTransaction) parameters["SqlTransaction"];
+            }
+            catch
+            {
+                throw new OpenCbsException("Error while intialize interceptor parameters");
+            }
         }
 
         public IEnumerable<Booking> CreateBookings()
@@ -261,27 +280,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             }
 
             return list;
-        }
-
-        private void ValidateParameters(IDictionary<string,object> parameters)
-        {
-            if(!parameters.ContainsKey("LoanId"))
-                throw new OpenCbsException("Cannot find LoanId value");
-
-            if (!parameters.ContainsKey("Event"))
-                throw new OpenCbsException("Cannot find Event value");
-
-            if (!parameters.ContainsKey("SqlTransaction"))
-                throw new OpenCbsException("Cannot find SqlTransaction value");
-
-            if (!parameters.ContainsKey("Loan") && !parameters.ContainsKey("Product"))
-                throw new OpenCbsException("Cannot find Product value");
-
-            if (!parameters.ContainsKey("ClientId"))
-                throw new OpenCbsException("Cannot find ClientId value");
-
-            if (!parameters.ContainsKey("BranchId"))
-                throw new OpenCbsException("Cannot find BranchId value");
         }
     }
 }
