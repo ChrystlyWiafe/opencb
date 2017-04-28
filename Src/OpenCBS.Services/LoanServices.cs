@@ -590,6 +590,9 @@ namespace OpenCBS.Services
                     loanDisbursmentEvent.PaymentMethodId = method.Id;
                     CallInterceptor(new Dictionary<string, object>
                     {
+                        {"BranchId", pLoan.Project.Client.Branch.Id},
+                        {"ClientId", pLoan.Project.Client.Id},
+                        {"LoanId", pLoan.Id},
                         {"Loan", pLoan},
                         {"Event", loanDisbursmentEvent},
                         {"SqlTransaction", sqlTransaction}
@@ -597,6 +600,9 @@ namespace OpenCBS.Services
                     if (loanDisbursmentEvent.Commissions != null && loanDisbursmentEvent.Commissions.Count != 0)
                         CallInterceptor(new Dictionary<string, object>
                         {
+                            {"BranchId", pLoan.Project.Client.Branch.Id},
+                            {"ClientId", pLoan.Project.Client.Id},
+                            {"LoanId", pLoan.Id},
                             {"Loan", pLoan},
                             {
                                 "Event", new LoanEntryFeeEvent
@@ -832,6 +838,9 @@ namespace OpenCBS.Services
                     if (repayEvent.Code == "RBLE")
                         CallInterceptor(new Dictionary<string, object>
                         {
+                            {"BranchId", savedContract.Project.Client.Branch.Id},
+                            {"ClientId", savedContract.Project.Client.Id},
+                            {"LoanId", savedContract.Id},
                             {"Loan", savedContract},
                             {
                                 "Event", new BadLoanRepaymentEvent
@@ -852,6 +861,9 @@ namespace OpenCBS.Services
                         });
                     CallInterceptor(new Dictionary<string, object>
                     {
+                        {"BranchId", savedContract.Project.Client.Branch.Id},
+                        {"ClientId", savedContract.Project.Client.Id},
+                        {"LoanId", savedContract.Id},
                         {"Loan", savedContract},
                         {
                             "Event", new RepaymentEvent
