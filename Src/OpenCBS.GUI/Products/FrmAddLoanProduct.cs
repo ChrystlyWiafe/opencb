@@ -139,6 +139,7 @@ namespace OpenCBS.GUI.Products
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
+                item.SubItems.Add(fee.AccountNumber);
 
                 listView.Items.Add(item);
             }
@@ -2224,6 +2225,7 @@ namespace OpenCBS.GUI.Products
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
+                item.SubItems.Add(fee.AccountNumber);
                 _listViewCreditProductEntryFees.Items.Add(item);
 
                 _buttonAddEntryFee.Enabled = _listViewCreditProductEntryFees.Items.Count < 9;
