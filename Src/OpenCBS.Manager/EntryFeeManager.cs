@@ -48,6 +48,7 @@ namespace OpenCBS.Manager
                                         ,ef.[rate] IsRate
                                         ,ef.[max_sum] MaxSum
                                         ,ef.[is_deleted] IsDeleted
+                                        ,ef.[account_number] AccountNumber
 	                                    ,lpef.[cycle_id] CycleId
                                         ,lpef.[fee_index] [Index]
                                     FROM
@@ -150,6 +151,7 @@ namespace OpenCBS.Manager
                                 ,[rate] IsRate
                                 ,[max_sum] MaxSum
                                 ,[is_deleted] IsDeleted
+                                ,[account_number] AccountNumber
                             FROM
                                 [dbo].[EntryFees]
                             WHERE
