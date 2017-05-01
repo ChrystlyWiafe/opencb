@@ -773,7 +773,7 @@
     <value>Juros vencidos e não devidos</value>
   </data>
   <data name="tabAccounts.Text" xml:space="preserve">
-    <value>Contas de empréstimos</value>
+    <value>Contabilidade</value>
   </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Use valor do cíclo</value>

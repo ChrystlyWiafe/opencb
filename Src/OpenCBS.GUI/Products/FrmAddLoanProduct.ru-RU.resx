@@ -1215,7 +1215,7 @@
     <value>Начисленные, но неуплаченные проценты</value>
   </data>
   <data name="tabAccounts.Text" xml:space="preserve">
-    <value>Счета кредитов</value>
+    <value>Бухгалтерия</value>
   </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Использовать сумму цикла</value>
