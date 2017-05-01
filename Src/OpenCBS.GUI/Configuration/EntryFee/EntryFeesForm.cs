@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 using OpenCBS.GUI.UserControl;
+using OpenCBS.Services;
 using Fee = OpenCBS.CoreDomain.EntryFee;
 
 namespace OpenCBS.GUI.Configuration.EntryFee
@@ -39,6 +40,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         private void SetEntryFeesToListView()
         {
             ClearListView();
+            var accountService = ServicesProvider.GetInstance().GetAccountService();
 
             foreach (var fee in _entryFees)
             {
@@ -51,7 +53,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
-                item.SubItems.Add(fee.AccountNumber);
+                var account = accountService.SelectAccountByNumber(fee.AccountNumber);
+                item.SubItems.Add(account != null ? account.ToString() : fee.AccountNumber);
 
                 if (fee.IsDeleted)
                 {

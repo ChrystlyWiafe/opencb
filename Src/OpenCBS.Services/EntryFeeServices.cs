@@ -4,12 +4,14 @@ using System.Data;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.Manager;
+using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.Services
 {
     public class EntryFeeServices : MarshalByRefObject
     {
         private readonly EntryFeeManager _entryFeeManager;
+        private readonly AccountService _accountService;
         
         public EntryFeeServices(User user)
         {
