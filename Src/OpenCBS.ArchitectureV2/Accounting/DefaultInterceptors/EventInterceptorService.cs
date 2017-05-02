@@ -103,7 +103,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = "Commission (Registration Fee)"
+                        Description = "Commission (Registration Fee)",
+                        LoanEventId = disbursment.Id
                     });
                 }
 
@@ -112,7 +113,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     Debit = new Account { AccountNumber = _product.PrincipalAccountNumber },
                     Credit = new Account { AccountNumber = paymentMethodAccountNumber },
                     Amount = disbursment.Amount.Value,
-                    Description = "Loan disbursement"
+                    Description = "Loan disbursement",
+                    LoanEventId = disbursment.Id
                 });
             }
 
@@ -129,7 +131,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
                         Credit = new Account {AccountNumber = _product.PrincipalAccountNumber},
                         Amount = repayment.Principal.Value,
-                        Description = "Repayment of principal"
+                        Description = "Repayment of principal",
+                        LoanEventId = repayment.Id
                     });
                 }
 
@@ -140,7 +143,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
                         Credit = new Account {AccountNumber = _product.InterestIncomeAccountNumber},
                         Amount = repayment.Interests.Value,
-                        Description = "Repayment of interest"
+                        Description = "Repayment of interest",
+                        LoanEventId = repayment.Id
                     });
 
                     list.Add(new BookingEntry
@@ -148,7 +152,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account { AccountNumber = _product.TaxOnInterestsAccountNumber },
                         Credit = new Account { AccountNumber = paymentMethodAccountNumber },
                         Amount = repayment.Interests.Value*_taxValue,
-                        Description = "Tax on interest"
+                        Description = "Tax on interest",
+                        LoanEventId = repayment.Id
                     });
                 }
 
@@ -159,7 +164,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account { AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account { AccountNumber = _product.PenaltyIncomeAccountNumber },
                         Amount = repayment.Interests.Value,
-                        Description = "Repayment of penalty"
+                        Description = "Repayment of penalty",
+                        LoanEventId = repayment.Id
                     });
 
                     list.Add(new BookingEntry
@@ -167,7 +173,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account { AccountNumber = _product.TaxOnPenaltyAccountNumber },
                         Credit = new Account { AccountNumber = paymentMethodAccountNumber },
                         Amount = repayment.Interests.Value*_taxValue,
-                        Description = "Tax on penalty"
+                        Description = "Tax on penalty",
+                        LoanEventId = repayment.Id
                     });
                 }
             }
@@ -183,7 +190,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber},
                         Credit = new Account {AccountNumber = _product.InterestIncomeAccountNumber},
                         Amount = accrual.Interest.Value,
-                        Description = "Interest accrual for " + _contractCode
+                        Description = "Interest accrual for " + _contractCode,
+                        LoanEventId = accrual.Id
                     });
 
                 var installments =
@@ -207,7 +215,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber},
                             Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber},
                             Amount = balance,
-                            Description = "Interest due for " + _contractCode
+                            Description = "Interest due for " + _contractCode,
+                            LoanEventId = accrual.Id
                         });
                 }
                 else if (installment != null && installment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
@@ -220,7 +229,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber},
                             Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber},
                             Amount = amount,
-                            Description = "Interest accrual for " + _contractCode
+                            Description = "Interest accrual for " + _contractCode,
+                            LoanEventId = accrual.Id
                         });
                 }
             }
@@ -235,7 +245,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     Debit = new Account {AccountNumber = _product.AccruedPenaltyAccountNumber},
                     Credit = new Account {AccountNumber = _product.PenaltyIncomeAccountNumber},
                     Amount = accrual.Penalty.Value,
-                    Description = "Penalty accrual for " + _contractCode
+                    Description = "Penalty accrual for " + _contractCode,
+                    LoanEventId = accrual.Id
                 });
             }
 
