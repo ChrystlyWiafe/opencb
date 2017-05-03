@@ -169,6 +169,14 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@penaltyIncomeAccount", package.PenaltyIncomeAccountNumber);
             c.AddParam("@taxOnPenaltyAccount", package.TaxOnPenaltyAccountNumber);
             c.AddParam("@taxValue", package.TaxValue);
+
+            c.AddParam("@useClientAccountForPrincipal", package.UseClientAccountForPrincipal);
+            c.AddParam("@useClientAccountForIand", package.UseClientAccountForIand);
+            c.AddParam("@useClientAccountForInterestDue", package.UseClientAccountForInterestDue);
+            c.AddParam("@useClientAccountForIdnr", package.UseClientAccountForIdnr);
+            c.AddParam("@useClientAccountForInterestIncome", package.UseClientAccountForInterestIncome);
+            c.AddParam("@useClientAccountForAccruedPenalty", package.UseClientAccountForAccruedPenalty);
+            c.AddParam("@useClientAccountForPenaltyIncome", package.UseClientAccountForPenaltyIncome);
         }
 
         private void FireProductLoaded(LoanProduct product)
@@ -265,7 +273,14 @@ namespace OpenCBS.Manager.Products
                 ,[accrued_penalty_account]
                 ,[penalty_income_account]
                 ,[tax_on_penalty_account]
-                ,[tax_value])
+                ,[tax_value]
+	            ,[use_client_account_for_principal]
+	            ,[use_client_account_for_iand]
+	            ,[use_client_account_for_interest_due]
+	            ,[use_client_account_for_idnr]
+	            ,[use_client_account_for_interest_income]
+	            ,[use_client_account_for_accrued_penalty]
+	            ,[use_client_account_for_penalty_income])
                 VALUES
                 (@deleted
                 ,@name
@@ -345,7 +360,14 @@ namespace OpenCBS.Manager.Products
                 ,@accruedPenaltyAccount
                 ,@penaltyIncomeAccount
                 ,@taxOnPenaltyAccount
-                ,@taxValue)
+                ,@taxValue
+	            ,@useClientAccountForPrincipal
+	            ,@useClientAccountForIand
+	            ,@useClientAccountForInterestDue
+	            ,@useClientAccountForIdnr
+	            ,@useClientAccountForInterestIncome
+	            ,@useClientAccountForAccruedPenalty
+	            ,@useClientAccountForPenaltyIncome)
                 SELECT SCOPE_IDENTITY()";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -465,6 +487,13 @@ namespace OpenCBS.Manager.Products
                 ,[penalty_income_account] = @penaltyIncomeAccount
                 ,[tax_on_penalty_account] = @taxOnPenaltyAccount
                 ,[tax_value] = @taxValue
+	            ,[use_client_account_for_principal]=@useClientAccountForPrincipal
+	            ,[use_client_account_for_iand]=@useClientAccountForIand
+	            ,[use_client_account_for_interest_due]=@useClientAccountForInterestDue
+	            ,[use_client_account_for_idnr]=@useClientAccountForIdnr
+	            ,[use_client_account_for_interest_income]=@useClientAccountForInterestIncome
+	            ,[use_client_account_for_accrued_penalty]=@useClientAccountForAccruedPenalty
+	            ,[use_client_account_for_penalty_income]=@useClientAccountForPenaltyIncome
                 WHERE id = @packageId";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -1223,6 +1252,14 @@ namespace OpenCBS.Manager.Products
             package.TaxOnInterestsAccountNumber = r.GetString("tax_on_interests_account");
             package.TaxOnPenaltyAccountNumber = r.GetString("tax_on_penalty_account");
             package.TaxValue = r.GetNullDouble("tax_value");
+
+            package.UseClientAccountForPrincipal = r.GetBool("use_client_account_for_principal");
+            package.UseClientAccountForIand = r.GetBool("use_client_account_for_iand");
+            package.UseClientAccountForInterestDue = r.GetBool("use_client_account_for_interest_due");
+            package.UseClientAccountForIdnr = r.GetBool("use_client_account_for_idnr");
+            package.UseClientAccountForInterestIncome = r.GetBool("use_client_account_for_interest_income");
+            package.UseClientAccountForAccruedPenalty = r.GetBool("use_client_account_for_accrued_penalty");
+            package.UseClientAccountForPenaltyIncome = r.GetBool("use_client_account_for_penalty_income");
 
             return package;
         }

@@ -621,7 +621,15 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
             comboBoxPrincipalAccount.SelectedIndexChanged += comboBoxPrincipalAccount_SelectedIndexChanged;
             comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
-        }
+
+	        chClientAccountForInterestIncome.Checked = _product.UseClientAccountForInterestIncome;
+	        chClientAccountForAccruedPenalty.Checked = _product.UseClientAccountForAccruedPenalty;
+	        chClientAccountForInterestDue.Checked = _product.UseClientAccountForInterestDue;
+	        chClientAccountForPenaltyIncome.Checked = _product.UseClientAccountForPenaltyIncome;
+	        chClientAccountForPrincipal.Checked = _product.UseClientAccountForPrincipal;
+	        chClientAccountForIand.Checked = _product.UseClientAccountForIand;
+	        chClientAccoutForIdnr.Checked = _product.UseClientAccountForIdnr;
+	    }
 
         private void InitializeTextBox()
         {
@@ -2318,6 +2326,111 @@ namespace OpenCBS.GUI.Products
         private void textBoxTaxValue_TextChanged(object sender, EventArgs e)
         {
             _product.TaxValue = ServicesHelper.ConvertStringToNullableDouble(textBoxTaxValue.Text, true);
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForPrincipal_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxPrincipalAccount.Enabled = !chClientAccountForPrincipal.Checked;
+
+            var account = comboBoxPrincipalAccount.SelectedValue as Account;
+            _product.PrincipalAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxPrincipalAccount.SelectedItem = chClientAccountForPrincipal.Checked
+                ? null
+                : comboBoxPrincipalAccount.SelectedItem;
+            _product.UseClientAccountForPrincipal = chClientAccountForPrincipal.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForIand_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxInterestAccruedButNotDueAccount.Enabled = !chClientAccountForIand.Checked;
+
+            var account = comboBoxInterestAccruedButNotDueAccount.SelectedValue as Account;
+            _product.InterestAccruedButNotDueAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxInterestAccruedButNotDueAccount.SelectedItem = chClientAccountForIand.Checked
+                ? null
+                : comboBoxInterestAccruedButNotDueAccount.SelectedItem;
+            _product.UseClientAccountForIand = chClientAccountForIand.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForInterestDue_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxInterestDueAccount.Enabled = !chClientAccountForInterestDue.Checked;
+
+            var account = comboBoxInterestDueAccount.SelectedValue as Account;
+            _product.InterestDueAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxInterestDueAccount.SelectedItem = chClientAccountForInterestDue.Checked
+                ? null
+                : comboBoxInterestDueAccount.SelectedItem;
+            _product.UseClientAccountForInterestDue = chClientAccountForInterestDue.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccoutForIdnr_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxInterestDueButNoteReceivedAccount.Enabled = !chClientAccoutForIdnr.Checked;
+
+            var account = comboBoxInterestDueButNoteReceivedAccount.SelectedValue as Account;
+            _product.InterestDueButNotReceivedAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxInterestDueButNoteReceivedAccount.SelectedItem = chClientAccoutForIdnr.Checked
+                ? null
+                : comboBoxInterestDueButNoteReceivedAccount.SelectedItem;
+            _product.UseClientAccountForIdnr = chClientAccoutForIdnr.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForInterestIncome_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxInterestIncomeAccount.Enabled = !chClientAccountForInterestIncome.Checked;
+
+            var account = comboBoxInterestIncomeAccount.SelectedValue as Account;
+            _product.InterestIncomeAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxInterestIncomeAccount.SelectedItem = chClientAccountForInterestIncome.Checked
+                ? null
+                : comboBoxInterestIncomeAccount.SelectedItem;
+            _product.UseClientAccountForInterestIncome = chClientAccountForInterestIncome.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForAccruedPenalty_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxAccruedPenaltyAccount.Enabled = !chClientAccountForAccruedPenalty.Checked;
+
+            var account = comboBoxAccruedPenaltyAccount.SelectedValue as Account;
+            _product.AccruedPenaltyAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxAccruedPenaltyAccount.SelectedItem = chClientAccountForAccruedPenalty.Checked
+                ? null
+                : comboBoxAccruedPenaltyAccount.SelectedItem;
+            _product.UseClientAccountForAccruedPenalty = chClientAccountForAccruedPenalty.Checked;
+
+            buttonSave.Enabled = true;
+        }
+
+        private void chClientAccountForPenaltyIncome_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxPenaltyIncomeAccount.Enabled = !chClientAccountForPenaltyIncome.Checked;
+
+            var account = comboBoxPenaltyIncomeAccount.SelectedValue as Account;
+            _product.PenaltyIncomeAccountNumber = account != null ? account.AccountNumber : null;
+
+            comboBoxPenaltyIncomeAccount.SelectedItem = chClientAccountForPenaltyIncome.Checked
+                ? null
+                : comboBoxPenaltyIncomeAccount.SelectedItem;
+            _product.UseClientAccountForPenaltyIncome = chClientAccountForPenaltyIncome.Checked;
+
             buttonSave.Enabled = true;
         }
     }
