@@ -263,3 +263,15 @@ IF col_length('dbo.Packages','use_client_acccount_for_penalty_income') IS NULL
 		ALTER TABLE dbo.Packages ADD use_client_acccount_for_penalty_income BIT NOT NULL DEFAULT(0)
     END
 GO
+
+IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'USE_ACCOUNTING') IS NULL
+    BEGIN
+        INSERT INTO [GeneralParameters]([key], [value]) VALUES('USE_ACCOUNTING', 0)
+    END
+GO
+
+IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'PARENT_CLIENT_ACCOUNT') IS NULL
+    BEGIN
+        INSERT INTO [GeneralParameters]([key], [value]) VALUES('PARENT_CLIENT_ACCOUNT', 0)
+    END
+GO

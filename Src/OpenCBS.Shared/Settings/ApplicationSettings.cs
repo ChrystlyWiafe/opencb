@@ -102,6 +102,8 @@ namespace OpenCBS.Shared.Settings
             _defaultParamList.Add(OGeneralSettings.COPY_DATA_OF_CUSTOM_FIELD_FROM_PREVIOUS_LOAN, 0);
             _defaultParamList.Add(OGeneralSettings.USE_ACCRUALS_VALIDATION, 0);
             _defaultParamList.Add(OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON, 0);
+            _defaultParamList.Add(OGeneralSettings.USE_ACCOUNTING, 0);
+            _defaultParamList.Add(OGeneralSettings.PARENT_CLIENT_ACCOUNT, 0);
         }
 
         #region Internal stuff
@@ -295,6 +297,16 @@ namespace OpenCBS.Shared.Settings
         public bool IsShowTotalRowInSchedule
         {
             get { return GetSpecificParameter(OGeneralSettings.SHOW_TOTAL_ROW_IN_SCHEDULE).ToString() == "1"; }
+        }
+
+        public bool UseAccounting
+        {
+            get { return GetSpecificParameter(OGeneralSettings.USE_ACCOUNTING).ToString() == "1"; }
+        }
+
+        public string ParentClientAccount
+        {
+            get { return GetSpecificParameter(OGeneralSettings.PARENT_CLIENT_ACCOUNT).ToString(); }
         }
 
         public bool IsStopWriteOffPenalty
