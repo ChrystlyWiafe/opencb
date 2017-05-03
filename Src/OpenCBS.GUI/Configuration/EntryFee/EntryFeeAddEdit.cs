@@ -80,7 +80,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : _numericUpDownMax.Value;
             _entryFee.IsRate = IsRate;
             _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : _numericUpDownMaxSum.Value;
-            _entryFee.AccountNumber = account != null ? account.AccountNumber : null;
+            _entryFee.AccountNumber = account != null ? account.AccountNumber : (new Account()).ToString();
         }
 
         private void FillFieldsByEntryFee(Fee entryFee)

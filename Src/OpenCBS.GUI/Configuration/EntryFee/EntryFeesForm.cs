@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.GUI.UserControl;
 using OpenCBS.Services;
 using Fee = OpenCBS.CoreDomain.EntryFee;
@@ -54,7 +55,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
                 var account = accountService.SelectAccountByNumber(fee.AccountNumber);
-                item.SubItems.Add(account != null ? account.ToString() : fee.AccountNumber);
+                item.SubItems.Add(account != null ? account.ToString() : (new Account()).ToString());
 
                 if (fee.IsDeleted)
                 {

@@ -72,7 +72,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             return bookingEntries
                 .Where(
                     entry =>
-                        entry.Amount != 0m
+                        entry.Amount > 0m
                         && entry.Debit != null
                         && entry.Credit != null
                         && !string.IsNullOrEmpty(entry.Debit.AccountNumber)
