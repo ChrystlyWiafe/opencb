@@ -1,4 +1,5 @@
-﻿using OpenCBS.ArchitectureV2.Accounting.CommandData;
+﻿using System.Windows.Forms;
+using OpenCBS.ArchitectureV2.Accounting.CommandData;
 using OpenCBS.ArchitectureV2.Accounting.Interface.Presenter;
 using OpenCBS.ArchitectureV2.Accounting.Interface.View;
 using OpenCBS.ArchitectureV2.Accounting.Message;
@@ -6,6 +7,7 @@ using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Message;
 using OpenCBS.CoreDomain;
 using OpenCBS.Manager.Accounting;
+using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.ArchitectureV2.Accounting.Presenter
 {
@@ -70,6 +72,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
         {
             var account = _view.SelectedAccount;
             if (account == null) return;
+            var clientParentAccount = ApplicationSettings.GetInstance(User.CurrentUser.Md5).ParentClientAccount;
+
+            if (clientParentAccount == account.AccountNumber)
+            {
+                MessageBox.Show("Account is parent client account");
+                return;
+            }
             _applicationController.Execute(new DeleteAccountCommandData {Account = account});
         }
 

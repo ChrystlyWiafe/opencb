@@ -224,7 +224,10 @@ namespace OpenCBS.GUI.Configuration
                         val.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                         val.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
                         val.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
-                        val.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
+                        val.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION ||
+                        val.Key.ToString() == OGeneralSettings.SHOW_TOTAL_ROW_IN_SCHEDULE ||
+                        val.Key.ToString() == OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON ||
+                        val.Key.ToString() == OGeneralSettings.USE_ACCOUNTING)
                     {
                         listViewItem.SubItems.Add(val.Value.ToString().Trim() == "1" ? "Yes" : "No");
                     }
@@ -1210,7 +1213,10 @@ namespace OpenCBS.GUI.Configuration
                 entry.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                 entry.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
                 entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
-                entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
+                entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION ||
+                entry.Key.ToString() == OGeneralSettings.SHOW_TOTAL_ROW_IN_SCHEDULE ||
+                entry.Key.ToString() == OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON ||
+                entry.Key.ToString() == OGeneralSettings.USE_ACCOUNTING)
             {
                 groupBoxValue.Visible = true;
                 cbxValue.Visible = false;
@@ -1301,7 +1307,10 @@ namespace OpenCBS.GUI.Configuration
                      entry.Key.ToString() == OGeneralSettings.USE_DAILY_ACCRUAL_OF_PENALTY ||
                      entry.Key.ToString() == OGeneralSettings.USE_EXTERNAL_ACCOUNTING ||
                      entry.Key.ToString() == OGeneralSettings.SHOW_EXTRA_INTEREST_COLUMN ||
-                     entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION)
+                     entry.Key.ToString() == OGeneralSettings.USE_ACCRUALS_VALIDATION ||
+                     entry.Key.ToString() == OGeneralSettings.SHOW_TOTAL_ROW_IN_SCHEDULE ||
+                     entry.Key.ToString() == OGeneralSettings.SHOW_SPECIAL_FUNCTIONS_BUTTON ||
+                     entry.Key.ToString() == OGeneralSettings.USE_ACCOUNTING)
             {
                 radioButtonYes.Checked = entry.Value.ToString() == "1";
                 radioButtonNo.Checked = entry.Value.ToString() == "0";
@@ -1341,13 +1350,13 @@ namespace OpenCBS.GUI.Configuration
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if(textBoxGeneralParameterValue.Visible) CheckNumericValues();
+            if(textBoxGeneralParameterValue.Visible) CheckValues();
             ServicesProvider.GetInstance().GetGeneralSettings().UpdateParameter(entry.Key.ToString(), entry.Value);
             ServicesProvider.GetInstance().GetApplicationSettingsServices().UpdateSelectedParameter(entry.Key.ToString(), entry.Value);
             InitializeListViewGeneralParameters();
         }
 
-        private void CheckNumericValues()
+        private void CheckValues()
         {
             string entryKey = entry.Key.ToString();
             try
@@ -1565,6 +1574,26 @@ namespace OpenCBS.GUI.Configuration
                             textBoxGeneralParameterValue.Text = @"-";
                             entry.Value = null;
                             throw new GeneralSettingException(GeneralSettingEnumException.OnlyIntAndUnderscore);
+                        }
+                    }
+                }
+                else if (entryKey == OGeneralSettings.PARENT_CLIENT_ACCOUNT)
+                {
+                    if (string.IsNullOrEmpty(textBoxGeneralParameterValue.Text))
+                        entry.Value = "";
+                    else
+                    {
+                        try
+                        {
+                            var account =
+                                ServicesProvider.GetInstance().GetAccountService().SelectAccountByNumber(textBoxGeneralParameterValue.Text);
+                            if(account == null) throw new Exception("Incorrect Parent client account");
+
+                            entry.Value = textBoxGeneralParameterValue.Text;
+                        }
+                        catch(Exception ex)
+                        {
+                            throw new OpenCbsException(ex.Message);
                         }
                     }
                 }
