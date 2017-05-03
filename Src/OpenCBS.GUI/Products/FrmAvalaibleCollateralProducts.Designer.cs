@@ -56,17 +56,17 @@ namespace OpenCBS.GUI.Products
             // 
             // pnlCollateralProducts
             // 
+            resources.ApplyResources(this.pnlCollateralProducts, "pnlCollateralProducts");
             this.pnlCollateralProducts.Controls.Add(this.descriptionListView);
             this.pnlCollateralProducts.Controls.Add(this.groupBox);
-            resources.ApplyResources(this.pnlCollateralProducts, "pnlCollateralProducts");
             this.pnlCollateralProducts.Name = "pnlCollateralProducts";
             // 
             // descriptionListView
             // 
+            resources.ApplyResources(this.descriptionListView, "descriptionListView");
             this.descriptionListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameHeader,
             this.descriptionHeader});
-            resources.ApplyResources(this.descriptionListView, "descriptionListView");
             this.descriptionListView.FullRowSelect = true;
             this.descriptionListView.GridLines = true;
             this.descriptionListView.Name = "descriptionListView";
@@ -85,11 +85,11 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBox
             // 
+            resources.ApplyResources(this.groupBox, "groupBox");
             this.groupBox.Controls.Add(this.buttonEditProduct);
             this.groupBox.Controls.Add(this.checkBoxShowDeletedProduct);
             this.groupBox.Controls.Add(this.buttonAddProduct);
             this.groupBox.Controls.Add(this.buttonDeletePackage);
-            resources.ApplyResources(this.groupBox, "groupBox");
             this.groupBox.Name = "groupBox";
             this.groupBox.TabStop = false;
             // 
