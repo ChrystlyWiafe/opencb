@@ -369,7 +369,7 @@
     <value>False</value>
   </data>
   <data name="tbCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 240</value>
+    <value>211, 243</value>
   </data>
   <data name="tbCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 22</value>
@@ -436,7 +436,7 @@
     <value>0, 0</value>
   </data>
   <data name="gbFields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 280</value>
+    <value>417, 280</value>
   </data>
   <data name="gbFields.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -466,7 +466,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 11</value>
+    <value>216, 11</value>
   </data>
   <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 25</value>
@@ -499,7 +499,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 11</value>
+    <value>310, 11</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 25</value>
@@ -529,7 +529,7 @@
     <value>0, 280</value>
   </data>
   <data name="pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 48</value>
+    <value>417, 48</value>
   </data>
   <data name="pnlButtons.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -546,11 +546,14 @@
   <data name="&gt;&gt;pnlButtons.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>394, 328</value>
+    <value>417, 328</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1162,10 +1165,4 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="chkProjectCycle.Text" xml:space="preserve">
-    <value />
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>
