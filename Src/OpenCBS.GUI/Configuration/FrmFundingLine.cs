@@ -183,7 +183,7 @@ namespace OpenCBS.GUI
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (listViewFundingLine.SelectedItems != null)
+            if (listViewFundingLine.SelectedItems != null && listViewFundingLine.SelectedItems.Count > 0)
             {
                 _fundingLine = (FundingLine) listViewFundingLine.SelectedItems[0].Tag;
 
