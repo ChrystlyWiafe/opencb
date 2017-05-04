@@ -150,6 +150,9 @@
   <data name="btnDelete.Text" xml:space="preserve">
     <value>Apagar</value>
   </data>
+  <data name="gbAddUser.Text" xml:space="preserve">
+    <value>Adicionar utilizador</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbRoles.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 3</value>
@@ -189,9 +192,6 @@
   </data>
   <data name="txbPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 61</value>
-  </data>
-  <data name="gbAddUser.Text" xml:space="preserve">
-    <value>Adicionar utilizador</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

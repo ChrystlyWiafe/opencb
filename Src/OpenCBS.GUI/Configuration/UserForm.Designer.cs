@@ -95,7 +95,6 @@ namespace OpenCBS.GUI.Configuration
             // 
             // lvUsers
             // 
-            resources.ApplyResources(this.lvUsers, "lvUsers");
             this.lvUsers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colUsername,
             this.colRole,
@@ -105,6 +104,7 @@ namespace OpenCBS.GUI.Configuration
             this.colSex,
             this.colSubordinates,
             this.colPhone});
+            resources.ApplyResources(this.lvUsers, "lvUsers");
             this.lvUsers.FullRowSelect = true;
             this.lvUsers.GridLines = true;
             this.lvUsers.HideSelection = false;
@@ -188,15 +188,15 @@ namespace OpenCBS.GUI.Configuration
             // 
             // gbAddUser
             // 
-            resources.ApplyResources(this.gbAddUser, "gbAddUser");
             this.gbAddUser.Controls.Add(this.tableLayoutPanel);
+            resources.ApplyResources(this.gbAddUser, "gbAddUser");
             this.gbAddUser.Name = "gbAddUser";
             this.gbAddUser.TabStop = false;
             // 
             // tableLayoutPanel
             // 
-            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
             this.tableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
             this.tableLayoutPanel.Controls.Add(this.cmbRoles, 3, 0);
             this.tableLayoutPanel.Controls.Add(this.txbMail, 1, 5);
             this.tableLayoutPanel.Controls.Add(this.lblRole, 2, 0);
@@ -219,10 +219,10 @@ namespace OpenCBS.GUI.Configuration
             // 
             // cmbRoles
             // 
-            resources.ApplyResources(this.cmbRoles, "cmbRoles");
             this.cmbRoles.DisplayMember = "Role.RoleName";
             this.cmbRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(56)))));
+            resources.ApplyResources(this.cmbRoles, "cmbRoles");
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRoles_SelectionChangeCommitted);
             // 
@@ -234,8 +234,8 @@ namespace OpenCBS.GUI.Configuration
             // 
             // lblRole
             // 
-            resources.ApplyResources(this.lblRole, "lblRole");
             this.lblRole.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblRole, "lblRole");
             this.lblRole.Name = "lblRole";
             // 
             // txbConfirmPassword
@@ -268,14 +268,14 @@ namespace OpenCBS.GUI.Configuration
             // 
             // lblMail
             // 
-            resources.ApplyResources(this.lblMail, "lblMail");
             this.lblMail.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblMail, "lblMail");
             this.lblMail.Name = "lblMail";
             // 
             // lblPassword
             // 
-            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
             // 
             // txbPassword
@@ -287,42 +287,42 @@ namespace OpenCBS.GUI.Configuration
             // 
             // lblFirstName
             // 
-            resources.ApplyResources(this.lblFirstName, "lblFirstName");
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblFirstName, "lblFirstName");
             this.lblFirstName.Name = "lblFirstName";
             // 
             // lblLastName
             // 
-            resources.ApplyResources(this.lblLastName, "lblLastName");
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblLastName, "lblLastName");
             this.lblLastName.Name = "lblLastName";
             // 
             // lblUsername
             // 
-            resources.ApplyResources(this.lblUsername, "lblUsername");
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblUsername, "lblUsername");
             this.lblUsername.Name = "lblUsername";
             // 
             // lblSex
             // 
-            resources.ApplyResources(this.lblSex, "lblSex");
             this.lblSex.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblSex, "lblSex");
             this.lblSex.Name = "lblSex";
             // 
             // cmbSex
             // 
-            resources.ApplyResources(this.cmbSex, "cmbSex");
             this.cmbSex.DisplayMember = "Value";
             this.cmbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSex.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbSex, "cmbSex");
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.ValueMember = "Key";
             this.cmbSex.SelectionChangeCommitted += new System.EventHandler(this.cmbSex_SelectionChangeCommitted);
             // 
             // lblPhone
             // 
-            resources.ApplyResources(this.lblPhone, "lblPhone");
             this.lblPhone.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblPhone, "lblPhone");
             this.lblPhone.Name = "lblPhone";
             // 
             // txbPhone
