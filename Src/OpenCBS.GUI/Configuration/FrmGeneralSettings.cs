@@ -1648,12 +1648,12 @@ namespace OpenCBS.GUI.Configuration
                     waitingForm = new PublicHolidaysWaitingForm();
                     result = waitingForm.ShowDialog();
 
-                    ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Add((DateTime)entry.Key, (string)entry.Value);
-                    ServicesProvider.GetInstance().GetApplicationSettingsServices().AddNonWorkingDate(entry);
-                    ServicesProvider.GetInstance().GetApplicationSettingsServices().FillNonWorkingDate();
-
                     if (result == DialogResult.Yes)
                     {
+                        ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Add((DateTime)entry.Key, (string)entry.Value);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().AddNonWorkingDate(entry);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().FillNonWorkingDate();
+
                         waitingForm.UpdateInstallmentsDate();
                     }
                 }
