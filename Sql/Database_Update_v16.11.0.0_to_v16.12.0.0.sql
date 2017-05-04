@@ -120,7 +120,7 @@ GO
 --------------------------------------------------------------------------------- ENTRY FEE END -----------------------------------------------------------------------------------------
 if col_length('dbo.LoanPenaltyAccrualEvents','installment_number') IS NULL
     begin
-        alter table dbo.LoanPenaltyAccrualEvents add installment_number int not null
+        alter table dbo.LoanPenaltyAccrualEvents add installment_number int not null default(0)
     end
 GO
 
