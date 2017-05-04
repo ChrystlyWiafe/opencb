@@ -217,11 +217,11 @@ namespace OpenCBS.GUI.Products
             this.radioButtonChargeInterestNo = new System.Windows.Forms.RadioButton();
             this.radioButtonChargeInterestYes = new System.Windows.Forms.RadioButton();
             this.groupBoxType = new System.Windows.Forms.GroupBox();
-            this.clientTypeIndivCheckBox = new System.Windows.Forms.CheckBox();
             this.clientTypeVillageCheckBox = new System.Windows.Forms.CheckBox();
-            this.clientTypeCorpCheckBox = new System.Windows.Forms.CheckBox();
-            this.clientTypeGroupCheckBox = new System.Windows.Forms.CheckBox();
             this.clientTypeAllCheckBox = new System.Windows.Forms.CheckBox();
+            this.clientTypeCorpCheckBox = new System.Windows.Forms.CheckBox();
+            this.clientTypeIndivCheckBox = new System.Windows.Forms.CheckBox();
+            this.clientTypeGroupCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBoxInterestRateType = new System.Windows.Forms.GroupBox();
             this.cmbInterestRateType = new System.Windows.Forms.ComboBox();
             this.groupBoxGracePeriod = new System.Windows.Forms.GroupBox();
@@ -917,20 +917,13 @@ namespace OpenCBS.GUI.Products
             // groupBoxType
             // 
             resources.ApplyResources(this.groupBoxType, "groupBoxType");
-            this.groupBoxType.Controls.Add(this.clientTypeIndivCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeVillageCheckBox);
-            this.groupBoxType.Controls.Add(this.clientTypeCorpCheckBox);
-            this.groupBoxType.Controls.Add(this.clientTypeGroupCheckBox);
             this.groupBoxType.Controls.Add(this.clientTypeAllCheckBox);
+            this.groupBoxType.Controls.Add(this.clientTypeCorpCheckBox);
+            this.groupBoxType.Controls.Add(this.clientTypeIndivCheckBox);
+            this.groupBoxType.Controls.Add(this.clientTypeGroupCheckBox);
             this.groupBoxType.Name = "groupBoxType";
             this.groupBoxType.TabStop = false;
-            // 
-            // clientTypeIndivCheckBox
-            // 
-            resources.ApplyResources(this.clientTypeIndivCheckBox, "clientTypeIndivCheckBox");
-            this.clientTypeIndivCheckBox.Name = "clientTypeIndivCheckBox";
-            this.clientTypeIndivCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeGroupCheckBox_CheckedChanged);
-            this.clientTypeIndivCheckBox.Click += new System.EventHandler(this.clientTypeGroupCheckBox_Click);
             // 
             // clientTypeVillageCheckBox
             // 
@@ -939,6 +932,13 @@ namespace OpenCBS.GUI.Products
             this.clientTypeVillageCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeGroupCheckBox_CheckedChanged);
             this.clientTypeVillageCheckBox.Click += new System.EventHandler(this.clientTypeGroupCheckBox_Click);
             // 
+            // clientTypeAllCheckBox
+            // 
+            resources.ApplyResources(this.clientTypeAllCheckBox, "clientTypeAllCheckBox");
+            this.clientTypeAllCheckBox.Name = "clientTypeAllCheckBox";
+            this.clientTypeAllCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeAllCheckBox_CheckedChanged);
+            this.clientTypeAllCheckBox.Click += new System.EventHandler(this.clientTypeAllCheckBox_Click);
+            // 
             // clientTypeCorpCheckBox
             // 
             resources.ApplyResources(this.clientTypeCorpCheckBox, "clientTypeCorpCheckBox");
@@ -946,19 +946,19 @@ namespace OpenCBS.GUI.Products
             this.clientTypeCorpCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeGroupCheckBox_CheckedChanged);
             this.clientTypeCorpCheckBox.Click += new System.EventHandler(this.clientTypeGroupCheckBox_Click);
             // 
+            // clientTypeIndivCheckBox
+            // 
+            resources.ApplyResources(this.clientTypeIndivCheckBox, "clientTypeIndivCheckBox");
+            this.clientTypeIndivCheckBox.Name = "clientTypeIndivCheckBox";
+            this.clientTypeIndivCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeGroupCheckBox_CheckedChanged);
+            this.clientTypeIndivCheckBox.Click += new System.EventHandler(this.clientTypeGroupCheckBox_Click);
+            // 
             // clientTypeGroupCheckBox
             // 
             resources.ApplyResources(this.clientTypeGroupCheckBox, "clientTypeGroupCheckBox");
             this.clientTypeGroupCheckBox.Name = "clientTypeGroupCheckBox";
             this.clientTypeGroupCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeGroupCheckBox_CheckedChanged);
             this.clientTypeGroupCheckBox.Click += new System.EventHandler(this.clientTypeGroupCheckBox_Click);
-            // 
-            // clientTypeAllCheckBox
-            // 
-            resources.ApplyResources(this.clientTypeAllCheckBox, "clientTypeAllCheckBox");
-            this.clientTypeAllCheckBox.Name = "clientTypeAllCheckBox";
-            this.clientTypeAllCheckBox.CheckedChanged += new System.EventHandler(this.clientTypeAllCheckBox_CheckedChanged);
-            this.clientTypeAllCheckBox.Click += new System.EventHandler(this.clientTypeAllCheckBox_Click);
             // 
             // groupBoxInterestRateType
             // 
