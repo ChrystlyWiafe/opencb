@@ -401,9 +401,7 @@ namespace OpenCBS.GUI.Products
             this.labelMinPercGuar = new System.Windows.Forms.Label();
             this.checkBoxGuarCollRequired = new System.Windows.Forms.CheckBox();
             this.tabAccounts = new System.Windows.Forms.TabPage();
-            this.chClientAccountForPenaltyIncome = new System.Windows.Forms.CheckBox();
             this.chClientAccountForAccruedPenalty = new System.Windows.Forms.CheckBox();
-            this.chClientAccountForInterestIncome = new System.Windows.Forms.CheckBox();
             this.chClientAccoutForIdnr = new System.Windows.Forms.CheckBox();
             this.chClientAccountForInterestDue = new System.Windows.Forms.CheckBox();
             this.chClientAccountForIand = new System.Windows.Forms.CheckBox();
@@ -2205,9 +2203,7 @@ namespace OpenCBS.GUI.Products
             // 
             // tabAccounts
             // 
-            this.tabAccounts.Controls.Add(this.chClientAccountForPenaltyIncome);
             this.tabAccounts.Controls.Add(this.chClientAccountForAccruedPenalty);
-            this.tabAccounts.Controls.Add(this.chClientAccountForInterestIncome);
             this.tabAccounts.Controls.Add(this.chClientAccoutForIdnr);
             this.tabAccounts.Controls.Add(this.chClientAccountForInterestDue);
             this.tabAccounts.Controls.Add(this.chClientAccountForIand);
@@ -2236,26 +2232,12 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.tabAccounts, "tabAccounts");
             this.tabAccounts.Name = "tabAccounts";
             // 
-            // chClientAccountForPenaltyIncome
-            // 
-            resources.ApplyResources(this.chClientAccountForPenaltyIncome, "chClientAccountForPenaltyIncome");
-            this.chClientAccountForPenaltyIncome.Name = "chClientAccountForPenaltyIncome";
-            this.chClientAccountForPenaltyIncome.UseVisualStyleBackColor = true;
-            this.chClientAccountForPenaltyIncome.CheckedChanged += new System.EventHandler(this.chClientAccountForPenaltyIncome_CheckedChanged);
-            // 
             // chClientAccountForAccruedPenalty
             // 
             resources.ApplyResources(this.chClientAccountForAccruedPenalty, "chClientAccountForAccruedPenalty");
             this.chClientAccountForAccruedPenalty.Name = "chClientAccountForAccruedPenalty";
             this.chClientAccountForAccruedPenalty.UseVisualStyleBackColor = true;
             this.chClientAccountForAccruedPenalty.CheckedChanged += new System.EventHandler(this.chClientAccountForAccruedPenalty_CheckedChanged);
-            // 
-            // chClientAccountForInterestIncome
-            // 
-            resources.ApplyResources(this.chClientAccountForInterestIncome, "chClientAccountForInterestIncome");
-            this.chClientAccountForInterestIncome.Name = "chClientAccountForInterestIncome";
-            this.chClientAccountForInterestIncome.UseVisualStyleBackColor = true;
-            this.chClientAccountForInterestIncome.CheckedChanged += new System.EventHandler(this.chClientAccountForInterestIncome_CheckedChanged);
             // 
             // chClientAccoutForIdnr
             // 
@@ -2724,9 +2706,7 @@ namespace OpenCBS.GUI.Products
         private Label label62;
         private ColumnHeader chAccountNumber;
         private ColumnHeader ch2AccountNumber;
-        private CheckBox chClientAccountForPenaltyIncome;
         private CheckBox chClientAccountForAccruedPenalty;
-        private CheckBox chClientAccountForInterestIncome;
         private CheckBox chClientAccoutForIdnr;
         private CheckBox chClientAccountForInterestDue;
         private CheckBox chClientAccountForIand;

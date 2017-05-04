@@ -167,9 +167,7 @@ namespace OpenCBS.CoreDomain.Products
         public bool UseClientAccountForIand { get; set; }
         public bool UseClientAccountForInterestDue { get; set; }
         public bool UseClientAccountForIdnr { get; set; }
-        public bool UseClientAccountForInterestIncome { get; set; }
         public bool UseClientAccountForAccruedPenalty { get; set; }
-        public bool UseClientAccountForPenaltyIncome { get; set; }
 
         public NonRepaymentPenaltiesNullableValues NonRepaymentPenalties
         {

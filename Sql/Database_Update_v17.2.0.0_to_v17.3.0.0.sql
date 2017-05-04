@@ -246,21 +246,9 @@ IF col_length('dbo.Packages','use_client_acccount_for_idnr') IS NULL
     END
 GO
 
-IF col_length('dbo.Packages','use_client_acccount_for_interest_income') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD use_client_acccount_for_interest_income BIT NOT NULL DEFAULT(0)
-    END
-GO
-
 IF col_length('dbo.Packages','use_client_acccount_for_accrued_penalty') IS NULL
     BEGIN
 		ALTER TABLE dbo.Packages ADD use_client_acccount_for_accrued_penalty BIT NOT NULL DEFAULT(0)
-    END
-GO
-
-IF col_length('dbo.Packages','use_client_acccount_for_penalty_income') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD use_client_acccount_for_penalty_income BIT NOT NULL DEFAULT(0)
     END
 GO
 
