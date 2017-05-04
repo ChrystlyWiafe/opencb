@@ -156,10 +156,10 @@
     <value>Telefone</value>
   </data>
   <data name="mainStatusBarLblUpdateVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 20</value>
+    <value>996, 20</value>
   </data>
   <data name="mainStatusBarLblUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
+    <value>129, 20</value>
   </data>
   <data name="mainStatusBarLblUserName.Text" xml:space="preserve">
     <value>Nome de Utilizador</value>
@@ -363,19 +363,19 @@
     <value>Individual</value>
   </data>
   <data name="mnuNewGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>225, 22</value>
   </data>
   <data name="mnuNewGroup.Text" xml:space="preserve">
     <value>Novo Grupo solidário</value>
   </data>
   <data name="mnuNewVillage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>225, 22</value>
   </data>
   <data name="mnuNewVillage.Text" xml:space="preserve">
     <value>Grupo independente</value>
   </data>
   <data name="newCorporateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>225, 22</value>
   </data>
   <data name="newCorporateToolStripMenuItem.Text" xml:space="preserve">
     <value>Empresa / Projecto</value>
@@ -408,19 +408,37 @@
     <value>Reatribuir contratos</value>
   </data>
   <data name="mnuClients.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>121, 20</value>
   </data>
   <data name="mnuClients.Text" xml:space="preserve">
     <value>Cliente e Contracto</value>
   </data>
+  <data name="_startPageItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
   <data name="_startPageItem.Text" xml:space="preserve">
     <value>Página inicial</value>
+  </data>
+  <data name="_alertsItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
   </data>
   <data name="_alertsItem.Text" xml:space="preserve">
     <value>Alertas</value>
   </data>
+  <data name="_dashboardItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
   <data name="_dashboardItem.Text" xml:space="preserve">
     <value>Gráficos</value>
+  </data>
+  <data name="_searchItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="loanCalculatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="loanCalculatorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Calculadora de Crédito</value>
   </data>
   <data name="_viewItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 20</value>
@@ -429,7 +447,7 @@
     <value>Visualizar</value>
   </data>
   <data name="_aboutModulesMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>169, 22</value>
   </data>
   <data name="_aboutModulesMenuItem.Text" xml:space="preserve">
     <value>Sobre os Módulos</value>
@@ -483,7 +501,7 @@
     <value>Relatórios</value>
   </data>
   <data name="mnuWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+    <value>51, 20</value>
   </data>
   <data name="mnuWindow.Text" xml:space="preserve">
     <value>Janela</value>
@@ -1121,8 +1139,5 @@
         VDEyOjE2OjU0KzA4OjAwAxvRswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNS0wNlQxMjoxNjo1NCsw
         ODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="loanCalculatorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Calculadora de Crédito</value>
   </data>
 </root>
