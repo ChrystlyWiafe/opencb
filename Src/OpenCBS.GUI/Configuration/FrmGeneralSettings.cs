@@ -1672,9 +1672,6 @@ namespace OpenCBS.GUI.Configuration
         {
             if (listViewPublicHolidays.SelectedItems.Count != 0)
             {
-                ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Remove((DateTime)entry.Key);
-                ServicesProvider.GetInstance().GetApplicationSettingsServices().DeleteNonWorkingDate(entry);
-
                 PublicHolidaysWaitingForm waitingForm;
 
                 DialogResult result;
@@ -1685,6 +1682,8 @@ namespace OpenCBS.GUI.Configuration
                     result = waitingForm.ShowDialog();
                     if (result == DialogResult.Yes)
                     {
+                        ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Remove((DateTime)entry.Key);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().DeleteNonWorkingDate(entry);
                         waitingForm.UpdateInstallmentsDate((DateTime)entry.Key, ServicesProvider.GetInstance().GetContractServices().GetListOfInstallmentsOnDate((DateTime)entry.Key));
                     }
                 }
