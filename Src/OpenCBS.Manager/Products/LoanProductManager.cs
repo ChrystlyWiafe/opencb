@@ -361,9 +361,7 @@ namespace OpenCBS.Manager.Products
 	            ,@useClientAccountForIand
 	            ,@useClientAccountForInterestDue
 	            ,@useClientAccountForIdnr
-	            ,@useClientAccountForInterestIncome
-	            ,@useClientAccountForAccruedPenalty
-	            ,@useClientAccountForPenaltyIncome)
+	            ,@useClientAccountForAccruedPenalty)
                 SELECT SCOPE_IDENTITY()";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
