@@ -2334,9 +2334,6 @@ namespace OpenCBS.GUI.Products
             var account = comboBoxPrincipalAccount.SelectedValue as Account;
             _product.PrincipalAccountNumber = account != null ? account.AccountNumber : null;
 
-            comboBoxPrincipalAccount.SelectedItem = chClientAccountForPrincipal.Checked
-                ? null
-                : comboBoxPrincipalAccount.SelectedItem;
             _product.UseClientAccountForPrincipal = chClientAccountForPrincipal.Checked;
 
             buttonSave.Enabled = true;
@@ -2349,9 +2346,6 @@ namespace OpenCBS.GUI.Products
             var account = comboBoxInterestAccruedButNotDueAccount.SelectedValue as Account;
             _product.InterestAccruedButNotDueAccountNumber = account != null ? account.AccountNumber : null;
 
-            comboBoxInterestAccruedButNotDueAccount.SelectedItem = chClientAccountForIand.Checked
-                ? null
-                : comboBoxInterestAccruedButNotDueAccount.SelectedItem;
             _product.UseClientAccountForIand = chClientAccountForIand.Checked;
 
             buttonSave.Enabled = true;
@@ -2364,9 +2358,6 @@ namespace OpenCBS.GUI.Products
             var account = comboBoxInterestDueAccount.SelectedValue as Account;
             _product.InterestDueAccountNumber = account != null ? account.AccountNumber : null;
 
-            comboBoxInterestDueAccount.SelectedItem = chClientAccountForInterestDue.Checked
-                ? null
-                : comboBoxInterestDueAccount.SelectedItem;
             _product.UseClientAccountForInterestDue = chClientAccountForInterestDue.Checked;
 
             buttonSave.Enabled = true;
@@ -2379,9 +2370,6 @@ namespace OpenCBS.GUI.Products
             var account = comboBoxInterestDueButNoteReceivedAccount.SelectedValue as Account;
             _product.InterestDueButNotReceivedAccountNumber = account != null ? account.AccountNumber : null;
 
-            comboBoxInterestDueButNoteReceivedAccount.SelectedItem = chClientAccoutForIdnr.Checked
-                ? null
-                : comboBoxInterestDueButNoteReceivedAccount.SelectedItem;
             _product.UseClientAccountForIdnr = chClientAccoutForIdnr.Checked;
 
             buttonSave.Enabled = true;
@@ -2394,9 +2382,6 @@ namespace OpenCBS.GUI.Products
             var account = comboBoxAccruedPenaltyAccount.SelectedValue as Account;
             _product.AccruedPenaltyAccountNumber = account != null ? account.AccountNumber : null;
 
-            comboBoxAccruedPenaltyAccount.SelectedItem = chClientAccountForAccruedPenalty.Checked
-                ? null
-                : comboBoxAccruedPenaltyAccount.SelectedItem;
             _product.UseClientAccountForAccruedPenalty = chClientAccountForAccruedPenalty.Checked;
 
             buttonSave.Enabled = true;
