@@ -60,6 +60,8 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
         private void FillFieldsAccounts()
         {
             _accounts = Services.GetAccountService().SelectAccounts().ToList();
+            var emptyAccount = new Account();
+            _accounts.Insert(0, emptyAccount);
             _comboBoxAccounts.DataSource = _accounts;
         }
 
@@ -129,7 +131,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private bool SelectedAccountIncorrect()
         {
-            return _comboBoxAccounts.Text != ""
+            return _comboBoxAccounts.Text == ""
                    && (_comboBoxAccounts.SelectedItem == null
                        || _accounts.FirstOrDefault(x => x.AccountNumber == ((Account) _comboBoxAccounts.SelectedItem).AccountNumber) == null);
         }
