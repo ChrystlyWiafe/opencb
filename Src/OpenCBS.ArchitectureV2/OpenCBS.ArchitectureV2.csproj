@@ -457,6 +457,9 @@
     <EmbeddedResource Include="View\BatchRepaymentView.resx">
       <DependentUpon>BatchRepaymentView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.pt.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StartPageView.pt.resx">
       <DependentUpon>StartPageView.cs</DependentUpon>
     </EmbeddedResource>
