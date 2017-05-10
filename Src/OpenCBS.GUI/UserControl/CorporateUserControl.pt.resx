@@ -117,26 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tabPageAddress.Text" xml:space="preserve">
-    <value>Endereço</value>
-  </data>
-  <data name="tabPageContacts.Text" xml:space="preserve">
-    <value>Contactos</value>
-  </data>
-  <data name="tabPageSavings.Text" xml:space="preserve">
-    <value>Poupanças</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lvContacts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 380</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>744, 380</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>694</value>
-  </data>
   <data name="columnHeaderName.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
@@ -145,6 +125,10 @@
   </data>
   <data name="columnHeaderPhone2.Text" xml:space="preserve">
     <value>Telefone2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lvContacts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 380</value>
   </data>
   <data name="btnAddContact.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 26</value>
@@ -164,6 +148,22 @@
   <data name="buttonDelete.Text" xml:space="preserve">
     <value>Apagar</value>
   </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>744, 380</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>694</value>
+  </data>
+  <data name="tabPageAddress.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="tabPageContacts.Text" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
+  <data name="tabPageSavings.Text" xml:space="preserve">
+    <value>Poupanças</value>
+  </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
@@ -172,9 +172,6 @@
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Imprimir</value>
-  </data>
-  <data name="groupBoxCorporate.Text" xml:space="preserve">
-    <value>Empresa</value>
   </data>
   <data name="labelLastname.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 16</value>
@@ -233,5 +230,8 @@
   </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left</value>
+  </data>
+  <data name="groupBoxCorporate.Text" xml:space="preserve">
+    <value>Empresa</value>
   </data>
 </root>

@@ -118,18 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="listViewOtherMembres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>868, 333</value>
-  </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 333</value>
+    <value>134, 333</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>868</value>
+    <value>986, 333</value>
   </data>
   <data name="columnHeaderName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -152,41 +145,51 @@
   <data name="columnHeader7.Text" xml:space="preserve">
     <value>Lista negra</value>
   </data>
+  <data name="buttonDeleteMembers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 99</value>
+  </data>
   <data name="buttonDeleteMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 25</value>
+    <value>114, 42</value>
   </data>
   <data name="buttonDeleteMembers.Text" xml:space="preserve">
     <value>Remover do grupo</value>
   </data>
+  <data name="buttonSaveAsLeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 144</value>
+  </data>
   <data name="buttonSaveAsLeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 25</value>
+    <value>114, 42</value>
   </data>
   <data name="buttonSaveAsLeader.Text" xml:space="preserve">
     <value>Definir como lider</value>
   </data>
+  <data name="buttonAddMembres.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 51</value>
+  </data>
   <data name="buttonAddMembres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 25</value>
+    <value>114, 42</value>
   </data>
   <data name="buttonAddMembres.Text" xml:space="preserve">
     <value>Adicionar novo</value>
   </data>
   <data name="buttonSelectAMember.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 25</value>
+    <value>114, 42</value>
   </data>
   <data name="buttonSelectAMember.Text" xml:space="preserve">
     <value>Seleccionar Dia do encontro</value>
   </data>
   <data name="listViewProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 327</value>
+    <value>782, 327</value>
   </data>
   <data name="groupBoxProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 327</value>
+    <value>197, 327</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 327</value>
+    <value>983, 327</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>796</value>
+    <value>782</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>BI</value>
@@ -201,43 +204,43 @@
     <value>Número dos contractos</value>
   </data>
   <data name="buttonViewProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 111</value>
+    <value>41, 111</value>
   </data>
   <data name="buttonViewProject.Text" xml:space="preserve">
     <value>Ver projecto</value>
   </data>
   <data name="buttonAddProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 46</value>
+    <value>41, 46</value>
   </data>
   <data name="buttonAddProject.Text" xml:space="preserve">
     <value>Adicionar projecto</value>
   </data>
   <data name="tabPageBusinessAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>989, 333</value>
+    <value>986, 333</value>
   </data>
   <data name="tabPageBusinessAddress.Text" xml:space="preserve">
     <value>Endereços</value>
   </data>
   <data name="tabPageMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>986, 333</value>
   </data>
   <data name="tabPageMembers.Text" xml:space="preserve">
     <value>Membros</value>
   </data>
   <data name="tabPageHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="tabPageHistory.Text" xml:space="preserve">
     <value>História</value>
   </data>
   <data name="tabPageProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="tabPageProjects.Text" xml:space="preserve">
     <value>Projectos</value>
   </data>
   <data name="tabPageSaving.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="tabPageSaving.Text" xml:space="preserve">
     <value>Poupanças</value>
@@ -247,7 +250,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAQ
-        HAAAAk1TRnQBSQFMAgEBBQEAATwBAAE8AQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HAAAAk1TRnQBSQFMAgEBBQEAAUQBAAFEAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -370,31 +373,31 @@
 </value>
   </data>
   <data name="tabControlGroupInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>997, 373</value>
+    <value>994, 373</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>989, 333</value>
+    <value>986, 333</value>
   </data>
   <data name="groupBoxFirstAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 327</value>
+    <value>467, 327</value>
   </data>
   <data name="groupBoxFirstAddress.Text" xml:space="preserve">
     <value>Residência*</value>
   </data>
   <data name="groupBoxSecondaryAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 3</value>
+    <value>516, 3</value>
   </data>
   <data name="groupBoxSecondaryAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 327</value>
+    <value>467, 327</value>
   </data>
   <data name="groupBoxSecondaryAddress.Text" xml:space="preserve">
     <value>Sede da Empresa</value>
   </data>
   <data name="buttonCopy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 141</value>
+    <value>476, 141</value>
   </data>
   <data name="listViewHistoryMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Nome</value>
@@ -415,16 +418,16 @@
     <value>Data restante</value>
   </data>
   <data name="savingsListUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 327</value>
+    <value>983, 327</value>
   </data>
   <data name="cbBranch.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 117</value>
   </data>
   <data name="groupBoxButtonBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>997, 47</value>
+    <value>994, 47</value>
   </data>
   <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>851, 13</value>
+    <value>848, 13</value>
   </data>
   <data name="buttonNext.Text" xml:space="preserve">
     <value>Próximo</value>
@@ -433,31 +436,31 @@
     <value>Anterior</value>
   </data>
   <data name="groupBoxButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>997, 44</value>
+    <value>994, 44</value>
   </data>
   <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 10</value>
+    <value>591, 10</value>
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Imprimir</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>863, 10</value>
+    <value>860, 10</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 10</value>
+    <value>711, 10</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>Gravar</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 660</value>
+    <value>1000, 660</value>
   </data>
   <data name="groupBoxCivilStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>997, 172</value>
+    <value>994, 172</value>
   </data>
   <data name="groupBoxCivilStatus.Text" xml:space="preserve">
     <value>Situação civil</value>
@@ -538,7 +541,7 @@
     <value>165, 3</value>
   </data>
   <data name="linkLabelChangePhoto2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>860, 146</value>
+    <value>857, 146</value>
   </data>
   <data name="linkLabelChangePhoto2.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -547,7 +550,7 @@
     <value>Alterar foto</value>
   </data>
   <data name="linkLabelChangePhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>711, 146</value>
+    <value>708, 146</value>
   </data>
   <data name="linkLabelChangePhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -556,12 +559,12 @@
     <value>Alterar foto</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>863, 15</value>
+    <value>860, 15</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 15</value>
+    <value>711, 15</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 589</value>
+    <value>986, 572</value>
   </data>
 </root>

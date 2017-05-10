@@ -137,13 +137,19 @@
   <data name="columnHeaderDependents.Text" xml:space="preserve">
     <value>Member Since</value>
   </data>
-  <data name="labelCurrency2.Text" xml:space="preserve">
-    <value />
+  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="buttonSelectAMember.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
@@ -152,9 +158,6 @@
   </data>
   <data name="tlpGroupControls.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cbBranch" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxGroupLoanCycle" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelGroupCycle" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblWeekDay" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cmbWeekDay" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerDateOfEstablishment" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelDateOfEstablishment" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="cbMeetingDay" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxName" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="labelOtherOrganizationAmount.Text" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;columnHeaderPassport.Name" xml:space="preserve">
     <value>columnHeaderPassport</value>
@@ -165,14 +168,20 @@
   <data name="textBoxGroupLoanCycle.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="&gt;&gt;buttonSaveAsLeader.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
   <data name="linkLabelChangePhoto2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="groupBoxProjects.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;textBoxGroupLoanCycle.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerDateOfEstablishment.Parent" xml:space="preserve">
+    <value>tlpGroupControls</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;listViewHistoryMembers.Name" xml:space="preserve">
     <value>listViewHistoryMembers</value>
@@ -189,8 +198,8 @@
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>splitContainer3.Panel2</value>
+  <data name="buttonCopy.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="buttonDeleteMembers.Text" xml:space="preserve">
     <value>Remove</value>
@@ -210,8 +219,8 @@
   <data name="&gt;&gt;dateTimePickerDateOfEstablishment.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabControlGroupInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
+  <data name="&gt;&gt;buttonSelectAMember.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="groupBoxSecondaryAddress.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -220,7 +229,7 @@
     <value>tlpGroupControls</value>
   </data>
   <data name="savingsListUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1017, 327</value>
+    <value>1000, 327</value>
   </data>
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -234,24 +243,21 @@
   <data name="&gt;&gt;savingsListUserControl1.Parent" xml:space="preserve">
     <value>tabPageSaving</value>
   </data>
-  <data name="&gt;&gt;labelGroupCycle.Name" xml:space="preserve">
-    <value>labelGroupCycle</value>
+  <data name="buttonNext.Text" xml:space="preserve">
+    <value>Next</value>
   </data>
-  <data name="columnHeaderSex.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
+    <value>851</value>
   </data>
   <data name="tabPageSaving.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
-  </data>
-  <data name="cmbWeekDay.Items5" xml:space="preserve">
-    <value>Friday</value>
   </data>
   <data name="imageListTab.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        HAAAAk1TRnQBSQFMAgEBBQEAASABBAFMAQQBIAEAASABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HAAAAk1TRnQBSQFMAgEBBQEAAVQBBAFcAQQBIAEAASABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -382,11 +388,8 @@
   <data name="&gt;&gt;groupBoxFirstAddress.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;tabPageSaving.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 128</value>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Print</value>
   </data>
   <data name="columnHeaderLoanCycle.Width" type="System.Int32, mscorlib">
     <value>51</value>
@@ -397,17 +400,11 @@
   <data name="columnHeaderPassport.Text" xml:space="preserve">
     <value>ID Number</value>
   </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
   <data name="&gt;&gt;columnHeaderCode.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBoxCivilStatus.Name" xml:space="preserve">
     <value>groupBoxCivilStatus</value>
-  </data>
-  <data name="linkLabelChangePhoto.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="columnHeader12.Width" type="System.Int32, mscorlib">
     <value>103</value>
@@ -415,17 +412,14 @@
   <data name="columnHeaderCode.Text" xml:space="preserve">
     <value>Code</value>
   </data>
-  <data name="linkLabelChangePhoto2.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
   <data name="buttonViewProject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="tabPageSaving.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
   </data>
-  <data name="groupBoxButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="buttonPreview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="listViewHistoryMembers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -457,9 +451,6 @@
   <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 16</value>
   </data>
-  <data name="tabPageFollowUp.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -478,8 +469,8 @@
   <data name="groupBoxCivilStatus.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="&gt;&gt;columnHeaderSex.Name" xml:space="preserve">
-    <value>columnHeaderSex</value>
+  <data name="lblWeekDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 30</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -520,17 +511,14 @@
   <data name="groupBoxSecondaryAddress.Text" xml:space="preserve">
     <value>Business address</value>
   </data>
-  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>611, 10</value>
+  <data name="groupBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;columnHeaderPassport.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblWeekDay.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 28</value>
-  </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
   </data>
   <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -541,8 +529,8 @@
   <data name="lblWeekDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;columnHeaderDependents.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="linkLabelChangePhoto.Text" xml:space="preserve">
+    <value>Change photo</value>
   </data>
   <data name="&gt;&gt;columnHeaderDependents.Name" xml:space="preserve">
     <value>columnHeaderDependents</value>
@@ -556,6 +544,9 @@
   <data name="&gt;&gt;groupBoxButtons.Parent" xml:space="preserve">
     <value>tableLayoutPanel4</value>
   </data>
+  <data name="&gt;&gt;dateTimePickerDateOfEstablishment.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="buttonSelectAMember.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -563,7 +554,7 @@
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 333</value>
+    <value>137, 333</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>groupBoxCivilStatus</value>
@@ -607,17 +598,14 @@
   <data name="&gt;&gt;groupBoxCivilStatus.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="tabPageMembers.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
   </data>
   <data name="buttonCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="cbMeetingDay.Text" xml:space="preserve">
-    <value>Select meeting day</value>
+  <data name="&gt;&gt;tableLayoutPanel4.Name" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
   </data>
   <data name="&gt;&gt;tabControlGroupInfo.Name" xml:space="preserve">
     <value>tabControlGroupInfo</value>
@@ -625,14 +613,11 @@
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
-  <data name="&gt;&gt;groupBoxProjects.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lblWeekDay.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="labelDateOfEstablishment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 16</value>
-  </data>
-  <data name="tabPageProjects.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="columnHeaderSex.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="groupBoxButtonBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -643,14 +628,11 @@
   <data name="linkLabelChangePhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="labelGroupCycle.Text" xml:space="preserve">
-    <value>Group cycle: </value>
+  <data name="tlpGroupControls.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 16</value>
   </data>
   <data name="buttonCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 50</value>
@@ -685,14 +667,11 @@
   <data name="&gt;&gt;tabPageProjects.Parent" xml:space="preserve">
     <value>tabControlGroupInfo</value>
   </data>
-  <data name="labelOtherOrganizationDebts.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;groupBoxProjects.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Bad Client</value>
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;linkLabelChangePhoto.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -709,14 +688,8 @@
   <data name="&gt;&gt;cbBranch.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;buttonDeleteMembers.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
   <data name="cmbWeekDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
-  </data>
-  <data name="groupBoxButtons.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
   </data>
   <data name="&gt;&gt;tabPageBusinessAddress.Parent" xml:space="preserve">
     <value>tabControlGroupInfo</value>
@@ -726,6 +699,9 @@
   </data>
   <data name="&gt;&gt;tabPageMembers.Name" xml:space="preserve">
     <value>tabPageMembers</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCivilStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listViewProjects.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -742,8 +718,11 @@
   <data name="buttonDeleteMembers.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 65</value>
   </data>
+  <data name="groupBoxSecondaryAddress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="buttonDeleteMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 25</value>
+    <value>117, 25</value>
   </data>
   <data name="buttonViewProject.Text" xml:space="preserve">
     <value>View project</value>
@@ -757,6 +736,12 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.ClientControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="buttonAddMembres.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;buttonSaveAsLeader.Name" xml:space="preserve">
+    <value>buttonSaveAsLeader</value>
+  </data>
   <data name="&gt;&gt;lblWeekDay.Name" xml:space="preserve">
     <value>lblWeekDay</value>
   </data>
@@ -769,23 +754,17 @@
   <data name="columnHeaderSex.Width" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="groupBoxSecondaryAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 327</value>
+  <data name="groupBoxProjects.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 327</value>
   </data>
-  <data name="buttonPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="groupBoxSecondaryAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 327</value>
   </data>
   <data name="cbMeetingDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="groupBoxFirstAddress.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="&gt;&gt;textBoxGroupLoanCycle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="labelGroupCycle.Text" xml:space="preserve">
+    <value>Group cycle: </value>
   </data>
   <data name="tabPageMembers.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -803,7 +782,7 @@
     <value>2</value>
   </data>
   <data name="linkLabelChangePhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 146</value>
+    <value>711, 146</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Name</value>
@@ -817,6 +796,9 @@
   <data name="&gt;&gt;labelHelpRequiredFields.Name" xml:space="preserve">
     <value>labelHelpRequiredFields</value>
   </data>
+  <data name="&gt;&gt;listViewProjects.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;splitContainer3.Panel2.Parent" xml:space="preserve">
     <value>splitContainer3</value>
   </data>
@@ -829,17 +811,23 @@
   <data name="labelGroupCycle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;groupBoxButtonBottom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;buttonPreview.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="groupBoxButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 181</value>
+  <data name="&gt;&gt;tabPageSaving.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelGroupCycle.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="tabPageProjects.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="btnPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="&gt;&gt;tableLayoutPanel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabControlGroupInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>997, 373</value>
   </data>
   <data name="cmbWeekDay.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -853,8 +841,8 @@
   <data name="&gt;&gt;splitContainer3.Panel2.Name" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="tabControlGroupInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 373</value>
+  <data name="&gt;&gt;tabPageMembers.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="cbMeetingDay.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -874,8 +862,14 @@
   <data name="&gt;&gt;groupBoxCivilStatus.Parent" xml:space="preserve">
     <value>tableLayoutPanel4</value>
   </data>
+  <data name="tabControlGroupInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 231</value>
+  </data>
   <data name="&gt;&gt;cbBranch.Parent" xml:space="preserve">
     <value>tlpGroupControls</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cbBranch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -883,14 +877,17 @@
   <data name="labelGroupCycle.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
   <data name="buttonAddProject.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tlpGroupControls.RowCount" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="radioButtonBadClient.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;splitContainer3.Name" xml:space="preserve">
+    <value>splitContainer3</value>
   </data>
   <data name="buttonPreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 25</value>
@@ -902,13 +899,13 @@
     <value>0</value>
   </data>
   <data name="tabPageProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+    <value>1006, 333</value>
   </data>
-  <data name="cmbWeekDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="&gt;&gt;buttonDeleteMembers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 10</value>
+    <value>863, 10</value>
   </data>
   <data name="labelHelpRequiredFields.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 32</value>
@@ -919,17 +916,20 @@
   <data name="&gt;&gt;savingsListUserControl1.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SavingsListUserControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="cmbWeekDay.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
+  <data name="&gt;&gt;tlpGroupControls.Name" xml:space="preserve">
+    <value>tlpGroupControls</value>
   </data>
   <data name="btnPrint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Bad Client</value>
+  </data>
   <data name="buttonAddMembres.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="buttonPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 13</value>
   </data>
   <data name="buttonAddProject.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -949,11 +949,11 @@
   <data name="columnHeaderLoanCycle.Text" xml:space="preserve">
     <value>Cycle</value>
   </data>
-  <data name="&gt;&gt;tabPageSaving.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;textBoxName.Name" xml:space="preserve">
+    <value>textBoxName</value>
   </data>
   <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -961,8 +961,11 @@
   <data name="&gt;&gt;tlpGroupControls.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
   <data name="groupBoxSecondaryAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 3</value>
+    <value>517, 3</value>
   </data>
   <data name="&gt;&gt;tabPageBusinessAddress.Name" xml:space="preserve">
     <value>tabPageBusinessAddress</value>
@@ -976,8 +979,11 @@
   <data name="&gt;&gt;tabPageMembers.Parent" xml:space="preserve">
     <value>tabControlGroupInfo</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="buttonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;tabPageProjects.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -988,14 +994,14 @@
   <data name="labelName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="buttonSaveAsLeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="labelHelpRequiredFields.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 24</value>
+  </data>
+  <data name="cmbWeekDay.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
   <data name="columnHeader2.Text" xml:space="preserve">
     <value>Passport N°</value>
@@ -1009,23 +1015,17 @@
   <data name="columnHeaderName.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="&gt;&gt;columnHeaderDateOfBirth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPageEconomicSituation.Text" xml:space="preserve">
-    <value />
+  <data name="tabPageSaving.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="labelName.Text" xml:space="preserve">
     <value>Name*:</value>
   </data>
   <data name="tabPageHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+    <value>1006, 333</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1017, 327</value>
+  <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>851, 13</value>
   </data>
   <data name="groupBoxCivilStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1048,6 +1048,9 @@
   <data name="&gt;&gt;groupBoxFirstAddress.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;groupBoxProjects.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="buttonPreview.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1069,14 +1072,20 @@
   <data name="tabPageBusinessAddress.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="columnHeaderPassport.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="linkLabelChangePhoto2.Text" xml:space="preserve">
     <value>Change photo</value>
   </data>
   <data name="groupBoxCivilStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 172</value>
+    <value>997, 172</value>
   </data>
   <data name="tabPageMembers.Text" xml:space="preserve">
     <value>Members</value>
@@ -1090,7 +1099,7 @@
   <data name="textBoxName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;buttonAddMembres.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonSaveAsLeader.Parent" xml:space="preserve">
     <value>groupBox3</value>
   </data>
   <data name="cbBranch.Location" type="System.Drawing.Point, System.Drawing">
@@ -1099,14 +1108,11 @@
   <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="linkLabelChangePhoto2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cmbWeekDay.Items6" xml:space="preserve">
-    <value>Saturday</value>
-  </data>
   <data name="&gt;&gt;buttonSaveAsLeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddMembres.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -1114,23 +1120,17 @@
   <data name="columnHeaderName.Width" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonDeleteMembers.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="buttonAddMembres.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 34</value>
   </data>
-  <data name="radioButtonExperienceWithOtherOrganization.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;textBoxName.Parent" xml:space="preserve">
-    <value>tlpGroupControls</value>
-  </data>
   <data name="&gt;&gt;buttonViewProject.Name" xml:space="preserve">
     <value>buttonViewProject</value>
   </data>
-  <data name="lblWeekDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;splitContainer3.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1142,7 +1142,7 @@
     <value>Fill</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="labelHelpRequiredFields.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1150,8 +1150,8 @@
   <data name="&gt;&gt;buttonCopy.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="columnHeaderDependents.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;lblWeekDay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1166,22 +1166,25 @@
     <value>1</value>
   </data>
   <data name="groupBoxButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 44</value>
+    <value>997, 44</value>
   </data>
-  <data name="groupBoxOtherOrganization.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;buttonDeleteMembers.Name" xml:space="preserve">
+    <value>buttonDeleteMembers</value>
   </data>
-  <data name="buttonCopy.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
   </data>
-  <data name="cmbWeekDay.Items" xml:space="preserve">
-    <value>Sunday</value>
+  <data name="buttonCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="labelCurrency1.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;linkLabelChangePhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="labelDateOfEstablishment.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
   </data>
   <data name="tabPageProjects.Text" xml:space="preserve">
     <value>Projects</value>
@@ -1201,11 +1204,11 @@
   <data name="columnHeader3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="groupBoxAmountCycle.Text" xml:space="preserve">
-    <value />
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 327</value>
   </data>
   <data name="listViewOtherMembres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>882, 333</value>
+    <value>851, 333</value>
   </data>
   <data name="&gt;&gt;splitContainer3.Panel1.Parent" xml:space="preserve">
     <value>splitContainer3</value>
@@ -1213,17 +1216,11 @@
   <data name="&gt;&gt;buttonPreview.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;cmbWeekDay.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="&gt;&gt;groupBoxProjects.Name" xml:space="preserve">
     <value>groupBoxProjects</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;linkLabelChangePhoto2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1231,11 +1228,8 @@
   <data name="columnHeaderDependents.Width" type="System.Int32, mscorlib">
     <value>98</value>
   </data>
-  <data name="groupBoxCivilStatus.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="listViewOtherMembres.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;listViewHistoryMembers.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1252,8 +1246,8 @@
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 25</value>
   </data>
-  <data name="buttonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="buttonDeleteMembers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1267,14 +1261,14 @@
   <data name="tabPageProjects.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
   </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
   <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
     <value>groupBoxButtons</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;groupBoxSecondaryAddress.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -1284,6 +1278,9 @@
   </data>
   <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
     <value>columnHeader7</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 333</value>
   </data>
   <data name="&gt;&gt;tabPageMembers.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1300,9 +1297,6 @@
   <data name="groupBoxCivilStatus.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;buttonNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
     <value>pictureBox2</value>
   </data>
@@ -1312,8 +1306,8 @@
   <data name="&gt;&gt;tabPageProjects.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
-    <value>groupBoxButtons</value>
+  <data name="tabControlGroupInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
   <data name="listViewHistoryMembers.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1342,43 +1336,34 @@
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;listViewHistoryMembers.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="tabPageCustomizableFields.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;tabPageProjects.Name" xml:space="preserve">
+    <value>tabPageProjects</value>
   </data>
   <data name="tabPageBusinessAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+    <value>989, 333</value>
   </data>
   <data name="&gt;&gt;buttonPreview.Parent" xml:space="preserve">
     <value>groupBoxButtonBottom</value>
   </data>
-  <data name="linkLabelChangePhoto2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
+  <data name="&gt;&gt;savingsListUserControl1.Name" xml:space="preserve">
+    <value>savingsListUserControl1</value>
   </data>
   <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
     <value>columnHeader4</value>
   </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 128</value>
+  <data name="listViewHistoryMembers.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="buttonPreview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>groupBoxButtons</value>
+  </data>
+  <data name="groupBoxButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
   </data>
   <data name="&gt;&gt;groupBoxFirstAddress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonSelectAMember.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="groupBoxFirstAddress.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
   <data name="tabPageBusinessAddress.Location" type="System.Drawing.Point, System.Drawing">
@@ -1387,17 +1372,11 @@
   <data name="tabPageHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
   </data>
-  <data name="listViewOtherMembres.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="tabPageProjects.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="buttonAddMembres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 25</value>
-  </data>
-  <data name="&gt;&gt;groupBoxCivilStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonAddMembres.Text" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="&gt;&gt;linkLabelChangePhoto.Name" xml:space="preserve">
     <value>linkLabelChangePhoto</value>
@@ -1408,8 +1387,8 @@
   <data name="columnHeaderSex.Text" xml:space="preserve">
     <value>Sex</value>
   </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="buttonAddMembres.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 25</value>
   </data>
   <data name="&gt;&gt;splitContainer3.Panel1.Name" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
@@ -1418,31 +1397,28 @@
     <value>buttonAddProject</value>
   </data>
   <data name="buttonAddProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 46</value>
-  </data>
-  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+    <value>44, 46</value>
   </data>
   <data name="textBoxName.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 3</value>
   </data>
-  <data name="&gt;&gt;buttonSaveAsLeader.Name" xml:space="preserve">
-    <value>buttonSaveAsLeader</value>
+  <data name="linkLabelChangePhoto2.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
   </data>
-  <data name="&gt;&gt;tabPageProjects.Name" xml:space="preserve">
-    <value>tabPageProjects</value>
+  <data name="groupBoxButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 181</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="labelOtherOrganizationName.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="columnHeader5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="columnHeaderDependents.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="linkLabelChangePhoto2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;textBoxGroupLoanCycle.Name" xml:space="preserve">
+    <value>textBoxGroupLoanCycle</value>
   </data>
   <data name="&gt;&gt;groupBoxButtonBottom.Name" xml:space="preserve">
     <value>groupBoxButtonBottom</value>
@@ -1459,20 +1435,17 @@
   <data name="&gt;&gt;buttonSelectAMember.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabControlGroupInfo.ItemSize" type="System.Drawing.Size, System.Drawing">
-    <value>45, 32</value>
-  </data>
   <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
     <value>buttonSave</value>
   </data>
   <data name="buttonNext.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="lblWeekDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 30</value>
+  <data name="&gt;&gt;labelDateOfEstablishment.Parent" xml:space="preserve">
+    <value>tlpGroupControls</value>
   </data>
   <data name="tabPageSaving.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+    <value>1006, 333</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1486,26 +1459,17 @@
   <data name="&gt;&gt;tlpGroupControls.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1020, 589</value>
-  </data>
   <data name="labelDateOfEstablishment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonSelectAMember.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnPrint.Text" xml:space="preserve">
-    <value>Print</value>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
   <data name="buttonSaveAsLeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 25</value>
+    <value>117, 25</value>
   </data>
   <data name="&gt;&gt;columnHeaderLoanCycle.Name" xml:space="preserve">
     <value>columnHeaderLoanCycle</value>
@@ -1513,20 +1477,17 @@
   <data name="lblWeekDay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="buttonSelectGroupSponsor.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="buttonSelectAMember.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 25</value>
+    <value>117, 25</value>
   </data>
-  <data name="buttonAddGroupSponsor.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;labelGroupCycle.Name" xml:space="preserve">
+    <value>labelGroupCycle</value>
   </data>
   <data name="labelGroupCycle.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 16</value>
   </data>
-  <data name="&gt;&gt;listViewProjects.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;columnHeaderSex.Name" xml:space="preserve">
+    <value>columnHeaderSex</value>
   </data>
   <data name="buttonSaveAsLeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1537,17 +1498,20 @@
   <data name="textBoxGroupLoanCycle.Text" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="buttonNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="labelDateOfEstablishment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="buttonAddMembres.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 16</value>
   </data>
-  <data name="&gt;&gt;tlpGroupControls.Name" xml:space="preserve">
-    <value>tlpGroupControls</value>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;textBoxGroupLoanCycle.Parent" xml:space="preserve">
     <value>tlpGroupControls</value>
@@ -1555,8 +1519,8 @@
   <data name="groupBoxFirstAddress.Text" xml:space="preserve">
     <value>Home address*</value>
   </data>
-  <data name="&gt;&gt;buttonAddMembres.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textBoxGroupLoanCycle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonAddMembres.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1564,14 +1528,14 @@
   <data name="&gt;&gt;buttonSaveAsLeader.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="buttonAddProject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;groupBoxSecondaryAddress.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="listViewProjects.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1585,14 +1549,14 @@
   <data name="&gt;&gt;groupBoxButtons.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="buttonNext.Text" xml:space="preserve">
-    <value>Next</value>
+  <data name="cmbWeekDay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;buttonCopy.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBoxName.Name" xml:space="preserve">
-    <value>textBoxName</value>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
   </data>
   <data name="&gt;&gt;textBoxName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1604,13 +1568,13 @@
     <value>Stretch</value>
   </data>
   <data name="groupBoxFirstAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 327</value>
+    <value>468, 327</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GroupUserControl</value>
   </data>
-  <data name="&gt;&gt;buttonDeleteMembers.Name" xml:space="preserve">
-    <value>buttonDeleteMembers</value>
+  <data name="labelName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="columnHeaderNbOfContracts.Text" xml:space="preserve">
     <value>Number of Contracts</value>
@@ -1624,20 +1588,20 @@
   <data name="labelGroupCycle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="&gt;&gt;groupBoxProjects.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
+  <data name="&gt;&gt;tabPageSaving.Name" xml:space="preserve">
+    <value>tabPageSaving</value>
   </data>
   <data name="buttonViewProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 111</value>
+    <value>44, 111</value>
   </data>
-  <data name="groupBoxProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 327</value>
+  <data name="linkLabelChangePhoto2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonViewMember.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;tabPageSaving.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;buttonAddMembres.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1645,17 +1609,14 @@
   <data name="tabControlGroupInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="labelGroupSponsor.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 13</value>
+  <data name="linkLabelChangePhoto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="labelDateOfEstablishment.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 15</value>
+    <value>863, 15</value>
   </data>
   <data name="buttonNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1690,35 +1651,32 @@
   <data name="&gt;&gt;buttonPreview.Name" xml:space="preserve">
     <value>buttonPreview</value>
   </data>
-  <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>868, 13</value>
-  </data>
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 10</value>
+    <value>714, 10</value>
   </data>
   <data name="lblWeekDay.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;tabPageSaving.Name" xml:space="preserve">
-    <value>tabPageSaving</value>
+  <data name="&gt;&gt;columnHeaderDependents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cbMeetingDay.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabelChangePhoto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 25</value>
   </data>
   <data name="&gt;&gt;buttonViewProject.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="linkLabelChangePhoto2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblWeekDay.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="buttonCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;cbBranch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
+  <data name="listViewHistoryMembers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1006, 333</value>
   </data>
   <data name="&gt;&gt;tabControlGroupInfo.Parent" xml:space="preserve">
     <value>tableLayoutPanel4</value>
@@ -1727,10 +1685,10 @@
     <value>True</value>
   </data>
   <data name="groupBoxButtonBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 47</value>
+    <value>997, 47</value>
   </data>
-  <data name="linkLabelChangePhoto.Text" xml:space="preserve">
-    <value>Change photo</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="savingsListUserControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1744,14 +1702,11 @@
   <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonAddMembres.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
   <data name="groupBoxFirstAddress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;listViewOtherMembres.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -1760,7 +1715,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1020, 660</value>
+    <value>1003, 660</value>
   </data>
   <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1768,14 +1723,11 @@
   <data name="&gt;&gt;buttonViewProject.Parent" xml:space="preserve">
     <value>groupBoxProjects</value>
   </data>
-  <data name="&gt;&gt;groupBoxButtonBottom.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
   </data>
-  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 25</value>
-  </data>
-  <data name="&gt;&gt;dateTimePickerDateOfEstablishment.Parent" xml:space="preserve">
-    <value>tlpGroupControls</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1003, 589</value>
   </data>
   <data name="listViewOtherMembres.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1783,8 +1735,8 @@
   <data name="columnHeader3.Width" type="System.Int32, mscorlib">
     <value>139</value>
   </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value />
+  <data name="groupBoxButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
     <value>btnPrint</value>
@@ -1795,17 +1747,20 @@
   <data name="buttonPreview.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonDeleteMembers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="tabPageMembers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 333</value>
   </data>
   <data name="splitContainer3.SplitterWidth" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel4.Name" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
+  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
+    <value>columnHeader12</value>
   </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1816,8 +1771,8 @@
   <data name="listViewOtherMembres.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="cmbWeekDay.Items3" xml:space="preserve">
-    <value>Wednesday</value>
+  <data name="&gt;&gt;columnHeaderDateOfBirth.Name" xml:space="preserve">
+    <value>columnHeaderDateOfBirth</value>
   </data>
   <data name="cmbWeekDay.Items2" xml:space="preserve">
     <value>Tuesday</value>
@@ -1825,17 +1780,17 @@
   <data name="cmbWeekDay.Items1" xml:space="preserve">
     <value>Monday</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
+  <data name="tabPageBusinessAddress.Text" xml:space="preserve">
+    <value>Addresses</value>
   </data>
-  <data name="&gt;&gt;dateTimePickerDateOfEstablishment.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;buttonAddMembres.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelCommentsTypeActivity.Text" xml:space="preserve">
-    <value />
+  <data name="cmbWeekDay.Items6" xml:space="preserve">
+    <value>Saturday</value>
   </data>
-  <data name="columnHeader6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="cmbWeekDay.Items5" xml:space="preserve">
+    <value>Friday</value>
   </data>
   <data name="cmbWeekDay.Items4" xml:space="preserve">
     <value>Thursday</value>
@@ -1852,11 +1807,11 @@
   <data name="buttonAddProject.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 25</value>
   </data>
-  <data name="listViewHistoryMembers.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>810</value>
+    <value>796</value>
   </data>
   <data name="tabPageHistory.Text" xml:space="preserve">
     <value>History</value>
@@ -1864,8 +1819,11 @@
   <data name="columnHeader2.Width" type="System.Int32, mscorlib">
     <value>117</value>
   </data>
-  <data name="&gt;&gt;tabPageProjects.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxProjects.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;groupBoxButtons.Name" xml:space="preserve">
     <value>groupBoxButtons</value>
@@ -1873,14 +1831,14 @@
   <data name="buttonDeleteMembers.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
+  <data name="&gt;&gt;labelGroupCycle.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="linkLabelChangePhoto2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 146</value>
+    <value>860, 146</value>
   </data>
-  <data name="groupBoxButtonBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 610</value>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 128</value>
   </data>
   <data name="&gt;&gt;buttonAddProject.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1889,19 +1847,13 @@
     <value>Name</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 15</value>
-  </data>
-  <data name="&gt;&gt;lblWeekDay.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>714, 15</value>
   </data>
   <data name="&gt;&gt;labelHelpRequiredFields.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonSaveAsLeader.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cmbWeekDay.Parent" xml:space="preserve">
     <value>tlpGroupControls</value>
@@ -1912,11 +1864,8 @@
   <data name="&gt;&gt;tabPageBusinessAddress.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tlpGroupControls.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectAMember.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="buttonSelectAMember.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="labelGroupCycle.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 92</value>
@@ -1930,8 +1879,8 @@
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
     <value>buttonCancel</value>
   </data>
-  <data name="tabControlGroupInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 231</value>
+  <data name="labelDateOfEstablishment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 16</value>
   </data>
   <data name="&gt;&gt;groupBoxSecondaryAddress.Name" xml:space="preserve">
     <value>groupBoxSecondaryAddress</value>
@@ -1939,14 +1888,11 @@
   <data name="tabControlGroupInfo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;textBoxGroupLoanCycle.Name" xml:space="preserve">
-    <value>textBoxGroupLoanCycle</value>
+  <data name="&gt;&gt;tabControlGroupInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;listViewOtherMembres.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBoxSecondaryAddress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="cmbWeekDay.Items" xml:space="preserve">
+    <value>Sunday</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1954,8 +1900,8 @@
   <data name="&gt;&gt;columnHeaderCode.Name" xml:space="preserve">
     <value>columnHeaderCode</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
+  <data name="groupBoxButtonBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 610</value>
   </data>
   <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
     <value>columnHeader5</value>
@@ -1963,14 +1909,11 @@
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 25</value>
   </data>
-  <data name="tabPageMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 128</value>
   </data>
   <data name="listViewProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>810, 327</value>
-  </data>
-  <data name="&gt;&gt;tabControlGroupInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>796, 327</value>
   </data>
   <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1978,17 +1921,17 @@
   <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;tabPageMembers.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="columnHeader11.Text" xml:space="preserve">
+    <value>Id</value>
   </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="tabControlGroupInfo.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>45, 32</value>
   </data>
   <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
     <value>1000, 660</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbWeekDay.Items3" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
   <data name="cmbWeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 24</value>
@@ -1996,23 +1939,23 @@
   <data name="buttonAddMembres.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1006, 333</value>
+  <data name="linkLabelChangePhoto2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
-  <data name="listViewHistoryMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 333</value>
+  <data name="groupBoxCivilStatus.Text" xml:space="preserve">
+    <value>General</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Name" xml:space="preserve">
-    <value>splitContainer3</value>
-  </data>
-  <data name="&gt;&gt;savingsListUserControl1.Name" xml:space="preserve">
-    <value>savingsListUserControl1</value>
+  <data name="cbMeetingDay.Text" xml:space="preserve">
+    <value>Select meeting day</value>
   </data>
   <data name="linkLabelChangePhoto2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>882</value>
+  <data name="btnPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="buttonAddProject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2029,11 +1972,8 @@
   <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tabPageSaving.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;listViewHistoryMembers.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;columnHeaderNbOfContracts.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2041,8 +1981,8 @@
   <data name="&gt;&gt;cmbWeekDay.Name" xml:space="preserve">
     <value>cmbWeekDay</value>
   </data>
-  <data name="&gt;&gt;columnHeaderDateOfBirth.Name" xml:space="preserve">
-    <value>columnHeaderDateOfBirth</value>
+  <data name="&gt;&gt;columnHeaderDateOfBirth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2050,20 +1990,20 @@
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 10</value>
+  </data>
   <data name="columnHeaderDateOfBirth.Text" xml:space="preserve">
     <value>Date of Birth</value>
   </data>
-  <data name="&gt;&gt;cbBranch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="groupBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;buttonNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxProjects.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;listViewOtherMembres.Parent" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
@@ -2071,14 +2011,11 @@
   <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="tabPageBusinessAddress.Text" xml:space="preserve">
-    <value>Addresses</value>
-  </data>
   <data name="&gt;&gt;groupBoxButtons.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonCopy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 141</value>
+    <value>477, 141</value>
   </data>
   <data name="columnHeaderPassport.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -2089,8 +2026,8 @@
   <data name="buttonSelectAMember.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
-    <value>109</value>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
   </data>
   <data name="&gt;&gt;labelName.Name" xml:space="preserve">
     <value>labelName</value>
@@ -2104,20 +2041,20 @@
   <data name="&gt;&gt;buttonNext.Parent" xml:space="preserve">
     <value>groupBoxButtonBottom</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
-    <value>columnHeader12</value>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="columnHeaderPassport.Width" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="&gt;&gt;labelDateOfEstablishment.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBoxName.Parent" xml:space="preserve">
     <value>tlpGroupControls</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="imageListTab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>159, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>45</value>
