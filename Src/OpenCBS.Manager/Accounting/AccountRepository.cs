@@ -866,5 +866,18 @@ namespace OpenCBS.Manager.Accounting
                 ";
             return tx.Connection.Query<Account>(query, new { accountNumber }, tx).FirstOrDefault();
         }
+
+        public string SelectParentClientAccount(IDbTransaction tx)
+        {
+            const string query = @"
+                select
+                    value
+                from
+                    dbo.GeneralParameters
+                where
+                    [key]='PARENT_CLIENT_ACCOUNT'
+                ";
+            return tx.Connection.Query<string>(query, new { }, tx).FirstOrDefault();
+        }
     }
 }
