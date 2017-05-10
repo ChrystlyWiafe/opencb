@@ -112,26 +112,29 @@
             // _numericUpDownMin
             // 
             resources.ApplyResources(this._numericUpDownMin, "_numericUpDownMin");
+            this._numericUpDownMin.DecimalPlaces = 2;
             this._numericUpDownMin.Maximum = new decimal(new int[] {
-            -402653185,
-            -1613725636,
-            54210108,
+            276447231,
+            23283,
+            0,
             0});
             this._numericUpDownMin.Name = "_numericUpDownMin";
             // 
             // _numericUpDownMax
             // 
             resources.ApplyResources(this._numericUpDownMax, "_numericUpDownMax");
+            this._numericUpDownMax.DecimalPlaces = 2;
             this._numericUpDownMax.Maximum = new decimal(new int[] {
-            -402653185,
-            -1613725636,
-            54210108,
+            276447231,
+            23283,
+            0,
             0});
             this._numericUpDownMax.Name = "_numericUpDownMax";
             // 
             // _numericUpDownMaxSum
             // 
             resources.ApplyResources(this._numericUpDownMaxSum, "_numericUpDownMaxSum");
+            this._numericUpDownMaxSum.DecimalPlaces = 2;
             this._numericUpDownMaxSum.Maximum = new decimal(new int[] {
             -402653185,
             -1613725636,
