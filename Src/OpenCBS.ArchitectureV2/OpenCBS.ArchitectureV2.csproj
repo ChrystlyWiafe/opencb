@@ -463,6 +463,9 @@
     <EmbeddedResource Include="View\StartPageView.pt.resx">
       <DependentUpon>StartPageView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UpgradeView.pt.resx">
+      <DependentUpon>UpgradeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\VillageBankView.resx">
       <DependentUpon>VillageBankView.cs</DependentUpon>
     </EmbeddedResource>
