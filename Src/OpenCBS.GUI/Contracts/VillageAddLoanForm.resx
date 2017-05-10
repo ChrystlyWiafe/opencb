@@ -135,8 +135,8 @@
   <data name="&gt;&gt;cbDonor.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;chPassport.Name" xml:space="preserve">
-    <value>chPassport</value>
+  <data name="udInstallments.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="chCurrency.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
@@ -158,9 +158,6 @@
   </data>
   <data name="&gt;&gt;scheduleComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="scheduleTypeColumnHeader.Text" xml:space="preserve">
-    <value>Schedule</value>
   </data>
   <data name="&gt;&gt;tbInterest.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -207,8 +204,8 @@
   <data name="tbAmount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
   </data>
-  <data name="&gt;&gt;periodicityColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbLoanOfficer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
   </data>
   <data name="tbEntryFee.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 309</value>
@@ -246,11 +243,11 @@
   <data name="tbInterest.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;cbLoanOfficer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="lvMembers.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
-  </data>
-  <data name="udInstallments.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
     <value>pnlButtons</value>
@@ -865,6 +862,21 @@
   <data name="cbFundingLine.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="btnSave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAADECAIAAAAdy+YyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACH0lEQVRoQ+3LS0gTcADH8V8QEUGHrh27
+        duvU1UMRFFQQiPQOegpGgmEghSEWJYiIRSZJmRhmiYgmmiWarUxt5PuxZOrc2sM555xu0+r+P/U9CMb/
+        y+f61W+U3YzsZmQ3I7sZ2c3IbkZ2M7Kbkd2M7GZkNyO6raPsZmQ3o82xra2vAXYz0C21lgKUTKWA/3xL
+        AptjSyQTgFaTCWCDt5XEKrDBWzyxAtBteTUOKLYSBzbHFo3HALotLi8BG7xFYlFA4aUoQLf5aARQKLoA
+        0C24GAYUiIQBuvkXQoB+hYOAvOEgQLe5+QAgT8gPaDboAzQd8AF/Ny8gt98DaMrvAeTyzQCa9E4DdBuf
+        cwMa80wBGpn9CWh4xgVo0D0BaMA9Dsg5NQqo3zUMqM81BKh3chBQz8QAIMeYE9DnUSegrpF+QJ1DvYA+
+        DvQAav/xBVCb0wGo5Xs3oOb+LkBNfZ2AGr91AKr/2g7ojeM9oNfdrYBefXoHqLqzCVBVRyOgyg8NgCra
+        3gIqb60D9LilFlBpcw2g4saXgIoaXgC6V18JqKCuAlB+bTmgvJpHgG5VlwK6WVUCKPt5MaCsZw8BXXt6
+        H9DFJ4WAzpXdBXSq9A6g9JI8QMeKcgEdeZAD6GDhDUBpBdcB7c/PBLTv9hVAe/MuAdqTex7Q7pwzgHZl
+        nwS0Mysd0I7ME4C2Xz0OaNvlo4C2XjgMaMvZQ4B0+gChjLR/lpH2B8auF1qedkGxAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="chLoanOfficer.Width" type="System.Int32, mscorlib">
     <value>87</value>
   </data>
@@ -919,9 +931,6 @@
   <data name="cbDonor.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <data name="&gt;&gt;udCompulsoryPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;chFundingLine.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -946,14 +955,11 @@
   <data name="chName.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="&gt;&gt;chCurrency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lvMembers.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;chCurrency.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>VillageAddLoanForm</value>
@@ -970,8 +976,14 @@
   <data name="&gt;&gt;cbCompulsorySavings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="chInstallments.Text" xml:space="preserve">
+    <value>Installments</value>
+  </data>
   <data name="scheduleComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
+  </data>
+  <data name="scheduleComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 217</value>
   </data>
   <data name="&gt;&gt;tbEntryFee.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1027,11 +1039,11 @@
   <data name="cbDonor.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="cbLoanOfficer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
+  <data name="&gt;&gt;chPassport.Name" xml:space="preserve">
+    <value>chPassport</value>
   </data>
-  <data name="&gt;&gt;cbLoanOfficer.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;periodicityColumnHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="chCreationDate.Text" xml:space="preserve">
     <value>Creation Date</value>
@@ -1047,9 +1059,6 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
-  </data>
-  <data name="&gt;&gt;tbInterest.Name" xml:space="preserve">
-    <value>tbInterest</value>
   </data>
   <data name="allPeriodicityComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 12</value>
@@ -1080,6 +1089,9 @@
   </data>
   <data name="chAvailableFunds.Text" xml:space="preserve">
     <value>Remaining FL amount</value>
+  </data>
+  <data name="chFundingLine.Width" type="System.Int32, mscorlib">
+    <value>107</value>
   </data>
   <data name="&gt;&gt;chCompulsoryPercentage.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1202,7 +1214,7 @@
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=15.8.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;cbDonor.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1210,26 +1222,11 @@
   <data name="&gt;&gt;chCurrency.Name" xml:space="preserve">
     <value>chCurrency</value>
   </data>
-  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
-    <value>pnlButtons</value>
-  </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 25</value>
   </data>
-  <data name="btnSave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAADECAIAAAAdy+YyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACH0lEQVRoQ+3LS0gTcADH8V8QEUGHrh27
-        duvU1UMRFFQQiPQOegpGgmEghSEWJYiIRSZJmRhmiYgmmiWarUxt5PuxZOrc2sM555xu0+r+P/U9CMb/
-        y+f61W+U3YzsZmQ3I7sZ2c3IbkZ2M7Kbkd2M7GZkNyO6raPsZmQ3o82xra2vAXYz0C21lgKUTKWA/3xL
-        AptjSyQTgFaTCWCDt5XEKrDBWzyxAtBteTUOKLYSBzbHFo3HALotLi8BG7xFYlFA4aUoQLf5aARQKLoA
-        0C24GAYUiIQBuvkXQoB+hYOAvOEgQLe5+QAgT8gPaDboAzQd8AF/Ny8gt98DaMrvAeTyzQCa9E4DdBuf
-        cwMa80wBGpn9CWh4xgVo0D0BaMA9Dsg5NQqo3zUMqM81BKh3chBQz8QAIMeYE9DnUSegrpF+QJ1DvYA+
-        DvQAav/xBVCb0wGo5Xs3oOb+LkBNfZ2AGr91AKr/2g7ojeM9oNfdrYBefXoHqLqzCVBVRyOgyg8NgCra
-        3gIqb60D9LilFlBpcw2g4saXgIoaXgC6V18JqKCuAlB+bTmgvJpHgG5VlwK6WVUCKPt5MaCsZw8BXXt6
-        H9DFJ4WAzpXdBXSq9A6g9JI8QMeKcgEdeZAD6GDhDUBpBdcB7c/PBLTv9hVAe/MuAdqTex7Q7pwzgHZl
-        nwS0Mysd0I7ME4C2Xz0OaNvlo4C2XjgMaMvZQ4B0+gChjLR/lpH2B8auF1qedkGxAAAAAElFTkSuQmCC
-</value>
+  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
+    <value>pnlButtons</value>
   </data>
   <data name="allScheduleComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -1237,8 +1234,8 @@
   <data name="&gt;&gt;lvMembers.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;allScheduleComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1269,6 +1266,9 @@
   </data>
   <data name="&gt;&gt;allScheduleLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allScheduleComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="udCompulsoryPercentage.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1327,8 +1327,8 @@
   <data name="&gt;&gt;tbEntryFee.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="periodicityColumnHeader.Text" xml:space="preserve">
+    <value>Periodicity</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1351,14 +1351,14 @@
   <data name="scheduleComboBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="scheduleComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 217</value>
+  <data name="&gt;&gt;udCompulsoryPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;allPeriodicityComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="chFundingLine.Width" type="System.Int32, mscorlib">
-    <value>107</value>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
   </data>
   <data name="allScheduleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1433,7 +1433,7 @@
     <value>Confirm Creation</value>
   </data>
   <data name="&gt;&gt;lvMembers.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=15.8.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 25</value>
@@ -1441,8 +1441,8 @@
   <data name="&gt;&gt;cbLoanOfficer.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="periodicityColumnHeader.Text" xml:space="preserve">
-    <value>Periodicity</value>
+  <data name="scheduleTypeColumnHeader.Text" xml:space="preserve">
+    <value>Schedule</value>
   </data>
   <data name="tbAmount.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1453,8 +1453,8 @@
   <data name="&gt;&gt;allPeriodicityLabel.Parent" xml:space="preserve">
     <value>pnlButtons</value>
   </data>
-  <data name="chInstallments.Text" xml:space="preserve">
-    <value>Installments</value>
+  <data name="&gt;&gt;tbInterest.Name" xml:space="preserve">
+    <value>tbInterest</value>
   </data>
   <data name="cbLoanOfficer.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 282</value>
