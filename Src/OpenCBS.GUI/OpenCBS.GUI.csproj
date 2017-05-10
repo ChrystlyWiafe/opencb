@@ -3327,9 +3327,9 @@ xcopy "$(SolutionDir)..\Sql\*.mdf" "$(TargetDir)" /y
 xcopy "$(SolutionDir)..\Sql\*.ldf" "$(TargetDir)" /y
 xcopy "$(SolutionDir)..\*.pdf" "$(TargetDir)" /y
 
-xcopy "$(TargetDir)*.dll" "c:\OpenCBSLibs" /y
-xcopy "$(TargetDir)OpenCBS.GUI.exe" "c:\OpenCBSLibs" /y
-xcopy "$(TargetDir)*.pdb" "c:\OpenCBSLibs" /y</PostBuildEvent>
+xcopy "$(TargetDir)*.dll" "d:\OpenCBSLibs" /y
+xcopy "$(TargetDir)OpenCBS.GUI.exe" "d:\OpenCBSLibs" /y
+xcopy "$(TargetDir)*.pdb" "d:\OpenCBSLibs" /y</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>
