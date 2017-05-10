@@ -451,6 +451,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AlertsView.pt.resx">
+      <DependentUpon>AlertsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BatchRepaymentView.resx">
       <DependentUpon>BatchRepaymentView.cs</DependentUpon>
     </EmbeddedResource>
