@@ -163,6 +163,11 @@ namespace OpenCBS.Services.Accounting
 
         public void DeleteBookingsByEvent(IDictionary<string, object> entity, IDbTransaction transaction = null)
         {
+            DeleteBookingsByEvent(entity, false, transaction);
+        }
+
+        public void DeleteBookingsByEvent(IDictionary<string, object> entity, bool includeChildEventsTransactions = false, IDbTransaction transaction = null)
+        {
             // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
             var tx = transaction == null
                      ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
@@ -178,6 +183,14 @@ namespace OpenCBS.Services.Accounting
                     return;
                 }
                 var loanEventId = eEvent.ParentId ?? eEvent.Id;
+                if (includeChildEventsTransactions)
+                {
+                    var childEventIds = _repository.GetChildEvents(loanEventId, tx);
+                    foreach (var id in childEventIds)
+                    {
+                        _repository.DeleteByLoanEvent(id, tx);
+                    }
+                }
                 _repository.DeleteByLoanEvent(loanEventId, tx);
 
                 if (transaction == null)
