@@ -208,6 +208,10 @@
                 <File Id="OpenCBS.GUI.resources.dll_4" Source="SourceDir\pt\OpenCBS.GUI.resources.dll" />
                 <File Id="OpenCBS.MultiLanguageRessources.resources.dll_4" Source="SourceDir\pt\OpenCBS.MultiLanguageRessources.resources.dll" />
 				<File Id="OpenCBS.Extensions.resources.dll_4" Source="SourceDir\pt\OpenCBS.Extensions.resources.dll" />
+				<File Id="OpenCBS.ArchitectureV2.resources.dll_4" Source="SourceDir\pt\OpenCBS.ArchitectureV2.resources.dll" />
+				<File Id="OpenCBS.Controls.resources.dll_4" Source="SourceDir\pt\OpenCBS.Controls.resources.dll" />
+				<File Id="OpenCBS.GUI.Restarter.resources.dll_4" Source="SourceDir\pt\OpenCBS.GUI.Restarter.resources.dll" />
+				<File Id="OpenCBS.Reports.resources.dll_4" Source="SourceDir\pt\OpenCBS.Reports.resources.dll" />
               </Component>
             </Directory>
             <Directory Id="DIR_UPDATE" Name="Update">
