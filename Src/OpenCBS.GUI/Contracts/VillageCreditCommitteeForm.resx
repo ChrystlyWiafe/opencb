@@ -171,8 +171,14 @@
   <data name="chAmount.Text" xml:space="preserve">
     <value>Amount</value>
   </data>
+  <data name="&gt;&gt;chComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;cbStatus.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="chStatus.Text" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="tbComment.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -204,11 +210,14 @@
   <data name="&gt;&gt;tbLoanOfficer.Name" xml:space="preserve">
     <value>tbLoanOfficer</value>
   </data>
+  <data name="&gt;&gt;chStatus.Name" xml:space="preserve">
+    <value>chStatus</value>
+  </data>
   <data name="&gt;&gt;chPassport.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="chValidationCode.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Credit Commitee - Validate Loans</value>
   </data>
   <data name="tbComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -832,8 +841,8 @@
         ODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;chStatus.Name" xml:space="preserve">
-    <value>chStatus</value>
+  <data name="tbValidationCode.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="tbValidationCode.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -877,17 +886,14 @@
   <data name="&gt;&gt;buttonValidate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tbValidationCode.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;chLoanOfficer.Name" xml:space="preserve">
+    <value>chLoanOfficer</value>
   </data>
   <data name="dtFirstInstDate.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chLoanOfficer.Name" xml:space="preserve">
-    <value>chLoanOfficer</value>
   </data>
   <data name="chName.Width" type="System.Int32, mscorlib">
     <value>132</value>
@@ -1000,14 +1006,14 @@
   <data name="&gt;&gt;firstInstDateColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Credit Commitee - Validate Loans</value>
-  </data>
   <data name="&gt;&gt;checkBoxSelectAll.Parent" xml:space="preserve">
     <value>pnlButtons</value>
   </data>
   <data name="pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 357</value>
+  </data>
+  <data name="chValidationCode.Width" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="dtFirstInstDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>855, 29</value>
@@ -1082,7 +1088,7 @@
     <value>firstInstDateColumn</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=15.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBoxSelectAll.Text" xml:space="preserve">
     <value>Select all</value>
@@ -1156,8 +1162,8 @@
   <data name="&gt;&gt;dtDisbursementDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="buttonValidate.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="&gt;&gt;checkBoxSelectAll.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="buttonValidate.Text" xml:space="preserve">
     <value>Validate</value>
@@ -1180,8 +1186,8 @@
   <data name="&gt;&gt;chValidationCode.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;chComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tbLoanOfficer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1015, 407</value>
@@ -1204,9 +1210,6 @@
   <data name="disbursementDateColumn.Width" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
-  <data name="tbLoanOfficer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
-  </data>
   <data name="tbAmount.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -1225,8 +1228,8 @@
   <data name="chAmount.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="chStatus.Text" xml:space="preserve">
-    <value>Status</value>
+  <data name="buttonValidate.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
   <data name="tbEntryFee.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1244,7 +1247,7 @@
     <value>7</value>
   </data>
   <data name="&gt;&gt;lvMembers.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=15.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 25</value>
@@ -1254,9 +1257,6 @@
   </data>
   <data name="disbursementDateColumn.Text" xml:space="preserve">
     <value>Disbursement Date</value>
-  </data>
-  <data name="&gt;&gt;checkBoxSelectAll.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="chComment.Width" type="System.Int32, mscorlib">
     <value>250</value>

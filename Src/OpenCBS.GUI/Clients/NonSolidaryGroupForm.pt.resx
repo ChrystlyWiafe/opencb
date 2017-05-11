@@ -118,6 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelNSGDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>524, 146</value>
+  </data>
+  <data name="linkLabelChangePhoto2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="linkLabelChangePhoto2.Text" xml:space="preserve">
+    <value>Mude foto...</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="linkLabelChangePhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabelChangePhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="linkLabelChangePhoto.Text" xml:space="preserve">
+    <value>Mude foto...</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gbDetails.Text" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
   <data name="cbBranch.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 119</value>
   </data>
@@ -184,7 +209,6 @@
   <data name="cmbWeekDay.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 89</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbMeetingDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -197,30 +221,6 @@
   <data name="cbMeetingDay.Text" xml:space="preserve">
     <value>Estabelece o dia do encontro</value>
   </data>
-  <data name="panelNSGDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>524, 146</value>
-  </data>
-  <data name="linkLabelChangePhoto2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="linkLabelChangePhoto2.Text" xml:space="preserve">
-    <value>Mude foto...</value>
-  </data>
-  <data name="linkLabelChangePhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabelChangePhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="linkLabelChangePhoto.Text" xml:space="preserve">
-    <value>Mude foto...</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="gbDetails.Text" xml:space="preserve">
-    <value>Detalhes</value>
-  </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Imprimir</value>
   </data>
@@ -230,11 +230,17 @@
   <data name="btnCancel2.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="tpAddress.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
   <data name="gbAddress.Text" xml:space="preserve">
     <value>Endereço</value>
   </data>
-  <data name="tpAddress.Text" xml:space="preserve">
-    <value>Endereço</value>
+  <data name="tpMembers.Text" xml:space="preserve">
+    <value>Membros</value>
+  </data>
+  <data name="lvMembers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 335</value>
   </data>
   <data name="colName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -254,8 +260,11 @@
   <data name="colLeftDate.Text" xml:space="preserve">
     <value>Data de saída</value>
   </data>
-  <data name="lvMembers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 335</value>
+  <data name="panelMembersControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>814, 3</value>
+  </data>
+  <data name="panelMembersControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 335</value>
   </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>Busce existentes</value>
@@ -275,14 +284,11 @@
   <data name="cbxShowRemovedMembers.Text" xml:space="preserve">
     <value>Mostre os ex-membros</value>
   </data>
-  <data name="panelMembersControls.Location" type="System.Drawing.Point, System.Drawing">
-    <value>814, 3</value>
+  <data name="tabPageLoan.Text" xml:space="preserve">
+    <value>Créditos</value>
   </data>
-  <data name="panelMembersControls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 335</value>
-  </data>
-  <data name="tpMembers.Text" xml:space="preserve">
-    <value>Membros</value>
+  <data name="listViewLoans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>795, 335</value>
   </data>
   <data name="clientName.Text" xml:space="preserve">
     <value>Nome do cliente</value>
@@ -329,8 +335,11 @@
   <data name="closeDate.Text" xml:space="preserve">
     <value>Data do encerramento</value>
   </data>
-  <data name="listViewLoans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>795, 335</value>
+  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>798, 3</value>
+  </data>
+  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 335</value>
   </data>
   <data name="btnAddLoan.Text" xml:space="preserve">
     <value>Adicionar Créditos</value>
@@ -350,14 +359,8 @@
   <data name="cbxDisplayAllLoans.Text" xml:space="preserve">
     <value>Mostrar todos os Créditos</value>
   </data>
-  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>798, 3</value>
-  </data>
-  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 335</value>
-  </data>
-  <data name="tabPageLoan.Text" xml:space="preserve">
-    <value>Créditos</value>
+  <data name="tabPageSavings.Text" xml:space="preserve">
+    <value>Poupanças</value>
   </data>
   <data name="columnHeaderClientName.Text" xml:space="preserve">
     <value>Nome do cliente</value>
@@ -398,8 +401,8 @@
   <data name="buttonFastDeposit.Text" xml:space="preserve">
     <value>Depósito rápido</value>
   </data>
-  <data name="tabPageSavings.Text" xml:space="preserve">
-    <value>Poupanças</value>
+  <data name="tabPageMeetings.Text" xml:space="preserve">
+    <value>Encontros</value>
   </data>
   <data name="olvAttendeeTiersIdColumn.Text" xml:space="preserve">
     <value>Extractos Id</value>
@@ -416,9 +419,6 @@
   <data name="olvAttendeeLoanIdColumn.Text" xml:space="preserve">
     <value>Id do Crédito</value>
   </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="labelMeetingDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 16</value>
   </data>
@@ -427,9 +427,6 @@
   </data>
   <data name="buttonUpdateAttendence.Text" xml:space="preserve">
     <value>Actualizar</value>
-  </data>
-  <data name="tabPageMeetings.Text" xml:space="preserve">
-    <value>Encontros</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
