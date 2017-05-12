@@ -43,7 +43,7 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
                 item.SubItems.Add(paymentMethod.Name);
                 var accountNameOfPaymentMethod = paymentMethod.Account != null
                     ? paymentMethod.AccountNumber + " - " + paymentMethod.Account.Label
-                    : "";
+                    : "-";
                 item.SubItems.Add(accountNameOfPaymentMethod);
                 item.SubItems.Add(paymentMethod.Description);
 

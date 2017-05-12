@@ -93,8 +93,12 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _numericUpDownMax.Value = entryFee.Max.HasValue ? entryFee.Max.Value : 0;
             _comboBoxRate.SelectedIndex = entryFee.IsRate ? 0 : 1;
             _numericUpDownMaxSum.Value = entryFee.MaxSum.HasValue ? entryFee.MaxSum.Value : 0;
-            _comboBoxAccount.SelectedItem =
-                _accounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
+            var selectedAccount = _accounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
+            if (selectedAccount != null)
+                _comboBoxAccount.SelectedItem = selectedAccount;
+            else
+                _comboBoxAccount.SelectedIndex = 0;
+
         }
         
         #endregion
@@ -158,7 +162,7 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
         private bool EmptyAccount()
         {
-            return _comboBoxAccount.SelectedValue == null;
+            return _comboBoxAccount.SelectedValue == null || string.IsNullOrEmpty(_comboBoxAccount.Text);
         }
 
         #endregion

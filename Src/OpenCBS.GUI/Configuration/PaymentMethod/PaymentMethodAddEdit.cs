@@ -108,17 +108,13 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
             var paymentMethod = GetNewPaymentMethodFromForm();
 
             if (string.IsNullOrEmpty(paymentMethod.Name))
-            {
                 return ShowErrorMessageAndReturnFalse("nameEmpty");
-            }
+
             if (SelectedAccountIncorrect())
-            {
                 return ShowErrorMessageAndReturnFalse("selectedIncorrectAccount");
-            }
+
             if (CurrentPaymentMethodAlredyHave(paymentMethod))
-            {
                 return ShowErrorMessageAndReturnFalse("alreadyHave");
-            }
 
             return true;
         }
@@ -131,8 +127,8 @@ namespace OpenCBS.GUI.Configuration.PaymentMethod
 
         private bool SelectedAccountIncorrect()
         {
-            return _comboBoxAccounts.Text == ""
-                   && (_comboBoxAccounts.SelectedItem == null
+            return string.IsNullOrEmpty(_comboBoxAccounts.Text)
+                   || (_comboBoxAccounts.SelectedItem == null
                        || _accounts.FirstOrDefault(x => x.AccountNumber == ((Account) _comboBoxAccounts.SelectedItem).AccountNumber) == null);
         }
 
