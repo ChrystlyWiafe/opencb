@@ -151,9 +151,6 @@
   <data name="startDateLabel.Text" xml:space="preserve">
     <value>Data de início:</value>
   </data>
-  <data name="amountTextbox.Text" xml:space="preserve">
-    <value>Valor:</value>
-  </data>
   <data name="newInstallmentsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 16</value>
   </data>
@@ -162,6 +159,9 @@
   </data>
   <data name="buttonsPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>950, 50</value>
+  </data>
+  <data name="trancheConfigurationPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>950, 100</value>
   </data>
   <data name="_lbPaymentMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 21</value>
@@ -189,9 +189,6 @@
   </data>
   <data name="amountLabel.Text" xml:space="preserve">
     <value>Valor:</value>
-  </data>
-  <data name="trancheConfigurationPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 100</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>950, 437</value>
