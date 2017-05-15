@@ -79,7 +79,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         && entry.Debit != null
                         && entry.Credit != null
                         && !string.IsNullOrEmpty(entry.Debit.AccountNumber)
-                        && !string.IsNullOrEmpty(entry.Credit.AccountNumber))
+                        && !string.IsNullOrEmpty(entry.Credit.AccountNumber)
+                        && entry.Debit.AccountNumber != entry.Credit.AccountNumber)
                 .Select(entry => new Booking
                 {
                     Debit = entry.Debit,
@@ -127,6 +128,11 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     throw new OpenCbsException("Payment method id is empty");
 
                 var paymentMethodAccountNumber = disbursment.PaymentMethod.AccountNumber;
+                var principalAccount = _product.UseClientAccountForPrincipal
+                    ? clientAccountNumber
+                    : _product.PrincipalAccountNumber;
+
+                var commissionsAmount = 0m;
 
                 foreach (var commission in disbursment.Commissions)
                 {
@@ -136,24 +142,23 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             .GetEntryFeeAccountNumberByLoanProductEntryFeeId(commission.LoanEntryFee.ProductEntryFeeId,
                                 _transaction);
 
+                    commissionsAmount += commission.Fee.Value;
+
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = paymentMethodAccountNumber },
+                        Debit = new Account {AccountNumber = principalAccount},
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = "Commission (Registration Fee) for "+_contractCode,
+                        Description = string.Format("Commission ({1}) for {0}" ,_contractCode,commission?.LoanEntryFee?.ProductEntryFee?.Name),
                         LoanEventId = disbursment.Id
                     });
                 }
-                var principalAccount = _product.UseClientAccountForPrincipal
-                    ? clientAccountNumber
-                    : _product.PrincipalAccountNumber;
 
-                list.Add(new BookingEntry
+                list.Insert(0, new BookingEntry
                 {
-                    Debit = new Account { AccountNumber = principalAccount },
-                    Credit = new Account { AccountNumber = paymentMethodAccountNumber },
-                    Amount = disbursment.Amount.Value,
+                    Debit = new Account {AccountNumber = principalAccount},
+                    Credit = new Account {AccountNumber = paymentMethodAccountNumber},
+                    Amount = disbursment.Amount.Value - commissionsAmount,
                     Description = "Loan disbursement for " + _contractCode,
                     LoanEventId = disbursment.Id
                 });
