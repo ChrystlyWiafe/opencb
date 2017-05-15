@@ -204,37 +204,37 @@
     <value>Adicionar seguimento</value>
   </data>
   <data name="listViewGuarantors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 16</value>
+    <value>0, 32</value>
   </data>
   <data name="listViewGuarantors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1097, 274</value>
+    <value>1097, 258</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1097, 16</value>
+    <value>1097, 32</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 274</value>
+    <value>146, 258</value>
   </data>
   <data name="lblGuarantorsList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1243, 16</value>
+    <value>1243, 32</value>
   </data>
   <data name="lblGuarantorsList.Text" xml:space="preserve">
     <value>Lista de Fiadors</value>
   </data>
   <data name="listViewCollaterals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 16</value>
+    <value>0, 32</value>
   </data>
   <data name="listViewCollaterals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1097, 249</value>
+    <value>1097, 233</value>
   </data>
   <data name="pnlCollateralButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1097, 16</value>
+    <value>1097, 32</value>
   </data>
   <data name="pnlCollateralButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 249</value>
+    <value>146, 233</value>
   </data>
   <data name="lblCollaterals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1243, 16</value>
+    <value>1243, 32</value>
   </data>
   <data name="lblCollaterals.Text" xml:space="preserve">
     <value>Lista de garantias</value>
@@ -255,13 +255,13 @@
     <value>Descrição</value>
   </data>
   <data name="btnPrintGuarantors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 243</value>
+    <value>3, 227</value>
   </data>
   <data name="btnPrintGuarantors.Text" xml:space="preserve">
     <value>Imprimir</value>
   </data>
   <data name="pnlGuarantorButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 268</value>
+    <value>140, 252</value>
   </data>
   <data name="buttonSelectAGarantors.Text" xml:space="preserve">
     <value>Adicionar</value>
@@ -269,20 +269,11 @@
   <data name="buttonModifyAGarantors.Text" xml:space="preserve">
     <value>Modificar</value>
   </data>
-  <data name="buttonViewAGarantors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="buttonViewAGarantors.Text" xml:space="preserve">
     <value>Veja</value>
   </data>
-  <data name="buttonDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 100</value>
-  </data>
   <data name="buttonDelete.Text" xml:space="preserve">
     <value>Apagar</value>
-  </data>
-  <data name="lblCreditCurrency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 131</value>
   </data>
   <data name="lblCreditCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 16</value>
@@ -364,7 +355,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        HQAAAk1TRnQBSQFMAgEBBQEAAfQBAAH0AQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HQAAAk1TRnQBSQFMAgEBBQEAAfwBAAH8AQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1350,7 +1341,7 @@
     <value>159, 31</value>
   </data>
   <data name="lbRollover2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 27</value>
+    <value>150, 30</value>
   </data>
   <data name="lbRollover2.Text" xml:space="preserve">
     <value>Renovação</value>
@@ -1359,10 +1350,7 @@
     <value>150, 28</value>
   </data>
   <data name="tbTargetAccount2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 134</value>
-  </data>
-  <data name="lblTermTransferToAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 131</value>
+    <value>159, 137</value>
   </data>
   <data name="lblTermTransferToAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 16</value>
@@ -1371,16 +1359,13 @@
     <value>Transferência para conta</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 114</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 111</value>
+    <value>159, 117</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 20</value>
   </data>
   <data name="btSearchContract2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 134</value>
+    <value>354, 137</value>
   </data>
   <data name="btSearchContract2.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 28</value>
