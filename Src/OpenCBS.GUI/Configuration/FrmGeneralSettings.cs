@@ -467,7 +467,6 @@ namespace OpenCBS.GUI.Configuration
             this.tabControlGeneralSettings.Multiline = true;
             this.tabControlGeneralSettings.Name = "tabControlGeneralSettings";
             this.tabControlGeneralSettings.SelectedIndex = 0;
-            this.tabControlGeneralSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             // 
             // tabPage1
             // 
@@ -599,7 +598,6 @@ namespace OpenCBS.GUI.Configuration
             resources.GetString("cbxValue.Items"),
             resources.GetString("cbxValue.Items1")});
             this.cbxValue.Name = "cbxValue";
-            this.cbxValue.Visible = false;
             this.cbxValue.SelectionChangeCommitted += new System.EventHandler(this.comboBoxValue_SelectionChangeCommitted);
             this.cbxValue.SelectedValueChanged += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -607,7 +605,6 @@ namespace OpenCBS.GUI.Configuration
             // 
             resources.ApplyResources(this.textBoxGeneralParameterValue, "textBoxGeneralParameterValue");
             this.textBoxGeneralParameterValue.Name = "textBoxGeneralParameterValue";
-            
             this.textBoxGeneralParameterValue.Leave += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // tabPageProvioningRules

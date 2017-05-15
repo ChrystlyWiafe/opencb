@@ -172,17 +172,29 @@
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Provisões (%)</value>
   </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>Provisão de Juros</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Provisão de Penalidade:</value>
+  </data>
   <data name="groupBoxAddUser.Text" xml:space="preserve">
     <value>Regras de provisão</value>
   </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 16</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Provisão de Penalidade:</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 16</value>
+    <value>110, 16</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Provisão de Juros</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
+    <value>42, 16</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Dia(s)</value>
@@ -191,7 +203,7 @@
     <value>Gravar</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
+    <value>42, 16</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Dia(s)</value>
@@ -203,7 +215,7 @@
     <value>Nº máximo de dias:</value>
   </data>
   <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
+    <value>103, 16</value>
   </data>
   <data name="labelPassword.Text" xml:space="preserve">
     <value>Provisão de Olb:</value>
@@ -880,17 +892,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Configurações gerais</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Provisão de Penalidade:</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>#</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Provisão de Juros</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Provisão de Penalidade:</value>
   </data>
 </root>

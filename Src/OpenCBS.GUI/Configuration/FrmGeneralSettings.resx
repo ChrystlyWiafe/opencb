@@ -123,10 +123,6 @@
   <data name="&gt;&gt;textBoxGeneralParameterName.Name" xml:space="preserve">
     <value>textBoxGeneralParameterName</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib" />
-  <data name="textBoxGeneralParameterName.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonPublicHolidayDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -153,8 +149,8 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="butExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 18</value>
   </data>
   <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -162,8 +158,9 @@
   <data name="lvGeneralParameters.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 308</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Provisioning of penalty:</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
+    <value>124</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -177,7 +174,6 @@
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="columnHeader6.Width" type="System.Int32, mscorlib">
     <value>129</value>
   </data>
@@ -196,6 +192,9 @@
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="labelPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -204,9 +203,6 @@
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 308</value>
-  </data>
-  <data name="&gt;&gt;lvGeneralParameters.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
     <value>splitContainer2</value>
@@ -222,9 +218,6 @@
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>
-  </data>
-  <data name="butExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
     <value>splitContainer2</value>
@@ -271,11 +264,11 @@
   <data name="radioButtonYes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
-    <value>124</value>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
-  <data name="listViewLoanScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 310</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Provisioning of penalty:</value>
   </data>
   <data name="listViewProvisioningRules.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -286,8 +279,8 @@
   <data name="buttonSaveScale.Location" type="System.Drawing.Point, System.Drawing">
     <value>547, 20</value>
   </data>
-  <data name="&gt;&gt;unitColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;listViewPublicHolidays.Name" xml:space="preserve">
+    <value>listViewPublicHolidays</value>
   </data>
   <data name="&gt;&gt;tabPageProvioningRules.Name" xml:space="preserve">
     <value>tabPageProvioningRules</value>
@@ -322,6 +315,12 @@
   <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
     <value>splitContainer2.Panel2</value>
   </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBoxAddUser</value>
+  </data>
   <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
     <value>groupBox5</value>
   </data>
@@ -331,8 +330,8 @@
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>776, 50</value>
   </data>
-  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="buttonUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 52</value>
@@ -358,11 +357,14 @@
   <data name="buttonSaveScale.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="buttonDeleteScale.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="comboBoxSavings.Items1" xml:space="preserve">
+    <value>IC/BC/CS/ID</value>
   </data>
   <data name="&gt;&gt;listViewLoanScale.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
   <data name="&gt;&gt;groupBoxValue.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -385,17 +387,11 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 16</value>
-  </data>
   <data name="&gt;&gt;textBoxNbOfDaysMax.Parent" xml:space="preserve">
     <value>groupBoxAddUser</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
-  </data>
-  <data name="butImport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 25</value>
   </data>
   <data name="comboBoxSavings.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -421,11 +417,11 @@
   <data name="radioButtonNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 11</value>
   </data>
+  <data name="buttonUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 25</value>
+  </data>
   <data name="&gt;&gt;splitContainer3.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>General Settings</value>
@@ -442,8 +438,8 @@
   <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 25</value>
   </data>
   <data name="&gt;&gt;textBoxMinScale.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -454,6 +450,9 @@
   <data name="&gt;&gt;clbxPendingSavings.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="listViewProvisioningRules.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
   <data name="groupBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -462,9 +461,6 @@
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonPublicHolidayDelete.Parent" xml:space="preserve">
-    <value>groupBox5</value>
   </data>
   <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 25</value>
@@ -480,6 +476,9 @@
   </data>
   <data name="&gt;&gt;unitColumnHeader.Name" xml:space="preserve">
     <value>unitColumnHeader</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>209</value>
   </data>
   <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -517,8 +516,8 @@
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>groupBoxAddUser</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="buttonUpdate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;groupBoxAddUser.Name" xml:space="preserve">
     <value>groupBoxAddUser</value>
@@ -526,8 +525,8 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="cbxValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -543,9 +542,6 @@
   </data>
   <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
   </data>
   <data name="buttonSaveScale.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -565,8 +561,8 @@
   <data name="labelUsername.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 16</value>
+  <data name="&gt;&gt;buttonPublicHolidayDelete.Parent" xml:space="preserve">
+    <value>groupBox5</value>
   </data>
   <data name="buttonPublicHolidayDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 25</value>
@@ -589,20 +585,20 @@
   <data name="butExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer3</value>
+  <data name="tabControlGeneralSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
-    <value>columnHeader11</value>
+  <data name="labelScaleMin.Text" xml:space="preserve">
+    <value>Minimum Amount:</value>
+  </data>
+  <data name="butImport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 25</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="textBoxGeneralParameterValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 74</value>
-  </data>
-  <data name="textBoxGeneralParameterValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;textBoxGeneralParameterValue.Name" xml:space="preserve">
     <value>textBoxGeneralParameterValue</value>
@@ -613,8 +609,8 @@
   <data name="groupBox5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -651,6 +647,9 @@
   </data>
   <data name="&gt;&gt;butExport.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;labelScaleMin.Name" xml:space="preserve">
     <value>labelScaleMin</value>
@@ -689,10 +688,10 @@
     <value>Value</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=15.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="&gt;&gt;lvGeneralParameters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -715,23 +714,32 @@
   <data name="groupBoxValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
   <data name="&gt;&gt;dateTimePickerPublicHoliday.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
   <data name="&gt;&gt;buttonUpdate.Name" xml:space="preserve">
     <value>buttonUpdate</value>
   </data>
-  <data name="buttonUpdate.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 74</value>
+  <data name="&gt;&gt;radioButtonYes.Parent" xml:space="preserve">
+    <value>groupBoxValue</value>
   </data>
   <data name="&gt;&gt;textBoxProvisioningInterest.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
   <data name="&gt;&gt;splitContainer3.Panel2.Parent" xml:space="preserve">
     <value>splitContainer3</value>
+  </data>
+  <data name="textBoxGeneralParameterName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>#</value>
@@ -757,11 +765,8 @@
   <data name="&gt;&gt;textBoxProvisioningOlb.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
-  <data name="buttonSaveScale.Text" xml:space="preserve">
-    <value>Save</value>
+  <data name="&gt;&gt;labelUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textBoxNbOfDaysMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 80</value>
@@ -793,6 +798,9 @@
   <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
     <value>splitContainer1</value>
   </data>
+  <data name="buttonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>groupBoxAddUser</value>
   </data>
@@ -805,11 +813,14 @@
   <data name="tabControlGeneralSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>776, 453</value>
   </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Description</value>
+  <data name="butImport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="listViewPublicHolidays.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -820,9 +831,6 @@
   <data name="textBoxMinScale.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 22</value>
   </data>
-  <data name="textBoxProvisioningOlb.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;tabPageLoanScale.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -831,6 +839,9 @@
   </data>
   <data name="tabPageLoanScale.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="buttonPublicHolidayDelete.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -841,17 +852,14 @@
   <data name="tabPageLoanScale.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 413</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPageProvioningRules.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;lvGeneralParameters.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="textBoxGeneralParameterName.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -859,8 +867,8 @@
   <data name="&gt;&gt;textBoxProvisioningOlb.Parent" xml:space="preserve">
     <value>groupBoxAddUser</value>
   </data>
-  <data name="cbxValue.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -868,8 +876,8 @@
   <data name="textBoxProvisioningPenalty.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
+  <data name="&gt;&gt;cbxValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cbxValue.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -901,12 +909,6 @@
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
-  <data name="comboBoxSavings.Items1" xml:space="preserve">
-    <value>IC/BC/CS/ID</value>
-  </data>
-  <data name="listViewLoanScale.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 80</value>
   </data>
@@ -915,9 +917,6 @@
   </data>
   <data name="&gt;&gt;comboBoxSavings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -958,8 +957,8 @@
   <data name="textBoxMinScale.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="butImport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
+    <value>columnHeader11</value>
   </data>
   <data name="clbxPendingSavings.Items" xml:space="preserve">
     <value> </value>
@@ -979,8 +978,11 @@
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;labelUsername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 74</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="clbxPendingSavings.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1018,8 +1020,8 @@
   <data name="groupBoxAddUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 298</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 80</value>
+  <data name="buttonDeleteScale.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
     <value>openFileDialog</value>
@@ -1030,14 +1032,14 @@
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 57</value>
   </data>
-  <data name="listViewProvisioningRules.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="cbxValue.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
+    <value>columnHeader6</value>
   </data>
   <data name="groupBoxAddUser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1057,8 +1059,11 @@
   <data name="buttonPublicHolidaysSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>620, 57</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageProvioningRules.Parent" xml:space="preserve">
+    <value>tabControlGeneralSettings</value>
   </data>
   <data name="labelMinExter.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 16</value>
@@ -1072,8 +1077,8 @@
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 315</value>
   </data>
-  <data name="labelScaleMin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="labelUsername.Text" xml:space="preserve">
+    <value>Number of days min:</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 32</value>
@@ -1093,8 +1098,8 @@
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="labelScaleMin.Text" xml:space="preserve">
-    <value>Minimum Amount:</value>
+  <data name="&gt;&gt;lvGeneralParameters.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1104,9 +1109,6 @@
   </data>
   <data name="textBoxPublicHolidayDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 57</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>#</value>
   </data>
   <data name="&gt;&gt;buttonDeleteScale.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1715,8 +1717,8 @@
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="buttonPublicHolidaysSave.Text" xml:space="preserve">
-    <value>Save</value>
+  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBoxValue.Name" xml:space="preserve">
     <value>groupBoxValue</value>
@@ -1727,9 +1729,6 @@
   <data name="splitContainer2.IsSplitterFixed" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>584, 18</value>
-  </data>
   <data name="splitContainer3.IsSplitterFixed" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1739,17 +1738,20 @@
   <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
     <value>splitContainer1</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelScaleMax.Text" xml:space="preserve">
+    <value>Maximum Amount:</value>
+  </data>
+  <data name="&gt;&gt;labelScaleMax.Name" xml:space="preserve">
+    <value>labelScaleMax</value>
   </data>
   <data name="textBoxMaxScale.Location" type="System.Drawing.Point, System.Drawing">
     <value>153, 50</value>
   </data>
-  <data name="&gt;&gt;listViewPublicHolidays.Name" xml:space="preserve">
-    <value>listViewPublicHolidays</value>
+  <data name="&gt;&gt;radioButtonNo.Name" xml:space="preserve">
+    <value>radioButtonNo</value>
   </data>
   <data name="&gt;&gt;buttonSaveScale.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1763,8 +1765,8 @@
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>776, 504</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="&gt;&gt;splitContainer3.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer3</value>
   </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>620, 80</value>
@@ -1790,8 +1792,11 @@
   <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;radioButtonNo.Name" xml:space="preserve">
-    <value>radioButtonNo</value>
+  <data name="textBoxProvisioningOlb.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonSaveScale.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -1814,11 +1819,11 @@
   <data name="lvGeneralParameters.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
   </data>
-  <data name="&gt;&gt;radioButtonYes.Parent" xml:space="preserve">
-    <value>groupBoxValue</value>
+  <data name="tabPageProvioningRules.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="buttonUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1829,8 +1834,11 @@
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="&gt;&gt;lvGeneralParameters.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>#</value>
   </data>
   <data name="buttonPublicHolidayDelete.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1852,12 +1860,6 @@
   </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 16</value>
   </data>
   <data name="&gt;&gt;textBoxNbOfDaysMin.Name" xml:space="preserve">
     <value>textBoxNbOfDaysMin</value>
@@ -1889,6 +1891,9 @@
   <data name="textBoxProvisioningPenalty.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 22</value>
   </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
   <data name="&gt;&gt;textBoxProvisioningInterest.Parent" xml:space="preserve">
     <value>groupBoxAddUser</value>
   </data>
@@ -1897,6 +1902,9 @@
   </data>
   <data name="&gt;&gt;tabControlGeneralSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="labelUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 40</value>
@@ -1907,17 +1915,17 @@
   <data name="textBoxPublicHolidayDescription.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="textBoxGeneralParameterName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
   </data>
   <data name="textBoxMaxScale.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 22</value>
   </data>
   <data name="&gt;&gt;listViewPublicHolidays.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelUsername.Name" xml:space="preserve">
+    <value>labelUsername</value>
   </data>
   <data name="&gt;&gt;labelUsername.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1997,8 +2005,8 @@
   <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPageProvioningRules.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="textBoxGeneralParameterValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="buttonPublicHolidaysSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2009,8 +2017,8 @@
   <data name="&gt;&gt;buttonSaveScale.Name" xml:space="preserve">
     <value>buttonSaveScale</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
-    <value>columnHeader6</value>
+  <data name="&gt;&gt;labelMaxExter.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -2024,11 +2032,11 @@
   <data name="buttonDeleteScale.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 25</value>
   </data>
+  <data name="labelScaleMin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;radioButtonYes.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
-    <value>209</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
     <value>Minimum Amount</value>
@@ -2038,9 +2046,6 @@
   </data>
   <data name="&gt;&gt;textBoxMinScale.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 25</value>
   </data>
   <data name="&gt;&gt;comboBoxSavings.Parent" xml:space="preserve">
     <value>groupBoxValue</value>
@@ -2072,8 +2077,8 @@
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;textBoxMaxScale.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="butExport.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -2084,8 +2089,8 @@
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 413</value>
   </data>
-  <data name="&gt;&gt;lvGeneralParameters.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="labelScaleMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2096,17 +2101,17 @@
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Add Scale</value>
   </data>
-  <data name="tabControlGeneralSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;textBoxNbOfDaysMax.Name" xml:space="preserve">
+    <value>textBoxNbOfDaysMax</value>
   </data>
-  <data name="&gt;&gt;labelScaleMax.Name" xml:space="preserve">
-    <value>labelScaleMax</value>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Maximum Number of Days Past Due</value>
   </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;labelScaleMin.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="radioButtonYes.Text" xml:space="preserve">
     <value>Yes</value>
@@ -2114,14 +2119,14 @@
   <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
     <value>columnHeader8</value>
   </data>
-  <data name="butExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 18</value>
+  <data name="textBoxGeneralParameterName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 22</value>
   </data>
   <data name="&gt;&gt;radioButtonNo.Parent" xml:space="preserve">
     <value>groupBoxValue</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 16</value>
   </data>
   <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
     <value>buttonOK</value>
@@ -2131,6 +2136,9 @@
   </data>
   <data name="listViewPublicHolidays.Size" type="System.Drawing.Size, System.Drawing">
     <value>603, 315</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
   </data>
   <data name="columnHeader12.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -2150,8 +2158,8 @@
   <data name="butImport.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 18</value>
   </data>
-  <data name="textBoxGeneralParameterName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 22</value>
+  <data name="labelMaxExter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -2174,8 +2182,8 @@
   <data name="&gt;&gt;dateTimePickerPublicHoliday.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelMaxExter.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="labelScaleMin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;buttonPublicHolidayDelete.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2195,9 +2203,6 @@
   <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="lvGeneralParameters.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -2210,11 +2215,11 @@
   <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
     <value>columnHeader4</value>
   </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;cbxValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="buttonPublicHolidaysSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -2222,8 +2227,8 @@
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonUpdate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>Date</value>
@@ -2231,8 +2236,11 @@
   <data name="butImport.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="&gt;&gt;tabPageProvioningRules.Parent" xml:space="preserve">
-    <value>tabControlGeneralSettings</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 16</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2242,6 +2250,9 @@
   </data>
   <data name="&gt;&gt;butExport.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
     <value>buttonCancel</value>
@@ -2257,9 +2268,6 @@
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
-    <value>100</value>
   </data>
   <data name="&gt;&gt;labelScaleMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2282,8 +2290,8 @@
   <data name="explanationColumnHeader.Width" type="System.Int32, mscorlib">
     <value>366</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Name:</value>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>584, 18</value>
   </data>
   <data name="comboBoxSavings.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 24</value>
@@ -2291,8 +2299,8 @@
   <data name="buttonOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;labelUsername.Name" xml:space="preserve">
-    <value>labelUsername</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 16</value>
   </data>
   <data name="labelPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2300,8 +2308,8 @@
   <data name="&gt;&gt;butExport.Name" xml:space="preserve">
     <value>butExport</value>
   </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="tabPageProvioningRules.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2317,6 +2325,9 @@
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>453</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>206</value>
   </data>
   <data name="&gt;&gt;dateTimePickerPublicHoliday.Name" xml:space="preserve">
     <value>dateTimePickerPublicHoliday</value>
@@ -2336,8 +2347,8 @@
   <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
     <value>splitContainer1</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="buttonSaveScale.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2348,11 +2359,11 @@
   <data name="labelMinExter.Location" type="System.Drawing.Point, System.Drawing">
     <value>263, 22</value>
   </data>
-  <data name="buttonPublicHolidayDelete.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
+    <value>columnHeader12</value>
   </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmGeneralSettings</value>
@@ -2372,8 +2383,11 @@
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 32</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listViewLoanScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>768, 310</value>
   </data>
   <data name="listViewPublicHolidays.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -2387,14 +2401,17 @@
   <data name="clbxPendingSavings.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 38</value>
   </data>
-  <data name="&gt;&gt;textBoxNbOfDaysMax.Name" xml:space="preserve">
-    <value>textBoxNbOfDaysMax</value>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBoxAddUser</value>
+  <data name="groupBoxValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 59</value>
   </data>
-  <data name="labelScaleMax.Text" xml:space="preserve">
-    <value>Maximum Amount:</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Name:</value>
   </data>
   <data name="textBoxGeneralParameterValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2402,8 +2419,8 @@
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 16</value>
   </data>
-  <data name="labelUsername.Text" xml:space="preserve">
-    <value>Number of days min:</value>
+  <data name="butExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="columnHeader7.Text" xml:space="preserve">
     <value>Date</value>
@@ -2429,14 +2446,11 @@
   <data name="&gt;&gt;buttonPublicHolidayDelete.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;groupBoxValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="columnHeader12.Text" xml:space="preserve">
     <value>Provisioning of Interest</value>
   </data>
-  <data name="&gt;&gt;buttonSaveScale.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
   </data>
   <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
     <value>columnHeader9</value>
@@ -2453,17 +2467,17 @@
   <data name="&gt;&gt;textBoxGeneralParameterName.Parent" xml:space="preserve">
     <value>groupBox3</value>
   </data>
-  <data name="butExport.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;labelScaleMin.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
   </data>
   <data name="columnHeader13.Width" type="System.Int32, mscorlib">
     <value>120</value>
+  </data>
+  <data name="&gt;&gt;textBoxMaxScale.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2498,9 +2512,6 @@
   <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
     <value>columnHeader3</value>
   </data>
-  <data name="labelMaxExter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
   </data>
@@ -2510,23 +2521,17 @@
   <data name="labelMinExter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
-    <value>columnHeader12</value>
-  </data>
   <data name="&gt;&gt;lvGeneralParameters.Name" xml:space="preserve">
     <value>lvGeneralParameters</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="listViewLoanScale.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="butExport.Text" xml:space="preserve">
+    <value>Export</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Maximum Amount</value>
@@ -2567,32 +2572,32 @@
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+  <data name="textBoxGeneralParameterName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;unitColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
   </data>
   <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelScaleMin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;groupBoxValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxGeneralParameterValue.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
-    <value>206</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 80</value>
   </data>
-  <data name="buttonUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 25</value>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBoxAddUser.Parent" xml:space="preserve">
     <value>tabPageProvioningRules</value>
@@ -2606,8 +2611,8 @@
   <data name="listViewProvisioningRules.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 298</value>
   </data>
-  <data name="groupBoxValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 59</value>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 413</value>
@@ -2642,8 +2647,8 @@
   <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
     <value>splitContainer2</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="buttonPublicHolidaysSave.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="textBoxProvisioningOlb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2656,9 +2661,6 @@
   </data>
   <data name="listViewPublicHolidays.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
   </data>
   <data name="clbxPendingSavings.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
