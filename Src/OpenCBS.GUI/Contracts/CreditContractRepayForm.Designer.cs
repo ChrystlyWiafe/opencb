@@ -168,6 +168,7 @@ namespace OpenCBS.GUI.Contracts
             // 
             // listViewRepayments
             // 
+            resources.ApplyResources(this.listViewRepayments, "listViewRepayments");
             this.listViewRepayments.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -178,7 +179,6 @@ namespace OpenCBS.GUI.Contracts
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-            resources.ApplyResources(this.listViewRepayments, "listViewRepayments");
             this.listViewRepayments.FullRowSelect = true;
             this.listViewRepayments.GridLines = true;
             this.listViewRepayments.MultiSelect = false;
@@ -232,10 +232,10 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBoxButton
             // 
+            resources.ApplyResources(this.groupBoxButton, "groupBoxButton");
             this.groupBoxButton.Controls.Add(this._btAddExchangeRate);
             this.groupBoxButton.Controls.Add(this.buttonCancel);
             this.groupBoxButton.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.groupBoxButton, "groupBoxButton");
             this.groupBoxButton.Name = "groupBoxButton";
             this.groupBoxButton.TabStop = false;
             // 
@@ -259,6 +259,7 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBoxDetails
             // 
+            resources.ApplyResources(this.groupBoxDetails, "groupBoxDetails");
             this.groupBoxDetails.Controls.Add(this.buttonSelectAGroupPerson);
             this.groupBoxDetails.Controls.Add(this.textBoxComment);
             this.groupBoxDetails.Controls.Add(this.cmbPaymentMethod);
@@ -278,15 +279,14 @@ namespace OpenCBS.GUI.Contracts
             this.groupBoxDetails.Controls.Add(this.labelCommentOptional);
             this.groupBoxDetails.Controls.Add(this.labelComment);
             this.groupBoxDetails.Controls.Add(this._lbLoanCode);
-            resources.ApplyResources(this.groupBoxDetails, "groupBoxDetails");
             this.groupBoxDetails.Name = "groupBoxDetails";
             this.groupBoxDetails.TabStop = false;
             // 
             // buttonSelectAGroupPerson
             // 
+            resources.ApplyResources(this.buttonSelectAGroupPerson, "buttonSelectAGroupPerson");
             this.buttonSelectAGroupPerson.BackColor = System.Drawing.Color.Transparent;
             this.buttonSelectAGroupPerson.BackgroundImage = global::OpenCBS.GUI.Properties.Resources.group;
-            resources.ApplyResources(this.buttonSelectAGroupPerson, "buttonSelectAGroupPerson");
             this.buttonSelectAGroupPerson.Name = "buttonSelectAGroupPerson";
             this.buttonSelectAGroupPerson.UseVisualStyleBackColor = false;
             this.buttonSelectAGroupPerson.Click += new System.EventHandler(this.buttonSelectAGroupPerson_Click);
@@ -298,10 +298,10 @@ namespace OpenCBS.GUI.Contracts
             // 
             // cmbPaymentMethod
             // 
+            resources.ApplyResources(this.cmbPaymentMethod, "cmbPaymentMethod");
             this.cmbPaymentMethod.DisplayMember = "Name";
             this.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPaymentMethod.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbPaymentMethod, "cmbPaymentMethod");
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
             this.cmbPaymentMethod.ValueMember = "Id";
             this.cmbPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentMethod_SelectedIndexChanged);
@@ -322,12 +322,12 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBoxAmount
             // 
+            resources.ApplyResources(this.groupBoxAmount, "groupBoxAmount");
             this.groupBoxAmount.Controls.Add(this.nudICAmount);
             this.groupBoxAmount.Controls.Add(this.panelEC);
             this.groupBoxAmount.Controls.Add(this._lbICName);
             this.groupBoxAmount.Controls.Add(this._lbICAmountMinMax);
             this.groupBoxAmount.Controls.Add(this.lblAmountToGoBackNormal);
-            resources.ApplyResources(this.groupBoxAmount, "groupBoxAmount");
             this.groupBoxAmount.Name = "groupBoxAmount";
             this.groupBoxAmount.TabStop = false;
             // 
@@ -339,11 +339,11 @@ namespace OpenCBS.GUI.Contracts
             // 
             // panelEC
             // 
+            resources.ApplyResources(this.panelEC, "panelEC");
             this.panelEC.Controls.Add(this.nudECAmount);
             this.panelEC.Controls.Add(this._lbECAmountToGoBackNormal);
             this.panelEC.Controls.Add(this._lbECAmountMinMax);
             this.panelEC.Controls.Add(this._lbECName);
-            resources.ApplyResources(this.panelEC, "panelEC");
             this.panelEC.Name = "panelEC";
             // 
             // nudECAmount
@@ -397,10 +397,10 @@ namespace OpenCBS.GUI.Contracts
             // 
             // gbTypeOfRepayment
             // 
+            resources.ApplyResources(this.gbTypeOfRepayment, "gbTypeOfRepayment");
             this.gbTypeOfRepayment.Controls.Add(this.rbProportionPayment);
             this.gbTypeOfRepayment.Controls.Add(this._rbKeepNotInitialSchedule);
             this.gbTypeOfRepayment.Controls.Add(this._rbKeepInitialSchedule);
-            resources.ApplyResources(this.gbTypeOfRepayment, "gbTypeOfRepayment");
             this.gbTypeOfRepayment.Name = "gbTypeOfRepayment";
             this.gbTypeOfRepayment.TabStop = false;
             // 
@@ -418,28 +418,28 @@ namespace OpenCBS.GUI.Contracts
             // 
             // _rbKeepInitialSchedule
             // 
-            this._rbKeepInitialSchedule.Checked = true;
             resources.ApplyResources(this._rbKeepInitialSchedule, "_rbKeepInitialSchedule");
+            this._rbKeepInitialSchedule.Checked = true;
             this._rbKeepInitialSchedule.Name = "_rbKeepInitialSchedule";
             this._rbKeepInitialSchedule.TabStop = true;
             this._rbKeepInitialSchedule.Click += new System.EventHandler(this._rbKeepInitialSchedule_Click);
             // 
             // dtpRepaymentDate
             // 
-            this.dtpRepaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             resources.ApplyResources(this.dtpRepaymentDate, "dtpRepaymentDate");
+            this.dtpRepaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpRepaymentDate.Name = "dtpRepaymentDate";
             this.dtpRepaymentDate.CloseUp += new System.EventHandler(this._dateTimePicker_CloseUp);
             this.dtpRepaymentDate.KeyUp += new System.Windows.Forms.KeyEventHandler(this._dateTimePicker_KeyUp);
             // 
             // groupBoxRepayDetails
             // 
+            resources.ApplyResources(this.groupBoxRepayDetails, "groupBoxRepayDetails");
             this.groupBoxRepayDetails.Controls.Add(this._lbECPrincipal);
             this.groupBoxRepayDetails.Controls.Add(this._lbICPrincipal);
             this.groupBoxRepayDetails.Controls.Add(this.labelRepayPrincipal);
             this.groupBoxRepayDetails.Controls.Add(this.groupBox1);
             this.groupBoxRepayDetails.Controls.Add(this.groupBox2);
-            resources.ApplyResources(this.groupBoxRepayDetails, "groupBoxRepayDetails");
             this.groupBoxRepayDetails.Name = "groupBoxRepayDetails";
             this.groupBoxRepayDetails.TabStop = false;
             // 
@@ -460,12 +460,12 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.lbCInterest);
             this.groupBox1.Controls.Add(this.textBoxInterest);
             this.groupBox1.Controls.Add(this.lbInterest);
             this.groupBox1.Controls.Add(this.labelRepayInterest);
             this.groupBox1.Controls.Add(this.checkBoxInterests);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -499,6 +499,7 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this._lbECCommissions);
             this.groupBox2.Controls.Add(this._lbICCommisions);
             this.groupBox2.Controls.Add(this.textBoxCommission);
@@ -508,7 +509,6 @@ namespace OpenCBS.GUI.Contracts
             this.groupBox2.Controls.Add(this.labelRepayCommissions);
             this.groupBox2.Controls.Add(this.checkBoxFees);
             this.groupBox2.Controls.Add(this.labelRepayFees);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
