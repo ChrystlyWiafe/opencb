@@ -53,11 +53,11 @@ namespace OpenCBS.GUI
             // 
             // listViewInstallmentTypes
             // 
+            resources.ApplyResources(this.listViewInstallmentTypes, "listViewInstallmentTypes");
             this.listViewInstallmentTypes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            resources.ApplyResources(this.listViewInstallmentTypes, "listViewInstallmentTypes");
             this.listViewInstallmentTypes.FullRowSelect = true;
             this.listViewInstallmentTypes.GridLines = true;
             this.listViewInstallmentTypes.MultiSelect = false;
@@ -121,6 +121,7 @@ namespace OpenCBS.GUI
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.buttonDelete);
             this.groupBox1.Controls.Add(this.buttonEdit);
             this.groupBox1.Controls.Add(this.labelName);
@@ -130,7 +131,6 @@ namespace OpenCBS.GUI
             this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.numericUpDownMonths);
             this.groupBox1.Controls.Add(this.labelNbMonths);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
