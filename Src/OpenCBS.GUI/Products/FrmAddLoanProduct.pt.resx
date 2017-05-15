@@ -933,9 +933,6 @@ Solidário</value>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Fechar</value>
   </data>
-  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 17</value>
-  </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>Gravar</value>
   </data>
