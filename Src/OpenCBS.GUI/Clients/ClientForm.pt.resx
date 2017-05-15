@@ -355,7 +355,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        HQAAAk1TRnQBSQFMAgEBBQEAAfwBAAH8AQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        HQAAAk1TRnQBSQFMAgEBBQEAAQQBAQEEAQEBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1049,6 +1049,12 @@
   <data name="colPenalties.Text" xml:space="preserve">
     <value>Juros de moura</value>
   </data>
+  <data name="colOverduePrincipal.Text" xml:space="preserve">
+    <value>Capital vencido</value>
+  </data>
+  <data name="colOverdueDays.Text" xml:space="preserve">
+    <value>Dias Vencidos</value>
+  </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>Cancelavel</value>
   </data>
@@ -1072,6 +1078,12 @@
   </data>
   <data name="colCancelDate1.Text" xml:space="preserve">
     <value>Cancelar data</value>
+  </data>
+  <data name="chxSystemEvents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 20</value>
+  </data>
+  <data name="chxSystemEvents.Text" xml:space="preserve">
+    <value>Movimentos do sistema</value>
   </data>
   <data name="btnPrintLoanEvents.Text" xml:space="preserve">
     <value>Imprimir os movimentos</value>
