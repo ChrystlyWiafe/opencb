@@ -210,6 +210,7 @@ namespace OpenCBS.GUI.Clients
             this.tabPageLoansDetails = new System.Windows.Forms.TabPage();
             this.tclLoanDetails = new System.Windows.Forms.TabControl();
             this.tabPageInstallments = new System.Windows.Forms.TabPage();
+            this._loanDetailsScheduleControl = new OpenCBS.Controls.ScheduleControl();
             this.loanDetailsButtonsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSaveLoan = new System.Windows.Forms.Button();
             this.buttonLoanPreview = new System.Windows.Forms.Button();
@@ -318,6 +319,7 @@ namespace OpenCBS.GUI.Clients
             this.lblLocCurrencyMax = new System.Windows.Forms.Label();
             this.tabPageCreditCommitee = new System.Windows.Forms.TabPage();
             this.tabPageLoanRepayment = new System.Windows.Forms.TabPage();
+            this._repaymentScheduleControl = new OpenCBS.Controls.ScheduleControl();
             this.tabControlRepayments = new System.Windows.Forms.TabControl();
             this.tabPageRepayments = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
@@ -1488,9 +1490,17 @@ namespace OpenCBS.GUI.Clients
             this.tclLoanDetails.SelectedIndex = 0;
             // 
             // tabPageInstallments
+            //
+            this.tabPageInstallments.Controls.Add(this._loanDetailsScheduleControl);
             // 
             resources.ApplyResources(this.tabPageInstallments, "tabPageInstallments");
             this.tabPageInstallments.Name = "tabPageInstallments";
+            // 
+            // _loanDetailsScheduleControl
+            // 
+            resources.ApplyResources(this._loanDetailsScheduleControl, "_loanDetailsScheduleControl");
+            this._loanDetailsScheduleControl.Name = "_loanDetailsScheduleControl";
+            this._loanDetailsScheduleControl.ShowOlbAfterRepayment = false;
             // 
             // loanDetailsButtonsPanel
             // 
@@ -2305,10 +2315,18 @@ namespace OpenCBS.GUI.Clients
             this.tabControlRepayments.SelectedIndex = 0;
             // 
             // tabPageRepayments
+            //
+            this.tabPageRepayments.Controls.Add(this._repaymentScheduleControl);
             // 
             resources.ApplyResources(this.tabPageRepayments, "tabPageRepayments");
             this.tabPageRepayments.Controls.Add(this.flowLayoutPanel8);
             this.tabPageRepayments.Name = "tabPageRepayments";
+            // 
+            // _repaymentScheduleControl
+            // 
+            resources.ApplyResources(this._repaymentScheduleControl, "_repaymentScheduleControl");
+            this._repaymentScheduleControl.Name = "_repaymentScheduleControl";
+            this._repaymentScheduleControl.ShowOlbAfterRepayment = false;
             // 
             // flowLayoutPanel8
             // 
