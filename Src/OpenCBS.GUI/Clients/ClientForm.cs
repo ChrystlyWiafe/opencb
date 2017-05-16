@@ -1332,7 +1332,7 @@ namespace OpenCBS.GUI.Clients
             if (saving.Status == OSavingsStatus.Active && saving.Product.Type == OSavingProductType.ShortTermDeposit)
             {
                 buttonSavingsOperations.Visible = false;
-                buttonCloseSaving.Text = @"Withdrawal";
+                Text += "  " + MultiLanguageStrings.GetString(Ressource.ClientForm, "savingWithdrawToolStripMenuItem.Text");
             }
             else
             {
