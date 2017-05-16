@@ -561,7 +561,12 @@ namespace OpenCBS.Manager.Accounting
 	                    , ClientId
 	                    , UserId
 	                    , BranchId
-	                    , 'Counter Transaction for ' + isnull(c.contract_code,'')
+	                    , 'Canceling operation ' 
+		                    + cast(b.LoanEventId as varchar) 
+		                    + ' on date '
+		                    + cast(b.Date as varchar)
+		                    + ' on contract '
+		                    + isnull(c.contract_code,'')
 	                    , IsExported
 	                    , IsDeleted
 	                    , AdvanceId
@@ -571,9 +576,9 @@ namespace OpenCBS.Manager.Accounting
 	                    , null
 	                    , null
                     from
-	                    dbo.Booking
+	                    dbo.Booking b
                     left join
-	                    dbo.Contracts c on c.id = LoanId		
+	                    dbo.Contracts c on c.id = b.LoanId		
                     where
 	                    (LoanEventId = @loanEventId and @loanEventId is not null)
 	                    or (SavingEventId = @savingEventId and @savingEventId is not null)
