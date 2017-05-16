@@ -525,5 +525,60 @@ namespace OpenCBS.Manager.Accounting
                     ";
             return tx.Connection.Query<int>(query, new { id = loanEventId }, tx);
         }
+
+        public void AddCounterTransaction(int? loanEventId, int? savingEventId, IDbTransaction tx)
+        {
+            const string query = @"
+                    insert into
+	                    dbo.Booking(
+		                    DebitAccount
+		                    , CreditAccount
+		                    , Amount
+		                    , Date
+		                    , LoanEventId
+		                    , SavingEventId
+		                    , LoanId
+		                    , ClientId
+		                    , UserId
+		                    , BranchId
+		                    , Description
+		                    , IsExported
+		                    , IsDeleted
+		                    , AdvanceId
+		                    , StaffId
+		                    , IsManualEditable
+		                    , doc1
+		                    , doc2
+		                    , CancelDate)
+                    select
+	                    CreditAccount
+	                    , DebitAccount
+	                    , Amount
+	                    , GETDATE()
+	                    , LoanEventId
+	                    , SavingEventId
+	                    , LoanId
+	                    , ClientId
+	                    , UserId
+	                    , BranchId
+	                    , 'Counter Transaction for ' + isnull(c.contract_code,'')
+	                    , IsExported
+	                    , IsDeleted
+	                    , AdvanceId
+	                    , StaffId
+	                    , IsManualEditable
+	                    , null
+	                    , null
+	                    , null
+                    from
+	                    dbo.Booking
+                    left join
+	                    dbo.Contracts c on c.id = LoanId		
+                    where
+	                    (LoanEventId = @loanEventId and @loanEventId is not null)
+	                    or (SavingEventId = @savingEventId and @savingEventId is not null)
+                    ";
+            tx.Connection.Execute(query, new {loanEventId, savingEventId}, tx);
+        }
     }
 }

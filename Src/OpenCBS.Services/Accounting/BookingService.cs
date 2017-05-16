@@ -255,6 +255,31 @@ namespace OpenCBS.Services.Accounting
             }
         }
 
+        public IEnumerable<BookingDto> SelectBookings(DateTime from, DateTime to, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                     : transaction;
+
+            try
+            {
+                var result = from > to ? new List<BookingDto>() : _repository.SelectBookings(from, to, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+
+                return result;
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
         public IEnumerable<Account> SelectAllAccounts(IDbTransaction transaction = null)
         {
             // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
@@ -318,6 +343,44 @@ namespace OpenCBS.Services.Accounting
             try
             {
                 _repository.RecoverAccount(account, tx);
+
+                if (transaction == null)
+                    tx.Commit();
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
+
+        public void AddCounterTransactionToEvent(IDictionary<string, object> entity, IDbTransaction transaction = null)
+        {
+            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
+            var tx = transaction == null
+                ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
+                : transaction;
+
+            try
+            {
+                var eEvent = entity.ContainsKey("Event") ? (CoreDomain.Events.Loan.Event) entity["Event"] : null;
+                if (eEvent == null) return;
+                if (eEvent is SavingEvent)
+                {
+                    _repository.AddCounterTransaction(null, eEvent.Id, tx);
+                    return;
+                }
+                var loanEventId = eEvent.ParentId ?? eEvent.Id;
+
+                var childEventIds = _repository.GetChildEvents(loanEventId, tx);
+                foreach (var id in childEventIds)
+                {
+                    _repository.AddCounterTransaction(id, null, tx);
+                }
+
+                _repository.AddCounterTransaction(loanEventId, null, tx);
 
                 if (transaction == null)
                     tx.Commit();
