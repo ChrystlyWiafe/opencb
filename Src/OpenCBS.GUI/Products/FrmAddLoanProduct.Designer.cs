@@ -401,11 +401,6 @@ namespace OpenCBS.GUI.Products
             this.labelMinPercGuar = new System.Windows.Forms.Label();
             this.checkBoxGuarCollRequired = new System.Windows.Forms.CheckBox();
             this.tabAccounts = new System.Windows.Forms.TabPage();
-            this.chClientAccountForAccruedPenalty = new System.Windows.Forms.CheckBox();
-            this.chClientAccoutForIdnr = new System.Windows.Forms.CheckBox();
-            this.chClientAccountForInterestDue = new System.Windows.Forms.CheckBox();
-            this.chClientAccountForIand = new System.Windows.Forms.CheckBox();
-            this.chClientAccountForPrincipal = new System.Windows.Forms.CheckBox();
             this.textBoxTaxValue = new System.Windows.Forms.TextBox();
             this.comboBoxTaxOnPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxPenaltyIncomeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
@@ -2203,11 +2198,6 @@ namespace OpenCBS.GUI.Products
             // 
             // tabAccounts
             // 
-            this.tabAccounts.Controls.Add(this.chClientAccountForAccruedPenalty);
-            this.tabAccounts.Controls.Add(this.chClientAccoutForIdnr);
-            this.tabAccounts.Controls.Add(this.chClientAccountForInterestDue);
-            this.tabAccounts.Controls.Add(this.chClientAccountForIand);
-            this.tabAccounts.Controls.Add(this.chClientAccountForPrincipal);
             this.tabAccounts.Controls.Add(this.textBoxTaxValue);
             this.tabAccounts.Controls.Add(this.comboBoxTaxOnPenaltyAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
@@ -2231,41 +2221,6 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.label50);
             resources.ApplyResources(this.tabAccounts, "tabAccounts");
             this.tabAccounts.Name = "tabAccounts";
-            // 
-            // chClientAccountForAccruedPenalty
-            // 
-            resources.ApplyResources(this.chClientAccountForAccruedPenalty, "chClientAccountForAccruedPenalty");
-            this.chClientAccountForAccruedPenalty.Name = "chClientAccountForAccruedPenalty";
-            this.chClientAccountForAccruedPenalty.UseVisualStyleBackColor = true;
-            this.chClientAccountForAccruedPenalty.CheckedChanged += new System.EventHandler(this.chClientAccountForAccruedPenalty_CheckedChanged);
-            // 
-            // chClientAccoutForIdnr
-            // 
-            resources.ApplyResources(this.chClientAccoutForIdnr, "chClientAccoutForIdnr");
-            this.chClientAccoutForIdnr.Name = "chClientAccoutForIdnr";
-            this.chClientAccoutForIdnr.UseVisualStyleBackColor = true;
-            this.chClientAccoutForIdnr.CheckedChanged += new System.EventHandler(this.chClientAccoutForIdnr_CheckedChanged);
-            // 
-            // chClientAccountForInterestDue
-            // 
-            resources.ApplyResources(this.chClientAccountForInterestDue, "chClientAccountForInterestDue");
-            this.chClientAccountForInterestDue.Name = "chClientAccountForInterestDue";
-            this.chClientAccountForInterestDue.UseVisualStyleBackColor = true;
-            this.chClientAccountForInterestDue.CheckedChanged += new System.EventHandler(this.chClientAccountForInterestDue_CheckedChanged);
-            // 
-            // chClientAccountForIand
-            // 
-            resources.ApplyResources(this.chClientAccountForIand, "chClientAccountForIand");
-            this.chClientAccountForIand.Name = "chClientAccountForIand";
-            this.chClientAccountForIand.UseVisualStyleBackColor = true;
-            this.chClientAccountForIand.CheckedChanged += new System.EventHandler(this.chClientAccountForIand_CheckedChanged);
-            // 
-            // chClientAccountForPrincipal
-            // 
-            resources.ApplyResources(this.chClientAccountForPrincipal, "chClientAccountForPrincipal");
-            this.chClientAccountForPrincipal.Name = "chClientAccountForPrincipal";
-            this.chClientAccountForPrincipal.UseVisualStyleBackColor = true;
-            this.chClientAccountForPrincipal.CheckedChanged += new System.EventHandler(this.chClientAccountForPrincipal_CheckedChanged);
             // 
             // textBoxTaxValue
             // 
@@ -2706,10 +2661,5 @@ namespace OpenCBS.GUI.Products
         private Label label62;
         private ColumnHeader chAccountNumber;
         private ColumnHeader ch2AccountNumber;
-        private CheckBox chClientAccountForAccruedPenalty;
-        private CheckBox chClientAccoutForIdnr;
-        private CheckBox chClientAccountForInterestDue;
-        private CheckBox chClientAccountForIand;
-        private CheckBox chClientAccountForPrincipal;
     }
 }

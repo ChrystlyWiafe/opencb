@@ -6903,153 +6903,6 @@
   <data name="&gt;&gt;tabGuarantorsCollaterals.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="chClientAccountForAccruedPenalty.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chClientAccountForAccruedPenalty.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chClientAccountForAccruedPenalty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 290</value>
-  </data>
-  <data name="chClientAccountForAccruedPenalty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="chClientAccountForAccruedPenalty.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="chClientAccountForAccruedPenalty.Text" xml:space="preserve">
-    <value>Use Client Account</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForAccruedPenalty.Name" xml:space="preserve">
-    <value>chClientAccountForAccruedPenalty</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForAccruedPenalty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForAccruedPenalty.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForAccruedPenalty.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="chClientAccoutForIdnr.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chClientAccoutForIdnr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chClientAccoutForIdnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 191</value>
-  </data>
-  <data name="chClientAccoutForIdnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="chClientAccoutForIdnr.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="chClientAccoutForIdnr.Text" xml:space="preserve">
-    <value>Use Client Account</value>
-  </data>
-  <data name="&gt;&gt;chClientAccoutForIdnr.Name" xml:space="preserve">
-    <value>chClientAccoutForIdnr</value>
-  </data>
-  <data name="&gt;&gt;chClientAccoutForIdnr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chClientAccoutForIdnr.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;chClientAccoutForIdnr.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="chClientAccountForInterestDue.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chClientAccountForInterestDue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chClientAccountForInterestDue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 139</value>
-  </data>
-  <data name="chClientAccountForInterestDue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="chClientAccountForInterestDue.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="chClientAccountForInterestDue.Text" xml:space="preserve">
-    <value>Use Client Account</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForInterestDue.Name" xml:space="preserve">
-    <value>chClientAccountForInterestDue</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForInterestDue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForInterestDue.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForInterestDue.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="chClientAccountForIand.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chClientAccountForIand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chClientAccountForIand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 92</value>
-  </data>
-  <data name="chClientAccountForIand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="chClientAccountForIand.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="chClientAccountForIand.Text" xml:space="preserve">
-    <value>Use Client Account</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForIand.Name" xml:space="preserve">
-    <value>chClientAccountForIand</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForIand.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForIand.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForIand.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="chClientAccountForPrincipal.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chClientAccountForPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 47</value>
-  </data>
-  <data name="chClientAccountForPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="chClientAccountForPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="chClientAccountForPrincipal.Text" xml:space="preserve">
-    <value>Use Client Account</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForPrincipal.Name" xml:space="preserve">
-    <value>chClientAccountForPrincipal</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForPrincipal.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;chClientAccountForPrincipal.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="textBoxTaxValue.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
@@ -7075,7 +6928,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;textBoxTaxValue.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="comboBoxTaxOnPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 438</value>
@@ -7099,7 +6952,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="comboBoxPenaltyIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 338</value>
@@ -7120,7 +6973,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="label62.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7153,7 +7006,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label62.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="label61.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7186,7 +7039,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label61.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="label60.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7219,7 +7072,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label60.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="label58.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7249,7 +7102,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>6</value>
   </data>
   <data name="comboBoxAccruedPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 288</value>
@@ -7270,7 +7123,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>7</value>
   </data>
   <data name="label57.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7300,7 +7153,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>8</value>
   </data>
   <data name="comboBoxTaxOnInterestsAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 388</value>
@@ -7324,7 +7177,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>9</value>
   </data>
   <data name="label56.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7357,7 +7210,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>10</value>
   </data>
   <data name="comboBoxInterestIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 238</value>
@@ -7378,7 +7231,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestIncomeAccount.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>11</value>
   </data>
   <data name="label53.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7408,7 +7261,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>12</value>
   </data>
   <data name="comboBoxInterestDueButNoteReceivedAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 189</value>
@@ -7429,7 +7282,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>13</value>
   </data>
   <data name="label52.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7459,7 +7312,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>14</value>
   </data>
   <data name="comboBoxInterestDueAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 137</value>
@@ -7480,7 +7333,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestDueAccount.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>15</value>
   </data>
   <data name="label51.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7510,7 +7363,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>16</value>
   </data>
   <data name="comboBoxPrincipalAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 45</value>
@@ -7531,7 +7384,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxPrincipalAccount.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>17</value>
   </data>
   <data name="comboBoxInterestAccruedButNotDueAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 90</value>
@@ -7552,7 +7405,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>18</value>
   </data>
   <data name="label59.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7582,7 +7435,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>19</value>
   </data>
   <data name="label50.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7612,7 +7465,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>20</value>
   </data>
   <data name="tabAccounts.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>

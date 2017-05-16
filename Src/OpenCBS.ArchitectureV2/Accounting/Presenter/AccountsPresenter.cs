@@ -72,13 +72,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.Presenter
         {
             var account = _view.SelectedAccount;
             if (account == null) return;
-            var clientParentAccount = ApplicationSettings.GetInstance(User.CurrentUser.Md5).ParentClientAccount;
-
-            if (clientParentAccount == account.AccountNumber)
-            {
-                MessageBox.Show("Account is parent client account");
-                return;
-            }
             _applicationController.Execute(new DeleteAccountCommandData {Account = account});
         }
 

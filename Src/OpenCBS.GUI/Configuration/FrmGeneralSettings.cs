@@ -1577,26 +1577,6 @@ namespace OpenCBS.GUI.Configuration
                         }
                     }
                 }
-                else if (entryKey == OGeneralSettings.PARENT_CLIENT_ACCOUNT)
-                {
-                    if (string.IsNullOrEmpty(textBoxGeneralParameterValue.Text))
-                        entry.Value = "";
-                    else
-                    {
-                        try
-                        {
-                            var account =
-                                ServicesProvider.GetInstance().GetAccountService().SelectAccountByNumber(textBoxGeneralParameterValue.Text);
-                            if(account == null) throw new Exception("Incorrect Parent client account");
-
-                            entry.Value = textBoxGeneralParameterValue.Text;
-                        }
-                        catch(Exception ex)
-                        {
-                            throw new OpenCbsException(ex.Message);
-                        }
-                    }
-                }
                 else
                 {
                     entry.Value = textBoxGeneralParameterValue.Text;

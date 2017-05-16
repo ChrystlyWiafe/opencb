@@ -519,8 +519,6 @@ namespace OpenCBS.Services
                     person.SetStatus();
                     person.Id = AddPerson(person, action);
                     SavePicture(person);
-                    ServicesProvider.GetInstance().GetAccountService().AddClientAccount(person);
-
                 }
                 else
                 {

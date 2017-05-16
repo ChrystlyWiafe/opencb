@@ -100,25 +100,9 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 }).ToList();
         }
 
-        private Account GetClientAccount(int clientId)
-        {
-            var accountService = ServicesProvider.GetInstance().GetAccountService();
-            var parentAccountNumber = accountService.SelectParentClientAccount();
-            if (!string.IsNullOrEmpty(parentAccountNumber))
-            {
-                var clientAccountNumber = parentAccountNumber + clientId.ToString("D4");
-                var clientAccount = accountService.SelectAccountByNumber(clientAccountNumber);
-
-                return clientAccount;
-            }
-            return null;
-        }
-
         public IEnumerable<BookingEntry> GetBookingEntries(CoreDomain.Events.Loan.Event eEvent)
         {
             var list = new List<BookingEntry>();
-            var clientAccount = GetClientAccount(_clientId);
-            var clientAccountNumber = clientAccount != null ? clientAccount.AccountNumber : null;
 
             //Disbursement Event
             if (eEvent.Code == "LODE" || eEvent.Code == "TEET")
@@ -128,9 +112,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     throw new OpenCbsException("Payment method id is empty");
 
                 var paymentMethodAccountNumber = disbursment.PaymentMethod.AccountNumber;
-                var principalAccount = _product.UseClientAccountForPrincipal
-                    ? clientAccountNumber
-                    : _product.PrincipalAccountNumber;
 
                 var commissionsAmount = 0m;
 
@@ -146,7 +127,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = principalAccount},
+                        Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = string.Format("Commission ({1}) for {0}" ,_contractCode,commission?.LoanEntryFee?.ProductEntryFee?.Name),
@@ -156,7 +137,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 list.Insert(0, new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = principalAccount},
+                    Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                     Credit = new Account {AccountNumber = paymentMethodAccountNumber},
                     Amount = disbursment.Amount.Value - commissionsAmount,
                     Description = "Loan disbursement for " + _contractCode,
@@ -170,21 +151,9 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 var repayment = (RepaymentEvent) eEvent;
                 var paymentMethodAccountNumber = repayment.PaymentMethod.AccountNumber;
 
-                var principalAccount = _product.UseClientAccountForPrincipal
-                    ? clientAccountNumber
-                    : _product.PrincipalAccountNumber;
-
-                var lateInterestAccount = _product.UseClientAccountForIdnr
-                    ? clientAccountNumber
-                    : _product.InterestDueButNotReceivedAccountNumber;
-
-                var dueInterestAccount = _product.UseClientAccountForInterestDue
-                    ? clientAccountNumber
-                    : _product.InterestDueAccountNumber;
-
                 var interestAccount = eEvent.Code == "RBLE"
-                    ? lateInterestAccount
-                    : dueInterestAccount;
+                    ? _product.InterestDueButNotReceivedAccountNumber
+                    : _product.InterestDueAccountNumber;
 
 
                 if (repayment.Principal.Value > 0m)
@@ -192,7 +161,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
-                        Credit = new Account {AccountNumber = principalAccount},
+                        Credit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                         Amount = repayment.Principal.Value,
                         Description = "Repayment of principal for " + _contractCode,
                         LoanEventId = repayment.Id
@@ -258,24 +227,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             accrual.Date.Date >= item.StartDate.Date &&
                             accrual.Date.Date <= item.LastInterestAccrualDate.Date);
 
-                var lateInterestAccount = _product.UseClientAccountForIdnr
-                    ? clientAccountNumber
-                    : _product.InterestDueButNotReceivedAccountNumber;
-
-                var dueInterestAccount = _product.UseClientAccountForInterestDue
-                    ? clientAccountNumber
-                    : _product.InterestDueAccountNumber;
-
-                var accruedInterestAccount = _product.UseClientAccountForInterestDue
-                    ? clientAccountNumber
-                    : _product.InterestAccruedButNotDueAccountNumber;
-
                 var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
 
                 list.Add(
                     new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = accruedInterestAccount },
+                        Debit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
                         Credit = new Account {AccountNumber = _product.InterestIncomeAccountNumber},
                         Amount = accrual.Interest.Value,
                         Description = "Interest accrual for " + _contractCode,
@@ -294,8 +251,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = dueInterestAccount},
-                            Credit = new Account {AccountNumber = accruedInterestAccount},
+                            Debit = new Account {AccountNumber = _product.InterestDueAccountNumber },
+                            Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
                             Amount = balance,
                             Description = "Interest due for " + _contractCode,
                             LoanEventId = accrual.Id
@@ -308,8 +265,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = lateInterestAccount},
-                            Credit = new Account {AccountNumber = dueInterestAccount},
+                            Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
+                            Credit = new Account {AccountNumber = _product.InterestDueAccountNumber },
                             Amount = amount,
                             Description = "Interest due but not received for " + _contractCode,
                             LoanEventId = accrual.Id
@@ -320,15 +277,11 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             //Accrual Penalty Event
             else if (eEvent.Code == "LPAE")
             {
-                var accruedPenaltyAccount = _product.UseClientAccountForInterestDue
-                    ? clientAccountNumber
-                    : _product.AccruedPenaltyAccountNumber;
-
                 var accrual = (LoanPenaltyAccrualEvent) eEvent;
 
                 list.Add(new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = accruedPenaltyAccount },
+                    Debit = new Account {AccountNumber = _product.AccruedPenaltyAccountNumber },
                     Credit = new Account {AccountNumber = _product.PenaltyIncomeAccountNumber},
                     Amount = accrual.Penalty.Value,
                     Description = "Penalty accrual for " + _contractCode,

@@ -90,49 +90,5 @@ namespace OpenCBS.Services.Accounting
         {
             _accountRepository.CreateSavingForLaon(loanId, code, userId, creationDate, transaction);
         }
-
-        public void AddClientAccount(IClient client,IDbTransaction transaction = null)
-        {
-            if (client == null) throw new ArgumentNullException();
-            if (client.Id == 0) throw new ArgumentException();
-            var parentAccountNumber = ApplicationSettings.GetInstance(User.CurrentUser.Md5).ParentClientAccount;
-            var parentAccount = SelectAccountByNumber(parentAccountNumber);
-            if (!string.IsNullOrEmpty(parentAccountNumber))
-            {
-                var account = new Account
-                {
-                    AccountNumber = parentAccountNumber + client.Id.ToString("D4"),
-                    Label = "Account for client -" + client.Name,
-                    Parent = parentAccountNumber,
-                    IsDebit = parentAccount.IsDebit,
-                    Type = AccountType.Balance,
-                };
-                _accountRepository.Save(account, transaction);
-            }
-        }
-
-        public string SelectParentClientAccount(IDbTransaction transaction = null)
-        {
-            // ReSharper disable once ConvertConditionalTernaryToNullCoalescing
-            var tx = transaction == null
-                     ? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction()
-                     : transaction;
-            try
-            {
-                var result = _accountRepository.SelectParentClientAccount(tx);
-
-                if (transaction == null)
-                    tx.Commit();
-
-                return result;
-            }
-            catch (Exception error)
-            {
-                if (transaction == null)
-                    tx.Rollback();
-
-                throw new Exception(error.Message);
-            }
-        }
     }
 }

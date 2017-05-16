@@ -222,44 +222,8 @@ IF col_length('dbo.Packages','tax_value') IS NULL
     END
 GO
 
-IF col_length('dbo.Packages','use_client_account_for_principal') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD [use_client_account_for_principal] BIT NOT NULL DEFAULT(0)
-    END
-GO
-
-IF col_length('dbo.Packages','use_client_account_for_iand') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD [use_client_account_for_iand] BIT NOT NULL DEFAULT(0)
-    END
-GO
-
-IF col_length('dbo.Packages','use_client_acccount_for_interest_due') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD use_client_acccount_for_interest_due BIT NOT NULL DEFAULT(0)
-    END
-GO
-
-IF col_length('dbo.Packages','use_client_acccount_for_idnr') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD use_client_acccount_for_idnr BIT NOT NULL DEFAULT(0)
-    END
-GO
-
-IF col_length('dbo.Packages','use_client_acccount_for_accrued_penalty') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD use_client_acccount_for_accrued_penalty BIT NOT NULL DEFAULT(0)
-    END
-GO
-
 IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'USE_ACCOUNTING') IS NULL
     BEGIN
         INSERT INTO [GeneralParameters]([key], [value]) VALUES('USE_ACCOUNTING', 0)
-    END
-GO
-
-IF (SELECT TOP 1 [key] FROM dbo.[GeneralParameters] WHERE [key] = 'PARENT_CLIENT_ACCOUNT') IS NULL
-    BEGIN
-        INSERT INTO [GeneralParameters]([key], [value]) VALUES('PARENT_CLIENT_ACCOUNT', 0)
     END
 GO

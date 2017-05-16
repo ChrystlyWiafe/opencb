@@ -80,7 +80,6 @@ namespace OpenCBS.Enums
         public static readonly string USE_ACCRUALS_VALIDATION = "USE_ACCRUALS_VALIDATION";
         public static readonly string SHOW_SPECIAL_FUNCTIONS_BUTTON = "SHOW_SPECIAL_FUNCTIONS_BUTTON";
         public static readonly string USE_ACCOUNTING = "USE_ACCOUNTING";
-        public static readonly string PARENT_CLIENT_ACCOUNT = "PARENT_CLIENT_ACCOUNT";
     }
 }
 
