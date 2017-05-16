@@ -72,9 +72,9 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.bCancel);
             this.groupBox1.Controls.Add(this.bSave);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -93,20 +93,20 @@ namespace OpenCBS.GUI.Contracts
             // 
             // gbActionWithAmount
             // 
+            resources.ApplyResources(this.gbActionWithAmount, "gbActionWithAmount");
             this.gbActionWithAmount.Controls.Add(this.plTransfer);
             this.gbActionWithAmount.Controls.Add(this.rbTransfer);
             this.gbActionWithAmount.Controls.Add(this.rbWithdraw);
-            resources.ApplyResources(this.gbActionWithAmount, "gbActionWithAmount");
             this.gbActionWithAmount.Name = "gbActionWithAmount";
             this.gbActionWithAmount.TabStop = false;
             // 
             // plTransfer
             // 
+            resources.ApplyResources(this.plTransfer, "plTransfer");
             this.plTransfer.Controls.Add(this.tbTargetAccount);
             this.plTransfer.Controls.Add(this.btSearchContract);
             this.plTransfer.Controls.Add(this.lbTargetSavings);
             this.plTransfer.Controls.Add(this.lbClientName);
-            resources.ApplyResources(this.plTransfer, "plTransfer");
             this.plTransfer.Name = "plTransfer";
             // 
             // tbTargetAccount
@@ -145,8 +145,8 @@ namespace OpenCBS.GUI.Contracts
             // 
             // tableLayoutAmount
             // 
-            this.tableLayoutAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.tableLayoutAmount, "tableLayoutAmount");
+            this.tableLayoutAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.tableLayoutAmount.Controls.Add(this.labelCloseFees, 0, 1);
             this.tableLayoutAmount.Controls.Add(this.labelCloseFeesValue, 1, 1);
             this.tableLayoutAmount.Controls.Add(this.lbTotalAmountValue, 1, 0);
@@ -175,10 +175,10 @@ namespace OpenCBS.GUI.Contracts
             // 
             // gbCloseFees
             // 
+            resources.ApplyResources(this.gbCloseFees, "gbCloseFees");
             this.gbCloseFees.Controls.Add(this.lbCloseFeesMinMax);
             this.gbCloseFees.Controls.Add(this.udCloseFees);
             this.gbCloseFees.Controls.Add(this.checkBoxDesactivateFees);
-            resources.ApplyResources(this.gbCloseFees, "gbCloseFees");
             this.gbCloseFees.Name = "gbCloseFees";
             this.gbCloseFees.TabStop = false;
             // 
