@@ -1336,8 +1336,10 @@ namespace OpenCBS.GUI.Clients
             }
             else
             {
-                buttonSavingsOperations.Visible = saving.Status == OSavingsStatus.Active;
-                buttonCloseSaving.Text = @"Close";
+                if (buttonSavingsOperations.Visible = saving.Status == OSavingsStatus.Active)
+                {
+                    Text += "  " + MultiLanguageStrings.GetString(Ressource.ClientForm, "buttonCloseSaving.Text");
+                }
             }
         }
 
