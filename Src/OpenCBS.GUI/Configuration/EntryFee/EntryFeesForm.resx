@@ -508,7 +508,7 @@
     <value>1255, 753</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Entry Fees</value>
+    <value>Taxas de entrada</value>
   </data>
   <data name="&gt;&gt;chId.Name" xml:space="preserve">
     <value>chId</value>
@@ -550,6 +550,6 @@
     <value>EntryFeesForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=16.12.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
