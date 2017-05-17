@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Events.Saving;
@@ -377,7 +378,7 @@ namespace OpenCBS.Services.Accounting
                 var loanEventId = eEvent.ParentId ?? eEvent.Id;
 
                 var childEventIds = _repository.GetChildEvents(loanEventId, tx) ?? new List<int>();
-                foreach (var id in childEventIds)
+                foreach (var id in childEventIds.OrderByDescending(item => item))
                 {
                     _repository.AddCounterTransaction(id, null, tx);
                 }

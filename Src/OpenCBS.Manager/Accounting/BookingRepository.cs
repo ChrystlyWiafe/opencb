@@ -566,7 +566,7 @@ namespace OpenCBS.Manager.Accounting
 	                    , 'Canceling operation ' 
 		                    + cast(b.LoanEventId as varchar) 
 		                    + ' on date '
-		                    + cast(b.Date as varchar)
+		                    + FORMAT(b.Date, N'yyyy-MM-dd hh:mm:ss')
 		                    + ' on contract '
 		                    + isnull(c.contract_code,'')
 	                    , IsExported
