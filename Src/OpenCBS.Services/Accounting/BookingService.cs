@@ -376,7 +376,7 @@ namespace OpenCBS.Services.Accounting
                 }
                 var loanEventId = eEvent.ParentId ?? eEvent.Id;
 
-                var childEventIds = _repository.GetChildEvents(loanEventId, tx);
+                var childEventIds = _repository.GetChildEvents(loanEventId, tx) ?? new List<int>();
                 foreach (var id in childEventIds)
                 {
                     _repository.AddCounterTransaction(id, null, tx);

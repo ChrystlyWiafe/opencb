@@ -21,7 +21,7 @@ namespace OpenCBS.Manager.Accounting
         public void Save(IEnumerable<Booking> entity, IDbTransaction tx)
         {
             var rows = entity.Select(booking => booking.Map()).ToList();
-                const string query = @"
+            const string query = @"
                     insert into
                         dbo.Booking 
                     (
@@ -64,7 +64,7 @@ namespace OpenCBS.Manager.Accounting
                         , @Doc2
                     )
                     ";
-                tx.Connection.Execute(query, rows, tx);
+            tx.Connection.Execute(query, rows, tx);
         }
 
         public int Save(Booking entity, IDbTransaction tx)
@@ -396,7 +396,9 @@ namespace OpenCBS.Manager.Accounting
                     where 
                         a.account_number = @number
                     ";
-            return tx.Connection.Query<decimal>(query, new { date, number = account.AccountNumber, loanId }, tx).FirstOrDefault();
+            return
+                tx.Connection.Query<decimal>(query, new {date, number = account.AccountNumber, loanId}, tx)
+                    .FirstOrDefault();
         }
 
         public IEnumerable<Account> SelectAllAccounts(IDbTransaction tx)
@@ -501,6 +503,7 @@ namespace OpenCBS.Manager.Accounting
                     ";
             return tx.Connection.Query<int>(query, new {savingId}, tx).FirstOrDefault();
         }
+
         public IEnumerable<int> GetChildEvents(int loanEventId, IDbTransaction tx)
         {
             const string query = @"
@@ -522,7 +525,7 @@ namespace OpenCBS.Manager.Accounting
                             FROM cte
                             WHERE parent_id IS NOT NULL
                     ";
-            return tx.Connection.Query<int>(query, new { id = loanEventId }, tx);
+            return tx.Connection.Query<int>(query, new {id = loanEventId}, tx);
         }
 
         public void AddCounterTransaction(int? loanEventId, int? savingEventId, IDbTransaction tx)
@@ -583,5 +586,6 @@ namespace OpenCBS.Manager.Accounting
 	                    or (SavingEventId = @savingEventId and @savingEventId is not null)
                     ";
             tx.Connection.Execute(query, new {loanEventId, savingEventId}, tx);
-        }    }
+        }
+    }
 }

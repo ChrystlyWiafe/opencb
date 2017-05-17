@@ -1,4 +1,7 @@
-﻿using System;using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.GUI.UserControl;
@@ -172,7 +175,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                             Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals),
                             IsRate = IsRate,
                             MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals),
-                            AccountNumber = account != null ? account.AccountNumber : null                        };
+                            AccountNumber = account != null ? account.AccountNumber : null
+                        };
             return fee;
         }
     }
