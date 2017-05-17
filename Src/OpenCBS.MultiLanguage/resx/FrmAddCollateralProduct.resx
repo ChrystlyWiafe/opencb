@@ -192,4 +192,13 @@
   <data name="Число" xml:space="preserve">
     <value />
   </data>
+  <data name="Cobrança" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Número" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Série" xml:space="preserve">
+    <value />
+  </data>
 </root>
