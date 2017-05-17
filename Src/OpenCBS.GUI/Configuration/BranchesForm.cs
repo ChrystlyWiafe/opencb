@@ -105,8 +105,14 @@ namespace OpenCBS.GUI.Configuration
                 return;
             }
 
-
             ServicesProvider.GetInstance().GetBranchService().Delete(b);
+
+            foreach (var branch in User.CurrentUser.Branches)
+            {
+                if (branch.Id == b.Id)
+                    branch.Deleted = true;
+            }
+
             LoadBranches();
         }
     }

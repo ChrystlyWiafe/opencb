@@ -757,8 +757,7 @@ namespace OpenCBS.GUI
                     }
                     else
                     {
-                        groupItem = new ToolStripMenuItem(report.Group);
-                        groupItem.Name = report.Group;
+                        groupItem = new ToolStripMenuItem(report.Group) {Name = report.Group};
                         reportsToolStripMenuItem.DropDownItems.Insert(0, groupItem);
                     }
                     groupItem.DropDownItems.Add(i);

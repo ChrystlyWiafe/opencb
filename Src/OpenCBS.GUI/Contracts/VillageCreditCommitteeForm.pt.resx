@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,11 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonValidate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="buttonValidate.Text" xml:space="preserve">
+    <value>Validar</value>
+  </data>
+  <data name="checkBoxSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 17</value>
+  </data>
+  <data name="checkBoxSelectAll.Text" xml:space="preserve">
+    <value>Seleccionar todos</value>
+  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>Salve as alterações</value>
+    <value>Guardar as alterações</value>
   </data>
   <data name="chName.Text" xml:space="preserve">
     <value>Nome</value>
@@ -136,13 +149,13 @@
     <value>Moeda</value>
   </data>
   <data name="chLoanOfficer.Text" xml:space="preserve">
-    <value>Oficial de crédito</value>
+    <value>Agente de crédito</value>
   </data>
   <data name="chStatus.Text" xml:space="preserve">
-    <value>Situação</value>
+    <value>Estado</value>
   </data>
   <data name="chValidationDate.Text" xml:space="preserve">
-    <value>Data de validação </value>
+    <value>Data de validação</value>
   </data>
   <data name="chValidationCode.Text" xml:space="preserve">
     <value>Código de Validação</value>
@@ -151,12 +164,11 @@
     <value>Data de desembolso</value>
   </data>
   <data name="firstInstDateColumn.Text" xml:space="preserve">
-    <value>Primeira data prestação</value>
+    <value>Data da Primeira prestação</value>
   </data>
   <data name="chComment.Text" xml:space="preserve">
     <value>Comentário</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIADaBwAAZgAAABAQAAABACAAaAQAAEAIAAAgIAAAAQAgAKgQAACoDAAAMDAAAAEA
@@ -756,6 +768,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Comitê de Crédito - Validar empréstimos</value>
+    <value>Comité de Crédito - Validar empréstimos</value>
   </data>
 </root>

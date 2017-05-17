@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cash" xml:space="preserve">
-    <value>O numerário</value>
+    <value>Numerário</value>
   </data>
   <data name="cashDeposit" xml:space="preserve">
-    <value>O depósito em numerário</value>
+    <value>Depósito em numerário</value>
   </data>
   <data name="cashDepositFees" xml:space="preserve">
-    <value>As taxas de depósito em numerário</value>
+    <value>Taxas de depósito em numerário</value>
   </data>
   <data name="cheque" xml:space="preserve">
-    <value>O Cheque</value>
+    <value>Cheque</value>
   </data>
   <data name="chequeDeposit" xml:space="preserve">
-    <value>O depósito de cheque</value>
+    <value>Depósito de cheque</value>
   </data>
   <data name="chequeDepositFees" xml:space="preserve">
-    <value>As taxas do depósito em cheque</value>
+    <value>Taxas de depósito em cheque</value>
   </data>
   <data name="Daily.Text" xml:space="preserve">
     <value>Diário</value>
@@ -142,43 +142,69 @@
     <value>Fim do dia</value>
   </data>
   <data name="EndOfMonth.Text" xml:space="preserve">
-    <value>O fim do mês</value>
+    <value>Fim do mês</value>
   </data>
   <data name="EndOfWeek.Text" xml:space="preserve">
-    <value>O fim de semana</value>
+    <value>Fim da semana</value>
   </data>
   <data name="EndOfYear.Text" xml:space="preserve">
-    <value>O fim do ano</value>
+    <value>Fim do ano</value>
   </data>
   <data name="hello.text" xml:space="preserve">
     <value>Huillo</value>
   </data>
   <data name="interBranchTransfers" xml:space="preserve">
-    <value>As transferências inter-sucursais</value>
+    <value>Transferências inter-sucursais</value>
   </data>
   <data name="Maturity.Text" xml:space="preserve">
-    <value>O vencimento</value>
+    <value>Maturidade</value>
   </data>
   <data name="messageUpdate.Text" xml:space="preserve">
-    <value>Aplicar as paramêtros aos contratos das cadernatas de 
-poupança existentes?</value>
+    <value>Aplicar os paramêtros aos contratos das cadernetas de poupança existentes?</value>
   </data>
   <data name="MinimalAmount.Text" xml:space="preserve">
-    <value>O montante mínimo</value>
+    <value>Montante mínimo</value>
   </data>
   <data name="Monthly.Text" xml:space="preserve">
-    <value>mensal</value>
+    <value>Mensal</value>
   </data>
   <data name="normalTransfers" xml:space="preserve">
-    <value> As transferências inter-sucursais</value>
+    <value>Transferências inter-sucursais</value>
   </data>
   <data name="title.Text" xml:space="preserve">
-    <value>Os productos de poupança</value>
+    <value>Produtos de poupança</value>
   </data>
   <data name="Weekly.Text" xml:space="preserve">
-    <value>semanal</value>
+    <value>Semanal</value>
   </data>
   <data name="Yearly.Text" xml:space="preserve">
     <value>Anual</value>
+  </data>
+  <data name="Cash.Text" xml:space="preserve">
+    <value>Numerário</value>
+  </data>
+  <data name="Cheque.Text" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="DebitCard.Text" xml:space="preserve">
+    <value>Cartão de Débito</value>
+  </data>
+  <data name="DirectDebit.Text" xml:space="preserve">
+    <value>Débito Directo</value>
+  </data>
+  <data name="NONE.Text" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="WireTransfer.Text" xml:space="preserve">
+    <value>Transferência electrónica</value>
+  </data>
+  <data name="Withdrawal.Text" xml:space="preserve">
+    <value>Levantamento</value>
+  </data>
+  <data name="EndOfContract" xml:space="preserve">
+    <value>Fim do contracto</value>
+  </data>
+  <data name="EndOfContract.Text" xml:space="preserve">
+    <value>Fim do contracto</value>
   </data>
 </root>

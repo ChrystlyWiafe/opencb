@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,34 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="descriptionListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>702, 477</value>
+  </data>
+  <data name="groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>702, 0</value>
+  </data>
+  <data name="groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 477</value>
+  </data>
   <data name="nameHeader.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
   <data name="descriptionHeader.Text" xml:space="preserve">
     <value>Descrição</value>
   </data>
+  <data name="buttonEditProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 76</value>
+  </data>
+  <data name="buttonEditProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 28</value>
+  </data>
   <data name="buttonEditProduct.Text" xml:space="preserve">
-    <value>Editar produto</value>
+    <value>Editar tipo de garantia</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="checkBoxShowDeletedProduct.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBoxShowDeletedProduct.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 19</value>
   </data>
   <data name="checkBoxShowDeletedProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
+    <value>186, 20</value>
   </data>
   <data name="checkBoxShowDeletedProduct.Text" xml:space="preserve">
-    <value>Apagar produtos</value>
+    <value>Tipos de garantia apagados</value>
+  </data>
+  <data name="buttonAddProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
+  </data>
+  <data name="buttonAddProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 28</value>
   </data>
   <data name="buttonAddProduct.Text" xml:space="preserve">
-    <value>Add produto</value>
+    <value>Adicionar tipo de garantia</value>
+  </data>
+  <data name="buttonDeletePackage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 110</value>
+  </data>
+  <data name="buttonDeletePackage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 28</value>
   </data>
   <data name="buttonDeletePackage.Text" xml:space="preserve">
-    <value>Apagar produto</value>
+    <value>Apagar tipo de garantia</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -745,6 +772,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Produtos de garantias</value>
+    <value>Tipos de garantia</value>
   </data>
 </root>

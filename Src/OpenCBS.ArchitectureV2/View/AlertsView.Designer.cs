@@ -63,6 +63,7 @@
             // 
             // _alertsListView
             // 
+            resources.ApplyResources(this._alertsListView, "_alertsListView");
             this._alertsListView.AllColumns.Add(this._contractCodeColumn);
             this._alertsListView.AllColumns.Add(this._statusColumn);
             this._alertsListView.AllColumns.Add(this._dateColumn);
@@ -86,11 +87,11 @@
             this._addressColumn,
             this._phoneColumn,
             this._branchColumn});
-            resources.ApplyResources(this._alertsListView, "_alertsListView");
             this._alertsListView.FullRowSelect = true;
             this._alertsListView.GridLines = true;
             this._alertsListView.MultiSelect = false;
             this._alertsListView.Name = "_alertsListView";
+            this._alertsListView.OverlayText.Text = resources.GetString("resource.Text");
             this._alertsListView.ShowGroups = false;
             this._alertsListView.UseCompatibleStateImageBehavior = false;
             this._alertsListView.View = System.Windows.Forms.View.Details;
@@ -104,26 +105,26 @@
             // _statusColumn
             // 
             this._statusColumn.AspectName = "Status";
-            this._statusColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this._statusColumn, "_statusColumn");
+            this._statusColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // _dateColumn
             // 
             this._dateColumn.AspectName = "Date";
-            this._dateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this._dateColumn, "_dateColumn");
+            this._dateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // _lateDaysColumn
             // 
             this._lateDaysColumn.AspectName = "LateDays";
-            this._lateDaysColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this._lateDaysColumn, "_lateDaysColumn");
+            this._lateDaysColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // _amountColumn
             // 
             this._amountColumn.AspectName = "Amount";
-            this._amountColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this._amountColumn, "_amountColumn");
+            this._amountColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _clientNameColumn
             // 
@@ -157,6 +158,7 @@
             // 
             // _toolStrip
             // 
+            resources.ApplyResources(this._toolStrip, "_toolStrip");
             this._toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._reloadButton,
             this.toolStripSeparator2,
@@ -165,22 +167,22 @@
             this.toolStripSeparator1,
             this._searchTextBox,
             this._clearSearchButton});
-            resources.ApplyResources(this._toolStrip, "_toolStrip");
             this._toolStrip.Name = "_toolStrip";
             // 
             // _reloadButton
             // 
-            this._reloadButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this._reloadButton, "_reloadButton");
+            this._reloadButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._reloadButton.Name = "_reloadButton";
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // _loansDropDownButton
             // 
+            resources.ApplyResources(this._loansDropDownButton, "_loansDropDownButton");
             this._loansDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this._loansDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._performingLoansItemToday,
@@ -189,72 +191,71 @@
             this._pendingLoansItem,
             this._validatedLoansItem,
             this._postponedLoansItem});
-            resources.ApplyResources(this._loansDropDownButton, "_loansDropDownButton");
             this._loansDropDownButton.Name = "_loansDropDownButton";
             // 
             // _performingLoansItemToday
             // 
-            this._performingLoansItemToday.Name = "_performingLoansItemToday";
             resources.ApplyResources(this._performingLoansItemToday, "_performingLoansItemToday");
+            this._performingLoansItemToday.Name = "_performingLoansItemToday";
             // 
             // _performingLoansItemAll
             // 
-            this._performingLoansItemAll.Name = "_performingLoansItemAll";
             resources.ApplyResources(this._performingLoansItemAll, "_performingLoansItemAll");
+            this._performingLoansItemAll.Name = "_performingLoansItemAll";
             // 
             // _lateLoansItem
             // 
-            this._lateLoansItem.Name = "_lateLoansItem";
             resources.ApplyResources(this._lateLoansItem, "_lateLoansItem");
+            this._lateLoansItem.Name = "_lateLoansItem";
             // 
             // _pendingLoansItem
             // 
-            this._pendingLoansItem.Name = "_pendingLoansItem";
             resources.ApplyResources(this._pendingLoansItem, "_pendingLoansItem");
+            this._pendingLoansItem.Name = "_pendingLoansItem";
             // 
             // _validatedLoansItem
             // 
-            this._validatedLoansItem.Name = "_validatedLoansItem";
             resources.ApplyResources(this._validatedLoansItem, "_validatedLoansItem");
+            this._validatedLoansItem.Name = "_validatedLoansItem";
             // 
             // _postponedLoansItem
             // 
-            this._postponedLoansItem.Name = "_postponedLoansItem";
             resources.ApplyResources(this._postponedLoansItem, "_postponedLoansItem");
+            this._postponedLoansItem.Name = "_postponedLoansItem";
             // 
             // _savingsDropDownButton
             // 
+            resources.ApplyResources(this._savingsDropDownButton, "_savingsDropDownButton");
             this._savingsDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this._savingsDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._pendingSavingsItem,
             this._overdraftSavingsItem});
-            resources.ApplyResources(this._savingsDropDownButton, "_savingsDropDownButton");
             this._savingsDropDownButton.Name = "_savingsDropDownButton";
             // 
             // _pendingSavingsItem
             // 
-            this._pendingSavingsItem.Name = "_pendingSavingsItem";
             resources.ApplyResources(this._pendingSavingsItem, "_pendingSavingsItem");
+            this._pendingSavingsItem.Name = "_pendingSavingsItem";
             // 
             // _overdraftSavingsItem
             // 
-            this._overdraftSavingsItem.Name = "_overdraftSavingsItem";
             resources.ApplyResources(this._overdraftSavingsItem, "_overdraftSavingsItem");
+            this._overdraftSavingsItem.Name = "_overdraftSavingsItem";
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // _searchTextBox
             // 
-            this._searchTextBox.Name = "_searchTextBox";
             resources.ApplyResources(this._searchTextBox, "_searchTextBox");
+            this._searchTextBox.Name = "_searchTextBox";
             // 
             // _clearSearchButton
             // 
-            this._clearSearchButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this._clearSearchButton, "_clearSearchButton");
+            this._clearSearchButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._clearSearchButton.Name = "_clearSearchButton";
             // 
             // AlertsView

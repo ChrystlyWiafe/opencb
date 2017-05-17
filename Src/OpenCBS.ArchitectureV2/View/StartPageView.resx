@@ -117,6 +117,570 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_searchContractsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 35</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_englishPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_newVillageBankItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 26</value>
+  </data>
+  <data name="&gt;&gt;_siteLink.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_forumLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_newPersonItem.Name" xml:space="preserve">
+    <value>_newPersonItem</value>
+  </data>
+  <data name="_contactLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 15</value>
+  </data>
+  <data name="_spanishPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_siteLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_languagePanel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_languagePanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_buttonPanel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_newVillageBankItem.Text" xml:space="preserve">
+    <value>Village Bank</value>
+  </data>
+  <data name="&gt;&gt;_newVillageBankItem.Name" xml:space="preserve">
+    <value>_newVillageBankItem</value>
+  </data>
+  <data name="&gt;&gt;_searchClientsButton.Parent" xml:space="preserve">
+    <value>_buttonPanel</value>
+  </data>
+  <data name="_userGuideLink.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_userGuideLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_russianPictureBox.Name" xml:space="preserve">
+    <value>_russianPictureBox</value>
+  </data>
+  <data name="_buttonPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 41</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_searchClientsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="_userGuideLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 0</value>
+  </data>
+  <data name="&gt;&gt;_newCompanyItem.Name" xml:space="preserve">
+    <value>_newCompanyItem</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="&gt;&gt;_logoPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_newClientButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;_siteLink.Name" xml:space="preserve">
+    <value>_siteLink</value>
+  </data>
+  <data name="&gt;&gt;_newClientButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_languagePanel.Name" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="_searchContractsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Start Page</value>
+  </data>
+  <data name="_spanishPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 3</value>
+  </data>
+  <data name="_russianPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_buttonPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;_englishPictureBox.Parent" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="&gt;&gt;_userGuideLink.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_russianPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="&gt;&gt;_frenchPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;_linkPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_searchClientsButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_newClientButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="_forumLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_linkPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>●</value>
+  </data>
+  <data name="_buttonPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 178</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_russianPictureBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_userGuideLink.Name" xml:space="preserve">
+    <value>_userGuideLink</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_linkPanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_newClientMenu.Name" xml:space="preserve">
+    <value>_newClientMenu</value>
+  </data>
+  <data name="&gt;&gt;_englishPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_searchClientsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 35</value>
+  </data>
+  <data name="&gt;&gt;_buttonPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_contactLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_frenchPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 3</value>
+  </data>
+  <data name="&gt;&gt;_newClientButton.Name" xml:space="preserve">
+    <value>_newClientButton</value>
+  </data>
+  <data name="_newClientButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;_contactLink.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="&gt;&gt;_russianPictureBox.Parent" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="&gt;&gt;_userGuideLink.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="_newClientButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 0</value>
+  </data>
+  <data name="_siteLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_newClientMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contactLink.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;_forumLink.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="&gt;&gt;_logoPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contactLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_russianPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 3</value>
+  </data>
+  <data name="&gt;&gt;_newGroupItem.Name" xml:space="preserve">
+    <value>_newGroupItem</value>
+  </data>
+  <data name="_englishPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="_logoPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 14</value>
+  </data>
+  <data name="&gt;&gt;_userGuideLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_logoPictureBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_buttonPanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;_buttonPanel.Name" xml:space="preserve">
+    <value>_buttonPanel</value>
+  </data>
+  <data name="_portuguesePictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_forumLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 0</value>
+  </data>
+  <data name="_newCompanyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 26</value>
+  </data>
+  <data name="_languagePanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;_newClientButton.Parent" xml:space="preserve">
+    <value>_buttonPanel</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <data name="_newGroupItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 26</value>
+  </data>
+  <data name="&gt;&gt;_englishPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_newGroupItem.Text" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="&gt;&gt;_searchContractsButton.Name" xml:space="preserve">
+    <value>_searchContractsButton</value>
+  </data>
+  <data name="&gt;&gt;_forumLink.Name" xml:space="preserve">
+    <value>_forumLink</value>
+  </data>
+  <data name="&gt;&gt;_forumLink.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_spanishPictureBox.Name" xml:space="preserve">
+    <value>_spanishPictureBox</value>
+  </data>
+  <data name="&gt;&gt;_portuguesePictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_languagePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 18</value>
+  </data>
+  <data name="&gt;&gt;_siteLink.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="_linkPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="_contactLink.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;_portuguesePictureBox.Parent" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="_newPersonItem.Text" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="&gt;&gt;_linkPanel.Name" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>●</value>
+  </data>
+  <data name="&gt;&gt;_buttonPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_frenchPictureBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_languagePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 384</value>
+  </data>
+  <data name="&gt;&gt;_spanishPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 0</value>
+  </data>
+  <data name="&gt;&gt;_logoPictureBox.Name" xml:space="preserve">
+    <value>_logoPictureBox</value>
+  </data>
+  <data name="&gt;&gt;_searchContractsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_searchClientsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_contactLink.Text" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="&gt;&gt;_newCompanyItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_portuguesePictureBox.Name" xml:space="preserve">
+    <value>_portuguesePictureBox</value>
+  </data>
+  <data name="_languagePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="_spanishPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="_linkPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 340</value>
+  </data>
+  <data name="_userGuideLink.Text" xml:space="preserve">
+    <value>User Guide</value>
+  </data>
+  <data name="_englishPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;_searchContractsButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_newVillageBankItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_portuguesePictureBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="_searchContractsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>_linkPanel</value>
+  </data>
+  <data name="_siteLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.View.BaseView, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="_forumLink.Text" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="&gt;&gt;_searchClientsButton.Name" xml:space="preserve">
+    <value>_searchClientsButton</value>
+  </data>
+  <data name="_newClientMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 108</value>
+  </data>
+  <data name="_newPersonItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 26</value>
+  </data>
+  <data name="_siteLink.Text" xml:space="preserve">
+    <value>opencbs.com</value>
+  </data>
+  <data name="_siteLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="&gt;&gt;_linkPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_newCompanyItem.Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="&gt;&gt;_englishPictureBox.Name" xml:space="preserve">
+    <value>_englishPictureBox</value>
+  </data>
+  <data name="&gt;&gt;_newClientButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_newClientButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 35</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <data name="_linkPanel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_newPersonItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_logoPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_searchClientsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="&gt;&gt;_frenchPictureBox.Name" xml:space="preserve">
+    <value>_frenchPictureBox</value>
+  </data>
+  <data name="&gt;&gt;_spanishPictureBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_searchContractsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>●</value>
+  </data>
+  <data name="_frenchPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="&gt;&gt;_languagePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_searchClientsButton.Text" xml:space="preserve">
+    <value>Search Clients</value>
+  </data>
+  <data name="&gt;&gt;_contactLink.Name" xml:space="preserve">
+    <value>_contactLink</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_forumLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 15</value>
+  </data>
+  <data name="_newClientButton.Text" xml:space="preserve">
+    <value>New Client</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="_logoPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="&gt;&gt;_linkPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_portuguesePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 3</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 0</value>
+  </data>
+  <data name="_newClientMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>772, 413</value>
+  </data>
+  <data name="_forumLink.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_languagePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_searchContractsButton.Parent" xml:space="preserve">
+    <value>_buttonPanel</value>
+  </data>
+  <data name="_searchClientsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;_russianPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_searchContractsButton.Text" xml:space="preserve">
+    <value>Search Contracts</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;_frenchPictureBox.Parent" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="_logoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 120</value>
+  </data>
+  <data name="_contactLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StartPageView</value>
+  </data>
+  <data name="_frenchPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_newGroupItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_portuguesePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="_userGuideLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 15</value>
+  </data>
+  <data name="&gt;&gt;_spanishPictureBox.Parent" xml:space="preserve">
+    <value>_languagePanel</value>
+  </data>
+  <data name="_siteLink.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="_newClientMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

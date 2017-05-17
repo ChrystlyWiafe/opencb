@@ -83,13 +83,14 @@ namespace OpenCBS.GUI.Contracts
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
             // gbxMainWindow
             // 
+            resources.ApplyResources(this.gbxMainWindow, "gbxMainWindow");
             this.gbxMainWindow.Controls.Add(this._chequeNumberTextBox);
             this.gbxMainWindow.Controls.Add(this._chequeNumberLabel);
             this.gbxMainWindow.Controls.Add(this.nudTotalAmount);
@@ -114,7 +115,6 @@ namespace OpenCBS.GUI.Contracts
             this.gbxMainWindow.Controls.Add(this.lblDescription);
             this.gbxMainWindow.Controls.Add(this.plTransfer);
             this.gbxMainWindow.Controls.Add(this.pnlSavingPending);
-            resources.ApplyResources(this.gbxMainWindow, "gbxMainWindow");
             this.gbxMainWindow.Name = "gbxMainWindow";
             this.gbxMainWindow.TabStop = false;
             // 
@@ -130,20 +130,20 @@ namespace OpenCBS.GUI.Contracts
             // 
             // nudTotalAmount
             // 
+            resources.ApplyResources(this.nudTotalAmount, "nudTotalAmount");
             this.nudTotalAmount.DecimalPlaces = 2;
             this.nudTotalAmount.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            resources.ApplyResources(this.nudTotalAmount, "nudTotalAmount");
             this.nudTotalAmount.Name = "nudTotalAmount";
             this.nudTotalAmount.ReadOnly = true;
             // 
             // nudAmount
             // 
-            this.nudAmount.DecimalPlaces = 2;
             resources.ApplyResources(this.nudAmount, "nudAmount");
+            this.nudAmount.DecimalPlaces = 2;
             this.nudAmount.Name = "nudAmount";
             this.nudAmount.ValueChanged += new System.EventHandler(this.nudAmount_ValueChanged);
             // 
@@ -161,14 +161,14 @@ namespace OpenCBS.GUI.Contracts
             // 
             // lblAmountFeesMinMax
             // 
-            this.lblAmountFeesMinMax.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblAmountFeesMinMax, "lblAmountFeesMinMax");
+            this.lblAmountFeesMinMax.BackColor = System.Drawing.Color.Transparent;
             this.lblAmountFeesMinMax.Name = "lblAmountFeesMinMax";
             // 
             // updAmountFees
             // 
-            this.updAmountFees.DecimalPlaces = 2;
             resources.ApplyResources(this.updAmountFees, "updAmountFees");
+            this.updAmountFees.DecimalPlaces = 2;
             this.updAmountFees.Name = "updAmountFees";
             this.updAmountFees.ValueChanged += new System.EventHandler(this.nudAmount_ValueChanged);
             // 
@@ -244,13 +244,13 @@ namespace OpenCBS.GUI.Contracts
             // 
             // plTransfer
             // 
+            resources.ApplyResources(this.plTransfer, "plTransfer");
             this.plTransfer.Controls.Add(this.lblInterBranch);
             this.plTransfer.Controls.Add(this.tbTargetAccount);
             this.plTransfer.Controls.Add(this.btnSearchContract);
             this.plTransfer.Controls.Add(this.lbTargetSavings);
             this.plTransfer.Controls.Add(this.lblClientName);
             this.plTransfer.Controls.Add(this.cbBookings);
-            resources.ApplyResources(this.plTransfer, "plTransfer");
             this.plTransfer.Name = "plTransfer";
             // 
             // lblInterBranch
@@ -277,34 +277,34 @@ namespace OpenCBS.GUI.Contracts
             // 
             // lblClientName
             // 
-            this.lblClientName.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblClientName, "lblClientName");
+            this.lblClientName.BackColor = System.Drawing.Color.Transparent;
             this.lblClientName.Name = "lblClientName";
             // 
             // cbBookings
             // 
+            resources.ApplyResources(this.cbBookings, "cbBookings");
             this.cbBookings.BackColor = System.Drawing.Color.White;
             this.cbBookings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBookings.ForeColor = System.Drawing.Color.Black;
             this.cbBookings.FormattingEnabled = true;
-            resources.ApplyResources(this.cbBookings, "cbBookings");
             this.cbBookings.Name = "cbBookings";
             // 
             // pnlSavingPending
             // 
+            resources.ApplyResources(this.pnlSavingPending, "pnlSavingPending");
             this.pnlSavingPending.Controls.Add(this.cbSavingsMethod);
             this.pnlSavingPending.Controls.Add(this.cbxPending);
             this.pnlSavingPending.Controls.Add(this.lblPaymentMethod);
-            resources.ApplyResources(this.pnlSavingPending, "pnlSavingPending");
             this.pnlSavingPending.Name = "pnlSavingPending";
             // 
             // cbSavingsMethod
             // 
+            resources.ApplyResources(this.cbSavingsMethod, "cbSavingsMethod");
             this.cbSavingsMethod.DisplayMember = "Name";
             this.cbSavingsMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSavingsMethod.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbSavingsMethod.FormattingEnabled = true;
-            resources.ApplyResources(this.cbSavingsMethod, "cbSavingsMethod");
             this.cbSavingsMethod.Name = "cbSavingsMethod";
             this.cbSavingsMethod.SelectedIndexChanged += new System.EventHandler(this.comboBoxSavingsMethod_SelectedIndexChanged);
             // 

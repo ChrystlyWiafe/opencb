@@ -183,6 +183,7 @@ namespace OpenCBS.Services.Accounting
                     return;
                 }
                 var loanEventId = eEvent.ParentId ?? eEvent.Id;
+
                 if (includeChildEventsTransactions)
                 {
                     var childEventIds = _repository.GetChildEvents(loanEventId, tx);
@@ -191,6 +192,7 @@ namespace OpenCBS.Services.Accounting
                         _repository.DeleteByLoanEvent(id, tx);
                     }
                 }
+
                 _repository.DeleteByLoanEvent(loanEventId, tx);
 
                 if (transaction == null)

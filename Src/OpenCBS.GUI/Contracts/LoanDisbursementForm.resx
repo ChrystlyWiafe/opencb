@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -310,7 +310,7 @@
     <value>32</value>
   </data>
   <data name="_lbFundingLineValue.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Funding Line Value</value>
   </data>
   <data name="_lbFundingLineValue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -388,7 +388,7 @@
     <value>31</value>
   </data>
   <data name="_lbLoanCodeValue.Text" xml:space="preserve">
-    <value>???</value>
+    <value>Loan Code Value</value>
   </data>
   <data name="_lbLoanCodeValue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -505,7 +505,7 @@
     <value>0</value>
   </data>
   <data name="lblFeesCurrencyPivot.Text" xml:space="preserve">
-    <value>000</value>
+    <value>Fees Currency Pivot</value>
   </data>
   <data name="lblFeesCurrencyPivot.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -948,9 +948,6 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>405, 312</value>
   </data>
@@ -1564,4 +1561,10 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=15.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

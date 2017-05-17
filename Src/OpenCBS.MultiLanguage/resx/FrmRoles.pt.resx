@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,48 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="action_item.Text" xml:space="preserve">
-    <value>Todos os itens de ação</value>
+    <value>Todos os itens de acção</value>
   </data>
   <data name="create" xml:space="preserve">
     <value>Criar</value>
   </data>
   <data name="createLabel" xml:space="preserve">
-    <value>Novo papel será criado.</value>
+    <value>Será criada nova função</value>
   </data>
   <data name="menu_item.Text" xml:space="preserve">
-    <value>Todos os itens do cardápio</value>
+    <value>Todos os itens do menu</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Novo</value>
   </data>
   <data name="RoleCreated" xml:space="preserve">
-    <value>O papel criado</value>
+    <value>Função criada</value>
   </data>
   <data name="RoleExists" xml:space="preserve">
-    <value>O Papel com o mesmo nome já existe</value>
+    <value>Já existe uma função com o mesmo nome</value>
   </data>
   <data name="RoleNameEmpty" xml:space="preserve">
-    <value>O Nome do papel deve ser preenchido</value>
+    <value>O Nome da função deve ser preenchido</value>
   </data>
   <data name="RoleSelect" xml:space="preserve">
-    <value>Selecione uma função.</value>
+    <value>Seleccione uma função.</value>
   </data>
   <data name="RoleUpdated" xml:space="preserve">
-    <value>O papel actualizado</value>
+    <value>Função actualizada</value>
   </data>
   <data name="update" xml:space="preserve">
     <value>Actualizar</value>
   </data>
   <data name="updateLabel" xml:space="preserve">
-    <value>O papel {0} será actualizado.</value>
+    <value>Função {0} será actualizada.</value>
   </data>
   <data name="alerts_page.Text" xml:space="preserve">
     <value>Alertas</value>
   </data>
   <data name="dashboard_page.Text" xml:space="preserve">
-    <value>Graficos</value>
+    <value>Dashboard/ écran</value>
   </data>
   <data name="start_page.Text" xml:space="preserve">
-    <value>Pagina inicial</value>
+    <value>Página inicial</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,22 +112,21 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="confirm.Text" xml:space="preserve">
-    <value>Tem certeza de que deseja restaurar os dados?
- (Todos os dados existentes serão apagados)</value>
+    <value>Tem certeza de que deseja restaurar os dados?  (Todos os dados existentes serão apagados)</value>
   </data>
   <data name="failed.Text" xml:space="preserve">
-    <value>A restauração falhou</value>
+    <value>O restauro falhou</value>
   </data>
   <data name="restoring.Text" xml:space="preserve">
-    <value>A restauração do  banco de dados está em progresso ...</value>
+    <value>A restauro da base de dados está em progresso ...</value>
   </data>
   <data name="success.Text" xml:space="preserve">
-    <value>A restauração foi bem sucecida. A aplicaão vai reiniciar agora</value>
+    <value>A restauro foi bem sucecido. A aplicação vai reiniciar agora</value>
   </data>
 </root>

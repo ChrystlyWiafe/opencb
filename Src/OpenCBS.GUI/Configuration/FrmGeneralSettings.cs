@@ -470,7 +470,6 @@ namespace OpenCBS.GUI.Configuration
             this.tabControlGeneralSettings.Multiline = true;
             this.tabControlGeneralSettings.Name = "tabControlGeneralSettings";
             this.tabControlGeneralSettings.SelectedIndex = 0;
-            this.tabControlGeneralSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             // 
             // tabPage1
             // 
@@ -602,7 +601,6 @@ namespace OpenCBS.GUI.Configuration
             resources.GetString("cbxValue.Items"),
             resources.GetString("cbxValue.Items1")});
             this.cbxValue.Name = "cbxValue";
-            this.cbxValue.Visible = false;
             this.cbxValue.SelectionChangeCommitted += new System.EventHandler(this.comboBoxValue_SelectionChangeCommitted);
             this.cbxValue.SelectedValueChanged += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -610,7 +608,6 @@ namespace OpenCBS.GUI.Configuration
             // 
             resources.ApplyResources(this.textBoxGeneralParameterValue, "textBoxGeneralParameterValue");
             this.textBoxGeneralParameterValue.Name = "textBoxGeneralParameterValue";
-            
             this.textBoxGeneralParameterValue.Leave += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // tabPageProvioningRules
@@ -1657,12 +1654,12 @@ namespace OpenCBS.GUI.Configuration
                     waitingForm = new PublicHolidaysWaitingForm();
                     result = waitingForm.ShowDialog();
 
-                    ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Add((DateTime)entry.Key, (string)entry.Value);
-                    ServicesProvider.GetInstance().GetApplicationSettingsServices().AddNonWorkingDate(entry);
-                    ServicesProvider.GetInstance().GetApplicationSettingsServices().FillNonWorkingDate();
-
                     if (result == DialogResult.Yes)
                     {
+                        ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Add((DateTime)entry.Key, (string)entry.Value);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().AddNonWorkingDate(entry);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().FillNonWorkingDate();
+
                         waitingForm.UpdateInstallmentsDate();
                     }
                 }
@@ -1681,9 +1678,6 @@ namespace OpenCBS.GUI.Configuration
         {
             if (listViewPublicHolidays.SelectedItems.Count != 0)
             {
-                ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Remove((DateTime)entry.Key);
-                ServicesProvider.GetInstance().GetApplicationSettingsServices().DeleteNonWorkingDate(entry);
-
                 PublicHolidaysWaitingForm waitingForm;
 
                 DialogResult result;
@@ -1694,6 +1688,8 @@ namespace OpenCBS.GUI.Configuration
                     result = waitingForm.ShowDialog();
                     if (result == DialogResult.Yes)
                     {
+                        ServicesProvider.GetInstance().GetNonWorkingDate().PublicHolidays.Remove((DateTime)entry.Key);
+                        ServicesProvider.GetInstance().GetApplicationSettingsServices().DeleteNonWorkingDate(entry);
                         waitingForm.UpdateInstallmentsDate((DateTime)entry.Key, ServicesProvider.GetInstance().GetContractServices().GetListOfInstallmentsOnDate((DateTime)entry.Key));
                     }
                 }

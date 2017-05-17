@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1419,6 +1419,105 @@
   </data>
   <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
     <value>6, 15</value>
+  </data>
+  <data name="linkLabelRoadMap.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelPrintCashOut.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelPrintCashIn.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelCashReceipt.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelSearchProject.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelSearchCreditContract.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelSearchClient.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelNewPerson.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabelGroup.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnklblNewVillage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelNewClient.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_servicesLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_userGuideLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_contactLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="operateLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="searchClientLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="searchContractLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="newIndividualClientLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="newSolidarityGroupLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="newNonSolidairtyGroupLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="newCorporateClientLinkLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configureLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configureLoanProductsLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configureSavingsProductsLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configureCollateralProducts.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configureSettingsLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="configurePermissionsLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="controlLabel.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="auditTrailLabel.Text" xml:space="preserve">
+    <value />
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

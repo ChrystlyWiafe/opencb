@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,28 +112,28 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="advancedSettingsChanged.Text" xml:space="preserve">
     <value>As configurações foram alteradas, a aplicação vai reiniciar agora.</value>
   </data>
   <data name="Alerts" xml:space="preserve">
-    <value>As alertas ({0})</value>
+    <value>Alertas ({0})</value>
   </data>
   <data name="AlertsLoading" xml:space="preserve">
-    <value>As alertas (carregamento)</value>
+    <value>Alertas (carregamento)</value>
   </data>
   <data name="BranchCode.Text" xml:space="preserve">
-    <value>O código da sucursal</value>
+    <value>Código da sucursal</value>
   </data>
   <data name="ConsolidatedCurrencies.Text" xml:space="preserve">
-    <value>A CoA consolidado</value>
+    <value>CoA consolidado</value>
   </data>
   <data name="messageBoxMonthlyClosureDone.Text" xml:space="preserve">
-    <value>O fecho mensal feito</value>
+    <value>Fecho mensal realizado</value>
   </data>
   <data name="messageBoxMonthlyClosureQuestion.Text" xml:space="preserve">
     <value>Deseja realmente executar e terminar o encerramento do período?</value>
@@ -142,7 +142,7 @@
     <value>Esta é apenas uma simulação de fecho mensal</value>
   </data>
   <data name="passwordChanged" xml:space="preserve">
-    <value>A senha foi alterada com sucesso.</value>
+    <value>A palavra passe foi alterada com sucesso.</value>
   </data>
   <data name="StatusActive" xml:space="preserve">
     <value>Activo</value>
@@ -157,9 +157,30 @@
     <value>Validado</value>
   </data>
   <data name="textBalanceOfCashAtHand.Text" xml:space="preserve">
-    <value>O saldo de dinheiro na mão</value>
+    <value>Saldo do fundo de maneio</value>
   </data>
   <data name="FailedExtensionAssemblies.Text" xml:space="preserve">
-    <value>Assembléias de extensão não pôde ser carregado: {0}</value>
+    <value>As assembleias de extensão não podem ser carregadas: {0}</value>
+  </data>
+  <data name="fieldIsRequired" xml:space="preserve">
+    <value>Campos requeridos</value>
+  </data>
+  <data name="Error.Text" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Informação</value>
+  </data>
+  <data name="littleOrBigPassword.Text" xml:space="preserve">
+    <value>Palavra passe pequena ou grande</value>
+  </data>
+  <data name="newPasswordIsWrong.Text" xml:space="preserve">
+    <value>Nova Palavra Passe errada</value>
+  </data>
+  <data name="oldPasswordIsWrong.Text" xml:space="preserve">
+    <value>Palavra passe antiga errada</value>
+  </data>
+  <data name="passwordChanged.Text" xml:space="preserve">
+    <value>Palavra Passe alterada</value>
   </data>
 </root>

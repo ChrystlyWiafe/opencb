@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllBranches" xml:space="preserve">
-    <value>Todos os sucursais</value>
+    <value>Todas as sucursais</value>
   </data>
   <data name="AllLoanProducts" xml:space="preserve">
     <value>Todos os produtos</value>
@@ -127,10 +127,10 @@
     <value>Todos os utilizadores</value>
   </data>
   <data name="NumberOfDisbursements" xml:space="preserve">
-    <value>Número de desembolso nos ultimos 10 dias</value>
+    <value>Número de desembolsos nos últimos 3 dias</value>
   </data>
   <data name="OlbTrend" xml:space="preserve">
-    <value>Tendência de SEP nos ultimos 10 dias</value>
+    <value>Tendência de SEP nos últimos 3 dias</value>
   </data>
   <data name="PAR" xml:space="preserve">
     <value>Risco de crédito</value>
@@ -154,7 +154,7 @@
     <value>PAR &gt;365</value>
   </data>
   <data name="Performing" xml:space="preserve">
-    <value>Empréstimos activos não ao risco</value>
+    <value>Execução</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
     <value>Carteira de crédito</value>

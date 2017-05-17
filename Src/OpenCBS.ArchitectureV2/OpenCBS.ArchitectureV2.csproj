@@ -453,8 +453,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AlertsView.pt.resx">
+      <DependentUpon>AlertsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BatchRepaymentView.resx">
       <DependentUpon>BatchRepaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.pt.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StartPageView.pt.resx">
+      <DependentUpon>StartPageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpgradeView.pt.resx">
+      <DependentUpon>UpgradeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VillageBankView.resx">
       <DependentUpon>VillageBankView.cs</DependentUpon>

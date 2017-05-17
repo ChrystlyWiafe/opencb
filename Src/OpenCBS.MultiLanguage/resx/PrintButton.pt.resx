@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="noAvailableReportsCaption.Text" xml:space="preserve">
-    <value>Não há relatórios disponíveis para esta seção.</value>
+    <value>Não há relatórios internos disponíveis para esta secção.</value>
   </data>
   <data name="pleaseApproveLoan" xml:space="preserve">
-    <value>Por favor, aprovar o empréstimo.</value>
+    <value>Por favor, aprovar o crédito.</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Aviso</value>

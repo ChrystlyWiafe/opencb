@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -152,5 +152,8 @@
   </data>
   <data name="GracePeriodNotCorrect" xml:space="preserve">
     <value>Please enter appropriate grace period value!</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value />
   </data>
 </root>

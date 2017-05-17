@@ -121,10 +121,10 @@
     <value>Data</value>
   </data>
   <data name="interestColumn.Text" xml:space="preserve">
-    <value>Juros anticipados</value>
+    <value>Juros antecipados</value>
   </data>
   <data name="principalColumn.Text" xml:space="preserve">
-    <value>Capital anticipado</value>
+    <value>Capital antecipado</value>
   </data>
   <data name="totalColumn.Text" xml:space="preserve">
     <value>Total da prestação</value>
@@ -139,10 +139,37 @@
     <value>Capital pago</value>
   </data>
   <data name="paymentDateColumn.Text" xml:space="preserve">
-    <value>Data paga</value>
+    <value>Data de pagamento</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="numberColumn.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="extraColumn.Text" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="paidExtraColumn.Text" xml:space="preserve">
+    <value>Pago adicionalmente</value>
+  </data>
+  <data name="lateDaysColumn.Text" xml:space="preserve">
+    <value>Dias de Atraso</value>
+  </data>
+  <data name="commentColumn.Text" xml:space="preserve">
+    <value>Comentário</value>
+  </data>
+  <data name="extra_amount_1.Text" xml:space="preserve">
+    <value>Taxa de Câmbio</value>
+  </data>
+  <data name="extra_amount_2.Text" xml:space="preserve">
+    <value>Valor Alterado</value>
+  </data>
+  <data name="_scheduleContextMenuStrip.Text" xml:space="preserve">
+    <value>Copiar para área de transferência</value>
+  </data>
+  <data name="menuItemCopy.Text" xml:space="preserve">
+    <value>Copiar tudo para área de transferência</value>
   </data>
 </root>

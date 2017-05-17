@@ -56,8 +56,8 @@ namespace OpenCBS.GUI.Configuration
         public void UpdateInstallmentsDate(DateTime date, Dictionary<int, int> list)
         {
             Cursor = Cursors.WaitCursor;
-            progressBar.Value = 1;
             progressBar.Minimum = 1;
+            progressBar.Value = 1;
 
             progressBar.Maximum = list.Count;
 

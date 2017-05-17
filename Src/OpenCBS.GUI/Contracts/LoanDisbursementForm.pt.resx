@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -143,21 +143,19 @@
     <value>125, 26</value>
   </data>
   <data name="_lbLoanCode.Text" xml:space="preserve">
-    <value>Código do contrato: 
-</value>
+    <value>Código do contrato:</value>
   </data>
   <data name="_lbLoanCodeValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 30</value>
   </data>
   <data name="_lbAmount.Text" xml:space="preserve">
-    <value>Quantia:
-</value>
+    <value>Quantia:</value>
   </data>
   <data name="_lbFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 26</value>
   </data>
   <data name="_lbFees.Text" xml:space="preserve">
-    <value>taxas de entrada</value>
+    <value>Taxas de entrada</value>
   </data>
   <data name="checkBoxFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -202,15 +200,37 @@
     <value>Imprimir</value>
   </data>
   <data name="buttonAddExchangeRate.Text" xml:space="preserve">
-    <value>Adicionar a taxa de câmbio</value>
+    <value>Adicionar taxa de câmbio</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
-    <value>Está bem</value>
+    <value>Correcto</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Desembolso</value>
+  </data>
+  <data name="_lbAmountValue.Text" xml:space="preserve">
+    <value>Valor do Montante</value>
+  </data>
+  <data name="_lbFundingLineValue.Text" xml:space="preserve">
+    <value>Valor da Linha de financiamento</value>
+  </data>
+  <data name="_lbLoanCodeValue.Text" xml:space="preserve">
+    <value>Valor do Código de Crédito</value>
+  </data>
+  <data name="lblFeesCurrencyPivot.Text" xml:space="preserve">
+    <value>Pivô de comissões de moeda
+</value>
+  </data>
+  <data name="lblAmountCurrency.Text" xml:space="preserve">
+    <value>Moeda da quantia</value>
+  </data>
+  <data name="lblEntryFeeCurrency.Text" xml:space="preserve">
+    <value>Moeda da comissão de entrada</value>
+  </data>
+  <data name="lblPivotCurrency.Text" xml:space="preserve">
+    <value>Pivô de moeda</value>
   </data>
 </root>

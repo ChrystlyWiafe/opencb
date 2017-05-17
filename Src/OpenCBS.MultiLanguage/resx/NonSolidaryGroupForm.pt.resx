@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,42 +112,45 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActiveClient" xml:space="preserve">
     <value>Activo</value>
   </data>
   <data name="cbLoanOfficers.Select" xml:space="preserve">
-    <value>Por favor, selecione ...</value>
+    <value>Por favor, seleccione ...</value>
   </data>
   <data name="ConfirmSave.Text" xml:space="preserve">
-    <value>Todos os clientes que não foram salvos serão apagados. Deseja salvar antes de continuar?</value>
+    <value>Todos os clientes que não foram guardados serão apagados. Deseja guardar antes de continuar?</value>
   </data>
   <data name="InactiveClient" xml:space="preserve">
     <value>Inactivo</value>
   </data>
   <data name="MoneyNotEnoughForAll.Text" xml:space="preserve">
-    <value>Não há fundos suficiente na linha de financiamento para todos os empréstimos que pretende desembolsar para os  membros. Se continuar, alguns empréstimos não serão desembolsados​​. Ainda quer continuar?</value>
+    <value>Não há dinheiro suficiente na linha de financiamento para todos os membros para quem pretende desembolsar os créditos. Se continuar, alguns crédito não serão desembolsados??. Ainda quer continuar?</value>
   </data>
   <data name="RemoveConfirm.Caption" xml:space="preserve">
     <value>Confirmar</value>
   </data>
   <data name="RemoveConfirm.Text" xml:space="preserve">
-    <value>Tem certeza de que quer remover este membro da aldeia?</value>
+    <value>Tem certeza de que quer remover este membro do banco da aldeia?</value>
   </data>
   <data name="RemoveProhibited.Caption" xml:space="preserve">
     <value>Não é possível remover</value>
   </data>
   <data name="RemoveProhibited.Text" xml:space="preserve">
-    <value>Não pode remover este membro do grupo por causa de um empréstimo activo.</value>
+    <value>Não pode remover este membro do grupo por causa de um crédito activo.</value>
   </data>
   <data name="Update.Text" xml:space="preserve">
     <value>Actualizar</value>
   </data>
   <data name="UserHasActiveContract" xml:space="preserve">
     <value>Não pode adicionar esta pessoa a um grupo não solidário, porque eles têm um contrato activo.</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactivo</value>
   </data>
 </root>

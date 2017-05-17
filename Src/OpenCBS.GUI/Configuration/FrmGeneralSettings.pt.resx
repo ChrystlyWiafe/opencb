@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>Parametos gerais</value>
+    <value>Configurações Gerais</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Nome</value>
@@ -127,13 +127,13 @@
     <value>Valor</value>
   </data>
   <data name="unitColumnHeader.Text" xml:space="preserve">
-    <value>Explicação</value>
-  </data>
-  <data name="explanationColumnHeader.Text" xml:space="preserve">
     <value>Unidade</value>
   </data>
+  <data name="explanationColumnHeader.Text" xml:space="preserve">
+    <value>Explicação</value>
+  </data>
   <data name="groupBox3.Text" xml:space="preserve">
-    <value>Parametos</value>
+    <value>Configurações</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
@@ -155,16 +155,16 @@
     <value>Sim</value>
   </data>
   <data name="cbxValue.Items" xml:space="preserve">
-    <value>acréscimo</value>
+    <value>Acréscimo</value>
   </data>
   <data name="cbxValue.Items1" xml:space="preserve">
-    <value>numerário</value>
+    <value>Numerário</value>
   </data>
   <data name="tabPageProvioningRules.Text" xml:space="preserve">
     <value>Regras de provisão</value>
   </data>
   <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Número mínimo para marcar atraso</value>
+    <value>Número mínimo de dias vencidos</value>
   </data>
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Numero máximo de dia em atraso</value>
@@ -172,29 +172,41 @@
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Provisões (%)</value>
   </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>Provisão de Juros</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Provisão de Penalidade:</value>
+  </data>
   <data name="groupBoxAddUser.Text" xml:space="preserve">
     <value>Regras de provisão</value>
   </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 16</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Provisão de Penalidade:</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 16</value>
+    <value>110, 16</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>%</value>
+    <value>Provisão de Juros</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
+    <value>42, 16</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>dia(s)</value>
+    <value>Dia(s)</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>Gravar</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
+    <value>42, 16</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>dia(s)</value>
+    <value>Dia(s)</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 16</value>
@@ -203,10 +215,10 @@
     <value>Nº máximo de dias:</value>
   </data>
   <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
+    <value>103, 16</value>
   </data>
   <data name="labelPassword.Text" xml:space="preserve">
-    <value>Provisão:</value>
+    <value>Provisão de Olb:</value>
   </data>
   <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 16</value>
@@ -242,10 +254,10 @@
     <value>Gravar</value>
   </data>
   <data name="tabPageLoanScale.Text" xml:space="preserve">
-    <value>Escala de empréstimos</value>
+    <value>Escala de empréstimos (Usada nos Relatórios)</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
-    <value>Adicionar escala</value>
+    <value>Adicionar Escala</value>
   </data>
   <data name="buttonDeleteScale.Text" xml:space="preserve">
     <value>Apagar</value>
@@ -266,7 +278,7 @@
     <value>Valor mínimo:</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Valor minimo</value>
+    <value>Valor mínimo</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Valor máximo</value>

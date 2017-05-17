@@ -178,7 +178,7 @@ namespace OpenCBS.GUI.UserControl
             _tempPerson.LoanCycle = 0;
             dateTimePickerDateOfBirth.Format = DateTimePickerFormat.Custom;
             dateTimePickerDateOfBirth.CustomFormat = ApplicationSettings.GetInstance("").SHORT_DATE_FORMAT;
-            foreach (Branch branch in User.CurrentUser.Branches)
+            foreach (Branch branch in User.CurrentUser.Branches.Where(item => !item.Deleted))
             {
                 cbBranch.Items.Add(branch);
             }

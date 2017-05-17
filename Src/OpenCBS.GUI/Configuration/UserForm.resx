@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -400,7 +400,7 @@
     <value>4</value>
   </data>
   <data name="cmbRoles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 3</value>
+    <value>556, 3</value>
   </data>
   <data name="cmbRoles.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 24</value>
@@ -790,7 +790,7 @@
     <value>14</value>
   </data>
   <data name="cmbSex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 32</value>
+    <value>556, 32</value>
   </data>
   <data name="cmbSex.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 24</value>
@@ -841,7 +841,7 @@
     <value>16</value>
   </data>
   <data name="txbPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 61</value>
+    <value>556, 61</value>
   </data>
   <data name="txbPhone.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 22</value>
@@ -889,7 +889,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cmbRoles" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="txbMail" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblRole" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txbConfirmPassword" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUsername" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbComfirmPassword" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbLastname" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbFirstname" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblMail" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblPassword" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbPassword" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblFirstName" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblLastName" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblUsername" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblSex" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="cmbSex" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="lblPhone" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txbPhone" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25.68448,Percent,19.55672,Percent,11.65775,Percent,43.31551" /&gt;&lt;Rows Styles="Percent,17,Percent,17,Percent,17,Percent,17,Percent,17,Percent,15" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cmbRoles" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="txbMail" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblRole" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txbConfirmPassword" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUsername" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbComfirmPassword" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbLastname" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbFirstname" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblMail" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblPassword" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbPassword" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblFirstName" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblLastName" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblUsername" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblSex" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="cmbSex" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="lblPhone" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txbPhone" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25.68448,Percent,19.55672,Percent,14.2246,Percent,40.74866" /&gt;&lt;Rows Styles="Percent,17,Percent,17,Percent,17,Percent,17,Percent,17,Percent,15" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="gbAddUser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1583,6 +1583,6 @@
     <value>UserForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetForm, OpenCBS.GUI, Version=16.10.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

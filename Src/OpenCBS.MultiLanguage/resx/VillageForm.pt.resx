@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,48 +112,45 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActiveClient" xml:space="preserve">
     <value>Activo</value>
   </data>
   <data name="cbLoanOfficers.Select" xml:space="preserve">
-    <value>Por favor, selecione ...</value>
+    <value>Por favor, seleccione ...</value>
   </data>
   <data name="GracePeriod" xml:space="preserve">
-    <value>Prazo de tolerância</value>
+    <value>Período de carência</value>
   </data>
   <data name="GracePeriodNotCorrect" xml:space="preserve">
-    <value>Por favor, lance um valor período de tolerância adequado!</value>
+    <value>Por favor, digite um valor de período de carência adequado!</value>
   </data>
   <data name="InactiveClient" xml:space="preserve">
     <value>Inactivo</value>
   </data>
   <data name="MoneyNotEnoughForAll.Text" xml:space="preserve">
-    <value>Não há dinheiro suficiente na linha de financiamento para todos os membros à quem pretende desembolsar empréstimos. Se continuar, alguns empréstimos não poderão ser desembolsados​​. Ainda quer continuar?</value>
+    <value>Não há dinheiro suficiente na linha de financiamento para todos os membros a quem pretende desembolsar os créditos. Se continuar, alguns créditos não poderão ser desembolsados??. Ainda quer continuar?</value>
   </data>
   <data name="RemoveConfirm.Caption" xml:space="preserve">
     <value>Confirmar</value>
   </data>
   <data name="RemoveConfirm.Text" xml:space="preserve">
-    <value>Tem certeza de que quer remover este 
-membro da aldeia?</value>
+    <value>Tem certeza de que quer remover este membro do grupo não solidário? </value>
   </data>
   <data name="RemoveProhibited.Caption" xml:space="preserve">
     <value>Não é possível remover</value>
   </data>
   <data name="RemoveProhibited.Text" xml:space="preserve">
-    <value>Não pode remover este membro do grupo 
-não solidário, por causa de um empréstimo activo.</value>
+    <value>Não pode remover este membro do grupo não solidário, por causa de um empréstimo activo.</value>
   </data>
   <data name="Update.Text" xml:space="preserve">
     <value>Actualizar</value>
   </data>
   <data name="UserHasActiveContract" xml:space="preserve">
-    <value>Não pode adicionar esta pessoa a um grupo não 
-solidário, porque eles têm um contrato activo.</value>
+    <value>Não pode adicionar esta pessoa a um grupo não solidário, porque eles têm um contrato activo.</value>
   </data>
 </root>

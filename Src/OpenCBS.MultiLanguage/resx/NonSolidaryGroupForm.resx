@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -149,5 +149,8 @@
   </data>
   <data name="ConfirmSave.Text" xml:space="preserve">
     <value>All unsaved clients will be erased. Do you want to save before continuing?</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value />
   </data>
 </root>

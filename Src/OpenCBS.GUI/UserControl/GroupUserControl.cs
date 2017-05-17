@@ -178,6 +178,7 @@ namespace OpenCBS.GUI.UserControl
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxFirstAddress = new System.Windows.Forms.GroupBox();
             this.groupBoxSecondaryAddress = new System.Windows.Forms.GroupBox();
+            this.buttonCopy = new System.Windows.Forms.Button();
             this.tabPageMembers = new System.Windows.Forms.TabPage();
             this.tabPageHistory = new System.Windows.Forms.TabPage();
             this.listViewHistoryMembers = new System.Windows.Forms.ListView();
@@ -217,7 +218,6 @@ namespace OpenCBS.GUI.UserControl
             this.linkLabelChangePhoto = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonCopy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -252,14 +252,17 @@ namespace OpenCBS.GUI.UserControl
             // 
             // splitContainer3.Panel1
             // 
+            resources.ApplyResources(this.splitContainer3.Panel1, "splitContainer3.Panel1");
             this.splitContainer3.Panel1.Controls.Add(this.listViewOtherMembres);
             // 
             // splitContainer3.Panel2
             // 
+            resources.ApplyResources(this.splitContainer3.Panel2, "splitContainer3.Panel2");
             this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
             // 
             // listViewOtherMembres
             // 
+            resources.ApplyResources(this.listViewOtherMembres, "listViewOtherMembres");
             this.listViewOtherMembres.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderName,
             this.columnHeaderPassport,
@@ -268,7 +271,6 @@ namespace OpenCBS.GUI.UserControl
             this.columnHeaderLoanCycle,
             this.columnHeaderDependents,
             this.columnHeader7});
-            resources.ApplyResources(this.listViewOtherMembres, "listViewOtherMembres");
             this.listViewOtherMembres.FullRowSelect = true;
             this.listViewOtherMembres.GridLines = true;
             this.listViewOtherMembres.MultiSelect = false;
@@ -307,11 +309,11 @@ namespace OpenCBS.GUI.UserControl
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.buttonDeleteMembers);
             this.groupBox3.Controls.Add(this.buttonSaveAsLeader);
             this.groupBox3.Controls.Add(this.buttonAddMembres);
             this.groupBox3.Controls.Add(this.buttonSelectAMember);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
@@ -346,20 +348,22 @@ namespace OpenCBS.GUI.UserControl
             // 
             // splitContainer1.Panel1
             // 
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.Controls.Add(this.listViewProjects);
             // 
             // splitContainer1.Panel2
             // 
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.Controls.Add(this.groupBoxProjects);
             // 
             // listViewProjects
             // 
+            resources.ApplyResources(this.listViewProjects, "listViewProjects");
             this.listViewProjects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeaderCode,
             this.columnHeaderNbOfContracts});
-            resources.ApplyResources(this.listViewProjects, "listViewProjects");
             this.listViewProjects.FullRowSelect = true;
             this.listViewProjects.GridLines = true;
             this.listViewProjects.Name = "listViewProjects";
@@ -385,9 +389,9 @@ namespace OpenCBS.GUI.UserControl
             // 
             // groupBoxProjects
             // 
+            resources.ApplyResources(this.groupBoxProjects, "groupBoxProjects");
             this.groupBoxProjects.Controls.Add(this.buttonViewProject);
             this.groupBoxProjects.Controls.Add(this.buttonAddProject);
-            resources.ApplyResources(this.groupBoxProjects, "groupBoxProjects");
             this.groupBoxProjects.Name = "groupBoxProjects";
             this.groupBoxProjects.TabStop = false;
             // 
@@ -405,12 +409,12 @@ namespace OpenCBS.GUI.UserControl
             // 
             // tabControlGroupInfo
             // 
+            resources.ApplyResources(this.tabControlGroupInfo, "tabControlGroupInfo");
             this.tabControlGroupInfo.Controls.Add(this.tabPageBusinessAddress);
             this.tabControlGroupInfo.Controls.Add(this.tabPageMembers);
             this.tabControlGroupInfo.Controls.Add(this.tabPageHistory);
             this.tabControlGroupInfo.Controls.Add(this.tabPageProjects);
             this.tabControlGroupInfo.Controls.Add(this.tabPageSaving);
-            resources.ApplyResources(this.tabControlGroupInfo, "tabControlGroupInfo");
             this.tabControlGroupInfo.ImageList = this.imageListTab;
             this.tabControlGroupInfo.Name = "tabControlGroupInfo";
             this.tabControlGroupInfo.SelectedIndex = 0;
@@ -418,8 +422,8 @@ namespace OpenCBS.GUI.UserControl
             // 
             // tabPageBusinessAddress
             // 
-            this.tabPageBusinessAddress.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this.tabPageBusinessAddress, "tabPageBusinessAddress");
+            this.tabPageBusinessAddress.Controls.Add(this.tableLayoutPanel1);
             this.tabPageBusinessAddress.Name = "tabPageBusinessAddress";
             // 
             // tableLayoutPanel1
@@ -442,20 +446,28 @@ namespace OpenCBS.GUI.UserControl
             this.groupBoxSecondaryAddress.Name = "groupBoxSecondaryAddress";
             this.groupBoxSecondaryAddress.TabStop = false;
             // 
+            // buttonCopy
+            // 
+            resources.ApplyResources(this.buttonCopy, "buttonCopy");
+            this.buttonCopy.Name = "buttonCopy";
+            this.buttonCopy.UseVisualStyleBackColor = true;
+            this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
+            // 
             // tabPageMembers
             // 
-            this.tabPageMembers.Controls.Add(this.splitContainer3);
             resources.ApplyResources(this.tabPageMembers, "tabPageMembers");
+            this.tabPageMembers.Controls.Add(this.splitContainer3);
             this.tabPageMembers.Name = "tabPageMembers";
             // 
             // tabPageHistory
             // 
-            this.tabPageHistory.Controls.Add(this.listViewHistoryMembers);
             resources.ApplyResources(this.tabPageHistory, "tabPageHistory");
+            this.tabPageHistory.Controls.Add(this.listViewHistoryMembers);
             this.tabPageHistory.Name = "tabPageHistory";
             // 
             // listViewHistoryMembers
             // 
+            resources.ApplyResources(this.listViewHistoryMembers, "listViewHistoryMembers");
             this.listViewHistoryMembers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -463,7 +475,6 @@ namespace OpenCBS.GUI.UserControl
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            resources.ApplyResources(this.listViewHistoryMembers, "listViewHistoryMembers");
             this.listViewHistoryMembers.FullRowSelect = true;
             this.listViewHistoryMembers.GridLines = true;
             this.listViewHistoryMembers.MultiSelect = false;
@@ -498,21 +509,21 @@ namespace OpenCBS.GUI.UserControl
             // 
             // tabPageProjects
             // 
-            this.tabPageProjects.Controls.Add(this.splitContainer1);
             resources.ApplyResources(this.tabPageProjects, "tabPageProjects");
+            this.tabPageProjects.Controls.Add(this.splitContainer1);
             this.tabPageProjects.Name = "tabPageProjects";
             // 
             // tabPageSaving
             // 
-            this.tabPageSaving.Controls.Add(this.savingsListUserControl1);
             resources.ApplyResources(this.tabPageSaving, "tabPageSaving");
+            this.tabPageSaving.Controls.Add(this.savingsListUserControl1);
             this.tabPageSaving.Name = "tabPageSaving";
             // 
             // savingsListUserControl1
             // 
+            resources.ApplyResources(this.savingsListUserControl1, "savingsListUserControl1");
             this.savingsListUserControl1.ButtonAddSavingsEnabled = true;
             this.savingsListUserControl1.ClientType = OpenCBS.Enums.OClientTypes.Group;
-            resources.ApplyResources(this.savingsListUserControl1, "savingsListUserControl1");
             this.savingsListUserControl1.Name = "savingsListUserControl1";
             this.savingsListUserControl1.AddSelectedSaving += new System.EventHandler(this.savingsListUserControl1_AddSelectedSaving);
             this.savingsListUserControl1.ViewSelectedSaving += new System.EventHandler(this.savingsListUserControl1_ViewSelectedSaving);
@@ -537,9 +548,9 @@ namespace OpenCBS.GUI.UserControl
             // 
             // groupBoxButtonBottom
             // 
+            resources.ApplyResources(this.groupBoxButtonBottom, "groupBoxButtonBottom");
             this.groupBoxButtonBottom.Controls.Add(this.buttonNext);
             this.groupBoxButtonBottom.Controls.Add(this.buttonPreview);
-            resources.ApplyResources(this.groupBoxButtonBottom, "groupBoxButtonBottom");
             this.groupBoxButtonBottom.Name = "groupBoxButtonBottom";
             this.groupBoxButtonBottom.TabStop = false;
             // 
@@ -562,10 +573,10 @@ namespace OpenCBS.GUI.UserControl
             // 
             // groupBoxButtons
             // 
+            resources.ApplyResources(this.groupBoxButtons, "groupBoxButtons");
             this.groupBoxButtons.Controls.Add(this.btnPrint);
             this.groupBoxButtons.Controls.Add(this.buttonCancel);
             this.groupBoxButtons.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.groupBoxButtons, "groupBoxButtons");
             this.groupBoxButtons.Name = "groupBoxButtons";
             this.groupBoxButtons.TabStop = false;
             // 
@@ -601,19 +612,19 @@ namespace OpenCBS.GUI.UserControl
             // 
             // groupBoxCivilStatus
             // 
+            resources.ApplyResources(this.groupBoxCivilStatus, "groupBoxCivilStatus");
             this.groupBoxCivilStatus.Controls.Add(this.tlpGroupControls);
             this.groupBoxCivilStatus.Controls.Add(this.linkLabelChangePhoto2);
             this.groupBoxCivilStatus.Controls.Add(this.linkLabelChangePhoto);
             this.groupBoxCivilStatus.Controls.Add(this.pictureBox2);
             this.groupBoxCivilStatus.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.groupBoxCivilStatus, "groupBoxCivilStatus");
             this.groupBoxCivilStatus.Name = "groupBoxCivilStatus";
             this.groupBoxCivilStatus.TabStop = false;
             // 
             // tlpGroupControls
             // 
-            this.tlpGroupControls.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tlpGroupControls, "tlpGroupControls");
+            this.tlpGroupControls.BackColor = System.Drawing.Color.Transparent;
             this.tlpGroupControls.Controls.Add(this.cbBranch, 1, 4);
             this.tlpGroupControls.Controls.Add(this.label2, 0, 4);
             this.tlpGroupControls.Controls.Add(this.textBoxGroupLoanCycle, 1, 3);
@@ -693,9 +704,9 @@ namespace OpenCBS.GUI.UserControl
             // 
             // textBoxName
             // 
+            resources.ApplyResources(this.textBoxName, "textBoxName");
             this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
             this.tlpGroupControls.SetColumnSpan(this.textBoxName, 2);
-            resources.ApplyResources(this.textBoxName, "textBoxName");
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
@@ -730,13 +741,6 @@ namespace OpenCBS.GUI.UserControl
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // buttonCopy
-            // 
-            resources.ApplyResources(this.buttonCopy, "buttonCopy");
-            this.buttonCopy.Name = "buttonCopy";
-            this.buttonCopy.UseVisualStyleBackColor = true;
-            this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
             // 
             // GroupUserControl
             // 

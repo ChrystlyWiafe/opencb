@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -146,5 +146,8 @@
   </data>
   <data name="areYouSureLoan.Text" xml:space="preserve">
     <value>Are you sure, you want to delete loan purpose: {0}?</value>
+  </data>
+  <data name="areYouSureMessage.Text" xml:space="preserve">
+    <value />
   </data>
 </root>

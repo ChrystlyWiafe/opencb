@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -145,7 +145,7 @@
     <value>Argentina</value>
   </data>
   <data name="Armenia" xml:space="preserve">
-    <value>Armênia</value>
+    <value>Arménia</value>
   </data>
   <data name="Aruba" xml:space="preserve">
     <value>Aruba</value>
@@ -157,7 +157,7 @@
     <value>Áustria</value>
   </data>
   <data name="Azerbaijan" xml:space="preserve">
-    <value>Azerbaijão</value>
+    <value>Azerbeijão</value>
   </data>
   <data name="Bahamas" xml:space="preserve">
     <value>Bahamas</value>
@@ -208,7 +208,7 @@
     <value>Burundi</value>
   </data>
   <data name="Cambodia" xml:space="preserve">
-    <value>Camboja</value>
+    <value>Cambodja</value>
   </data>
   <data name="Cameroon" xml:space="preserve">
     <value>Camarões</value>
@@ -232,7 +232,7 @@
     <value>Costa Rica</value>
   </data>
   <data name="CotedIvoire" xml:space="preserve">
-    <value>Cote d'Ivoire</value>
+    <value>Costa do Marfim</value>
   </data>
   <data name="Croatia" xml:space="preserve">
     <value>Croácia</value>
@@ -259,13 +259,13 @@
     <value>Equador</value>
   </data>
   <data name="Egypt" xml:space="preserve">
-    <value>Egito</value>
+    <value>Egipto</value>
   </data>
   <data name="Eritrea" xml:space="preserve">
     <value>Eritreia</value>
   </data>
   <data name="Estonia" xml:space="preserve">
-    <value>Estônia</value>
+    <value>Estónia</value>
   </data>
   <data name="Ethiopia" xml:space="preserve">
     <value>Etiópia</value>
@@ -304,7 +304,7 @@
     <value>Gronelândia</value>
   </data>
   <data name="Grenada" xml:space="preserve">
-    <value>Grenada</value>
+    <value>Granada</value>
   </data>
   <data name="Guadeloupe" xml:space="preserve">
     <value>Guadalupe</value>
@@ -343,7 +343,7 @@
     <value>Indonésia</value>
   </data>
   <data name="Iran" xml:space="preserve">
-    <value>Irã</value>
+    <value>Irão</value>
   </data>
   <data name="Iraq" xml:space="preserve">
     <value>Iraque</value>
@@ -370,13 +370,13 @@
     <value>Cazaquistão</value>
   </data>
   <data name="Kenya" xml:space="preserve">
-    <value>Quênia</value>
+    <value>Quénia</value>
   </data>
   <data name="Kiribati" xml:space="preserve">
     <value>Quiribati</value>
   </data>
   <data name="Korea" xml:space="preserve">
-    <value>Coréia</value>
+    <value>Coreia</value>
   </data>
   <data name="KoreaDPR" xml:space="preserve">
     <value>Coreia, D.P.R.</value>
@@ -391,7 +391,7 @@
     <value>Lao P.D.R.</value>
   </data>
   <data name="Latvia" xml:space="preserve">
-    <value>Letônia</value>
+    <value>Letónia</value>
   </data>
   <data name="Lebanon" xml:space="preserve">
     <value>Líbano</value>
@@ -415,7 +415,7 @@
     <value>Luxemburgo</value>
   </data>
   <data name="Macedonia" xml:space="preserve">
-    <value>Macedônia</value>
+    <value>Macedónia</value>
   </data>
   <data name="Madagascar" xml:space="preserve">
     <value>Madagáscar</value>
@@ -439,7 +439,7 @@
     <value>Mauritânia</value>
   </data>
   <data name="Mauritius" xml:space="preserve">
-    <value>Maurício</value>
+    <value>Maurícias (ilhas</value>
   </data>
   <data name="Mexico" xml:space="preserve">
     <value>México</value>
@@ -472,7 +472,7 @@
     <value>Nepal</value>
   </data>
   <data name="Netherlands" xml:space="preserve">
-    <value>países Baixos</value>
+    <value>Países Baixos</value>
   </data>
   <data name="NewZealand" xml:space="preserve">
     <value>Nova Zelândia</value>
@@ -508,13 +508,13 @@
     <value>Filipinas</value>
   </data>
   <data name="Poland" xml:space="preserve">
-    <value>Polônia</value>
+    <value>Polónia</value>
   </data>
   <data name="Portugal" xml:space="preserve">
     <value>Portugal</value>
   </data>
   <data name="Qatar" xml:space="preserve">
-    <value>Catar</value>
+    <value>Qatar</value>
   </data>
   <data name="Romania" xml:space="preserve">
     <value>Roménia</value>
@@ -535,13 +535,13 @@
     <value>Sérvia</value>
   </data>
   <data name="Singapore" xml:space="preserve">
-    <value>Cingapura</value>
+    <value>Singapura</value>
   </data>
   <data name="Slovakia" xml:space="preserve">
     <value>Eslováquia</value>
   </data>
   <data name="Slovenia" xml:space="preserve">
-    <value>Eslovênia</value>
+    <value>Eslovénia</value>
   </data>
   <data name="Somalia" xml:space="preserve">
     <value>Somália</value>
@@ -577,16 +577,16 @@
     <value>Tailândia</value>
   </data>
   <data name="Timor" xml:space="preserve">
-    <value>Timor, Leste</value>
+    <value>Timor Leste</value>
   </data>
   <data name="Togo" xml:space="preserve">
-    <value>Ir</value>
+    <value>Togo</value>
   </data>
   <data name="Tunisia" xml:space="preserve">
     <value>Tunísia</value>
   </data>
   <data name="Turkey" xml:space="preserve">
-    <value>Peru</value>
+    <value>Turquia</value>
   </data>
   <data name="Turkmenistan" xml:space="preserve">
     <value>Turcomenistão</value>
@@ -619,10 +619,10 @@
     <value>Venezuela</value>
   </data>
   <data name="VietNam" xml:space="preserve">
-    <value>Vietnã</value>
+    <value>Vietname</value>
   </data>
   <data name="WesternSahara" xml:space="preserve">
-    <value>Saara Ocidental</value>
+    <value>Sahara Ocidental</value>
   </data>
   <data name="Yemen" xml:space="preserve">
     <value>Iémen</value>

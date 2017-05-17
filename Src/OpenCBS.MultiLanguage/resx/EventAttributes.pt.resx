@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,54 +112,54 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="accrued_interest" xml:space="preserve">
-    <value>os juros acumulados</value>
+    <value>Juros vencidos</value>
   </data>
   <data name="accrued_interests" xml:space="preserve">
-    <value>os juros acumulados</value>
+    <value>Juros vencidos</value>
   </data>
   <data name="accrued_penalties" xml:space="preserve">
-    <value>as multas acumuladas</value>
+    <value>Penalizações vencidas</value>
   </data>
   <data name="amount" xml:space="preserve">
-    <value>o montante</value>
+    <value>Montante</value>
   </data>
   <data name="commission" xml:space="preserve">
-    <value>a comissão</value>
+    <value>Comissão</value>
   </data>
   <data name="commissions" xml:space="preserve">
-    <value>a comissão</value>
+    <value>Comissão</value>
   </data>
   <data name="fee" xml:space="preserve">
-    <value>a taxa</value>
+    <value>Taxa</value>
   </data>
   <data name="fees" xml:space="preserve">
-    <value>os honorários</value>
+    <value>Taxas</value>
   </data>
   <data name="interest" xml:space="preserve">
-    <value>o juro</value>
+    <value>Juro</value>
   </data>
   <data name="interests" xml:space="preserve">
-    <value>o juro </value>
+    <value>Juro</value>
   </data>
   <data name="olb" xml:space="preserve">
     <value>OLB</value>
   </data>
   <data name="overdue_principal" xml:space="preserve">
-    <value>o capital vencido</value>
+    <value>Capital vencido</value>
   </data>
   <data name="past_due_days" xml:space="preserve">
-    <value>os dias passados apôs a data de expiração</value>
+    <value>Dias vencidos anteriores</value>
   </data>
   <data name="penalties" xml:space="preserve">
-    <value>a multa</value>
+    <value>Penalização</value>
   </data>
   <data name="principal" xml:space="preserve">
-    <value>o capital </value>
+    <value>Capital</value>
   </data>
 </root>

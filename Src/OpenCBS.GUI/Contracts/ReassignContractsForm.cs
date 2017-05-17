@@ -23,9 +23,11 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using OpenCBS.ArchitectureV2.Presenter;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Contracts;
 using OpenCBS.GUI.UserControl;
+using OpenCBS.MultiLanguageRessources;
 using OpenCBS.Services;
 
 namespace OpenCBS.GUI.Contracts
@@ -35,15 +37,19 @@ namespace OpenCBS.GUI.Contracts
         private List<User> _users;
         private IEnumerable<ReassignContractItem> _contracts;
         private string _filter;
+        private TranslationService _translationService;
 
         public ReassignContractsForm()
         {
             InitializeComponent();
+
             Setup();
         }
 
         private void Setup()
         {
+            _translationService = new TranslationService();
+
             Load += (sender, args) => LoadForm();
             fromCombobox.SelectedIndexChanged += (sender, args) => ReloadContracts();
             filterTextbox.TextChanged += (sender, args) =>
@@ -214,14 +220,14 @@ namespace OpenCBS.GUI.Contracts
             var contracts = contractsObjectListView.FilteredObjects.Cast<ReassignContractItem>();
             if (contracts == null || !contracts.Any())
             {
-                Text = "Reassign contracts";
+                Text = _translationService.Translate("Reassign contracts");
                 return;
             }
             var number = contracts.Count();
             var numberOfChecked = (from contract in contracts
                                    where contract.CanReassign
                                    select contract).Count();
-            Text = string.Format("Reassign contracts ({0} of {1})", numberOfChecked, number);
+            Text = string.Format("{0} ({1} of {2})", _translationService.Translate("Reassign contracts"), numberOfChecked, number);
         }
 
         private void ItemChecked(object sender, ItemCheckedEventArgs args)

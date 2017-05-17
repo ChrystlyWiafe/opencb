@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -690,7 +690,7 @@ You must complete "min" and "max". (tab Transactions)</value>
     <value>The withdrawal amount is empty or incorrect.
 You must complete "min" and "max". (tab Transactions)</value>
   </data>
-    <data name="SavingRepaymentAmountIsInvalid.Text" xml:space="preserve">
+  <data name="SavingRepaymentAmountIsInvalid.Text" xml:space="preserve">
     <value>The amount of the deposit or balance out of range</value>
   </data>
   <data name="OTE41.Text" xml:space="preserve">
@@ -1372,5 +1372,11 @@ Enter another account number.
   </data>
   <data name="BetweenZeroAndSix.Text" xml:space="preserve">
     <value>Allowed input is between 0 and 6.</value>
+  </data>
+  <data name="PackageExceptionExoticProductNameIsNull.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OpenCbsCorporateExceptionDistricIsEmpty.Text" xml:space="preserve">
+    <value />
   </data>
 </root>

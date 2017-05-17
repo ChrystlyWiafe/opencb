@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="doa.Text" xml:space="preserve">
-    <value>O domínio de aplicação</value>
+    <value>Domínio de aplicação</value>
   </data>
   <data name="LP.Text" xml:space="preserve">
     <value>Finalidade do Empréstimo</value>
   </data>
   <data name="selectSubitem.Text" xml:space="preserve">
-    <value>Por favor, selecione o sub-item!</value>
+    <value>Por favor, seleccione o sub-item!</value>
   </data>
 </root>

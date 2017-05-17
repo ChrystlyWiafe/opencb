@@ -107,31 +107,31 @@ namespace OpenCBS.GUI
             // 
             // richTextBoxExceptionDetail
             // 
-            this.richTextBoxExceptionDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.richTextBoxExceptionDetail, "richTextBoxExceptionDetail");
+            this.richTextBoxExceptionDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.richTextBoxExceptionDetail.ForeColor = System.Drawing.Color.White;
             this.richTextBoxExceptionDetail.Name = "richTextBoxExceptionDetail";
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.buttonShowDetail);
             this.groupBox1.Controls.Add(this.buttonOK);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // buttonShowDetail
             // 
-            this.buttonShowDetail.BackColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.buttonShowDetail, "buttonShowDetail");
+            this.buttonShowDetail.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonShowDetail.Name = "buttonShowDetail";
             this.buttonShowDetail.UseVisualStyleBackColor = false;
             this.buttonShowDetail.Click += new System.EventHandler(this.buttonShowDetail_Click);
             // 
             // buttonOK
             // 
-            this.buttonOK.BackColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.buttonOK, "buttonOK");
+            this.buttonOK.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = false;

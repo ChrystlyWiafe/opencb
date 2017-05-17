@@ -1332,12 +1332,14 @@ namespace OpenCBS.GUI.Clients
             if (saving.Status == OSavingsStatus.Active && saving.Product.Type == OSavingProductType.ShortTermDeposit)
             {
                 buttonSavingsOperations.Visible = false;
-                buttonCloseSaving.Text = @"Withdrawal";
+                Text += "  " + MultiLanguageStrings.GetString(Ressource.ClientForm, "savingWithdrawToolStripMenuItem.Text");
             }
             else
             {
-                buttonSavingsOperations.Visible = saving.Status == OSavingsStatus.Active;
-                buttonCloseSaving.Text = @"Close";
+                if (buttonSavingsOperations.Visible = saving.Status == OSavingsStatus.Active)
+                {
+                    Text += "  " + MultiLanguageStrings.GetString(Ressource.ClientForm, "buttonCloseSaving.Text");
+                }
             }
         }
 
@@ -7506,6 +7508,9 @@ namespace OpenCBS.GUI.Clients
                         btnSaveLoan.Enabled = false;
                         return;
                     }
+
+                    if (amount < nudLoanAmount.Minimum) amount = nudLoanAmount.Minimum;
+                    if (amount > nudLoanAmount.Maximum) amount = nudLoanAmount.Maximum;
                 }
 
                 if (_credit.LoanEntryFeesList != null)

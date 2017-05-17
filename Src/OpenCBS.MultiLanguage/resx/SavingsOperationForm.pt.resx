@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,49 +112,60 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BalanceOnCurrentSavingAccount" xml:space="preserve">
-    <value>O saldo actual na conta de poupanças de {0} abrange os 
-valores  de {1} para {2} empréstimo (s). O valor máximo que pode levantar é {3}</value>
+    <value>O saldo na conta de poupanças actual de {0} cobre os montantes de {1} para {2} crédito(s). O montante máximo que pode levantar é {3}</value>
   </data>
   <data name="BalanceOnCurrentSavingAccountForTransfer" xml:space="preserve">
-    <value>O saldo actual na conta de  poupanças  de {0} abrange os valores  de {1} de {2}empréstimo (s). O valor máximo que pode transferir é {3}</value>
+    <value>O saldo na conta de poupanças actual de {0} cobre os montantes de {1} para {2} crédito(s). O montante máximo que pode transferir é {3}</value>
   </data>
   <data name="Cash.Text" xml:space="preserve">
-    <value>O numerário</value>
+    <value>Numerário</value>
   </data>
   <data name="Cheque.Text" xml:space="preserve">
-    <value>O cheque</value>
+    <value>Cheque</value>
   </data>
   <data name="ComfirmOperation.Text" xml:space="preserve">
     <value>Confirmar operação</value>
   </data>
   <data name="DebitCard.Text" xml:space="preserve">
-    <value>A cartão de Débito</value>
+    <value>Cartão de Débito</value>
   </data>
   <data name="Deposit.Text" xml:space="preserve">
-    <value>O depósito</value>
+    <value>Depósito</value>
   </data>
   <data name="DirectDebit.Text" xml:space="preserve">
-    <value>O débito directo</value>
+    <value>Débito directo</value>
   </data>
   <data name="SpecialOperation.Text" xml:space="preserve">
-    <value>A operação especial</value>
+    <value>Operação especial</value>
   </data>
   <data name="StandardBooking.Text" xml:space="preserve">
-    <value>A reserva padrão</value>
+    <value>Registo padrão</value>
   </data>
   <data name="Transfer.Text" xml:space="preserve">
     <value>Transferir</value>
   </data>
   <data name="WireTransfer.Text" xml:space="preserve">
-    <value>A transferência telegrafica</value>
+    <value>Transferência electrónica</value>
   </data>
   <data name="Withdrawal.Text" xml:space="preserve">
-    <value>O levantamento</value>
+    <value>Levantamento</value>
+  </data>
+  <data name="Savings.Text" xml:space="preserve">
+    <value>Poupanças</value>
+  </data>
+  <data name="Voucher.Text" xml:space="preserve">
+    <value>Comprovativo</value>
+  </data>
+  <data name="OnlyIntegerIsAccepted.Text" xml:space="preserve">
+    <value>Só números inteiros são aceites</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transferência</value>
   </data>
 </root>

@@ -95,6 +95,7 @@ namespace OpenCBS.GUI.Configuration
             // 
             // gbFields
             // 
+            resources.ApplyResources(this.gbFields, "gbFields");
             this.gbFields.Controls.Add(this.lblContractCode);
             this.gbFields.Controls.Add(this.tbCode);
             this.gbFields.Controls.Add(this.chkProductCode);
@@ -105,7 +106,6 @@ namespace OpenCBS.GUI.Configuration
             this.gbFields.Controls.Add(this.chkLoanCycle);
             this.gbFields.Controls.Add(this.chkYear);
             this.gbFields.Controls.Add(this.chkLoanOfficer);
-            resources.ApplyResources(this.gbFields, "gbFields");
             this.gbFields.Name = "gbFields";
             this.gbFields.TabStop = false;
             // 
@@ -129,9 +129,9 @@ namespace OpenCBS.GUI.Configuration
             // 
             // pnlButtons
             // 
+            resources.ApplyResources(this.pnlButtons, "pnlButtons");
             this.pnlButtons.Controls.Add(this.btnOK);
             this.pnlButtons.Controls.Add(this.btnCancel);
-            resources.ApplyResources(this.pnlButtons, "pnlButtons");
             this.pnlButtons.Name = "pnlButtons";
             // 
             // btnOK

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -244,7 +244,7 @@
     <value>A inscrição legal</value>
   </data>
   <data name="LoanIsFlatForTranche.Text" xml:space="preserve">
-    <value>Não pode adicionar mais prestações para um empréstimo com saldo fixo !</value>
+    <value>Não pode adicionar mais prestações para um empréstimo com saldo fixo!</value>
   </data>
   <data name="LoanRequiresCompulsory" xml:space="preserve">
     <value>Este empréstimo requer uma conta de poupança obrigatória afim de ser desembolsado.</value>
@@ -340,18 +340,34 @@
     <value>Abatido</value>
   </data>
   <data name="NonAccrual.Text" xml:space="preserve">
-    <value>Não competência</value>
+    <value>Não competência
+</value>
   </data>
   <data name="PersonalAccount" xml:space="preserve">
     <value>Conta Pessoal</value>
   </data>
   <data name="Saving" xml:space="preserve">
-    <value>Economia</value>
+    <value>Poupança</value>
   </data>
   <data name="ShortTermDeposit" xml:space="preserve">
     <value>Prazo</value>
   </data>
   <data name="EmptyLoanOfficer.Text" xml:space="preserve">
-    <value>Não há usuários com a função "LOF"</value>
+    <value>Não há utilizadores com a função "LOF"</value>
+  </data>
+  <data name="GroupBad.Text" xml:space="preserve">
+    <value>Mau grupo</value>
+  </data>
+  <data name="PersonBad.Text" xml:space="preserve">
+    <value>Mau cliente</value>
+  </data>
+  <data name="LoanPostponed.Text" xml:space="preserve">
+    <value>Crédito adiado</value>
+  </data>
+  <data name="CorporateBad.Text" xml:space="preserve">
+    <value>Má empresa</value>
+  </data>
+  <data name="lblLoanStatus.Text" xml:space="preserve">
+    <value>Poupanças pendentes</value>
   </data>
 </root>

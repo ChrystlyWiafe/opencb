@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -155,7 +155,7 @@
     <value>Itens do menu</value>
   </data>
   <data name="tabPageGUIActions.Text" xml:space="preserve">
-    <value>Itens de Ação</value>
+    <value>Itens de Acção</value>
   </data>
   <data name="labelRoles.Text" xml:space="preserve">
     <value>FUNÇÕES</value>
@@ -766,5 +766,8 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Funções</value>
+  </data>
+  <data name="stateLabel.Text" xml:space="preserve">
+    <value>Etiqueta de estado</value>
   </data>
 </root>

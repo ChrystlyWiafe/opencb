@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1542,6 +1542,9 @@
   </data>
   <data name="defaultWindowComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 75</value>
+  </data>
+  <data name="stateLabel.Text" xml:space="preserve">
+    <value />
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

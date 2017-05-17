@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -722,9 +722,6 @@
   <data name="&gt;&gt;nudIbtFees.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -1440,4 +1437,28 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=15.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="chAmount.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chGracePeriod.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chInstallments.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chLoanOfficer.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chEntryFee.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chFundingLine.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chAvailableFunds.Text" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

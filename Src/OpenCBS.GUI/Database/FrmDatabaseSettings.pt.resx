@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,20 +112,20 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnGetServersList.Text" xml:space="preserve">
     <value>Obter lista de servidores</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblInstallInstructionSQLServer.Size" type="System.Drawing.Size, System.Drawing">
     <value>483, 13</value>
   </data>
   <data name="lblInstallInstructionSQLServer.Text" xml:space="preserve">
-    <value>Se você não tem SQLServer instalado, em seguida, clique no link abaixo para instruções detalhadas.</value>
+    <value>Se não tem o SQLServer instalado, de seguida, clique no link abaixo para instruções detalhadas.</value>
   </data>
   <data name="lblHelpServerName.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 13</value>
@@ -146,7 +146,7 @@
     <value>642, 15</value>
   </data>
   <data name="lblFindDBInfo.Text" xml:space="preserve">
-    <value>OpenCBS precisa saber onde encontrar o banco de dados. Por favor, indique os detalhes abaixo e clique em Conectar</value>
+    <value>OpenCBS precisa saber onde encontrar a base de dados. Por favor, indique os detalhes abaixo e clique em Conectar</value>
   </data>
   <data name="groupBoxSQLSettings.Text" xml:space="preserve">
     <value>Configurações do servidor SQL</value>
@@ -155,7 +155,7 @@
     <value>Mudar</value>
   </data>
   <data name="groupBoxDatabaseManagement.Text" xml:space="preserve">
-    <value>Administração da base</value>
+    <value>Administração da base de dados</value>
   </data>
   <data name="chkIncludeAttachments.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 17</value>
@@ -167,10 +167,10 @@
     <value>454, 17</value>
   </data>
   <data name="lblDetectDatabasesInProgress.Text" xml:space="preserve">
-    <value>Por favor, aguarde durante a detecção de bases de dados ...</value>
+    <value>Por favor, aguarde durante a detecção da base de dados ...</value>
   </data>
   <data name="btnSQLServerSettingsShowDetails.Text" xml:space="preserve">
-    <value>Veja mais detalhes</value>
+    <value>Ver mais detalhes</value>
   </data>
   <data name="btnRestore.Text" xml:space="preserve">
     <value>Restaurar</value>
@@ -179,28 +179,28 @@
     <value>Definir como padrão</value>
   </data>
   <data name="btnCreateNewDatabase.Text" xml:space="preserve">
-    <value>Criar novo banco de dados</value>
+    <value>Criar nova base de dados</value>
   </data>
   <data name="lblDatabases.Text" xml:space="preserve">
-    <value>Bancos de dados</value>
+    <value>Base de dados</value>
   </data>
   <data name="btnDatabaseConnection.Text" xml:space="preserve">
     <value>Conectar</value>
   </data>
   <data name="btnExit.Text" xml:space="preserve">
-    <value>Abandonar</value>
+    <value>Sair</value>
   </data>
   <data name="tabPageSQLServerConnection.Text" xml:space="preserve">
     <value>Conectar ao SQL</value>
   </data>
   <data name="tabPageSQLServerSettings.Text" xml:space="preserve">
-    <value>Servidor SQL</value>
+    <value>Configurações do Servidor SQL</value>
   </data>
   <data name="tabPageSqlDatabaseSettings.Text" xml:space="preserve">
-    <value>BaseDeDados SQL</value>
+    <value>Configurações da Base De Dados SQL</value>
   </data>
   <data name="groupBoxSQLDatabaseSettings.Text" xml:space="preserve">
-    <value>Configurações da base SQL</value>
+    <value>Configurações da base de dados SQL</value>
   </data>
   <data name="btnSQLDatabaseSettingsUpgrade.Text" xml:space="preserve">
     <value>Melhorar</value>
@@ -209,7 +209,7 @@
     <value>Mudar</value>
   </data>
   <data name="groupBoxSQLDatabaseStructure.Text" xml:space="preserve">
-    <value>Estrutura da base SQL</value>
+    <value>Estrutura da basede dados SQL</value>
   </data>
   <data name="btnContinue.Text" xml:space="preserve">
     <value>CONTINUAR</value>
@@ -218,10 +218,10 @@
     <value>441, 17</value>
   </data>
   <data name="lblDatabaseSettingsMessage.Text" xml:space="preserve">
-    <value>Por favor, Ugrade seu banco de dados para a versão atual!</value>
+    <value>Por favor, actualize a sua base de dados para a versão atual!</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Painel de control da base de dados</value>
+    <value>Painel de controlo da base de dados</value>
   </data>
   <data name="txtLoginName.Text" xml:space="preserve">
     <value>sa</value>
@@ -230,25 +230,25 @@
     <value>nome de login</value>
   </data>
   <data name="lblPassword.Text" xml:space="preserve">
-    <value>senha</value>
+    <value>Palavra passe</value>
   </data>
   <data name="openFileDialog.Title" xml:space="preserve">
-    <value>Selecione o arquivo de backup para restaurar</value>
+    <value>Seleccione o arquivo de backup para restaurar</value>
   </data>
   <data name="btnDefault.Text" xml:space="preserve">
-    <value>revelia</value>
+    <value>Incumprimento</value>
   </data>
   <data name="btnBackup.Text" xml:space="preserve">
-    <value>reserva</value>
+    <value>Reserva</value>
   </data>
   <data name="cbServerName.Text" xml:space="preserve">
-    <value>localhost</value>
+    <value>local host</value>
   </data>
   <data name="openFileDialog.Filter" xml:space="preserve">
     <value>Backups|*.bak;*.zip</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>lançamento OpenCBS</value>
+    <value>Arranque do OpenCBS</value>
   </data>
   <data name="lblServerName.Text" xml:space="preserve">
     <value>Nome do Servidor</value>
