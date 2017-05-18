@@ -186,4 +186,7 @@
   <data name="NonAccrual" xml:space="preserve">
     <value>Crédito não-acréscimo</value>
   </data>
+  <data name="Postponed" xml:space="preserve">
+    <value>Adiado</value>
+  </data>
 </root>
