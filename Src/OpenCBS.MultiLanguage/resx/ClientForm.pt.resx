@@ -138,6 +138,9 @@
   <data name="CapitalDue.Text" xml:space="preserve">
     <value>SEP</value>
   </data>
+  <data name="Deleted.Text" xml:space="preserve">
+    <value>Apagado</value>
+  </data>
   <data name="Closed.Text" xml:space="preserve">
     <value>Encerrado</value>
   </data>
