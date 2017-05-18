@@ -156,6 +156,9 @@
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="linkLabelChangePhoto2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -171,8 +174,8 @@
   <data name="labelCorpCycle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="tabControlCorporate.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>130, 32</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -222,6 +225,9 @@
   <data name="groupBoxAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="labelCorpCycle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -246,8 +252,8 @@
   <data name="labelCorpCycle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 124</value>
+  <data name="&gt;&gt;lvContacts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="linkLabelChangePhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -258,11 +264,17 @@
   <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tabPageSavings.Parent" xml:space="preserve">
+    <value>tabControlCorporate</value>
+  </data>
   <data name="&gt;&gt;groupBoxAddress.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
     <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCorporate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="flowLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 10</value>
@@ -273,14 +285,11 @@
   <data name="&gt;&gt;lblEconomicActivity.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;btnAddContact.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lvContacts.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="buttonSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;textBoxSmallNameCorporate.Name" xml:space="preserve">
-    <value>textBoxSmallNameCorporate</value>
   </data>
   <data name="&gt;&gt;tabControlCorporate.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -297,8 +306,8 @@
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbBranch.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
   </data>
   <data name="&gt;&gt;columnHeaderPhone2.Name" xml:space="preserve">
     <value>columnHeaderPhone2</value>
@@ -311,9 +320,6 @@
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 25</value>
-  </data>
-  <data name="lblEconomicActivity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
   </data>
   <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
     <value>1076, 13</value>
@@ -333,8 +339,8 @@
   <data name="labelDateCrate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;groupBoxCorporate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;linkLabelChangePhoto2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonDelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 73</value>
@@ -345,8 +351,8 @@
   <data name="textBoxCorpLoanCycle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;eacCorporate.Name" xml:space="preserve">
-    <value>eacCorporate</value>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;savingsListUserControl1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -363,8 +369,8 @@
   <data name="tabPageContacts.Size" type="System.Drawing.Size, System.Drawing">
     <value>1448, 371</value>
   </data>
-  <data name="&gt;&gt;lblEconomicActivity.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;btnAddContact.Name" xml:space="preserve">
+    <value>btnAddContact</value>
   </data>
   <data name="&gt;&gt;linkLabelChangePhoto2.Name" xml:space="preserve">
     <value>linkLabelChangePhoto2</value>
@@ -388,7 +394,7 @@
     <value>74, 13</value>
   </data>
   <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.PrintButton, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="labelLastname.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 16</value>
@@ -414,9 +420,6 @@
   <data name="lblEconomicActivity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;groupBoxCorporate.Name" xml:space="preserve">
-    <value>groupBoxCorporate</value>
-  </data>
   <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -428,6 +431,9 @@
   </data>
   <data name="&gt;&gt;cbBranch.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnSelectContact.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;labelCorpCycle.Name" xml:space="preserve">
     <value>labelCorpCycle</value>
@@ -450,20 +456,17 @@
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
     <value>RightToLeft</value>
   </data>
   <data name="tabPageAddress.Size" type="System.Drawing.Size, System.Drawing">
     <value>1448, 371</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.ClientControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 218</value>
-  </data>
-  <data name="groupBoxCorporate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="lblEconomicActivity.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="&gt;&gt;columnHeaderPhone.Name" xml:space="preserve">
     <value>columnHeaderPhone</value>
@@ -472,16 +475,13 @@
     <value>4, 36</value>
   </data>
   <data name="&gt;&gt;savingsListUserControl1.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SavingsListUserControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SavingsListUserControl, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 380</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>OpenCBS.GUI.UserControl.ClientControl, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;textBoxLastNameCorporate.Name" xml:space="preserve">
     <value>textBoxLastNameCorporate</value>
-  </data>
-  <data name="eacCorporate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="linkLabelChangePhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>1174, 144</value>
@@ -492,23 +492,11 @@
   <data name="lblEconomicActivity.AccessibleName" xml:space="preserve">
     <value />
   </data>
-  <data name="cbBranch.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel3.Parent" xml:space="preserve">
-    <value>tabPageContacts</value>
-  </data>
-  <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
   <data name="lblEconomicActivity.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 16</value>
   </data>
   <data name="labelDateCrate.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
-  </data>
-  <data name="&gt;&gt;linkLabelChangePhoto2.Parent" xml:space="preserve">
-    <value>groupBoxCorporate</value>
   </data>
   <data name="tabControlCorporate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -531,9 +519,6 @@
   <data name="btnPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="tabControlCorporate.ItemSize" type="System.Drawing.Size, System.Drawing">
-    <value>130, 32</value>
-  </data>
   <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
     <value>splitContainer1</value>
   </data>
@@ -552,14 +537,8 @@
   <data name="linkLabelChangePhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblEconomicActivity.Text" xml:space="preserve">
-    <value>Economic activity:*</value>
-  </data>
   <data name="textBoxCorpLoanCycle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="lvContacts.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
   </data>
   <data name="labelDateCrate.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -597,9 +576,6 @@
   <data name="labelSmallNameCorporate.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
-  <data name="&gt;&gt;buttonDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="tabPageContacts.Text" xml:space="preserve">
     <value>Contacts</value>
   </data>
@@ -618,8 +594,11 @@
   <data name="buttonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="cbBranch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 127</value>
+  <data name="textBoxCorpLoanCycle.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;textBoxLastNameCorporate.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="tabPageSavings.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -657,8 +636,8 @@
   <data name="lvContacts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="lblEconomicActivity.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="btnSelectContact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 26</value>
   </data>
   <data name="labelCorpCycle.Text" xml:space="preserve">
     <value>Corporate cycle: </value>
@@ -672,8 +651,8 @@
   <data name="&gt;&gt;tabPageSavings.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBoxLastNameCorporate.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;btnAddContact.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -684,11 +663,11 @@
   <data name="&gt;&gt;tabControlCorporate.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="eacCorporate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;eacCorporate.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="cbBranch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 127</value>
   </data>
   <data name="btnSelectContact.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -698,6 +677,9 @@
   </data>
   <data name="columnHeaderName.Width" type="System.Int32, mscorlib">
     <value>238</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -711,8 +693,8 @@
   <data name="labelSmallNameCorporate.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 62</value>
   </data>
-  <data name="&gt;&gt;tabPageSavings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;labelCorpCycle.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -723,8 +705,8 @@
   <data name="linkLabelChangePhoto2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;tabPageAddress.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="dateTimePickerDateOfCreate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 20</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -747,8 +729,8 @@
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;btnAddContact.Name" xml:space="preserve">
-    <value>btnAddContact</value>
+  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1442, 380</value>
@@ -759,8 +741,8 @@
   <data name="&gt;&gt;tabPageContacts.Parent" xml:space="preserve">
     <value>tabControlCorporate</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
+  <data name="&gt;&gt;buttonDelete.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;dateTimePickerDateOfCreate.Name" xml:space="preserve">
     <value>dateTimePickerDateOfCreate</value>
@@ -795,8 +777,8 @@
   <data name="btnSelectContact.Text" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="&gt;&gt;buttonDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -806,6 +788,9 @@
   </data>
   <data name="&gt;&gt;lblEconomicActivity.Name" xml:space="preserve">
     <value>lblEconomicActivity</value>
+  </data>
+  <data name="&gt;&gt;columnHeaderName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>groupBoxCorporate</value>
@@ -822,6 +807,9 @@
   <data name="textBoxSmallNameCorporate.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 20</value>
   </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="tabControlCorporate.ShowToolTips" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -837,6 +825,9 @@
   <data name="btnSelectContact.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="&gt;&gt;eacCorporate.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
   <data name="labelSmallNameCorporate.Text" xml:space="preserve">
     <value>Short name:</value>
   </data>
@@ -846,8 +837,11 @@
   <data name="&gt;&gt;lvContacts.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;lvContacts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;btnSelectContact.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -855,14 +849,11 @@
   <data name="&gt;&gt;cbBranch.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabelChangePhoto.Name" xml:space="preserve">
-    <value>linkLabelChangePhoto</value>
+  <data name="labelLastname.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
   </data>
-  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1177, 13</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 124</value>
   </data>
   <data name="groupBoxAddress.Size" type="System.Drawing.Size, System.Drawing">
     <value>1448, 371</value>
@@ -891,8 +882,8 @@
   <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
     <value>buttonSave</value>
   </data>
-  <data name="&gt;&gt;buttonDelete.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="groupBoxCorporate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="labelDateCrate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -918,6 +909,9 @@
   <data name="&gt;&gt;labelDateCrate.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
+  <data name="&gt;&gt;linkLabelChangePhoto.Name" xml:space="preserve">
+    <value>linkLabelChangePhoto</value>
+  </data>
   <data name="&gt;&gt;tabPageContacts.Name" xml:space="preserve">
     <value>tabPageContacts</value>
   </data>
@@ -936,11 +930,14 @@
   <data name="groupBoxAddress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="&gt;&gt;eacCorporate.Name" xml:space="preserve">
+    <value>eacCorporate</value>
+  </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1448, 371</value>
   </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1177, 13</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -949,10 +946,10 @@
     <value>59</value>
   </data>
   <data name="&gt;&gt;eacCorporate.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.EconomicActivityControl, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.EconomicActivityControl, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;columnHeaderName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 380</value>
   </data>
   <data name="&gt;&gt;labelLastname.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -962,9 +959,6 @@
   </data>
   <data name="&gt;&gt;labelLastname.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;linkLabelChangePhoto2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="flowLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -999,9 +993,6 @@
   <data name="btnAddContact.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 26</value>
   </data>
-  <data name="labelLastname.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
   <data name="linkLabelChangePhoto.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1014,8 +1005,8 @@
   <data name="labelCorpCycle.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
   </data>
-  <data name="&gt;&gt;btnSelectContact.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="textBoxSmallNameCorporate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 65</value>
   </data>
   <data name="&gt;&gt;tabPageContacts.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1026,8 +1017,8 @@
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="dateTimePickerDateOfCreate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
+  <data name="lblEconomicActivity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;labelSmallNameCorporate.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -1059,8 +1050,8 @@
   <data name="savingsListUserControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tabPageSavings.Parent" xml:space="preserve">
-    <value>tabControlCorporate</value>
+  <data name="&gt;&gt;tableLayoutPanel3.Parent" xml:space="preserve">
+    <value>tabPageContacts</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1068,14 +1059,17 @@
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnSelectContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 26</value>
+  <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1456, 680</value>
   </data>
   <data name="tabPageContacts.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;tabPageSavings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
     <value>splitContainer1</value>
@@ -1089,14 +1083,23 @@
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="labelSmallNameCorporate.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 16</value>
   </data>
   <data name="btnAddContact.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 36</value>
+  </data>
+  <data name="&gt;&gt;linkLabelChangePhoto.Parent" xml:space="preserve">
+    <value>groupBoxCorporate</value>
+  </data>
+  <data name="&gt;&gt;lblEconomicActivity.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPageContacts.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1131,20 +1134,20 @@
   <data name="tabPageContacts.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lvContacts.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1177, 13</value>
   </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;tabPageAddress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;linkLabelChangePhoto2.Parent" xml:space="preserve">
+    <value>groupBoxCorporate</value>
   </data>
   <data name="groupBoxAddress.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="textBoxSmallNameCorporate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 65</value>
+  <data name="&gt;&gt;groupBoxCorporate.Name" xml:space="preserve">
+    <value>groupBoxCorporate</value>
   </data>
   <data name="&gt;&gt;columnHeaderPhone2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1155,8 +1158,8 @@
   <data name="textBoxLastNameCorporate.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 3</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -1170,8 +1173,8 @@
   <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 218</value>
   </data>
   <data name="&gt;&gt;tabControlCorporate.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1197,20 +1200,17 @@
   <data name="tabPageAddress.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="textBoxCorpLoanCycle.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
   <data name="&gt;&gt;columnHeaderPhone.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabelChangePhoto.Parent" xml:space="preserve">
-    <value>groupBoxCorporate</value>
+  <data name="lblEconomicActivity.Text" xml:space="preserve">
+    <value>Economic activity:*</value>
   </data>
-  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lvContacts.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
     <value>tableLayoutPanel3</value>
@@ -1221,8 +1221,8 @@
   <data name="columnHeaderPhone.Text" xml:space="preserve">
     <value>Tel 1</value>
   </data>
-  <data name="&gt;&gt;btnSelectContact.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;textBoxSmallNameCorporate.Name" xml:space="preserve">
+    <value>textBoxSmallNameCorporate</value>
   </data>
   <data name="&gt;&gt;labelSmallNameCorporate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
