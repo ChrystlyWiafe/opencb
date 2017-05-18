@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TernDepositUserControl));
             this.tabControlSavingsDetails = new System.Windows.Forms.TabControl();
             this.tabPageSavingsEvents = new System.Windows.Forms.TabPage();
             this.lvSavingEvent = new System.Windows.Forms.ListView();
@@ -97,27 +98,20 @@
             // 
             // tabControlSavingsDetails
             // 
+            resources.ApplyResources(this.tabControlSavingsDetails, "tabControlSavingsDetails");
             this.tabControlSavingsDetails.Controls.Add(this.tabPageSavingsEvents);
-            this.tabControlSavingsDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlSavingsDetails.ItemSize = new System.Drawing.Size(55, 25);
-            this.tabControlSavingsDetails.Location = new System.Drawing.Point(3, 269);
             this.tabControlSavingsDetails.Name = "tabControlSavingsDetails";
             this.tabControlSavingsDetails.SelectedIndex = 0;
-            this.tabControlSavingsDetails.Size = new System.Drawing.Size(1316, 326);
-            this.tabControlSavingsDetails.TabIndex = 74;
             // 
             // tabPageSavingsEvents
             // 
+            resources.ApplyResources(this.tabPageSavingsEvents, "tabPageSavingsEvents");
             this.tabPageSavingsEvents.Controls.Add(this.lvSavingEvent);
-            this.tabPageSavingsEvents.Location = new System.Drawing.Point(4, 29);
             this.tabPageSavingsEvents.Name = "tabPageSavingsEvents";
-            this.tabPageSavingsEvents.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSavingsEvents.Size = new System.Drawing.Size(1308, 293);
-            this.tabPageSavingsEvents.TabIndex = 0;
-            this.tabPageSavingsEvents.Text = "Events";
             // 
             // lvSavingEvent
             // 
+            resources.ApplyResources(this.lvSavingEvent, "lvSavingEvent");
             this.lvSavingEvent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader21,
             this.columnHeader22,
@@ -128,291 +122,164 @@
             this.columnHeader29,
             this.columnHeader24,
             this.colCancelDate});
-            this.lvSavingEvent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvSavingEvent.FullRowSelect = true;
             this.lvSavingEvent.GridLines = true;
-            this.lvSavingEvent.Location = new System.Drawing.Point(3, 3);
             this.lvSavingEvent.Name = "lvSavingEvent";
-            this.lvSavingEvent.Size = new System.Drawing.Size(1302, 287);
-            this.lvSavingEvent.TabIndex = 0;
             this.lvSavingEvent.UseCompatibleStateImageBehavior = false;
             this.lvSavingEvent.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader21
             // 
-            this.columnHeader21.Text = "Date";
-            this.columnHeader21.Width = 140;
+            resources.ApplyResources(this.columnHeader21, "columnHeader21");
             // 
             // columnHeader22
             // 
-            this.columnHeader22.Text = "Debit";
-            this.columnHeader22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader22.Width = 79;
+            resources.ApplyResources(this.columnHeader22, "columnHeader22");
             // 
             // columnHeader23
             // 
-            this.columnHeader23.Text = "Credit";
-            this.columnHeader23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader23.Width = 89;
+            resources.ApplyResources(this.columnHeader23, "columnHeader23");
             // 
             // columnHeader27
             // 
-            this.columnHeader27.Text = "Transfer";
-            this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader27.Width = 112;
+            resources.ApplyResources(this.columnHeader27, "columnHeader27");
             // 
             // columnHeader15
             // 
-            this.columnHeader15.Text = "Code";
+            resources.ApplyResources(this.columnHeader15, "columnHeader15");
             // 
             // columnHeader28
             // 
-            this.columnHeader28.Text = "Savings method";
-            this.columnHeader28.Width = 110;
+            resources.ApplyResources(this.columnHeader28, "columnHeader28");
             // 
             // columnHeader29
             // 
-            this.columnHeader29.Text = "User";
-            this.columnHeader29.Width = 150;
+            resources.ApplyResources(this.columnHeader29, "columnHeader29");
             // 
             // columnHeader24
             // 
-            this.columnHeader24.Text = "Description";
-            this.columnHeader24.Width = 287;
+            resources.ApplyResources(this.columnHeader24, "columnHeader24");
             // 
             // colCancelDate
             // 
-            this.colCancelDate.Text = "Cancel Date";
-            this.colCancelDate.Width = 130;
+            resources.ApplyResources(this.colCancelDate, "colCancelDate");
             // 
             // dtpTernDepositDateEnd
             // 
-            this.dtpTernDepositDateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpTernDepositDateEnd.Enabled = false;
-            this.dtpTernDepositDateEnd.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.dtpTernDepositDateEnd, "dtpTernDepositDateEnd");
             this.dtpTernDepositDateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTernDepositDateEnd.Location = new System.Drawing.Point(598, 141);
             this.dtpTernDepositDateEnd.Name = "dtpTernDepositDateEnd";
-            this.dtpTernDepositDateEnd.Size = new System.Drawing.Size(197, 22);
-            this.dtpTernDepositDateEnd.TabIndex = 9;
             // 
             // lblTernDepositDateStarted
             // 
-            this.lblTernDepositDateStarted.AutoSize = true;
-            this.lblTernDepositDateStarted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTernDepositDateStarted.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lblTernDepositDateStarted.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTernDepositDateStarted.Location = new System.Drawing.Point(434, 106);
+            resources.ApplyResources(this.lblTernDepositDateStarted, "lblTernDepositDateStarted");
             this.lblTernDepositDateStarted.Name = "lblTernDepositDateStarted";
-            this.lblTernDepositDateStarted.Size = new System.Drawing.Size(158, 32);
-            this.lblTernDepositDateStarted.TabIndex = 9;
-            this.lblTernDepositDateStarted.Text = "Date started";
-            this.lblTernDepositDateStarted.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNumberOfPeriods
             // 
-            this.lblNumberOfPeriods.AutoSize = true;
-            this.lblNumberOfPeriods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNumberOfPeriods.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lblNumberOfPeriods.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblNumberOfPeriods.Location = new System.Drawing.Point(434, 74);
+            resources.ApplyResources(this.lblNumberOfPeriods, "lblNumberOfPeriods");
             this.lblNumberOfPeriods.Name = "lblNumberOfPeriods";
-            this.lblNumberOfPeriods.Size = new System.Drawing.Size(158, 32);
-            this.lblNumberOfPeriods.TabIndex = 0;
-            this.lblNumberOfPeriods.Text = "Number of periods";
-            this.lblNumberOfPeriods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudNumberOfPeriods
             // 
-            this.nudNumberOfPeriods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudNumberOfPeriods.Location = new System.Drawing.Point(598, 77);
+            resources.ApplyResources(this.nudNumberOfPeriods, "nudNumberOfPeriods");
             this.nudNumberOfPeriods.Name = "nudNumberOfPeriods";
-            this.nudNumberOfPeriods.Size = new System.Drawing.Size(197, 20);
-            this.nudNumberOfPeriods.TabIndex = 1;
-            this.nudNumberOfPeriods.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudNumberOfPeriods.ValueChanged += new System.EventHandler(this.PeriodChanged);
             // 
             // lblLimitOfTermDepositPeriod
             // 
-            this.lblLimitOfTermDepositPeriod.AutoSize = true;
-            this.lblLimitOfTermDepositPeriod.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLimitOfTermDepositPeriod.Font = new System.Drawing.Font("Arial", 7.5F);
-            this.lblLimitOfTermDepositPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLimitOfTermDepositPeriod.Location = new System.Drawing.Point(801, 74);
+            resources.ApplyResources(this.lblLimitOfTermDepositPeriod, "lblLimitOfTermDepositPeriod");
             this.lblLimitOfTermDepositPeriod.Name = "lblLimitOfTermDepositPeriod";
-            this.lblLimitOfTermDepositPeriod.Size = new System.Drawing.Size(94, 32);
-            this.lblLimitOfTermDepositPeriod.TabIndex = 7;
-            this.lblLimitOfTermDepositPeriod.Text = "Limit of the period";
-            this.lblLimitOfTermDepositPeriod.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpTernDepositDateStarted
             // 
-            this.dtpTernDepositDateStarted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpTernDepositDateStarted.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.dtpTernDepositDateStarted, "dtpTernDepositDateStarted");
             this.dtpTernDepositDateStarted.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTernDepositDateStarted.Location = new System.Drawing.Point(598, 109);
             this.dtpTernDepositDateStarted.Name = "dtpTernDepositDateStarted";
-            this.dtpTernDepositDateStarted.Size = new System.Drawing.Size(197, 22);
-            this.dtpTernDepositDateStarted.TabIndex = 8;
             this.dtpTernDepositDateStarted.ValueChanged += new System.EventHandler(this.PeriodValueChanged);
             // 
             // lblTernDepositDateEnd
             // 
-            this.lblTernDepositDateEnd.AutoSize = true;
-            this.lblTernDepositDateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTernDepositDateEnd.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lblTernDepositDateEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTernDepositDateEnd.Location = new System.Drawing.Point(434, 138);
+            resources.ApplyResources(this.lblTernDepositDateEnd, "lblTernDepositDateEnd");
             this.lblTernDepositDateEnd.Name = "lblTernDepositDateEnd";
-            this.lblTernDepositDateEnd.Size = new System.Drawing.Size(158, 26);
-            this.lblTernDepositDateEnd.TabIndex = 10;
-            this.lblTernDepositDateEnd.Text = "Contract end date";
-            this.lblTernDepositDateEnd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(3, 138);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 26);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Expected Amount";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel9
             // 
-            this.flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.flowLayoutPanel9, "flowLayoutPanel9");
             this.flowLayoutPanel9.Controls.Add(this.buttonSaveSaving);
             this.flowLayoutPanel9.Controls.Add(this.pnlSavingsButtons);
             this.flowLayoutPanel9.Controls.Add(this.btnPrintSavings);
             this.flowLayoutPanel9.Controls.Add(this.buttonStart);
             this.flowLayoutPanel9.Controls.Add(this.buttonUpdate);
             this.flowLayoutPanel9.Controls.Add(this.buttonRenew);
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 209);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(1316, 54);
-            this.flowLayoutPanel9.TabIndex = 75;
             // 
             // buttonSaveSaving
             // 
-            this.buttonSaveSaving.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonSaveSaving.Location = new System.Drawing.Point(3, 13);
+            resources.ApplyResources(this.buttonSaveSaving, "buttonSaveSaving");
             this.buttonSaveSaving.Name = "buttonSaveSaving";
-            this.buttonSaveSaving.Size = new System.Drawing.Size(110, 28);
-            this.buttonSaveSaving.TabIndex = 1;
-            this.buttonSaveSaving.Text = "Save";
             this.buttonSaveSaving.Click += new System.EventHandler(this.Save);
             // 
             // pnlSavingsButtons
             // 
-            this.pnlSavingsButtons.AutoSize = true;
-            this.pnlSavingsButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.pnlSavingsButtons, "pnlSavingsButtons");
             this.pnlSavingsButtons.Controls.Add(this.buttonSavingsClose);
             this.pnlSavingsButtons.Controls.Add(this.btCancelLastSavingEvent);
-            this.pnlSavingsButtons.Location = new System.Drawing.Point(116, 10);
-            this.pnlSavingsButtons.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSavingsButtons.Name = "pnlSavingsButtons";
-            this.pnlSavingsButtons.Size = new System.Drawing.Size(357, 34);
-            this.pnlSavingsButtons.TabIndex = 73;
             // 
             // buttonSavingsClose
             // 
-            this.buttonSavingsClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSavingsClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonSavingsClose.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.buttonSavingsClose, "buttonSavingsClose");
             this.buttonSavingsClose.Name = "buttonSavingsClose";
-            this.buttonSavingsClose.Size = new System.Drawing.Size(140, 28);
-            this.buttonSavingsClose.TabIndex = 0;
-            this.buttonSavingsClose.Text = "Close";
             this.buttonSavingsClose.Click += new System.EventHandler(this.Close);
             // 
             // btCancelLastSavingEvent
             // 
-            this.btCancelLastSavingEvent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btCancelLastSavingEvent.Location = new System.Drawing.Point(149, 3);
+            resources.ApplyResources(this.btCancelLastSavingEvent, "btCancelLastSavingEvent");
             this.btCancelLastSavingEvent.Name = "btCancelLastSavingEvent";
-            this.btCancelLastSavingEvent.Size = new System.Drawing.Size(205, 28);
-            this.btCancelLastSavingEvent.TabIndex = 1;
-            this.btCancelLastSavingEvent.Text = "Cancel Last Operation";
             this.btCancelLastSavingEvent.Click += new System.EventHandler(this.CancelLastEvent);
             // 
             // btnPrintSavings
             // 
-            this.btnPrintSavings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnPrintSavings, "btnPrintSavings");
             this.btnPrintSavings.Image = global::OpenCBS.GUI.Properties.Resources.bullet_arrow_down;
-            this.btnPrintSavings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrintSavings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnPrintSavings.Location = new System.Drawing.Point(476, 13);
             this.btnPrintSavings.Name = "btnPrintSavings";
             this.btnPrintSavings.ReportInitializer = null;
-            this.btnPrintSavings.Size = new System.Drawing.Size(108, 28);
-            this.btnPrintSavings.TabIndex = 74;
-            this.btnPrintSavings.Text = "Print";
             this.btnPrintSavings.UseVisualStyleBackColor = true;
-            this.btnPrintSavings.Visible = false;
             // 
             // buttonStart
             // 
-            this.buttonStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonStart.Location = new System.Drawing.Point(590, 13);
+            resources.ApplyResources(this.buttonStart, "buttonStart");
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(110, 28);
-            this.buttonStart.TabIndex = 75;
-            this.buttonStart.Text = "Start";
-            this.buttonStart.Visible = false;
             this.buttonStart.Click += new System.EventHandler(this.Start);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonUpdate.Location = new System.Drawing.Point(706, 13);
+            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(110, 28);
-            this.buttonUpdate.TabIndex = 76;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.Visible = false;
             this.buttonUpdate.Click += new System.EventHandler(this.Update);
             // 
             // buttonRenew
             // 
-            this.buttonRenew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonRenew.Location = new System.Drawing.Point(822, 13);
+            resources.ApplyResources(this.buttonRenew, "buttonRenew");
             this.buttonRenew.Name = "buttonRenew";
-            this.buttonRenew.Size = new System.Drawing.Size(99, 28);
-            this.buttonRenew.TabIndex = 77;
-            this.buttonRenew.Text = "Renew";
-            this.buttonRenew.Visible = false;
             this.buttonRenew.Click += new System.EventHandler(this.Renew);
             // 
             // groupBoxSaving
             // 
-            this.groupBoxSaving.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.groupBoxSaving, "groupBoxSaving");
             this.groupBoxSaving.Controls.Add(this.tableLayoutPanel5);
-            this.groupBoxSaving.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxSaving.Location = new System.Drawing.Point(3, 3);
             this.groupBoxSaving.Name = "groupBoxSaving";
-            this.groupBoxSaving.Size = new System.Drawing.Size(1316, 200);
-            this.groupBoxSaving.TabIndex = 73;
             this.groupBoxSaving.TabStop = false;
-            this.groupBoxSaving.Text = "admin";
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel5.ColumnCount = 9;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.Controls.Add(this.dtpTernDepositDateEnd, 4, 5);
             this.tableLayoutPanel5.Controls.Add(this.nudExpectedAmount, 1, 5);
             this.tableLayoutPanel5.Controls.Add(this.label9, 0, 0);
@@ -442,312 +309,159 @@
             this.tableLayoutPanel5.Controls.Add(this.lbInterestRateMinMax, 2, 3);
             this.tableLayoutPanel5.Controls.Add(this._dateCreatedValueLabel, 0, 6);
             this.tableLayoutPanel5.Controls.Add(this.dateTimeDateCreated, 7, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.tableLayoutPanel5.RowCount = 7;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1310, 181);
-            this.tableLayoutPanel5.TabIndex = 73;
             // 
             // nudExpectedAmount
             // 
+            resources.ApplyResources(this.nudExpectedAmount, "nudExpectedAmount");
             this.nudExpectedAmount.DecimalPlaces = 2;
-            this.nudExpectedAmount.Enabled = false;
-            this.nudExpectedAmount.Location = new System.Drawing.Point(120, 141);
             this.nudExpectedAmount.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
             this.nudExpectedAmount.Name = "nudExpectedAmount";
-            this.nudExpectedAmount.Size = new System.Drawing.Size(160, 20);
-            this.nudExpectedAmount.TabIndex = 11;
-            this.nudExpectedAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
+            resources.ApplyResources(this.label9, "label9");
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(3, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 32);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Code";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(1164, 42);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Empty label";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Visible = false;
             // 
             // tBSavingCode
             // 
+            resources.ApplyResources(this.tBSavingCode, "tBSavingCode");
             this.tableLayoutPanel5.SetColumnSpan(this.tBSavingCode, 2);
-            this.tBSavingCode.Location = new System.Drawing.Point(120, 13);
             this.tBSavingCode.Name = "tBSavingCode";
             this.tBSavingCode.ReadOnly = true;
-            this.tBSavingCode.Size = new System.Drawing.Size(308, 20);
-            this.tBSavingCode.TabIndex = 0;
             // 
             // lBSavingBalance
             // 
-            this.lBSavingBalance.AutoSize = true;
-            this.lBSavingBalance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lBSavingBalance.Font = new System.Drawing.Font("Arial", 15F);
-            this.lBSavingBalance.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lBSavingBalance.Location = new System.Drawing.Point(434, 10);
+            resources.ApplyResources(this.lBSavingBalance, "lBSavingBalance");
             this.lBSavingBalance.Name = "lBSavingBalance";
-            this.lBSavingBalance.Size = new System.Drawing.Size(158, 32);
-            this.lBSavingBalance.TabIndex = 8;
-            this.lBSavingBalance.Text = "Balance";
-            this.lBSavingBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbSavingBalanceValue
             // 
-            this.lbSavingBalanceValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbSavingBalanceValue.Font = new System.Drawing.Font("Arial", 15F);
-            this.lbSavingBalanceValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbSavingBalanceValue.Location = new System.Drawing.Point(598, 10);
+            resources.ApplyResources(this.lbSavingBalanceValue, "lbSavingBalanceValue");
             this.lbSavingBalanceValue.Name = "lbSavingBalanceValue";
-            this.lbSavingBalanceValue.Size = new System.Drawing.Size(197, 32);
-            this.lbSavingBalanceValue.TabIndex = 8;
-            this.lbSavingBalanceValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lBSavingAvBalance
             // 
-            this.lBSavingAvBalance.AutoSize = true;
-            this.lBSavingAvBalance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lBSavingAvBalance.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lBSavingAvBalance.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lBSavingAvBalance.Location = new System.Drawing.Point(434, 42);
+            resources.ApplyResources(this.lBSavingAvBalance, "lBSavingAvBalance");
             this.lBSavingAvBalance.Name = "lBSavingAvBalance";
-            this.lBSavingAvBalance.Size = new System.Drawing.Size(158, 32);
-            this.lBSavingAvBalance.TabIndex = 59;
-            this.lBSavingAvBalance.Text = "Personal account balance";
-            this.lBSavingAvBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbSavingAvBalanceValue
             // 
-            this.lbSavingAvBalanceValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbSavingAvBalanceValue.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lbSavingAvBalanceValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbSavingAvBalanceValue.Location = new System.Drawing.Point(598, 42);
+            resources.ApplyResources(this.lbSavingAvBalanceValue, "lbSavingAvBalanceValue");
             this.lbSavingAvBalanceValue.Name = "lbSavingAvBalanceValue";
-            this.lbSavingAvBalanceValue.Size = new System.Drawing.Size(197, 32);
-            this.lbSavingAvBalanceValue.TabIndex = 60;
-            this.lbSavingAvBalanceValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _currentAccountLabel
             // 
-            this._currentAccountLabel.AutoSize = true;
-            this._currentAccountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._currentAccountLabel.Font = new System.Drawing.Font("Arial", 9.75F);
-            this._currentAccountLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._currentAccountLabel.Location = new System.Drawing.Point(901, 42);
+            resources.ApplyResources(this._currentAccountLabel, "_currentAccountLabel");
             this._currentAccountLabel.Name = "_currentAccountLabel";
-            this._currentAccountLabel.Size = new System.Drawing.Size(101, 32);
-            this._currentAccountLabel.TabIndex = 61;
-            this._currentAccountLabel.Text = "Current Account";
-            this._currentAccountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _currentAccountTextBox
             // 
-            this._currentAccountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._currentAccountTextBox.Location = new System.Drawing.Point(1008, 45);
+            resources.ApplyResources(this._currentAccountTextBox, "_currentAccountTextBox");
             this._currentAccountTextBox.Name = "_currentAccountTextBox";
             this._currentAccountTextBox.ReadOnly = true;
-            this._currentAccountTextBox.Size = new System.Drawing.Size(150, 20);
-            this._currentAccountTextBox.TabIndex = 65;
             // 
             // _dateCreatedLabel
             // 
-            this._dateCreatedLabel.AutoSize = true;
-            this._dateCreatedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._dateCreatedLabel.Font = new System.Drawing.Font("Arial", 9.75F);
-            this._dateCreatedLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._dateCreatedLabel.Location = new System.Drawing.Point(901, 10);
+            resources.ApplyResources(this._dateCreatedLabel, "_dateCreatedLabel");
             this._dateCreatedLabel.Name = "_dateCreatedLabel";
-            this._dateCreatedLabel.Size = new System.Drawing.Size(101, 32);
-            this._dateCreatedLabel.TabIndex = 66;
-            this._dateCreatedLabel.Text = "Date created";
-            this._dateCreatedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._dateCreatedLabel.Visible = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(3, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Savings officer";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmbSavingsOfficer
             // 
+            resources.ApplyResources(this.cmbSavingsOfficer, "cmbSavingsOfficer");
             this.tableLayoutPanel5.SetColumnSpan(this.cmbSavingsOfficer, 2);
-            this.cmbSavingsOfficer.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbSavingsOfficer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSavingsOfficer.FormattingEnabled = true;
-            this.cmbSavingsOfficer.Location = new System.Drawing.Point(120, 45);
             this.cmbSavingsOfficer.Name = "cmbSavingsOfficer";
-            this.cmbSavingsOfficer.Size = new System.Drawing.Size(160, 21);
-            this.cmbSavingsOfficer.TabIndex = 3;
             this.cmbSavingsOfficer.SelectedIndexChanged += new System.EventHandler(this.OffecerChanged);
             // 
             // labelInitialAmount
             // 
-            this.labelInitialAmount.AutoSize = true;
+            resources.ApplyResources(this.labelInitialAmount, "labelInitialAmount");
             this.labelInitialAmount.BackColor = System.Drawing.Color.Transparent;
-            this.labelInitialAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelInitialAmount.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.labelInitialAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelInitialAmount.Location = new System.Drawing.Point(3, 74);
             this.labelInitialAmount.Name = "labelInitialAmount";
-            this.labelInitialAmount.Size = new System.Drawing.Size(111, 32);
-            this.labelInitialAmount.TabIndex = 3;
-            this.labelInitialAmount.Text = "Initial amount";
-            this.labelInitialAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudDownInitialAmount
             // 
+            resources.ApplyResources(this.nudDownInitialAmount, "nudDownInitialAmount");
             this.nudDownInitialAmount.DecimalPlaces = 2;
-            this.nudDownInitialAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudDownInitialAmount.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.nudDownInitialAmount.Location = new System.Drawing.Point(120, 77);
             this.nudDownInitialAmount.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
             this.nudDownInitialAmount.Name = "nudDownInitialAmount";
-            this.nudDownInitialAmount.Size = new System.Drawing.Size(160, 20);
-            this.nudDownInitialAmount.TabIndex = 1;
-            this.nudDownInitialAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudDownInitialAmount.ValueChanged += new System.EventHandler(this.CalculateExpectedAmount);
             // 
             // lbInitialAmountMinMax
             // 
-            this.lbInitialAmountMinMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbInitialAmountMinMax.Font = new System.Drawing.Font("Arial", 7.5F);
-            this.lbInitialAmountMinMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbInitialAmountMinMax.Location = new System.Drawing.Point(286, 74);
+            resources.ApplyResources(this.lbInitialAmountMinMax, "lbInitialAmountMinMax");
             this.lbInitialAmountMinMax.Name = "lbInitialAmountMinMax";
-            this.lbInitialAmountMinMax.Size = new System.Drawing.Size(142, 32);
-            this.lbInitialAmountMinMax.TabIndex = 1;
-            this.lbInitialAmountMinMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelInterestRate
             // 
-            this.labelInterestRate.AutoSize = true;
+            resources.ApplyResources(this.labelInterestRate, "labelInterestRate");
             this.labelInterestRate.BackColor = System.Drawing.Color.Transparent;
-            this.labelInterestRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelInterestRate.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.labelInterestRate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelInterestRate.Location = new System.Drawing.Point(3, 106);
             this.labelInterestRate.Name = "labelInterestRate";
-            this.labelInterestRate.Size = new System.Drawing.Size(111, 32);
-            this.labelInterestRate.TabIndex = 12;
-            this.labelInterestRate.Text = "Interest rate ";
-            this.labelInterestRate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nudDownInterestRate
             // 
+            resources.ApplyResources(this.nudDownInterestRate, "nudDownInterestRate");
             this.nudDownInterestRate.DecimalPlaces = 2;
-            this.nudDownInterestRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudDownInterestRate.Location = new System.Drawing.Point(120, 109);
             this.nudDownInterestRate.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
             this.nudDownInterestRate.Name = "nudDownInterestRate";
-            this.nudDownInterestRate.Size = new System.Drawing.Size(160, 20);
-            this.nudDownInterestRate.TabIndex = 4;
-            this.nudDownInterestRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudDownInterestRate.ValueChanged += new System.EventHandler(this.CalculateExpectedAmount);
             // 
             // lbInterestRateMinMax
             // 
-            this.lbInterestRateMinMax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbInterestRateMinMax.Font = new System.Drawing.Font("Arial", 7.5F);
-            this.lbInterestRateMinMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbInterestRateMinMax.Location = new System.Drawing.Point(286, 106);
+            resources.ApplyResources(this.lbInterestRateMinMax, "lbInterestRateMinMax");
             this.lbInterestRateMinMax.Name = "lbInterestRateMinMax";
-            this.lbInterestRateMinMax.Size = new System.Drawing.Size(142, 32);
-            this.lbInterestRateMinMax.TabIndex = 49;
-            this.lbInterestRateMinMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _dateCreatedValueLabel
             // 
-            this._dateCreatedValueLabel.AutoSize = true;
-            this._dateCreatedValueLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this._dateCreatedValueLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._dateCreatedValueLabel.Location = new System.Drawing.Point(3, 164);
+            resources.ApplyResources(this._dateCreatedValueLabel, "_dateCreatedValueLabel");
             this._dateCreatedValueLabel.Name = "_dateCreatedValueLabel";
-            this._dateCreatedValueLabel.Size = new System.Drawing.Size(0, 8);
-            this._dateCreatedValueLabel.TabIndex = 67;
-            this._dateCreatedValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimeDateCreated
             // 
-            this.dateTimeDateCreated.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimeDateCreated.Enabled = false;
-            this.dateTimeDateCreated.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.dateTimeDateCreated, "dateTimeDateCreated");
             this.dateTimeDateCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeDateCreated.Location = new System.Drawing.Point(1008, 13);
             this.dateTimeDateCreated.Name = "dateTimeDateCreated";
-            this.dateTimeDateCreated.Size = new System.Drawing.Size(150, 22);
-            this.dateTimeDateCreated.TabIndex = 76;
-            this.dateTimeDateCreated.Visible = false;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.groupBoxSaving, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tabControlSavingsDetails, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel9, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1322, 598);
-            this.tableLayoutPanel1.TabIndex = 76;
             // 
             // TernDepositUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TernDepositUserControl";
-            this.Size = new System.Drawing.Size(1322, 598);
             this.tabControlSavingsDetails.ResumeLayout(false);
             this.tabPageSavingsEvents.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberOfPeriods)).EndInit();
