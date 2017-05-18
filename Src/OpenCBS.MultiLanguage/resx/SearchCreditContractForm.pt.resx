@@ -151,7 +151,7 @@
     <value>Pendente</value>
   </data>
   <data name="Refused" xml:space="preserve">
-    <value>Recusado</value>
+    <value>Rejeitado</value>
   </data>
   <data name="result.Text" xml:space="preserve">
     <value>Resultado</value>
