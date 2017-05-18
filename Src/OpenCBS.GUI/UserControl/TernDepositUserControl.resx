@@ -134,9 +134,6 @@
   <data name="labelInterestRate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblNumberOfPeriods.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;labelInitialAmount.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
@@ -186,11 +183,17 @@
   <data name="buttonSaveSaving.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 28</value>
   </data>
+  <data name="buttonStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;columnHeader23.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonSaveSaving.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblNumberOfPeriods.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nudDownInterestRate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -207,6 +210,9 @@
   <data name="btnPrintSavings.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;buttonStart.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
   <data name="lblNumberOfPeriods.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -216,8 +222,8 @@
   <data name="_currentAccountLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;dateTimeDateCreated.ZOrder" xml:space="preserve">
-    <value>28</value>
+  <data name="dtpTernDepositDateStarted.Location" type="System.Drawing.Point, System.Drawing">
+    <value>598, 109</value>
   </data>
   <data name="lblTernDepositDateEnd.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -239,9 +245,6 @@
   </data>
   <data name="lblNumberOfPeriods.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelInitialAmount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>590, 13</value>
@@ -291,9 +294,6 @@
   <data name="tabPageSavingsEvents.Size" type="System.Drawing.Size, System.Drawing">
     <value>1308, 293</value>
   </data>
-  <data name="_dateCreatedLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
   <data name="&gt;&gt;lbSavingBalanceValue.Name" xml:space="preserve">
     <value>lbSavingBalanceValue</value>
   </data>
@@ -324,6 +324,9 @@
   <data name="&gt;&gt;columnHeader27.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;pnlSavingsButtons.Name" xml:space="preserve">
     <value>pnlSavingsButtons</value>
   </data>
@@ -336,8 +339,8 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Expected Amount</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
-    <value>columnHeader23</value>
+  <data name="_dateCreatedLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="lblTernDepositDateStarted.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -390,14 +393,11 @@
   <data name="_currentAccountLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>901, 42</value>
   </data>
-  <data name="&gt;&gt;labelInterestRate.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="btCancelLastSavingEvent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 28</value>
   </data>
-  <data name="lbInterestRateMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;buttonSavingsClose.Name" xml:space="preserve">
-    <value>buttonSavingsClose</value>
+  <data name="&gt;&gt;lblLimitOfTermDepositPeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="colCancelDate.Text" xml:space="preserve">
     <value>Cancel Date</value>
@@ -417,23 +417,26 @@
   <data name="groupBoxSaving.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="&gt;&gt;tabPageSavingsEvents.Parent" xml:space="preserve">
+    <value>tabControlSavingsDetails</value>
+  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;cmbSavingsOfficer.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="lblTernDepositDateStarted.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;buttonStart.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lBSavingAvBalance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lblTernDepositDateEnd.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
-  </data>
-  <data name="groupBoxSaving.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
   </data>
   <data name="lblTernDepositDateStarted.Text" xml:space="preserve">
     <value>Date started</value>
@@ -468,8 +471,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;lvSavingEvent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="labelInterestRate.Text" xml:space="preserve">
+    <value>Interest rate </value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -498,11 +501,17 @@
   <data name="lBSavingAvBalance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="btCancelLastSavingEvent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 3</value>
+  </data>
   <data name="cmbSavingsOfficer.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 21</value>
   </data>
   <data name="&gt;&gt;btnPrintSavings.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
+  </data>
+  <data name="_dateCreatedValueLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="buttonSavingsClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -510,8 +519,14 @@
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 138</value>
   </data>
+  <data name="tableLayoutPanel5.ColumnCount" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="buttonRenew.Text" xml:space="preserve">
     <value>Renew</value>
+  </data>
+  <data name="&gt;&gt;dateTimeDateCreated.Name" xml:space="preserve">
+    <value>dateTimeDateCreated</value>
   </data>
   <data name="btnPrintSavings.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -537,17 +552,14 @@
   <data name="groupBoxSaving.Text" xml:space="preserve">
     <value>admin</value>
   </data>
-  <data name="&gt;&gt;tBSavingCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;colCancelDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;buttonSaveSaving.Name" xml:space="preserve">
-    <value>buttonSaveSaving</value>
+  <data name="&gt;&gt;dateTimeDateCreated.ZOrder" xml:space="preserve">
+    <value>28</value>
   </data>
   <data name="&gt;&gt;buttonUpdate.Name" xml:space="preserve">
     <value>buttonUpdate</value>
@@ -558,20 +570,20 @@
   <data name="&gt;&gt;nudDownInterestRate.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="&gt;&gt;_dateCreatedLabel.Name" xml:space="preserve">
-    <value>_dateCreatedLabel</value>
-  </data>
   <data name="nudNumberOfPeriods.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="_dateCreatedLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>901, 10</value>
   </data>
-  <data name="&gt;&gt;dtpTernDepositDateStarted.Parent" xml:space="preserve">
-    <value>tableLayoutPanel5</value>
+  <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1310, 181</value>
   </data>
-  <data name="lBSavingBalance.Text" xml:space="preserve">
-    <value>Balance</value>
+  <data name="lbSavingAvBalanceValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 32</value>
+  </data>
+  <data name="columnHeader29.Text" xml:space="preserve">
+    <value>User</value>
   </data>
   <data name="&gt;&gt;dtpTernDepositDateEnd.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -581,6 +593,9 @@
   </data>
   <data name="lblLimitOfTermDepositPeriod.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;tBSavingCode.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
   </data>
   <data name="labelInitialAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -603,9 +618,6 @@
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
   <data name="lblLimitOfTermDepositPeriod.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 32</value>
   </data>
@@ -615,8 +627,8 @@
   <data name="labelInterestRate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
-    <value>User</value>
+  <data name="lBSavingAvBalance.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
   </data>
   <data name="&gt;&gt;labelInterestRate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -644,12 +656,6 @@
   </data>
   <data name="&gt;&gt;nudDownInitialAmount.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSaving.Name" xml:space="preserve">
-    <value>groupBoxSaving</value>
-  </data>
-  <data name="pnlSavingsButtons.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
   </data>
   <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
@@ -684,8 +690,8 @@
   <data name="tBSavingCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>308, 20</value>
   </data>
-  <data name="&gt;&gt;btnPrintSavings.Name" xml:space="preserve">
-    <value>btnPrintSavings</value>
+  <data name="nudNumberOfPeriods.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="lBSavingBalance.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -699,6 +705,9 @@
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Empty label</value>
+  </data>
   <data name="dtpTernDepositDateStarted.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
@@ -707,12 +716,6 @@
   </data>
   <data name="&gt;&gt;buttonRenew.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
-  </data>
-  <data name="dateTimeDateCreated.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelInitialAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 32</value>
   </data>
   <data name="dtpTernDepositDateEnd.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -725,9 +728,6 @@
   </data>
   <data name="&gt;&gt;btCancelLastSavingEvent.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="lbSavingAvBalanceValue.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
   </data>
   <data name="_currentAccountLabel.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -762,6 +762,9 @@
   <data name="&gt;&gt;btCancelLastSavingEvent.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;buttonSavingsClose.Name" xml:space="preserve">
+    <value>buttonSavingsClose</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Savings officer</value>
   </data>
@@ -786,6 +789,9 @@
   <data name="dtpTernDepositDateEnd.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="lbInitialAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lbSavingAvBalanceValue.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -795,26 +801,17 @@
   <data name="&gt;&gt;nudDownInterestRate.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="buttonSaveSaving.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="lBSavingBalance.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 10</value>
   </data>
   <data name="&gt;&gt;lbSavingAvBalanceValue.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
   <data name="&gt;&gt;_currentAccountTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -837,6 +834,9 @@
   <data name="tBSavingCode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;tabControlSavingsDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="buttonSavingsClose.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
@@ -852,8 +852,8 @@
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="lbSavingAvBalanceValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 32</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
   <data name="lvSavingEvent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -866,9 +866,6 @@
   </data>
   <data name="&gt;&gt;lbInitialAmountMinMax.Name" xml:space="preserve">
     <value>lbInitialAmountMinMax</value>
-  </data>
-  <data name="nudNumberOfPeriods.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
   </data>
   <data name="&gt;&gt;nudDownInitialAmount.ZOrder" xml:space="preserve">
     <value>22</value>
@@ -903,11 +900,8 @@
   <data name="&gt;&gt;groupBoxSaving.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="_dateCreatedValueLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lBSavingAvBalance.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
+  <data name="&gt;&gt;lvSavingEvent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="columnHeader23.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
@@ -927,17 +921,17 @@
   <data name="&gt;&gt;groupBoxSaving.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;_currentAccountLabel.Name" xml:space="preserve">
-    <value>_currentAccountLabel</value>
-  </data>
-  <data name="&gt;&gt;lblLimitOfTermDepositPeriod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader29.Name" xml:space="preserve">
+    <value>columnHeader29</value>
   </data>
   <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
     <value>columnHeader22</value>
   </data>
   <data name="lbSavingBalanceValue.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="tabControlSavingsDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1316, 326</value>
   </data>
   <data name="&gt;&gt;btCancelLastSavingEvent.Parent" xml:space="preserve">
     <value>pnlSavingsButtons</value>
@@ -953,9 +947,6 @@
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
-  </data>
-  <data name="buttonRenew.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
   </data>
   <data name="lbSavingBalanceValue.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 15pt</value>
@@ -978,6 +969,9 @@
   <data name="columnHeader24.Width" type="System.Int32, mscorlib">
     <value>287</value>
   </data>
+  <data name="&gt;&gt;lbInterestRateMinMax.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
+  </data>
   <data name="_dateCreatedLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -990,12 +984,6 @@
   <data name="&gt;&gt;buttonSavingsClose.Parent" xml:space="preserve">
     <value>pnlSavingsButtons</value>
   </data>
-  <data name="&gt;&gt;nudDownInitialAmount.Parent" xml:space="preserve">
-    <value>tableLayoutPanel5</value>
-  </data>
-  <data name="pnlSavingsButtons.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
   <data name="lBSavingAvBalance.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 42</value>
   </data>
@@ -1005,14 +993,20 @@
   <data name="&gt;&gt;dtpTernDepositDateStarted.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="dateTimeDateCreated.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lbSavingAvBalanceValue.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
+  </data>
+  <data name="&gt;&gt;buttonSaveSaving.Name" xml:space="preserve">
+    <value>buttonSaveSaving</value>
   </data>
   <data name="lblTernDepositDateStarted.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1035,14 +1029,11 @@
   <data name="_dateCreatedValueLabel.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
-  <data name="&gt;&gt;nudDownInterestRate.Name" xml:space="preserve">
-    <value>nudDownInterestRate</value>
+  <data name="lblTernDepositDateStarted.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 32</value>
   </data>
   <data name="lblTernDepositDateEnd.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
-  </data>
-  <data name="dtpTernDepositDateStarted.Location" type="System.Drawing.Point, System.Drawing">
-    <value>598, 109</value>
   </data>
   <data name="&gt;&gt;tabPageSavingsEvents.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1053,8 +1044,8 @@
   <data name="&gt;&gt;lbInterestRateMinMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="_dateCreatedLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="pnlSavingsButtons.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="buttonSavingsClose.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1077,14 +1068,14 @@
   <data name="_dateCreatedValueLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lvSavingEvent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1302, 287</value>
+  </data>
   <data name="flowLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 209</value>
   </data>
   <data name="lblNumberOfPeriods.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 74</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 32</value>
   </data>
   <data name="tabPageSavingsEvents.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1101,11 +1092,14 @@
   <data name="nudDownInitialAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 20</value>
   </data>
+  <data name="&gt;&gt;buttonSavingsClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;labelInterestRate.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tableLayoutPanel5</value>
+  <data name="&gt;&gt;labelInterestRate.ZOrder" xml:space="preserve">
+    <value>24</value>
   </data>
   <data name="tabControlSavingsDetails.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -1125,14 +1119,14 @@
   <data name="&gt;&gt;tBSavingCode.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lbInterestRateMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 106</value>
+  </data>
   <data name="labelInitialAmount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="columnHeader22.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;buttonStart.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1146,17 +1140,14 @@
   <data name="labelInterestRate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;columnHeader29.Name" xml:space="preserve">
-    <value>columnHeader29</value>
+  <data name="lbInitialAmountMinMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 32</value>
   </data>
   <data name="groupBoxSaving.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbSavingsOfficer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1322, 598</value>
   </data>
   <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1176,14 +1167,17 @@
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;buttonStart.Parent" xml:space="preserve">
-    <value>flowLayoutPanel9</value>
+  <data name="&gt;&gt;labelInitialAmount.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lbSavingBalanceValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>598, 10</value>
   </data>
-  <data name="&gt;&gt;buttonSavingsClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pnlSavingsButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
   </data>
   <data name="_currentAccountTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1200,8 +1194,8 @@
   <data name="&gt;&gt;lBSavingAvBalance.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="tableLayoutPanel5.ColumnCount" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="_dateCreatedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="&gt;&gt;dtpTernDepositDateEnd.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
@@ -1230,14 +1224,17 @@
   <data name="nudExpectedAmount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="lblTernDepositDateEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 26</value>
+  <data name="&gt;&gt;buttonSaveSaving.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dtpTernDepositDateEnd.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="labelInitialAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel5.Parent" xml:space="preserve">
     <value>groupBoxSaving</value>
@@ -1260,9 +1257,6 @@
   <data name="lBSavingBalance.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="_currentAccountTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1008, 45</value>
-  </data>
   <data name="nudDownInitialAmount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -1278,20 +1272,17 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TernDepositUserControl</value>
   </data>
-  <data name="&gt;&gt;lbInterestRateMinMax.Parent" xml:space="preserve">
-    <value>tableLayoutPanel5</value>
+  <data name="&gt;&gt;groupBoxSaving.Name" xml:space="preserve">
+    <value>groupBoxSaving</value>
   </data>
   <data name="labelInitialAmount.Text" xml:space="preserve">
     <value>Initial amount</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
-    <value>columnHeader15</value>
-  </data>
   <data name="&gt;&gt;lblTernDepositDateStarted.Name" xml:space="preserve">
     <value>lblTernDepositDateStarted</value>
   </data>
-  <data name="lvSavingEvent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1302, 287</value>
+  <data name="&gt;&gt;labelInitialAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dtpTernDepositDateStarted.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt, style=Bold</value>
@@ -1323,17 +1314,20 @@
   <data name="lblLimitOfTermDepositPeriod.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1310, 181</value>
+  <data name="lbInterestRateMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Empty label</value>
+  <data name="&gt;&gt;_currentAccountLabel.Name" xml:space="preserve">
+    <value>_currentAccountLabel</value>
   </data>
   <data name="_currentAccountLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="nudDownInterestRate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
+  </data>
+  <data name="nudDownInitialAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 77</value>
   </data>
   <data name="btnPrintSavings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1344,8 +1338,14 @@
   <data name="&gt;&gt;buttonUpdate.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
   </data>
+  <data name="&gt;&gt;lBSavingAvBalance.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <data name="nudDownInterestRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 109</value>
+  </data>
+  <data name="&gt;&gt;lblNumberOfPeriods.Name" xml:space="preserve">
+    <value>lblNumberOfPeriods</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1359,14 +1359,14 @@
   <data name="&gt;&gt;lblNumberOfPeriods.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelInitialAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 32</value>
   </data>
   <data name="&gt;&gt;nudExpectedAmount.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="buttonStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="_dateCreatedValueLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1380,26 +1380,23 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lblNumberOfPeriods.Name" xml:space="preserve">
-    <value>lblNumberOfPeriods</value>
-  </data>
-  <data name="&gt;&gt;dateTimeDateCreated.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 32</value>
   </data>
   <data name="&gt;&gt;lbInitialAmountMinMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="nudDownInitialAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 77</value>
+  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
+    <value>columnHeader15</value>
   </data>
-  <data name="&gt;&gt;tabControlSavingsDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dateTimeDateCreated.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;buttonStart.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lBSavingBalance.Text" xml:space="preserve">
+    <value>Balance</value>
   </data>
-  <data name="btCancelLastSavingEvent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 28</value>
+  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
+    <value>columnHeader23</value>
   </data>
   <data name="lbSavingAvBalanceValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>598, 42</value>
@@ -1410,14 +1407,17 @@
   <data name="lblTernDepositDateStarted.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 106</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1322, 598</value>
+  <data name="&gt;&gt;dtpTernDepositDateStarted.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
   </data>
-  <data name="lbInitialAmountMinMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;dateTimeDateCreated.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nudExpectedAmount.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="lblNumberOfPeriods.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="columnHeader28.Text" xml:space="preserve">
     <value>Savings method</value>
@@ -1458,8 +1458,11 @@
   <data name="&gt;&gt;_currentAccountLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="lblTernDepositDateStarted.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 32</value>
+  <data name="buttonRenew.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="labelInterestRate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;tabControlSavingsDetails.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1470,20 +1473,17 @@
   <data name="label9.Text" xml:space="preserve">
     <value>Code</value>
   </data>
-  <data name="nudNumberOfPeriods.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="_currentAccountLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="lbInterestRateMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 106</value>
+  <data name="buttonSaveSaving.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblNumberOfPeriods.Text" xml:space="preserve">
     <value>Number of periods</value>
-  </data>
-  <data name="&gt;&gt;labelInitialAmount.Name" xml:space="preserve">
-    <value>labelInitialAmount</value>
   </data>
   <data name="columnHeader27.Width" type="System.Int32, mscorlib">
     <value>112</value>
@@ -1509,8 +1509,8 @@
   <data name="lbInterestRateMinMax.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="dateTimeDateCreated.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;_dateCreatedLabel.Name" xml:space="preserve">
+    <value>_dateCreatedLabel</value>
   </data>
   <data name="nudExpectedAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 20</value>
@@ -1527,11 +1527,11 @@
   <data name="&gt;&gt;lblLimitOfTermDepositPeriod.Name" xml:space="preserve">
     <value>lblLimitOfTermDepositPeriod</value>
   </data>
-  <data name="&gt;&gt;tBSavingCode.Parent" xml:space="preserve">
-    <value>tableLayoutPanel5</value>
+  <data name="cmbSavingsOfficer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="lbInitialAmountMinMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 32</value>
+  <data name="&gt;&gt;tBSavingCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblTernDepositDateEnd.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1551,8 +1551,8 @@
   <data name="&gt;&gt;columnHeader21.Name" xml:space="preserve">
     <value>columnHeader21</value>
   </data>
-  <data name="&gt;&gt;lBSavingAvBalance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="groupBoxSaving.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="lblTernDepositDateStarted.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1560,14 +1560,14 @@
   <data name="&gt;&gt;lbInitialAmountMinMax.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="&gt;&gt;dateTimeDateCreated.Name" xml:space="preserve">
-    <value>dateTimeDateCreated</value>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>tableLayoutPanel5</value>
   </data>
-  <data name="&gt;&gt;lblNumberOfPeriods.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblNumberOfPeriods.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;lBSavingAvBalance.Name" xml:space="preserve">
     <value>lBSavingAvBalance</value>
@@ -1578,8 +1578,8 @@
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1322, 598</value>
   </data>
-  <data name="btCancelLastSavingEvent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 3</value>
+  <data name="&gt;&gt;nudDownInterestRate.Name" xml:space="preserve">
+    <value>nudDownInterestRate</value>
   </data>
   <data name="groupBoxSaving.Size" type="System.Drawing.Size, System.Drawing">
     <value>1316, 200</value>
@@ -1590,11 +1590,11 @@
   <data name="&gt;&gt;buttonUpdate.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblNumberOfPeriods.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
+  <data name="nudNumberOfPeriods.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="&gt;&gt;lBSavingAvBalance.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="_currentAccountTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1008, 45</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1605,8 +1605,8 @@
   <data name="lbInitialAmountMinMax.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;tabPageSavingsEvents.Parent" xml:space="preserve">
-    <value>tabControlSavingsDetails</value>
+  <data name="&gt;&gt;btnPrintSavings.Name" xml:space="preserve">
+    <value>btnPrintSavings</value>
   </data>
   <data name="&gt;&gt;pnlSavingsButtons.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1617,11 +1617,11 @@
   <data name="btnPrintSavings.Location" type="System.Drawing.Point, System.Drawing">
     <value>476, 13</value>
   </data>
-  <data name="labelInterestRate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tableLayoutPanel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelInitialAmount.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;labelInitialAmount.Name" xml:space="preserve">
+    <value>labelInitialAmount</value>
   </data>
   <data name="&gt;&gt;columnHeader28.Name" xml:space="preserve">
     <value>columnHeader28</value>
@@ -1644,23 +1644,23 @@
   <data name="buttonStart.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 28</value>
   </data>
-  <data name="labelInterestRate.Text" xml:space="preserve">
-    <value>Interest rate </value>
+  <data name="lblTernDepositDateEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
   </data>
   <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;buttonSaveSaving.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelInitialAmount.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="&gt;&gt;nudDownInitialAmount.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
   </data>
-  <data name="tabControlSavingsDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1316, 326</value>
+  <data name="lbSavingAvBalanceValue.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="tabControlSavingsDetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
