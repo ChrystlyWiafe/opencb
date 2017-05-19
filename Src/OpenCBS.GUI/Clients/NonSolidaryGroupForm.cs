@@ -107,7 +107,7 @@ namespace OpenCBS.GUI.Clients
                     // Restore the genuine title (e.g. after update).
                     Text = _title;
                 }
-                Text += "  " + " [" + _village.Name + "]";
+                Text = "[" + _village.Name + "]";
             }
         }
 

@@ -2209,11 +2209,15 @@ namespace OpenCBS.Manager.Clients
 	                          (
 		                          SELECT 
 			                          t.id
+									  , v.name
 			                          , cast(count(case c.status when 5 then 1 else null end) as bit) active
 		                          FROM dbo.Tiers t
-		                          LEFT JOIN dbo.Projects pr ON pr.tiers_id = t.id
-		                          LEFT JOIN dbo.Contracts c ON pr.id = c.project_id
-		                          GROUP BY t.id
+								  INNER JOIN dbo.Villages v ON v.id = t.id
+								  LEFT JOIN dbo.VillagesPersons vp ON vp.village_id = t.id
+								  LEFT JOIN dbo.Persons p ON p.id = vp.person_id
+		                          LEFT JOIN dbo.Projects pr ON pr.tiers_id = p.id
+		                          LEFT JOIN dbo.Contracts c ON pr.id = c.project_id AND c.nsg_id = t.id
+		                          GROUP BY t.id, v.name
 	                          ) active ON active.id = Tiers.id 
 			         WHERE (Villages.name LIKE @name OR Districts.name  LIKE  @district OR Tiers.city  LIKE @city ) 
                           and active.active {0} @active and 1 = @includeVillages
