@@ -133,10 +133,10 @@
     <value>Não tem permissão para ver este contracto.</value>
   </data>
   <data name="Closed" xml:space="preserve">
-    <value>Fechado</value>
+    <value>Encerrado</value>
   </data>
   <data name="Closed.Text" xml:space="preserve">
-    <value>Fechado</value>
+    <value>Encerrado</value>
   </data>
   <data name="CompulsorySavings.Text" xml:space="preserve">
     <value>Poupança obrigatória</value>
