@@ -151,7 +151,7 @@
     <value>Base de dados</value>
   </data>
   <data name="DatabaseCreation.Text" xml:space="preserve">
-    <value>A criação do banco de dados está em progresso ...</value>
+    <value>Actualização da base de dados em progresso ...</value>
   </data>
   <data name="DatabaseCreationCancelled.Text" xml:space="preserve">
     <value>A criação da base de dados foi cancelada</value>
