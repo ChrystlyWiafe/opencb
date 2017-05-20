@@ -189,4 +189,7 @@
   <data name="Postponed" xml:space="preserve">
     <value>Adiado</value>
   </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Crédito</value>
+  </data>
 </root>
