@@ -186,4 +186,7 @@
   <data name="Data" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="PropertyNameMustBeUnique" xml:space="preserve">
+    <value>O nome da propriedade deve ser exclusivo!</value>
+  </data>
 </root>

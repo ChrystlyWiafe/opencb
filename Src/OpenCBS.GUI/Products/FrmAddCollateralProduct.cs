@@ -152,7 +152,7 @@ namespace OpenCBS.GUI.Products
         {
             if (myProperties.Contains(textBoxPropertyName.Text))
             {
-                MessageBox.Show("Property name must be unique!");
+                MessageBox.Show(GetString("PropertyNameMustBeUnique"));
             }
             else
             {
