@@ -158,9 +158,6 @@
   <data name="labelCloseFees.Text" xml:space="preserve">
     <value>Comissões de encerramento de conta</value>
   </data>
-  <data name="labelCloseFeesValue.Text" xml:space="preserve">
-    <value>Valor das comissões de encerramento</value>
-  </data>
   <data name="lbTotalAmountValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
