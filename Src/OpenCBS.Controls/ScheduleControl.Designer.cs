@@ -87,6 +87,7 @@
             this.extra_amount_1,
             this.extra_amount_2});
             this.scheduleObjectListView.ContextMenuStrip = this._scheduleContextMenuStrip;
+            this.scheduleObjectListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.scheduleObjectListView.FullRowSelect = true;
             this.scheduleObjectListView.GridLines = true;
             this.scheduleObjectListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;

@@ -157,20 +157,16 @@
     <value>Valor Alterado</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuItemCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 22</value>
-  </data>
-  <data name="menuItemCopy.Text" xml:space="preserve">
-    <value>Copiar tudo para área de transferência</value>
-  </data>
   <data name="_scheduleContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>276, 26</value>
   </data>
   <data name="_scheduleContextMenuStrip.Text" xml:space="preserve">
     <value>Copiar para área de transferência</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="menuItemCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 22</value>
+  </data>
+  <data name="menuItemCopy.Text" xml:space="preserve">
+    <value>Copiar tudo para área de transferência</value>
   </data>
 </root>
