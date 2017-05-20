@@ -177,4 +177,7 @@
   <data name="Série" xml:space="preserve">
     <value>String</value>
   </data>
+  <data name="EachValueInCollectionShouldBeUnique" xml:space="preserve">
+    <value>Cada valor na coleção deve ser exclusivo!</value>
+  </data>
 </root>

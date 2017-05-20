@@ -277,7 +277,7 @@ namespace OpenCBS.GUI.Products
         {
             if (listBox.Items.Contains(textBoxListItem.Text))
             {
-                MessageBox.Show("Each value in the collection should be unique!");
+                MessageBox.Show(GetString("EachValueInCollectionShouldBeUnique"));
                 return;
             }
             

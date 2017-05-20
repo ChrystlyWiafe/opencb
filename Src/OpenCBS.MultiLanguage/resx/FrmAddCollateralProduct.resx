@@ -207,4 +207,7 @@
   <data name="Série" xml:space="preserve">
     <value />
   </data>
+  <data name="EachValueInCollectionShouldBeUnique" xml:space="preserve">
+    <value>Each value in the collection should be unique!</value>
+  </data>
 </root>
