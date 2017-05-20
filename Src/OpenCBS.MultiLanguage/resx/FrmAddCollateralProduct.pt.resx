@@ -183,4 +183,7 @@
   <data name="Proprietário" xml:space="preserve">
     <value>Owner</value>
   </data>
+  <data name="Data" xml:space="preserve">
+    <value>Date</value>
+  </data>
 </root>
