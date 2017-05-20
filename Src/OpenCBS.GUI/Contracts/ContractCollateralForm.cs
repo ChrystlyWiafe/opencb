@@ -215,6 +215,7 @@ namespace OpenCBS.GUI.Contracts
             if (myProperties.GetPropertyValueByName("Montant") != null) amountProperty = "Montant";
             if (myProperties.GetPropertyValueByName("Сумма") != null) amountProperty = "Сумма";
             if (myProperties.GetPropertyValueByName("Amount") != null) amountProperty = "Amount";
+            if (myProperties.GetPropertyValueByName("Montante") != null) amountProperty = "Montante";
 
             if (decimal.Parse(myProperties.GetPropertyValueByName(amountProperty).ToString()) <= 0)
             {
