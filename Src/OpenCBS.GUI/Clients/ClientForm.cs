@@ -6397,7 +6397,7 @@ namespace OpenCBS.GUI.Clients
             if (_client.ActiveLoans != null && _client.ActiveLoans.Count > 0
                 || _client.Savings.FirstOrDefault(x => x.Product.Type != OSavingProductType.PersonalAccount && x.Status == OSavingsStatus.Active) != null)
             {
-                MessageBox.Show(@"This client have active credit or saving contracts");
+                MessageBox.Show(ML.GetString(Ressource.ClientForm, @"ClientHasActiveCreditOrSaving"));
                 return;
             }
 

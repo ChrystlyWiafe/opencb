@@ -373,4 +373,7 @@
   <data name="lblLoanStatus.Text" xml:space="preserve">
     <value>Poupanças pendentes</value>
   </data>
+  <data name="ClientHasActiveCreditOrSaving" xml:space="preserve">
+    <value>Este cliente possui contratos ativos de crédito ou poupança.</value>
+  </data>
 </root>
