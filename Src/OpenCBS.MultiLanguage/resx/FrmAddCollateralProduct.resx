@@ -210,4 +210,7 @@
   <data name="EachValueInCollectionShouldBeUnique" xml:space="preserve">
     <value>Each value in the collection should be unique!</value>
   </data>
+  <data name="PropertyNameMustBeUnique" xml:space="preserve">
+    <value>The property name must be unique!</value>
+  </data>
 </root>
