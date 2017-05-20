@@ -180,4 +180,7 @@
   <data name="EachValueInCollectionShouldBeUnique" xml:space="preserve">
     <value>Cada valor na coleção deve ser exclusivo!</value>
   </data>
+  <data name="Proprietário" xml:space="preserve">
+    <value>Owner</value>
+  </data>
 </root>
