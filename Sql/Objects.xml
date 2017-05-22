@@ -3562,4 +3562,92 @@ END
             )
             DROP FUNCTION [dbo].[GetXIRR]]]></drop>
   </object>
+    <object name="InstallmentSnapshotForLoan" priority="69">
+    <create><![CDATA[
+CREATE FUNCTION [dbo].[InstallmentSnapshotForLoan](@date datetime, @loanId int)
+RETURNS TABLE
+AS
+RETURN
+(
+	WITH _installments AS
+	(
+		-- Unite Installments and InstallmentHistory
+		select 
+			h.event_id snapshot_id,
+			e.event_date snapshot_date,
+			h.contract_id,
+			h.number,
+			h.start_date,
+			h.expected_date,
+			h.capital_repayment,
+			h.interest_repayment,
+			h.paid_capital,
+			h.paid_interest,
+			h.paid_date,
+			h.commission,
+			h.paid_commission
+		from
+			dbo.InstallmentHistory h
+		left join
+			dbo.ContractEvents e on h.event_id = e.id
+		where
+			e.is_deleted = 0 
+			and cast(e.event_date as date) > @date
+			and h.contract_id = @loanId
+
+		union all
+
+		select
+			0,
+			'2050-01-01', -- date in a very distant future
+			contract_id,
+			number,
+			start_date,
+			expected_date,
+			capital_repayment,
+			interest_repayment,
+			paid_capital,
+			paid_interest,
+			paid_date,
+			commission,
+			paid_commission
+		from
+			dbo.Installments
+		where
+			contract_id = @loanId
+	)
+	SELECT i.contract_id
+		, i.number
+		, i.start_date
+		, i.expected_date
+		, capital_repayment AS principal
+		, interest_repayment AS interest
+		, paid_capital paid_principal
+		, paid_interest
+    , commission
+    , paid_commission
+		, paid_date
+	FROM [_installments] AS i
+	RIGHT JOIN
+	(
+		-- Rank snapshots according to dates
+		SELECT *, ROW_NUMBER() OVER (PARTITION BY contract_id ORDER BY snapshot_date ASC) AS [rank]
+		FROM
+		(
+			-- Get relevant snapshots only
+			SELECT contract_id, snapshot_id, snapshot_date FROM [_installments]
+			WHERE snapshot_date > @date
+			GROUP BY contract_id, snapshot_id, snapshot_date
+		) AS t
+	) AS s ON s.contract_id = i.contract_id AND s.snapshot_id = i.snapshot_id
+	WHERE s.[rank] = 1
+)
+]]></create>
+    <drop><![CDATA[IF  EXISTS (
+                SELECT * 
+                FROM sys.objects 
+                WHERE object_id = OBJECT_ID(N'dbo.InstallmentSnapshotForLoan') AND type = N'FN'
+            )
+            DROP FUNCTION [dbo].[InstallmentSnapshotForLoan]]]></drop>
+  </object>
 </database>
