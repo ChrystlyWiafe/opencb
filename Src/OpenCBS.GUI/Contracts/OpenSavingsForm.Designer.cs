@@ -33,6 +33,7 @@ namespace OpenCBS.GUI.Contracts
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenSavingsForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._errorLabel = new System.Windows.Forms.Label();
             this.bCancel = new System.Windows.Forms.Button();
             this.bSave = new System.Windows.Forms.Button();
             this.gbModifyInitialAmountEntryFees = new System.Windows.Forms.GroupBox();
@@ -49,7 +50,6 @@ namespace OpenCBS.GUI.Contracts
             this.lbTotalAmountValue = new System.Windows.Forms.Label();
             this.lbInitialAmountValue = new System.Windows.Forms.Label();
             this.lbEntryFeesValue = new System.Windows.Forms.Label();
-            this._errorLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbModifyInitialAmountEntryFees.SuspendLayout();
@@ -68,12 +68,18 @@ namespace OpenCBS.GUI.Contracts
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this._errorLabel);
             this.groupBox1.Controls.Add(this.bCancel);
             this.groupBox1.Controls.Add(this.bSave);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // _errorLabel
+            // 
+            resources.ApplyResources(this._errorLabel, "_errorLabel");
+            this._errorLabel.ForeColor = System.Drawing.Color.Red;
+            this._errorLabel.Name = "_errorLabel";
             // 
             // bCancel
             // 
@@ -90,13 +96,13 @@ namespace OpenCBS.GUI.Contracts
             // 
             // gbModifyInitialAmountEntryFees
             // 
+            resources.ApplyResources(this.gbModifyInitialAmountEntryFees, "gbModifyInitialAmountEntryFees");
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.nudInitialAmount);
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.udEntryFees);
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.lbInitialAmountMinMax);
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.lbEntryFeesMinMax);
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.lbEntryFees);
             this.gbModifyInitialAmountEntryFees.Controls.Add(this.lbInitialAmount);
-            resources.ApplyResources(this.gbModifyInitialAmountEntryFees, "gbModifyInitialAmountEntryFees");
             this.gbModifyInitialAmountEntryFees.Name = "gbModifyInitialAmountEntryFees";
             this.gbModifyInitialAmountEntryFees.TabStop = false;
             // 
@@ -134,9 +140,9 @@ namespace OpenCBS.GUI.Contracts
             // 
             // tableLayoutPanel2
             // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.AllowDrop = true;
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.lbConfirmationTotalAmount, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbInitialAmountConfirmation, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lbEntryFeesConfirmation, 1, 2);
@@ -175,12 +181,6 @@ namespace OpenCBS.GUI.Contracts
             // 
             resources.ApplyResources(this.lbEntryFeesValue, "lbEntryFeesValue");
             this.lbEntryFeesValue.Name = "lbEntryFeesValue";
-            // 
-            // _errorLabel
-            // 
-            resources.ApplyResources(this._errorLabel, "_errorLabel");
-            this._errorLabel.ForeColor = System.Drawing.Color.Red;
-            this._errorLabel.Name = "_errorLabel";
             // 
             // OpenSavingsForm
             // 
