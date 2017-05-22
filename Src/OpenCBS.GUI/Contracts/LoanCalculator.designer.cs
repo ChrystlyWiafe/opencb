@@ -157,8 +157,13 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.splitContainer3, "splitContainer3");
             this.splitContainer3.Name = "splitContainer3";
             // 
+            // splitContainer3.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer3.Panel1, "splitContainer3.Panel1");
+            // 
             // splitContainer3.Panel2
             // 
+            resources.ApplyResources(this.splitContainer3.Panel2, "splitContainer3.Panel2");
             this.splitContainer3.Panel2.Controls.Add(this.panelUserControl);
             // 
             // panelUserControl
@@ -171,10 +176,26 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.splitContainer4, "splitContainer4");
             this.splitContainer4.Name = "splitContainer4";
             // 
+            // splitContainer4.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer4.Panel1, "splitContainer4.Panel1");
+            // 
+            // splitContainer4.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer4.Panel2, "splitContainer4.Panel2");
+            // 
             // splitContainer6
             // 
             resources.ApplyResources(this.splitContainer6, "splitContainer6");
             this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer6.Panel1, "splitContainer6.Panel1");
+            // 
+            // splitContainer6.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer6.Panel2, "splitContainer6.Panel2");
             // 
             // tabPageLoansDetails
             // 
@@ -267,10 +288,10 @@ namespace OpenCBS.GUI.Clients
             // 
             // groupBoxEntryFees
             // 
+            resources.ApplyResources(this.groupBoxEntryFees, "groupBoxEntryFees");
             this.groupBoxEntryFees.Controls.Add(this.numEntryFees);
             this.groupBoxEntryFees.Controls.Add(this.lvEntryFees);
             this.groupBoxEntryFees.Controls.Add(this.lblMinMaxEntryFees);
-            resources.ApplyResources(this.groupBoxEntryFees, "groupBoxEntryFees");
             this.groupBoxEntryFees.Name = "groupBoxEntryFees";
             this.groupBoxEntryFees.TabStop = false;
             // 
@@ -281,6 +302,7 @@ namespace OpenCBS.GUI.Clients
             // 
             // lvEntryFees
             // 
+            resources.ApplyResources(this.lvEntryFees, "lvEntryFees");
             this.lvEntryFees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colName,
             this.colValue,
@@ -288,7 +310,6 @@ namespace OpenCBS.GUI.Clients
             this.colCalculated,
             this.colMax,
             this.colAmount});
-            resources.ApplyResources(this.lvEntryFees, "lvEntryFees");
             this.lvEntryFees.DoubleClickActivation = true;
             this.lvEntryFees.FullRowSelect = true;
             this.lvEntryFees.GridLines = true;
@@ -336,21 +357,21 @@ namespace OpenCBS.GUI.Clients
             // 
             // _scheduleTypeComboBox
             // 
+            resources.ApplyResources(this._scheduleTypeComboBox, "_scheduleTypeComboBox");
             this.tableLayoutPanel4.SetColumnSpan(this._scheduleTypeComboBox, 2);
             this._scheduleTypeComboBox.DisplayMember = "Name";
             this._scheduleTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._scheduleTypeComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            resources.ApplyResources(this._scheduleTypeComboBox, "_scheduleTypeComboBox");
             this._scheduleTypeComboBox.Name = "_scheduleTypeComboBox";
             this._scheduleTypeComboBox.ValueMember = "Id";
             // 
             // _installmentTypeComboBox
             // 
+            resources.ApplyResources(this._installmentTypeComboBox, "_installmentTypeComboBox");
             this.tableLayoutPanel4.SetColumnSpan(this._installmentTypeComboBox, 2);
             this._installmentTypeComboBox.DisplayMember = "Name";
             this._installmentTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._installmentTypeComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            resources.ApplyResources(this._installmentTypeComboBox, "_installmentTypeComboBox");
             this._installmentTypeComboBox.Name = "_installmentTypeComboBox";
             this._installmentTypeComboBox.ValueMember = "Id";
             // 
@@ -412,8 +433,8 @@ namespace OpenCBS.GUI.Clients
             // 
             // labelLoanNbOfInstallments
             // 
-            this.labelLoanNbOfInstallments.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.labelLoanNbOfInstallments, "labelLoanNbOfInstallments");
+            this.labelLoanNbOfInstallments.BackColor = System.Drawing.Color.Transparent;
             this.labelLoanNbOfInstallments.Name = "labelLoanNbOfInstallments";
             // 
             // labelLoanStartDate
@@ -457,13 +478,13 @@ namespace OpenCBS.GUI.Clients
             // 
             // nudInterestRate
             // 
+            resources.ApplyResources(this.nudInterestRate, "nudInterestRate");
             this.nudInterestRate.DecimalPlaces = 10;
             this.nudInterestRate.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            resources.ApplyResources(this.nudInterestRate, "nudInterestRate");
             this.nudInterestRate.Name = "nudInterestRate";
             // 
             // _scheduleTypeLabel
@@ -473,10 +494,10 @@ namespace OpenCBS.GUI.Clients
             // 
             // cmbPackages
             // 
+            resources.ApplyResources(this.cmbPackages, "cmbPackages");
             this.cmbPackages.DisplayMember = "Name";
             this.cmbPackages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPackages.ForeColor = System.Drawing.SystemColors.WindowText;
-            resources.ApplyResources(this.cmbPackages, "cmbPackages");
             this.cmbPackages.Name = "cmbPackages";
             this.cmbPackages.ValueMember = "Id";
             this.cmbPackages.SelectedIndexChanged += new System.EventHandler(this.cmbPackages_SelectedIndexChanged);
@@ -509,10 +530,10 @@ namespace OpenCBS.GUI.Clients
             // 
             // cmbRollover2
             // 
+            resources.ApplyResources(this.cmbRollover2, "cmbRollover2");
             this.cmbRollover2.DisplayMember = "id";
             this.cmbRollover2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRollover2.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbRollover2, "cmbRollover2");
             this.cmbRollover2.Name = "cmbRollover2";
             this.cmbRollover2.ValueMember = "rollover";
             // 
@@ -565,19 +586,19 @@ namespace OpenCBS.GUI.Clients
             // olvColumnSACExportedBalance
             // 
             this.olvColumnSACExportedBalance.AspectName = "Id";
-            this.olvColumnSACExportedBalance.IsVisible = false;
             resources.ApplyResources(this.olvColumnSACExportedBalance, "olvColumnSACExportedBalance");
+            this.olvColumnSACExportedBalance.IsVisible = false;
             // 
             // olvColumnLACExportedBalance
             // 
             this.olvColumnLACExportedBalance.AspectName = "Id";
-            this.olvColumnLACExportedBalance.IsVisible = false;
             resources.ApplyResources(this.olvColumnLACExportedBalance, "olvColumnLACExportedBalance");
+            this.olvColumnLACExportedBalance.IsVisible = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Name = "panel2";
             // 
             // tableLayoutPanel2
@@ -592,24 +613,24 @@ namespace OpenCBS.GUI.Clients
             // 
             // buttonPrintSchedule
             // 
-            this.buttonPrintSchedule.BackColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.buttonPrintSchedule, "buttonPrintSchedule");
+            this.buttonPrintSchedule.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonPrintSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(56)))));
             this.buttonPrintSchedule.Name = "buttonPrintSchedule";
             this.buttonPrintSchedule.UseVisualStyleBackColor = false;
             // 
             // buttonReschedule
             // 
-            this.buttonReschedule.BackColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.buttonReschedule, "buttonReschedule");
+            this.buttonReschedule.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonReschedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(56)))));
             this.buttonReschedule.Name = "buttonReschedule";
             this.buttonReschedule.UseVisualStyleBackColor = false;
             // 
             // buttonRepay
             // 
-            this.buttonRepay.BackColor = System.Drawing.Color.Gainsboro;
             resources.ApplyResources(this.buttonRepay, "buttonRepay");
+            this.buttonRepay.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonRepay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(56)))));
             this.buttonRepay.Name = "buttonRepay";
             this.buttonRepay.UseVisualStyleBackColor = false;
@@ -655,23 +676,23 @@ namespace OpenCBS.GUI.Clients
             // 
             // toolStripSeparatorCopy
             // 
-            this.toolStripSeparatorCopy.Name = "toolStripSeparatorCopy";
             resources.ApplyResources(this.toolStripSeparatorCopy, "toolStripSeparatorCopy");
+            this.toolStripSeparatorCopy.Name = "toolStripSeparatorCopy";
             // 
             // toolStripMenuItemEditComment
             // 
-            this.toolStripMenuItemEditComment.Name = "toolStripMenuItemEditComment";
             resources.ApplyResources(this.toolStripMenuItemEditComment, "toolStripMenuItemEditComment");
+            this.toolStripMenuItemEditComment.Name = "toolStripMenuItemEditComment";
             // 
             // toolStripMenuItemCancelPending
             // 
-            this.toolStripMenuItemCancelPending.Name = "toolStripMenuItemCancelPending";
             resources.ApplyResources(this.toolStripMenuItemCancelPending, "toolStripMenuItemCancelPending");
+            this.toolStripMenuItemCancelPending.Name = "toolStripMenuItemCancelPending";
             // 
             // toolStripMenuItemConfirmPending
             // 
-            this.toolStripMenuItemConfirmPending.Name = "toolStripMenuItemConfirmPending";
             resources.ApplyResources(this.toolStripMenuItemConfirmPending, "toolStripMenuItemConfirmPending");
+            this.toolStripMenuItemConfirmPending.Name = "toolStripMenuItemConfirmPending";
             // 
             // LoanCalculator
             // 
