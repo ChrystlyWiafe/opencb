@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.ArchitectureV2.Presenter;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Clients;
 using OpenCBS.CoreDomain.Contracts.Collaterals;
@@ -25,6 +26,8 @@ using OpenCBS.MultiLanguageRessources;
 using OpenCBS.Services;
 using OpenCBS.Shared;
 using OpenCBS.Shared.Settings;
+using stdole;
+using Font = System.Drawing.Font;
 
 namespace OpenCBS.GUI.Clients
 {
@@ -81,6 +84,8 @@ namespace OpenCBS.GUI.Clients
 
         #endregion
 
+        private TranslationService _translationService;
+
         private LoanCalculator(IApplicationController applicationController = null)
         {
             InitializeComponent();
@@ -109,6 +114,9 @@ namespace OpenCBS.GUI.Clients
             {
                 throw new Exception("Cannot resolve loan approval container.");
             }
+
+            _translationService = new TranslationService();
+            _translationService.Reload();
             
             var control = _loanApprovalControl.GetControl();
             control.Dock = DockStyle.Fill;
@@ -160,20 +168,6 @@ namespace OpenCBS.GUI.Clients
 
             InitializeTabPageLoansDetails(_product);
 
-        }
-
-        public LoanCalculator(Person pPerson, Form pMdiParent, IApplicationController applicationController = null)
-            : this(applicationController)
-        {
-            _mdiParent = pMdiParent;
-            _person = pPerson;
-            _client = pPerson;
-            _listGuarantors = new List<Guarantor>();
-            _collaterals = new List<ContractCollateral>();
-            _loanShares = new List<LoanShare>();
-
-            InitControls();
-            _oClientType = OClientTypes.Person;
         }
 
         private static IServices ServiceProvider
@@ -881,28 +875,28 @@ namespace OpenCBS.GUI.Clients
         private Dictionary<string,string> GetReportData()
         {
             var result = new Dictionary<string, string>();
-            result.Add("B1", "Name of product:");
+            result.Add("B1", string.Format("{0}:", _translationService.Translate("Name of product")));
             result.Add("C1", _product.Name);
 
-            result.Add("B2", "Amount:");
+            result.Add("B2", string.Format("{0}:", _translationService.Translate("Amount")));
             result.Add("C2", _credit.Amount.ToString());
 
-            result.Add("B3", "Grace period:");
+            result.Add("B3", string.Format("{0}:", _translationService.Translate("Grace period")));
             result.Add("C3", _credit.GracePeriod.ToString());
 
-            result.Add("B4", "Number of installments:");
+            result.Add("B4", string.Format("{0}:", _translationService.Translate("Number of installments")));
             result.Add("C4", _credit.NbOfInstallments.ToString());
 
-            result.Add("B5", "Installment type:");
+            result.Add("B5", string.Format("{0}:", _translationService.Translate("Installment type")));
             result.Add("C5", _credit.InstallmentType.Name);
 
-            result.Add("B6", "Schedule type:");
-            result.Add("C6", GetString("FrmAddLoanProduct", _credit.ScheduleType+".Text"));
+            result.Add("B6", string.Format("{0}:", _translationService.Translate("Schedule type")));
+            result.Add("C6", ML.GetString("FrmAddLoanProduct", _credit.ScheduleType+".Text"));
 
             result.Add("B7", "EIR:");
             result.Add("C7", GetXIRRStr());
 
-            result.Add("B8", "Currency:");
+            result.Add("B8", string.Format("{0}:", _translationService.Translate("Currency")));
             result.Add("C8", _credit.Product.Currency.Name);
 
             var i = 1;
