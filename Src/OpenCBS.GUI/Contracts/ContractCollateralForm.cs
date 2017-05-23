@@ -26,6 +26,7 @@ using System.Linq;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
+using OpenCBS.ArchitectureV2.Presenter;
 using OpenCBS.CoreDomain.Clients;
 using OpenCBS.CoreDomain.Contracts.Collaterals;
 using OpenCBS.CoreDomain.Products.Collaterals;
@@ -219,7 +220,9 @@ namespace OpenCBS.GUI.Contracts
 
             if (decimal.Parse(myProperties.GetPropertyValueByName(amountProperty).ToString()) <= 0)
             {
-                MessageBox.Show("Please, enter collateral amount!");
+                var translationService = new TranslationService();
+                translationService.Reload();
+                MessageBox.Show(translationService.Translate("Please, enter collateral amount!"));
                 return;
             }
             
