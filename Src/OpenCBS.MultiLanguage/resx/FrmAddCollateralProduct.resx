@@ -213,4 +213,7 @@
   <data name="PropertyNameMustBeUnique" xml:space="preserve">
     <value>The property name must be unique!</value>
   </data>
+  <data name="AddAtLeastOneItemToCollection" xml:space="preserve">
+    <value>Please add at least one item to the collection!</value>
+  </data>
 </root>

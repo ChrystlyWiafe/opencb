@@ -189,4 +189,7 @@
   <data name="PropertyNameMustBeUnique" xml:space="preserve">
     <value>O nome da propriedade deve ser exclusivo!</value>
   </data>
+  <data name="AddAtLeastOneItemToCollection" xml:space="preserve">
+    <value>Adicione pelo menos um item à coleção!</value>
+  </data>
 </root>

@@ -164,7 +164,7 @@ namespace OpenCBS.GUI.Products
                 {
                     if (listBox.Items.Count < 1)
                     {
-                        MessageBox.Show("Please add at least one item to the collection!");
+                        MessageBox.Show(GetString("AddAtLeastOneItemToCollection"));
                         return;
                     }
                     
