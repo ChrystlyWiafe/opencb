@@ -174,7 +174,7 @@
   <data name="Confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
-  <data name="СonfirmLastEventCancellation" xml:space="preserve">
+  <data name="ConfirmLastEventCancellation" xml:space="preserve">
     <value>Сonfirm the last event cancellation</value>
   </data>
 </root>

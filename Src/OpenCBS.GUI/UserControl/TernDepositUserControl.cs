@@ -604,7 +604,7 @@ namespace OpenCBS.GUI.UserControl
             {
                 if (!_saving.HasCancelableEvents()) return;
                 
-                string message = MultiLanguageStrings.GetString("SavingsOperationForm", "Сonfirm the last event cancellation");
+                string message = MultiLanguageStrings.GetString("SavingsOperationForm", "ConfirmLastEventCancellation");
                 string caption = MultiLanguageStrings.GetString("SavingsOperationForm", "Confirm");
                 var res = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
                 if (res != DialogResult.Yes) return;

@@ -168,4 +168,10 @@
   <data name="Transfer" xml:space="preserve">
     <value>Transferência</value>
   </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmação</value>
+  </data>
+  <data name="ConfirmLastEventCancellation" xml:space="preserve">
+    <value>Confirmar o último cancelamento de evento</value>
+  </data>
 </root>
