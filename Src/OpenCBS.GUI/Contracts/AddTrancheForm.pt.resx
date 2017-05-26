@@ -157,6 +157,12 @@
   <data name="firstRepaymentOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 16</value>
   </data>
+  <data name="startDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 16</value>
+  </data>
+  <data name="firstRepaymentOnLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 42</value>
+  </data>
   <data name="firstRepaymentOnLabel.Text" xml:space="preserve">
     <value>Data do primeiro reembolso:</value>
   </data>
