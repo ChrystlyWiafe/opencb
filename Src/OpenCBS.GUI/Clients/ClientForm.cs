@@ -5988,7 +5988,7 @@ namespace OpenCBS.GUI.Clients
                 }
                 catch (NullReferenceException)
                 {
-                    MessageBox.Show("Please select proper item from the collateral list!");
+                    MessageBox.Show(MultiLanguageStrings.GetString(Ressource.ClientForm, "SelectProperItemFromCollateralList"));
                 }
             }
         }
@@ -7470,7 +7470,7 @@ namespace OpenCBS.GUI.Clients
                 }
                 catch (NullReferenceException)
                 {
-                    MessageBox.Show(@"Please select proper item from the collateral list!");
+                    MessageBox.Show(MultiLanguageStrings.GetString(Ressource.ClientForm, "SelectProperItemFromCollateralList"));
                 }
             }
         }

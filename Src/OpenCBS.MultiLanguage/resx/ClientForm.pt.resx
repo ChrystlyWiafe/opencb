@@ -376,4 +376,7 @@
   <data name="ClientHasActiveCreditOrSaving" xml:space="preserve">
     <value>Este cliente possui contratos ativos de crédito ou poupança.</value>
   </data>
+  <data name="SelectProperItemFromCollateralList" xml:space="preserve">
+    <value>Selecione o item adequado na lista de garantias!</value>
+  </data>
 </root>
