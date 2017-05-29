@@ -143,7 +143,7 @@ namespace OpenCBS.GUI.Clients
             _oClientType = pClientType;
 
             if (pClientType == OClientTypes.Person) _person = new Person();
-            InitializeTitle("Loan Calculator");
+            InitializeTitle(_translationService.Translate("Loan Calculator"));
         }
 
         private void InitControls()
