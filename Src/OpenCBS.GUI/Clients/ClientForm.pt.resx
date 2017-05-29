@@ -792,7 +792,7 @@
     <value>Nome</value>
   </data>
   <data name="colValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor</value>
   </data>
   <data name="colCalculated.Text" xml:space="preserve">
     <value>Сalculado</value>
