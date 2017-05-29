@@ -68,5 +68,6 @@
   "The same payment method already exists.": "O mesmo método de pagamento já existe.",
   "Type": "Tipo",
   "Volunteer": "Voluntário",
-  "Alerts ({0})": "Alertas ({0})"
+  "Alerts ({0})": "Alertas ({0})",
+  "Reassign contracts": "Reatribuir contratos"
 }
