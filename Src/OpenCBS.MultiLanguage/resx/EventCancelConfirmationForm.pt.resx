@@ -121,6 +121,6 @@
     <value>Confirmar</value>
   </data>
   <data name="ConfirmCancelLastEvent" xml:space="preserve">
-    <value>Esta acção é irreversível, tem a certeza de que pretende eliminar este evento?</value>
+    <value>Esta acção é irreversível,  tem a certeza que quer apagar este movimento?</value>
   </data>
 </root>
