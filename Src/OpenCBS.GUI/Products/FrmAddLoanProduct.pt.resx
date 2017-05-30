@@ -313,6 +313,15 @@
   <data name="groupBoxChargeInterestWithinGracePeriod.Text" xml:space="preserve">
     <value>Cobrar juros durante período de carência</value>
   </data>
+  <data name="clientTypeIndivCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 37</value>
+  </data>
+  <data name="clientTypeIndivCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="clientTypeIndivCheckBox.Text" xml:space="preserve">
+    <value>Indivíduo</value>
+  </data>
   <data name="clientTypeVillageCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 29</value>
   </data>
@@ -323,15 +332,6 @@
     <value>Grupo 
 não solidário</value>
   </data>
-  <data name="clientTypeAllCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 37</value>
-  </data>
-  <data name="clientTypeAllCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="clientTypeAllCheckBox.Text" xml:space="preserve">
-    <value>Todos</value>
-  </data>
   <data name="clientTypeCorpCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 37</value>
   </data>
@@ -340,15 +340,6 @@ não solidário</value>
   </data>
   <data name="clientTypeCorpCheckBox.Text" xml:space="preserve">
     <value>Empresa</value>
-  </data>
-  <data name="clientTypeIndivCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 37</value>
-  </data>
-  <data name="clientTypeIndivCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
-  </data>
-  <data name="clientTypeIndivCheckBox.Text" xml:space="preserve">
-    <value>Indivíduo</value>
   </data>
   <data name="clientTypeGroupCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>73, 29</value>
@@ -359,6 +350,15 @@ não solidário</value>
   <data name="clientTypeGroupCheckBox.Text" xml:space="preserve">
     <value>Grupo 
 Solidário</value>
+  </data>
+  <data name="clientTypeAllCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 37</value>
+  </data>
+  <data name="clientTypeAllCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="clientTypeAllCheckBox.Text" xml:space="preserve">
+    <value>Todos</value>
   </data>
   <data name="groupBoxType.Size" type="System.Drawing.Size, System.Drawing">
     <value>429, 75</value>
@@ -896,6 +896,97 @@ Solidário</value>
   </data>
   <data name="tabGuarantorsCollaterals.Text" xml:space="preserve">
     <value>Garantias</value>
+  </data>
+  <data name="comboBoxTaxOnPenaltyAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="comboBoxPenaltyIncomeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 23</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>Interest due</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 23</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>Interest due but not received</value>
+  </data>
+  <data name="comboBoxAccruedPenaltyAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>Interest Income</value>
+  </data>
+  <data name="comboBoxTaxOnInterestsAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>Accrued penalty</value>
+  </data>
+  <data name="comboBoxInterestIncomeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Penalty Income</value>
+  </data>
+  <data name="comboBoxInterestDueButNoteReceivedAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label63.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label63.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 23</value>
+  </data>
+  <data name="label64.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label64.Text" xml:space="preserve">
+    <value>Tax on Penalty</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Tax value</value>
+  </data>
+  <data name="comboBoxInterestDueAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Tax on Interests</value>
+  </data>
+  <data name="comboBoxPrincipalAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="comboBoxInterestAccruedButNotDueAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 24</value>
+  </data>
+  <data name="label59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="label59.Text" xml:space="preserve">
+    <value>Tax on Interests</value>
+  </data>
+  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>Tax on Interests</value>
+  </data>
+  <data name="tabAccounts.Text" xml:space="preserve">
+    <value>Contabilidade</value>
   </data>
   <data name="radioButtonAmountCycle.Text" xml:space="preserve">
     <value>Usar ciclo de valor</value>

@@ -136,6 +136,9 @@
   <data name="buttonSaveExoticProduct.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="&gt;&gt;label50.Name" xml:space="preserve">
+    <value>label50</value>
+  </data>
   <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -161,6 +164,9 @@
   <data name="textBoxAnticipatedPartialRepaimentMin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>Accrued penalty</value>
+  </data>
   <data name="groupBoxExoticInstallmentProperties.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 102</value>
   </data>
@@ -179,11 +185,17 @@
   <data name="label40.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
+  <data name="&gt;&gt;ch2Name.Name" xml:space="preserve">
+    <value>ch2Name</value>
+  </data>
   <data name="textBoxAmountUnderLOCMax.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="&gt;&gt;label22.Name" xml:space="preserve">
     <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label51.Name" xml:space="preserve">
+    <value>label51</value>
   </data>
   <data name="&gt;&gt;clientTypeVillageCheckBox.Parent" xml:space="preserve">
     <value>groupBoxType</value>
@@ -252,6 +264,9 @@
   <data name="lbCompulsoryAmountOr.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;label62.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;label23.Name" xml:space="preserve">
     <value>label23</value>
   </data>
@@ -275,6 +290,9 @@
   </data>
   <data name="&gt;&gt;textBoxGracePeriod.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="comboBoxPrincipalAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="label32.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -345,6 +363,9 @@
   <data name="&gt;&gt;cbxCycleObjects.Name" xml:space="preserve">
     <value>cbxCycleObjects</value>
   </data>
+  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;_listViewAllEntryFees.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -368,6 +389,9 @@
   </data>
   <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="textBoxRateMax.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -417,6 +441,9 @@
   <data name="labelAmountOr.Text" xml:space="preserve">
     <value>or</value>
   </data>
+  <data name="comboBoxTaxOnPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 417</value>
+  </data>
   <data name="txbCompulsoryAmountMin.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -459,6 +486,9 @@
   <data name="label45.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="textBoxTaxValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 460</value>
+  </data>
   <data name="&gt;&gt;tBOverduePrincipalMax.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
@@ -479,6 +509,9 @@
   </data>
   <data name="chMax.Text" xml:space="preserve">
     <value>Max</value>
+  </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
   </data>
   <data name="&gt;&gt;tBOLBMin.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -501,6 +534,9 @@
   <data name="textBoxAnticipatedRepaymentPenalties.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 23</value>
   </data>
+  <data name="label62.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
   <data name="labelInstallmentType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -512,6 +548,9 @@
   </data>
   <data name="gbCSAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>747, 121</value>
+  </data>
+  <data name="label64.Text" xml:space="preserve">
+    <value>Tax value</value>
   </data>
   <data name="tabGuarantorsCollaterals.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>
@@ -561,6 +600,9 @@
   <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 16</value>
   </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
   <data name="&gt;&gt;labelInstallmentType.Parent" xml:space="preserve">
     <value>groupBox</value>
   </data>
@@ -573,8 +615,8 @@
   <data name="label46.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="maxLOCMaturityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>769, 94</value>
@@ -584,6 +626,9 @@
   </data>
   <data name="&gt;&gt;radioButtonChargeInterestNo.Parent" xml:space="preserve">
     <value>groupBoxChargeInterestWithinGracePeriod</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Name" xml:space="preserve">
+    <value>comboBoxTaxOnInterestsAccount</value>
   </data>
   <data name="label40.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -599,6 +644,9 @@
   </data>
   <data name="&gt;&gt;label26.Parent" xml:space="preserve">
     <value>groupBox8</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.Name" xml:space="preserve">
+    <value>comboBoxInterestDueButNoteReceivedAccount</value>
   </data>
   <data name="maxLOCAmountGroupBox.Text" xml:space="preserve">
     <value>Total amount of the Line of Credit (including disbursed amount)</value>
@@ -627,6 +675,9 @@
   <data name="tabCreditInsurance.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -653,6 +704,9 @@
   </data>
   <data name="&gt;&gt;rbCompulsoryAmountFlat.Parent" xml:space="preserve">
     <value>gbCSAmount</value>
+  </data>
+  <data name="&gt;&gt;label59.Name" xml:space="preserve">
+    <value>label59</value>
   </data>
   <data name="textBoxGracePeriod.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
@@ -732,6 +786,9 @@
   <data name="&gt;&gt;comboBoxExoticProduct.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="textBoxTaxValue.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;groupBoxDetailsOptionalParameters.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -752,6 +809,12 @@
   </data>
   <data name="groupBoxNumberOfInstallments.Size" type="System.Drawing.Size, System.Drawing">
     <value>372, 96</value>
+  </data>
+  <data name="&gt;&gt;colCycle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;lbCompulsoryAmountType.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -803,6 +866,9 @@
   </data>
   <data name="&gt;&gt;rbRemainingInterest.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label50.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="comboBoxExoticProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 24</value>
@@ -876,6 +942,9 @@
   <data name="&gt;&gt;txbCompulsoryAmountMax.Name" xml:space="preserve">
     <value>txbCompulsoryAmountMax</value>
   </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
@@ -928,7 +997,7 @@
     <value>groupBoxGracePeriod</value>
   </data>
   <data name="&gt;&gt;clientTypeAllCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -1561,6 +1630,9 @@
   <data name="&gt;&gt;label28.Parent" xml:space="preserve">
     <value>groupBox8</value>
   </data>
+  <data name="&gt;&gt;textBoxTaxValue.Name" xml:space="preserve">
+    <value>textBoxTaxValue</value>
+  </data>
   <data name="&gt;&gt;buttonCancelAmountCycles.Name" xml:space="preserve">
     <value>buttonCancelAmountCycles</value>
   </data>
@@ -1585,6 +1657,9 @@
   <data name="&gt;&gt;_buttonAddEntryFee.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="label62.Text" xml:space="preserve">
+    <value>Principal</value>
+  </data>
   <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1596,6 +1671,9 @@
   </data>
   <data name="&gt;&gt;labelAmountMax.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="label61.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 106</value>
   </data>
   <data name="&gt;&gt;cbxCycleObjects.Parent" xml:space="preserve">
     <value>panelAmountCycles</value>
@@ -1642,8 +1720,8 @@
   <data name="&gt;&gt;maxLOCAmountGroupBox.Name" xml:space="preserve">
     <value>maxLOCAmountGroupBox</value>
   </data>
-  <data name="radioButtonSpecifiedAmount.Text" xml:space="preserve">
-    <value>Specified Amount</value>
+  <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>1024, 740</value>
@@ -1652,7 +1730,7 @@
     <value>1</value>
   </data>
   <data name="&gt;&gt;clientTypeIndivCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="clientTypeCorpCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1723,6 +1801,9 @@
   <data name="labelMinPercGuar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="textBoxTaxValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="tBInitialAmountValue.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
@@ -1771,11 +1852,17 @@
   <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;chAccountNumber.Name" xml:space="preserve">
+    <value>chAccountNumber</value>
+  </data>
   <data name="clientTypeGroupCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;groupBox8.Parent" xml:space="preserve">
     <value>groupBoxLateFees</value>
+  </data>
+  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="comboBoxInstallmentType.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 75</value>
@@ -1795,11 +1882,17 @@
   <data name="comboBoxInstallmentType.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
+  <data name="&gt;&gt;label57.Name" xml:space="preserve">
+    <value>label57</value>
+  </data>
   <data name="&gt;&gt;rbRemainingOLB.Parent" xml:space="preserve">
     <value>groupBoxTotalAnticipatedRepaymentBase</value>
   </data>
   <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
+  </data>
+  <data name="label59.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 416</value>
   </data>
   <data name="textBoxCycleMin.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1867,6 +1960,9 @@
   <data name="lbCompulsoryAmountMin.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestIncomeAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="groupBoxDetailsOptionalParameters.Size" type="System.Drawing.Size, System.Drawing">
     <value>796, 612</value>
   </data>
@@ -1899,6 +1995,9 @@
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPrincipalAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1939,8 +2038,8 @@
   <data name="textBoxGracePeriodMax.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="label26.Text" xml:space="preserve">
     <value>Max:</value>
@@ -1960,8 +2059,8 @@
   <data name="&gt;&gt;buttonNewAmountCycles.Parent" xml:space="preserve">
     <value>groupBoxAmountCycles</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="comboBoxInterestDueAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 149</value>
   </data>
   <data name="&gt;&gt;textBoxGuar.Parent" xml:space="preserve">
     <value>groupBoxSepGuarColl</value>
@@ -2001,6 +2100,9 @@
   </data>
   <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 78</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
   </data>
   <data name="label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2053,6 +2155,9 @@
   <data name="buttonIncreaseExoticInstallment.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 31</value>
   </data>
+  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -2086,6 +2191,15 @@
   <data name="&gt;&gt;ch2Rate.Name" xml:space="preserve">
     <value>ch2Rate</value>
   </data>
+  <data name="&gt;&gt;label64.Name" xml:space="preserve">
+    <value>label64</value>
+  </data>
+  <data name="label64.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestIncomeAccount.Name" xml:space="preserve">
+    <value>comboBoxInterestIncomeAccount</value>
+  </data>
   <data name="&gt;&gt;cmbInterestScheme.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2106,6 +2220,12 @@
   </data>
   <data name="textBoxAnticipatedRepaymentPenaltiesMax.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="label64.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="rbPartialRemainingOLB.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2182,6 +2302,9 @@
   <data name="&gt;&gt;labelLoanCycle.Parent" xml:space="preserve">
     <value>groupBoxAmount</value>
   </data>
+  <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 23</value>
+  </data>
   <data name="textBoxNbOfInstallmentMin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
@@ -2190,6 +2313,9 @@
   </data>
   <data name="labelGPOr.Location" type="System.Drawing.Point, System.Drawing">
     <value>205, 51</value>
+  </data>
+  <data name="&gt;&gt;label63.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="drawingNumberLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -2202,6 +2328,9 @@
   </data>
   <data name="label19.Text" xml:space="preserve">
     <value>Min:</value>
+  </data>
+  <data name="&gt;&gt;label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelNbIMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2293,6 +2422,9 @@
   <data name="tBOverdueInterestMax.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>Penalty Income</value>
+  </data>
   <data name="cbUseLoanCycle.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 26</value>
   </data>
@@ -2311,8 +2443,14 @@
   <data name="&gt;&gt;chMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label60.Name" xml:space="preserve">
+    <value>label60</value>
+  </data>
   <data name="labelMinPercColl.Text" xml:space="preserve">
     <value>Minimum percentage for collaterals:</value>
+  </data>
+  <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="&gt;&gt;_listViewAllEntryFees.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -2356,6 +2494,9 @@
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
     <value>192, 41</value>
   </data>
+  <data name="&gt;&gt;tabAccounts.Parent" xml:space="preserve">
+    <value>tabCreditInsurance</value>
+  </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Max:</value>
   </data>
@@ -2389,6 +2530,9 @@
   <data name="&gt;&gt;rbCompulsoryAmountFlat.Name" xml:space="preserve">
     <value>rbCompulsoryAmountFlat</value>
   </data>
+  <data name="label56.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 327</value>
+  </data>
   <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -2397,6 +2541,9 @@
   </data>
   <data name="labelLOCAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 16</value>
+  </data>
+  <data name="comboBoxTaxOnInterestsAccount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;textBoxGracePeriodMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2414,7 +2561,7 @@
     <value>61</value>
   </data>
   <data name="&gt;&gt;clientTypeGroupCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;tabPageOptionalParameters.Parent" xml:space="preserve">
     <value>tabCreditInsurance</value>
@@ -2479,8 +2626,8 @@
   <data name="&gt;&gt;textBoxNbOfInstallment.Parent" xml:space="preserve">
     <value>groupBoxNumberOfInstallments</value>
   </data>
-  <data name="radioButtonSpecifiedAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;gbAnticipatedRepayment.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2497,11 +2644,17 @@
   <data name="label32.Text" xml:space="preserve">
     <value>Code *:</value>
   </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>Interest income</value>
+  </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 39</value>
   </data>
   <data name="&gt;&gt;comboBoxExoticProduct.Name" xml:space="preserve">
     <value>comboBoxExoticProduct</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.Name" xml:space="preserve">
+    <value>comboBoxPenaltyIncomeAccount</value>
   </data>
   <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -2578,11 +2731,17 @@
   <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
     <value>columnHeader6</value>
   </data>
+  <data name="comboBoxPrincipalAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 59</value>
+  </data>
   <data name="textBoxAmountUnderLOCMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 22</value>
   </data>
   <data name="useLOCCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2698,6 +2857,9 @@
   <data name="&gt;&gt;textBoxName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="&gt;&gt;groupBoxAnticipatedRepayment.Name" xml:space="preserve">
     <value>groupBoxAnticipatedRepayment</value>
   </data>
@@ -2731,6 +2893,9 @@
   <data name="label48.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Interest due</value>
+  </data>
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -2746,6 +2911,9 @@
   <data name="&gt;&gt;labelTotalPrincipal.Parent" xml:space="preserve">
     <value>panelExoticProduct</value>
   </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Interest accrued but not due</value>
+  </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 16</value>
   </data>
@@ -2754,6 +2922,9 @@
   </data>
   <data name="groupBoxAnticipatedRepayment.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 21</value>
+  </data>
+  <data name="label51.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 416</value>
   </data>
   <data name="checkBoxFlexPackage.Text" xml:space="preserve">
     <value>Allow flexible schedule</value>
@@ -2776,11 +2947,17 @@
   <data name="radioButtonChargeInterestYes.Text" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="label63.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
   <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;clientTypeAllCheckBox.Parent" xml:space="preserve">
     <value>groupBoxType</value>
+  </data>
+  <data name="&gt;&gt;label50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2835,6 +3012,9 @@
   </data>
   <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 78</value>
+  </data>
+  <data name="&gt;&gt;label51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="chName.Text" xml:space="preserve">
     <value>Name</value>
@@ -2896,6 +3076,9 @@
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;textBoxAnticipatedRepaymentPenaltiesMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2907,6 +3090,9 @@
   </data>
   <data name="groupBoxGracePeriod.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.Name" xml:space="preserve">
+    <value>comboBoxInterestAccruedButNotDueAccount</value>
   </data>
   <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -2938,6 +3124,9 @@
   <data name="labelLOCAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;comboBoxPrincipalAccount.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
   <data name="&gt;&gt;ch2MaxSum.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2946,6 +3135,9 @@
   </data>
   <data name="&gt;&gt;label33.Name" xml:space="preserve">
     <value>label33</value>
+  </data>
+  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="tabPageMainParameters.Size" type="System.Drawing.Size, System.Drawing">
     <value>796, 612</value>
@@ -2970,6 +3162,9 @@
   </data>
   <data name="clientTypeCorpCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3067,6 +3262,9 @@
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label64.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="&gt;&gt;label45.Parent" xml:space="preserve">
     <value>maxLOCMaturityGroupBox</value>
   </data>
@@ -3084,6 +3282,9 @@
   </data>
   <data name="radioButtonChargeInterestNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label50.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -3115,6 +3316,9 @@
   <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label63.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
@@ -3145,6 +3349,9 @@
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
   </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
@@ -3155,13 +3362,19 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;clientTypeVillageCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;buttonDecreaseExoticInstallment.Name" xml:space="preserve">
     <value>buttonDecreaseExoticInstallment</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestIncomeAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="_buttonAddEntryFee.Text" xml:space="preserve">
     <value>↓</value>
+  </data>
+  <data name="&gt;&gt;label60.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;groupBoxSepGuarColl.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3174,6 +3387,12 @@
   </data>
   <data name="&gt;&gt;textBoxColl.Parent" xml:space="preserve">
     <value>groupBoxSepGuarColl</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label58.Name" xml:space="preserve">
+    <value>label58</value>
   </data>
   <data name="label43.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -3265,6 +3484,9 @@
   <data name="buttonAddAmountCycle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tBOverdueInterestMin.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
@@ -3279,6 +3501,9 @@
   </data>
   <data name="&gt;&gt;textBoxAmountUnderLOCMin.Name" xml:space="preserve">
     <value>textBoxAmountUnderLOCMin</value>
+  </data>
+  <data name="comboBoxInterestIncomeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
   </data>
   <data name="groupBoxSepGuarColl.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3340,8 +3565,14 @@
   <data name="&gt;&gt;textBoxExoticInstallmentPrincipal.Parent" xml:space="preserve">
     <value>panelExoticInstallment</value>
   </data>
+  <data name="comboBoxInterestAccruedButNotDueAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 103</value>
+  </data>
   <data name="&gt;&gt;rbCompulsoryAmountRate.Name" xml:space="preserve">
     <value>rbCompulsoryAmountRate</value>
+  </data>
+  <data name="comboBoxPenaltyIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 327</value>
   </data>
   <data name="label54.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3349,11 +3580,17 @@
   <data name="&gt;&gt;tabPageOptionalParameters.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;textBoxTaxValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;labelGPMax.Name" xml:space="preserve">
     <value>labelGPMax</value>
   </data>
   <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
     <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;buttonAddAmountCycle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3487,6 +3724,9 @@
   <data name="&gt;&gt;label42.Parent" xml:space="preserve">
     <value>groupBoxAPR</value>
   </data>
+  <data name="label59.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
   <data name="&gt;&gt;tBOLBMin.Name" xml:space="preserve">
     <value>tBOLBMin</value>
   </data>
@@ -3595,6 +3835,9 @@
   <data name="&gt;&gt;textBoxNbOfInstallment.Name" xml:space="preserve">
     <value>textBoxNbOfInstallment</value>
   </data>
+  <data name="label57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 284</value>
+  </data>
   <data name="checkBoxSetSepCollGuar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3667,6 +3910,9 @@
   <data name="textBoxGracePeriod.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 48</value>
   </data>
+  <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.Name" xml:space="preserve">
+    <value>comboBoxAccruedPenaltyAccount</value>
+  </data>
   <data name="checkBoxGuarCollRequired.Text" xml:space="preserve">
     <value>Use guarantors and collaterals</value>
   </data>
@@ -3697,17 +3943,26 @@
   <data name="&gt;&gt;labelInstallmentType.Name" xml:space="preserve">
     <value>labelInstallmentType</value>
   </data>
+  <data name="&gt;&gt;ch2AccountNumber.Name" xml:space="preserve">
+    <value>ch2AccountNumber</value>
+  </data>
   <data name="&gt;&gt;maxLOCMaturityGroupBox.Name" xml:space="preserve">
     <value>maxLOCMaturityGroupBox</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 39</value>
   </data>
+  <data name="comboBoxAccruedPenaltyAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;tabCreditInsurance.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="comboBoxTaxOnPenaltyAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 16</value>
@@ -3868,6 +4123,9 @@
   <data name="textBoxColl.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 22</value>
   </data>
+  <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;labelMinPercGuar.Parent" xml:space="preserve">
     <value>groupBoxSepGuarColl</value>
   </data>
@@ -3936,6 +4194,9 @@
   </data>
   <data name="maxLOCMaturityGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabAccounts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxAnticipatedRepaymentPenaltiesMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4153,6 +4414,9 @@
   <data name="&gt;&gt;label30.Parent" xml:space="preserve">
     <value>groupBoxAmountCycle</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <data name="&gt;&gt;buttonSaveExoticProduct.Name" xml:space="preserve">
     <value>buttonSaveExoticProduct</value>
   </data>
@@ -4252,6 +4516,9 @@
   <data name="label34.Text" xml:space="preserve">
     <value>% of a loan amount</value>
   </data>
+  <data name="label52.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="labelAmountMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 16</value>
   </data>
@@ -4266,6 +4533,9 @@
   </data>
   <data name="&gt;&gt;rbCompulsoryAmountRate.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label64.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -4294,11 +4564,17 @@
   <data name="textBoxExoticInstallmentPrincipal.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 8</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="labelLateFeeGracePeriod.Text" xml:space="preserve">
     <value>Grace period of late fees *:</value>
   </data>
   <data name="label49.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
+  </data>
+  <data name="label53.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4309,8 +4585,8 @@
   <data name="chMax.Width" type="System.Int32, mscorlib">
     <value>91</value>
   </data>
-  <data name="&gt;&gt;colCycle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -4324,8 +4600,8 @@
   <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;ch2Name.Name" xml:space="preserve">
-    <value>ch2Name</value>
+  <data name="&gt;&gt;label63.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label33.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4350,6 +4626,9 @@
   </data>
   <data name="label36.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestDueAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;textBoxLOCMaturityMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4396,6 +4675,9 @@
   <data name="textBoxAmountUnderLOCMin.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 239</value>
+  </data>
   <data name="buttonRemoveExoticInstallment.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9.75pt</value>
   </data>
@@ -4429,6 +4711,9 @@
   <data name="&gt;&gt;comboBoxCurrencies.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label51.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="labelRateMin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -4443,6 +4728,9 @@
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="panelExoticProductNavigationButtons.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 80</value>
@@ -4461,6 +4749,12 @@
   </data>
   <data name="groupBoxTotGuarColl.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 43</value>
+  </data>
+  <data name="&gt;&gt;label64.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="comboBoxInterestDueButNoteReceivedAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 194</value>
   </data>
   <data name="&gt;&gt;rbPartialRemainingInterest.Parent" xml:space="preserve">
     <value>groupBoxPartialAnticipatedRepaymentBase</value>
@@ -4507,8 +4801,8 @@
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
+  <data name="label50.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="listViewExoticInstallments.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4537,6 +4831,9 @@
   <data name="buttonAmountCyclesSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 23</value>
   </data>
+  <data name="&gt;&gt;label63.Name" xml:space="preserve">
+    <value>label63</value>
+  </data>
   <data name="buttonCancelExoticProduct.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -4560,6 +4857,9 @@
   </data>
   <data name="&gt;&gt;textBoxCollGuar.Parent" xml:space="preserve">
     <value>groupBoxTotGuarColl</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="&gt;&gt;buttonRemoveExoticInstallment.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -4596,6 +4896,9 @@
   </data>
   <data name="groupBoxExoticProducts.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="panelAmountCycles.Size" type="System.Drawing.Size, System.Drawing">
     <value>751, 258</value>
@@ -4729,11 +5032,17 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 23</value>
+  </data>
   <data name="textBoxAmountUnderLOCMax.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;textBoxAnticipatedPartialRepaiment.Parent" xml:space="preserve">
     <value>groupBoxAPR</value>
+  </data>
+  <data name="&gt;&gt;ch2AccountNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tBOverdueInterestMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 23</value>
@@ -4761,6 +5070,9 @@
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Use:</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPrincipalAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="lbCompulsoryAmountValue.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4828,6 +5140,9 @@
   <data name="cbUseCompulsorySavings.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
   <data name="&gt;&gt;textBoxLOCMaturityMax.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -4842,6 +5157,9 @@
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="groupBoxExoticInstallmentProperties.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -4885,6 +5203,9 @@
   <data name="lbCompulsoryAmountOr.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>Interest due but not received</value>
+  </data>
   <data name="&gt;&gt;labelLOCAmount.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -4906,11 +5227,17 @@
   <data name="clientTypeIndivCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="comboBoxInterestAccruedButNotDueAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="&gt;&gt;tabPageFees.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="labelNbIMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 31</value>
+  </data>
+  <data name="&gt;&gt;tabAccounts.Name" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;radioButtonAmountCycle.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4966,6 +5293,12 @@
   <data name="&gt;&gt;drawingNumberLabel.Name" xml:space="preserve">
     <value>drawingNumberLabel</value>
   </data>
+  <data name="comboBoxInterestDueAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
   <data name="&gt;&gt;textBoxGracePeriodMin.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
@@ -4974,6 +5307,9 @@
   </data>
   <data name="textBoxAnticipatedRepaymentPenaltiesMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 50</value>
+  </data>
+  <data name="comboBoxTaxOnPenaltyAccount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="lbCompulsoryAmountMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5011,11 +5347,17 @@
   <data name="labelNbIMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 16</value>
   </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
   <data name="label27.Text" xml:space="preserve">
     <value>Min:</value>
   </data>
   <data name="_listViewCreditProductEntryFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>781, 281</value>
+  </data>
+  <data name="comboBoxInterestIncomeAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="gbAnticipatedRepayment.Size" type="System.Drawing.Size, System.Drawing">
     <value>777, 197</value>
@@ -5044,6 +5386,9 @@
   <data name="buttonAddAmountCycle.Text" xml:space="preserve">
     <value>Add cycle</value>
   </data>
+  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;lbCompulsoryAmountOr.Name" xml:space="preserve">
     <value>lbCompulsoryAmountOr</value>
   </data>
@@ -5058,6 +5403,9 @@
   </data>
   <data name="groupBoxAmountCycles.Text" xml:space="preserve">
     <value>Loan cycles</value>
+  </data>
+  <data name="&gt;&gt;label61.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;groupBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -5167,8 +5515,8 @@
   <data name="label29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 45</value>
+  <data name="&gt;&gt;comboBoxInterestDueAccount.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="&gt;&gt;chMaxSum.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -5190,6 +5538,12 @@
   </data>
   <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 21</value>
+  </data>
+  <data name="comboBoxTaxOnInterestsAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="comboBoxInterestDueButNoteReceivedAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;listViewLoanCycles.Type" xml:space="preserve">
     <value>OpenCBS.GUI.UserControl.ListViewEx, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -5250,6 +5604,12 @@
   </data>
   <data name="&gt;&gt;labelLateFeeGracePeriod.Name" xml:space="preserve">
     <value>labelLateFeeGracePeriod</value>
+  </data>
+  <data name="&gt;&gt;tabAccounts.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radioButtonSpecifiedAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="clientTypeIndivCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -5431,6 +5791,9 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
   </data>
+  <data name="&gt;&gt;label63.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -5454,6 +5817,9 @@
   </data>
   <data name="radioButtonSpecifiedAmount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="label63.Text" xml:space="preserve">
+    <value>%</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 16</value>
@@ -5496,6 +5862,9 @@
   </data>
   <data name="buttonAddExoticInstallment.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 191</value>
+  </data>
+  <data name="&gt;&gt;label56.Name" xml:space="preserve">
+    <value>label56</value>
   </data>
   <data name="labelName.Text" xml:space="preserve">
     <value>Name *:</value>
@@ -5554,6 +5923,9 @@
   <data name="labelAmountMin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="label51.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;txbCompulsoryAmountMin.Parent" xml:space="preserve">
     <value>gbCSAmount</value>
   </data>
@@ -5589,6 +5961,9 @@
   </data>
   <data name="labelNbIMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 16</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Tax on penalty</value>
   </data>
   <data name="&gt;&gt;tBOverduePrincipalValue.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -5658,6 +6033,9 @@
   </data>
   <data name="&gt;&gt;label31.Name" xml:space="preserve">
     <value>label31</value>
+  </data>
+  <data name="&gt;&gt;chAccountNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 16</value>
@@ -5752,8 +6130,8 @@
   <data name="ch2MaxSum.Text" xml:space="preserve">
     <value>Max Sum</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+  <data name="comboBoxInterestDueButNoteReceivedAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
   </data>
   <data name="lbCompulsoryAmountMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 16</value>
@@ -5803,11 +6181,17 @@
   <data name="&gt;&gt;lbCompulsoryAmountMin.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="label53.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 372</value>
+  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 21</value>
   </data>
   <data name="textBoxRateMin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="label61.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="labelNbIOr.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 43</value>
@@ -5820,6 +6204,9 @@
   </data>
   <data name="&gt;&gt;label24.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label62.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 59</value>
   </data>
   <data name="&gt;&gt;tBOverdueInterestValue.Name" xml:space="preserve">
     <value>tBOverdueInterestValue</value>
@@ -5917,6 +6304,9 @@
   <data name="rbRemainingInterest.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="comboBoxInterestAccruedButNotDueAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
   <data name="labelRateMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -5925,6 +6315,12 @@
   </data>
   <data name="&gt;&gt;groupBoxAPR.Name" xml:space="preserve">
     <value>groupBoxAPR</value>
+  </data>
+  <data name="&gt;&gt;label62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 23</value>
   </data>
   <data name="&gt;&gt;tBOverduePrincipalValue.Name" xml:space="preserve">
     <value>tBOverduePrincipalValue</value>
@@ -5961,6 +6357,12 @@
   </data>
   <data name="groupBoxTotalAnticipatedRepaymentBase.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 80</value>
+  </data>
+  <data name="label63.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 460</value>
+  </data>
+  <data name="tabAccounts.Text" xml:space="preserve">
+    <value>Accounting</value>
   </data>
   <data name="&gt;&gt;_listViewCreditProductEntryFees.Name" xml:space="preserve">
     <value>_listViewCreditProductEntryFees</value>
@@ -6046,6 +6448,9 @@
   <data name="groupBoxTotGuarColl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="&gt;&gt;textBoxTaxValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="labelRateMin.Text" xml:space="preserve">
     <value>Min:</value>
   </data>
@@ -6066,6 +6471,9 @@
   </data>
   <data name="&gt;&gt;labelNbIOr.Parent" xml:space="preserve">
     <value>groupBoxNumberOfInstallments</value>
+  </data>
+  <data name="tabCreditInsurance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>804, 652</value>
   </data>
   <data name="radioButtonAmountCycle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -6129,6 +6537,9 @@
   </data>
   <data name="&gt;&gt;label21.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="clientTypeGroupCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6217,11 +6628,17 @@
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
   </data>
+  <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 152</value>
+  </data>
   <data name="groupBoxNumberOfInstallments.Text" xml:space="preserve">
     <value>Number of installments*</value>
   </data>
   <data name="label45.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
+  </data>
+  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;splitter2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -6258,6 +6675,9 @@
   </data>
   <data name="&gt;&gt;tabPageFees.Parent" xml:space="preserve">
     <value>tabCreditInsurance</value>
+  </data>
+  <data name="radioButtonSpecifiedAmount.Text" xml:space="preserve">
+    <value>Specified Amount</value>
   </data>
   <data name="label44.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6304,6 +6724,9 @@
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 16</value>
   </data>
+  <data name="tabAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 612</value>
+  </data>
   <data name="lblCycleObjects.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
   </data>
@@ -6328,6 +6751,9 @@
   <data name="&gt;&gt;listViewLoanCycles.Name" xml:space="preserve">
     <value>listViewLoanCycles</value>
   </data>
+  <data name="label57.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Min:</value>
   </data>
@@ -6339,6 +6765,9 @@
   </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
+  </data>
+  <data name="label60.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 194</value>
   </data>
   <data name="cbUseCompulsorySavings.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 279</value>
@@ -6382,8 +6811,14 @@
   <data name="tabPageFees.Text" xml:space="preserve">
     <value>Fees</value>
   </data>
+  <data name="textBoxTaxValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
+  </data>
   <data name="lbCompulsoryAmountOr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -6589,6 +7024,9 @@
   <data name="&gt;&gt;groupBoxAmountCycle.Name" xml:space="preserve">
     <value>groupBoxAmountCycle</value>
   </data>
+  <data name="comboBoxAccruedPenaltyAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="cmbInterestScheme.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 24</value>
   </data>
@@ -6733,6 +7171,12 @@
   <data name="label48.Location" type="System.Drawing.Point, System.Drawing">
     <value>272, 44</value>
   </data>
+  <data name="&gt;&gt;label60.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestDueAccount.Name" xml:space="preserve">
+    <value>comboBoxInterestDueAccount</value>
+  </data>
   <data name="label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -6766,6 +7210,9 @@
   <data name="labelAmountMin.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="labelRateOr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -6774,6 +7221,9 @@
   </data>
   <data name="labelInstallmentType.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 78</value>
+  </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 23</value>
   </data>
   <data name="_listViewCreditProductEntryFees.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6801,6 +7251,9 @@
   </data>
   <data name="buttonRemoveAmountCycles.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="groupBoxAnticipatedRepayment.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6892,11 +7345,17 @@
   <data name="&gt;&gt;rbPartialRemainingOLB.Parent" xml:space="preserve">
     <value>groupBoxPartialAnticipatedRepaymentBase</value>
   </data>
+  <data name="&gt;&gt;label59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="labelAmountMin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labelGPMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label60.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="textBoxRateMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 54</value>
@@ -6909,6 +7368,9 @@
   </data>
   <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="tabAccounts.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -6946,6 +7408,9 @@
   <data name="&gt;&gt;groupBoxType.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="label62.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -6973,8 +7438,17 @@
   <data name="&gt;&gt;labelGPMin.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="label59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="label53.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="labelNbIMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6990,6 +7464,9 @@
   </data>
   <data name="_listViewCreditProductEntryFees.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="label56.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 23</value>
@@ -7020,6 +7497,9 @@
   </data>
   <data name="&gt;&gt;label46.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 416</value>
   </data>
   <data name="groupBoxExoticInstallmentProperties.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 12</value>
@@ -7099,11 +7579,17 @@
   <data name="&gt;&gt;comboBoxLoanCyclesName.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label64.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 462</value>
+  </data>
   <data name="labelAmountMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="tBInitialAmountMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 20</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestIncomeAccount.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7129,6 +7615,9 @@
   <data name="groupBoxDetailsOptionalParameters.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="comboBoxInterestDueAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="labelLoanCycle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
@@ -7146,6 +7635,9 @@
   </data>
   <data name="labelLoanCycleMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 16</value>
+  </data>
+  <data name="tabAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
   </data>
   <data name="&gt;&gt;tabPageFees.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -7186,8 +7678,8 @@
   <data name="buttonNewExoticProduct.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 45</value>
   </data>
   <data name="chMin.Width" type="System.Int32, mscorlib">
     <value>85</value>
@@ -7213,11 +7705,17 @@
   <data name="textBoxAnticipatedPartialRepaimentMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 51</value>
   </data>
+  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="maxLOCAmountGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxLOCMaturityMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label61.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;tabPageMainParameters.Parent" xml:space="preserve">
     <value>tabCreditInsurance</value>
@@ -7270,6 +7768,9 @@
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
+  <data name="&gt;&gt;label62.Name" xml:space="preserve">
+    <value>label62</value>
+  </data>
   <data name="&gt;&gt;tabPageOptionalParameters.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -7281,6 +7782,9 @@
   </data>
   <data name="labelGPMax.Text" xml:space="preserve">
     <value>Max:</value>
+  </data>
+  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;label43.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -7330,6 +7834,9 @@
   <data name="&gt;&gt;textBoxName.Parent" xml:space="preserve">
     <value>groupBox</value>
   </data>
+  <data name="comboBoxPrincipalAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="tabLOC.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -7363,6 +7870,9 @@
   <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="comboBoxTaxOnPenaltyAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="&gt;&gt;comboBoxInstallmentType.Parent" xml:space="preserve">
     <value>groupBox</value>
   </data>
@@ -7384,11 +7894,20 @@
   <data name="label37.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="label63.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labelNbIOr.Text" xml:space="preserve">
     <value>or</value>
+  </data>
+  <data name="&gt;&gt;label59.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPrincipalAccount.Name" xml:space="preserve">
+    <value>comboBoxPrincipalAccount</value>
   </data>
   <data name="label41.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -7420,6 +7939,9 @@
   <data name="&gt;&gt;textBoxAnticipatedPartialRepaimentMin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label60.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="&gt;&gt;labelName.Name" xml:space="preserve">
     <value>labelName</value>
   </data>
@@ -7441,6 +7963,9 @@
   <data name="label55.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 12</value>
   </data>
+  <data name="comboBoxTaxOnInterestsAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 371</value>
+  </data>
   <data name="rbRemainingInterest.Text" xml:space="preserve">
     <value>% on interest</value>
   </data>
@@ -7452,6 +7977,12 @@
   </data>
   <data name="&gt;&gt;textBoxAnticipatedPartialRepaimentMin.Parent" xml:space="preserve">
     <value>groupBoxAPR</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInterestDueAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label59.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;splitter2.Name" xml:space="preserve">
     <value>splitter2</value>
@@ -7471,17 +8002,23 @@
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
+  </data>
   <data name="splitter2.Size" type="System.Drawing.Size, System.Drawing">
     <value>804, 1</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 21</value>
+  <data name="&gt;&gt;textBoxTaxValue.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="textBoxExoticInstallmentInterest.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 39</value>
   </data>
   <data name="&gt;&gt;label24.Name" xml:space="preserve">
     <value>label24</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="radioButtonChargeInterestYes.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -7555,6 +8092,9 @@
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="comboBoxPenaltyIncomeAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="label24.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
@@ -7590,6 +8130,9 @@
   </data>
   <data name="buttonRemoveExoticInstallment.Text" xml:space="preserve">
     <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;label61.Name" xml:space="preserve">
+    <value>label61</value>
   </data>
   <data name="tabCreditInsurance.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7669,6 +8212,9 @@
   <data name="&gt;&gt;label26.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label64.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="comboBoxExoticProduct.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
@@ -7687,8 +8233,14 @@
   <data name="panelExoticProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>612, 217</value>
   </data>
+  <data name="comboBoxTaxOnInterestsAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
   <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;cmbInterestRateType.Name" xml:space="preserve">
     <value>cmbInterestRateType</value>
@@ -7726,6 +8278,9 @@
   <data name="comboBoxFundingLine.Location" type="System.Drawing.Point, System.Drawing">
     <value>29, 21</value>
   </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 13</value>
+  </data>
   <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -7750,8 +8305,8 @@
   <data name="&gt;&gt;label21.Name" xml:space="preserve">
     <value>label21</value>
   </data>
-  <data name="tabCreditInsurance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>804, 652</value>
+  <data name="label58.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;buttonCancelAmountCycles.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -7774,8 +8329,11 @@
   <data name="&gt;&gt;useLOCCheckBox.Parent" xml:space="preserve">
     <value>tabLOC</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Name" xml:space="preserve">
+    <value>comboBoxTaxOnPenaltyAccount</value>
+  </data>
+  <data name="&gt;&gt;label62.Parent" xml:space="preserve">
+    <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;_listViewAllEntryFees.Parent" xml:space="preserve">
     <value>tabPageCommissions</value>
@@ -7786,17 +8344,26 @@
   <data name="label48.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label51.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="groupBoxExoticProducts.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;checkBoxFlexPackage.Parent" xml:space="preserve">
     <value>groupBox12</value>
   </data>
+  <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.Type" xml:space="preserve">
+    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;labelLOCMinAmount.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBoxAccruedPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 282</value>
   </data>
   <data name="labelGPMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 16</value>
@@ -7882,6 +8449,9 @@
   <data name="&gt;&gt;label27.Name" xml:space="preserve">
     <value>label27</value>
   </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Tax on Interests</value>
+  </data>
   <data name="&gt;&gt;textBoxAmount.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -7906,8 +8476,8 @@
   <data name="&gt;&gt;textBoxNbOfInstallmentMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 13</value>
+  <data name="comboBoxPenaltyIncomeAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;panelExoticProductNavigationButtons.Parent" xml:space="preserve">
     <value>panelExoticProduct</value>
@@ -7917,6 +8487,9 @@
   </data>
   <data name="&gt;&gt;textBoxExoticInstallmentInterest.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBoxInterestIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 239</value>
   </data>
   <data name="&gt;&gt;checkBoxGuarCollRequired.Name" xml:space="preserve">
     <value>checkBoxGuarCollRequired</value>
@@ -7936,6 +8509,9 @@
   <data name="&gt;&gt;textBoxRateMax.Parent" xml:space="preserve">
     <value>groupBoxInterestRate</value>
   </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 21</value>
+  </data>
   <data name="&gt;&gt;splitter2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -7947,6 +8523,9 @@
   </data>
   <data name="&gt;&gt;tBOverdueInterestMin.Name" xml:space="preserve">
     <value>tBOverdueInterestMin</value>
+  </data>
+  <data name="&gt;&gt;label61.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="checkBoxSetSepCollGuar.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 112</value>
@@ -7966,9 +8545,6 @@
   <data name="groupBoxExoticProducts.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pt</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
