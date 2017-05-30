@@ -130,7 +130,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = string.Format("Commission ({1}) for {0}" ,_contractCode,commission?.LoanEntryFee?.ProductEntryFee?.Name),
+                        Description = string.Format("Commission ({1}) for {0}" ,_contractCode,commission.LoanEntryFee.ProductEntryFee.Name),
                         LoanEventId = disbursment.Id
                     });
                 }
