@@ -186,4 +186,10 @@
   <data name="ShortTermDeposit" xml:space="preserve">
     <value>Term</value>
   </data>
+  <data name="Postponed" xml:space="preserve">
+    <value>Postponed</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Credit</value>
+  </data>
 </root>

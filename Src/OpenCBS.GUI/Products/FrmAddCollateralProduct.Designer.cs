@@ -89,6 +89,7 @@ namespace OpenCBS.GUI.Products
             // 
             // groupBoxPropertyDetails
             // 
+            resources.ApplyResources(this.groupBoxPropertyDetails, "groupBoxPropertyDetails");
             this.groupBoxPropertyDetails.Controls.Add(this.buttonAddProperty);
             this.groupBoxPropertyDetails.Controls.Add(this.comboBoxPropertyTypes);
             this.groupBoxPropertyDetails.Controls.Add(this.label1);
@@ -97,7 +98,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxPropertyDetails.Controls.Add(this.textBoxPropertyName);
             this.groupBoxPropertyDetails.Controls.Add(this.labelPropertyName);
             this.groupBoxPropertyDetails.Controls.Add(this.buttonDeleteProperty);
-            resources.ApplyResources(this.groupBoxPropertyDetails, "groupBoxPropertyDetails");
             this.groupBoxPropertyDetails.Name = "groupBoxPropertyDetails";
             this.groupBoxPropertyDetails.TabStop = false;
             // 
@@ -109,9 +109,9 @@ namespace OpenCBS.GUI.Products
             // 
             // comboBoxPropertyTypes
             // 
+            resources.ApplyResources(this.comboBoxPropertyTypes, "comboBoxPropertyTypes");
             this.comboBoxPropertyTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPropertyTypes.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxPropertyTypes, "comboBoxPropertyTypes");
             this.comboBoxPropertyTypes.Name = "comboBoxPropertyTypes";
             this.comboBoxPropertyTypes.SelectedValueChanged += new System.EventHandler(this.comboBoxPropertyTypes_SelectedValueChanged);
             // 
@@ -158,19 +158,19 @@ namespace OpenCBS.GUI.Products
             // 
             // listBox
             // 
-            this.listBox.FormattingEnabled = true;
             resources.ApplyResources(this.listBox, "listBox");
+            this.listBox.FormattingEnabled = true;
             this.listBox.Name = "listBox";
             // 
             // groupBoxCollectionDetails
             // 
+            resources.ApplyResources(this.groupBoxCollectionDetails, "groupBoxCollectionDetails");
             this.groupBoxCollectionDetails.Controls.Add(this.label3);
             this.groupBoxCollectionDetails.Controls.Add(this.buttonDeleteListItem);
             this.groupBoxCollectionDetails.Controls.Add(this.buttonAddListItem);
             this.groupBoxCollectionDetails.Controls.Add(this.textBoxListItem);
             this.groupBoxCollectionDetails.Controls.Add(this.listBox);
             this.groupBoxCollectionDetails.Controls.Add(this.label2);
-            resources.ApplyResources(this.groupBoxCollectionDetails, "groupBoxCollectionDetails");
             this.groupBoxCollectionDetails.Name = "groupBoxCollectionDetails";
             this.groupBoxCollectionDetails.TabStop = false;
             // 

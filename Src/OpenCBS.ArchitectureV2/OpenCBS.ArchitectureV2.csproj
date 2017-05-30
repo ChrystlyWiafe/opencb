@@ -462,6 +462,9 @@
     <EmbeddedResource Include="View\LoginView.pt.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\SearchView.pt.resx">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StartPageView.pt.resx">
       <DependentUpon>StartPageView.cs</DependentUpon>
     </EmbeddedResource>

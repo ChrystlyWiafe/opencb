@@ -292,6 +292,7 @@
       <LastGenOutput>EntryFeesForm.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="resx\FrmAvalaibleCollateralProducts.pt.resx" />
     <EmbeddedResource Include="resx\LoanDisbursementForm.fr.resx" />
     <EmbeddedResource Include="resx\LoanDisbursementForm.resx">
       <Generator>ResXFileCodeGenerator</Generator>

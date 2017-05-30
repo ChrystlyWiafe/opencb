@@ -107,7 +107,7 @@ namespace OpenCBS.GUI.Clients
                     // Restore the genuine title (e.g. after update).
                     Text = _title;
                 }
-                Text += "  " + " [" + _village.Name + "]";
+                Text = "[" + _village.Name + "]";
             }
         }
 
@@ -595,7 +595,7 @@ namespace OpenCBS.GUI.Clients
                             throw new OpenCbsTiersSaveException(OpenCbsTiersSaveExceptionEnum.NoEnoughPersonsInThisGroup, l);
                         }
                  
-                    if (member.ActiveLoans != null && member.ActiveLoans.Count > 0)
+                    if (member.ActiveLoans != null && member.ActiveLoans.Count > 0 && member.ActiveLoans.Any(item => item.NsgID == _village.Id))
                     {
                         MessageBox.Show(MultiLanguageStrings.GetString(Ressource.VillageForm, "RemoveProhibited.Text"),
                             MultiLanguageStrings.GetString(Ressource.VillageForm, "RemoveProhibited.Caption"),

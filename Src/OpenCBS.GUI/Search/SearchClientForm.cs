@@ -155,7 +155,7 @@ namespace OpenCBS.GUI
         {
             if (_theUniqueInstance3 == null)
                 return _theUniqueInstance3 = new SearchClientForm(pTiersEnum, includeNotactiveOnly, applicationController);
-
+            _theUniqueInstance3.ClearClient();
             return _theUniqueInstance3;
         }
 
@@ -213,6 +213,11 @@ namespace OpenCBS.GUI
             {
                 initializer.Initialize(this);
             }
+        }
+
+        public void ClearClient()
+        {
+            _client = null;
         }
 
         private void ReinitializeValues()

@@ -2529,6 +2529,9 @@
     <EmbeddedResource Include="UserControl\AccrualStateOkCancelForm.fr.resx">
       <DependentUpon>AccrualStateOkCancelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\TernDepositUserControl.pt.resx">
+      <DependentUpon>TernDepositUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\TernDepositUserControl.resx">
       <DependentUpon>TernDepositUserControl.cs</DependentUpon>
     </EmbeddedResource>

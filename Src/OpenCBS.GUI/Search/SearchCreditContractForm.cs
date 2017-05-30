@@ -317,7 +317,7 @@ namespace OpenCBS.GUI
                 item.SubItems.Add(result.ContractStartDate);
                 item.SubItems.Add(result.ContractEndDate);
                 item.SubItems.Add(GetString(result.ContractStatus));
-                item.SubItems.Add("Credit");
+                item.SubItems.Add(MultiLanguageStrings.GetString(Ressource.SearchCreditContractForm, "Credit"));
                 listViewContracts.Items.Add(item);
             }
         }

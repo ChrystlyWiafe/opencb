@@ -381,4 +381,10 @@
   <data name="SavingsPending.Text1" xml:space="preserve">
     <value />
   </data>
+  <data name="ClientHasActiveCreditOrSaving" xml:space="preserve">
+    <value>This client has active credit or saving contracts.</value>
+  </data>
+  <data name="SelectProperItemFromCollateralList" xml:space="preserve">
+    <value>Please select proper item from the collateral list!</value>
+  </data>
 </root>

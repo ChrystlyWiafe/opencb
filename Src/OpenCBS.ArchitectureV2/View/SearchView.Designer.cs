@@ -43,21 +43,14 @@
             // 
             // _searchTextBox
             // 
-            this._searchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._searchTextBox.Location = new System.Drawing.Point(10, 10);
+            resources.ApplyResources(this._searchTextBox, "_searchTextBox");
             this._searchTextBox.Name = "_searchTextBox";
-            this._searchTextBox.Size = new System.Drawing.Size(733, 23);
-            this._searchTextBox.TabIndex = 0;
             // 
             // _searchPanel
             // 
             this._searchPanel.Controls.Add(this._searchTextBox);
-            this._searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this._searchPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this._searchPanel, "_searchPanel");
             this._searchPanel.Name = "_searchPanel";
-            this._searchPanel.Padding = new System.Windows.Forms.Padding(10);
-            this._searchPanel.Size = new System.Drawing.Size(753, 42);
-            this._searchPanel.TabIndex = 1;
             // 
             // _searchResultsListView
             // 
@@ -73,16 +66,12 @@
             this._activeColumn,
             this._districtColumn,
             this._cityColumn});
-            this._searchResultsListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._searchResultsListView.Font = new System.Drawing.Font("Segoe UI", 9F);
+            resources.ApplyResources(this._searchResultsListView, "_searchResultsListView");
             this._searchResultsListView.FullRowSelect = true;
             this._searchResultsListView.GridLines = true;
-            this._searchResultsListView.Location = new System.Drawing.Point(0, 42);
             this._searchResultsListView.MultiSelect = false;
             this._searchResultsListView.Name = "_searchResultsListView";
             this._searchResultsListView.ShowGroups = false;
-            this._searchResultsListView.Size = new System.Drawing.Size(753, 358);
-            this._searchResultsListView.TabIndex = 3;
             this._searchResultsListView.UseAlternatingBackColors = true;
             this._searchResultsListView.UseCompatibleStateImageBehavior = false;
             this._searchResultsListView.View = System.Windows.Forms.View.Details;
@@ -91,46 +80,36 @@
             // _typeColumn
             // 
             this._typeColumn.AspectName = "Type";
-            this._typeColumn.Text = "Type";
-            this._typeColumn.Width = 150;
+            resources.ApplyResources(this._typeColumn, "_typeColumn");
             // 
             // _nameColumn
             // 
             this._nameColumn.AspectName = "Name";
-            this._nameColumn.Text = "Name";
-            this._nameColumn.Width = 200;
+            resources.ApplyResources(this._nameColumn, "_nameColumn");
             // 
             // _activeColumn
             // 
             this._activeColumn.AspectName = "Active";
             this._activeColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._activeColumn.Text = "Active";
-            this._activeColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._activeColumn.Width = 80;
+            resources.ApplyResources(this._activeColumn, "_activeColumn");
             // 
             // _districtColumn
             // 
             this._districtColumn.AspectName = "District";
-            this._districtColumn.Text = "District";
-            this._districtColumn.Width = 200;
+            resources.ApplyResources(this._districtColumn, "_districtColumn");
             // 
             // _cityColumn
             // 
             this._cityColumn.AspectName = "City";
-            this._cityColumn.Text = "City";
-            this._cityColumn.Width = 200;
+            resources.ApplyResources(this._cityColumn, "_cityColumn");
             // 
             // SearchView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 400);
             this.Controls.Add(this._searchResultsListView);
             this.Controls.Add(this._searchPanel);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchView";
-            this.Text = "Search";
             this._searchPanel.ResumeLayout(false);
             this._searchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._searchResultsListView)).EndInit();

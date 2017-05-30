@@ -136,6 +136,12 @@
   <data name="labelCurrencyTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 280</value>
   </data>
+  <data name="labelCurrencyTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 16</value>
+  </data>
+  <data name="labelCurrencyTitle.Text" xml:space="preserve">
+    <value>Moeda:</value>
+  </data>
   <data name="labelXirrValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 264</value>
   </data>
@@ -290,10 +296,10 @@
     <value>Imprimir</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1339, 676</value>
+    <value>1339, 684</value>
   </data>
   <data name="gbxLoanDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1345, 697</value>
+    <value>1345, 705</value>
   </data>
   <data name="lblTernDepositDateStarted.Text" xml:space="preserve">
     <value>Data iniciada</value>
@@ -466,7 +472,7 @@
     <value>Confirmar prestção pendente</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1345, 733</value>
+    <value>1345, 741</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

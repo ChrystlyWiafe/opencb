@@ -117,21 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>804, 11</value>
-  </data>
   <data name="cancelButton.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="applyToOlbCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 20</value>
   </data>
   <data name="applyToOlbCheckbox.Text" xml:space="preserve">
     <value>Aplicar ao SEP:</value>
-  </data>
-  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>666, 11</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
     <value>Correcto</value>
@@ -141,9 +135,6 @@
   </data>
   <data name="interestRateLabel.Text" xml:space="preserve">
     <value>Taxa de juros:</value>
-  </data>
-  <data name="startDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 10</value>
   </data>
   <data name="startDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 16</value>
@@ -157,23 +148,20 @@
   <data name="newInstallmentsLabel.Text" xml:space="preserve">
     <value>Prestações</value>
   </data>
-  <data name="buttonsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 50</value>
-  </data>
-  <data name="trancheConfigurationPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 100</value>
-  </data>
   <data name="_lbPaymentMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 21</value>
   </data>
   <data name="_lbPaymentMethod.Text" xml:space="preserve">
     <value>Método de Pagamento:</value>
   </data>
-  <data name="firstRepaymentDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 40</value>
-  </data>
   <data name="firstRepaymentOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 16</value>
+  </data>
+  <data name="startDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 16</value>
+  </data>
+  <data name="firstRepaymentOnLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 42</value>
   </data>
   <data name="firstRepaymentOnLabel.Text" xml:space="preserve">
     <value>Data do primeiro reembolso:</value>
@@ -189,9 +177,6 @@
   </data>
   <data name="amountLabel.Text" xml:space="preserve">
     <value>Valor:</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>950, 437</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

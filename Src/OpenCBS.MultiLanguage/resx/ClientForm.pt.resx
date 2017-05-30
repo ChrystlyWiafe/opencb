@@ -138,6 +138,9 @@
   <data name="CapitalDue.Text" xml:space="preserve">
     <value>SEP</value>
   </data>
+  <data name="Deleted.Text" xml:space="preserve">
+    <value>Apagado</value>
+  </data>
   <data name="Closed.Text" xml:space="preserve">
     <value>Encerrado</value>
   </data>
@@ -369,5 +372,11 @@
   </data>
   <data name="lblLoanStatus.Text" xml:space="preserve">
     <value>Poupanças pendentes</value>
+  </data>
+  <data name="ClientHasActiveCreditOrSaving" xml:space="preserve">
+    <value>Este cliente possui contratos ativos de crédito ou poupança.</value>
+  </data>
+  <data name="SelectProperItemFromCollateralList" xml:space="preserve">
+    <value>Selecione o item adequado na lista de garantias!</value>
   </data>
 </root>

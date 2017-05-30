@@ -140,19 +140,16 @@
   <data name="&gt;&gt;gbActionWithAmount.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelAmountOnAccount.Name" xml:space="preserve">
-    <value>labelAmountOnAccount</value>
-  </data>
   <data name="btSearchContract.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
   </data>
   <data name="lbClientName.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 16</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbCloseFeesMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="gbActionWithAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -174,6 +171,12 @@
   <data name="plTransfer.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 57</value>
   </data>
+  <data name="&gt;&gt;lbTotalAmountValue.Parent" xml:space="preserve">
+    <value>tableLayoutAmount</value>
+  </data>
+  <data name="rbTransfer.Text" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
   <data name="labelCloseFees.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
@@ -182,6 +185,9 @@
   </data>
   <data name="lbCloseFeesMinMax.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
+  </data>
+  <data name="labelAmountOnAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lbClientName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -192,14 +198,14 @@
   <data name="&gt;&gt;tbTargetAccount.Name" xml:space="preserve">
     <value>tbTargetAccount</value>
   </data>
-  <data name="labelCloseFees.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="lbTotalAmountValue.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="labelAmountOnAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbCloseFeesMinMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 24</value>
@@ -213,6 +219,12 @@
   <data name="&gt;&gt;bSave.Name" xml:space="preserve">
     <value>bSave</value>
   </data>
+  <data name="labelCloseFees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>632, 295</value>
+  </data>
   <data name="labelAmountOnAccount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
@@ -221,12 +233,6 @@
   </data>
   <data name="&gt;&gt;tableLayoutAmount.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="btSearchContract.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 21</value>
-  </data>
-  <data name="&gt;&gt;lbTotalAmountValue.Name" xml:space="preserve">
-    <value>lbTotalAmountValue</value>
   </data>
   <data name="&gt;&gt;bCancel.Name" xml:space="preserve">
     <value>bCancel</value>
@@ -249,17 +255,14 @@
   <data name="&gt;&gt;lbCloseFeesMinMax.Parent" xml:space="preserve">
     <value>gbCloseFees</value>
   </data>
-  <data name="&gt;&gt;udCloseFees.Parent" xml:space="preserve">
-    <value>gbCloseFees</value>
+  <data name="&gt;&gt;gbCloseFees.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="tableLayoutAmount.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;tbTargetAccount.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkBoxDesactivateFees.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gbActionWithAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 73</value>
@@ -865,8 +868,8 @@
         ODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="rbTransfer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 31</value>
+  <data name="btSearchContract.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;bSave.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -877,9 +880,6 @@
   <data name="bCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;btSearchContract.Name" xml:space="preserve">
-    <value>btSearchContract</value>
-  </data>
   <data name="bCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -889,14 +889,20 @@
   <data name="labelCloseFeesValue.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="udCloseFees.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
+  <data name="gbCloseFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="bCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 25</value>
   </data>
   <data name="&gt;&gt;bSave.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="rbTransfer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 31</value>
+  </data>
+  <data name="rbTransfer.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="lbTargetSavings.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 5</value>
@@ -919,8 +925,8 @@
   <data name="bSave.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;bSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gbCloseFees.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="labelCloseFeesValue.Text" xml:space="preserve">
     <value>0</value>
@@ -928,14 +934,14 @@
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 295</value>
-  </data>
   <data name="checkBoxDesactivateFees.Location" type="System.Drawing.Point, System.Drawing">
     <value>77, 16</value>
   </data>
   <data name="tbTargetAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 3</value>
+  </data>
+  <data name="lbCloseFeesMinMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="gbCloseFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>626, 43</value>
@@ -946,11 +952,11 @@
   <data name="rbWithdraw.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tableLayoutAmount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="rbTransfer.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="checkBoxDesactivateFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 20</value>
@@ -958,8 +964,8 @@
   <data name="lbTargetSavings.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 16</value>
   </data>
-  <data name="&gt;&gt;tbTargetAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;rbWithdraw.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lbClientName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -973,17 +979,8 @@
   <data name="&gt;&gt;lbCloseFeesMinMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbTargetSavings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;rbTransfer.Name" xml:space="preserve">
-    <value>rbTransfer</value>
-  </data>
   <data name="&gt;&gt;labelCloseFeesValue.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="gbActionWithAmount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CloseSavingsForm</value>
@@ -1000,8 +997,11 @@
   <data name="rbTransfer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="gbCloseFees.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;tbTargetAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelCloseFees.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;plTransfer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1012,8 +1012,8 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;labelCloseFees.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lbTotalAmountValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 0</value>
   </data>
   <data name="plTransfer.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1039,8 +1039,8 @@
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;rbWithdraw.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="tableLayoutAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>626, 64</value>
   </data>
   <data name="lbCloseFeesMinMax.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 7pt</value>
@@ -1051,20 +1051,20 @@
   <data name="lbTotalAmountValue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="btSearchContract.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="udCloseFees.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="tableLayoutAmount.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="plTransfer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 51</value>
   </data>
   <data name="lbTargetSavings.Text" xml:space="preserve">
     <value>to account</value>
   </data>
   <data name="tableLayoutAmount.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;btSearchContract.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelCloseFees.Name" xml:space="preserve">
     <value>labelCloseFees</value>
@@ -1126,8 +1126,8 @@
   <data name="btSearchContract.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="gbActionWithAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;lbTotalAmountValue.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1174,12 +1174,6 @@
   <data name="bCancel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="udCloseFees.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 15</value>
-  </data>
-  <data name="&gt;&gt;lbClientName.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="gbActionWithAmount.Text" xml:space="preserve">
     <value>Which action with the amount</value>
   </data>
@@ -1188,6 +1182,9 @@
   </data>
   <data name="labelCloseFeesValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="checkBoxDesactivateFees.Text" xml:space="preserve">
     <value>Disable close fees</value>
@@ -1198,8 +1195,8 @@
   <data name="&gt;&gt;lbCloseFeesMinMax.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="checkBoxDesactivateFees.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="plTransfer.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -1210,35 +1207,38 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBoxDesactivateFees.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gbActionWithAmount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;plTransfer.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;labelAmountOnAccount.Name" xml:space="preserve">
+    <value>labelAmountOnAccount</value>
   </data>
   <data name="&gt;&gt;lbTargetSavings.Parent" xml:space="preserve">
     <value>plTransfer</value>
   </data>
-  <data name="&gt;&gt;gbCloseFees.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lbTargetSavings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="labelCloseFeesValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 39</value>
+  <data name="labelAmountOnAccount.Text" xml:space="preserve">
+    <value>Amount to withraw / transfer</value>
   </data>
-  <data name="rbTransfer.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="udCloseFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 15</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>632, 295</value>
   </data>
   <data name="labelCloseFeesValue.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;lbTotalAmountValue.Name" xml:space="preserve">
+    <value>lbTotalAmountValue</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;btSearchContract.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;checkBoxDesactivateFees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gbCloseFees.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1246,8 +1246,8 @@
   <data name="lbTargetSavings.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="gbCloseFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="btSearchContract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 21</value>
   </data>
   <data name="checkBoxDesactivateFees.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
@@ -1261,23 +1261,26 @@
   <data name="lbTargetSavings.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
-  <data name="labelAmountOnAccount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;labelAmountOnAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbActionWithAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;gbActionWithAmount.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="labelCloseFees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;btSearchContract.Name" xml:space="preserve">
+    <value>btSearchContract</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="&gt;&gt;labelCloseFees.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lbTargetSavings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lbTotalAmountValue.Parent" xml:space="preserve">
-    <value>tableLayoutAmount</value>
+  <data name="&gt;&gt;lbClientName.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;labelCloseFeesValue.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1288,8 +1291,11 @@
   <data name="&gt;&gt;gbCloseFees.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelAmountOnAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="labelCloseFeesValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 39</value>
+  </data>
+  <data name="plTransfer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 51</value>
   </data>
   <data name="bCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 13</value>
@@ -1303,8 +1309,8 @@
   <data name="udCloseFees.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>632, 295</value>
+  <data name="&gt;&gt;plTransfer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="rbTransfer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1318,17 +1324,14 @@
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>626, 44</value>
   </data>
-  <data name="gbActionWithAmount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9.75pt</value>
-  </data>
   <data name="labelCloseFees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="rbTransfer.Text" xml:space="preserve">
-    <value>Transfer</value>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;udCloseFees.Parent" xml:space="preserve">
+    <value>gbCloseFees</value>
   </data>
   <data name="labelCloseFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>335, 25</value>
@@ -1339,8 +1342,11 @@
   <data name="&gt;&gt;tableLayoutAmount.Name" xml:space="preserve">
     <value>tableLayoutAmount</value>
   </data>
-  <data name="lbTotalAmountValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 0</value>
+  <data name="&gt;&gt;bSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbTransfer.Name" xml:space="preserve">
+    <value>rbTransfer</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -1357,9 +1363,6 @@
   <data name="&gt;&gt;gbCloseFees.Name" xml:space="preserve">
     <value>gbCloseFees</value>
   </data>
-  <data name="tableLayoutAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>626, 64</value>
-  </data>
   <data name="gbCloseFees.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 199</value>
   </data>
@@ -1369,8 +1372,8 @@
   <data name="bSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 13</value>
   </data>
-  <data name="&gt;&gt;labelAmountOnAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tableLayoutAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbTotalAmountValue.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1381,16 +1384,10 @@
   <data name="&gt;&gt;rbWithdraw.Parent" xml:space="preserve">
     <value>gbActionWithAmount</value>
   </data>
-  <data name="labelAmountOnAccount.Text" xml:space="preserve">
-    <value>Amount to withraw / transfer</value>
-  </data>
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pt</value>
   </metadata>
 </root>

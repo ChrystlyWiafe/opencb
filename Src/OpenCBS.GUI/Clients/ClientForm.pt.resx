@@ -792,7 +792,7 @@
     <value>Nome</value>
   </data>
   <data name="colValue.Text" xml:space="preserve">
-    <value>Quantia</value>
+    <value>Valor</value>
   </data>
   <data name="colCalculated.Text" xml:space="preserve">
     <value>Сalculado</value>
@@ -813,7 +813,7 @@
     <value>Poupança obrigatória</value>
   </data>
   <data name="linkCompulsorySavings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 33</value>
+    <value>69, 33</value>
   </data>
   <data name="linkCompulsorySavings.Text" xml:space="preserve">
     <value>Detalhes</value>
@@ -995,6 +995,9 @@
   <data name="colPenalties.Text" xml:space="preserve">
     <value>Juros de moura</value>
   </data>
+  <data name="colBounceFee.Text" xml:space="preserve">
+    <value>Taxa de rejeição</value>
+  </data>
   <data name="colOverduePrincipal.Text" xml:space="preserve">
     <value>Capital vencido</value>
   </data>
@@ -1002,7 +1005,7 @@
     <value>Dias Vencidos</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Cancelavel</value>
+    <value>Cancelãvel</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
     <value>Utilizador</value>
@@ -1024,6 +1027,9 @@
   </data>
   <data name="colCancelDate1.Text" xml:space="preserve">
     <value>Cancelar data</value>
+  </data>
+  <data name="colIsDeleted.Text" xml:space="preserve">
+    <value>Apagado</value>
   </data>
   <data name="lvEvents.Size" type="System.Drawing.Size, System.Drawing">
     <value>1100, 368</value>
@@ -1056,8 +1062,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        HQAAAk1TRnQBSQFMAgEBBQEAAYQBAQGIAQEBIAEAASABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
+        HQAAAk1TRnQBSQFMAgEBBQEAAdABAQHQAQEBIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1181,7 +1187,7 @@
         AQEDAAEDAwABAQMAAQEDAAEBAwABAwMAAQEDAAEBAwABAQMAAQMDAAEBAwABAQMAAQEDAAEDAwABAQMA
         AQEDAAEBAwABAwMAAQEDAAEBAwABAQMAAQMDAAEBAwABAQMAAQEDAAEDAwABAQMAAQEDAAEBAwABAwMA
         AQEDAAEBAwABAQMAAQMDAAEBAwABAQMAAQMDAAEPAYACAAEHAYACAAEHAYACAAEPAYACAAEPAcACAAEP
-        AcACAAEPFgAL
+        AcACAAEPCw==
 </value>
   </data>
   <data name="tabControlRepayments.Size" type="System.Drawing.Size, System.Drawing">
@@ -1210,6 +1216,9 @@
   </data>
   <data name="tabPageLoanGuarantees.Text" xml:space="preserve">
     <value>Fiadors e garantias</value>
+  </data>
+  <data name="lbBalanceMaxValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lbBalanceMaxValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 22</value>
@@ -1272,12 +1281,6 @@
     <value>50, 34</value>
   </data>
   <data name="lbWithdrawMaxValue.Text" xml:space="preserve">
-    <value>quantia</value>
-  </data>
-  <data name="lbWithdrawMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 16</value>
-  </data>
-  <data name="lbWithdrawMin.Text" xml:space="preserve">
     <value>quantia</value>
   </data>
   <data name="lbWithdrawMinValue.Location" type="System.Drawing.Point, System.Drawing">
@@ -1400,8 +1403,11 @@
   <data name="gbDepositInterest.Text" xml:space="preserve">
     <value>Juros</value>
   </data>
+  <data name="flowLayoutPanel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>551, 3</value>
+  </data>
   <data name="flowLayoutPanel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>873, 260</value>
+    <value>781, 260</value>
   </data>
   <data name="lbTransferFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 16</value>
@@ -1409,26 +1415,59 @@
   <data name="lbTransferFees.Text" xml:space="preserve">
     <value>Comissões de tranferencia</value>
   </data>
+  <data name="nudTransferFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 3</value>
+  </data>
+  <data name="lbTransferFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 0</value>
+  </data>
   <data name="lbOverdraftFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 16</value>
   </data>
   <data name="lbOverdraftFees.Text" xml:space="preserve">
     <value>Comissões a descoberta</value>
   </data>
+  <data name="nudOverdraftFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 28</value>
+  </data>
+  <data name="lbOverdraftFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 25</value>
+  </data>
+  <data name="lbAgioFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 50</value>
+  </data>
+  <data name="nudAgioFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 53</value>
+  </data>
   <data name="lbAgioFees.Text" xml:space="preserve">
     <value>Ágio</value>
   </data>
+  <data name="lblIbtFeeMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 75</value>
+  </data>
+  <data name="nudIbtFee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 78</value>
+  </data>
   <data name="lblInterBranchTransfer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 25</value>
+    <value>309, 16</value>
   </data>
   <data name="lblInterBranchTransfer.Text" xml:space="preserve">
-    <value>Comissões  das transferencias intra-sucursal</value>
+    <value>Comissões  das transferencias intra-sucursal          </value>
+  </data>
+  <data name="lblChequeDepositFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 100</value>
+  </data>
+  <data name="nudChequeDepositFees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 103</value>
   </data>
   <data name="lbChequeDepositFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 16</value>
   </data>
   <data name="lbChequeDepositFees.Text" xml:space="preserve">
     <value>Comissões  de deposito de cheque</value>
+  </data>
+  <data name="tlpSBDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 260</value>
   </data>
   <data name="tabPageSavingsAmountsAndFees.Size" type="System.Drawing.Size, System.Drawing">
     <value>1335, 266</value>
@@ -1562,6 +1601,10 @@
   <data name="olvColumnCloseDate.Text" xml:space="preserve">
     <value>Data de encerramento</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="olvLoans.Size" type="System.Drawing.Size, System.Drawing">
     <value>1335, 266</value>
   </data>
@@ -1638,7 +1681,7 @@
     <value>Saldo</value>
   </data>
   <data name="lbDepositFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1195, 116</value>
+    <value>1275, 116</value>
   </data>
   <data name="lbDepositFeesMinMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 32</value>
@@ -1684,9 +1727,6 @@
   </data>
   <data name="_currentAccountTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>1119, 55</value>
-  </data>
-  <data name="_currentAccountTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
   </data>
   <data name="_dateCreatedLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>908, 10</value>
@@ -1737,7 +1777,7 @@
     <value>170, 22</value>
   </data>
   <data name="lbWithdrawFeesMinMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1195, 84</value>
+    <value>1275, 84</value>
   </data>
   <data name="lbWithdrawFeesMinMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 32</value>
@@ -1781,14 +1821,8 @@
   <data name="nudWithdrawFees.Location" type="System.Drawing.Point, System.Drawing">
     <value>1119, 87</value>
   </data>
-  <data name="nudWithdrawFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
-  </data>
   <data name="nudDepositFees.Location" type="System.Drawing.Point, System.Drawing">
     <value>1119, 119</value>
-  </data>
-  <data name="nudDepositFees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 52</value>

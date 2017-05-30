@@ -54,6 +54,7 @@
             // 
             // scheduleObjectListView
             // 
+            resources.ApplyResources(this.scheduleObjectListView, "scheduleObjectListView");
             this.scheduleObjectListView.AllColumns.Add(this.numberColumn);
             this.scheduleObjectListView.AllColumns.Add(this.dateColumn);
             this.scheduleObjectListView.AllColumns.Add(this.interestColumn);
@@ -86,13 +87,14 @@
             this.extra_amount_1,
             this.extra_amount_2});
             this.scheduleObjectListView.ContextMenuStrip = this._scheduleContextMenuStrip;
-            resources.ApplyResources(this.scheduleObjectListView, "scheduleObjectListView");
+            this.scheduleObjectListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.scheduleObjectListView.FullRowSelect = true;
             this.scheduleObjectListView.GridLines = true;
             this.scheduleObjectListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.scheduleObjectListView.HeaderWordWrap = true;
             this.scheduleObjectListView.MultiSelect = false;
             this.scheduleObjectListView.Name = "scheduleObjectListView";
+            this.scheduleObjectListView.OverlayText.Text = resources.GetString("resource.Text");
             this.scheduleObjectListView.ShowGroups = false;
             this.scheduleObjectListView.UseCompatibleStateImageBehavior = false;
             this.scheduleObjectListView.View = System.Windows.Forms.View.Details;
@@ -100,110 +102,111 @@
             // numberColumn
             // 
             this.numberColumn.AspectName = "Number";
-            this.numberColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this.numberColumn, "numberColumn");
+            this.numberColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dateColumn
             // 
             this.dateColumn.AspectName = "ExpectedDate";
-            this.dateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this.dateColumn, "dateColumn");
+            this.dateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // interestColumn
             // 
             this.interestColumn.AspectName = "InterestsRepayment";
-            this.interestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.interestColumn, "interestColumn");
+            this.interestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // extraColumn
             // 
             this.extraColumn.AspectName = "Commission";
-            this.extraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.extraColumn, "extraColumn");
+            this.extraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // principalColumn
             // 
             this.principalColumn.AspectName = "CapitalRepayment";
-            this.principalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.principalColumn, "principalColumn");
+            this.principalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalColumn
             // 
             this.totalColumn.AspectName = "AmountHasToPayWithInterest";
-            this.totalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.totalColumn, "totalColumn");
+            this.totalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // olbColumn
             // 
             this.olbColumn.AspectName = "OLB";
-            this.olbColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.olbColumn, "olbColumn");
+            this.olbColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paidInterestColumn
             // 
             this.paidInterestColumn.AspectName = "PaidInterests";
-            this.paidInterestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.paidInterestColumn, "paidInterestColumn");
+            this.paidInterestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paidExtraColumn
             // 
             this.paidExtraColumn.AspectName = "PaidCommissions";
-            this.paidExtraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.paidExtraColumn, "paidExtraColumn");
+            this.paidExtraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paidPrincipalColumn
             // 
             this.paidPrincipalColumn.AspectName = "PaidCapital";
-            this.paidPrincipalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.paidPrincipalColumn, "paidPrincipalColumn");
+            this.paidPrincipalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // paymentDateColumn
             // 
             this.paymentDateColumn.AspectName = "PaidDate";
-            this.paymentDateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             resources.ApplyResources(this.paymentDateColumn, "paymentDateColumn");
+            this.paymentDateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lateDaysColumn
             // 
             this.lateDaysColumn.AspectName = "LateDays";
-            this.lateDaysColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.lateDaysColumn, "lateDaysColumn");
+            this.lateDaysColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // commentColumn
             // 
             this.commentColumn.AspectName = "Comment";
-            this.commentColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.commentColumn, "commentColumn");
+            this.commentColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // extraAmount1
+            // extra_amount_1
             // 
             this.extra_amount_1.AspectName = "ExtraAmount1";
-            this.extra_amount_1.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.extra_amount_1, "extra_amount_1");
+            this.extra_amount_1.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // extraAmount2
+            // extra_amount_2
             // 
             this.extra_amount_2.AspectName = "ExtraAmount2";
-            this.extra_amount_2.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             resources.ApplyResources(this.extra_amount_2, "extra_amount_2");
+            this.extra_amount_2.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _scheduleContextMenuStrip
             // 
+            resources.ApplyResources(this._scheduleContextMenuStrip, "_scheduleContextMenuStrip");
             this._scheduleContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCopy});
             this._scheduleContextMenuStrip.Name = "contextMenuStripCopyToClipBoard";
-            resources.ApplyResources(this._scheduleContextMenuStrip, "_scheduleContextMenuStrip");
             // 
             // menuItemCopy
             // 
-            this.menuItemCopy.Name = "menuItemCopy";
             resources.ApplyResources(this.menuItemCopy, "menuItemCopy");
+            this.menuItemCopy.Name = "menuItemCopy";
             // 
             // ScheduleControl
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.scheduleObjectListView);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "ScheduleControl";
             ((System.ComponentModel.ISupportInitialize)(this.scheduleObjectListView)).EndInit();
             this._scheduleContextMenuStrip.ResumeLayout(false);

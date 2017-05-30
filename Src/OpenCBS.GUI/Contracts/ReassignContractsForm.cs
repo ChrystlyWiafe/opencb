@@ -49,7 +49,7 @@ namespace OpenCBS.GUI.Contracts
         private void Setup()
         {
             _translationService = new TranslationService();
-
+            _translationService.Reload();
             Load += (sender, args) => LoadForm();
             fromCombobox.SelectedIndexChanged += (sender, args) => ReloadContracts();
             filterTextbox.TextChanged += (sender, args) =>

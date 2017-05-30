@@ -152,7 +152,7 @@ namespace OpenCBS.GUI.Products
         {
             if (myProperties.Contains(textBoxPropertyName.Text))
             {
-                MessageBox.Show("Property name must be unique!");
+                MessageBox.Show(GetString("PropertyNameMustBeUnique"));
             }
             else
             {
@@ -164,7 +164,7 @@ namespace OpenCBS.GUI.Products
                 {
                     if (listBox.Items.Count < 1)
                     {
-                        MessageBox.Show("Please add at least one item to the collection!");
+                        MessageBox.Show(GetString("AddAtLeastOneItemToCollection"));
                         return;
                     }
                     
@@ -277,7 +277,7 @@ namespace OpenCBS.GUI.Products
         {
             if (listBox.Items.Contains(textBoxListItem.Text))
             {
-                MessageBox.Show("Each value in the collection should be unique!");
+                MessageBox.Show(GetString("EachValueInCollectionShouldBeUnique"));
                 return;
             }
             

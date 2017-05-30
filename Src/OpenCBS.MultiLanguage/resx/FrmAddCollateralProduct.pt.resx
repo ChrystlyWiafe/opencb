@@ -168,4 +168,28 @@
   <data name="Liste" xml:space="preserve">
     <value>Uma parcela não pode ser desembolsada no dia do desembolso</value>
   </data>
+  <data name="Cobrança" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="Número" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Série" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="EachValueInCollectionShouldBeUnique" xml:space="preserve">
+    <value>Cada valor na coleção deve ser exclusivo!</value>
+  </data>
+  <data name="Proprietário" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="PropertyNameMustBeUnique" xml:space="preserve">
+    <value>O nome da propriedade deve ser exclusivo!</value>
+  </data>
+  <data name="AddAtLeastOneItemToCollection" xml:space="preserve">
+    <value>Adicione pelo menos um item à coleção!</value>
+  </data>
 </root>

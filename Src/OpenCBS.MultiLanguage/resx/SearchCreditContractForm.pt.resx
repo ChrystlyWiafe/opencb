@@ -133,10 +133,10 @@
     <value>Não tem permissão para ver este contracto.</value>
   </data>
   <data name="Closed" xml:space="preserve">
-    <value>Fechado</value>
+    <value>Encerrado</value>
   </data>
   <data name="Closed.Text" xml:space="preserve">
-    <value>Fechado</value>
+    <value>Encerrado</value>
   </data>
   <data name="CompulsorySavings.Text" xml:space="preserve">
     <value>Poupança obrigatória</value>
@@ -151,7 +151,7 @@
     <value>Pendente</value>
   </data>
   <data name="Refused" xml:space="preserve">
-    <value>Recusado</value>
+    <value>Rejeitado</value>
   </data>
   <data name="result.Text" xml:space="preserve">
     <value>Resultado</value>
@@ -169,7 +169,7 @@
     <value>Validado</value>
   </data>
   <data name="WrittenOff" xml:space="preserve">
-    <value>cancelado</value>
+    <value>Abatido</value>
   </data>
   <data name="PersonalAccount" xml:space="preserve">
     <value>Conta Pessoal</value>
@@ -185,5 +185,11 @@
   </data>
   <data name="NonAccrual" xml:space="preserve">
     <value>Crédito não-acréscimo</value>
+  </data>
+  <data name="Postponed" xml:space="preserve">
+    <value>Adiado</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Crédito</value>
   </data>
 </root>

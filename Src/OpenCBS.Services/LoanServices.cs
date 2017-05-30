@@ -1597,13 +1597,14 @@ namespace OpenCBS.Services
                     copyOfLoan.Events.Add(trancheEvent);
                     
                     // Add entry fee events
+                    var index = 0;
                     foreach (var entryFee in entryFees)
                     {
                         if (entryFee.FeeValue == 0) continue;
                         var entryFeeEvent = new LoanEntryFeeEvent
                         {
                             Fee = entryFee.FeeValue,
-                            Code = "LEE" + entryFee.ProductEntryFee.Index,
+                            Code = "LEE" + index,
                             DisbursementEventId = trancheEvent.Id,
                             Cancelable = true,
                             User = User.CurrentUser,
@@ -1611,6 +1612,7 @@ namespace OpenCBS.Services
                         };
                         _ePs.FireEvent(entryFeeEvent, copyOfLoan, transaction);
                         copyOfLoan.Events.Add(entryFeeEvent);
+                        index++;
                     }
                     _loanManager.InsertLoanEntryFees(entryFees.ToList(), loan.Id, transaction);
 
