@@ -117,27 +117,145 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="_loansToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_repayButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="_tabList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_loanOlbColumn.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="_membersPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="_membersListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;_membersPage.Parent" xml:space="preserve">
+    <value>_tabList</value>
+  </data>
+  <data name="_loansListView.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_loansListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="&gt;&gt;_membersListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_loansPage.Text" xml:space="preserve">
+    <value>Loans</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_loanDurationColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;_memberActiveColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_membersListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 382</value>
+  </data>
+  <data name="&gt;&gt;_loanContractCodeColumn.Name" xml:space="preserve">
+    <value>_loanContractCodeColumn</value>
+  </data>
+  <data name="_membersPage.Text" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="_detailsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 382</value>
+  </data>
+  <data name="_memberLastNameColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="_memberActiveColumn.Text" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="_memberLoanCycleColumn.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="_nameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_loansPage.Type" xml:space="preserve">
+    <value>Cyotek.Windows.Forms.TabListPage, Cyotek.Windows.Forms.TabList, Version=1.0.1.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221</value>
+  </data>
+  <data name="_detailsPage.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="&gt;&gt;_loanProductColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loansListView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;_loansListView.Parent" xml:space="preserve">
+    <value>_loansPage</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="_tabList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_loanStatusColumn.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Village Bank</value>
+  </data>
+  <data name="&gt;&gt;_loanLastNameColumn.Name" xml:space="preserve">
+    <value>_loanLastNameColumn</value>
+  </data>
+  <data name="&gt;&gt;_memberActiveColumn.Name" xml:space="preserve">
+    <value>_memberActiveColumn</value>
+  </data>
+  <data name="&gt;&gt;_loanFrequencyColumn.Name" xml:space="preserve">
+    <value>_loanFrequencyColumn</value>
+  </data>
+  <data name="&gt;&gt;_membersListView.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.FastObjectListView, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
   <data name="_repayButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKvSURBVDhPlZJdTJJRHMa5qNu2Llpx1dbW6qYLZ1l33tUF
-        phmVlB+h82OJRhuaCeKLCKKIiigfBgaCaSGloL18maS2xNTmyvxKpbqouy5qaEvr6X1faM2tLX22s7P/
-        Ofs9/+d/dlg7UWOoLkqEiX3xcndShxRR84wByhEZCHKXJvWh2ujdmXZ4Pw7CNNWGKm8FSsnSnZmoQvJo
-        xzQNe+BccYB8PwDdCw1E7psodfzHpC5UEzVNt8H7wY2H7xywL5pRMSTCUKQfmnEVbjgLkOnI/LeJckQS
-        NU7pQFKwelwJ5agMtoUOWBdMuL9khSfiQk1QiiwLbz2O/BXhr143vGyl4rqx+m0J37c20DvbDcWz6hi8
-        5oIsKME165XNOBKTdkJ7lPBJf+gntcys6jElAxvH9Ih8WYVqTA73Wh+IgARZNh6yu64imUjew8C6SY1U
-        TkVqD7cw8INlOxWbYDrTcK1PFoP9Yrozwp+fo8p3B+mm8wrGgI7UFm7GE+qBepe7mFnvzRtRS8VWjcox
-        sNoHqb8Sgq4ciEw5KGxOQ07DWaQ2JINj4OxnKZ4SNmrB8sqIwcgjlA0K0fnWAMdiJwU7mW7C7lzU9OVi
-        aE6P2U8BtASLkdFyAmduHXawFKNiNp2C/iTGqVYmrn3BEoOpswIXH3z1ObjfaOGe14GWZrgALcNFSBQc
-        2GDGqCTLzLYZC0QeIXQTTehfcUJC3sZlczoklEmKJAHknIWB/8jzWo/TAjYYg/IB4TEiWLUVXPOixFUE
-        MVmO9PbUXxkWro9rShOfKjm40RjIgyrAZ2CVn789QWFH4d4iZ35/bk/WT+FjAS4YUzZ5Fu7JiwbOEfo+
-        qZit4GqOoymQz3Smd7pOErA1jAGtvJ7shOv2zGme9RInfrRNScWH6hMF7K90bHqnaxaLxfoN2WTfjnYI
-        JhIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAq5JREFUOE+Vkl9MklEYxrmo27a21uKqra3VTRc6Z915VxeYZlRSqKHzzxKNNjQT
+        xA8RRBEFQf4YGAimhZSCBggmqS0xtbky/6VSXdRdFzW0pfX0fR+05taWPtvZ2XvOfs/7vGeHsRs1hxti
+        RIQ4kCj3JlVYHrPMGqEYlYLw7dGkMVwfuzvbDv/HQZin9ajxV6HcV747E2VYFuuYoWAvXKtO+N4PQPdC
+        DaHnJsqd/zFpCNfFzDN6+D948PCdE44lC6qGhBiK9kM9ocQNVxG4Tu6/TRSjophpWgcfCasmFFCMSWFf
+        7IBt0Yz7yzZ4o27UhSTIsXA2EshfEYHaDePLNjKuB2vflvF9exO9c92QP6uNw+tuSENiXLNd2UogcWkn
+        tccJv+SHYUpLz6oaV9CwadyA6Jc1KMdl8Kz3gQiKkWPnILfrKtKItH00rJtSS2RkpPaIhoYfrDjI2ATd
+        mYLrA9I4PCyiOiPy+TlqAneQZT4vpw2oSPpIK56QD9S70kXPem/BhHoytnJMhoG1PkiGq8HvyoPQnIfi
+        1kzkNZ1FRlMaWEbWQYb8KWEnF6yvTBiMPkLFoACdb41wLnWSsIvuJujOR11fPobmDZj7FIQmVIpszSmc
+        uXXUyZCPiZhUCuqTmKbb6LiORWscJs+K3DzwVOfgeaOFZ0EHSuqRImhGSpDMP7RJj1Htq7DYZ60QegXQ
+        Tbagf9UFse82LluyICZN0sVJ8M1bafiPvK8NOM1ngjaoHBCcIEI126F1P8rcJRD5KpGlz/iVbWUH2OZM
+        UUrZ4c3mYAGUQR4NK4d5OxMUdxTvL3EV9vN6uD8Fj/m4YErf4ljZKReNrGPUfWopU85Wn0RLsJDuTO1U
+        ncpnqmkDSgU9uUnXHdwZju0SK3G0Q6mlRxqT+cyvVGxqp2oGg8H4Dcld33+POhkwAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="_nameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 23</value>
+  </data>
+  <data name="_membersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_detailsPage.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_nameLabel.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;_loansListView.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.FastObjectListView, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loansToolStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 25</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -163,4 +281,343 @@
         //8AAP//AAD//w==
 </value>
   </data>
+  <data name="&gt;&gt;_detailsPage.Type" xml:space="preserve">
+    <value>Cyotek.Windows.Forms.TabListPage, Cyotek.Windows.Forms.TabList, Version=1.0.1.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221</value>
+  </data>
+  <data name="_nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="_loansToolStrip.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="_loanAmountColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="_memberLoanCycleColumn.Text" xml:space="preserve">
+    <value>Loan Cycle</value>
+  </data>
+  <data name="&gt;&gt;_loanFirstNameColumn.Name" xml:space="preserve">
+    <value>_loanFirstNameColumn</value>
+  </data>
+  <data name="_loansPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_loanFrequencyColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;_detailsPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_loanStatusColumn.Name" xml:space="preserve">
+    <value>_loanStatusColumn</value>
+  </data>
+  <data name="&gt;&gt;_loanFrequencyColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_loansToolStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_loansToolStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="_loanContractCodeColumn.Text" xml:space="preserve">
+    <value>Contract Code</value>
+  </data>
+  <data name="_loanFrequencyColumn.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;_nameLabel.Parent" xml:space="preserve">
+    <value>_detailsPage</value>
+  </data>
+  <data name="&gt;&gt;_loanFirstNameColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loanDurationColumn.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;_memberPassportColumn.Name" xml:space="preserve">
+    <value>_memberPassportColumn</value>
+  </data>
+  <data name="_loansPage.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;_loanOlbColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_membersListView.Parent" xml:space="preserve">
+    <value>_membersPage</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>VillageBankView</value>
+  </data>
+  <data name="&gt;&gt;_detailsPage.Parent" xml:space="preserve">
+    <value>_tabList</value>
+  </data>
+  <data name="&gt;&gt;_nameTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_loansListView.Name" xml:space="preserve">
+    <value>_loansListView</value>
+  </data>
+  <data name="_loansListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 357</value>
+  </data>
+  <data name="&gt;&gt;_membersPage.Type" xml:space="preserve">
+    <value>Cyotek.Windows.Forms.TabListPage, Cyotek.Windows.Forms.TabList, Version=1.0.1.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221</value>
+  </data>
+  <data name="&gt;&gt;_loansToolStrip.Parent" xml:space="preserve">
+    <value>_loansPage</value>
+  </data>
+  <data name="&gt;&gt;_loanAmountColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loanProductColumn.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="_memberFirstNameColumn.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="&gt;&gt;_repayButton.Name" xml:space="preserve">
+    <value>_repayButton</value>
+  </data>
+  <data name="_nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_tabList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_memberPassportColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;_loanDurationColumn.Name" xml:space="preserve">
+    <value>_loanDurationColumn</value>
+  </data>
+  <data name="&gt;&gt;_tabList.Name" xml:space="preserve">
+    <value>_tabList</value>
+  </data>
+  <data name="_repayButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 22</value>
+  </data>
+  <data name="_memberLastNameColumn.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="&gt;&gt;_loanOlbColumn.Name" xml:space="preserve">
+    <value>_loanOlbColumn</value>
+  </data>
+  <data name="&gt;&gt;_loansToolStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_loanOlbColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;_memberFirstNameColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loanFirstNameColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;_membersListView.Name" xml:space="preserve">
+    <value>_membersListView</value>
+  </data>
+  <data name="_tabList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>858, 390</value>
+  </data>
+  <data name="&gt;&gt;_membersPage.Name" xml:space="preserve">
+    <value>_membersPage</value>
+  </data>
+  <data name="&gt;&gt;_loanStatusColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_memberLoanCycleColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loansListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_nameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="_repayButton.Text" xml:space="preserve">
+    <value>Repay</value>
+  </data>
+  <data name="&gt;&gt;_nameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_membersListView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;_memberLastNameColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_loanFrequencyColumn.Text" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="&gt;&gt;_loansToolStrip.Name" xml:space="preserve">
+    <value>_loansToolStrip</value>
+  </data>
+  <data name="&gt;&gt;_repayButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_membersPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 382</value>
+  </data>
+  <data name="&gt;&gt;_detailsPage.Name" xml:space="preserve">
+    <value>_detailsPage</value>
+  </data>
+  <data name="&gt;&gt;_nameTextBox.Parent" xml:space="preserve">
+    <value>_detailsPage</value>
+  </data>
+  <data name="_memberActiveColumn.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;_tabList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_loanLastNameColumn.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="&gt;&gt;_loanContractCodeColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="_memberFirstNameColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;_memberLastNameColumn.Name" xml:space="preserve">
+    <value>_memberLastNameColumn</value>
+  </data>
+  <data name="&gt;&gt;_loanLastNameColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_memberFirstNameColumn.Name" xml:space="preserve">
+    <value>_memberFirstNameColumn</value>
+  </data>
+  <data name="_loanStatusColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;_memberPassportColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_nameLabel.Name" xml:space="preserve">
+    <value>_nameLabel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_loanAmountColumn.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="_loanDurationColumn.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="_loanStatusColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;_memberLoanCycleColumn.Name" xml:space="preserve">
+    <value>_memberLoanCycleColumn</value>
+  </data>
+  <data name="_loanLastNameColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;_tabList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="_loanProductColumn.Text" xml:space="preserve">
+    <value>Loan Product</value>
+  </data>
+  <data name="_memberLoanCycleColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;_loanDurationColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;_loansListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_nameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="_memberActiveColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="_loansPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 382</value>
+  </data>
+  <data name="_loanContractCodeColumn.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="_membersListView.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_membersPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_memberPassportColumn.Text" xml:space="preserve">
+    <value>Passport</value>
+  </data>
+  <data name="_detailsPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_membersPage.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;_loansPage.Parent" xml:space="preserve">
+    <value>_tabList</value>
+  </data>
+  <data name="_loansToolStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;_nameLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>858, 390</value>
+  </data>
+  <data name="_loanAmountColumn.Text" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="&gt;&gt;_loansPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_loanOlbColumn.Text" xml:space="preserve">
+    <value>OLB</value>
+  </data>
+  <data name="&gt;&gt;_loanAmountColumn.Name" xml:space="preserve">
+    <value>_loanAmountColumn</value>
+  </data>
+  <data name="&gt;&gt;_nameTextBox.Name" xml:space="preserve">
+    <value>_nameTextBox</value>
+  </data>
+  <data name="&gt;&gt;_loansPage.Name" xml:space="preserve">
+    <value>_loansPage</value>
+  </data>
+  <data name="&gt;&gt;_nameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_loanFirstNameColumn.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="&gt;&gt;_loanProductColumn.Name" xml:space="preserve">
+    <value>_loanProductColumn</value>
+  </data>
+  <data name="&gt;&gt;_tabList.Type" xml:space="preserve">
+    <value>Cyotek.Windows.Forms.TabList, Cyotek.Windows.Forms.TabList, Version=1.0.1.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221</value>
+  </data>
+  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>pt</value>
+  </metadata>
+  <metadata name="_loansToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

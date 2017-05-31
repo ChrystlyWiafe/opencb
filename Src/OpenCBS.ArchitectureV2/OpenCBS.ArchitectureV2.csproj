@@ -456,6 +456,9 @@
     <EmbeddedResource Include="View\AlertsView.pt.resx">
       <DependentUpon>AlertsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BatchRepaymentView.pt.resx">
+      <DependentUpon>BatchRepaymentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BatchRepaymentView.resx">
       <DependentUpon>BatchRepaymentView.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UpgradeView.pt.resx">
       <DependentUpon>UpgradeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VillageBankView.pt.resx">
+      <DependentUpon>VillageBankView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VillageBankView.resx">
       <DependentUpon>VillageBankView.cs</DependentUpon>

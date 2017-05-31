@@ -64,53 +64,39 @@
             // 
             // _tabList
             // 
+            resources.ApplyResources(this._tabList, "_tabList");
             this._tabList.Controls.Add(this._detailsPage);
             this._tabList.Controls.Add(this._membersPage);
             this._tabList.Controls.Add(this._loansPage);
-            this._tabList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tabList.Location = new System.Drawing.Point(0, 0);
             this._tabList.Name = "_tabList";
-            this._tabList.Size = new System.Drawing.Size(858, 390);
-            this._tabList.TabIndex = 0;
             // 
             // _detailsPage
             // 
+            resources.ApplyResources(this._detailsPage, "_detailsPage");
             this._detailsPage.Controls.Add(this._nameTextBox);
             this._detailsPage.Controls.Add(this._nameLabel);
-            this._detailsPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this._detailsPage.Name = "_detailsPage";
-            this._detailsPage.Size = new System.Drawing.Size(700, 382);
-            this._detailsPage.TabIndex = 0;
-            this._detailsPage.Text = "Details";
             // 
             // _nameTextBox
             // 
-            this._nameTextBox.Location = new System.Drawing.Point(82, 13);
+            resources.ApplyResources(this._nameTextBox, "_nameTextBox");
             this._nameTextBox.Name = "_nameTextBox";
             this._nameTextBox.ReadOnly = true;
-            this._nameTextBox.Size = new System.Drawing.Size(191, 23);
-            this._nameTextBox.TabIndex = 1;
             // 
             // _nameLabel
             // 
-            this._nameLabel.AutoSize = true;
-            this._nameLabel.Location = new System.Drawing.Point(15, 16);
+            resources.ApplyResources(this._nameLabel, "_nameLabel");
             this._nameLabel.Name = "_nameLabel";
-            this._nameLabel.Size = new System.Drawing.Size(39, 15);
-            this._nameLabel.TabIndex = 0;
-            this._nameLabel.Text = "Name";
             // 
             // _membersPage
             // 
+            resources.ApplyResources(this._membersPage, "_membersPage");
             this._membersPage.Controls.Add(this._membersListView);
-            this._membersPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this._membersPage.Name = "_membersPage";
-            this._membersPage.Size = new System.Drawing.Size(700, 382);
-            this._membersPage.TabIndex = 1;
-            this._membersPage.Text = "Members";
             // 
             // _membersListView
             // 
+            resources.ApplyResources(this._membersListView, "_membersListView");
             this._membersListView.AllColumns.Add(this._memberFirstNameColumn);
             this._membersListView.AllColumns.Add(this._memberLastNameColumn);
             this._membersListView.AllColumns.Add(this._memberPassportColumn);
@@ -123,16 +109,12 @@
             this._memberPassportColumn,
             this._memberLoanCycleColumn,
             this._memberActiveColumn});
-            this._membersListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._membersListView.Font = new System.Drawing.Font("Segoe UI", 9F);
             this._membersListView.FullRowSelect = true;
             this._membersListView.GridLines = true;
-            this._membersListView.Location = new System.Drawing.Point(0, 0);
             this._membersListView.MultiSelect = false;
             this._membersListView.Name = "_membersListView";
+            this._membersListView.OverlayText.Text = resources.GetString("resource.Text");
             this._membersListView.ShowGroups = false;
-            this._membersListView.Size = new System.Drawing.Size(700, 382);
-            this._membersListView.TabIndex = 3;
             this._membersListView.UseAlternatingBackColors = true;
             this._membersListView.UseCompatibleStateImageBehavior = false;
             this._membersListView.View = System.Windows.Forms.View.Details;
@@ -141,49 +123,40 @@
             // _memberFirstNameColumn
             // 
             this._memberFirstNameColumn.AspectName = "FirstName";
-            this._memberFirstNameColumn.Text = "First Name";
-            this._memberFirstNameColumn.Width = 150;
+            resources.ApplyResources(this._memberFirstNameColumn, "_memberFirstNameColumn");
             // 
             // _memberLastNameColumn
             // 
             this._memberLastNameColumn.AspectName = "LastName";
-            this._memberLastNameColumn.Text = "Last Name";
-            this._memberLastNameColumn.Width = 150;
+            resources.ApplyResources(this._memberLastNameColumn, "_memberLastNameColumn");
             // 
             // _memberPassportColumn
             // 
             this._memberPassportColumn.AspectName = "Passport";
-            this._memberPassportColumn.Text = "Passport";
-            this._memberPassportColumn.Width = 150;
+            resources.ApplyResources(this._memberPassportColumn, "_memberPassportColumn");
             // 
             // _memberLoanCycleColumn
             // 
             this._memberLoanCycleColumn.AspectName = "LoanCycle";
+            resources.ApplyResources(this._memberLoanCycleColumn, "_memberLoanCycleColumn");
             this._memberLoanCycleColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._memberLoanCycleColumn.Text = "Loan Cycle";
-            this._memberLoanCycleColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._memberLoanCycleColumn.Width = 100;
             // 
             // _memberActiveColumn
             // 
             this._memberActiveColumn.AspectName = "Active";
+            resources.ApplyResources(this._memberActiveColumn, "_memberActiveColumn");
             this._memberActiveColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._memberActiveColumn.Text = "Active";
-            this._memberActiveColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._memberActiveColumn.Width = 100;
             // 
             // _loansPage
             // 
+            resources.ApplyResources(this._loansPage, "_loansPage");
             this._loansPage.Controls.Add(this._loansListView);
             this._loansPage.Controls.Add(this._loansToolStrip);
-            this._loansPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this._loansPage.Name = "_loansPage";
-            this._loansPage.Size = new System.Drawing.Size(700, 382);
-            this._loansPage.TabIndex = 2;
-            this._loansPage.Text = "Loans";
             // 
             // _loansListView
             // 
+            resources.ApplyResources(this._loansListView, "_loansListView");
             this._loansListView.AllColumns.Add(this._loanFirstNameColumn);
             this._loansListView.AllColumns.Add(this._loanLastNameColumn);
             this._loansListView.AllColumns.Add(this._loanContractCodeColumn);
@@ -204,16 +177,12 @@
             this._loanProductColumn,
             this._loanFrequencyColumn,
             this._loanDurationColumn});
-            this._loansListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._loansListView.Font = new System.Drawing.Font("Segoe UI", 9F);
             this._loansListView.FullRowSelect = true;
             this._loansListView.GridLines = true;
-            this._loansListView.Location = new System.Drawing.Point(0, 25);
             this._loansListView.MultiSelect = false;
             this._loansListView.Name = "_loansListView";
+            this._loansListView.OverlayText.Text = resources.GetString("resource.Text1");
             this._loansListView.ShowGroups = false;
-            this._loansListView.Size = new System.Drawing.Size(700, 357);
-            this._loansListView.TabIndex = 4;
             this._loansListView.UseAlternatingBackColors = true;
             this._loansListView.UseCompatibleStateImageBehavior = false;
             this._loansListView.View = System.Windows.Forms.View.Details;
@@ -222,95 +191,71 @@
             // _loanFirstNameColumn
             // 
             this._loanFirstNameColumn.AspectName = "FirstName";
-            this._loanFirstNameColumn.Text = "First Name";
-            this._loanFirstNameColumn.Width = 150;
+            resources.ApplyResources(this._loanFirstNameColumn, "_loanFirstNameColumn");
             // 
             // _loanLastNameColumn
             // 
             this._loanLastNameColumn.AspectName = "LastName";
-            this._loanLastNameColumn.Text = "Last Name";
-            this._loanLastNameColumn.Width = 150;
+            resources.ApplyResources(this._loanLastNameColumn, "_loanLastNameColumn");
             // 
             // _loanContractCodeColumn
             // 
             this._loanContractCodeColumn.AspectName = "ContractCode";
-            this._loanContractCodeColumn.Text = "Contract Code";
-            this._loanContractCodeColumn.Width = 250;
+            resources.ApplyResources(this._loanContractCodeColumn, "_loanContractCodeColumn");
             // 
             // _loanStatusColumn
             // 
             this._loanStatusColumn.AspectName = "Status";
+            resources.ApplyResources(this._loanStatusColumn, "_loanStatusColumn");
             this._loanStatusColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanStatusColumn.Text = "Status";
-            this._loanStatusColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanStatusColumn.Width = 150;
             // 
             // _loanAmountColumn
             // 
             this._loanAmountColumn.AspectName = "Amount";
+            resources.ApplyResources(this._loanAmountColumn, "_loanAmountColumn");
             this._loanAmountColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanAmountColumn.Text = "Amount";
-            this._loanAmountColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._loanAmountColumn.Width = 100;
             // 
             // _loanOlbColumn
             // 
             this._loanOlbColumn.AspectName = "Olb";
+            resources.ApplyResources(this._loanOlbColumn, "_loanOlbColumn");
             this._loanOlbColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._loanOlbColumn.Text = "OLB";
-            this._loanOlbColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._loanOlbColumn.Width = 100;
             // 
             // _loanProductColumn
             // 
             this._loanProductColumn.AspectName = "LoanProductName";
-            this._loanProductColumn.Text = "Loan Product";
-            this._loanProductColumn.Width = 200;
+            resources.ApplyResources(this._loanProductColumn, "_loanProductColumn");
             // 
             // _loanFrequencyColumn
             // 
             this._loanFrequencyColumn.AspectName = "InstallmentTypeName";
+            resources.ApplyResources(this._loanFrequencyColumn, "_loanFrequencyColumn");
             this._loanFrequencyColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanFrequencyColumn.Text = "Frequency";
-            this._loanFrequencyColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanFrequencyColumn.Width = 120;
             // 
             // _loanDurationColumn
             // 
             this._loanDurationColumn.AspectName = "Duration";
+            resources.ApplyResources(this._loanDurationColumn, "_loanDurationColumn");
             this._loanDurationColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanDurationColumn.Text = "Duration";
-            this._loanDurationColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this._loanDurationColumn.Width = 120;
             // 
             // _loansToolStrip
             // 
+            resources.ApplyResources(this._loansToolStrip, "_loansToolStrip");
             this._loansToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._repayButton});
-            this._loansToolStrip.Location = new System.Drawing.Point(0, 0);
             this._loansToolStrip.Name = "_loansToolStrip";
-            this._loansToolStrip.Size = new System.Drawing.Size(700, 25);
-            this._loansToolStrip.TabIndex = 5;
-            this._loansToolStrip.Text = "toolStrip1";
             // 
             // _repayButton
             // 
-            this._repayButton.Image = ((System.Drawing.Image)(resources.GetObject("_repayButton.Image")));
-            this._repayButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this._repayButton, "_repayButton");
             this._repayButton.Name = "_repayButton";
-            this._repayButton.Size = new System.Drawing.Size(59, 22);
-            this._repayButton.Text = "Repay";
             // 
             // VillageBankView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 390);
             this.Controls.Add(this._tabList);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VillageBankView";
-            this.Text = "Village Bank";
             this._tabList.ResumeLayout(false);
             this._detailsPage.ResumeLayout(false);
             this._detailsPage.PerformLayout();

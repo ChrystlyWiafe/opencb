@@ -40,16 +40,17 @@
             this._receiptNumber = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this._comment = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this._buttonsPanel = new System.Windows.Forms.Panel();
+            this.labelPaymentMethod = new System.Windows.Forms.Label();
+            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             this._cancelButton = new System.Windows.Forms.Button();
             this._okButton = new System.Windows.Forms.Button();
-            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.labelPaymentMethod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._loansListView)).BeginInit();
             this._buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // _loansListView
             // 
+            resources.ApplyResources(this._loansListView, "_loansListView");
             this._loansListView.AllColumns.Add(this._firstNameColumn);
             this._loansListView.AllColumns.Add(this._lastNameColumn);
             this._loansListView.AllColumns.Add(this._contractCodeColumn);
@@ -72,17 +73,13 @@
             this._totalColumn,
             this._receiptNumber,
             this._comment});
-            this._loansListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._loansListView.Font = new System.Drawing.Font("Segoe UI", 9F);
             this._loansListView.FullRowSelect = true;
             this._loansListView.GridLines = true;
-            this._loansListView.Location = new System.Drawing.Point(0, 0);
             this._loansListView.MultiSelect = false;
             this._loansListView.Name = "_loansListView";
+            this._loansListView.OverlayText.Text = resources.GetString("resource.Text");
             this._loansListView.ShowGroups = false;
             this._loansListView.ShowImagesOnSubItems = true;
-            this._loansListView.Size = new System.Drawing.Size(1344, 441);
-            this._loansListView.TabIndex = 5;
             this._loansListView.UseCompatibleStateImageBehavior = false;
             this._loansListView.View = System.Windows.Forms.View.Details;
             this._loansListView.VirtualMode = true;
@@ -90,144 +87,111 @@
             // _firstNameColumn
             // 
             this._firstNameColumn.AspectName = "FirstName";
+            resources.ApplyResources(this._firstNameColumn, "_firstNameColumn");
             this._firstNameColumn.IsEditable = false;
             this._firstNameColumn.Sortable = false;
-            this._firstNameColumn.Text = "First Name";
-            this._firstNameColumn.Width = 150;
             // 
             // _lastNameColumn
             // 
             this._lastNameColumn.AspectName = "LastName";
+            resources.ApplyResources(this._lastNameColumn, "_lastNameColumn");
             this._lastNameColumn.IsEditable = false;
             this._lastNameColumn.Sortable = false;
-            this._lastNameColumn.Text = "Last Name";
-            this._lastNameColumn.Width = 150;
             // 
             // _contractCodeColumn
             // 
             this._contractCodeColumn.AspectName = "ContractCode";
+            resources.ApplyResources(this._contractCodeColumn, "_contractCodeColumn");
             this._contractCodeColumn.IsEditable = false;
             this._contractCodeColumn.Sortable = false;
-            this._contractCodeColumn.Text = "Contract Code";
-            this._contractCodeColumn.Width = 250;
             // 
             // _principalColumn
             // 
             this._principalColumn.AspectName = "Principal";
+            resources.ApplyResources(this._principalColumn, "_principalColumn");
             this._principalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._principalColumn.IsEditable = false;
             this._principalColumn.Sortable = false;
-            this._principalColumn.Text = "Principal";
-            this._principalColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._principalColumn.Width = 100;
             // 
             // _interestColumn
             // 
             this._interestColumn.AspectName = "Interest";
+            resources.ApplyResources(this._interestColumn, "_interestColumn");
             this._interestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._interestColumn.IsEditable = false;
             this._interestColumn.Sortable = false;
-            this._interestColumn.Text = "Interest";
-            this._interestColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._interestColumn.Width = 100;
             // 
             // _expectedDateColumn
             // 
             this._expectedDateColumn.AspectName = "ExpectedDate";
+            resources.ApplyResources(this._expectedDateColumn, "_expectedDateColumn");
             this._expectedDateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._expectedDateColumn.IsEditable = false;
             this._expectedDateColumn.Sortable = false;
-            this._expectedDateColumn.Text = "ExpectedDate";
-            this._expectedDateColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._expectedDateColumn.Width = 150;
             // 
             // _totalColumn
             // 
             this._totalColumn.AspectName = "Total";
+            resources.ApplyResources(this._totalColumn, "_totalColumn");
             this._totalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._totalColumn.Sortable = false;
-            this._totalColumn.Text = "Total";
-            this._totalColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._totalColumn.Width = 100;
             // 
             // _receiptNumber
             // 
             this._receiptNumber.AspectName = "ReceiptNumber";
-            this._receiptNumber.Text = "Receipt Number";
-            this._receiptNumber.Width = 105;
+            resources.ApplyResources(this._receiptNumber, "_receiptNumber");
             // 
             // _comment
             // 
             this._comment.AspectName = "Comment";
-            this._comment.Text = "Comment";
-            this._comment.Width = 228;
+            resources.ApplyResources(this._comment, "_comment");
             // 
             // _buttonsPanel
             // 
+            resources.ApplyResources(this._buttonsPanel, "_buttonsPanel");
             this._buttonsPanel.Controls.Add(this.labelPaymentMethod);
             this._buttonsPanel.Controls.Add(this.cmbPaymentMethod);
             this._buttonsPanel.Controls.Add(this._cancelButton);
             this._buttonsPanel.Controls.Add(this._okButton);
-            this._buttonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._buttonsPanel.Location = new System.Drawing.Point(0, 441);
             this._buttonsPanel.Name = "_buttonsPanel";
-            this._buttonsPanel.Size = new System.Drawing.Size(1344, 51);
-            this._buttonsPanel.TabIndex = 6;
+            // 
+            // labelPaymentMethod
+            // 
+            resources.ApplyResources(this.labelPaymentMethod, "labelPaymentMethod");
+            this.labelPaymentMethod.Name = "labelPaymentMethod";
+            // 
+            // cmbPaymentMethod
+            // 
+            resources.ApplyResources(this.cmbPaymentMethod, "cmbPaymentMethod");
+            this.cmbPaymentMethod.DisplayMember = "Name";
+            this.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaymentMethod.FormattingEnabled = true;
+            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
             // 
             // _cancelButton
             // 
+            resources.ApplyResources(this._cancelButton, "_cancelButton");
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this._cancelButton.Location = new System.Drawing.Point(1257, 16);
             this._cancelButton.Name = "_cancelButton";
-            this._cancelButton.Size = new System.Drawing.Size(75, 23);
-            this._cancelButton.TabIndex = 1;
-            this._cancelButton.Text = "Cancel";
             this._cancelButton.UseVisualStyleBackColor = true;
             // 
             // _okButton
             // 
-            this._okButton.Location = new System.Drawing.Point(1176, 16);
+            resources.ApplyResources(this._okButton, "_okButton");
             this._okButton.Name = "_okButton";
-            this._okButton.Size = new System.Drawing.Size(75, 23);
-            this._okButton.TabIndex = 0;
-            this._okButton.Text = "OK";
             this._okButton.UseVisualStyleBackColor = true;
-            // 
-            // cmbPaymentMethod
-            // 
-            this.cmbPaymentMethod.DisplayMember = "Name";
-            this.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(126, 16);
-            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
-            this.cmbPaymentMethod.Size = new System.Drawing.Size(136, 23);
-            this.cmbPaymentMethod.TabIndex = 2;
-            // 
-            // labelPaymentMethod
-            // 
-            this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(12, 20);
-            this.labelPaymentMethod.Name = "labelPaymentMethod";
-            this.labelPaymentMethod.Size = new System.Drawing.Size(108, 15);
-            this.labelPaymentMethod.TabIndex = 3;
-            this.labelPaymentMethod.Text = "Payment Method : ";
             // 
             // BatchRepaymentView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._cancelButton;
-            this.ClientSize = new System.Drawing.Size(1344, 492);
             this.Controls.Add(this._loansListView);
             this.Controls.Add(this._buttonsPanel);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BatchRepaymentView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Repayment";
             ((System.ComponentModel.ISupportInitialize)(this._loansListView)).EndInit();
             this._buttonsPanel.ResumeLayout(false);
             this._buttonsPanel.PerformLayout();
