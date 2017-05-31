@@ -27,6 +27,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 : null;
             if (transaction == null) return;
 
+            if (interceptorParams.ContainsKey("Saving")) return;
+
             _interceptorService = new EventInterceptorService(interceptorParams);
 
             if (interceptorParams.ContainsKey("Deleted"))
