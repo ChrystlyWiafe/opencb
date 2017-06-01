@@ -1501,6 +1501,7 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this._loanDetailsScheduleControl, "_loanDetailsScheduleControl");
             this._loanDetailsScheduleControl.Name = "_loanDetailsScheduleControl";
             this._loanDetailsScheduleControl.ShowOlbAfterRepayment = false;
+            this._loanDetailsScheduleControl.Dock = DockStyle.Fill;
             // 
             // loanDetailsButtonsPanel
             // 
@@ -2327,6 +2328,7 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this._repaymentScheduleControl, "_repaymentScheduleControl");
             this._repaymentScheduleControl.Name = "_repaymentScheduleControl";
             this._repaymentScheduleControl.ShowOlbAfterRepayment = false;
+            this._repaymentScheduleControl.Dock = DockStyle.Fill;
             // 
             // flowLayoutPanel8
             // 
