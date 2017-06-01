@@ -74,3 +74,9 @@ IF col_length('dbo.Booking','doc2') IS NULL
         ALTER TABLE dbo.Booking ADD doc2 VARCHAR(255) NULL
     END
 GO
+
+IF col_length('dbo.Booking','CancelDate') IS NULL
+    BEGIN
+        ALTER TABLE dbo.Booking ADD CancelDate DATE NULL
+    END
+GO
