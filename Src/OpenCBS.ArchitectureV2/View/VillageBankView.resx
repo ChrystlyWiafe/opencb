@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_tabList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>858, 390</value>
+  </data>
   <data name="_repayButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -137,11 +140,8 @@
   <data name="_membersListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;_membersPage.Parent" xml:space="preserve">
-    <value>_tabList</value>
-  </data>
-  <data name="_loansListView.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="_loansToolStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="_loansListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
@@ -296,6 +296,9 @@
   <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;_membersPage.Parent" xml:space="preserve">
+    <value>_tabList</value>
+  </data>
   <data name="_memberLoanCycleColumn.Text" xml:space="preserve">
     <value>Loan Cycle</value>
   </data>
@@ -347,8 +350,8 @@
   <data name="&gt;&gt;_loanOlbColumn.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;_membersListView.Parent" xml:space="preserve">
-    <value>_membersPage</value>
+  <data name="&gt;&gt;_memberFirstNameColumn.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>VillageBankView</value>
@@ -413,17 +416,14 @@
   <data name="_loanOlbColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="&gt;&gt;_memberFirstNameColumn.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
   <data name="_loanFirstNameColumn.Width" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
   <data name="&gt;&gt;_membersListView.Name" xml:space="preserve">
     <value>_membersListView</value>
   </data>
-  <data name="_tabList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>858, 390</value>
+  <data name="&gt;&gt;_memberFirstNameColumn.Name" xml:space="preserve">
+    <value>_memberFirstNameColumn</value>
   </data>
   <data name="&gt;&gt;_membersPage.Name" xml:space="preserve">
     <value>_membersPage</value>
@@ -488,11 +488,11 @@
   <data name="&gt;&gt;_memberLastNameColumn.Name" xml:space="preserve">
     <value>_memberLastNameColumn</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>858, 390</value>
+  </data>
   <data name="&gt;&gt;_loanLastNameColumn.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;_memberFirstNameColumn.Name" xml:space="preserve">
-    <value>_memberFirstNameColumn</value>
   </data>
   <data name="_loanStatusColumn.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -569,14 +569,11 @@
   <data name="&gt;&gt;_loansPage.Parent" xml:space="preserve">
     <value>_tabList</value>
   </data>
-  <data name="_loansToolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="&gt;&gt;_nameLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>858, 390</value>
+  <data name="&gt;&gt;_membersListView.Parent" xml:space="preserve">
+    <value>_membersPage</value>
   </data>
   <data name="_loanAmountColumn.Text" xml:space="preserve">
     <value>Amount</value>
@@ -584,11 +581,14 @@
   <data name="&gt;&gt;_loansPage.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;_loanAmountColumn.Name" xml:space="preserve">
+    <value>_loanAmountColumn</value>
+  </data>
   <data name="_loanOlbColumn.Text" xml:space="preserve">
     <value>OLB</value>
   </data>
-  <data name="&gt;&gt;_loanAmountColumn.Name" xml:space="preserve">
-    <value>_loanAmountColumn</value>
+  <data name="_loansListView.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;_nameTextBox.Name" xml:space="preserve">
     <value>_nameTextBox</value>

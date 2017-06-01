@@ -70,5 +70,16 @@
   "Type": "Tipo",
   "Volunteer": "Voluntário",
   "Alerts ({0})": "Alertas ({0})",
-  "Reassign contracts": "Reatribuir contratos"
+  "Reassign contracts": "Reatribuir contratos",
+
+  "Pending":"Pendente",
+  "Validated":"Validado",
+  "Refused":"Rejeitado",
+  "Abandoned":"Abandonado",
+  "Active":"Activo",
+  "Closed":"Encerrado",
+  "Written-off":"Abatido",
+  "Postponed":"Adiado",
+  "Deleted":"Apagado",
+  "Non-accrual":"Não competência"
 }

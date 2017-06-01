@@ -225,5 +225,14 @@
   "You dont't have permission.": "You dont't have permission.",
   "You should enter a name": "You should enter a name.",
   "Expand all": "Expand all",
-  "There are no payment methods for this branch": "There are no payment methods for this branch"
+  "There are no payment methods for this branch": "There are no payment methods for this branch",
+
+  "Pending":"Pending",
+  "Validated":"Validated",
+  "Refused":"Refused",
+  "Abandoned":"Abandoned",
+  "Written-off":"Written-off",
+  "Postponed":"Postponed",
+  "Deleted":"Deleted",
+  "Non-accrual":"Non-accrual"
 }

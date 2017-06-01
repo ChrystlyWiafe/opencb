@@ -158,6 +158,9 @@
   <data name="_loanContractCodeColumn.Text" xml:space="preserve">
     <value>Código de Contracto</value>
   </data>
+  <data name="_loanStatusColumn.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
   <data name="_loanAmountColumn.Text" xml:space="preserve">
     <value>Montante</value>
   </data>
@@ -176,19 +179,19 @@
   <data name="_repayButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKvSURBVDhPlZJfTJJRGMa5qNu2Whdx1dbW6qYtW7PuvKsL
-        TDMqMZXQ+WeJRhuaCuKHCKKIgih/DAwE00JKQQUEk9SWmNpcmf9SqS7qrosa2tJ6+r4PWnNrS5/t7Ow9
-        Z7/nfd6zw9iNGkN1USJMHIiXe5MqJI+aZw1QjEpBePdoUh+qjd6bbYPv4wBM062o8pWjxFuyOxNlSBZt
-        n6FgD5yrDnjf90P3Qg2h+zZKHP8xqQvVRE0zrfB9cOPROwfsS2aUDwoxGOmDekKJW858ZDoy/22iGK2I
-        Gqd18JKwakIBxZgUtsV2WBdNeLBshSfiQk1QgiwzZyOO/BXhr94wvGwh47qx9m0Z37c30TPXBfmz6hi8
-        7oI0KMYN6/WtOBKTdlJ7nBiS/NBPaelZVeMKGjaO6xH5sgbluAzu9V4QATGybBxkd2YgiUjaR8O6KbVE
-        RkZqC2to+OGKnYxN0J0puNYvjcHDIqozwp+fo8pfgTTTJTltQEVqDTdjiHygnpVOetb7C0bUkrGVYzL0
-        r/VCMlwJficXQhMXBc2p4DZcQEpDElgG1kGG/ClhIxcsr4wYiDxG6YAAHW8NcCx1kLCT7iboykFNbw4G
-        5/WY+xSAJliEdM0pnL9z1MGQj4mYVArqkxinW+i49kVLDCbP8l088FQX4X6jhXtBB0rqkXxoRgpxmn9o
-        kx6j0ltqts1aIPQIoJtsQt+qE2LvXVwzp0FMmiSLE+Cdt9DwH3le63GOzwRtUNYvOEEEq7aD6z4Uuwoh
-        8pYhrSXlV7qF7WebUkVnig9vNgZyoQzwaFg5zNuZoKC9YH+hM6+P253xU/CEj8vG5C2OhX32ioF1jLpP
-        LGLK2eqTaArk0Z2pnaoT+Uw1bUAptzs74aY9c4ZjvcqKH+1QYtGR+gQ+8ysVm9qpmsFgMH4Ds4nfZ0Sz
-        o7MAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVDhPlZJdTJJRHMa5qNs2101ctbW1ummNrVl33tWF
+        phmVlB+h82OJRhuaCeKLCKKIgigfBgaCaSGlIL0gmKS2xNTmyvxKpbqouy5qaEvr6X1faM2tLX22s7P/
+        Ofs9/+d/dli7UXO4IUZEiAOJcm9ShxUxy6wRylEZCHKPJo3h+tjd2Q74Pw7BPN2OGn8Vysny3ZmowvJY
+        5wwNe+FadYJ8Pwj9Cw1Enpsod/7HpCFcFzPPtMP/wYOH75xwLFlQ5RPBFx2AZkKFG64iZDuz/22iHK2K
+        mab1IClYPaGEckwG+2InbItm3F+2wRt1oy4kRY6Ft5FA/ooI1G4YX7ZRcT1Y+7aM79ub6JvrgeJZbRxe
+        d0MWkuCa7cpWAolLN6k7SvikPwxTOmZW9biSgU3jBkS/rEE1LodnvR9EUIIcOw+53VeRQqTsY2D9lEYq
+        pyJ1RLQM/GDFQcUmmM40XB+QxeFhMd0Zkc/PURO4g0zzeQVjQEdqj7TiCfVAfSvdzKz3Fkyop2KrxuQY
+        XOuHdLgagu48iMx5KG7NQF7TWaQ3pSDVmJrEUjwl7NSC9ZUJQ9FHqBgSouutEc6lLgp2Md2EPfmo68+H
+        b96AuU9BaEOlyNKewJlbh50sxZiYTaegP4lpuo2J61i0xmHqrMjNB199Dp43OngW9KClGSmCdqQEJwVJ
+        m8wY1WSFxT5rhcgrhH6yBQOrLkjI27hsyYSEMkmTcEDOWxn4j7yvDTgtYIMxqBwUHiNCNduhdT/K3CUQ
+        k5XI1KX/yrJyA1xzhphTdnCzOVgAVZDPwKph/s4ExZ3F+0tchQO5vbyfwscCXDClbfGs3FMXjalH6Pvk
+        UraCqzmOlmAh05ne6TpZwNYwBrQKenM51x3ZMzzbpdTE0Q4llx5q5AjYX+nY9E7XLBaL9Ruor99c71hZ
+        nAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="_repayButton.Size" type="System.Drawing.Size, System.Drawing">
@@ -223,9 +226,6 @@
         /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
         //8AAP//AAD//w==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Grupo não solidário</value>
