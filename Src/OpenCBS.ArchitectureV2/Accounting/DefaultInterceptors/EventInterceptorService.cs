@@ -115,7 +115,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 var commissionsAmount = 0m;
 
-                foreach (var commission in disbursment.Commissions)
+                foreach (var commission in disbursment.Commissions??(new List<LoanEntryFeeEvent>()))
                 {
                     var entryFeeAccountNumber =
                         ServicesProvider.GetInstance()
