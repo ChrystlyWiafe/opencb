@@ -1435,6 +1435,9 @@ Deve completar "min" e "max".  (guia Transacções)
   <data name="LoanAlreadyDisbursed.Text" xml:space="preserve">
     <value>Não pode haver duas contas com o mesmo número. Digite outro número de conta.</value>
   </data>
+  <data name="DisbursementDateLessFirstInstallmentDate.Text" xml:space="preserve">
+    <value>A 'Dia preferido da primeira prestação' é inferior a 'Dia de desembolso'.</value>
+  </data>
   <data name="DuplicatedAccount.Text" xml:space="preserve">
     <value>A localização não estar por preencher.</value>
   </data>

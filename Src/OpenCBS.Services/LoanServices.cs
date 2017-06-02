@@ -2686,6 +2686,8 @@ namespace OpenCBS.Services
                     throw new OpenCbsContractSaveException(OpenCbsContractSaveExceptionEnum.BeneficiaryIsBad);
             if (pLoan.EconomicActivityId == 0)
                 throw new OpenCbsContractSaveException(OpenCbsContractSaveExceptionEnum.EconomicActivityNotSet);
+            if (pLoan.StartDate > pLoan.FirstInstallmentDate)
+                throw new OpenCbsContractSaveException(OpenCbsContractSaveExceptionEnum.DisbursementDateLessFirstInstallmentDate);
         }
 
         private void AddLoan(ref Loan pLoan, int pProjectId, ref IClient pClient, SqlTransaction transaction)

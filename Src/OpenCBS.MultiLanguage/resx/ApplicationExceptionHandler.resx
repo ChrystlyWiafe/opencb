@@ -1344,6 +1344,9 @@ You must complete either "min" and "max" or "value". (tab Line of Credit)</value
   <data name="LoanAlreadyDisbursed.Text" xml:space="preserve">
     <value>Loan is already disbursed.</value>
   </data>
+  <data name="DisbursementDateLessFirstInstallmentDate.Text" xml:space="preserve">
+    <value>'Preferred first installment date' is less than 'Disbursement date'.</value>
+  </data>
   <data name="DuplicatedAccount.Text" xml:space="preserve">
     <value>There cannot be two accounts with the same number. 
 Enter another account number.

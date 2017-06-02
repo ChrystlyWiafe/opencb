@@ -200,7 +200,10 @@ namespace OpenCBS.ExceptionsHandler
                 case OpenCbsContractSaveExceptionEnum.LoanAlreadyDisbursed:
                     returned = "LoanAlreadyDisbursed.Text";
                     break;
-			}
+                case OpenCbsContractSaveExceptionEnum.DisbursementDateLessFirstInstallmentDate:
+                    returned = "DisbursementDateLessFirstInstallmentDate.Text";
+                    break;
+            }
 			return returned;
 		}
 	}
@@ -247,6 +250,7 @@ namespace OpenCBS.ExceptionsHandler
         ZeroFee,
         WrongEvent,
         EconomicActivityNotSet,
-        LoanAlreadyDisbursed
+        LoanAlreadyDisbursed,
+        DisbursementDateLessFirstInstallmentDate
     }
 }
