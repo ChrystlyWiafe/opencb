@@ -125,18 +125,12 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     commissionsAmount += commission.Fee.Value;
 
-                    var commissionName = "";
-
-                    if (commission != null && commission.LoanEntryFee != null &&
-                        commission.LoanEntryFee.ProductEntryFee != null)
-                        commissionName = commission.LoanEntryFee.ProductEntryFee.Name;
-
                     list.Add(new BookingEntry
                     {
                         Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = string.Format("Commission ({1}) for {0}" ,_contractCode, commissionName),
+                        Description = string.Format("Commission for {0}" ,_contractCode),
                         LoanEventId = disbursment.Id
                     });
                 }
@@ -274,7 +268,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
                             Credit = new Account {AccountNumber = _product.InterestDueAccountNumber },
                             Amount = amount,
-                            Description = "Interest due but not received for " + _contractCode,
+                            Description = "Interest for " + _contractCode,
                             LoanEventId = accrual.Id
                         });
                 }

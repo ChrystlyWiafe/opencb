@@ -563,13 +563,9 @@ namespace OpenCBS.Manager.Accounting
 	                    , ClientId
 	                    , UserId
 	                    , BranchId
-	                    , 'Canceling operation ' 
+	                    , 'Reverting operation ' 
 		                    + cast(b.LoanEventId as varchar) 
-		                    + ' on date '
-		                    + FORMAT(b.Date, N'yyyy-MM-dd hh:mm:ss')
-		                    + ' on contract '
-		                    + isnull(c.contract_code,'')
-	                    , IsExported
+		                , IsExported
 	                    , IsDeleted
 	                    , AdvanceId
 	                    , StaffId
