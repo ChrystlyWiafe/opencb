@@ -42,6 +42,7 @@ using OpenCBS.CoreDomain.Clients;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.Enums;
 using OpenCBS.Extensions;
+using OpenCBS.Fusebox;
 using OpenCBS.GUI.Accounting;
 using OpenCBS.GUI.AuditTrail;
 using OpenCBS.GUI.Clients;
@@ -1057,6 +1058,12 @@ namespace OpenCBS.GUI
         private void mnuNewAccountMovements_Click(object sender, EventArgs e)
         {
             _applicationController.Execute(new ShowAccountMovementsCommandData());
+        }
+
+        private void closeDayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dayClosureForm = new FuseBoxExecutingForm();
+            dayClosureForm.ShowDialog();
         }
     }
 }

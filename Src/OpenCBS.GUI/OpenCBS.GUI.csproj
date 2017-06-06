@@ -235,6 +235,10 @@
       <Project>{D63E15B6-24DF-4C27-8593-EFACE31FA52A}</Project>
       <Name>OpenCBS.Extensions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenCBS.Fusebox\OpenCBS.Fusebox.csproj">
+      <Project>{717c050a-43bc-47a5-83ed-8ce9ea8c0260}</Project>
+      <Name>OpenCBS.Fusebox</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenCBS.GUI.Restarter\OpenCBS.GUI.Restarter.csproj">
       <Project>{90B5218E-10F0-4123-80E3-C4E65D6CF209}</Project>
       <Name>OpenCBS.GUI.Restarter</Name>

@@ -133,6 +133,9 @@ namespace OpenCBS.GUI
             this.mnuNewBalances = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewTurnoverBalances = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewAccountMovements = new System.Windows.Forms.ToolStripMenuItem();
+            this.closureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,9 +144,6 @@ namespace OpenCBS.GUI
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getHelpFromForumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitOpenCBScomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusBar.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -685,6 +685,25 @@ namespace OpenCBS.GUI
             resources.ApplyResources(this.mnuNewAccountMovements, "mnuNewAccountMovements");
             this.mnuNewAccountMovements.Click += new System.EventHandler(this.mnuNewAccountMovements_Click);
             // 
+            // closureToolStripMenuItem
+            // 
+            this.closureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openDayToolStripMenuItem,
+            this.closeDayToolStripMenuItem});
+            this.closureToolStripMenuItem.Name = "closureToolStripMenuItem";
+            resources.ApplyResources(this.closureToolStripMenuItem, "closureToolStripMenuItem");
+            // 
+            // openDayToolStripMenuItem
+            // 
+            this.openDayToolStripMenuItem.Name = "openDayToolStripMenuItem";
+            resources.ApplyResources(this.openDayToolStripMenuItem, "openDayToolStripMenuItem");
+            // 
+            // closeDayToolStripMenuItem
+            // 
+            this.closeDayToolStripMenuItem.Name = "closeDayToolStripMenuItem";
+            resources.ApplyResources(this.closeDayToolStripMenuItem, "closeDayToolStripMenuItem");
+            this.closeDayToolStripMenuItem.Click += new System.EventHandler(this.closeDayToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
@@ -735,24 +754,6 @@ namespace OpenCBS.GUI
             this.visitOpenCBScomToolStripMenuItem.Name = "visitOpenCBScomToolStripMenuItem";
             resources.ApplyResources(this.visitOpenCBScomToolStripMenuItem, "visitOpenCBScomToolStripMenuItem");
             this.visitOpenCBScomToolStripMenuItem.Click += new System.EventHandler(this.visitOpenCBScomToolStripMenuItem_Click);
-            // 
-            // closureToolStripMenuItem
-            // 
-            this.closureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openDayToolStripMenuItem,
-            this.closeDayToolStripMenuItem});
-            this.closureToolStripMenuItem.Name = "closureToolStripMenuItem";
-            resources.ApplyResources(this.closureToolStripMenuItem, "closureToolStripMenuItem");
-            // 
-            // openDayToolStripMenuItem
-            // 
-            this.openDayToolStripMenuItem.Name = "openDayToolStripMenuItem";
-            resources.ApplyResources(this.openDayToolStripMenuItem, "openDayToolStripMenuItem");
-            // 
-            // closeDayToolStripMenuItem
-            // 
-            this.closeDayToolStripMenuItem.Name = "closeDayToolStripMenuItem";
-            resources.ApplyResources(this.closeDayToolStripMenuItem, "closeDayToolStripMenuItem");
             // 
             // MainView
             // 

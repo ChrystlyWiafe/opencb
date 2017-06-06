@@ -1808,6 +1808,24 @@
   <data name="&gt;&gt;mnuNewAccountMovements.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;closureToolStripMenuItem.Name" xml:space="preserve">
+    <value>closureToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;closureToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openDayToolStripMenuItem.Name" xml:space="preserve">
+    <value>openDayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openDayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeDayToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeDayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;closeDayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;reportsToolStripMenuItem.Name" xml:space="preserve">
     <value>reportsToolStripMenuItem</value>
   </data>
@@ -1854,24 +1872,6 @@
     <value>visitOpenCBScomToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;visitOpenCBScomToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closureToolStripMenuItem.Name" xml:space="preserve">
-    <value>closureToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;closureToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openDayToolStripMenuItem.Name" xml:space="preserve">
-    <value>openDayToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;openDayToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeDayToolStripMenuItem.Name" xml:space="preserve">
-    <value>closeDayToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;closeDayToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
