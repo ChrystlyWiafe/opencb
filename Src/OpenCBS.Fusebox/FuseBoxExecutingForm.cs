@@ -20,10 +20,16 @@ namespace OpenCBS.Fusebox
         private const string ExtensionsPath = "Extensions";
 
         private readonly Container _container;
+        private BackgroundWorker _bw;
 
         public FuseBoxExecutingForm()
         {
             _container = GetFusesContainer();
+            _bw = new BackgroundWorker
+            {
+                WorkerReportsProgress = true,
+                WorkerSupportsCancellation = true
+            };
 
             InitializeComponent();
         }
@@ -35,21 +41,16 @@ namespace OpenCBS.Fusebox
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            var bw = new BackgroundWorker
+            _bw = new BackgroundWorker();
+            _bw.DoWork += (obj, args) =>
             {
-                WorkerReportsProgress = true,
-                WorkerSupportsCancellation = true
-            };
-            bw.DoWork += (obj, args) =>
-            {
-                Activate();
                 Run(_container);
             };
-            bw.RunWorkerCompleted += (obj, args) =>
+            _bw.RunWorkerCompleted += (obj, args) =>
             {
-                MessageBox.Show(@"End");
+                MessageBox.Show(@"Fusebox executing complete.");
             };
-            bw.RunWorkerAsync();
+            _bw.RunWorkerAsync();
         }
 
         public static Container GetFusesContainer()
@@ -99,6 +100,7 @@ namespace OpenCBS.Fusebox
                 var routines = container.GetAllInstances<IAdvancedFuse>().OrderBy(x => x.Order);
                 progressBarFuses.Minimum = 0;
                 progressBarFuses.Maximum = routines.Count();
+                progressBarFuses.Value = 0;
                 foreach (var routine in routines)
                 {
                     currentLogEntry = new FuseBoxLogEntry();
@@ -140,6 +142,12 @@ namespace OpenCBS.Fusebox
                 Logger.Log(logEntries, connection);
                 connection.Dispose();
             }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            if (_bw.IsBusy)
+                _bw.CancelAsync();
         }
     }
 }

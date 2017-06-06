@@ -46,7 +46,7 @@
             // 
             // progressBarFuses
             // 
-            this.progressBarFuses.Location = new System.Drawing.Point(59, 47);
+            this.progressBarFuses.Location = new System.Drawing.Point(59, 49);
             this.progressBarFuses.Name = "progressBarFuses";
             this.progressBarFuses.Size = new System.Drawing.Size(310, 27);
             this.progressBarFuses.TabIndex = 0;
@@ -59,6 +59,7 @@
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnStart
             // 
@@ -73,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 102);
+            this.label1.Location = new System.Drawing.Point(56, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 2;
@@ -82,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 102);
+            this.label2.Location = new System.Drawing.Point(85, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
