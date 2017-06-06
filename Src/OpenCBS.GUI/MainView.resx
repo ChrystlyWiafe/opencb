@@ -670,6 +670,24 @@
   <data name="mnuAccounting.Text" xml:space="preserve">
     <value>Accounting</value>
   </data>
+  <data name="openDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="openDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Day opening</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Day closure</value>
+  </data>
+  <data name="closureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="closureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Closure</value>
+  </data>
   <data name="reportsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 20</value>
   </data>
@@ -1838,10 +1856,28 @@
   <data name="&gt;&gt;visitOpenCBScomToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;closureToolStripMenuItem.Name" xml:space="preserve">
+    <value>closureToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;closureToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openDayToolStripMenuItem.Name" xml:space="preserve">
+    <value>openDayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openDayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeDayToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeDayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;closeDayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainView</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

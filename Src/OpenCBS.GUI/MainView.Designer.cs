@@ -141,6 +141,9 @@ namespace OpenCBS.GUI
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getHelpFromForumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitOpenCBScomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusBar.SuspendLayout();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -266,6 +269,7 @@ namespace OpenCBS.GUI
             this._viewItem,
             this._modulesMenuItem,
             this.mnuAccounting,
+            this.closureToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.mnuWindow,
             this.mnuHelp});
@@ -732,6 +736,24 @@ namespace OpenCBS.GUI
             resources.ApplyResources(this.visitOpenCBScomToolStripMenuItem, "visitOpenCBScomToolStripMenuItem");
             this.visitOpenCBScomToolStripMenuItem.Click += new System.EventHandler(this.visitOpenCBScomToolStripMenuItem_Click);
             // 
+            // closureToolStripMenuItem
+            // 
+            this.closureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openDayToolStripMenuItem,
+            this.closeDayToolStripMenuItem});
+            this.closureToolStripMenuItem.Name = "closureToolStripMenuItem";
+            resources.ApplyResources(this.closureToolStripMenuItem, "closureToolStripMenuItem");
+            // 
+            // openDayToolStripMenuItem
+            // 
+            this.openDayToolStripMenuItem.Name = "openDayToolStripMenuItem";
+            resources.ApplyResources(this.openDayToolStripMenuItem, "openDayToolStripMenuItem");
+            // 
+            // closeDayToolStripMenuItem
+            // 
+            this.closeDayToolStripMenuItem.Name = "closeDayToolStripMenuItem";
+            resources.ApplyResources(this.closeDayToolStripMenuItem, "closeDayToolStripMenuItem");
+            // 
             // MainView
             // 
             resources.ApplyResources(this, "$this");
@@ -812,5 +834,8 @@ namespace OpenCBS.GUI
         private ToolStripMenuItem mnuNewBalances;
         private ToolStripMenuItem mnuNewTurnoverBalances;
         private ToolStripMenuItem mnuNewAccountMovements;
+        private ToolStripMenuItem closureToolStripMenuItem;
+        private ToolStripMenuItem openDayToolStripMenuItem;
+        private ToolStripMenuItem closeDayToolStripMenuItem;
     }
 }
