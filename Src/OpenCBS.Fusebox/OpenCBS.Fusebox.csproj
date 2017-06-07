@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fusebox.cs" />
     <Compile Include="FuseBoxExecutingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,7 @@
       <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FuseBoxLogEntry.cs" />
+    <Compile Include="FuseChangedEventArgs.cs" />
     <Compile Include="FuseHelper.cs" />
     <Compile Include="IAdvancedFuse.cs" />
     <Compile Include="IFuse.cs" />
