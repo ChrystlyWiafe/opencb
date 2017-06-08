@@ -25,6 +25,7 @@ namespace OpenCBS.Fusebox
         private readonly Container _container;
         public event ProgressChangedEventHandler LoansProgressChanged;
         public event EventHandler FuseChanged;
+        public event EventHandler FuseboxComplited;
 
         public Fusebox()
         {
@@ -90,7 +91,7 @@ namespace OpenCBS.Fusebox
                     OnFuseChanged(new FuseChangedEventArgs
                     {
                         FuseName = routine.FuseName,
-                        PercentageValue = (index*100)/routines.Count()
+                        PercentageValue = index * 100 / (routines.Count())
                     });
                     currentLogEntry = new FuseBoxLogEntry();
                     currentLogEntry.FuseName = routine.GetType().Name;
@@ -110,8 +111,14 @@ namespace OpenCBS.Fusebox
 
                     index++;
                 }
-
                 transaction.Commit();
+
+                OnFuseChanged(new FuseChangedEventArgs
+                {
+                    FuseName = "Complete",
+                    PercentageValue = 100
+                });
+                OnFuseComplited();
             }
             catch (Exception error)
             {
@@ -168,6 +175,15 @@ namespace OpenCBS.Fusebox
             if (handler != null)
             {
                 handler(this, e);
+            }
+        }
+
+        protected virtual void OnFuseComplited()
+        {
+            EventHandler handler = FuseboxComplited;
+            if (handler != null)
+            {
+                handler(this, new EventArgs());
             }
         }
     }

@@ -27,10 +27,18 @@ namespace OpenCBS.Fusebox
                 label2.Text = fuseArgs.FuseName;
             };
             _fusebox.LoansProgressChanged += (o, args) => { progressBarLoans.Value = args.ProgressPercentage; };
+            _fusebox.FuseboxComplited += (sender, args) => { this.Close(); };
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            var confirmResult =
+                MessageBox.Show(
+                    "Are you sure you want to close day? All further operation for given date will be forbiden",
+                    "Confirm", MessageBoxButtons.YesNo);
+
+            if (confirmResult != DialogResult.Yes) return;
+
             _fusebox.Run();
             btnStart.Enabled = false;
         }
