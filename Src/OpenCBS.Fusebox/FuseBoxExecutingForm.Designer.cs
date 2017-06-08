@@ -101,9 +101,12 @@
             this.Controls.Add(this.progressBarLoans);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FuseBoxExecutingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Day Closure";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FuseBoxExecutingForm_FormClosing);
             this.Load += new System.EventHandler(this.FuseBoxExecutingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

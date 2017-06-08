@@ -32,6 +32,7 @@ namespace OpenCBS.Fusebox
         private void btnStart_Click(object sender, EventArgs e)
         {
             _fusebox.Run();
+            btnStart.Enabled = false;
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -39,6 +40,12 @@ namespace OpenCBS.Fusebox
             _fusebox.Stop();
             progressBarLoans.Value = 0;
             progressBarFuses.Value = 0;
+            btnStart.Enabled = true;
+        }
+
+        private void FuseBoxExecutingForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _fusebox.Stop();
         }
     }
 }

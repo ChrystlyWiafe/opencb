@@ -87,8 +87,11 @@ namespace OpenCBS.Fusebox
                 var index = 0;
                 foreach (var routine in routines)
                 {
-                    index++;
-                    OnFuseChanged(new FuseChangedEventArgs {FuseName = routine.FuseName,PercentageValue = (index * 100)/ routines.Count() });
+                    OnFuseChanged(new FuseChangedEventArgs
+                    {
+                        FuseName = routine.FuseName,
+                        PercentageValue = (index*100)/routines.Count()
+                    });
                     currentLogEntry = new FuseBoxLogEntry();
                     currentLogEntry.FuseName = routine.GetType().Name;
                     currentLogEntry.StartedAt = DateTime.Now;
@@ -104,6 +107,8 @@ namespace OpenCBS.Fusebox
 
                     currentLogEntry.EndedAt = DateTime.Now;
                     logEntries.Add(currentLogEntry);
+
+                    index++;
                 }
 
                 transaction.Commit();
@@ -145,8 +150,7 @@ namespace OpenCBS.Fusebox
 
         public void Stop()
         {
-            if(_bw.IsBusy)
-                _bw.CancelAsync();
+            _bw.CancelAsync();
         }
 
         private void RefreshBackGroundWorker()
