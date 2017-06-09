@@ -8,7 +8,7 @@ namespace OpenCBS.Stringifier
     public class Portuguese: IStringifiable
     {
         // O método toExtenso recebe um valor do tipo decimal
-        public string StringifyWithPercent(decimal valor)
+        public string Stringify(decimal valor)
         {
             if (valor <= 0 | valor >= 1000000000000000)
                 return "Valor não suportado pelo sistema.";
@@ -98,7 +98,7 @@ namespace OpenCBS.Stringifier
             }
         }
 
-        public string Stringify(decimal valor)
+        public string StringifyWithPercent(decimal valor)
         {
             if (valor <= 0)
                 return string.Empty;
