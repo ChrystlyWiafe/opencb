@@ -601,6 +601,7 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.DataSource = new List<Account>(_accounts);
             comboBoxTaxOnPenaltyAccount.DataSource = new List<Account>(_accounts);
             comboBoxPenaltyIncomeAccount.DataSource = new List<Account>(_accounts);
+	        comboBoxRescheduleAccount.DataSource = new List<Account>(_accounts);
 
             comboBoxAccruedPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber ==_product.AccruedPenaltyAccountNumber);
             comboBoxInterestAccruedButNotDueAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestAccruedButNotDueAccountNumber);
@@ -611,8 +612,9 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnInterestsAccountNumber);
             comboBoxTaxOnPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnPenaltyAccountNumber);
             comboBoxPenaltyIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PenaltyIncomeAccountNumber);
+            comboBoxRescheduleAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.RescheduleAccountNumber);
 
-	        comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
+            comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
 	        comboBoxPenaltyIncomeAccount.SelectedIndexChanged += comboBoxPenaltyIncomeAccount_SelectedIndexChanged;
             comboBoxAccruedPenaltyAccount.SelectedIndexChanged += comboBoxAccruedPenaltyAccount_SelectedIndexChanged;
             comboBoxTaxOnInterestsAccount.SelectedIndexChanged += comboBoxTaxOnInterestsAccount_SelectedIndexChanged;
@@ -621,7 +623,8 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
             comboBoxPrincipalAccount.SelectedIndexChanged += comboBoxPrincipalAccount_SelectedIndexChanged;
             comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
-	    }
+            comboBoxRescheduleAccount.SelectedIndexChanged += comboBoxRescheduleAccount_SelectedIndexChanged;
+        }
 
         private void InitializeTextBox()
         {
@@ -2318,6 +2321,13 @@ namespace OpenCBS.GUI.Products
         private void textBoxTaxValue_TextChanged(object sender, EventArgs e)
         {
             _product.TaxValue = ServicesHelper.ConvertStringToNullableDouble(textBoxTaxValue.Text, true);
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxRescheduleAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxRescheduleAccount.SelectedValue as Account;
+            _product.RescheduleAccountNumber = account != null ? account.AccountNumber : null;
             buttonSave.Enabled = true;
         }
     }

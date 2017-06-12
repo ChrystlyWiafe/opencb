@@ -153,6 +153,7 @@ namespace OpenCBS.CoreDomain.Products
         public int? CompulsoryAmountMax { get; set; }
 
         //Accounts
+        public string RescheduleAccountNumber { get; set; }
         public string PrincipalAccountNumber { get; set; }
         public string InterestAccruedButNotDueAccountNumber { get; set; }
         public string InterestDueAccountNumber { get; set; }

@@ -159,6 +159,7 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@interestScheme", package.InterestScheme);
             c.AddParam("@scriptName", package.ScriptName);
 
+            c.AddParam("@rescheduleAccount", package.RescheduleAccountNumber);
             c.AddParam("@principalAccount", package.PrincipalAccountNumber);
             c.AddParam("@interestAccruedButNotDueAccount", package.InterestAccruedButNotDueAccountNumber);
             c.AddParam("@interestDueAccount", package.InterestDueAccountNumber);
@@ -257,6 +258,7 @@ namespace OpenCBS.Manager.Products
                 ,[use_entry_fees_cycles]
                 ,[interest_scheme]
                 ,[script_name]
+                ,[reschedule_account]
                 ,[principal_account]
                 ,[interest_accrued_but_not_due_account]
                 ,[interest_due_account]
@@ -337,6 +339,7 @@ namespace OpenCBS.Manager.Products
                 ,@use_entry_fees_cycles
                 ,@interestScheme
                 ,@scriptName
+                ,@rescheduleAccount
                 ,@principalAccount
                 ,@interestAccruedButNotDueAccount
                 ,@interestDueAccount
@@ -456,6 +459,7 @@ namespace OpenCBS.Manager.Products
                 ,[use_entry_fees_cycles] = @use_entry_fees_cycles
                 ,[interest_scheme] = @interestScheme
                 ,[script_name] = @scriptName
+                ,[reschedule_account] = @rescheduleAccount
                 ,[principal_account] = @principalAccount
                 ,[interest_accrued_but_not_due_account] = @interestAccruedButNotDueAccount
                 ,[interest_due_account] = @interestDueAccount
@@ -1221,6 +1225,7 @@ namespace OpenCBS.Manager.Products
             package.InterestIncomeAccountNumber = r.GetString("interest_income_account");
             package.PenaltyIncomeAccountNumber = r.GetString("penalty_income_account");
             package.PrincipalAccountNumber = r.GetString("principal_account");
+            package.RescheduleAccountNumber = r.GetString("reschedule_account");
             package.TaxOnInterestsAccountNumber = r.GetString("tax_on_interests_account");
             package.TaxOnPenaltyAccountNumber = r.GetString("tax_on_penalty_account");
             package.TaxValue = r.GetNullDouble("tax_value");

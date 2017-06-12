@@ -36,3 +36,9 @@ IF (SELECT TOP 1 [component_name] FROM dbo.[MenuItems] WHERE [component_name] = 
 		FROM dbo.Roles r
     END
 GO
+
+IF col_length('dbo.Packages','reschedule_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD reschedule_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
