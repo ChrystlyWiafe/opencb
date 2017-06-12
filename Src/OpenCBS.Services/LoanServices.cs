@@ -2497,6 +2497,7 @@ namespace OpenCBS.Services
                             });
                         tempLoan.Events.Add(lve);
                     }
+                    _loanManager.RefreshAccounts(ref tempLoan,sqlTransaction);
                     _loanManager.UpdateLoanStatus(tempLoan, sqlTransaction);
                     project.SetStatus();
                     new ProjectServices(_user).UpdateProjectStatus(project, sqlTransaction);

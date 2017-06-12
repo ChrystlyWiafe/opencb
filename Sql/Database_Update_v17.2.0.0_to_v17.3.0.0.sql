@@ -192,12 +192,6 @@ IF col_length('dbo.Packages','interest_income_account') IS NULL
     END
 GO
 
-IF col_length('dbo.Packages','tax_on_interests_account') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD tax_on_interests_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
-    END
-GO
-
 IF col_length('dbo.Packages','accrued_penalty_account') IS NULL
     BEGIN
 		ALTER TABLE dbo.Packages ADD accrued_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
@@ -207,18 +201,6 @@ GO
 IF col_length('dbo.Packages','penalty_income_account') IS NULL
     BEGIN
 		ALTER TABLE dbo.Packages ADD penalty_income_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
-    END
-GO
-
-IF col_length('dbo.Packages','tax_on_penalty_account') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD tax_on_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
-    END
-GO
-
-IF col_length('dbo.Packages','tax_value') IS NULL
-    BEGIN
-		ALTER TABLE dbo.Packages ADD tax_value FLOAT NULL
     END
 GO
 

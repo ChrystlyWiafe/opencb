@@ -578,11 +578,6 @@ namespace OpenCBS.GUI.Products
                     txbCompulsoryAmountMax.Text = pack.CompulsoryAmountMax.ToString();
                 }
             }
-
-            if (pack.TaxValue.HasValue)
-            {
-                textBoxTaxValue.Text = (pack.TaxValue.Value*100.0).ToString();
-            }
         }
 
 	    private void InitializeAccounts()
@@ -598,8 +593,6 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueButNoteReceivedAccount.DataSource = new List<Account>(_accounts);
             comboBoxInterestIncomeAccount.DataSource = new List<Account>(_accounts);
             comboBoxPrincipalAccount.DataSource = new List<Account>(_accounts);
-            comboBoxTaxOnInterestsAccount.DataSource = new List<Account>(_accounts);
-            comboBoxTaxOnPenaltyAccount.DataSource = new List<Account>(_accounts);
             comboBoxPenaltyIncomeAccount.DataSource = new List<Account>(_accounts);
 	        comboBoxRescheduleAccount.DataSource = new List<Account>(_accounts);
 
@@ -609,15 +602,11 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueButNoteReceivedAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestDueButNotReceivedAccountNumber);
             comboBoxInterestIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestIncomeAccountNumber);
             comboBoxPrincipalAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PrincipalAccountNumber);
-            comboBoxTaxOnInterestsAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnInterestsAccountNumber);
-            comboBoxTaxOnPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnPenaltyAccountNumber);
             comboBoxPenaltyIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PenaltyIncomeAccountNumber);
             comboBoxRescheduleAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.RescheduleAccountNumber);
 
-            comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
 	        comboBoxPenaltyIncomeAccount.SelectedIndexChanged += comboBoxPenaltyIncomeAccount_SelectedIndexChanged;
             comboBoxAccruedPenaltyAccount.SelectedIndexChanged += comboBoxAccruedPenaltyAccount_SelectedIndexChanged;
-            comboBoxTaxOnInterestsAccount.SelectedIndexChanged += comboBoxTaxOnInterestsAccount_SelectedIndexChanged;
             comboBoxInterestIncomeAccount.SelectedIndexChanged += comboBoxInterestIncomeAccount_SelectedIndexChanged;
             comboBoxInterestDueButNoteReceivedAccount.SelectedIndexChanged += comboBoxInterestDueBotNoteReceivedAccount_SelectedIndexChanged;
             comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
@@ -641,7 +630,6 @@ namespace OpenCBS.GUI.Products
             textBoxAmount.Text = "";
             textBoxAmountMin.Text = "";
             textBoxAmountMax.Text = "";
-            textBoxTaxValue.Text = "";
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -2290,13 +2278,6 @@ namespace OpenCBS.GUI.Products
             buttonSave.Enabled = true;
         }
 
-        private void comboBoxTaxOnInterestsAccount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var account = comboBoxTaxOnInterestsAccount.SelectedValue as Account;
-            _product.TaxOnInterestsAccountNumber = account != null ? account.AccountNumber : null;
-            buttonSave.Enabled = true;
-        }
-
         private void comboBoxAccruedPenaltyAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
             var account = comboBoxAccruedPenaltyAccount.SelectedValue as Account;
@@ -2308,19 +2289,6 @@ namespace OpenCBS.GUI.Products
         {
             var account = comboBoxPenaltyIncomeAccount.SelectedValue as Account;
             _product.PenaltyIncomeAccountNumber = account != null ? account.AccountNumber : null;
-            buttonSave.Enabled = true;
-        }
-
-        private void comboBoxTaxOnPenaltyAccount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var account = comboBoxTaxOnPenaltyAccount.SelectedValue as Account;
-            _product.TaxOnPenaltyAccountNumber = account != null ? account.AccountNumber : null;
-            buttonSave.Enabled = true;
-        }
-
-        private void textBoxTaxValue_TextChanged(object sender, EventArgs e)
-        {
-            _product.TaxValue = ServicesHelper.ConvertStringToNullableDouble(textBoxTaxValue.Text, true);
             buttonSave.Enabled = true;
         }
 

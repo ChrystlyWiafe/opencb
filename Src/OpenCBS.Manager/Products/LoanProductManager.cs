@@ -165,12 +165,8 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@interestDueAccount", package.InterestDueAccountNumber);
             c.AddParam("@interestDueButNotReceivedAccount", package.InterestDueButNotReceivedAccountNumber);
             c.AddParam("@interestIncomeAccount", package.InterestIncomeAccountNumber);
-            c.AddParam("@taxOnInterestsAccount", package.TaxOnInterestsAccountNumber);
             c.AddParam("@accruedPenaltyAccount", package.AccruedPenaltyAccountNumber);
             c.AddParam("@penaltyIncomeAccount", package.PenaltyIncomeAccountNumber);
-            c.AddParam("@taxOnPenaltyAccount", package.TaxOnPenaltyAccountNumber);
-            c.AddParam("@taxValue", package.TaxValue);
-
         }
 
         private void FireProductLoaded(LoanProduct product)
@@ -266,9 +262,7 @@ namespace OpenCBS.Manager.Products
                 ,[interest_income_account]
                 ,[tax_on_interests_account]
                 ,[accrued_penalty_account]
-                ,[penalty_income_account]
-                ,[tax_on_penalty_account]
-                ,[tax_value])
+                ,[penalty_income_account])
                 VALUES
                 (@deleted
                 ,@name
@@ -345,11 +339,8 @@ namespace OpenCBS.Manager.Products
                 ,@interestDueAccount
                 ,@interestDueButNotReceivedAccount
                 ,@interestIncomeAccount
-                ,@taxOnInterestsAccount
                 ,@accruedPenaltyAccount
-                ,@penaltyIncomeAccount
-                ,@taxOnPenaltyAccount
-                ,@taxValue)
+                ,@penaltyIncomeAccount)
                 SELECT SCOPE_IDENTITY()";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -465,11 +456,8 @@ namespace OpenCBS.Manager.Products
                 ,[interest_due_account] = @interestDueAccount
                 ,[interest_due_but_not_received_account] = @interestDueButNotReceivedAccount
                 ,[interest_income_account] = @interestIncomeAccount
-                ,[tax_on_interests_account] = @taxOnInterestsAccount
                 ,[accrued_penalty_account] = @accruedPenaltyAccount
                 ,[penalty_income_account] = @penaltyIncomeAccount
-                ,[tax_on_penalty_account] = @taxOnPenaltyAccount
-                ,[tax_value] = @taxValue
                 WHERE id = @packageId";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -1226,9 +1214,6 @@ namespace OpenCBS.Manager.Products
             package.PenaltyIncomeAccountNumber = r.GetString("penalty_income_account");
             package.PrincipalAccountNumber = r.GetString("principal_account");
             package.RescheduleAccountNumber = r.GetString("reschedule_account");
-            package.TaxOnInterestsAccountNumber = r.GetString("tax_on_interests_account");
-            package.TaxOnPenaltyAccountNumber = r.GetString("tax_on_penalty_account");
-            package.TaxValue = r.GetNullDouble("tax_value");
 
             return package;
         }

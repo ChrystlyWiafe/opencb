@@ -1271,6 +1271,44 @@ namespace OpenCBS.Manager.Contracts
             }
         }
 
+        public void RefreshAccounts(ref Loan pLoan, SqlTransaction pTransaction)
+        {
+            const string q = @"
+                SELECT
+	                accrued_penalty_account accruedPenaltyAccountNumber
+	                , interest_accrued_but_not_due_account interestAccruedButNotDueAccountNumber
+	                , interest_due_account interestDueAccountNumber
+	                , interest_due_but_not_received_account interestDueButNotReceivedAccountNumber
+	                , interest_income_account interestIncomeAccountNumber
+	                , penalty_income_account penaltyIncomeAccountNumber
+	                , principal_account principalAccountNumber
+	                , reschedule_account rescheduleAccountNumber
+                FROM
+	                dbo.Credit
+                WHERE
+	                id = @id
+            ";
+
+            using (OpenCbsCommand c = new OpenCbsCommand(q, pTransaction.Connection, pTransaction))
+            {
+                c.AddParam("@id", pLoan.Id);
+                using (OpenCbsReader r = c.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        pLoan.AccruedPenaltyAccountNumber = r.GetString("accruedPenaltyAccountNumber");
+                        pLoan.InterestAccruedButNotDueAccountNumber = r.GetString("interestAccruedButNotDueAccountNumber");
+                        pLoan.InterestDueAccountNumber = r.GetString("interestDueAccountNumber");
+                        pLoan.InterestDueButNotReceivedAccountNumber = r.GetString("interestDueButNotReceivedAccountNumber");
+                        pLoan.InterestIncomeAccountNumber = r.GetString("interestIncomeAccountNumber");
+                        pLoan.PenaltyIncomeAccountNumber = r.GetString("penaltyIncomeAccountNumber");
+                        pLoan.PrincipalAccountNumber = r.GetString("principalAccountNumber");
+                        pLoan.RescheduleAccountNumber = r.GetString("rescheduleAccountNumber");
+                    }
+                }
+            }
+        }
+
         public List<Loan> SelectLoansForClosure()
         {
             List<int> ids = new List<int>();
@@ -1809,7 +1847,15 @@ namespace OpenCBS.Manager.Contracts
                                         Credit.[loan_cycle],
                                         Credit.insurance,
                                         Credit.schedule_type,
-                                        Credit.script_name
+                                        Credit.script_name,
+	                                    Credit.reschedule_account,
+	                                    Credit.principal_account,
+	                                    Credit.interest_accrued_but_not_due_account,
+	                                    Credit.interest_due_account,
+	                                    Credit.interest_due_but_not_received_account,
+	                                    Credit.interest_income_account,
+	                                    Credit.accrued_penalty_account,
+	                                    Credit.penalty_income_account
                                         FROM Contracts 
                                         INNER JOIN Credit ON Contracts.id = Credit.id 
                                         INNER JOIN Projects ON Contracts.project_id = Projects.id 
@@ -2026,8 +2072,17 @@ namespace OpenCBS.Manager.Contracts
                     EconomicActivityId = r.GetInt("activity_id"),
                     FirstInstallmentDate = r.GetDateTime("preferred_first_installment_date"),
                     ScheduleType = (OLoanTypes) r.GetInt("schedule_type"),
-                    ScriptName = r.GetString("script_name")
-                };
+                    ScriptName = r.GetString("script_name"),
+
+                    RescheduleAccountNumber= r.GetString("reschedule_account"),
+                    AccruedPenaltyAccountNumber = r.GetString("accrued_penalty_account"),
+                    PrincipalAccountNumber = r.GetString("principal_account"),
+                    InterestAccruedButNotDueAccountNumber = r.GetString("interest_accrued_but_not_due_account"),
+                    InterestDueAccountNumber = r.GetString("interest_due_account"),
+                    InterestDueButNotReceivedAccountNumber = r.GetString("interest_due_but_not_received_account"),
+                    InterestIncomeAccountNumber = r.GetString("interest_income_account"),
+                    PenaltyIncomeAccountNumber = r.GetString("penalty_income_account"),
+            };
         }
 
         private void _SetLoanShareAmount(Loan pLoan, SqlTransaction pSqlTransac)

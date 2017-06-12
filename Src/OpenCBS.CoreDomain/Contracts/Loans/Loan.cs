@@ -119,6 +119,16 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
 
         public int? LoanCycle { get; set; }
 
+        //Accounts
+        public string RescheduleAccountNumber { get; set; }
+        public string PrincipalAccountNumber { get; set; }
+        public string InterestAccruedButNotDueAccountNumber { get; set; }
+        public string InterestDueAccountNumber { get; set; }
+        public string InterestDueButNotReceivedAccountNumber { get; set; }
+        public string InterestIncomeAccountNumber { get; set; }
+        public string AccruedPenaltyAccountNumber { get; set; }
+        public string PenaltyIncomeAccountNumber { get; set; }
+
         public OAnticipatedRepaymentPenaltiesBases AnticipatedTotalRepaymentPenaltiesBase { get; set; }
         public OAnticipatedRepaymentPenaltiesBases AnticipatedPartialRepaymentPenaltiesBase { get; set; }
 

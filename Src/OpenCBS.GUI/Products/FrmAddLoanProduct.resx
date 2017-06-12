@@ -6897,54 +6897,6 @@
   <data name="&gt;&gt;tabGuarantorsCollaterals.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="textBoxTaxValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 502</value>
-  </data>
-  <data name="textBoxTaxValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
-  <data name="textBoxTaxValue.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="textBoxTaxValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;textBoxTaxValue.Name" xml:space="preserve">
-    <value>textBoxTaxValue</value>
-  </data>
-  <data name="&gt;&gt;textBoxTaxValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTaxValue.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;textBoxTaxValue.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboBoxTaxOnPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 459</value>
-  </data>
-  <data name="comboBoxTaxOnPenaltyAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 24</value>
-  </data>
-  <data name="comboBoxTaxOnPenaltyAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="comboBoxTaxOnPenaltyAccount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Name" xml:space="preserve">
-    <value>comboBoxTaxOnPenaltyAccount</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Type" xml:space="preserve">
-    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnPenaltyAccount.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="comboBoxRescheduleAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 370</value>
   </data>
@@ -6964,7 +6916,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxRescheduleAccount.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="comboBoxPenaltyIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 327</value>
@@ -6985,7 +6937,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxPenaltyIncomeAccount.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="label62.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 59</value>
@@ -7009,7 +6961,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label62.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="label61.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 106</value>
@@ -7033,7 +6985,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label61.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="label60.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 194</value>
@@ -7057,7 +7009,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label60.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 239</value>
@@ -7081,7 +7033,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="comboBoxAccruedPenaltyAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 282</value>
@@ -7102,7 +7054,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxAccruedPenaltyAccount.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="label57.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 284</value>
@@ -7126,31 +7078,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="comboBoxTaxOnInterestsAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 413</value>
-  </data>
-  <data name="comboBoxTaxOnInterestsAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 24</value>
-  </data>
-  <data name="comboBoxTaxOnInterestsAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="comboBoxTaxOnInterestsAccount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Name" xml:space="preserve">
-    <value>comboBoxTaxOnInterestsAccount</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Type" xml:space="preserve">
-    <value>OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox, OpenCBS.ArchitectureV2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;comboBoxTaxOnInterestsAccount.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="label65.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7177,7 +7105,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label65.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="label56.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 327</value>
@@ -7201,7 +7129,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>9</value>
   </data>
   <data name="comboBoxInterestIncomeAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 239</value>
@@ -7222,34 +7150,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestIncomeAccount.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="label53.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 414</value>
-  </data>
-  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 23</value>
-  </data>
-  <data name="label53.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label53.Text" xml:space="preserve">
-    <value>Tax on Interests</value>
-  </data>
-  <data name="label53.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label53.Name" xml:space="preserve">
-    <value>label53</value>
-  </data>
-  <data name="&gt;&gt;label53.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>10</value>
   </data>
   <data name="comboBoxInterestDueButNoteReceivedAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 194</value>
@@ -7270,61 +7171,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestDueButNoteReceivedAccount.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="label63.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 502</value>
-  </data>
-  <data name="label63.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="label63.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label63.Text" xml:space="preserve">
-    <value>%</value>
-  </data>
-  <data name="label63.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label63.Name" xml:space="preserve">
-    <value>label63</value>
-  </data>
-  <data name="&gt;&gt;label63.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label63.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label63.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="label64.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 504</value>
-  </data>
-  <data name="label64.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="label64.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label64.Text" xml:space="preserve">
-    <value>Tax value</value>
-  </data>
-  <data name="label64.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label64.Name" xml:space="preserve">
-    <value>label64</value>
-  </data>
-  <data name="&gt;&gt;label64.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label64.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label64.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>11</value>
   </data>
   <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 152</value>
@@ -7348,7 +7195,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>12</value>
   </data>
   <data name="comboBoxInterestDueAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 149</value>
@@ -7369,34 +7216,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestDueAccount.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="label51.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 458</value>
-  </data>
-  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="label51.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label51.Text" xml:space="preserve">
-    <value>Tax on penalty</value>
-  </data>
-  <data name="label51.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label51.Name" xml:space="preserve">
-    <value>label51</value>
-  </data>
-  <data name="&gt;&gt;label51.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label51.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>13</value>
   </data>
   <data name="comboBoxPrincipalAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 59</value>
@@ -7417,7 +7237,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxPrincipalAccount.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>14</value>
   </data>
   <data name="comboBoxInterestAccruedButNotDueAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 103</value>
@@ -7438,55 +7258,7 @@
     <value>tabAccounts</value>
   </data>
   <data name="&gt;&gt;comboBoxInterestAccruedButNotDueAccount.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="label59.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 458</value>
-  </data>
-  <data name="label59.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="label59.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="label59.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label59.Name" xml:space="preserve">
-    <value>label59</value>
-  </data>
-  <data name="&gt;&gt;label59.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label59.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 458</value>
-  </data>
-  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="label50.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="label50.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label50.Name" xml:space="preserve">
-    <value>label50</value>
-  </data>
-  <data name="&gt;&gt;label50.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label50.Parent" xml:space="preserve">
-    <value>tabAccounts</value>
-  </data>
-  <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>15</value>
   </data>
   <data name="tabAccounts.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 36</value>

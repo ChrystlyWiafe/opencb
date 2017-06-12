@@ -401,8 +401,6 @@ namespace OpenCBS.GUI.Products
             this.labelMinPercGuar = new System.Windows.Forms.Label();
             this.checkBoxGuarCollRequired = new System.Windows.Forms.CheckBox();
             this.tabAccounts = new System.Windows.Forms.TabPage();
-            this.textBoxTaxValue = new System.Windows.Forms.TextBox();
-            this.comboBoxTaxOnPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxRescheduleAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxPenaltyIncomeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.label62 = new System.Windows.Forms.Label();
@@ -411,21 +409,14 @@ namespace OpenCBS.GUI.Products
             this.label58 = new System.Windows.Forms.Label();
             this.comboBoxAccruedPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.comboBoxTaxOnInterestsAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.label65 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.comboBoxInterestIncomeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.label53 = new System.Windows.Forms.Label();
             this.comboBoxInterestDueButNoteReceivedAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.comboBoxInterestDueAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.label51 = new System.Windows.Forms.Label();
             this.comboBoxPrincipalAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxInterestAccruedButNotDueAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.radioButtonAmountCycle = new System.Windows.Forms.RadioButton();
             this.radioButtonSpecifiedAmount = new System.Windows.Forms.RadioButton();
@@ -2194,8 +2185,6 @@ namespace OpenCBS.GUI.Products
             // 
             // tabAccounts
             // 
-            this.tabAccounts.Controls.Add(this.textBoxTaxValue);
-            this.tabAccounts.Controls.Add(this.comboBoxTaxOnPenaltyAccount);
             this.tabAccounts.Controls.Add(this.comboBoxRescheduleAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
             this.tabAccounts.Controls.Add(this.label62);
@@ -2204,35 +2193,16 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.label58);
             this.tabAccounts.Controls.Add(this.comboBoxAccruedPenaltyAccount);
             this.tabAccounts.Controls.Add(this.label57);
-            this.tabAccounts.Controls.Add(this.comboBoxTaxOnInterestsAccount);
             this.tabAccounts.Controls.Add(this.label65);
             this.tabAccounts.Controls.Add(this.label56);
             this.tabAccounts.Controls.Add(this.comboBoxInterestIncomeAccount);
-            this.tabAccounts.Controls.Add(this.label53);
             this.tabAccounts.Controls.Add(this.comboBoxInterestDueButNoteReceivedAccount);
-            this.tabAccounts.Controls.Add(this.label63);
-            this.tabAccounts.Controls.Add(this.label64);
             this.tabAccounts.Controls.Add(this.label52);
             this.tabAccounts.Controls.Add(this.comboBoxInterestDueAccount);
-            this.tabAccounts.Controls.Add(this.label51);
             this.tabAccounts.Controls.Add(this.comboBoxPrincipalAccount);
             this.tabAccounts.Controls.Add(this.comboBoxInterestAccruedButNotDueAccount);
-            this.tabAccounts.Controls.Add(this.label59);
-            this.tabAccounts.Controls.Add(this.label50);
             resources.ApplyResources(this.tabAccounts, "tabAccounts");
             this.tabAccounts.Name = "tabAccounts";
-            // 
-            // textBoxTaxValue
-            // 
-            resources.ApplyResources(this.textBoxTaxValue, "textBoxTaxValue");
-            this.textBoxTaxValue.Name = "textBoxTaxValue";
-            this.textBoxTaxValue.TextChanged += new System.EventHandler(this.textBoxTaxValue_TextChanged);
-            // 
-            // comboBoxTaxOnPenaltyAccount
-            // 
-            this.comboBoxTaxOnPenaltyAccount.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxTaxOnPenaltyAccount, "comboBoxTaxOnPenaltyAccount");
-            this.comboBoxTaxOnPenaltyAccount.Name = "comboBoxTaxOnPenaltyAccount";
             // 
             // comboBoxRescheduleAccount
             // 
@@ -2277,12 +2247,6 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.label57, "label57");
             this.label57.Name = "label57";
             // 
-            // comboBoxTaxOnInterestsAccount
-            // 
-            this.comboBoxTaxOnInterestsAccount.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxTaxOnInterestsAccount, "comboBoxTaxOnInterestsAccount");
-            this.comboBoxTaxOnInterestsAccount.Name = "comboBoxTaxOnInterestsAccount";
-            // 
             // label65
             // 
             resources.ApplyResources(this.label65, "label65");
@@ -2299,26 +2263,11 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.comboBoxInterestIncomeAccount, "comboBoxInterestIncomeAccount");
             this.comboBoxInterestIncomeAccount.Name = "comboBoxInterestIncomeAccount";
             // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.Name = "label53";
-            // 
             // comboBoxInterestDueButNoteReceivedAccount
             // 
             this.comboBoxInterestDueButNoteReceivedAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestDueButNoteReceivedAccount, "comboBoxInterestDueButNoteReceivedAccount");
             this.comboBoxInterestDueButNoteReceivedAccount.Name = "comboBoxInterestDueButNoteReceivedAccount";
-            // 
-            // label63
-            // 
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.Name = "label63";
-            // 
-            // label64
-            // 
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.Name = "label64";
             // 
             // label52
             // 
@@ -2331,11 +2280,6 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.comboBoxInterestDueAccount, "comboBoxInterestDueAccount");
             this.comboBoxInterestDueAccount.Name = "comboBoxInterestDueAccount";
             // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.Name = "label51";
-            // 
             // comboBoxPrincipalAccount
             // 
             this.comboBoxPrincipalAccount.FormattingEnabled = true;
@@ -2347,16 +2291,6 @@ namespace OpenCBS.GUI.Products
             this.comboBoxInterestAccruedButNotDueAccount.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInterestAccruedButNotDueAccount, "comboBoxInterestAccruedButNotDueAccount");
             this.comboBoxInterestAccruedButNotDueAccount.Name = "comboBoxInterestAccruedButNotDueAccount";
-            // 
-            // label59
-            // 
-            resources.ApplyResources(this.label59, "label59");
-            this.label59.Name = "label59";
-            // 
-            // label50
-            // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.Name = "label50";
             // 
             // splitter2
             // 
@@ -2520,7 +2454,6 @@ namespace OpenCBS.GUI.Products
             this.groupBoxSepGuarColl.ResumeLayout(false);
             this.groupBoxSepGuarColl.PerformLayout();
             this.tabAccounts.ResumeLayout(false);
-            this.tabAccounts.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.entryFeeBindingSource)).EndInit();
@@ -2659,31 +2592,22 @@ namespace OpenCBS.GUI.Products
         private ColumnHeader ch2Rate;
         private ColumnHeader ch2MaxSum;
         private TabPage tabAccounts;
-        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxTaxOnPenaltyAccount;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxPenaltyIncomeAccount;
         private Label label60;
         private Label label58;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxAccruedPenaltyAccount;
         private Label label57;
-        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxTaxOnInterestsAccount;
         private Label label56;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxInterestIncomeAccount;
-        private Label label53;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxInterestDueButNoteReceivedAccount;
         private Label label52;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxInterestDueAccount;
-        private Label label51;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxPrincipalAccount;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxInterestAccruedButNotDueAccount;
-        private Label label59;
-        private Label label50;
-        private TextBox textBoxTaxValue;
         private Label label61;
         private Label label62;
         private ColumnHeader chAccountNumber;
         private ColumnHeader ch2AccountNumber;
-        private Label label63;
-        private Label label64;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxRescheduleAccount;
         private Label label65;
     }
