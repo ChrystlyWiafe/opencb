@@ -258,4 +258,7 @@
   <data name="SavingsDeposit.Text" xml:space="preserve">
     <value>Сберегательный вклад</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Ваши данные сохранены</value>
+  </data>
 </root>

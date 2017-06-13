@@ -343,6 +343,7 @@ namespace OpenCBS.GUI.UserControl
                     textBoxFatherName.Text = string.Format(_tempPerson.FatherName);
                 textBoxIdentificationData.Text = string.Format(_tempPerson.IdentificationData == null ? "" : _tempPerson.IdentificationData);
                 ResetImagesFlags();
+                MessageBox.Show(MultiLanguageStrings.GetString(Ressource.PersonUserControl, "Save"));
             }
             catch (OpenCBS.ExceptionsHandler.Exceptions.CustomFieldsExceptions.CustomFieldsAreNotFilledCorrectlyException)
             {

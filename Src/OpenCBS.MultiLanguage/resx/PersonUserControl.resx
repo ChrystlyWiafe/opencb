@@ -258,4 +258,7 @@
   <data name="deleteDoc.Text" xml:space="preserve">
     <value>Are you sure you want to delete the selected document?</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Your data is saved</value>
+  </data>
 </root>
