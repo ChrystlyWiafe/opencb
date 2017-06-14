@@ -15,48 +15,31 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 {
     public class EventInterceptorService
     {
-        private readonly Loan _loan;
-        private readonly int _loanId;
-        private readonly int _clientId;
-        private readonly int _branchId;
-        private readonly string _contractCode;
+        private readonly LoanDetails _loanDetails;
         private readonly CoreDomain.Events.Loan.Event _event;
         private readonly SqlTransaction _transaction;
-        private readonly string[] _repaymentTypes = {"RBLE", "RGLE", "APR", "ATR", "APTR"};
         private readonly LoanInterceptorService _loanInterceptorService;
 
         public EventInterceptorService(IDictionary<string, object> parameters)
         {
             try
             {
+                _event = (CoreDomain.Events.Loan.Event)parameters["Event"];
+                _transaction = (SqlTransaction)parameters["SqlTransaction"];
+
                 _loanInterceptorService = new LoanInterceptorService();
                 if (parameters.ContainsKey("Loan"))
                 {
-                    _loan = (Loan) parameters["Loan"];
-                    _loanId = _loan.Id;
-                    _clientId = _loan.Project.Client.Id;
-                    _branchId = _loan.Project.Client.Branch.Id;
-                    _contractCode = _loan.Code;
+                    var coreLoan = (Loan) parameters["Loan"];
+                    _loanDetails = new LoanDetails(coreLoan);
                 }
                 else
                 {
-                    if (!parameters.ContainsKey("Product") || !parameters.ContainsKey("LoanId") ||
-                        !parameters.ContainsKey("ClientId") || !parameters.ContainsKey("BranchId"))
-                        throw new OpenCbsException();
-                    
-                    _loanId = (int) parameters["LoanId"];
-                    _clientId = (int) parameters["ClientId"];
-                    _branchId = (int) parameters["BranchId"];
+                    var loanId = (int) parameters["LoanId"];
+                    _loanDetails = EventInterceptorData.GetLoanDetails(loanId, _transaction);
                 }
-
-
-                _contractCode = parameters.ContainsKey("ContractCode") && string.IsNullOrEmpty(_contractCode)
-                    ? (string) parameters["ContractCode"]
-                    : _contractCode;
-                _event = (CoreDomain.Events.Loan.Event) parameters["Event"];
-                _transaction = (SqlTransaction) parameters["SqlTransaction"];
             }
-            catch
+            catch(Exception ex)
             {
                 throw new OpenCbsException("Error while intialize interceptor parameters");
             }
@@ -84,10 +67,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     Amount = entry.Amount,
                     Description = entry.Description,
                     Date = _event.Date == new DateTime() ? TimeProvider.Now : _event.Date,
-                    ClientId = _clientId,
+                    ClientId = _loanDetails.ClientId,
                     User = user,
-                    Branch = new Branch {Id = _branchId},
-                    LoanId = _loanId,
+                    Branch = new Branch {Id = _loanDetails.BranchId},
+                    LoanId = _loanDetails.Id,
                     LoanEventId = _event.Id,
                     SavingEventId = 0,
                     IsManualEditable = false,
@@ -123,20 +106,20 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _loan.PrincipalAccountNumber },
+                        Debit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = string.Format("Commission for {0}" ,_contractCode),
+                        Description = string.Format("Commission for {0}" ,_loanDetails.ContractCode),
                         LoanEventId = disbursment.Id
                     });
                 }
 
                 list.Insert(0, new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = _loan.PrincipalAccountNumber },
+                    Debit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
                     Credit = new Account {AccountNumber = paymentMethodAccountNumber},
                     Amount = disbursment.Amount.Value - commissionsAmount,
-                    Description = "Loan disbursement for " + _contractCode,
+                    Description = "Loan disbursement for " + _loanDetails.ContractCode,
                     LoanEventId = disbursment.Id
                 });
             }
@@ -148,8 +131,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 var paymentMethodAccountNumber = repayment.PaymentMethod.AccountNumber;
 
                 var interestAccount = eEvent.Code == "RBLE"
-                    ? _loan.InterestDueButNotReceivedAccountNumber
-                    : _loan.InterestDueAccountNumber;
+                    ? _loanDetails.InterestDueButNotReceivedAccountNumber
+                    : _loanDetails.InterestDueAccountNumber;
 
 
                 if (repayment.Principal.Value > 0m)
@@ -157,9 +140,9 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
-                        Credit = new Account {AccountNumber = _loan.PrincipalAccountNumber },
+                        Credit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
                         Amount = repayment.Principal.Value,
-                        Description = "Repayment of principal for " + _contractCode,
+                        Description = "Repayment of principal for " + _loanDetails.ContractCode,
                         LoanEventId = repayment.Id
                     });
                 }
@@ -171,7 +154,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
                         Credit = new Account {AccountNumber = interestAccount},
                         Amount = repayment.Interests.Value,
-                        Description = "Repayment of interest for " + _contractCode,
+                        Description = "Repayment of interest for " + _loanDetails.ContractCode,
                         LoanEventId = repayment.Id
                     });
                 }
@@ -181,9 +164,9 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account { AccountNumber = paymentMethodAccountNumber },
-                        Credit = new Account { AccountNumber = _loan.PenaltyIncomeAccountNumber },
+                        Credit = new Account { AccountNumber = _loanDetails.PenaltyIncomeAccountNumber },
                         Amount = repayment.Penalties.Value,
-                        Description = "Repayment of penalty for " + _contractCode,
+                        Description = "Repayment of penalty for " + _loanDetails.ContractCode,
                         LoanEventId = repayment.Id
                     });
                 }
@@ -197,7 +180,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 var installments =
                     ServicesProvider.GetInstance()
                         .GetContractServices()
-                        .GetInstallments(_loanId, _transaction);
+                        .GetInstallments(_loanDetails.Id, _transaction);
 
                 var installment =
                     installments.First(
@@ -210,29 +193,29 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 list.Add(
                     new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _loan.InterestAccruedButNotDueAccountNumber },
-                        Credit = new Account {AccountNumber = _loan.InterestIncomeAccountNumber},
+                        Debit = new Account {AccountNumber = _loanDetails.InterestAccruedButNotDueAccountNumber },
+                        Credit = new Account {AccountNumber = _loanDetails.InterestIncomeAccountNumber},
                         Amount = accrual.Interest.Value,
-                        Description = "Interest accrual for " + _contractCode,
+                        Description = "Interest accrual for " + _loanDetails.ContractCode,
                         LoanEventId = accrual.Id
                     });
 
                 if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
                 {
-                    var account = new Account {AccountNumber = _loan.InterestAccruedButNotDueAccountNumber};
+                    var account = new Account {AccountNumber = _loanDetails.InterestAccruedButNotDueAccountNumber};
                     var balance =
                         ServicesProvider.GetInstance()
                             .GetBookingService()
-                            .GetAccountBalanceByLoanId(accrual.Date, account, _loanId, _transaction);
+                            .GetAccountBalanceByLoanId(accrual.Date, account, _loanDetails.Id, _transaction);
                     balance += accrual.Interest.Value;
 
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = _loan.InterestDueAccountNumber },
-                            Credit = new Account {AccountNumber = _loan.InterestAccruedButNotDueAccountNumber },
+                            Debit = new Account {AccountNumber = _loanDetails.InterestDueAccountNumber },
+                            Credit = new Account {AccountNumber = _loanDetails.InterestAccruedButNotDueAccountNumber },
                             Amount = balance,
-                            Description = "Interest due for " + _contractCode,
+                            Description = "Interest due for " + _loanDetails.ContractCode,
                             LoanEventId = accrual.Id
                         });
                 }
@@ -243,10 +226,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = _loan.InterestDueButNotReceivedAccountNumber },
-                            Credit = new Account {AccountNumber = _loan.InterestDueAccountNumber },
+                            Debit = new Account {AccountNumber = _loanDetails.InterestDueButNotReceivedAccountNumber },
+                            Credit = new Account {AccountNumber = _loanDetails.InterestDueAccountNumber },
                             Amount = amount,
-                            Description = "Interest for " + _contractCode,
+                            Description = "Interest for " + _loanDetails.ContractCode,
                             LoanEventId = accrual.Id
                         });
                 }
@@ -259,10 +242,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 list.Add(new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = _loan.AccruedPenaltyAccountNumber },
-                    Credit = new Account {AccountNumber = _loan.PenaltyIncomeAccountNumber},
+                    Debit = new Account {AccountNumber = _loanDetails.AccruedPenaltyAccountNumber },
+                    Credit = new Account {AccountNumber = _loanDetails.PenaltyIncomeAccountNumber},
                     Amount = accrual.Penalty.Value,
-                    Description = "Penalty accrual for " + _contractCode,
+                    Description = "Penalty accrual for " + _loanDetails.ContractCode,
                     LoanEventId = accrual.Id
                 });
             }
@@ -274,17 +257,19 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 list.Add(new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = _loan.RescheduleAccountNumber},
-                    Credit = new Account {AccountNumber = _loan.PrincipalAccountNumber},
+                    Debit = new Account {AccountNumber = _loanDetails.RescheduleAccountNumber},
+                    Credit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber},
                     Amount = rescheduleEvent.Amount.Value,
-                    Description = "Reschedule for " + _contractCode,
+                    Description = "Reschedule for " + _loanDetails.ContractCode,
                     LoanEventId = rescheduleEvent.Id
                 });
 
-                _loanInterceptorService.SetPrincipalAccount(_loanId, _loan.RescheduleAccountNumber, _transaction);
+                _loanInterceptorService.SetPrincipalAccount(_loanDetails.Id, _loanDetails.RescheduleAccountNumber, _transaction);
             }
 
             return list;
         }
+
+        private readonly string[] _repaymentTypes = { "RBLE", "RGLE", "APR", "ATR", "APTR" };
     }
 }
