@@ -45,7 +45,21 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 @principalAccount = loan.Product.PrincipalAccountNumber,
                 @rescheduleAccount = loan.Product.RescheduleAccountNumber
             }, transaction);
+        }
 
+        public void SetPrincipalAccount(int loanId,string accountNumber,IDbTransaction transaction)
+        {
+            const string query =
+            @"
+                UPDATE
+	                dbo.Credit
+                SET
+	                principal_account = @principalAccountNumber
+            ";
+            transaction.Connection.Execute(query, new
+            {
+                @principalAccount = accountNumber
+            }, transaction);
         }
     }
 }

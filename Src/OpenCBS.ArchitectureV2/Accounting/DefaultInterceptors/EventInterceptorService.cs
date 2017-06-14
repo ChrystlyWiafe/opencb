@@ -7,7 +7,6 @@ using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Events;
 using OpenCBS.CoreDomain.Events.Loan;
-using OpenCBS.CoreDomain.Products;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.Services;
 using OpenCBS.Shared;
@@ -24,11 +23,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         private readonly CoreDomain.Events.Loan.Event _event;
         private readonly SqlTransaction _transaction;
         private readonly string[] _repaymentTypes = {"RBLE", "RGLE", "APR", "ATR", "APTR"};
+        private readonly LoanInterceptorService _loanInterceptorService;
 
         public EventInterceptorService(IDictionary<string, object> parameters)
         {
             try
             {
+                _loanInterceptorService = new LoanInterceptorService();
                 if (parameters.ContainsKey("Loan"))
                 {
                     _loan = (Loan) parameters["Loan"];
@@ -264,6 +265,23 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     Description = "Penalty accrual for " + _contractCode,
                     LoanEventId = accrual.Id
                 });
+            }
+
+            //Reschedule Event
+            else if (eEvent.Code == "ROLE")
+            {
+                var rescheduleEvent = (RescheduleLoanEvent)eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account {AccountNumber = _loan.RescheduleAccountNumber},
+                    Credit = new Account {AccountNumber = _loan.PrincipalAccountNumber},
+                    Amount = rescheduleEvent.Amount.Value,
+                    Description = "Reschedule for " + _contractCode,
+                    LoanEventId = rescheduleEvent.Id
+                });
+
+                _loanInterceptorService.SetPrincipalAccount(_loanId, _loan.RescheduleAccountNumber, _transaction);
             }
 
             return list;
