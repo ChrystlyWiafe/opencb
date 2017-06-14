@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
+using System.Data;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain;
@@ -17,12 +15,10 @@ namespace OpenCBS.Fusebox
 {
     public class Fusebox
     {
-        private const string Source = "OpenCBS Fusebox";
-        private const string Log = "Application";
-        private const string ExtensionsPath = "Extensions";
-
         private BackgroundWorker _bw;
         private readonly Container _container;
+        private List<FuseBoxLogEntry> _logEntries;
+        private string _currentFuseBoxEntryName;
         public event ProgressChangedEventHandler LoansProgressChanged;
         public event EventHandler FuseChanged;
         public event EventHandler FuseboxComplited;
@@ -30,6 +26,31 @@ namespace OpenCBS.Fusebox
         public Fusebox()
         {
             _container = GetFusesContainer();
+            InitializeBackGroundWorker();
+            _logEntries = new List<FuseBoxLogEntry>();
+        }
+
+        private Container GetFusesContainer()
+        {
+            var container = new Container();
+            container.Configure(x =>
+            {
+                x.Scan(scanner =>
+                {
+                    scanner.WithDefaultConventions();
+                    scanner.TheCallingAssembly();
+                    if (Directory.Exists(ExtensionsPath))
+                    {
+                        scanner.AssembliesFromPath(ExtensionsPath);
+                    }
+                    scanner.LookForRegistries();
+                });
+            });
+            return container;
+        }
+
+        private void InitializeBackGroundWorker()
+        {
             _bw = new BackgroundWorker()
             {
                 WorkerSupportsCancellation = true,
@@ -37,116 +58,12 @@ namespace OpenCBS.Fusebox
             };
         }
 
-        public Container Container { get { return _container; } }
-
-        public Container GetFusesContainer()
-        {
-            if (!EventLog.SourceExists(Source))
-            {
-                EventLog.CreateEventSource(Source, Log);
-            }
-
-            EventLog.WriteEntry(Source,
-                "Fusebox launched in " + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-
-            var container = new Container();
-            try
-            {
-                container.Configure(x =>
-                {
-                    x.Scan(scanner =>
-                    {
-                        scanner.WithDefaultConventions();
-                        scanner.TheCallingAssembly();
-                        if (Directory.Exists(ExtensionsPath))
-                        {
-                            scanner.AssembliesFromPath(ExtensionsPath);
-                        }
-                        scanner.LookForRegistries();
-                    });
-
-                });
-            }
-            catch (Exception e)
-            {
-                EventLog.WriteEntry(Source, "Failed to initialize container:\r\n\r\n" + e.Message,
-                    EventLogEntryType.Error);
-            }
-            return container;
-        }
-
-
-        private void Execute()
-        {
-            var logEntries = new List<FuseBoxLogEntry>();
-            FuseBoxLogEntry currentLogEntry = null;
-            var connection = DatabaseConnection.GetConnection();
-            var transaction = connection.BeginTransaction();
-            try
-            {
-                var routines = _container.GetAllInstances<IAdvancedFuse>().OrderBy(x => x.Order);
-                var index = 0;
-                foreach (var routine in routines)
-                {
-                    OnFuseChanged(new FuseChangedEventArgs
-                    {
-                        FuseName = routine.FuseName,
-                        PercentageValue = index * 100 / (routines.Count())
-                    });
-                    currentLogEntry = new FuseBoxLogEntry();
-                    currentLogEntry.FuseName = routine.GetType().Name;
-                    currentLogEntry.StartedAt = DateTime.Now;
-                    routine.ProgressChangedEventHandler += (sender, args) =>
-                    {
-                        if (_bw.CancellationPending)
-                        {
-                            Thread.CurrentThread.Abort();
-                        }
-                    };
-                    routine.ProgressChangedEventHandler += LoansProgressChanged;
-                    routine.Activate(transaction);
-
-                    currentLogEntry.EndedAt = DateTime.Now;
-                    logEntries.Add(currentLogEntry);
-
-                    index++;
-                }
-                transaction.Commit();
-
-                OnFuseChanged(new FuseChangedEventArgs
-                {
-                    FuseName = "Complete",
-                    PercentageValue = 100
-                });
-                OnFuseComplited();
-            }
-            catch (Exception error)
-            {
-                if (currentLogEntry != null)
-                {
-                    currentLogEntry.EndedAt = DateTime.Now;
-                    currentLogEntry.ErrorMessage = error.Message;
-                    currentLogEntry.StackTrace = error.StackTrace;
-                    logEntries.Add(currentLogEntry);
-                }
-                transaction.Rollback();
-
-                EventLog.WriteEntry(Source, "Error while running fuses:\r\n\r\n" + error.Message,
-                    EventLogEntryType.Error);
-            }
-            finally
-            {
-                Logger.Log(logEntries, connection);
-                connection.Dispose();
-            }
-        }
-
         public void Run()
         {
-            RefreshBackGroundWorker();
+            InitializeBackGroundWorker();
             _bw.DoWork += (obj, args) =>
             {
-                Execute();
+                TryExecute();
             };
             _bw.RunWorkerCompleted += (obj, args) =>
             {
@@ -155,36 +72,121 @@ namespace OpenCBS.Fusebox
             _bw.RunWorkerAsync();
         }
 
-        public void Stop()
+        private void TryExecute()
         {
-            _bw.CancelAsync();
+            var connection = DatabaseConnection.GetConnection();
+            var transaction = connection.BeginTransaction();
+            try
+            {
+                ExecuteFuses(transaction);
+                ExecuteAdvancedFuses(transaction);
+
+                transaction.Commit();
+            }
+            catch (Exception error)
+            {
+                _logEntries.Add(GetErrorFuseBoxLogEntry(error));
+                transaction.Rollback();
+            }
+            finally
+            {
+                Logger.Log(_logEntries, connection);
+                connection.Dispose();
+            }
         }
 
-        private void RefreshBackGroundWorker()
+        private void ExecuteFuses(IDbTransaction transaction)
         {
-            _bw = new BackgroundWorker()
+            var routines = _container.GetAllInstances<IFuse>().OrderBy(x => x.Order).ToArray();
+            var index = 0;
+            foreach (var routine in routines)
             {
-                WorkerSupportsCancellation = true,
-                WorkerReportsProgress = true
+                index++;
+
+                _currentFuseBoxEntryName = routine.GetType().FullName;
+                OnFuseChanged(new FuseChangedEventArgs(_currentFuseBoxEntryName, GetPercentageValue(index, routines.Length)));
+
+                routine.Activate(transaction);
+            }
+            OnFuseComplited();
+        }
+
+        private void ExecuteAdvancedFuses(IDbTransaction transaction)
+        {
+            var routines = _container.GetAllInstances<IAdvancedFuse>().OrderBy(x => x.Order).ToArray();
+            var index = 0;
+            foreach (var routine in routines)
+            {
+                index++;
+                _currentFuseBoxEntryName = routine.GetType().FullName;
+
+                OnFuseChanged(new FuseChangedEventArgs(routine.FuseName, GetPercentageValue(index, routines.Length)));
+
+                SetAdvancedFusesEvents(routine);
+
+                routine.Activate(transaction);
+
+                _logEntries.Add(GetDefaultFuseBoxLogEntry());
+            }
+            OnFuseComplited();
+        }
+
+        private void SetAdvancedFusesEvents(IAdvancedFuse routine)
+        {
+            routine.ProgressChangedEventHandler += (sender, args) =>
+            {
+                if (_bw.CancellationPending)
+                    Thread.CurrentThread.Abort();
             };
+            routine.ProgressChangedEventHandler += LoansProgressChanged;
+        }
+
+        private int GetPercentageValue(int value, int max)
+        {
+            return value * 100 / max;
         }
 
         protected virtual void OnFuseChanged(FuseChangedEventArgs e)
         {
             EventHandler handler = FuseChanged;
             if (handler != null)
-            {
                 handler(this, e);
-            }
         }
 
         protected virtual void OnFuseComplited()
         {
             EventHandler handler = FuseboxComplited;
             if (handler != null)
-            {
                 handler(this, new EventArgs());
-            }
         }
+
+        private FuseBoxLogEntry GetDefaultFuseBoxLogEntry()
+        {
+            return new FuseBoxLogEntry
+            {
+                FuseName = _currentFuseBoxEntryName,
+                StartedAt = DateTime.Now,
+                EndedAt = DateTime.Now
+            };
+        }
+
+        private FuseBoxLogEntry GetErrorFuseBoxLogEntry(Exception error)
+        {
+            return new FuseBoxLogEntry
+            {
+                FuseName = _currentFuseBoxEntryName??"",
+                StartedAt = DateTime.Now,
+                EndedAt = DateTime.Now,
+                ErrorMessage = error.Message,
+                StackTrace = error.StackTrace
+            };
+        }
+
+        public void Stop()
+        {
+            _bw.CancelAsync();
+        }
+
+        private const string ExtensionsPath = "Extensions";
     }
 }
