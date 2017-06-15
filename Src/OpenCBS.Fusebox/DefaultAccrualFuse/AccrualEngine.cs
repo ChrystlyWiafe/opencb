@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
+using System.Windows.Forms;
 using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Events;
@@ -178,17 +179,21 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             var installments = loan.GetLateInstallments(date);
             if (installments.Count == 0) return;
 
-            //var amount = loan.GetDuePrincipal(date) + loan.GetDueInterest(date);
-            //amount = Math.Round(amount * 0.36m / 365);
-            //if (amount == 0) return;
-
             var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
                 foreach (var installment in installments)
                 {
-                    var amount = installment.Principal + installment.Interest - installment.PaidPrincipal - installment.PaidInterest;
-                    amount = Math.Round(amount * 0.36m / loan.GetDaysInYear(), 2);
+                    var duePrincipal = loan.GetDuePrincipal(date);
+                    var dueInterest = loan.GetDueInterest(date);
+                    var plannedOlb = loan.GetOlb();
+
+                    var penaltyOnAmount = Math.Round(loan.Amount * loan.NonRepaymentPenaltiesBasedOnInitialAmount, 2);
+                    var penaltyOnOlb = Math.Round(plannedOlb * loan.NonRepaymentPenaltiesBasedOnOlb, 2);
+                    var penaltyOnOverdueInterest = Math.Round(dueInterest * loan.NonRepaymentPenaltiesBasedOnOverdueInterest, 2);
+                    var penaltyOnOverduePrincipal = Math.Round(duePrincipal * loan.NonRepaymentPenaltiesBasedOnOverduePrincipal, 2);
+
+                    var amount = penaltyOnAmount + penaltyOnOlb + penaltyOnOverdueInterest + penaltyOnOverduePrincipal;
                     var query = @"
                         insert into dbo.ContractEvents
                         (

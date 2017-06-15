@@ -57,6 +57,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         private class LoanRow
         {
             public int Id { get; set; }
+            public decimal Amount { get; set; }
             public string Code { get; set; }
             public DateTime LoanStartDate { get; set; }
             public DateTime StartDate { get; set; }
@@ -72,6 +73,11 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             public decimal InterestRate { get; set; }
             public int ProductId { get; set; }
             public int BranchId { get; set; }
+            public decimal NonRepaymentPenaltiesBasedOnOverduePrincipal { get; set; }
+            public decimal NonRepaymentPenaltiesBasedOnInitialAmount { get; set; }
+            public decimal NonRepaymentPenaltiesBasedOnOlb { get; set; }
+            public decimal NonRepaymentPenaltiesBasedOnOverdueInterest { get; set; }
+
         }
 
         public static AccrualLoan GetLoan(DateTime date, int loanId, IDbTransaction tx = null)
@@ -82,6 +88,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 select
 	                i.contract_id Id,
                     c.contract_code Code,
+                    cr.amount Amount,
                     c.start_date LoanStartDate,
 	                i.number Number,
 	                i.start_date StartDate,
@@ -98,6 +105,10 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
 	                end TrancheFirstRepaymentDate,
                     cr.package_id ProductId,
                     ti.branch_id BranchId,
+                    cr.non_repayment_penalties_based_on_overdue_principal NonRepaymentPenaltiesBasedOnOverduePrincipal,
+                    cr.non_repayment_penalties_based_on_initial_amount NonRepaymentPenaltiesBasedOnInitialAmount,
+                    cr.non_repayment_penalties_based_on_olb NonRepaymentPenaltiesBasedOnOlb,
+                    cr.non_repayment_penalties_based_on_overdue_interest NonRepaymentPenaltiesBasedOnOverdueInterest,
                     p.interest_scheme InterestScheme                    
                 from 
 	                dbo.InstallmentSnapshotForLoan(@_date, @_loanId) i
@@ -140,7 +151,10 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 {
                     if (loan == null)
                     {
-                        loan = new AccrualLoan(row.Id, row.InterestRate, row.Code, row.LoanStartDate, row.ProductId, row.BranchId,row.InterestScheme);
+                        loan = new AccrualLoan(row.Id, row.Amount, row.InterestRate, row.Code, row.LoanStartDate,
+                            row.ProductId, row.BranchId, row.InterestScheme, row.NonRepaymentPenaltiesBasedOnOverduePrincipal,
+                            row.NonRepaymentPenaltiesBasedOnInitialAmount, row.NonRepaymentPenaltiesBasedOnOlb,
+                            row.NonRepaymentPenaltiesBasedOnOverdueInterest);
                     }
                     var installment = new AccrualInstallment();
                     installment.StartDate = row.StartDate;

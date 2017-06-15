@@ -10,7 +10,10 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
     {
         private readonly List<AccrualInstallment> _installments;
 
-        public AccrualLoan(int id, decimal interestRate, string code, DateTime startDate, int productId, int branchId,OInterestScheme interestScheme)
+        public AccrualLoan(int id,decimal amount, decimal interestRate, string code, DateTime startDate, int productId, int branchId,
+            OInterestScheme interestScheme, decimal nonRepaymentPenaltiesBasedOnOverduePrincipal,
+            decimal nonRepaymentPenaltiesBasedOnInitialAmount, decimal nonRepaymentPenaltiesBasedOnOlb,
+            decimal nonRepaymentPenaltiesBasedOnOverdueInterest)
         {
             _installments = new List<AccrualInstallment>();
             Id = id;
@@ -20,23 +23,13 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             ProductId = productId;
             BranchId = branchId;
             InterestScheme = interestScheme;
+            NonRepaymentPenaltiesBasedOnOlb = nonRepaymentPenaltiesBasedOnOlb;
+            NonRepaymentPenaltiesBasedOnInitialAmount = nonRepaymentPenaltiesBasedOnInitialAmount;
+            NonRepaymentPenaltiesBasedOnOverdueInterest = nonRepaymentPenaltiesBasedOnOverdueInterest;
+            NonRepaymentPenaltiesBasedOnOverduePrincipal = nonRepaymentPenaltiesBasedOnOverduePrincipal;
+            Amount = amount;
         }
 
-        public AccrualLoan(int id, decimal interestRate, string code, DateTime loanStartDate, int clientId, int branchId,
-                    int productId, int nbOfInstallments, string clientType,OInterestScheme interestScheme)
-        {
-            _installments = new List<AccrualInstallment>();
-            Id = id;
-            InterestRate = interestRate;
-            Code = code;
-            StartDate = loanStartDate;
-            ClientId = clientId;
-            BranchId = branchId;
-            ProductId = productId;
-            NbOfInstallments = nbOfInstallments;
-            ClientType = clientType;
-            InterestScheme = interestScheme;
-        }
         public string ClientType { get; private set; }
 
         public int NbOfInstallments { get; set; }
@@ -52,6 +45,10 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
 
         public decimal InterestRate { get; private set; }
         public OInterestScheme? InterestScheme { get; private set; }
+        public decimal NonRepaymentPenaltiesBasedOnOverduePrincipal { get; private set; }
+        public decimal NonRepaymentPenaltiesBasedOnInitialAmount { get; private set; }
+        public decimal NonRepaymentPenaltiesBasedOnOlb { get; private set; }
+        public decimal NonRepaymentPenaltiesBasedOnOverdueInterest { get; private set; }
 
         public void AddInstallment(AccrualInstallment installment)
         {
