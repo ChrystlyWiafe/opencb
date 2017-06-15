@@ -43,6 +43,7 @@ using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.Enums;
 using OpenCBS.Extensions;
 using OpenCBS.Fusebox;
+using OpenCBS.Fusebox.Fusebox;
 using OpenCBS.GUI.Accounting;
 using OpenCBS.GUI.AuditTrail;
 using OpenCBS.GUI.Clients;
