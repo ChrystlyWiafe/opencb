@@ -959,5 +959,22 @@ namespace OpenCBS.GUI.Clients
                 Extensions.Add(tab);
             }
         }
+        private void tbName_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbName.Text != String.Empty)
+                    if (ServicesProvider.GetInstance().GetClientServices().CheckIfVillageNameExists(
+                        tbName.Text, _village.Id))
+                        throw new OpenCbsTiersSaveException(OpenCbsTiersSaveExceptionEnum.CheckIfVillageNameUsed);
+                _village.Name = ServicesHelper.CheckTextBoxText(tbName.Text);
+            }
+            catch (Exception ex)
+            {
+                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                tbName.Text = string.Empty;
+            }
+
+        }
     }
 }

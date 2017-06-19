@@ -1382,4 +1382,7 @@ Enter another account number.
   <data name="OpenCbsCorporateExceptionDistricIsEmpty.Text" xml:space="preserve">
     <value />
   </data>
+  <data name="OTE43.Text" xml:space="preserve">
+    <value>This Village Bank name  is already used</value>
+  </data>
 </root>

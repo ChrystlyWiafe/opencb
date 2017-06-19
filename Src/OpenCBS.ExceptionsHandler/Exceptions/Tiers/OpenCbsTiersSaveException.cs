@@ -274,7 +274,10 @@ namespace OpenCBS.ExceptionsHandler
                 case OpenCbsTiersSaveExceptionEnum.IncorrectMobilePhoneFormat:
                     returned = "IncorrectMobilePhoneFormat.Text";
                     break;
-			}
+                case OpenCbsTiersSaveExceptionEnum.CheckIfVillageNameUsed:
+                    returned = "OTE43.Text";
+                    break;
+            }
 			return returned;
 		}
 	}
@@ -320,6 +323,7 @@ namespace OpenCBS.ExceptionsHandler
         NoEnoughPersonsInThisGroup,
         TooMuchPersonsInThisGroup,
         IdentificationDataAlreadyUsed,
+        CheckIfVillageNameUsed,
         NameAlreadyUsedInDistrict,
         LoanCycleIsEmpty,
         IdentificationDataDoesntMatch,

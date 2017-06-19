@@ -195,6 +195,7 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.tbName, "tbName");
             this.panelNSGDetails.SetColumnSpan(this.tbName, 2);
             this.tbName.Name = "tbName";
+            this.tbName.Leave += new System.EventHandler(this.tbName_Leave);
             // 
             // lblDate
             // 

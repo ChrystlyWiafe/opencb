@@ -1415,6 +1415,21 @@ namespace OpenCBS.Manager.Clients
             }
         }
 
+        public bool IsThisVillageNameUsed(string villageName, int pId)
+        {
+            string q = pId == 0 ? "SELECT COUNT(*) FROM Villages WHERE name = @data" : "SELECT COUNT(*) FROM Villages WHERE name = @data AND id <> @id";
+
+            using (SqlConnection conn = GetConnection())
+            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+            {
+                c.AddParam("@data", villageName);
+                if (pId != 0)
+                    c.AddParam("@id", pId);
+
+                int count = (int)c.ExecuteScalar();
+                return (count > 0);
+            }
+        }
         public List<Person> IsThereSimilardentificationDataAlreadyUsed(string pIdentificationData, int pID)
         {
             string beginning = pIdentificationData;
