@@ -4,7 +4,7 @@ using OpenCBS.Fusebox.Interfaces;
 
 namespace OpenCBS.Fusebox.DefaultTransitFuse
 {
-    public class LateInterestTransitionFuse:IAdvancedFuse
+    public class DefaultLateInterestTransitionFuse:IAdvancedFuse
     {
         public void Activate(IDbTransaction transaction)
         {

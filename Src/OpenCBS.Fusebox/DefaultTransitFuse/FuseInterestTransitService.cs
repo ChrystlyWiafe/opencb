@@ -26,9 +26,11 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
         public void RunInterestTransit()
         {
             var date = TimeProvider.Today;
-            var index = 1;
+            var index = 0;
             foreach (var id in _activeLoanIds)
             {
+                index++;
+
                 var lateInterest = GetLateInterest(id, date);
                 var currentInterest = GetCurrentInterest(id, date);
                 var loanDetails = GetLoanDetailsForTransitInterest(id);
@@ -56,14 +58,14 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 
             return new Booking
             {
-                Debit = new Account { AccountNumber = model.InterestAccruedButNotDueAccountNumber},
+                Debit = new Account {AccountNumber = model.InterestAccruedButNotDueAccountNumber},
                 Credit = new Account {AccountNumber = model.InterestDueAccountNuber},
                 Amount = amount,
-                Description = "Interest due but not received for "+model.ContractCode,
+                Description = "Interest due but not received for " + model.ContractCode,
                 Date = TimeProvider.Now,
                 ClientId = model.ClientId,
                 User = user,
-                Branch = new Branch { Id = model.BranchId },
+                Branch = new Branch {Id = model.BranchId},
                 LoanId = model.LoanId,
                 SavingEventId = 0,
                 IsManualEditable = false
@@ -129,7 +131,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 	                    AND @_date >= CAST(i.start_date AS DATE)
 	                    AND @_date <= CAST(i.expected_date AS DATE)
                 ";
-            return _transaction.Connection.Query<decimal?>(query, new { date, loanId }, _transaction).FirstOrDefault() ??
+            return _transaction.Connection.Query<decimal?>(query, new {date, loanId}, _transaction).FirstOrDefault() ??
                    0m;
         }
        private decimal GetCurrentInterest(int loanId, DateTime date)

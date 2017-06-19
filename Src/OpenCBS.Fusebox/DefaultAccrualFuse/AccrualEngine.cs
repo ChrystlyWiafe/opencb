@@ -218,7 +218,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                         ";
                 var eventId =
                     connection.Query<int>(query,
-                        new {loanId = loan.Id, @date = new DateTime(date.Year, date.Month, date.Day, -11, 0, 0)}, tx)
+                        new {loanId = loan.Id, @date = new DateTime(date.Year, date.Month, date.Day, 1, 0, 0)}, tx)
                         .First();
 
                 query = @"
