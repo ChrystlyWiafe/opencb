@@ -23,6 +23,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                    , cr.accrued_penalty_account AccruedPenaltyAccountNumber
 	                    , cr.penalty_income_account PenaltyIncomeAccountNumber
 	                    , cr.reschedule_account RescheduleAccountNumber
+                        , cr.late_principal_account LatePrincipalAccount
+                        , cr.unrecoverable_principal_account UnrecoverablePrincipalAccount
                     FROM
 	                    dbo.Contracts c
                     LEFT JOIN

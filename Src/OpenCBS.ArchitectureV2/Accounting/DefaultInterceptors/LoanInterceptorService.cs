@@ -33,6 +33,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                , penalty_income_account = @penaltyIncomeAccount
 	                , principal_account = @principalAccount
 	                , reschedule_account = @rescheduleAccount
+                    , late_principal_account = @latePrincipalAccount
+                    , unrecoverable_principal_account = @unrecoverablePrincipalAccount
             ";
             transaction.Connection.Execute(query, new
             {
@@ -43,6 +45,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 @interestIncomeAccount = loan.Product.InterestIncomeAccountNumber,
                 @penaltyIncomeAccount = loan.Product.PenaltyIncomeAccountNumber,
                 @principalAccount = loan.Product.PrincipalAccountNumber,
+                @latePrincipalAccount = loan.Product.LatePrincipalAccountNumber,
+                @unrecoverablePrincipalAccount = loan.Product.UnrecoverablePrincipalAccountNumber,
                 @rescheduleAccount = loan.Product.RescheduleAccountNumber
             }, transaction);
         }

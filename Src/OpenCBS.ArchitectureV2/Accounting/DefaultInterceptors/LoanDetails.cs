@@ -19,6 +19,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             InterestIncomeAccountNumber = loan.InterestIncomeAccountNumber;
             AccruedPenaltyAccountNumber = loan.AccruedPenaltyAccountNumber;
             RescheduleAccountNumber = loan.RescheduleAccountNumber;
+            LatePrincipalAccountnumber = loan.LatePrincipalAccountNumber;
+            UnrecoverablePrincipalAccountNumber = loan.UnrecoverablePrincipalAccountNumber;
         }
 
         public int Id { get; set; }
@@ -33,5 +35,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         public string InterestIncomeAccountNumber { get; set; }
         public string AccruedPenaltyAccountNumber { get; set; }
         public string RescheduleAccountNumber { get; set; }
+        public string LatePrincipalAccountnumber { get; set; }
+        public string UnrecoverablePrincipalAccountNumber { get; set; }
     }
 }

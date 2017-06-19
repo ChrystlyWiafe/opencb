@@ -43,9 +43,27 @@ IF col_length('dbo.Packages','reschedule_account') IS NULL
     END
 GO
 
-IF col_length('dbo.Credit','reschedule_account') IS NULL
+IF col_length('dbo.Packages','late_principal_account') IS NULL
     BEGIN
-		ALTER TABLE dbo.Credit ADD reschedule_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+		ALTER TABLE dbo.Packages ADD late_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','unrecoverable_principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD unrecoverable_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Credit','late_principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Credit ADD late_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Credit','unrecoverable_principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Credit ADD unrecoverable_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
 

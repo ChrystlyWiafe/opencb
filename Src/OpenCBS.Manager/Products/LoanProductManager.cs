@@ -160,6 +160,8 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@scriptName", package.ScriptName);
 
             c.AddParam("@rescheduleAccount", package.RescheduleAccountNumber);
+            c.AddParam("@latePrincipalAccount", package.LatePrincipalAccountNumber);
+            c.AddParam("@unrecoverablePrincipalAccount", package.UnrecoverablePrincipalAccountNumber);
             c.AddParam("@principalAccount", package.PrincipalAccountNumber);
             c.AddParam("@interestAccruedButNotDueAccount", package.InterestAccruedButNotDueAccountNumber);
             c.AddParam("@interestDueAccount", package.InterestDueAccountNumber);
@@ -255,6 +257,8 @@ namespace OpenCBS.Manager.Products
                 ,[interest_scheme]
                 ,[script_name]
                 ,[reschedule_account]
+                ,[late_principal_account]
+                ,[unrecoverable_principal_account]
                 ,[principal_account]
                 ,[interest_accrued_but_not_due_account]
                 ,[interest_due_account]
@@ -451,6 +455,8 @@ namespace OpenCBS.Manager.Products
                 ,[interest_scheme] = @interestScheme
                 ,[script_name] = @scriptName
                 ,[reschedule_account] = @rescheduleAccount
+                ,[late_principal_account] = @latePrincipalAccount
+                ,[unrecoverable_principal_account] = @unrecoverablePrincipalAccount
                 ,[principal_account] = @principalAccount
                 ,[interest_accrued_but_not_due_account] = @interestAccruedButNotDueAccount
                 ,[interest_due_account] = @interestDueAccount
@@ -1214,6 +1220,8 @@ namespace OpenCBS.Manager.Products
             package.PenaltyIncomeAccountNumber = r.GetString("penalty_income_account");
             package.PrincipalAccountNumber = r.GetString("principal_account");
             package.RescheduleAccountNumber = r.GetString("reschedule_account");
+            package.LatePrincipalAccountNumber = r.GetString("late_principal_account");
+            package.UnrecoverablePrincipalAccountNumber = r.GetString("unrecoverable_principal_account");
 
             return package;
         }

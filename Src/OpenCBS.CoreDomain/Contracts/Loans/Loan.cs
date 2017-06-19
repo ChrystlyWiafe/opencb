@@ -128,6 +128,8 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
         public string InterestIncomeAccountNumber { get; set; }
         public string AccruedPenaltyAccountNumber { get; set; }
         public string PenaltyIncomeAccountNumber { get; set; }
+        public string LatePrincipalAccountNumber { get; set; }
+        public string UnrecoverablePrincipalAccountNumber { get; set; }
 
         public OAnticipatedRepaymentPenaltiesBases AnticipatedTotalRepaymentPenaltiesBase { get; set; }
         public OAnticipatedRepaymentPenaltiesBases AnticipatedPartialRepaymentPenaltiesBase { get; set; }

@@ -431,6 +431,10 @@ namespace OpenCBS.GUI.Products
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.entryFeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label50 = new System.Windows.Forms.Label();
+            this.comboBoxLatePrincipal = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.comboBoxUnrecoverablePrincipal = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.tabCreditInsurance.SuspendLayout();
             this.tabPageMainParameters.SuspendLayout();
             this.groupBox.SuspendLayout();
@@ -2185,6 +2189,8 @@ namespace OpenCBS.GUI.Products
             // 
             // tabAccounts
             // 
+            this.tabAccounts.Controls.Add(this.comboBoxUnrecoverablePrincipal);
+            this.tabAccounts.Controls.Add(this.comboBoxLatePrincipal);
             this.tabAccounts.Controls.Add(this.comboBoxRescheduleAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
             this.tabAccounts.Controls.Add(this.label62);
@@ -2193,6 +2199,8 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.label58);
             this.tabAccounts.Controls.Add(this.comboBoxAccruedPenaltyAccount);
             this.tabAccounts.Controls.Add(this.label57);
+            this.tabAccounts.Controls.Add(this.label51);
+            this.tabAccounts.Controls.Add(this.label50);
             this.tabAccounts.Controls.Add(this.label65);
             this.tabAccounts.Controls.Add(this.label56);
             this.tabAccounts.Controls.Add(this.comboBoxInterestIncomeAccount);
@@ -2368,6 +2376,28 @@ namespace OpenCBS.GUI.Products
             // entryFeeBindingSource
             // 
             this.entryFeeBindingSource.DataSource = typeof(OpenCBS.CoreDomain.EntryFee);
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
+            // 
+            // comboBoxLatePrincipal
+            // 
+            this.comboBoxLatePrincipal.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxLatePrincipal, "comboBoxLatePrincipal");
+            this.comboBoxLatePrincipal.Name = "comboBoxLatePrincipal";
+            // 
+            // label51
+            // 
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.Name = "label51";
+            // 
+            // comboBoxUnrecoverablePrincipal
+            // 
+            this.comboBoxUnrecoverablePrincipal.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxUnrecoverablePrincipal, "comboBoxUnrecoverablePrincipal");
+            this.comboBoxUnrecoverablePrincipal.Name = "comboBoxUnrecoverablePrincipal";
             // 
             // FrmAddLoanProduct
             // 
@@ -2610,5 +2640,9 @@ namespace OpenCBS.GUI.Products
         private ColumnHeader ch2AccountNumber;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxRescheduleAccount;
         private Label label65;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxUnrecoverablePrincipal;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxLatePrincipal;
+        private Label label51;
+        private Label label50;
     }
 }

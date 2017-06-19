@@ -161,6 +161,8 @@ namespace OpenCBS.CoreDomain.Products
         public string InterestIncomeAccountNumber { get; set; }
         public string AccruedPenaltyAccountNumber { get; set; }
         public string PenaltyIncomeAccountNumber { get; set; }
+        public string LatePrincipalAccountNumber { get; set; }
+        public string UnrecoverablePrincipalAccountNumber { get; set; }
 
         public NonRepaymentPenaltiesNullableValues NonRepaymentPenalties
         {

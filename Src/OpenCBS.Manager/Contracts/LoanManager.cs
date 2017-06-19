@@ -1283,6 +1283,8 @@ namespace OpenCBS.Manager.Contracts
 	                , penalty_income_account penaltyIncomeAccountNumber
 	                , principal_account principalAccountNumber
 	                , reschedule_account rescheduleAccountNumber
+	                , late_principal_account latePrincipalAccountNumber
+	                , unrecoverable_principal_account unrecoverablePrincipalAccount
                 FROM
 	                dbo.Credit
                 WHERE
@@ -1849,6 +1851,8 @@ namespace OpenCBS.Manager.Contracts
                                         Credit.schedule_type,
                                         Credit.script_name,
 	                                    Credit.reschedule_account,
+                                        Credit.late_principal_account,
+                                        Credit.unrecoverable_principal_account,
 	                                    Credit.principal_account,
 	                                    Credit.interest_accrued_but_not_due_account,
 	                                    Credit.interest_due_account,
@@ -2075,6 +2079,8 @@ namespace OpenCBS.Manager.Contracts
                     ScriptName = r.GetString("script_name"),
 
                     RescheduleAccountNumber= r.GetString("reschedule_account"),
+                    LatePrincipalAccountNumber= r.GetString("late_principal_account"),
+                    UnrecoverablePrincipalAccountNumber= r.GetString("unrecoverable_principal_account"),
                     AccruedPenaltyAccountNumber = r.GetString("accrued_penalty_account"),
                     PrincipalAccountNumber = r.GetString("principal_account"),
                     InterestAccruedButNotDueAccountNumber = r.GetString("interest_accrued_but_not_due_account"),
