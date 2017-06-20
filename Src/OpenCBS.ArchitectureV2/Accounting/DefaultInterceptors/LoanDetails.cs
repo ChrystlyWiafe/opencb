@@ -21,6 +21,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             RescheduleAccountNumber = loan.RescheduleAccountNumber;
             LatePrincipalAccountnumber = loan.LatePrincipalAccountNumber;
             UnrecoverablePrincipalAccountNumber = loan.UnrecoverablePrincipalAccountNumber;
+            CurrentPrincipalAccountNumber = loan.CurrentPrincipalAccountNumber;
         }
 
         public int Id { get; set; }
@@ -37,5 +38,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         public string RescheduleAccountNumber { get; set; }
         public string LatePrincipalAccountnumber { get; set; }
         public string UnrecoverablePrincipalAccountNumber { get; set; }
+        public string CurrentPrincipalAccountNumber { get; set; }
     }
 }

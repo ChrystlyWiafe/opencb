@@ -67,6 +67,12 @@ IF col_length('dbo.Credit','unrecoverable_principal_account') IS NULL
     END
 GO
 
+IF col_length('dbo.Credit','current_principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Credit ADD current_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
 IF col_length('dbo.Credit','principal_account') IS NULL
     BEGIN
 		ALTER TABLE dbo.Credit ADD principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL

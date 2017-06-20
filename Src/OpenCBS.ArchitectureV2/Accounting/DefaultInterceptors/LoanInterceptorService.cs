@@ -35,6 +35,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                , reschedule_account = @rescheduleAccount
                     , late_principal_account = @latePrincipalAccount
                     , unrecoverable_principal_account = @unrecoverablePrincipalAccount
+                    , current_principal_account = @currentPrincipalAccount
             ";
             transaction.Connection.Execute(query, new
             {
@@ -45,24 +46,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 @interestIncomeAccount = loan.Product.InterestIncomeAccountNumber,
                 @penaltyIncomeAccount = loan.Product.PenaltyIncomeAccountNumber,
                 @principalAccount = loan.Product.PrincipalAccountNumber,
+                @currentPrincipalAccount = loan.Product.PrincipalAccountNumber,
                 @latePrincipalAccount = loan.Product.LatePrincipalAccountNumber,
                 @unrecoverablePrincipalAccount = loan.Product.UnrecoverablePrincipalAccountNumber,
                 @rescheduleAccount = loan.Product.RescheduleAccountNumber
-            }, transaction);
-        }
-
-        public void SetPrincipalAccount(int loanId,string accountNumber,IDbTransaction transaction)
-        {
-            const string query =
-            @"
-                UPDATE
-	                dbo.Credit
-                SET
-	                principal_account = @principalAccountNumber
-            ";
-            transaction.Connection.Execute(query, new
-            {
-                @principalAccountNumber = accountNumber
             }, transaction);
         }
     }

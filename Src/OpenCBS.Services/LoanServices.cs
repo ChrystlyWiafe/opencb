@@ -3540,5 +3540,21 @@ namespace OpenCBS.Services
                 throw new Exception(error.Message);
             }
         }
+
+        public void SetCurrentPrincipalAccount(int loanId, string accountNumber, IDbTransaction transaction)
+        {
+            var tx = transaction ?? CoreDomain.DatabaseConnection.GetConnection().BeginTransaction();
+            try
+            {
+                _loanManager.SetCurrentPrincipalAccount(loanId, accountNumber, tx);
+            }
+            catch (Exception error)
+            {
+                if (transaction == null)
+                    tx.Rollback();
+
+                throw new Exception(error.Message);
+            }
+        }
     }
 }

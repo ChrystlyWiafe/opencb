@@ -18,7 +18,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         private readonly LoanDetails _loanDetails;
         private readonly CoreDomain.Events.Loan.Event _event;
         private readonly SqlTransaction _transaction;
-        private readonly LoanInterceptorService _loanInterceptorService;
 
         public EventInterceptorService(IDictionary<string, object> parameters)
         {
@@ -27,7 +26,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 _event = (CoreDomain.Events.Loan.Event)parameters["Event"];
                 _transaction = (SqlTransaction)parameters["SqlTransaction"];
 
-                _loanInterceptorService = new LoanInterceptorService();
                 if (parameters.ContainsKey("Loan"))
                 {
                     var coreLoan = (Loan) parameters["Loan"];
@@ -106,7 +104,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
+                        Debit = new Account {AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = string.Format("Commission for {0}" ,_loanDetails.ContractCode),
@@ -116,7 +114,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 list.Insert(0, new BookingEntry
                 {
-                    Debit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
+                    Debit = new Account {AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
                     Credit = new Account {AccountNumber = paymentMethodAccountNumber},
                     Amount = disbursment.Amount.Value - commissionsAmount,
                     Description = "Loan disbursement for " + _loanDetails.ContractCode,
@@ -140,7 +138,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
-                        Credit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber },
+                        Credit = new Account {AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
                         Amount = repayment.Principal.Value,
                         Description = "Repayment of principal for " + _loanDetails.ContractCode,
                         LoanEventId = repayment.Id
@@ -258,13 +256,15 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 list.Add(new BookingEntry
                 {
                     Debit = new Account {AccountNumber = _loanDetails.RescheduleAccountNumber},
-                    Credit = new Account {AccountNumber = _loanDetails.PrincipalAccountNumber},
+                    Credit = new Account {AccountNumber = _loanDetails.CurrentPrincipalAccountNumber},
                     Amount = rescheduleEvent.Amount.Value,
                     Description = "Reschedule for " + _loanDetails.ContractCode,
                     LoanEventId = rescheduleEvent.Id
                 });
 
-                _loanInterceptorService.SetPrincipalAccount(_loanDetails.Id, _loanDetails.RescheduleAccountNumber, _transaction);
+                ServicesProvider.GetInstance()
+                    .GetContractServices()
+                    .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.RescheduleAccountNumber, _transaction);
             }
 
             return list;

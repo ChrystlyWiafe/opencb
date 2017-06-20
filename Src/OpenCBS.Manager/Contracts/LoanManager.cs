@@ -21,6 +21,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
@@ -1285,6 +1286,7 @@ namespace OpenCBS.Manager.Contracts
 	                , reschedule_account rescheduleAccountNumber
 	                , late_principal_account latePrincipalAccountNumber
 	                , unrecoverable_principal_account unrecoverablePrincipalAccount
+                    , current_principal_account currentPrincipalAccount
                 FROM
 	                dbo.Credit
                 WHERE
@@ -1306,6 +1308,9 @@ namespace OpenCBS.Manager.Contracts
                         pLoan.PenaltyIncomeAccountNumber = r.GetString("penaltyIncomeAccountNumber");
                         pLoan.PrincipalAccountNumber = r.GetString("principalAccountNumber");
                         pLoan.RescheduleAccountNumber = r.GetString("rescheduleAccountNumber");
+                        pLoan.LatePrincipalAccountNumber = r.GetString("latePrincipalAccountNumber");
+                        pLoan.UnrecoverablePrincipalAccountNumber = r.GetString("unrecoverablePrincipalAccount");
+                        pLoan.CurrentPrincipalAccountNumber = r.GetString("currentPrincipalAccount");
                     }
                 }
             }
@@ -1851,6 +1856,7 @@ namespace OpenCBS.Manager.Contracts
                                         Credit.schedule_type,
                                         Credit.script_name,
 	                                    Credit.reschedule_account,
+                                        Credit.current_principal_account,
                                         Credit.late_principal_account,
                                         Credit.unrecoverable_principal_account,
 	                                    Credit.principal_account,
@@ -2080,7 +2086,8 @@ namespace OpenCBS.Manager.Contracts
 
                     RescheduleAccountNumber= r.GetString("reschedule_account"),
                     LatePrincipalAccountNumber= r.GetString("late_principal_account"),
-                    UnrecoverablePrincipalAccountNumber= r.GetString("unrecoverable_principal_account"),
+                    UnrecoverablePrincipalAccountNumber = r.GetString("unrecoverable_principal_account"),
+                    CurrentPrincipalAccountNumber= r.GetString("current_principal_account"),
                     AccruedPenaltyAccountNumber = r.GetString("accrued_penalty_account"),
                     PrincipalAccountNumber = r.GetString("principal_account"),
                     InterestAccruedButNotDueAccountNumber = r.GetString("interest_accrued_but_not_due_account"),
@@ -2360,6 +2367,20 @@ namespace OpenCBS.Manager.Contracts
                 var result = cmd.ExecuteScalar();
                 return result != null && Convert.ToBoolean(result);
             }
+        }
+
+        public void SetCurrentPrincipalAccount(int loanId, string accountNumber, IDbTransaction transaction)
+        {
+            const string query =
+            @"
+                UPDATE
+	                dbo.Credit
+                SET
+	                current_principal_account = @principalAccountNumber
+                WHERE
+                    id = @loanId
+            ";
+            transaction.Connection.Execute(query, new {loanId, @principalAccountNumber = accountNumber}, transaction);
         }
 
         public IList<WriteOffOption> GetWriteOffOptions()
