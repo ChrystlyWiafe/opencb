@@ -74,7 +74,7 @@
     <Compile Include="Fusebox\FuseChangedEventArgs.cs" />
     <Compile Include="Interfaces\IAdvancedFuse.cs" />
     <Compile Include="Interfaces\IFuse.cs" />
-    <Compile Include="DefaultTransitFuse\LoanDetailsForInterestTransitModel.cs" />
+    <Compile Include="DefaultTransitFuse\LoanDetailsForTransitModel.cs" />
     <Compile Include="Fusebox\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FuseboxRegistry\FuseboxRegistry.cs" />

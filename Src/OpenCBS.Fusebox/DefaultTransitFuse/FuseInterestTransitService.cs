@@ -51,7 +51,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             }
         }
 
-        private Booking CreateLateTransitBooking(LoanDetailsForInterestTransitModel model,decimal amount)
+        private Booking CreateLateTransitBooking(LoanDetailsForTransitModel model,decimal amount)
         {
             if (model == null) return null;
             var user = User.CurrentUser.Id != 0 ? User.CurrentUser : new User {Id = 1};
@@ -59,7 +59,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             return new Booking
             {
                 Debit = new Account {AccountNumber = model.InterestAccruedButNotDueAccountNumber},
-                Credit = new Account {AccountNumber = model.InterestDueAccountNuber},
+                Credit = new Account {AccountNumber = model.InterestDueAccountNumber},
                 Amount = amount,
                 Description = "Interest due but not received for " + model.ContractCode,
                 Date = TimeProvider.Now,
@@ -72,7 +72,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             };
         }
 
-        private Booking CreateCurrentTransitBooking(LoanDetailsForInterestTransitModel model, decimal amount)
+        private Booking CreateCurrentTransitBooking(LoanDetailsForTransitModel model, decimal amount)
         {
             if (model == null) return null;
             var user = User.CurrentUser.Id != 0 ? User.CurrentUser : new User { Id = 1 };
@@ -80,7 +80,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             return new Booking
             {
                 Debit = new Account { AccountNumber = model.InterestAccruedButNotDueAccountNumber },
-                Credit = new Account { AccountNumber = model.InterestDueAccountNuber },
+                Credit = new Account { AccountNumber = model.InterestDueAccountNumber },
                 Amount = amount,
                 Description = "Interest due for " + model.ContractCode,
                 Date = TimeProvider.Now,
@@ -159,14 +159,14 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
                    0m;
         }
 
-        private LoanDetailsForInterestTransitModel GetLoanDetailsForTransitInterest(int loanId)
+        private LoanDetailsForTransitModel GetLoanDetailsForTransitInterest(int loanId)
         {
             const string query =
                 @"
                     SELECT
 	                    c.id LoanId
 	                    , cr.interest_accrued_but_not_due_account InterestAccruedButNotDueAccountNumber
-	                    , cr.interest_due_account InterestDueAccountNuber
+	                    , cr.interest_due_account InterestDueAccountNumber
 	                    , cr.interest_due_but_not_received_account InterestDueButNotReceived
 	                    , pr.tiers_id ClientId
 	                    , t.branch_id BranchId
@@ -183,7 +183,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 	                    @loanId = c.id
                 ";
             return
-                _transaction.Connection.Query<LoanDetailsForInterestTransitModel>(query, new { loanId }, _transaction)
+                _transaction.Connection.Query<LoanDetailsForTransitModel>(query, new { loanId }, _transaction)
                     .FirstOrDefault();
         }
     }
