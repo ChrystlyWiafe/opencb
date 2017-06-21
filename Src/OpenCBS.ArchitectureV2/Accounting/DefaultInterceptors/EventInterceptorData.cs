@@ -16,6 +16,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                    , t.id ClientId
 	                    , t.branch_id BranchId
 	                    , cr.principal_account PrincipalAccountNumber
+	                    , cr.original_principal_account OriginalPrincipalAccountNumber
 	                    , cr.interest_accrued_but_not_due_account InterestAccruedButNotDueAccountNumber
 	                    , cr.interest_due_account InterestDueAccountNumber
 	                    , cr.interest_due_but_not_received_account InterestDueButNotReceivedAccountNumber

@@ -49,6 +49,12 @@ IF col_length('dbo.Credit','reschedule_account') IS NULL
     END
 GO
 
+IF col_length('dbo.Credit','original_principal_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Credit ADD original_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
 IF col_length('dbo.Credit','principal_account') IS NULL
     BEGIN
 		ALTER TABLE dbo.Credit ADD principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL

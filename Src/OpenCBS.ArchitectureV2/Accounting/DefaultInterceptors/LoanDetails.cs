@@ -12,6 +12,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             BranchId = loan.Project.Client.Branch.Id;
             ContractCode = loan.Code;
             PrincipalAccountNumber = loan.PrincipalAccountNumber;
+            OriginalPrincipalAccountNumber = loan.OriginalPrincipalAccountNumber;
             InterestDueButNotReceivedAccountNumber = loan.InterestDueButNotReceivedAccountNumber;
             InterestDueAccountNumber = loan.InterestDueAccountNumber;
             PenaltyIncomeAccountNumber = loan.PenaltyIncomeAccountNumber;
@@ -25,6 +26,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         public int ClientId { get; set; }
         public int BranchId { get; set; }
         public string ContractCode { get; set; }
+        public string OriginalPrincipalAccountNumber { get; set; }
         public string PrincipalAccountNumber { get; set; }
         public string InterestDueButNotReceivedAccountNumber { get; set; }
         public string InterestDueAccountNumber { get; set; }

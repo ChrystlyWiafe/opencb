@@ -34,6 +34,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             if (interceptorParams.ContainsKey("Deleted"))
             {
                 _bookingService.AddCounterTransactionToEvent(interceptorParams, transaction);
+                _interceptorService.ReturnPrincipalAccount();
             }
             else
             {

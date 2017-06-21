@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
@@ -268,6 +270,44 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             }
 
             return list;
+        }
+
+        public void ReturnPrincipalAccount()
+        {
+            if(_event.Code == "ROLE" && !IsRescheduled())
+                SetPrincipalAccount(_loanDetails.OriginalPrincipalAccountNumber);
+        }
+
+        private bool IsRescheduled()
+        {
+            const string query =
+            @"
+                SELECT
+	                COUNT(*)
+                FROM
+	                dbo.ContractEvents ce
+                WHERE
+	                ce.id = @loanId
+	                AND ce.is_deleted = 0
+	                AND ce.event_type = 'ROLE'
+            ";
+            return
+                _transaction.Connection.Query<int>(query, new {@loanId = _loanDetails.Id}, _transaction).First() > 0;
+        }
+
+        private void SetPrincipalAccount(string accountNumber)
+        {
+            const string query =
+            @"
+                UPDATE
+	                dbo.Credit
+                SET
+	                principal_account = @principalAccountNumber
+            ";
+            _transaction.Connection.Execute(query, new
+            {
+                @principalAccountNumber = accountNumber
+            }, _transaction);
         }
 
         private readonly string[] _repaymentTypes = { "RBLE", "RGLE", "APR", "ATR", "APTR" };

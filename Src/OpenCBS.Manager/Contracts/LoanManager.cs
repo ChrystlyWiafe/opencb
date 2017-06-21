@@ -1282,6 +1282,7 @@ namespace OpenCBS.Manager.Contracts
 	                , interest_income_account interestIncomeAccountNumber
 	                , penalty_income_account penaltyIncomeAccountNumber
 	                , principal_account principalAccountNumber
+	                , original_principal_account originalPrincipalAccountNumber
 	                , reschedule_account rescheduleAccountNumber
                 FROM
 	                dbo.Credit
@@ -1303,6 +1304,7 @@ namespace OpenCBS.Manager.Contracts
                         pLoan.InterestIncomeAccountNumber = r.GetString("interestIncomeAccountNumber");
                         pLoan.PenaltyIncomeAccountNumber = r.GetString("penaltyIncomeAccountNumber");
                         pLoan.PrincipalAccountNumber = r.GetString("principalAccountNumber");
+                        pLoan.OriginalPrincipalAccountNumber = r.GetString("originalPrincipalAccountNumber");
                         pLoan.RescheduleAccountNumber = r.GetString("rescheduleAccountNumber");
                     }
                 }
@@ -1850,6 +1852,7 @@ namespace OpenCBS.Manager.Contracts
                                         Credit.script_name,
 	                                    Credit.reschedule_account,
 	                                    Credit.principal_account,
+                                        Credit.original_principal_account,
 	                                    Credit.interest_accrued_but_not_due_account,
 	                                    Credit.interest_due_account,
 	                                    Credit.interest_due_but_not_received_account,
@@ -2077,6 +2080,7 @@ namespace OpenCBS.Manager.Contracts
                     RescheduleAccountNumber= r.GetString("reschedule_account"),
                     AccruedPenaltyAccountNumber = r.GetString("accrued_penalty_account"),
                     PrincipalAccountNumber = r.GetString("principal_account"),
+                    OriginalPrincipalAccountNumber = r.GetString("original_principal_account"),
                     InterestAccruedButNotDueAccountNumber = r.GetString("interest_accrued_but_not_due_account"),
                     InterestDueAccountNumber = r.GetString("interest_due_account"),
                     InterestDueButNotReceivedAccountNumber = r.GetString("interest_due_but_not_received_account"),

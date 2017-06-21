@@ -32,6 +32,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                , interest_income_account = @interestIncomeAccount
 	                , penalty_income_account = @penaltyIncomeAccount
 	                , principal_account = @principalAccount
+	                , original_principal_account = @principalAccount
 	                , reschedule_account = @rescheduleAccount
             ";
             transaction.Connection.Execute(query, new
@@ -55,6 +56,21 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                dbo.Credit
                 SET
 	                principal_account = @principalAccountNumber
+            ";
+            transaction.Connection.Execute(query, new
+            {
+                @principalAccountNumber = accountNumber
+            }, transaction);
+        }
+
+        public void SetOriginalPrincipalAccount(int loanId, string accountNumber, IDbTransaction transaction)
+        {
+            const string query =
+            @"
+                UPDATE
+	                dbo.Credit
+                SET
+                    original_principal_account = @principalAccountNumber
             ";
             transaction.Connection.Execute(query, new
             {

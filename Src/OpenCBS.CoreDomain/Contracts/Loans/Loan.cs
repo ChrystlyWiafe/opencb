@@ -122,6 +122,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
         //Accounts
         public string RescheduleAccountNumber { get; set; }
         public string PrincipalAccountNumber { get; set; }
+        public string OriginalPrincipalAccountNumber { get; set; }
         public string InterestAccruedButNotDueAccountNumber { get; set; }
         public string InterestDueAccountNumber { get; set; }
         public string InterestDueButNotReceivedAccountNumber { get; set; }
