@@ -8,7 +8,9 @@ using OpenCBS.ArchitectureV2.CommandData;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.ArchitectureV2.Interface.Service;
 using OpenCBS.ArchitectureV2.View;
+using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Shared.Settings;
 using StructureMap;
 
 namespace OpenCBS.ArchitectureV2.Accounting.View
@@ -30,6 +32,9 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
         {
             _debitComboBox.Format += Format;
             _creditComboBox.Format += Format;
+
+            _dateFromDateTimePicker.CustomFormat = ApplicationSettings.GetInstance(User.CurrentUser.Md5).SHORT_DATE_FORMAT;
+            _dateToDateTimePicker.CustomFormat = ApplicationSettings.GetInstance(User.CurrentUser.Md5).SHORT_DATE_FORMAT;
 
             _dateColumn.AspectToStringConverter = value =>
             {

@@ -57,8 +57,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
             this._doc1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this._doc2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this._refreshButton = new System.Windows.Forms.Button();
-            this._debitComboBox = new AutocompletionComboBox();
-            this._creditComboBox = new AutocompletionComboBox();
+            this._debitComboBox = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this._creditComboBox = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this._buttonsToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._bookingsListView)).BeginInit();
             this.SuspendLayout();
@@ -143,14 +143,14 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
             // 
             // _dateToDateTimePicker
             // 
-            this._dateToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this._dateToDateTimePicker, "_dateToDateTimePicker");
+            this._dateToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dateToDateTimePicker.Name = "_dateToDateTimePicker";
             // 
             // _dateFromDateTimePicker
             // 
-            this._dateFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this._dateFromDateTimePicker, "_dateFromDateTimePicker");
+            this._dateFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dateFromDateTimePicker.Name = "_dateFromDateTimePicker";
             // 
             // _bookingsListView
