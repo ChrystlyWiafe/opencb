@@ -5,6 +5,7 @@ using System.Linq;
 using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Events;
+using OpenCBS.CoreDomain.Events.Loan;
 using OpenCBS.CoreDomain.Products;
 using OpenCBS.Enums;
 using OpenCBS.Services;
@@ -418,7 +419,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             }
         }
 
-        public static void CallInterceptor(LoanInterestAccrualEvent accrualEvent, AccrualLoan loan, LoanProduct product, IDbTransaction transaction)
+        public static void CallInterceptor(Event _event, AccrualLoan loan, LoanProduct product, IDbTransaction transaction)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -428,7 +429,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 {"BranchId", loan.BranchId},
                 {"ProductId", loan.PackageId},
                 {"ContractCode", loan.Code},
-                {"Event", accrualEvent},
+                {"Event", _event},
                 {"SqlTransaction",transaction}
             };
             ServicesProvider.GetInstance().GetContractServices().CallInterceptor(parameters);

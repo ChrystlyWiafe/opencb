@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Events;
+using OpenCBS.CoreDomain.Events.Loan;
 using OpenCBS.Enums;
 using OpenCBS.Services;
 
@@ -228,6 +229,16 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                         (id, penalty, installment_number)
                         values (@eventId, @amount, @Number)";
                 connection.Execute(query, new {eventId, amount, installment.Number}, tx);
+
+                var penaltyEvent = new LoanPenaltyAccrualEvent()
+                {
+                    Id = eventId,
+                    Date = date,
+                    Code = "LPAE",
+                    ContracId = loan.Id,
+                    Penalty = amount,
+                };
+                AccrualEngineData.CallInterceptor(penaltyEvent, loan, null, tx);
             }
             finally
             {
