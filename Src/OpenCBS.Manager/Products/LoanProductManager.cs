@@ -260,7 +260,6 @@ namespace OpenCBS.Manager.Products
                 ,[interest_due_account]
                 ,[interest_due_but_not_received_account]
                 ,[interest_income_account]
-                ,[tax_on_interests_account]
                 ,[accrued_penalty_account]
                 ,[penalty_income_account])
                 VALUES
