@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using OpenCBS.Fusebox.Interfaces;
+using OpenCBS.Shared;
 
 namespace OpenCBS.Fusebox.DefaultAccrualFuse
 {
@@ -13,7 +14,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         {
             var accrualEngine = new AccrualEngine();
             accrualEngine.ProgressChangedEventHandler = ProgressChangedEventHandler;
-            var startedAt = DateTime.Now;
+            var startedAt = TimeProvider.Now;
 
             accrualEngine.AccrueInterestForDate(startedAt,  _listLastAccrualDates, transaction);
         }
