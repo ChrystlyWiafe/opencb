@@ -497,6 +497,24 @@
   <data name="mnuAccounting.Text" xml:space="preserve">
     <value>Бухгалтерия</value>
   </data>
+  <data name="openDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="openDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Открытие дня</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Закрытие дня</value>
+  </data>
+  <data name="closureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="closureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Закрытие</value>
+  </data>
   <data name="reportsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
   </data>

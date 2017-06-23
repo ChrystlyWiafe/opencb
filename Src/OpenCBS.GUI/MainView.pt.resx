@@ -497,6 +497,24 @@
   <data name="mnuAccounting.Text" xml:space="preserve">
     <value>Contabilidade</value>
   </data>
+  <data name="openDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="openDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abertura do dia</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="closeDayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Encerramento do dia</value>
+  </data>
+  <data name="closureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="closureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fecho</value>
+  </data>
   <data name="reportsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
   </data>
