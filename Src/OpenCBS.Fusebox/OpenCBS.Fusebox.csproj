@@ -80,7 +80,19 @@
     <Compile Include="FuseboxRegistry\FuseboxRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Fusebox\FuseBoxExecutingForm.es-ES.resx">
+      <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fusebox\FuseBoxExecutingForm.fr.resx">
+      <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fusebox\FuseBoxExecutingForm.pt.resx">
+      <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fusebox\FuseBoxExecutingForm.resx">
+      <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fusebox\FuseBoxExecutingForm.ru-RU.resx">
       <DependentUpon>FuseBoxExecutingForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
