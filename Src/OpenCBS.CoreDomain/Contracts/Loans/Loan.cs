@@ -2117,11 +2117,14 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                                                     bool pending)
         {
             //We need to generate specific RepaymentEvent in case of bad loan or rescheduled loan
-            RepaymentEvent rPe = _badLoan && !_writtenOff
-                                        ? new BadLoanRepaymentEvent()
-                                            : (_writtenOff ?
-                                                new RepaymentOverWriteOffEvent()
-                                                : new RepaymentEvent());
+
+            RepaymentEvent rPe;
+            if (_badLoan && !_writtenOff)
+                rPe = new BadLoanRepaymentEvent();
+            else if (_writtenOff)
+                rPe = new RepaymentOverWriteOffEvent();
+            else
+                rPe = new RepaymentEvent();
 
             if ((overDueDays > 0 || penaltiesEvent > 0) && !_writtenOff)
                 rPe = new BadLoanRepaymentEvent();
@@ -2136,9 +2139,13 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             rPe.Commissions = commissionsEvent;
             rPe.Interests = interestEvent;
 
-            if (InstallmentList[installmentNumber - 1].ExpectedDate <= pDate)
+            if (InstallmentList[installmentNumber - 1].ExpectedDate.Date == pDate.Date)
             {
                 repaymentType = OPaymentType.StandardPayment;
+            }
+            else if (InstallmentList[installmentNumber - 1].ExpectedDate.Date > pDate.Date)
+            {
+                repaymentType = OPaymentType.PartialPayment;
             }
 
             rPe.RepaymentType = repaymentType;
@@ -2157,7 +2164,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
             //	In this case, the loan will be regraded to good loan and provision will be cancelled.
             if (_badLoan && !pending)
                 _badLoan = _IsBadLoan(rPe, pDate);
-            
+
             return rPe;
         }
 
