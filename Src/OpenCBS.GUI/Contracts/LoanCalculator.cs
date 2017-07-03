@@ -159,10 +159,15 @@ namespace OpenCBS.GUI.Clients
 
 
             var packages= ServiceProvider.GetProductServices().FindAllPackages(false, OClientTypes.Person);
-       
+
+            if (packages.Count == 0)
+            {
+                throw new Exception("Loan product list is empty");
+            }
+
             cmbPackages.DataSource = new BindingSource(packages.ToDictionary(val => val.Name, val => val), null);
-            cmbPackages.DisplayMember = "Key";
-            cmbPackages.ValueMember = "Value";
+                cmbPackages.DisplayMember = "Key";
+                cmbPackages.ValueMember = "Value";
 
             _product = packages.FirstOrDefault();
 

@@ -496,8 +496,18 @@ namespace OpenCBS.GUI
 
         public void InitializeLoanCalculator()
         {
-            LoanCalculator personForm = new LoanCalculator(OClientTypes.Person, this, false, _applicationController) { MdiParent = this };
-            personForm.Show();
+            try
+            {
+                LoanCalculator personForm = new LoanCalculator(OClientTypes.Person, this, false, _applicationController)
+                {
+                    MdiParent = this
+                };
+                personForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
