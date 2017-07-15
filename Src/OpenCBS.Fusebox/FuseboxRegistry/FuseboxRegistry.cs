@@ -8,7 +8,8 @@ namespace OpenCBS.Fusebox.FuseboxRegistry
     {
         public FuseboxRegistry()
         {
-            For<IAdvancedFuse>().Use<AccrualFuse>();
+            For<IAdvancedFuse>().Use<DefaultAccrualPenaltyFuse>();
+            For<IAdvancedFuse>().Use<DefaultAccualInterestFuse>();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace OpenCBS.Fusebox.DefaultAccrualFuse
 {
     public class AccrualInstallment

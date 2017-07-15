@@ -59,7 +59,8 @@
     <Compile Include="DefaultAccrualFuse\AccrualEngineData.cs" />
     <Compile Include="DefaultAccrualFuse\AccrualInstallment.cs" />
     <Compile Include="DefaultAccrualFuse\AccrualLoan.cs" />
-    <Compile Include="DefaultAccrualFuse\DefaultAccualFuse.cs" />
+    <Compile Include="DefaultAccrualFuse\DefaultAccualPenaltyFuse.cs" />
+    <Compile Include="DefaultAccrualFuse\DefaultAccualInterestFuse.cs" />
     <Compile Include="DefaultTransitFuse\FuseInterestTransitService.cs" />
     <Compile Include="DefaultTransitFuse\LateInterestTransitionFuse.cs" />
     <Compile Include="Fusebox\Fusebox.cs" />

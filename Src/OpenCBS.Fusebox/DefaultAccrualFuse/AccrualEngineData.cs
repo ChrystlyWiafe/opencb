@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Events;
 using OpenCBS.CoreDomain.Products;
+using OpenCBS.Enums;
 using OpenCBS.Services;
 
 namespace OpenCBS.Fusebox.DefaultAccrualFuse
@@ -67,6 +67,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             public decimal Principal { get; set; }
             public decimal PaidPrincipal { get; set; }
             public decimal Interest { get; set; }
+            public OInterestScheme InterestScheme { get; set; }
             public decimal PaidInterest { get; set; }
             public decimal InterestRate { get; set; }
             public int ProductId { get; set; }
@@ -109,7 +110,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 left join
                     dbo.Tiers ti on ti.id = pr.tiers_id
                 left join
-                    dbo.Packages p on p.id = cr.id
+                    dbo.Packages p on p.id = cr.package_id
                 left join
                 (
 	                select 
@@ -139,7 +140,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 {
                     if (loan == null)
                     {
-                        loan = new AccrualLoan(row.Id, row.InterestRate, row.Code, row.LoanStartDate, row.ProductId, row.BranchId);
+                        loan = new AccrualLoan(row.Id, row.InterestRate, row.Code, row.LoanStartDate, row.ProductId, row.BranchId,row.InterestScheme);
                     }
                     var installment = new AccrualInstallment();
                     installment.StartDate = row.StartDate;

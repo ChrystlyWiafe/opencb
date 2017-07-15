@@ -6,7 +6,7 @@ using OpenCBS.Fusebox.Interfaces;
 
 namespace OpenCBS.Fusebox.DefaultAccrualFuse
 {
-    public class AccrualFuse : IAdvancedFuse
+    public class DefaultAccrualPenaltyFuse : IAdvancedFuse
     {
         List<Tuple<int, DateTime>> _listLastAccrualDates = new List<Tuple<int, DateTime>>();
         public void Activate(IDbTransaction transaction)
@@ -15,13 +15,12 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             accrualEngine.ProgressChangedEventHandler = ProgressChangedEventHandler;
             var startedAt = DateTime.Now;
 
-            accrualEngine.AccrueInterestForDate(startedAt,  _listLastAccrualDates, transaction);
-            //accrualEngine.AccruePenaltyForDate(startedAt, transaction); // TODO not need now, but will be need in future
+            accrualEngine.AccruePenaltyForDate(startedAt, transaction);
         }
 
-        public int Order { get { return 2; } }
+        public int Order { get { return 3; } }
 
-        public string FuseName { get { return "Default Fusebox"; } }
+        public string FuseName { get { return "Default Accrual Penalty"; } }
 
         public ProgressChangedEventHandler ProgressChangedEventHandler { get; set; }
     }

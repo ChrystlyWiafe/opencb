@@ -10,7 +10,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
     {
         private readonly List<AccrualInstallment> _installments;
 
-        public AccrualLoan(int id, decimal interestRate, string code, DateTime startDate, int productId, int branchId)
+        public AccrualLoan(int id, decimal interestRate, string code, DateTime startDate, int productId, int branchId,OInterestScheme interestScheme)
         {
             _installments = new List<AccrualInstallment>();
             Id = id;
@@ -19,6 +19,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             StartDate = startDate;
             ProductId = productId;
             BranchId = branchId;
+            InterestScheme = interestScheme;
         }
 
         public AccrualLoan(int id, decimal interestRate, string code, DateTime loanStartDate, int clientId, int branchId,
@@ -50,7 +51,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         public DateTime StartDate { get; private set; }
 
         public decimal InterestRate { get; private set; }
-        public OInterestScheme InterestScheme { get; private set; }
+        public OInterestScheme? InterestScheme { get; private set; }
 
         public void AddInstallment(AccrualInstallment installment)
         {
@@ -163,7 +164,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 case OInterestScheme.Thirty360:
                     return 360;
                 default:
-                    throw new Exception();
+                    throw new Exception("Interest scheme is null");
             }
         }
 
@@ -180,7 +181,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 case OInterestScheme.Thirty360:
                     return 30;
                 default:
-                    throw new Exception();
+                    throw new Exception("Interest scheme is null");
             }
         }
     }

@@ -104,7 +104,7 @@ namespace OpenCBS.Fusebox.Fusebox
             {
                 index++;
 
-                _currentFuseBoxEntryName = routine.GetType().FullName;
+                _currentFuseBoxEntryName = routine.GetType().Name;
                 OnFuseChanged(new FuseChangedEventArgs(_currentFuseBoxEntryName, GetPercentageValue(index, routines.Length)));
 
                 routine.Activate(transaction);
@@ -118,7 +118,7 @@ namespace OpenCBS.Fusebox.Fusebox
             foreach (var routine in routines)
             {
                 index++;
-                _currentFuseBoxEntryName = routine.GetType().FullName;
+                _currentFuseBoxEntryName = routine.GetType().Name;
 
                 OnFuseChanged(new FuseChangedEventArgs(routine.FuseName, GetPercentageValue(index, routines.Length)));
 

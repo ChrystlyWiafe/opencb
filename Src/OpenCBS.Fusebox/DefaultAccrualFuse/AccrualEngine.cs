@@ -8,7 +8,6 @@ using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Events;
 using OpenCBS.Enums;
 using OpenCBS.Services;
-using OpenCBS.Shared;
 
 namespace OpenCBS.Fusebox.DefaultAccrualFuse
 {
