@@ -194,6 +194,9 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                     var penaltyOnOverduePrincipal = Math.Round(duePrincipal * loan.NonRepaymentPenaltiesBasedOnOverduePrincipal, 2);
 
                     var amount = penaltyOnAmount + penaltyOnOlb + penaltyOnOverdueInterest + penaltyOnOverduePrincipal;
+
+                    if (amount > 0) return;
+
                     var query = @"
                         insert into dbo.ContractEvents
                         (
