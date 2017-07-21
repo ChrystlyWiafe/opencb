@@ -27,6 +27,12 @@ if col_length('dbo.Accounts','close_date') IS NULL
     end
 GO
 
+if col_length('dbo.Accounts','can_be_negative') IS NULL
+    begin
+        alter table dbo.Accounts add can_be_negative bit default(0)
+    end
+GO
+
 if col_length('dbo.Accounts','type') IS NULL
     begin
         alter table dbo.Accounts add [type] decimal(18,2) null
