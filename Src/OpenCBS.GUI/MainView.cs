@@ -50,6 +50,7 @@ using OpenCBS.GUI.Configuration.EntryFee;
 using OpenCBS.GUI.Configuration.PaymentMethod;
 using OpenCBS.GUI.Contracts;
 using OpenCBS.GUI.Database;
+using OpenCBS.GUI.MFI;
 using OpenCBS.GUI.Products;
 using OpenCBS.GUI.Report_Browser;
 using OpenCBS.GUI.Tools;
@@ -687,11 +688,44 @@ namespace OpenCBS.GUI
             InitExtensions();
             UserSettings.Language = UserSettings.GetUserLanguage();
 
+            var result = QuestionnaireResult.Invalid;
+            while(result==QuestionnaireResult.Invalid)
+            {
+                result = CheckQuestionnaire();
+                if (result == QuestionnaireResult.Cancel)
+                {
+                    Close();
+                    return;
+                }
+            }
+
             Ping();
             LogUser();
             InitializeMainMenu();
             _InitializeUserRights();
             DisplayFastChoiceForm();
+        }
+
+        private QuestionnaireResult CheckQuestionnaire()
+        {
+            var mfiService = ServicesProvider.GetInstance().GetMFIServices();
+            if (!mfiService.IsValidAndExistsQuestionnarieInformation())
+            {
+                var form = new frmQuestionnarie();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    if (mfiService.IsValidAndExistsQuestionnarieInformation(form.GetQuestionnaire()))
+                    {
+                        mfiService.SetQuestionnaire(form.GetQuestionnaire());
+                        return QuestionnaireResult.OK;
+                    }
+                    MessageBox.Show("Information is invalid.");
+                    return QuestionnaireResult.Invalid;
+                }
+                Close();
+                return QuestionnaireResult.Cancel;
+            }
+            return QuestionnaireResult.OK;
         }
 
         private static void Ping()
@@ -717,7 +751,12 @@ namespace OpenCBS.GUI
                     { "NumberOfIndividualClients", pingInfo.NumberOfIndividualClients.ToString("0") },
                     { "NumberOfSolidarityGroups", pingInfo.NumberOfSolidarityGroups.ToString("0") },
                     { "NumberOfNonSolidarityGroups", pingInfo.NumberOfNonSolidarityGroups.ToString("0") },
-                    { "NumberOfCompanies", pingInfo.NumberOfCompanies.ToString("0") }
+                    { "NumberOfCompanies", pingInfo.NumberOfCompanies.ToString("0") },
+                    { "CompanyName", pingInfo.QuestionnaireItem.CompanyName },
+                    { "FirstName", pingInfo.QuestionnaireItem.FirstName },
+                    { "LastName", pingInfo.QuestionnaireItem.LastName },
+                    { "Email", pingInfo.QuestionnaireItem.Email }
+
                 };
                 var parameters = string.Join("&", collection.Select(x => string.Format("{0}={1}", x.Key, x.Value)).ToArray());
                 var data = Encoding.UTF8.GetBytes(parameters);
@@ -1068,5 +1107,12 @@ namespace OpenCBS.GUI
         {
             _applicationController.Execute(new ShowAccountMovementsCommandData());
         }
+    }
+
+    internal enum QuestionnaireResult
+    {
+        Cancel,
+        Invalid,
+        OK
     }
 }

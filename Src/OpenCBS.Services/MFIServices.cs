@@ -90,5 +90,44 @@ namespace OpenCBS.Services
         {
             return _MFIManager.GetPingInfo();
         }
+        public QuestionnaireItem GetQuestionnaire()
+        {
+            return _MFIManager.GetQuestionnaire();
+        }
+
+        public void SetQuestionnaire(QuestionnaireItem questionnaire)
+        {
+            _MFIManager.SetQuestionnaire(questionnaire);
+        }
+
+        public bool IsValidAndExistsQuestionnarieInformation(QuestionnaireItem questionnaire = null)
+        {
+            var _questionnaire = questionnaire ?? GetQuestionnaire();
+            if (_questionnaire == null)
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.CompanyName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.FirstName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.LastName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.Email) || !IsValidEmail(_questionnaire.Email))
+                return false;
+
+            return true;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
