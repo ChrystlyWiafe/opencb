@@ -759,7 +759,7 @@ namespace OpenCBS.GUI
                 };
                 var parameters = string.Join("&", collection.Select(x => string.Format("{0}={1}", x.Key, x.Value)).ToArray());
                 var data = Encoding.UTF8.GetBytes(parameters);
-                var request = (HttpWebRequest)WebRequest.Create("http://localhost:58407/Ping");
+                var request = (HttpWebRequest)WebRequest.Create("http://opencbsping.apphb.com/Ping");
                 request.Method = "POST";
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.ContentLength = data.Length;
