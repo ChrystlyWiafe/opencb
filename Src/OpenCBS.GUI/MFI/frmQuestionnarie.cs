@@ -36,7 +36,7 @@ namespace OpenCBS.GUI.MFI
         {
 			_questionnaire = new QuestionnaireItem
 			{
-                FirstName = textBoxFirstName.Name,
+                FirstName = textBoxFirstName.Text,
                 LastName = textBoxLastName.Text,
                 CompanyName = textBoxCompanyName.Text,
                 Email = textBoxEmail.Text,
