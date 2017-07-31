@@ -20,3 +20,16 @@ CREATE NONCLUSTERED INDEX [IX_Contracts_status]
 ON [dbo].[Contracts] ([project_id],[nsg_id])
 INCLUDE ([status])
 GO
+
+IF  (NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CompanyQuestionnaire]')))
+	BEGIN
+		CREATE TABLE CompanyQuestionnaire
+		(
+			first_name NVARCHAR(255) NOT NULL
+			, last_name NVARCHAR(255) NOT NULL
+			, company_name NVARCHAR(255) NOT NULL
+			, email NVARCHAR(255) NOT NULL
+			, added_at DATETIME NOT NULL
+		)
+	END
+GO
