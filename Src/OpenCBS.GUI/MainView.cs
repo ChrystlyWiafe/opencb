@@ -688,17 +688,7 @@ namespace OpenCBS.GUI
             InitExtensions();
             UserSettings.Language = UserSettings.GetUserLanguage();
 
-            var result = QuestionnaireResult.Invalid;
-            while(result==QuestionnaireResult.Invalid)
-            {
-                result = CheckQuestionnaire();
-                if (result == QuestionnaireResult.Cancel)
-                {
-                    Close();
-                    return;
-                }
-            }
-
+            if (!CheckAndSetQuestionnaire()) return;
             Ping();
             LogUser();
             InitializeMainMenu();
@@ -706,26 +696,36 @@ namespace OpenCBS.GUI
             DisplayFastChoiceForm();
         }
 
-        private QuestionnaireResult CheckQuestionnaire()
+        private bool CheckAndSetQuestionnaire()
         {
             var mfiService = ServicesProvider.GetInstance().GetMFIServices();
-            if (!mfiService.IsValidAndExistsQuestionnarieInformation())
+            QuestionnaireItem questionnaire=null;
+
+            while (true)
             {
-                var form = new frmQuestionnarie();
-                if (form.ShowDialog() == DialogResult.OK)
+                if (!mfiService.IsValidAndExistsQuestionnarieInformation())
                 {
-                    if (mfiService.IsValidAndExistsQuestionnarieInformation(form.GetQuestionnaire()))
+                    var form = new frmQuestionnarie(questionnaire);
+                    if (form.ShowDialog() == DialogResult.OK)
                     {
-                        mfiService.SetQuestionnaire(form.GetQuestionnaire());
-                        return QuestionnaireResult.OK;
+                        questionnaire = form.GetQuestionnaire();
+                        if (mfiService.IsValidAndExistsQuestionnarieInformation(questionnaire))
+                        {
+                            mfiService.SetQuestionnaire(questionnaire);
+                            return true;
+                        }
+                        MessageBox.Show("Information is invalid.");
                     }
-                    MessageBox.Show("Information is invalid.");
-                    return QuestionnaireResult.Invalid;
+                    else
+                    {
+                        Close();
+                        return false;
+                    }
                 }
-                Close();
-                return QuestionnaireResult.Cancel;
+                else
+                    return true;
+
             }
-            return QuestionnaireResult.OK;
         }
 
         private static void Ping()
@@ -756,11 +756,10 @@ namespace OpenCBS.GUI
                     { "FirstName", pingInfo.QuestionnaireItem.FirstName },
                     { "LastName", pingInfo.QuestionnaireItem.LastName },
                     { "Email", pingInfo.QuestionnaireItem.Email }
-
                 };
                 var parameters = string.Join("&", collection.Select(x => string.Format("{0}={1}", x.Key, x.Value)).ToArray());
                 var data = Encoding.UTF8.GetBytes(parameters);
-                var request = (HttpWebRequest)WebRequest.Create("http://opencbsping.apphb.com/Ping");
+                var request = (HttpWebRequest)WebRequest.Create("http://localhost:58407/Ping");
                 request.Method = "POST";
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.ContentLength = data.Length;

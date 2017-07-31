@@ -11,14 +11,25 @@ namespace OpenCBS.GUI.MFI
     {
         private QuestionnaireItem _questionnaire;
 
-        public frmQuestionnarie(bool pSynchro)
+        public frmQuestionnarie(QuestionnaireItem questionnaire = null)
         {
             InitializeComponent();
+            if (questionnaire != null)
+            {
+                _questionnaire = questionnaire;
+                FillQuestionnarie();
+            }
+
         }
 
-        public frmQuestionnarie()
+        private void FillQuestionnarie()
         {
-            InitializeComponent();
+            if (_questionnaire == null)
+                return;
+            textBoxCompanyName.Text = _questionnaire.CompanyName;
+            textBoxEmail.Text = _questionnaire.Email;
+            textBoxFirstName.Text = _questionnaire.FirstName;
+            textBoxLastName.Text = _questionnaire.LastName;
         }
 
         private void buttonValidate_Click(object sender, EventArgs e)
