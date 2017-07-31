@@ -180,4 +180,7 @@
   <data name="FailedExtensionAssemblies.Text" xml:space="preserve">
     <value>Assemblées d'extension ne peut être chargé:{0}</value>
   </data>
+  <data name="InvalidInformation" xml:space="preserve">
+    <value>L'information est invalide.</value>
+  </data>
 </root>

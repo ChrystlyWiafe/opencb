@@ -714,7 +714,7 @@ namespace OpenCBS.GUI
                             mfiService.SetQuestionnaire(questionnaire);
                             return true;
                         }
-                        MessageBox.Show("Information is invalid.");
+                        MessageBox.Show(MultiLanguageStrings.GetString(Ressource.MainView, "InvalidInformation"));
                     }
                     else
                     {
