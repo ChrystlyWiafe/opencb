@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.Services;
 using OpenCBS.ExceptionsHandler;
+using OpenCBS.Shared;
 
 namespace OpenCBS.GUI.MFI
 {
@@ -22,12 +23,13 @@ namespace OpenCBS.GUI.MFI
 
         private void buttonValidate_Click(object sender, EventArgs e)
         {
-			_questionnaire = new QuestionnaireItem()
+			_questionnaire = new QuestionnaireItem
 			{
                 FirstName = textBoxFirstName.Name,
                 LastName = textBoxLastName.Text,
                 CompanyName = textBoxCompanyName.Text,
-                Email = textBoxEmail.Text
+                Email = textBoxEmail.Text,
+                AddedAt = TimeProvider.Now
 			};
             DialogResult = DialogResult.OK;
             Close();

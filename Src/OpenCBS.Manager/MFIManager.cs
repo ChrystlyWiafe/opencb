@@ -124,6 +124,7 @@ namespace OpenCBS.Manager
                     , last_name LastName
                     , company_name CompanyName
                     , email Email
+                    , added_at AddedAt
                 from
                     dbo.CompanyQuestionnaire 
             ";
@@ -141,6 +142,7 @@ namespace OpenCBS.Manager
                             , last_name 
                             , company_name 
                             , email
+                            , added_at
                         )
                     values
                         (
@@ -148,6 +150,7 @@ namespace OpenCBS.Manager
                             , @LastName
                             , @CompanyName
                             , @Email
+                            , @AddedAt
                         )
             ";
             using (var connection = GetConnection())
@@ -167,6 +170,7 @@ namespace OpenCBS.Manager
                     , last_name LastName
                     , company_name CompanyName
                     , email Email
+                    , added_at AddedAt
                 from
                     dbo.CompanyQuestionnaire 
             ";
