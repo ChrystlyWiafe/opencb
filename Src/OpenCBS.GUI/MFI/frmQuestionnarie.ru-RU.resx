@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 16</value>
   </data>
-  <data name="labelName.Text" xml:space="preserve">
-    <value>Имя:</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Вся следующая информация появится в отчетах.</value>
   </data>
   <data name="labelLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 16</value>
@@ -147,6 +147,12 @@
   </data>
   <data name="labelConfirmPassword.Text" xml:space="preserve">
     <value>Адрес эл. почты:</value>
+  </data>
+  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 16</value>
+  </data>
+  <data name="labelName.Text" xml:space="preserve">
+    <value>Имя:</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

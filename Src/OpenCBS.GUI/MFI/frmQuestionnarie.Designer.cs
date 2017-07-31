@@ -32,13 +32,14 @@ namespace OpenCBS.GUI.MFI
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
-            this.labelName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonValidate = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxFirstName
@@ -56,11 +57,11 @@ namespace OpenCBS.GUI.MFI
             resources.ApplyResources(this.textBoxCompanyName, "textBoxCompanyName");
             this.textBoxCompanyName.Name = "textBoxCompanyName";
             // 
-            // labelName
+            // label2
             // 
-            resources.ApplyResources(this.labelName, "labelName");
-            this.labelName.BackColor = System.Drawing.Color.Transparent;
-            this.labelName.Name = "labelName";
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Name = "label2";
             // 
             // labelLogin
             // 
@@ -97,6 +98,12 @@ namespace OpenCBS.GUI.MFI
             resources.ApplyResources(this.textBoxEmail, "textBoxEmail");
             this.textBoxEmail.Name = "textBoxEmail";
             // 
+            // labelName
+            // 
+            resources.ApplyResources(this.labelName, "labelName");
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Name = "labelName";
+            // 
             // frmQuestionnarie
             // 
             resources.ApplyResources(this, "$this");
@@ -108,6 +115,7 @@ namespace OpenCBS.GUI.MFI
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.labelName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxCompanyName);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
@@ -122,12 +130,13 @@ namespace OpenCBS.GUI.MFI
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxCompanyName;
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonValidate;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelConfirmPassword;
         private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelName;
     }
 }
