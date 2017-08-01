@@ -20,6 +20,8 @@
 // Contact: contact@opencbs.com
 
 using System;
+using System.IO;
+using System.Linq;
 using OpenCBS.CoreDomain;
 using OpenCBS.Manager;
 using OpenCBS.ExceptionsHandler;
@@ -113,11 +115,20 @@ namespace OpenCBS.Services
                 return false;
             if (string.IsNullOrWhiteSpace(_questionnaire.Email) || !IsValidEmail(_questionnaire.Email))
                 return false;
-
+            if (!CheckOnInvalidPathChars(_questionnaire.FirstName)
+                || !CheckOnInvalidPathChars(_questionnaire.LastName)
+                || !CheckOnInvalidPathChars(_questionnaire.CompanyName))
+                return false;
             return true;
         }
 
-        private bool IsValidEmail(string email)
+        private static bool CheckOnInvalidPathChars(string value)
+        {
+            var chars = Path.GetInvalidFileNameChars();
+            return chars.All(c => !value.Contains(c.ToString()));
+        }
+
+        private static bool IsValidEmail(string email)
         {
             try
             {

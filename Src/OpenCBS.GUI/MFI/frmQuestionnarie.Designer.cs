@@ -59,8 +59,8 @@ namespace OpenCBS.GUI.MFI
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
             // labelLogin
