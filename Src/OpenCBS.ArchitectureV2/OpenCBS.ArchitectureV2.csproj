@@ -230,6 +230,7 @@
     <Compile Include="CommandData\ShowAlertsCommandData.cs" />
     <Compile Include="CommandData\ShowDashboardCommandData.cs" />
     <Compile Include="CommandData\FastRepaymentCommandData.cs" />
+    <Compile Include="CommandData\ShowWriteOffViewCommandData.cs" />
     <Compile Include="CommandData\ShowReportsMenuCommandData.cs" />
     <Compile Include="CommandData\ShowRepaymentViewCommandData.cs" />
     <Compile Include="CommandData\ShowSearchCommandData.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="Command\EditSavingCommand.cs" />
     <Compile Include="Command\FastRepaymentCommand.cs" />
     <Compile Include="Command\ShowDashboardCommand.cs" />
+    <Compile Include="Command\ShowWriteOffViewCommand.cs" />
     <Compile Include="Command\ShowReportsMenuCommand.cs" />
     <Compile Include="EventInterceptor.cs" />
     <Compile Include="Event\DisbursementNotification.cs" />
