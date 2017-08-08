@@ -8,6 +8,7 @@ namespace OpenCBS.ArchitectureV2.Command
         public void Execute(ShowWriteOffViewCommandData commandData)
         {
             commandData.DefaultAction();
+            commandData.RefreshAction();
         }
     }
 }

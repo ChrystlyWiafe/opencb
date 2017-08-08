@@ -7,5 +7,6 @@ namespace OpenCBS.ArchitectureV2.CommandData
     {
         public Loan Loan { get; set; }
         public Action DefaultAction { get; set; }  
+        public Action RefreshAction { get; set; }
     }
 }

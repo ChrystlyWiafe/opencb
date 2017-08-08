@@ -7282,6 +7282,10 @@ namespace OpenCBS.GUI.Clients
             }
         }
 
+        private void btnWriteOff_Click(object sender, EventArgs e)
+        {
+            _applicationController.Execute(new ShowWriteOffViewCommandData { Loan = _credit, DefaultAction = WriteOff, RefreshAction = RefreshAfterWriteOff});
+        }
 
         private void WriteOff()
         {
@@ -7295,6 +7299,18 @@ namespace OpenCBS.GUI.Clients
                 if (form.ShowDialog() != DialogResult.OK) return;
 
                 ServicesProvider.GetInstance().GetContractServices().WriteOff(_credit, TimeProvider.Now, form.OptionId, form.Comment);
+            }
+            catch (Exception ex)
+            {
+                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                return;
+            }
+        }
+
+        private void RefreshAfterWriteOff()
+        {
+            try
+            {
                 btnWriteOff.Enabled = false;
                 DisplayLoanEvents(_credit);
                 InitializeContractStatus(_credit);
@@ -7308,12 +7324,6 @@ namespace OpenCBS.GUI.Clients
                 new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
                 return;
             }
-
-        }
-
-        private void btnWriteOff_Click(object sender, EventArgs e)
-        {
-            _applicationController.Execute(new ShowWriteOffViewCommandData { Loan = _credit, DefaultAction = WriteOff });
         }
 
         private void lvEntryFees_SubItemClicked(object sender, SubItemEventArgs e)
