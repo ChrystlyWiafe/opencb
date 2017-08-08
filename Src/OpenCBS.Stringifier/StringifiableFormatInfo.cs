@@ -92,6 +92,9 @@ namespace OpenCBS.Stringifier
                 case "kz":
                     return new Kazakh();
 
+                case "pt":
+                    return new Portuguese();
+
                 default:
                     return null;
             }
