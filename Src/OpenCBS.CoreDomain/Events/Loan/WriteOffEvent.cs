@@ -45,6 +45,7 @@ namespace OpenCBS.CoreDomain.Events
         public override string Description { get; set; }
         public int WriteOffMethod { get; set; }
         public string Comment { get; set; }
+        public OCurrency Fee { get; set; }
 	    public override Event Copy()
 		{
 			return (WriteOffEvent)MemberwiseClone();

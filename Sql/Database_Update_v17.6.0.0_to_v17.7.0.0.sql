@@ -33,3 +33,9 @@ IF  (NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[
 		)
 	END
 GO
+
+IF col_length('dbo.WriteOffEvents','fee') IS NULL
+    BEGIN
+        ALTER TABLE dbo.WriteOffEvents ADD fee money NOT NULL
+    END
+GO
