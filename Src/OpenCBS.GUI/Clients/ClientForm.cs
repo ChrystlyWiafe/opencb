@@ -2438,7 +2438,7 @@ namespace OpenCBS.GUI.Clients
 
             foreach (User user in _subordinates)
             {
-                if (user.UserRole.RoleName == "LOF" && !user.IsDeleted && !user.UserRole.IsDeleted)
+                if (!user.IsDeleted && !user.UserRole.IsDeleted)
                     _loanOfficerComboBox.Items.Add(user);
             }
             // set favoutite loan officer
@@ -7413,31 +7413,30 @@ namespace OpenCBS.GUI.Clients
             OCurrency loanAmount = nudLoanAmount.Value;
             OCurrency inputFee = decimal.Parse(numEntryFees.Value.ToString());
             inputFee = decimal.Parse(inputFee.GetFormatedValue(_credit.Product.Currency.UseCents));
+            OCurrency inputFeeRate = decimal.Parse(numEntryFees.Value.ToString());
+            inputFeeRate = Math.Floor(decimal.Parse((inputFeeRate*100).ToString())) / 100;
             foreach (ListViewItem item in lvEntryFees.Items)
             {
                 if (item.Tag is LoanEntryFee)
                 {
                     _credit.LoanEntryFeesList.Add((LoanEntryFee)item.Tag);
                     if (e.Item.Index == item.Index)
-                    {
-                        ((LoanEntryFee)item.Tag).FeeValue = inputFee.Value;
+                    {                        
                         var maxSum = ((LoanEntryFee) item.Tag).ProductEntryFee.MaxSum;
                         item.SubItems[4].Text = ((OCurrency)maxSum).GetFormatedValue(_credit.Product.Currency.UseCents);
                         if (((LoanEntryFee)item.Tag).ProductEntryFee.IsRate)
                         {
-                            OCurrency feeAmount = loanAmount * inputFee / 100;
+                            OCurrency feeAmount = loanAmount * inputFeeRate / 100;
                             item.SubItems[3].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                             if (maxSum.HasValue && maxSum > 0 && feeAmount > maxSum)
                             {
                                 feeAmount = maxSum;
                                 numEntryFees.Minimum = 0;
                                 numEntryFees.Value = 100m * feeAmount.Value / _credit.Amount.Value;
-                            }
-                            else
-                                item.SubItems[1].Text = inputFee.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            }                        
 
                             item.SubItems[5].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
-                            ((LoanEntryFee) item.Tag).FeeValue = Convert.ToDecimal(item.SubItems[1].Text);
+                            ((LoanEntryFee)item.Tag).FeeValue = inputFeeRate.Value;
                         }
                         else
                         {
@@ -7453,6 +7452,7 @@ namespace OpenCBS.GUI.Clients
                                 item.SubItems[1].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                             
                             item.SubItems[5].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
+                            ((LoanEntryFee)item.Tag).FeeValue = inputFee.Value;
                         }
                     }
                 }
@@ -7539,6 +7539,9 @@ namespace OpenCBS.GUI.Clients
                                 {
                                     feeAmount = entryFee.ProductEntryFee.MaxSum;
                                 }
+                                OCurrency rateValue = entryFee.FeeValue;
+                                item.SubItems[1].Text = (Math.Floor(decimal.Parse((rateValue * 100).ToString())) / 100).ToString();
+                                
                             }
                             else
                             {
@@ -7548,9 +7551,10 @@ namespace OpenCBS.GUI.Clients
                                 {
                                     feeAmount = entryFee.ProductEntryFee.MaxSum;
                                 }
+                                OCurrency rateValue = entryFee.FeeValue;
+                                item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
                             }
-                            OCurrency rateValue = entryFee.FeeValue;
-                            item.SubItems[1].Text = rateValue.GetFormatedValue(_credit.Product.Currency.UseCents);
+
                             item.SubItems[5].Text = feeAmount.GetFormatedValue(_credit.Product.Currency.UseCents);
                         }
                     }
