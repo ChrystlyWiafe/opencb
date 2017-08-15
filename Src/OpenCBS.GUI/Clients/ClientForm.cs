@@ -2872,7 +2872,7 @@ namespace OpenCBS.GUI.Clients
                     try
                     {
                         nudLoanNbOfInstallments.Minimum = credit.NmbOfInstallmentsMin.Value;
-                        nudLoanNbOfInstallments.Maximum = credit.NmbOfInstallmentsMin.Value;
+                        nudLoanNbOfInstallments.Maximum = credit.NmbOfInstallmentsMax.Value;
                         labelLoanNbOfInstallmentsMinMax.Text = string.Format("{0}{1}\r\n{2}{3}",
                          MultiLanguageStrings.GetString(Ressource.CreditContractForm, "min.Text"),
                          credit.Product.NbOfInstallmentsMin.Value,

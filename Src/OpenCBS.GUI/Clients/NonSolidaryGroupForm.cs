@@ -519,7 +519,7 @@ namespace OpenCBS.GUI.Clients
                 item.SubItems.Add(loan.NbOfInstallments.ToString());
 
                 if (loan.ContractStatus == OContractStatus.Active && loan.Disbursed == true)
-                    item.SubItems.Add(loan.AlignDisbursementDate.ToShortDateString());
+                    item.SubItems.Add(loan.StartDate.ToShortDateString());
                 else item.SubItems.Add("-");
 
                 if (loan.GetLastNonDeletedEvent() != null )
