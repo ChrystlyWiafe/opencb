@@ -1415,14 +1415,17 @@ namespace OpenCBS.Manager.Clients
             }
         }
 
-        public bool IsThisVillageNameUsed(string villageName, int pId)
+        public bool IsThisVillageNameUsed(string villageName, int pId, string branchName)
         {
-            string q = pId == 0 ? "SELECT COUNT(*) FROM Villages WHERE name = @data" : "SELECT COUNT(*) FROM Villages WHERE name = @data AND id <> @id";
+            string q = pId == 0
+                ? "select COUNT(*) from dbo.Tiers ti inner join dbo.Branches br on br.id = ti.branch_id inner join dbo.Villages v on v.id = ti.id WHERE br.name = @branchName and v.name = @villageName"
+                : "select COUNT(*) from dbo.Tiers ti inner join dbo.Branches br on br.id = ti.branch_id inner join dbo.Villages v on v.id = ti.id WHERE br.name = @branchName and v.name = @villageName AND ti.id <> @id";
 
             using (SqlConnection conn = GetConnection())
             using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
             {
-                c.AddParam("@data", villageName);
+                c.AddParam("@villageName", villageName);
+                c.AddParam("@branchName", branchName);
                 if (pId != 0)
                     c.AddParam("@id", pId);
 

@@ -672,9 +672,9 @@ namespace OpenCBS.Services
             return _clientManagement.IsThereSimilardentificationDataAlreadyUsed(pIdentificationData, pID);
         }
 
-        public bool CheckIfVillageNameExists(string villageName, int pId)
+        public bool CheckIfVillageNameExists(string villageName, int pId, string branchName)
         {
-            return _clientManagement.IsThisVillageNameUsed(villageName, pId);
+            return _clientManagement.IsThisVillageNameUsed(villageName, pId, branchName);
         }
 
         private int AddPerson(Person pPerson, Action<SqlTransaction, int> action)
