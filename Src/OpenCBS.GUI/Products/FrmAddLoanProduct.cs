@@ -1073,7 +1073,7 @@ namespace OpenCBS.GUI.Products
                     listViewLoanCycles.SelectedItems[0].SubItems[1].Text = textBoxCycleMin.Text;
                     break;
                 case 2:
-                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Min = decimal.Parse(textBoxCycleMin.Text);
+                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Min = decimal.Parse(textBoxCycleMin.Text) / 100;
                     listViewLoanCycles.SelectedItems[0].SubItems[1].Text = textBoxCycleMin.Text;
                     break;
                 case 3:
@@ -1098,7 +1098,7 @@ namespace OpenCBS.GUI.Products
                     listViewLoanCycles.SelectedItems[0].SubItems[2].Text = textBoxCycleMax.Text;
                     break;
                 case 2:
-                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Max = decimal.Parse(textBoxCycleMax.Text);
+                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Max = decimal.Parse(textBoxCycleMax.Text) / 100;
                     listViewLoanCycles.SelectedItems[0].SubItems[2].Text = textBoxCycleMax.Text;
                     break;
                 case 3:
@@ -2000,8 +2000,8 @@ namespace OpenCBS.GUI.Products
                 {
                     ListViewItem item = new ListViewItem((parameter.LoanCycle + 1).ToString());
                     item.Tag = parameter;
-                    item.SubItems.Add((parameter.Min.Value).ToString("0.00"));
-                    item.SubItems.Add((parameter.Max.Value).ToString("0.00"));
+                    item.SubItems.Add((parameter.Min.Value).ToString("0.0000"));
+                    item.SubItems.Add((parameter.Max.Value).ToString("0.0000"));
                     listViewLoanCycles.Items.Add(item);
                 }
         }
@@ -2065,8 +2065,8 @@ namespace OpenCBS.GUI.Products
                         break;
                     case 2:
                         _editedParam = (RateCycle)listViewLoanCycles.SelectedItems[0].Tag;
-                        textBoxCycleMin.Text = _editedParam.Min.Value.ToString("0.00");
-                        textBoxCycleMax.Text = _editedParam.Max.Value.ToString("0.00");
+                        textBoxCycleMin.Text = _editedParam.Min.Value.ToString("0.0000");
+                        textBoxCycleMax.Text = _editedParam.Max.Value.ToString("0.0000");
                         textBoxCycleMin.Enabled = true;
                         textBoxCycleMax.Enabled = true;
                         break;
