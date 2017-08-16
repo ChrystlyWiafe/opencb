@@ -1303,4 +1303,7 @@ Il ne peut y avoir deux comptes possédant le même numéro.</value>
   <data name="BetweenZeroAndSix.Text" xml:space="preserve">
     <value>Les valeurs doivent être comprises entre 0 et 6.</value>
   </data>
+  <data name="OTE43.Text" xml:space="preserve">
+    <value>Ce nom de banque de village est déjà utilisé</value>
+  </data>
 </root>

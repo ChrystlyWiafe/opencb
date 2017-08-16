@@ -161,7 +161,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account { AccountNumber = paymentMethodAccountNumber },
-                        Credit = new Account { AccountNumber = _loanDetails.PenaltyIncomeAccountNumber },
+                        Credit = new Account { AccountNumber = _loanDetails.AccruedPenaltyAccountNumber },
                         Amount = repayment.Penalties.Value,
                         Description = "Repayment of penalty for " + _loanDetails.ContractCode,
                         LoanEventId = repayment.Id
@@ -344,3 +344,4 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
         private readonly string[] _repaymentTypes = { "RBLE", "RGLE", "APR", "ATR", "APTR" };
     }
 }
+

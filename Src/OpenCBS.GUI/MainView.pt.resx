@@ -441,7 +441,7 @@
     <value>195, 22</value>
   </data>
   <data name="loanCalculatorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Calculadora de Crédito</value>
+    <value>Loan Simulador</value>
   </data>
   <data name="_viewItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 20</value>

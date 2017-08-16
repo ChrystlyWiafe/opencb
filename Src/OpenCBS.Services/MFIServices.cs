@@ -20,6 +20,8 @@
 // Contact: contact@opencbs.com
 
 using System;
+using System.IO;
+using System.Linq;
 using OpenCBS.CoreDomain;
 using OpenCBS.Manager;
 using OpenCBS.ExceptionsHandler;
@@ -89,6 +91,54 @@ namespace OpenCBS.Services
         public PingInfo GetPingInfo()
         {
             return _MFIManager.GetPingInfo();
+        }
+        public QuestionnaireItem GetQuestionnaire()
+        {
+            return _MFIManager.GetQuestionnaire();
+        }
+
+        public void SetQuestionnaire(QuestionnaireItem questionnaire)
+        {
+            _MFIManager.SetQuestionnaire(questionnaire);
+        }
+
+        public bool IsValidAndExistsQuestionnarieInformation(QuestionnaireItem questionnaire = null)
+        {
+            var _questionnaire = questionnaire ?? GetQuestionnaire();
+            if (_questionnaire == null)
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.CompanyName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.FirstName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.LastName))
+                return false;
+            if (string.IsNullOrWhiteSpace(_questionnaire.Email) || !IsValidEmail(_questionnaire.Email))
+                return false;
+            if (!CheckOnInvalidPathChars(_questionnaire.FirstName)
+                || !CheckOnInvalidPathChars(_questionnaire.LastName)
+                || !CheckOnInvalidPathChars(_questionnaire.CompanyName))
+                return false;
+            return true;
+        }
+
+        private static bool CheckOnInvalidPathChars(string value)
+        {
+            var chars = Path.GetInvalidFileNameChars();
+            return chars.All(c => !value.Contains(c.ToString()));
+        }
+
+        private static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

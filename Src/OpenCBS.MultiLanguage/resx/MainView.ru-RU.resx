@@ -162,4 +162,7 @@
   <data name="FailedExtensionAssemblies.Text" xml:space="preserve">
     <value>Данные сборки модулей не загрузились:{0}</value>
   </data>
+  <data name="InvalidInformation" xml:space="preserve">
+    <value>Неверная информация.</value>
+  </data>
 </root>

@@ -711,4 +711,7 @@
   <data name="BetweenZeroAndSix.Text" xml:space="preserve">
     <value>La entrada permitida es de entre 0 y 6.</value>
   </data>
+  <data name="OTE43.Text" xml:space="preserve">
+    <value>Este nombre del banco de pueblo ya se utiliza</value>
+  </data>
 </root>

@@ -246,4 +246,7 @@
   <data name="textErrorVillageIsEmpty.Text" xml:space="preserve">
     <value>El campo "ciudad" está vacío</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sus datos se guardan</value>
+  </data>
 </root>

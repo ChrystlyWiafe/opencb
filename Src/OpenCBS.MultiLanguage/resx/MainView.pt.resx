@@ -183,4 +183,7 @@
   <data name="passwordChanged.Text" xml:space="preserve">
     <value>Palavra Passe alterada</value>
   </data>
+  <data name="InvalidInformation" xml:space="preserve">
+    <value>As informações são inválidas.</value>
+  </data>
 </root>

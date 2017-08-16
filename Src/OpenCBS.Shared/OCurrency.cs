@@ -87,7 +87,7 @@ namespace OpenCBS.Shared
 
         public static implicit operator OCurrency(decimal? source)
         {
-            return source.HasValue ? new OCurrency(Math.Round(source.Value, 4, MidpointRounding.AwayFromZero)) : new OCurrency(source);
+            return source.HasValue ? new OCurrency(Math.Round(source.Value, 6, MidpointRounding.AwayFromZero)) : new OCurrency(source);
         }
 
         public static OCurrency operator +(OCurrency a, OCurrency b)

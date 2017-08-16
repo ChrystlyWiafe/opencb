@@ -258,4 +258,7 @@
   <data name="deleteDoc.Text" xml:space="preserve">
     <value>Voulez vous vraiment supprimer ce document ?</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Vos données sont enregistrées</value>
+  </data>
 </root>

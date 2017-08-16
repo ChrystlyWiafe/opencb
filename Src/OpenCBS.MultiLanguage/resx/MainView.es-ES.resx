@@ -156,4 +156,7 @@
   <data name="passwordChanged" xml:space="preserve">
     <value>The password has been changed successfully.</value>
   </data>
+  <data name="InvalidInformation." xml:space="preserve">
+    <value>La información no es válida.</value>
+  </data>
 </root>

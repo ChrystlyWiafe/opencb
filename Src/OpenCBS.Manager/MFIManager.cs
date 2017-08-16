@@ -116,6 +116,47 @@ namespace OpenCBS.Manager
             }
         }
 
+        public QuestionnaireItem GetQuestionnaire()
+        {
+            const string sql = @"
+                select
+                    first_name FirstName
+                    , last_name LastName
+                    , company_name CompanyName
+                    , email Email
+                    , added_at AddedAt
+                from
+                    dbo.CompanyQuestionnaire 
+            ";
+            using (var connection = GetConnection())
+                return connection.Query<QuestionnaireItem>(sql).FirstOrDefault();
+        }
+
+        public void SetQuestionnaire(QuestionnaireItem questionnaire)
+        {
+            const string sql = @"
+                insert into
+                    dbo.CompanyQuestionnaire
+                        (
+                            first_name 
+                            , last_name 
+                            , company_name 
+                            , email
+                            , added_at
+                        )
+                    values
+                        (
+                            @FirstName
+                            , @LastName
+                            , @CompanyName
+                            , @Email
+                            , @AddedAt
+                        )
+            ";
+            using (var connection = GetConnection())
+                connection.Execute(sql, questionnaire);
+        }
+
         public PingInfo GetPingInfo()
         {
             const string sql = @"
@@ -124,6 +165,14 @@ namespace OpenCBS.Manager
                 select count(*) from Groups
                 select count(*) from Villages
                 select count(*) from Corporates
+                select
+                    first_name FirstName
+                    , last_name LastName
+                    , company_name CompanyName
+                    , email Email
+                    , added_at AddedAt
+                from
+                    dbo.CompanyQuestionnaire 
             ";
             var result = new PingInfo();
             using (var connection = GetConnection())
@@ -134,6 +183,7 @@ namespace OpenCBS.Manager
                 result.NumberOfSolidarityGroups = multi.Read<int>().Single();
                 result.NumberOfNonSolidarityGroups = multi.Read<int>().Single();
                 result.NumberOfCompanies = multi.Read<int>().Single();
+                result.QuestionnaireItem = multi.Read<QuestionnaireItem>().Single();
                 return result;
             }
         }

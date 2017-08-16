@@ -296,6 +296,7 @@ namespace OpenCBS.GUI.Clients
             resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Leave += new System.EventHandler(this.btnSave_Leave);
             // 
             // btnCancel2
             // 

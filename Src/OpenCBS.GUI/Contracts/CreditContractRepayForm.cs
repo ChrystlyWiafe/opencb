@@ -864,6 +864,8 @@ namespace OpenCBS.GUI.Contracts
         {
             if(_rbKeepNotInitialSchedule.Checked)
             {
+                checkBoxInterests.Enabled = false;
+                checkBoxFees.Enabled = false;
                 try
                 {
                     bool IsTotalPayment = false;
@@ -894,6 +896,8 @@ namespace OpenCBS.GUI.Contracts
         {
             if(_rbKeepInitialSchedule.Checked)
             {
+                checkBoxInterests.Enabled = true;
+                checkBoxFees.Enabled = true;
                 try
                 {
                     bool IsTotalPayment = false;
@@ -1022,16 +1026,21 @@ namespace OpenCBS.GUI.Contracts
 
         private void rbProportionPayment_Click(object sender, EventArgs e)
         {
-            try
+            if (rbProportionPayment.Checked)
             {
-                _doProportionPayment = rbProportionPayment.Checked;
-                _keepExpectedInstallment = false;
-                DiseableAutomaticsStatus();
-                DisplayInstallmentsAndEvent();
-            }
-            catch (Exception ex)
-            {
-                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                checkBoxInterests.Enabled = true;
+                checkBoxFees.Enabled = true;
+                try
+                {
+                    _doProportionPayment = rbProportionPayment.Checked;
+                    _keepExpectedInstallment = false;
+                    DiseableAutomaticsStatus();
+                    DisplayInstallmentsAndEvent();
+                }
+                catch (Exception ex)
+                {
+                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                }
             }
         }
     }

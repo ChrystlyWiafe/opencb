@@ -26,5 +26,6 @@ namespace OpenCBS.CoreDomain
         public int NumberOfSolidarityGroups { get; set; }
         public int NumberOfNonSolidarityGroups { get; set; }
         public int NumberOfCompanies { get; set; }
+        public QuestionnaireItem QuestionnaireItem { get; set; }
     }
 }

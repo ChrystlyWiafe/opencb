@@ -519,7 +519,7 @@ namespace OpenCBS.GUI.Clients
                 item.SubItems.Add(loan.NbOfInstallments.ToString());
 
                 if (loan.ContractStatus == OContractStatus.Active && loan.Disbursed == true)
-                    item.SubItems.Add(loan.AlignDisbursementDate.ToShortDateString());
+                    item.SubItems.Add(loan.StartDate.ToShortDateString());
                 else item.SubItems.Add("-");
 
                 if (loan.GetLastNonDeletedEvent() != null )
@@ -958,6 +958,23 @@ namespace OpenCBS.GUI.Clients
                 tabVillage.TabPages.AddRange(pages);
                 Extensions.Add(tab);
             }
+        }
+        private void btnSave_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbName.Text != String.Empty)
+                    if (ServicesProvider.GetInstance().GetClientServices().CheckIfVillageNameExists(
+                        tbName.Text, _village.Id, cbBranch.Text))
+                        throw new OpenCbsTiersSaveException(OpenCbsTiersSaveExceptionEnum.CheckIfVillageNameUsed);
+                _village.Name = ServicesHelper.CheckTextBoxText(tbName.Text);
+            }
+            catch (Exception ex)
+            {
+                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                tbName.Text = string.Empty;
+            }
+
         }
     }
 }

@@ -1462,4 +1462,7 @@ Deve completar "min" e "max".  (guia Transacções)
   <data name="IncorrectMobilePhoneFormat.Text" xml:space="preserve">
     <value>A entrada permitida é entre 0 e 6.</value>
   </data>
+  <data name="OTE43.Text" xml:space="preserve">
+    <value>Este nome do banco da aldeia já é usado</value>
+  </data>
 </root>

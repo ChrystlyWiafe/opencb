@@ -52,6 +52,7 @@ using OpenCBS.GUI.Configuration.EntryFee;
 using OpenCBS.GUI.Configuration.PaymentMethod;
 using OpenCBS.GUI.Contracts;
 using OpenCBS.GUI.Database;
+using OpenCBS.GUI.MFI;
 using OpenCBS.GUI.Products;
 using OpenCBS.GUI.Report_Browser;
 using OpenCBS.GUI.Tools;
@@ -498,8 +499,18 @@ namespace OpenCBS.GUI
 
         public void InitializeLoanCalculator()
         {
-            LoanCalculator personForm = new LoanCalculator(OClientTypes.Person, this, false, _applicationController) { MdiParent = this };
-            personForm.Show();
+            try
+            {
+                LoanCalculator personForm = new LoanCalculator(OClientTypes.Person, this, false, _applicationController)
+                {
+                    MdiParent = this
+                };
+                personForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -679,11 +690,44 @@ namespace OpenCBS.GUI
             InitExtensions();
             UserSettings.Language = UserSettings.GetUserLanguage();
 
+            if (!CheckAndSetQuestionnaire()) return;
             Ping();
             LogUser();
             InitializeMainMenu();
             _InitializeUserRights();
             DisplayFastChoiceForm();
+        }
+
+        private bool CheckAndSetQuestionnaire()
+        {
+            var mfiService = ServicesProvider.GetInstance().GetMFIServices();
+            QuestionnaireItem questionnaire=null;
+
+            while (true)
+            {
+                if (!mfiService.IsValidAndExistsQuestionnarieInformation())
+                {
+                    var form = new frmQuestionnarie(questionnaire);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        questionnaire = form.GetQuestionnaire();
+                        if (mfiService.IsValidAndExistsQuestionnarieInformation(questionnaire))
+                        {
+                            mfiService.SetQuestionnaire(questionnaire);
+                            return true;
+                        }
+                        MessageBox.Show(MultiLanguageStrings.GetString(Ressource.MainView, "InvalidInformation"));
+                    }
+                    else
+                    {
+                        Close();
+                        return false;
+                    }
+                }
+                else
+                    return true;
+
+            }
         }
 
         private static void Ping()
@@ -709,7 +753,11 @@ namespace OpenCBS.GUI
                     { "NumberOfIndividualClients", pingInfo.NumberOfIndividualClients.ToString("0") },
                     { "NumberOfSolidarityGroups", pingInfo.NumberOfSolidarityGroups.ToString("0") },
                     { "NumberOfNonSolidarityGroups", pingInfo.NumberOfNonSolidarityGroups.ToString("0") },
-                    { "NumberOfCompanies", pingInfo.NumberOfCompanies.ToString("0") }
+                    { "NumberOfCompanies", pingInfo.NumberOfCompanies.ToString("0") },
+                    { "CompanyName", pingInfo.QuestionnaireItem.CompanyName },
+                    { "FirstName", pingInfo.QuestionnaireItem.FirstName },
+                    { "LastName", pingInfo.QuestionnaireItem.LastName },
+                    { "Email", pingInfo.QuestionnaireItem.Email }
                 };
                 var parameters = string.Join("&", collection.Select(x => string.Format("{0}={1}", x.Key, x.Value)).ToArray());
                 var data = Encoding.UTF8.GetBytes(parameters);
@@ -1066,5 +1114,12 @@ namespace OpenCBS.GUI
             var dayClosureForm = new FuseBoxExecutingForm();
             dayClosureForm.ShowDialog();
         }
+    }
+
+    internal enum QuestionnaireResult
+    {
+        Cancel,
+        Invalid,
+        OK
     }
 }
