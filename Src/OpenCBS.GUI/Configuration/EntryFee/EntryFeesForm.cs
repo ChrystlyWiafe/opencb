@@ -50,10 +50,10 @@ namespace OpenCBS.GUI.Configuration.EntryFee
 
                 var item = new ListViewItem(fee.Id.ToString()) { Tag = fee };
                 item.SubItems.Add(fee.Name);
-                item.SubItems.Add(fee.Min.HasValue ? fee.Min.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
-                item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',') : "");
+                item.SubItems.Add(fee.Min.HasValue ? fee.Min.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',').TrimEnd('.') : "");
+                item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',').TrimEnd('.') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
-                item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
+                item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(',').TrimEnd('.'));
                 var account = accountService.SelectAccountByNumber(fee.AccountNumber);
                 item.SubItems.Add(account != null ? account.ToString() : (new Account()).ToString());
 
