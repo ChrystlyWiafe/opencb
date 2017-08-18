@@ -124,6 +124,7 @@ namespace OpenCBS.Manager.Events
                     WriteOffEvents.accrued_penalties AS woe_accrued_penalties, 
                     WriteOffEvents.past_due_days AS woe_past_due_days, 
                     WriteOffEvents.overdue_principal AS woe_overdue_principal, 
+                    WriteOffEvents.fee AS woe_fee, 
 
                     ReschedulingOfALoanEvents.id AS rle_id, 
                     ReschedulingOfALoanEvents.amount AS rle_amount, 
@@ -830,8 +831,9 @@ namespace OpenCBS.Manager.Events
                                         [past_due_days],
                                         [overdue_principal],
                                         [write_off_method],
-                                        [comment])
-                                     VALUES(@id, @olb, @accruedInterests, @accruedPenalties, @pastDueDays, @overdue_principal, @writeOffMethod, @comment)
+                                        [comment],
+                                        [fee])
+                                     VALUES(@id, @olb, @accruedInterests, @accruedPenalties, @pastDueDays, @overdue_principal, @writeOffMethod, @comment, @fee)
                                     SELECT SCOPE_IDENTITY()";
 
             using (var c = new OpenCbsCommand(q, transaction.Connection, transaction))
@@ -1135,6 +1137,7 @@ namespace OpenCBS.Manager.Events
             c.AddParam("@overdue_principal", pEvent.OverduePrincipal);
             c.AddParam("@writeOffMethod", pEvent.WriteOffMethod);
             c.AddParam("@comment", pEvent.Comment);
+            c.AddParam("@fee", pEvent.Fee);
         }
 
         private static void SetLoanTrancheEvent(TrancheEvent trancheEvent, OpenCbsCommand command)
@@ -1782,7 +1785,8 @@ namespace OpenCBS.Manager.Events
                 AccruedInterests = r.GetMoney("woe_accrued_interests"),
                 AccruedPenalties = r.GetMoney("woe_accrued_penalties"),
                 PastDueDays = r.GetInt("woe_past_due_days"),
-                OverduePrincipal = r.GetMoney("woe_overdue_principal")
+                OverduePrincipal = r.GetMoney("woe_overdue_principal"),
+                Fee = r.GetMoney("woe_fee")
             };
         }
 

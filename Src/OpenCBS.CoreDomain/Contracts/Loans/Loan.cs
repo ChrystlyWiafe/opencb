@@ -2213,6 +2213,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                     AccruedInterests = GetUnpaidInterest(onDate),
                     AccruedPenalties = GetUnpaidLatePenalties(onDate),
                     OverduePrincipal = CalculateOverduePrincipal(onDate),
+                    Fee = 0,
                     IsFired = false,
                     Cancelable = true,
                     InstallmentNumber = GetLastNumberOfInstallments()

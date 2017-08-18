@@ -3013,6 +3013,11 @@ namespace OpenCBS.Services
 
         public void WriteOff(Loan loan, DateTime onDate, int writeOffMethodId, string comment)
         {
+            WriteOff(loan, onDate, writeOffMethodId, 0, comment);
+        }
+
+        public void WriteOff(Loan loan, DateTime onDate, int writeOffMethodId,decimal feeValue, string comment)
+        {
             using (SqlConnection conn = _loanManager.GetConnection())
             using (SqlTransaction sqlTransaction = conn.BeginTransaction())
             {
@@ -3022,6 +3027,7 @@ namespace OpenCBS.Services
                     writeOffEvent.User = User.CurrentUser;
                     writeOffEvent.WriteOffMethod = writeOffMethodId;
                     writeOffEvent.Comment = comment;
+                    writeOffEvent.Fee = feeValue;
 
                     if (Teller.CurrentTeller != null && Teller.CurrentTeller.Id != 0)
                         writeOffEvent.TellerId = Teller.CurrentTeller.Id;
