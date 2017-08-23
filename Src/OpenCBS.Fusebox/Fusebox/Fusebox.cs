@@ -186,12 +186,20 @@ namespace OpenCBS.Fusebox.Fusebox
             _bw.CancelAsync();
         }
 
-        private T[] GetRoutines<T>()
+        private T[] GetRoutines<T>() where T : IFuse
         {
             var defaultRoutines =
-                _container.GetAllInstances<T>().Where(item => item.GetType().Name.StartsWith("Default")).ToArray();
+                _container.GetAllInstances<T>()
+                    .Where(item => item.GetType().Name.StartsWith("Default"))
+                    .OrderBy(item => item.Order)
+                    .ToArray();
+
             var extensionRoutines =
-                _container.GetAllInstances<T>().Where(item => !item.GetType().Name.StartsWith("Default")).ToArray();
+                _container.GetAllInstances<T>()
+                    .Where(item => !item.GetType().Name.StartsWith("Default"))
+                    .OrderBy(item => item.Order)
+                    .ToArray();
+
             return extensionRoutines.Length > 0 ? extensionRoutines : defaultRoutines;
         }
 

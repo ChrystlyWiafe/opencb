@@ -201,40 +201,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Description = "Interest accrual for " + _loanDetails.ContractCode,
                         LoanEventId = accrual.Id
                     });
-
-                if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
-                {
-                    var account = new Account {AccountNumber = _loanDetails.InterestAccruedButNotDueAccountNumber};
-                    var balance =
-                        ServicesProvider.GetInstance()
-                            .GetBookingService()
-                            .GetAccountBalanceByLoanId(accrual.Date, account, _loanDetails.Id, _transaction);
-                    balance += accrual.Interest.Value;
-
-                    list.Add(
-                        new BookingEntry
-                        {
-                            Debit = new Account {AccountNumber = _loanDetails.InterestDueAccountNumber },
-                            Credit = new Account {AccountNumber = _loanDetails.InterestAccruedButNotDueAccountNumber },
-                            Amount = balance,
-                            Description = "Interest due for " + _loanDetails.ContractCode,
-                            LoanEventId = accrual.Id
-                        });
-                }
-                else if (previousInstallment != null && previousInstallment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
-                {
-                    var amount = previousInstallment.InterestsRepayment.Value - previousInstallment.PaidInterests.Value;
-
-                    list.Add(
-                        new BookingEntry
-                        {
-                            Debit = new Account {AccountNumber = _loanDetails.InterestDueButNotReceivedAccountNumber },
-                            Credit = new Account {AccountNumber = _loanDetails.InterestDueAccountNumber },
-                            Amount = amount,
-                            Description = "Interest for " + _loanDetails.ContractCode,
-                            LoanEventId = accrual.Id
-                        });
-                }
             }
 
             //Accrual Penalty Event

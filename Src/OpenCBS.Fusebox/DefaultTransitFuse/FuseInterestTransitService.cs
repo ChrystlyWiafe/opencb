@@ -13,19 +13,19 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
     public class FuseInterestTransitService
     {
         private readonly IDbTransaction _transaction;
-        private readonly int[] _activeLoanIds;
+        private int[] _activeLoanIds;
         private readonly ProgressChangedEventHandler _progressChangedEventHandler;
 
         public FuseInterestTransitService(IDbTransaction transaction, ProgressChangedEventHandler progressChangedEventHandler)
         {
             _transaction = transaction;
             _progressChangedEventHandler = progressChangedEventHandler;
-            _activeLoanIds = GetActiveLoansIds(TimeProvider.Now);
         }
 
-        public void RunInterestTransit()
+        public void RunInterestTransit(DateTime date)
         {
-            var date = TimeProvider.Today;
+            _activeLoanIds = GetActiveLoansIds(date);
+
             var index = 0;
             foreach (var id in _activeLoanIds)
             {
@@ -38,31 +38,30 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
                 {
                     ServicesProvider.GetInstance()
                         .GetBookingService()
-                        .SaveBooking(CreateLateTransitBooking(loanDetails, lateInterest), _transaction);
+                        .SaveBooking(CreateLateTransitBooking(loanDetails, lateInterest,date));
                 }
                 if (currentInterest > 0m)
                 {
                     ServicesProvider.GetInstance()
                         .GetBookingService()
                         .SaveBooking(
-                            CreateCurrentTransitBooking(loanDetails, currentInterest));
+                            CreateCurrentTransitBooking(loanDetails, currentInterest,date));
                 }
-                _progressChangedEventHandler(this, new ProgressChangedEventArgs(index/_activeLoanIds.Length*100, null));
             }
         }
 
-        private Booking CreateLateTransitBooking(LoanDetailsForInterestTransitModel model,decimal amount)
+        private Booking CreateLateTransitBooking(LoanDetailsForInterestTransitModel model,decimal amount,DateTime date)
         {
             if (model == null) return null;
             var user = User.CurrentUser.Id != 0 ? User.CurrentUser : new User {Id = 1};
 
             return new Booking
             {
-                Debit = new Account {AccountNumber = model.InterestAccruedButNotDueAccountNumber},
+                Debit = new Account {AccountNumber = model.InterestDueButNotReceived},
                 Credit = new Account {AccountNumber = model.InterestDueAccountNuber},
                 Amount = amount,
                 Description = "Interest due but not received for " + model.ContractCode,
-                Date = TimeProvider.Now,
+                Date = date.Date.AddHours(1),
                 ClientId = model.ClientId,
                 User = user,
                 Branch = new Branch {Id = model.BranchId},
@@ -72,18 +71,18 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             };
         }
 
-        private Booking CreateCurrentTransitBooking(LoanDetailsForInterestTransitModel model, decimal amount)
+        private Booking CreateCurrentTransitBooking(LoanDetailsForInterestTransitModel model, decimal amount, DateTime date)
         {
             if (model == null) return null;
             var user = User.CurrentUser.Id != 0 ? User.CurrentUser : new User { Id = 1 };
 
             return new Booking
             {
-                Debit = new Account { AccountNumber = model.InterestAccruedButNotDueAccountNumber },
-                Credit = new Account { AccountNumber = model.InterestDueAccountNuber },
+                Debit = new Account { AccountNumber = model.InterestDueAccountNuber },
+                Credit = new Account { AccountNumber = model.InterestAccruedButNotDueAccountNumber },
                 Amount = amount,
                 Description = "Interest due for " + model.ContractCode,
-                Date = TimeProvider.Now,
+                Date = date.Date.AddHours(1),
                 ClientId = model.ClientId,
                 User = user,
                 Branch = new Branch { Id = model.BranchId },
@@ -95,16 +94,9 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 
         private int[] GetActiveLoansIds(DateTime date)
         {
-            const string sql = @"select id from dbo.ActiveLoans(@date, 0)";
-            var connection = _transaction == null ? DatabaseConnection.GetConnection() : _transaction.Connection;
-            try
-            {
-                return connection.Query<int>(sql, new { date }, _transaction).ToArray();
-            }
-            finally
-            {
-                if (_transaction == null) connection.Close();
-            }
+            const string query = @"select id from dbo.ActiveLoans(@date, 0)";
+
+            return _transaction.Connection.Query<int>(query, new {date}, _transaction).ToArray();
         }
 
         private decimal GetLateInterest(int loanId, DateTime date)
@@ -128,12 +120,14 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 	                    dbo.Installments i2 ON i2.contract_id = i.contract_id AND i2.number = i.number - 1 
                     WHERE
 	                    i.contract_id = @loanId
-	                    AND @_date >= CAST(i.start_date AS DATE)
+	                    AND @_date > CAST(i.start_date AS DATE)
 	                    AND @_date <= CAST(i.expected_date AS DATE)
+                        AND @_date = DATEADD(day, 1, CAST(i2.expected_date AS DATE))
                 ";
             return _transaction.Connection.Query<decimal?>(query, new {date, loanId}, _transaction).FirstOrDefault() ??
                    0m;
         }
+
        private decimal GetCurrentInterest(int loanId, DateTime date)
         {
             const string query =
@@ -185,6 +179,29 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             return
                 _transaction.Connection.Query<LoanDetailsForInterestTransitModel>(query, new { loanId }, _transaction)
                     .FirstOrDefault();
+        }
+
+        public DateTime GetLastFuseRunningDate(string fuseName)
+        {
+            const string sql = @"
+                                SELECT TOP 1 
+	                                ended_at
+                                FROM
+	                                dbo.FuseboxLogs
+                                WHERE
+	                                fuse_name = cast(@fuseName AS NVARCHAR(50))
+                                ORDER BY
+	                                ended_at DESC
+                                ";
+            var connection = _transaction == null ? DatabaseConnection.GetConnection() : _transaction.Connection;
+            try
+            {
+                return connection.Query<DateTime>(sql, new { fuseName }, _transaction).FirstOrDefault();
+            }
+            finally
+            {
+                if (_transaction == null) connection.Close();
+            }
         }
     }
 }
