@@ -185,6 +185,12 @@ namespace OpenCBS.Services
             _productManager.DeleteCycles(rateCycles[0].CycleObjectId, (int)rateCycles[0].CycleId);
             _productManager.DeleteCycles(maturityCycles[0].CycleObjectId, (int)maturityCycles[0].CycleId);
 
+            foreach (RateCycle cycle in rateCycles)
+            {
+                cycle.Min = cycle.Min / 100;
+                cycle.Max = cycle.Max / 100;
+            }
+
             _productManager.InsertLoanAmountCycleParams(loanAmountCycles);
             _productManager.InsertRateCycleParams(rateCycles);
             _productManager.InsertMaturityCycleParams(maturityCycles);

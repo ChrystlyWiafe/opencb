@@ -1073,7 +1073,7 @@ namespace OpenCBS.GUI.Products
                     listViewLoanCycles.SelectedItems[0].SubItems[1].Text = textBoxCycleMin.Text;
                     break;
                 case 2:
-                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Min = decimal.Parse(textBoxCycleMin.Text) / 100;
+                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Min = decimal.Parse(textBoxCycleMin.Text);
                     listViewLoanCycles.SelectedItems[0].SubItems[1].Text = textBoxCycleMin.Text;
                     break;
                 case 3:
@@ -1098,7 +1098,7 @@ namespace OpenCBS.GUI.Products
                     listViewLoanCycles.SelectedItems[0].SubItems[2].Text = textBoxCycleMax.Text;
                     break;
                 case 2:
-                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Max = decimal.Parse(textBoxCycleMax.Text) / 100;
+                    ((RateCycle)listViewLoanCycles.SelectedItems[0].Tag).Max = decimal.Parse(textBoxCycleMax.Text);
                     listViewLoanCycles.SelectedItems[0].SubItems[2].Text = textBoxCycleMax.Text;
                     break;
                 case 3:
@@ -1190,6 +1190,14 @@ namespace OpenCBS.GUI.Products
             {
                 new frmShowError(CustomExceptionHandler.ShowExceptionText(exception)).ShowDialog();
             }
+
+            foreach (RateCycle cycle in _product.RateCycleParams)
+            {
+                cycle.Min = cycle.Min * 100;
+                cycle.Max = cycle.Max * 100;
+            }
+
+            buttonAmountCyclesSave.Enabled = false;
         }
 
         private void buttonSaveExoticProduct_Click(object sender, EventArgs e)

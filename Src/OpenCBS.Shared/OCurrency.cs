@@ -164,7 +164,7 @@ namespace OpenCBS.Shared
         {
             if (a.HasValue && b != 0)
             {
-                return new OCurrency(Math.Round(a._currency.Value / b, 4, MidpointRounding.AwayFromZero));
+                return new OCurrency(Math.Round(a._currency.Value / b, 6, MidpointRounding.AwayFromZero));
             }
             return null;
         }
