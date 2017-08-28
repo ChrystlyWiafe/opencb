@@ -36,6 +36,6 @@ GO
 
 IF col_length('dbo.WriteOffEvents','fee') IS NULL
     BEGIN
-        ALTER TABLE dbo.WriteOffEvents ADD fee money NOT NULL
+        ALTER TABLE dbo.WriteOffEvents ADD fee money NULL
     END
 GO
