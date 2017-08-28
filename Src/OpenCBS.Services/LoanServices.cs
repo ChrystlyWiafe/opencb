@@ -1976,14 +1976,17 @@ namespace OpenCBS.Services
                     // if event is loan close event, we delete it first
                     if (evnt is LoanCloseEvent)
                     {
-                        _ePs.CancelFireEvent(evnt, sqlTransaction, contract, contract.Product.Currency.Id); 
+                        _ePs.CancelFireEvent(evnt, sqlTransaction, contract, contract.Product.Currency.Id);
                         CallInterceptor(new Dictionary<string, object>
-                                        {
-                                            {"Event", evnt},
-                                            {"Loan", contract},
-                                            {"RecoveryAccount", true},
-                                            {"SqlTransaction", sqlTransaction}
-                                        });
+                        {
+                            {"BranchId", contract.Project.Client.Branch.Id},
+                            {"ClientId", contract.Project.Client.Id},
+                            {"LoanId", contract.Id},
+                            {"Event", evnt},
+                            {"Loan", contract},
+                            {"RecoveryAccount", true},
+                            {"SqlTransaction", sqlTransaction}
+                        });
                         evnt.Deleted = true;
                         evnt = contract.GetLastNonDeletedEvent();
                         if (pClient is Person)
@@ -2020,6 +2023,9 @@ namespace OpenCBS.Services
                                     tempService.DeleteEvent(savingEvent);
                                     CallInterceptor(new Dictionary<string, object>
                                     {
+                                        {"BranchId", contract.Project.Client.Branch.Id},
+                                        {"ClientId", contract.Project.Client.Id},
+                                        {"LoanId", contract.Id},
                                         {"Event", savingEvent},
                                         {"Loan", contract},
                                         {"Deleted", true},
@@ -2346,6 +2352,9 @@ namespace OpenCBS.Services
 
                     CallInterceptor(new Dictionary<string, object>
                     {
+                        {"BranchId", contract.Project.Client.Branch.Id},
+                        {"ClientId", contract.Project.Client.Id},
+                        {"LoanId", contract.Id},
                         {"Loan", contract},
                         {"Event", cancelledEvent},
                         {"Deleted", true},

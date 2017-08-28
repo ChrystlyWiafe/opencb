@@ -100,7 +100,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
+                        Debit = new Account {AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = "Commission (Registration Fee)",
@@ -123,6 +123,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             {
                 var repayment = (RepaymentEvent) eEvent;
                 var paymentMethodAccountNumber = repayment.PaymentMethod.AccountNumber;
+                var interestAccount = eEvent.Code == "RBLE"
+                    ? _product.InterestDueButNotReceivedAccountNumber
+                    : _product.InterestDueAccountNumber;
+
 
                 if (repayment.Principal.Value > 0m)
                 {
@@ -141,7 +145,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(new BookingEntry
                     {
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber},
-                        Credit = new Account {AccountNumber = _product.InterestIncomeAccountNumber},
+                        Credit = new Account {AccountNumber = interestAccount},
                         Amount = repayment.Interests.Value,
                         Description = "Repayment of interest",
                         LoanEventId = repayment.Id
@@ -199,7 +203,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         .GetContractServices()
                         .GetInstallments(_loanId, _transaction);
 
-                var installment = installments.FirstOrDefault(item => item.Number == accrual.InstallmentNumber);
+                var installment =
+                    installments.First(
+                        item =>
+                            accrual.Date.Date >= item.StartDate.Date &&
+                            accrual.Date.Date <= item.LastInterestAccrualDate.Date);
+
+                var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
 
                 if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
                 {
@@ -212,24 +222,24 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber},
+                            Debit = new Account {AccountNumber = _product.InterestDueAccountNumber},
                             Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber},
                             Amount = balance,
                             Description = "Interest due for " + _contractCode,
                             LoanEventId = accrual.Id
                         });
                 }
-                else if (installment != null && installment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
+                else if (previousInstallment != null && previousInstallment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
                 {
-                    var amount = installment.InterestsRepayment.Value - installment.PaidInterests.Value;
+                    var amount = previousInstallment.InterestsRepayment.Value - previousInstallment.PaidInterests.Value;
 
                     list.Add(
                         new BookingEntry
                         {
                             Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber},
-                            Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber},
+                            Credit = new Account {AccountNumber = _product.InterestDueAccountNumber},
                             Amount = amount,
-                            Description = "Interest accrual for " + _contractCode,
+                            Description = "Interest due but not received for " + _contractCode,
                             LoanEventId = accrual.Id
                         });
                 }
