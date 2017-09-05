@@ -601,6 +601,9 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.DataSource = new List<Account>(_accounts);
             comboBoxTaxOnPenaltyAccount.DataSource = new List<Account>(_accounts);
             comboBoxPenaltyIncomeAccount.DataSource = new List<Account>(_accounts);
+            comboBoxNonPerfomingAccount.DataSource = new List<Account>(_accounts);
+            comboBoxWriteOffAccount.DataSource = new List<Account>(_accounts);
+            comboBoxWaiveOffAccount.DataSource = new List<Account>(_accounts);
 
             comboBoxAccruedPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber ==_product.AccruedPenaltyAccountNumber);
             comboBoxInterestAccruedButNotDueAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestAccruedButNotDueAccountNumber);
@@ -611,8 +614,11 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnInterestsAccountNumber);
             comboBoxTaxOnPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnPenaltyAccountNumber);
             comboBoxPenaltyIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PenaltyIncomeAccountNumber);
+            comboBoxNonPerfomingAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.NonPerfomingAccountNumber);
+	        comboBoxWriteOffAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WriteOffAccountNumber);
+	        comboBoxWaiveOffAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WaiveOffAccountNumber);
 
-	        comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
+            comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
 	        comboBoxPenaltyIncomeAccount.SelectedIndexChanged += comboBoxPenaltyIncomeAccount_SelectedIndexChanged;
             comboBoxAccruedPenaltyAccount.SelectedIndexChanged += comboBoxAccruedPenaltyAccount_SelectedIndexChanged;
             comboBoxTaxOnInterestsAccount.SelectedIndexChanged += comboBoxTaxOnInterestsAccount_SelectedIndexChanged;
@@ -621,6 +627,9 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
             comboBoxPrincipalAccount.SelectedIndexChanged += comboBoxPrincipalAccount_SelectedIndexChanged;
             comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
+	        comboBoxNonPerfomingAccount.SelectedIndexChanged += comboBoxNonPerfomingAccount_SelectedIndexChanged;
+	        comboBoxWriteOffAccount.SelectedIndexChanged += comboBoxWriteOffAccount_SelectedIndexChanged;
+	        comboBoxWaiveOffAccount.SelectedIndexChanged += comboBoxWaiveOffAccount_SelectedIndexChanged;
 	    }
 
         private void InitializeTextBox()
@@ -2326,6 +2335,27 @@ namespace OpenCBS.GUI.Products
         private void textBoxTaxValue_TextChanged(object sender, EventArgs e)
         {
             _product.TaxValue = ServicesHelper.ConvertStringToNullableDouble(textBoxTaxValue.Text, true);
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxNonPerfomingAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxNonPerfomingAccount.SelectedValue as Account;
+            _product.NonPerfomingAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxWriteOffAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxWriteOffAccount.SelectedValue as Account;
+            _product.WriteOffAccountNumber = account != null ? account.AccountNumber : null;
+            buttonSave.Enabled = true;
+        }
+
+        private void comboBoxWaiveOffAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var account = comboBoxWaiveOffAccount.SelectedValue as Account;
+            _product.WaiveOffAccountNumber = account != null ? account.AccountNumber : null;
             buttonSave.Enabled = true;
         }
     }

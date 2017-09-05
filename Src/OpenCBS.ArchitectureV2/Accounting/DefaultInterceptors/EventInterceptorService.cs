@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
@@ -214,7 +215,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             //Accrual Interest Event
             else if (eEvent.Code == "AILE")
             {
-                var accrual = (LoanInterestAccrualEvent) eEvent;
+                var accrual = (LoanInterestAccrualEvent)eEvent;
 
                 var installments =
                     ServicesProvider.GetInstance()
@@ -225,15 +226,15 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     installments.First(
                         item =>
                             accrual.Date.Date >= item.StartDate.Date &&
-                            accrual.Date.Date <= item.LastInterestAccrualDate.Date);
+                            accrual.Date.Date <= item.ExpectedDate.Date);
 
                 var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
 
                 list.Add(
                     new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
-                        Credit = new Account {AccountNumber = _product.InterestIncomeAccountNumber},
+                        Debit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
+                        Credit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
                         Amount = accrual.Interest.Value,
                         Description = "Interest accrual for " + _contractCode,
                         LoanEventId = accrual.Id
@@ -241,7 +242,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
                 {
-                    var account = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber};
+                    var account = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber };
                     var balance =
                         ServicesProvider.GetInstance()
                             .GetBookingService()
@@ -251,8 +252,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = _product.InterestDueAccountNumber },
-                            Credit = new Account {AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
+                            Debit = new Account { AccountNumber = _product.InterestDueAccountNumber },
+                            Credit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
                             Amount = balance,
                             Description = "Interest due for " + _contractCode,
                             LoanEventId = accrual.Id
@@ -265,8 +266,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     list.Add(
                         new BookingEntry
                         {
-                            Debit = new Account {AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
-                            Credit = new Account {AccountNumber = _product.InterestDueAccountNumber },
+                            Debit = new Account { AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
+                            Credit = new Account { AccountNumber = _product.InterestDueAccountNumber },
                             Amount = amount,
                             Description = "Interest for " + _contractCode,
                             LoanEventId = accrual.Id
@@ -287,6 +288,42 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     Description = "Penalty accrual for " + _contractCode,
                     LoanEventId = accrual.Id
                 });
+            }
+
+            else if (eEvent.Code == "WROE")
+            {
+                var wroe = (WriteOffEvent) eEvent;
+
+                if (wroe.WriteOffMethod == 1)
+                {
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = _product.WriteOffAccountNumber },
+                        Credit = new Account { AccountNumber = _product.PrincipalAccountNumber },
+                        Amount = wroe.OLB.Value,
+                        Description = "Write off overdue principal for " + _contractCode
+                    });
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
+                        Credit = new Account { AccountNumber = _product.NonPerfomingAccountNumber },
+                        Amount = wroe.AccruedInterests.Value,
+                        Description = "Write off overdue interest for " + _contractCode
+                    });
+                }
+
+                if (wroe.WriteOffMethod == 2)
+                {
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = _product.WaiveOffAccountNumber },
+                        Credit = new Account { AccountNumber = _product.PrincipalAccountNumber },
+                        Amount = wroe.OLB.Value,
+                        Description = "Waive off overdue principal for " + _contractCode
+                    });
+
+                    AccountingData.DeleteInterestAccrualsEventsAndBookings(_loanId, wroe.Date.Date, _transaction);
+                }
             }
 
             return list;

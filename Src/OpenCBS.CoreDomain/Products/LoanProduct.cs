@@ -163,6 +163,9 @@ namespace OpenCBS.CoreDomain.Products
         public string PenaltyIncomeAccountNumber { get; set; }
         public string TaxOnPenaltyAccountNumber { get; set; }
         public double? TaxValue { get; set; }
+        public string NonPerfomingAccountNumber { get; set; }
+        public string WriteOffAccountNumber { get; set; }
+        public string WaiveOffAccountNumber { get; set; }
 
         public NonRepaymentPenaltiesNullableValues NonRepaymentPenalties
         {

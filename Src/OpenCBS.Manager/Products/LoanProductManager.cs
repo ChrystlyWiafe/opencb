@@ -169,7 +169,9 @@ namespace OpenCBS.Manager.Products
             c.AddParam("@penaltyIncomeAccount", package.PenaltyIncomeAccountNumber);
             c.AddParam("@taxOnPenaltyAccount", package.TaxOnPenaltyAccountNumber);
             c.AddParam("@taxValue", package.TaxValue);
-
+            c.AddParam("@nonperformingAccount", package.NonPerfomingAccountNumber);
+            c.AddParam("@writeOffAccount", package.WriteOffAccountNumber);
+            c.AddParam("@waiveOffAccount", package.WaiveOffAccountNumber);
         }
 
         private void FireProductLoaded(LoanProduct product)
@@ -266,7 +268,10 @@ namespace OpenCBS.Manager.Products
                 ,[accrued_penalty_account]
                 ,[penalty_income_account]
                 ,[tax_on_penalty_account]
-                ,[tax_value])
+                ,[tax_value]
+                ,[non_performing_account]
+                ,[write_off_account]
+                ,[waive_off_account])
                 VALUES
                 (@deleted
                 ,@name
@@ -346,7 +351,10 @@ namespace OpenCBS.Manager.Products
                 ,@accruedPenaltyAccount
                 ,@penaltyIncomeAccount
                 ,@taxOnPenaltyAccount
-                ,@taxValue)
+                ,@taxValue
+                ,@nonperformingAccount
+                ,@writeOffAccount
+                ,@waiveOffAccount)
                 SELECT SCOPE_IDENTITY()";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -466,6 +474,9 @@ namespace OpenCBS.Manager.Products
                 ,[penalty_income_account] = @penaltyIncomeAccount
                 ,[tax_on_penalty_account] = @taxOnPenaltyAccount
                 ,[tax_value] = @taxValue
+                ,[non_performing_account] = @nonperformingAccount
+                ,[write_off_account] = @writeOffAccount
+                ,[waive_off_account] = @waiveOffAccount
                 WHERE id = @packageId";
 
             var conn = tx == null ? GetConnection() : tx.Connection;
@@ -1224,6 +1235,9 @@ namespace OpenCBS.Manager.Products
             package.TaxOnInterestsAccountNumber = r.GetString("tax_on_interests_account");
             package.TaxOnPenaltyAccountNumber = r.GetString("tax_on_penalty_account");
             package.TaxValue = r.GetNullDouble("tax_value");
+            package.NonPerfomingAccountNumber = r.GetString("non_performing_account");
+            package.WriteOffAccountNumber = r.GetString("write_off_account");
+            package.WaiveOffAccountNumber = r.GetString("waive_off_account");
 
             return package;
         }
