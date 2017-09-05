@@ -226,7 +226,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     installments.First(
                         item =>
                             accrual.Date.Date >= item.StartDate.Date &&
-                            accrual.Date.Date <= item.ExpectedDate.Date);
+                            accrual.Date.Date <= item.LastInterestAccrualDate.Date);
 
                 var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
 
