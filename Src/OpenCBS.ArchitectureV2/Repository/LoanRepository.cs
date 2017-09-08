@@ -40,7 +40,7 @@ namespace OpenCBS.ArchitectureV2.Repository
             ";
             using (var connection = _connectionProvider.GetConnection())
             {
-                return connection.Query<Alert>(query, new { date, userId }).ToList();
+                return connection.Query<Alert>(query, new { date, userId }, commandTimeout: 1000000).ToList();
             }
         }
 

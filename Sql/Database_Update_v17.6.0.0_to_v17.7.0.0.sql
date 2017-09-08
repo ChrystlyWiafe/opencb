@@ -39,3 +39,21 @@ IF col_length('dbo.WriteOffEvents','fee') IS NULL
         ALTER TABLE dbo.WriteOffEvents ADD fee money NULL
     END
 GO
+
+IF col_length('dbo.Packages','non_performing_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD non_performing_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','write_off_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD write_off_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
+
+IF col_length('dbo.Packages','waive_off_account') IS NULL
+    BEGIN
+		ALTER TABLE dbo.Packages ADD waive_off_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO
