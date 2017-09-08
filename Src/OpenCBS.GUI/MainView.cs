@@ -29,6 +29,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Windows.Forms;
 using OpenCBS.ArchitectureV2.Accounting.CommandData;
@@ -55,6 +57,7 @@ using OpenCBS.GUI.Products;
 using OpenCBS.GUI.Report_Browser;
 using OpenCBS.GUI.Tools;
 using OpenCBS.GUI.UserControl;
+using OpenCBS.GUI.VersionCheck;
 using OpenCBS.MultiLanguageRessources;
 using OpenCBS.Reports;
 using OpenCBS.Reports.Forms;
@@ -689,6 +692,7 @@ namespace OpenCBS.GUI
             UserSettings.Language = UserSettings.GetUserLanguage();
 
             if (!CheckAndSetQuestionnaire()) return;
+            CheckVersion();
             Ping();
             LogUser();
             InitializeMainMenu();
@@ -726,6 +730,49 @@ namespace OpenCBS.GUI
                     return true;
 
             }
+        }
+
+        private static void CheckVersion()
+        {
+            var worker = new BackgroundWorker();
+            worker.DoWork += (sender, args) =>
+            {
+                var request = (HttpWebRequest)WebRequest.Create("http://localhost:8080/link.json");
+                request.Method = "GET";
+                request.UserAgent = "OpenCBS";
+                request.Timeout = 5000;
+                try
+                {
+                    using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                    {
+                        var dataStream = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
+                        string json = dataStream.ReadToEnd();
+                        VersionInformation deserializedUser = new VersionInformation();
+                        MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
+                        DataContractJsonSerializer ser = new DataContractJsonSerializer(deserializedUser.GetType());
+                        var versionInformation = ser.ReadObject(ms) as VersionInformation;
+                        var currentVersion = new Version(TechnicalSettings.CurrentVersion);
+                        var availableVersion = new Version(versionInformation.Version.TrimStart('v'));
+                        if (currentVersion.CompareTo(availableVersion) > 0)
+                        {
+                            var form = new NewVersionForm(versionInformation);
+                            form.TopMost = true;
+                            form.ShowDialog();
+                        }
+                        ms.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            };
+            worker.RunWorkerCompleted += (sender, args) =>
+            {
+                if (args.Error != null)
+                    Debug.WriteLine(args.Error.Message);
+            };
+            worker.RunWorkerAsync();
         }
 
         private static void Ping()
