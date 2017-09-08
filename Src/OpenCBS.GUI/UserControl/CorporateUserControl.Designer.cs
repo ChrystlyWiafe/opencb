@@ -42,11 +42,6 @@ namespace OpenCBS.GUI.UserControl
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CorporateUserControl));
-            this.tabControlCorporate = new System.Windows.Forms.TabControl();
-            this.tabPageAddress = new System.Windows.Forms.TabPage();
-            this.groupBoxAddress = new System.Windows.Forms.GroupBox();
-            this.tabPageContacts = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lvContacts = new System.Windows.Forms.ListView();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,6 +51,11 @@ namespace OpenCBS.GUI.UserControl
             this.btnAddContact = new System.Windows.Forms.Button();
             this.btnSelectContact = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.tabControlCorporate = new System.Windows.Forms.TabControl();
+            this.tabPageAddress = new System.Windows.Forms.TabPage();
+            this.groupBoxAddress = new System.Windows.Forms.GroupBox();
+            this.tabPageContacts = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPageSavings = new System.Windows.Forms.TabPage();
             this.savingsListUserControl1 = new OpenCBS.GUI.UserControl.SavingsListUserControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -80,15 +80,15 @@ namespace OpenCBS.GUI.UserControl
             this.linkLabelChangePhoto = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControlCorporate.SuspendLayout();
-            this.tabPageAddress.SuspendLayout();
-            this.tabPageContacts.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabControlCorporate.SuspendLayout();
+            this.tabPageAddress.SuspendLayout();
+            this.tabPageContacts.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tabPageSavings.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBoxCorporate.SuspendLayout();
@@ -96,41 +96,6 @@ namespace OpenCBS.GUI.UserControl
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabControlCorporate
-            // 
-            this.tabControlCorporate.Controls.Add(this.tabPageAddress);
-            this.tabControlCorporate.Controls.Add(this.tabPageContacts);
-            this.tabControlCorporate.Controls.Add(this.tabPageSavings);
-            resources.ApplyResources(this.tabControlCorporate, "tabControlCorporate");
-            this.tabControlCorporate.Multiline = true;
-            this.tabControlCorporate.Name = "tabControlCorporate";
-            this.tabControlCorporate.SelectedIndex = 0;
-            this.tabControlCorporate.DoubleClick += new System.EventHandler(this.ViewMember);
-            // 
-            // tabPageAddress
-            // 
-            resources.ApplyResources(this.tabPageAddress, "tabPageAddress");
-            this.tabPageAddress.Controls.Add(this.groupBoxAddress);
-            this.tabPageAddress.Name = "tabPageAddress";
-            // 
-            // groupBoxAddress
-            // 
-            resources.ApplyResources(this.groupBoxAddress, "groupBoxAddress");
-            this.groupBoxAddress.Name = "groupBoxAddress";
-            this.groupBoxAddress.TabStop = false;
-            // 
-            // tabPageContacts
-            // 
-            resources.ApplyResources(this.tabPageContacts, "tabPageContacts");
-            this.tabPageContacts.Controls.Add(this.tableLayoutPanel3);
-            this.tabPageContacts.Name = "tabPageContacts";
-            // 
-            // tableLayoutPanel3
-            // 
-            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.splitContainer1, 0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // splitContainer1
             // 
@@ -198,6 +163,41 @@ namespace OpenCBS.GUI.UserControl
             resources.ApplyResources(this.buttonDelete, "buttonDelete");
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Click += new System.EventHandler(this.ButtonDeleteClick1);
+            // 
+            // tabControlCorporate
+            // 
+            this.tabControlCorporate.Controls.Add(this.tabPageAddress);
+            this.tabControlCorporate.Controls.Add(this.tabPageContacts);
+            this.tabControlCorporate.Controls.Add(this.tabPageSavings);
+            resources.ApplyResources(this.tabControlCorporate, "tabControlCorporate");
+            this.tabControlCorporate.Multiline = true;
+            this.tabControlCorporate.Name = "tabControlCorporate";
+            this.tabControlCorporate.SelectedIndex = 0;
+            this.tabControlCorporate.DoubleClick += new System.EventHandler(this.ViewMember);
+            // 
+            // tabPageAddress
+            // 
+            resources.ApplyResources(this.tabPageAddress, "tabPageAddress");
+            this.tabPageAddress.Controls.Add(this.groupBoxAddress);
+            this.tabPageAddress.Name = "tabPageAddress";
+            // 
+            // groupBoxAddress
+            // 
+            resources.ApplyResources(this.groupBoxAddress, "groupBoxAddress");
+            this.groupBoxAddress.Name = "groupBoxAddress";
+            this.groupBoxAddress.TabStop = false;
+            // 
+            // tabPageContacts
+            // 
+            resources.ApplyResources(this.tabPageContacts, "tabPageContacts");
+            this.tabPageContacts.Controls.Add(this.tableLayoutPanel3);
+            this.tabPageContacts.Name = "tabPageContacts";
+            // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Controls.Add(this.splitContainer1, 0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // tabPageSavings
             // 
@@ -387,15 +387,15 @@ namespace OpenCBS.GUI.UserControl
             this.Controls.Add(this.groupBoxCorporate);
             this.Name = "CorporateUserControl";
             this.Load += new System.EventHandler(this.CorporateUserControlLoad);
-            this.tabControlCorporate.ResumeLayout(false);
-            this.tabPageAddress.ResumeLayout(false);
-            this.tabPageContacts.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.tabControlCorporate.ResumeLayout(false);
+            this.tabPageAddress.ResumeLayout(false);
+            this.tabPageContacts.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.tabPageSavings.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBoxCorporate.ResumeLayout(false);
