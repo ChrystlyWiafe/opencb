@@ -79,6 +79,7 @@ namespace OpenCBS.GUI
         private List<MenuObject> _menuItems;
         private bool _showTellerFormOnClose = true;
         private readonly IApplicationController _applicationController;
+        private VersionInformation _versionInformation { get; set; }
 
         public MainView(IApplicationController applicationController)
         {
@@ -732,7 +733,7 @@ namespace OpenCBS.GUI
             }
         }
 
-        private static void CheckVersion()
+        private void CheckVersion()
         {
             var worker = new BackgroundWorker();
             worker.DoWork += (sender, args) =>
@@ -755,9 +756,14 @@ namespace OpenCBS.GUI
                         var availableVersion = new Version(versionInformation.Version.TrimStart('v'));
                         if (currentVersion.CompareTo(availableVersion) > 0)
                         {
-                            var form = new NewVersionForm(versionInformation);
-                            form.TopMost = true;
-                            form.ShowDialog();
+                            _versionInformation = versionInformation;
+                            UpdateNotifyIcon.BalloonTipClicked +=
+                                (o, eventArgs) =>
+                                    Process.Start(IntPtr.Size == 8
+                                        ? _versionInformation.x64Link
+                                        : _versionInformation.x86Link);
+                            UpdateNotifyIcon.ShowBalloonTip(200000, "OpenCBS Update",
+                                "New version of OpenCBS is available!", ToolTipIcon.Info);
                         }
                         ms.Close();
                     }
