@@ -70,7 +70,6 @@ namespace OpenCBS.GUI
             this.bwUserInformation = new System.ComponentModel.BackgroundWorker();
             this.mainStatusBar = new System.Windows.Forms.StatusStrip();
             this.mainStatusBarLblUpdateVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelNewVersionChecking = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainStatusBarLblUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainStatusBarLblDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLblBranchCode = new System.Windows.Forms.ToolStripStatusLabel();
@@ -203,7 +202,6 @@ namespace OpenCBS.GUI
             resources.ApplyResources(this.mainStatusBar, "mainStatusBar");
             this.mainStatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainStatusBarLblUpdateVersion,
-            this.toolStripStatusLabelNewVersionChecking,
             this.mainStatusBarLblUserName,
             this.mainStatusBarLblDate,
             this.toolStripStatusLblBranchCode,
@@ -218,15 +216,6 @@ namespace OpenCBS.GUI
             resources.ApplyResources(this.mainStatusBarLblUpdateVersion, "mainStatusBarLblUpdateVersion");
             this.mainStatusBarLblUpdateVersion.Name = "mainStatusBarLblUpdateVersion";
             this.mainStatusBarLblUpdateVersion.Spring = true;
-            // 
-            // toolStripStatusLabelNewVersionChecking
-            // 
-            resources.ApplyResources(this.toolStripStatusLabelNewVersionChecking, "toolStripStatusLabelNewVersionChecking");
-            this.toolStripStatusLabelNewVersionChecking.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.toolStripStatusLabelNewVersionChecking.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
-            this.toolStripStatusLabelNewVersionChecking.Name = "toolStripStatusLabelNewVersionChecking";
             // 
             // mainStatusBarLblUserName
             // 
@@ -747,7 +736,7 @@ namespace OpenCBS.GUI
             // UpdateNotifyIcon
             // 
             resources.ApplyResources(this.UpdateNotifyIcon, "UpdateNotifyIcon");
-            //this.UpdateNotifyIcon.Click += new System.EventHandler(this.UpdateNotifyIcon_Click);
+            UpdateNotifyIcon.Visible = false;
             // 
             // MainView
             // 
@@ -829,7 +818,6 @@ namespace OpenCBS.GUI
         private ToolStripMenuItem mnuNewBalances;
         private ToolStripMenuItem mnuNewTurnoverBalances;
         private ToolStripMenuItem mnuNewAccountMovements;
-        private ToolStripStatusLabel toolStripStatusLabelNewVersionChecking;
         private NotifyIcon UpdateNotifyIcon;
     }
 }

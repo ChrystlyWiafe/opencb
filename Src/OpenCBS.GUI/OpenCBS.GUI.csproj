@@ -268,10 +268,6 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
-    <Compile Include="VersionCheck\UpdateContextMenu.cs" />
-    <Compile Include="VersionCheck\NewVersionFrom.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -978,25 +974,6 @@
       <DependentUpon>WriteOffOkCancelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="VersionCheck\VersionInformation.cs" />
-    <EmbeddedResource Include="VersionCheck\NewVersionFrom.es-ES.resx">
-      <DependentUpon>NewVersionFrom.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VersionCheck\NewVersionFrom.fr.resx">
-      <DependentUpon>NewVersionFrom.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VersionCheck\NewVersionFrom.pt.resx">
-      <DependentUpon>NewVersionFrom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VersionCheck\NewVersionFrom.resx">
-      <DependentUpon>NewVersionFrom.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VersionCheck\NewVersionFrom.ru-RU.resx">
-      <DependentUpon>NewVersionFrom.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="AboutForm.es-ES.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
       <SubType>Designer</SubType>
