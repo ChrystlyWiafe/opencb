@@ -736,7 +736,6 @@ namespace OpenCBS.GUI
             // UpdateNotifyIcon
             // 
             resources.ApplyResources(this.UpdateNotifyIcon, "UpdateNotifyIcon");
-            UpdateNotifyIcon.Visible = false;
             // 
             // MainView
             // 

@@ -756,14 +756,16 @@ namespace OpenCBS.GUI
                         var availableVersion = new Version(versionInformation.Version.TrimStart('v'));
                         if (currentVersion.CompareTo(availableVersion) > 0)
                         {
+                            var translationService = new TranslationService();
+                            translationService.Reload(UserSettings.Language);
                             _versionInformation = versionInformation;
                             UpdateNotifyIcon.BalloonTipClicked +=
                                 (o, eventArgs) =>
                                     Process.Start(IntPtr.Size == 8
                                         ? _versionInformation.x64Link
                                         : _versionInformation.x86Link);
-                            UpdateNotifyIcon.ShowBalloonTip(200000, "OpenCBS Update",
-                                "New version of OpenCBS is available!", ToolTipIcon.Info);
+                            UpdateNotifyIcon.ShowBalloonTip(200000, translationService.Translate("OpenCBS Update"),
+                                translationService.Translate("New version of OpenCBS is available!"), ToolTipIcon.Info);
                         }
                         ms.Close();
                     }
