@@ -738,7 +738,7 @@ namespace OpenCBS.GUI
             var worker = new BackgroundWorker();
             worker.DoWork += (sender, args) =>
             {
-                var request = (HttpWebRequest)WebRequest.Create("http://localhost:8080/link.json");
+                var request = (HttpWebRequest)WebRequest.Create("http://opencbs.com/version.txt");
                 request.Method = "GET";
                 request.UserAgent = "OpenCBS";
                 request.Timeout = 5000;
