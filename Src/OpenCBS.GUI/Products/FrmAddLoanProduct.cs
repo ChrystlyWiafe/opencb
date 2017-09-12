@@ -2330,11 +2330,11 @@ namespace OpenCBS.GUI.Products
 	        return true;
 	    }
 
-	    private string FloorLikeDecimal(string value)
-	    {
-	        if (string.IsNullOrEmpty(value)) return value;
-	        return (Math.Floor(Convert.ToDecimal(value)*100m)/100m).ToString().Replace(".", ",");
-	    }
+	    //private string FloorLikeDecimal(string value)
+	    //{
+	    //    if (string.IsNullOrEmpty(value)) return value;
+	    //    return (Math.Floor(Convert.ToDecimal(value)*100m)/100m).ToString().Replace(".", ",");
+	    //}
 
 
         private void lvEntryFees_SubItemEndEditing(object sender, SubItemEndEditingEventArgs e)
@@ -2349,17 +2349,17 @@ namespace OpenCBS.GUI.Products
 
                 case IdxMin:
                     if (CheckFeeValue(tbEntryFeesValues.Text))
-                        subItems[e.SubItem].Text = FloorLikeDecimal(tbEntryFeesValues.Text);
+                        subItems[e.SubItem].Text = tbEntryFeesValues.Text;
                     break;
 
                 case IdxMax:
                     if (CheckFeeValue(tbEntryFeesValues.Text))
-                        subItems[e.SubItem].Text = FloorLikeDecimal(tbEntryFeesValues.Text);
+                        subItems[e.SubItem].Text = tbEntryFeesValues.Text;
                     break;
 
                 case IdxValue:
                     if (CheckFeeValue(tbEntryFeesValues.Text))
-                        subItems[e.SubItem].Text = FloorLikeDecimal(tbEntryFeesValues.Text);
+                        subItems[e.SubItem].Text = tbEntryFeesValues.Text;
                     break;
 
                 case IdxIsRate:
@@ -2368,7 +2368,7 @@ namespace OpenCBS.GUI.Products
 
                 case IdxMaxSum:
                     if (CheckFeeValue(tbEntryFeesValues.Text))
-                        subItems[e.SubItem].Text = FloorLikeDecimal(tbEntryFeesValues.Text);
+                        subItems[e.SubItem].Text = tbEntryFeesValues.Text;
                     break;
             }
 
