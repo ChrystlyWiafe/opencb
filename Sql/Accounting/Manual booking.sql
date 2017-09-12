@@ -1,0 +1,1 @@
+update Accounts set is_direct = 1 where [type] = 4 or [type] =5
