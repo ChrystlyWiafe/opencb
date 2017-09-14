@@ -57,3 +57,9 @@ IF col_length('dbo.Packages','waive_off_account') IS NULL
 		ALTER TABLE dbo.Packages ADD waive_off_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
+
+IF col_length('dbo.EntryFees','income_account_number') IS NULL
+    BEGIN
+        ALTER TABLE dbo.EntryFees ADD income_account_number VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+    END
+GO

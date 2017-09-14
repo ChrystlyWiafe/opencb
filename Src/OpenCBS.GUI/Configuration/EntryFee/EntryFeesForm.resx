@@ -129,6 +129,9 @@
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="splitContainer2.Panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -172,7 +175,13 @@
     <value>Account number</value>
   </data>
   <data name="chAccount.Width" type="System.Int32, mscorlib">
-    <value>77</value>
+    <value>88</value>
+  </data>
+  <data name="chIncomeAccount.Text" xml:space="preserve">
+    <value>Income Account Number</value>
+  </data>
+  <data name="chIncomeAccount.Width" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
   <data name="_listViewEntryFee.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -183,8 +192,11 @@
   <data name="_listViewEntryFee.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="_listViewEntryFee.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="_listViewEntryFee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 702</value>
+    <value>1457, 875</value>
   </data>
   <data name="_listViewEntryFee.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -223,10 +235,13 @@
     <value>True</value>
   </data>
   <data name="_checkBoxShowDeleted.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 164</value>
+    <value>27, 202</value>
+  </data>
+  <data name="_checkBoxShowDeleted.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="_checkBoxShowDeleted.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
+    <value>117, 21</value>
   </data>
   <data name="_checkBoxShowDeleted.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -256,10 +271,13 @@
     <value>NoControl</value>
   </data>
   <data name="_buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 15</value>
+    <value>27, 18</value>
+  </data>
+  <data name="_buttonAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="_buttonAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 31</value>
+    <value>200, 38</value>
   </data>
   <data name="_buttonAdd.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -286,10 +304,13 @@
     <value>NoControl</value>
   </data>
   <data name="_buttonDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 115</value>
+    <value>27, 142</value>
+  </data>
+  <data name="_buttonDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="_buttonDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 31</value>
+    <value>200, 38</value>
   </data>
   <data name="_buttonDelete.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -319,10 +340,13 @@
     <value>NoControl</value>
   </data>
   <data name="_buttonEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 65</value>
+    <value>27, 80</value>
+  </data>
+  <data name="_buttonEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="_buttonEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 31</value>
+    <value>200, 38</value>
   </data>
   <data name="_buttonEdit.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -355,10 +379,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 702</value>
+    <value>1673, 875</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>1040</value>
+    <value>1457</value>
+  </data>
+  <data name="splitContainer2.SplitterWidth" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -384,6 +411,9 @@
   <data name="splitContainerMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainerMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="splitContainerMain.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
@@ -397,10 +427,13 @@
     <value>NoControl</value>
   </data>
   <data name="_buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1081, 6</value>
+    <value>1441, 7</value>
+  </data>
+  <data name="_buttonClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="_buttonClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 31</value>
+    <value>216, 38</value>
   </data>
   <data name="_buttonClose.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -432,8 +465,11 @@
   <data name="lblRoles.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="lblRoles.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="lblRoles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 47</value>
+    <value>1673, 47</value>
   </data>
   <data name="lblRoles.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -484,10 +520,13 @@
     <value>1</value>
   </data>
   <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 753</value>
+    <value>1673, 927</value>
   </data>
   <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
     <value>47</value>
+  </data>
+  <data name="splitContainerMain.SplitterWidth" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="splitContainerMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -508,10 +547,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 753</value>
+    <value>1673, 927</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Entry Fees</value>
@@ -558,9 +600,16 @@
   <data name="&gt;&gt;chAccount.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;chIncomeAccount.Name" xml:space="preserve">
+    <value>chIncomeAccount</value>
+  </data>
+  <data name="&gt;&gt;chIncomeAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EntryFeesForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.5.0.0, Culture=neutral, PublicKeyToken=null</value>  </data>
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=17.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

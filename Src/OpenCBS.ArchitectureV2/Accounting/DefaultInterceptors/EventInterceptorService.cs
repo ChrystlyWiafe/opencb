@@ -114,8 +114,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 var paymentMethodAccountNumber = disbursment.PaymentMethod.AccountNumber;
 
-                var commissionsAmount = 0m;
-
                 foreach (var commission in disbursment.Commissions??(new List<LoanEntryFeeEvent>()))
                 {
                     var entryFeeAccountNumber =
@@ -123,8 +121,11 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             .GetEntryFeeServices()
                             .GetEntryFeeAccountNumberByLoanProductEntryFeeId(commission.LoanEntryFee.ProductEntryFeeId,
                                 _transaction);
-
-                    commissionsAmount += commission.Fee.Value;
+                    var entryFeeIncomeAccountNumber =
+                        ServicesProvider.GetInstance()
+                            .GetEntryFeeServices()
+                            .GetIncomeAccountNumberByLoanProductEntryFeeId(commission.LoanEntryFee.ProductEntryFeeId,
+                                _transaction);
 
                     list.Add(new BookingEntry
                     {
@@ -132,6 +133,15 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = string.Format("Commission for {0}" ,_contractCode),
+                        LoanEventId = disbursment.Id
+                    });
+
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = entryFeeAccountNumber },
+                        Credit = new Account { AccountNumber = entryFeeIncomeAccountNumber },
+                        Amount = commission.Fee.Value,
+                        Description = string.Format("Income on Commission for {0}", _contractCode),
                         LoanEventId = disbursment.Id
                     });
                 }

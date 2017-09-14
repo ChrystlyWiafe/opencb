@@ -44,8 +44,10 @@
             this._numericUpDownMax = new System.Windows.Forms.NumericUpDown();
             this._numericUpDownMaxSum = new System.Windows.Forms.NumericUpDown();
             this._timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this._labelFeeAccount = new System.Windows.Forms.Label();
             this._comboBoxAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this._comboBoxIncomeFeeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this._labelIncomeFeeAccount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numericUpDownMaxSum)).BeginInit();
@@ -142,10 +144,10 @@
             0});
             this._numericUpDownMaxSum.Name = "_numericUpDownMaxSum";
             // 
-            // label1
+            // _labelFeeAccount
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this._labelFeeAccount, "_labelFeeAccount");
+            this._labelFeeAccount.Name = "_labelFeeAccount";
             // 
             // _comboBoxAccount
             // 
@@ -153,17 +155,30 @@
             resources.ApplyResources(this._comboBoxAccount, "_comboBoxAccount");
             this._comboBoxAccount.Name = "_comboBoxAccount";
             // 
+            // _comboBoxIncomeFeeAccount
+            // 
+            this._comboBoxIncomeFeeAccount.FormattingEnabled = true;
+            resources.ApplyResources(this._comboBoxIncomeFeeAccount, "_comboBoxIncomeFeeAccount");
+            this._comboBoxIncomeFeeAccount.Name = "_comboBoxIncomeFeeAccount";
+            // 
+            // _labelIncomeFeeAccount
+            // 
+            resources.ApplyResources(this._labelIncomeFeeAccount, "_labelIncomeFeeAccount");
+            this._labelIncomeFeeAccount.Name = "_labelIncomeFeeAccount";
+            // 
             // EntryFeeAddEdit
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this._labelIncomeFeeAccount);
+            this.Controls.Add(this._comboBoxIncomeFeeAccount);
             this.Controls.Add(this._comboBoxAccount);
             this.Controls.Add(this._numericUpDownMaxSum);
             this.Controls.Add(this._numericUpDownMax);
             this.Controls.Add(this._numericUpDownMin);
             this.Controls.Add(this._comboBoxRate);
             this.Controls.Add(this._buttonSave);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this._labelFeeAccount);
             this.Controls.Add(this._labelMaxSum);
             this.Controls.Add(this._labelRate);
             this.Controls.Add(this._labelMax);
@@ -200,7 +215,9 @@
         private System.Windows.Forms.NumericUpDown _numericUpDownMax;
         private System.Windows.Forms.NumericUpDown _numericUpDownMaxSum;
         private System.Windows.Forms.Timer _timer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label _labelFeeAccount;
         private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox _comboBoxAccount;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox _comboBoxIncomeFeeAccount;
+        private System.Windows.Forms.Label _labelIncomeFeeAccount;
     }
 }

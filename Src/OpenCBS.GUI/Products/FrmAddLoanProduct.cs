@@ -132,14 +132,14 @@ namespace OpenCBS.GUI.Products
                 if (fee.IsDeleted)
                     continue;
 
-//                var item = new ListViewItem(fee.Id.ToString()) { Tag = fee };
                 var item = new ListViewItem(fee.Name) { Tag = fee };
-//                item.SubItems.Add(fee.Name);
+
                 item.SubItems.Add(fee.Min.HasValue ? fee.Min.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',').TrimEnd('.') : "");
                 item.SubItems.Add(fee.Max.HasValue ? fee.Max.Value.ToString(CultureInfo.CurrentCulture).TrimEnd('0').TrimEnd(',').TrimEnd('.') : "");
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(',').TrimEnd('.'));
                 item.SubItems.Add(fee.AccountNumber);
+                item.SubItems.Add(fee.IncomeAccountNumber);
 
                 listView.Items.Add(item);
             }
@@ -2243,6 +2243,7 @@ namespace OpenCBS.GUI.Products
                 item.SubItems.Add(fee.IsRate.ToString());
                 item.SubItems.Add(fee.MaxSum.ToString().TrimEnd('0').TrimEnd(','));
                 item.SubItems.Add(fee.AccountNumber);
+                item.SubItems.Add(fee.IncomeAccountNumber);
                 _listViewCreditProductEntryFees.Items.Add(item);
 
                 _buttonAddEntryFee.Enabled = _listViewCreditProductEntryFees.Items.Count < 9;

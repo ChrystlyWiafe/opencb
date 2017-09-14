@@ -45,6 +45,7 @@
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this._buttonClose = new System.Windows.Forms.Button();
             this.lblRoles = new System.Windows.Forms.Label();
+            this.chIncomeAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -84,7 +85,8 @@
             this.chMax,
             this.chRate,
             this.chMaxSum,
-            this.chAccount});
+            this.chAccount,
+            this.chIncomeAccount});
             resources.ApplyResources(this._listViewEntryFee, "_listViewEntryFee");
             this._listViewEntryFee.FullRowSelect = true;
             this._listViewEntryFee.GridLines = true;
@@ -180,6 +182,10 @@
             this.lblRoles.ForeColor = System.Drawing.Color.White;
             this.lblRoles.Name = "lblRoles";
             // 
+            // chIncomeAccount
+            // 
+            resources.ApplyResources(this.chIncomeAccount, "chIncomeAccount");
+            // 
             // EntryFeesForm
             // 
             resources.ApplyResources(this, "$this");
@@ -217,5 +223,6 @@
         private System.Windows.Forms.Button _buttonClose;
         private System.Windows.Forms.Label lblRoles;
         private System.Windows.Forms.ColumnHeader chAccount;
+        private System.Windows.Forms.ColumnHeader chIncomeAccount;
     }
 }
