@@ -128,7 +128,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
+                        Debit = new Account {AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = string.Format("Commission for {0}" ,_contractCode),
