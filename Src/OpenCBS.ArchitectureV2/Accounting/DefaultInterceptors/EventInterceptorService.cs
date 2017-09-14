@@ -140,7 +140,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 {
                     Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                     Credit = new Account {AccountNumber = paymentMethodAccountNumber},
-                    Amount = disbursment.Amount.Value - commissionsAmount,
+                    Amount = disbursment.Amount.Value,
                     Description = "Loan disbursement for " + _contractCode,
                     LoanEventId = disbursment.Id
                 });
