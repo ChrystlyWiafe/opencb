@@ -13,7 +13,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public sealed partial class EntryFeeAddEdit : SweetBaseForm
     {
         private readonly Fee _entryFee;
-        private readonly List<Account> _accounts;
+        private readonly List<Account> _feeAccounts;
+        private readonly List<Account> _incomeAccounts;
         private const int Decimals = 2;
         private bool IsRate {
             get { return _comboBoxRate.SelectedIndex == 0; }
@@ -23,12 +24,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         {
             InitializeComponent();
             var bookingService = new BookingService(User.CurrentUser);
-            _accounts = bookingService.SelectAllAccounts().ToList();
-            var emptyAccount = new Account();
-            _accounts.Insert(0, emptyAccount);
 
-            _comboBoxAccount.DataSource = _accounts;
-            _comboBoxIncomeFeeAccount.DataSource = _accounts;
+            _feeAccounts = bookingService.SelectAllAccounts().ToList();
+            var emptyfeeAccount = new Account();
+            _feeAccounts.Insert(0, emptyfeeAccount);
+
+            _incomeAccounts = bookingService.SelectAllAccounts().ToList();
+            var emptyIncomeAccount = new Account();
+            _incomeAccounts.Insert(0, emptyIncomeAccount);
+
+            _comboBoxAccount.DataSource = _feeAccounts;
+            _comboBoxIncomeFeeAccount.DataSource = _incomeAccounts;
             if (entryFee != null)
             {
                 _entryFee = entryFee;
@@ -95,8 +101,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _numericUpDownMax.Value = entryFee.Max.HasValue ? entryFee.Max.Value : 0;
             _comboBoxRate.SelectedIndex = entryFee.IsRate ? 0 : 1;
             _numericUpDownMaxSum.Value = entryFee.MaxSum.HasValue ? entryFee.MaxSum.Value : 0;
-            var selectedAccount = _accounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
-            var selectedIncomeAccount = _accounts.FirstOrDefault(item => item.AccountNumber == entryFee.IncomeAccountNumber);
+            var selectedAccount = _feeAccounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
+            var selectedIncomeAccount = _incomeAccounts.FirstOrDefault(item => item.AccountNumber == entryFee.IncomeAccountNumber);
             if (selectedAccount != null)
                 _comboBoxAccount.SelectedItem = selectedAccount;
             else

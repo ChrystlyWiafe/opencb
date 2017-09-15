@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
