@@ -754,7 +754,7 @@ namespace OpenCBS.GUI
                         var versionInformation = ser.ReadObject(ms) as VersionInformation;
                         var currentVersion = new Version(TechnicalSettings.CurrentVersion);
                         var availableVersion = new Version(versionInformation.Version.TrimStart('v'));
-                        if (currentVersion.CompareTo(availableVersion) > 0)
+                        if (currentVersion.CompareTo(availableVersion) < 0)
                         {
                             var translationService = new TranslationService();
                             translationService.Reload(UserSettings.Language);
