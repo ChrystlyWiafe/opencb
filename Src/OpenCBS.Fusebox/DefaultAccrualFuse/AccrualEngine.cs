@@ -178,7 +178,8 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         {
             var installment = loan.GetLastLateInstallment(date);
 
-            if((date.Date - installment.EndDate.Date).Days <= loan.GracePeriodOfLateFees) return;
+            if ((date.Date - loan.GetFirstLateInstallment(date).EndDate.Date).Days <= loan.GracePeriodOfLateFees)
+                return;
 
             var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
             try
@@ -193,7 +194,8 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 var penaltyOnOverduePrincipal =
                     Math.Round(duePrincipal*loan.NonRepaymentPenaltiesBasedOnOverduePrincipal, 2);
 
-                if ((date.Date - installment.EndDate.Date).Days > loan.GracePeriodOfLateFees)
+                if (loan.GracePeriodOfLateFees > 0 &&
+                    (date.Date - loan.GetFirstLateInstallment(date).EndDate.Date).Days == loan.GracePeriodOfLateFees + 1)
                 {
                     penaltyOnAmount *= loan.GracePeriodOfLateFees + 1;
                     penaltyOnOlb *= loan.GracePeriodOfLateFees + 1;
@@ -214,7 +216,10 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                         )
                         select cast(scope_identity() as int)
                         ";
-                var eventId = connection.Query<int>(query, new {loanId = loan.Id, date}, tx).First();
+                var eventId =
+                    connection.Query<int>(query,
+                        new {loanId = loan.Id, @date = new DateTime(date.Year, date.Month, date.Day, -11, 0, 0)}, tx)
+                        .First();
 
                 query = @"
                         insert into dbo.LoanPenaltyAccrualEvents 

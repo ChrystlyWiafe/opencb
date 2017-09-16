@@ -58,7 +58,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             ";
             transaction.Connection.Execute(query, new
             {
-                @principalAccount = accountNumber
+                @principalAccountNumber = accountNumber
             }, transaction);
         }
     }

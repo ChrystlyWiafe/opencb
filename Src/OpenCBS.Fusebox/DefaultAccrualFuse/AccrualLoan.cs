@@ -67,6 +67,11 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             return _installments.FindAll(x => x.EndDate.Date < date.Date && !x.IsRepaid).OrderBy(x => x.EndDate).LastOrDefault();
         }
 
+        public AccrualInstallment GetFirstLateInstallment(DateTime date)
+        {
+            return _installments.FindAll(x => x.EndDate.Date < date.Date && !x.IsRepaid).OrderBy(x => x.EndDate).FirstOrDefault();
+        }
+
         public decimal GetOlb()
         {
             return _installments.Sum(x => x.Principal - x.PaidPrincipal);
