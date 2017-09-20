@@ -34,6 +34,7 @@ namespace OpenCBS.CoreDomain
             Index = -1;
             MaxSum = null;
             AccountNumber = "";
+            IncomeAccountNumber = "";
         }
 
         public int? Id { get; set; }
@@ -49,6 +50,7 @@ namespace OpenCBS.CoreDomain
         public int IdForNewItem { get; set; }
         public decimal? MaxSum { get; set; }
         public string AccountNumber { get; set; }
+        public string IncomeAccountNumber { get; set; }
 
         public void Copy(EntryFee entryFee)
         {
@@ -64,6 +66,7 @@ namespace OpenCBS.CoreDomain
             entryFee.IdForNewItem = IdForNewItem;
             entryFee.MaxSum = MaxSum;
             entryFee.AccountNumber = AccountNumber;
+            entryFee.IncomeAccountNumber = IncomeAccountNumber;
         }
 
         public EntryFee Copy()
@@ -81,7 +84,8 @@ namespace OpenCBS.CoreDomain
                 CycleId = CycleId,
                 IdForNewItem = IdForNewItem,
                 MaxSum = MaxSum,
-                AccountNumber = AccountNumber
+                AccountNumber = AccountNumber,
+                IncomeAccountNumber = IncomeAccountNumber
             };
 
             return result;

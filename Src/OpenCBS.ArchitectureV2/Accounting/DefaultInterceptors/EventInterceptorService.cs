@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
 using OpenCBS.CoreDomain.Contracts.Loans;
@@ -114,8 +113,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                 var paymentMethodAccountNumber = disbursment.PaymentMethod.AccountNumber;
 
-                var commissionsAmount = 0m;
-
                 foreach (var commission in disbursment.Commissions??(new List<LoanEntryFeeEvent>()))
                 {
                     var entryFeeAccountNumber =
@@ -123,15 +120,27 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                             .GetEntryFeeServices()
                             .GetEntryFeeAccountNumberByLoanProductEntryFeeId(commission.LoanEntryFee.ProductEntryFeeId,
                                 _transaction);
-
-                    commissionsAmount += commission.Fee.Value;
+                    var entryFeeIncomeAccountNumber =
+                        ServicesProvider.GetInstance()
+                            .GetEntryFeeServices()
+                            .GetIncomeAccountNumberByLoanProductEntryFeeId(commission.LoanEntryFee.ProductEntryFeeId,
+                                _transaction);
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
+                        Debit = new Account {AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
                         Description = string.Format("Commission for {0}" ,_contractCode),
+                        LoanEventId = disbursment.Id
+                    });
+
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = entryFeeAccountNumber },
+                        Credit = new Account { AccountNumber = entryFeeIncomeAccountNumber },
+                        Amount = commission.Fee.Value,
+                        Description = string.Format("Income on Commission for {0}", _contractCode),
                         LoanEventId = disbursment.Id
                     });
                 }
@@ -140,7 +149,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 {
                     Debit = new Account {AccountNumber = _product.PrincipalAccountNumber },
                     Credit = new Account {AccountNumber = paymentMethodAccountNumber},
-                    Amount = disbursment.Amount.Value - commissionsAmount,
+                    Amount = disbursment.Amount.Value,
                     Description = "Loan disbursement for " + _contractCode,
                     LoanEventId = disbursment.Id
                 });

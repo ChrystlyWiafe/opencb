@@ -31,6 +31,7 @@ namespace OpenCBS.Manager
                                 ,[max_sum] MaxSum
                                 ,[is_deleted] IsDeleted
                                 ,[account_number] AccountNumber
+                                ,[income_account_number] IncomeAccountNumber
                             FROM
                                 [dbo].[EntryFees]";
 
@@ -49,6 +50,7 @@ namespace OpenCBS.Manager
                                         ,ef.[max_sum] MaxSum
                                         ,ef.[is_deleted] IsDeleted
                                         ,ef.[account_number] AccountNumber
+                                        ,ef.[income_account_number] IncomeAccountNumber
 	                                    ,lpef.[cycle_id] CycleId
                                         ,lpef.[fee_index] [Index]
                                     FROM
@@ -72,14 +74,16 @@ namespace OpenCBS.Manager
                                         max, 
                                         rate, 
                                         max_sum, 
-                                        account_number)
+                                        account_number,
+                                        income_account_number)
                                    VALUES
                                        (@Name,
                                         @Min,
                                         @Max,
                                         @IsRate,
                                         @MaxSum,
-                                        @AccountNumber)";
+                                        @AccountNumber,
+                                        @IncomeAccountNumber)";
 
             transaction.Connection.Execute(query, entryFee, transaction);
         }
@@ -122,7 +126,8 @@ namespace OpenCBS.Manager
                                         max = @Max, 
                                         rate = @IsRate, 
                                         max_sum = @MaxSum,
-                                        account_number = @AccountNumber
+                                        account_number = @AccountNumber,
+                                        income_account_number = @IncomeAccountNumber
                                    where
                                         id = @Id";
 
@@ -152,6 +157,7 @@ namespace OpenCBS.Manager
                                 ,[max_sum] MaxSum
                                 ,[is_deleted] IsDeleted
                                 ,[account_number] AccountNumber
+                                ,[income_account_number] IncomeAccountNumber
                             FROM
                                 [dbo].[EntryFees]
                             WHERE
@@ -197,6 +203,18 @@ namespace OpenCBS.Manager
             const string sql = @"
                         select top 1
                             account_number
+                        from dbo.EntryFees ef
+                        where ef.id = @Id
+                            and ef.is_deleted = 0
+                    ";
+            return transaction.Connection.Query<string>(sql, new { Id = loanProductEntryFeeId }, transaction).FirstOrDefault();
+        }
+
+        public string GetIncomeAccountNumberByLoanProductEntryFeeId(int loanProductEntryFeeId, IDbTransaction transaction)
+        {
+            const string sql = @"
+                        select top 1
+                            income_account_number
                         from dbo.EntryFees ef
                         where ef.id = @Id
                             and ef.is_deleted = 0

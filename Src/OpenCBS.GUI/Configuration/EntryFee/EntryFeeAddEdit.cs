@@ -13,7 +13,8 @@ namespace OpenCBS.GUI.Configuration.EntryFee
     public sealed partial class EntryFeeAddEdit : SweetBaseForm
     {
         private readonly Fee _entryFee;
-        private readonly List<Account> _accounts;
+        private readonly List<Account> _feeAccounts;
+        private readonly List<Account> _incomeAccounts;
         private const int Decimals = 2;
         private bool IsRate {
             get { return _comboBoxRate.SelectedIndex == 0; }
@@ -23,11 +24,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         {
             InitializeComponent();
             var bookingService = new BookingService(User.CurrentUser);
-            _accounts = bookingService.SelectAllAccounts().ToList();
-            var emptyAccount = new Account();
-            _accounts.Insert(0, emptyAccount);
 
-            _comboBoxAccount.DataSource = _accounts;
+            _feeAccounts = bookingService.SelectAllAccounts().ToList();
+            var emptyfeeAccount = new Account();
+            _feeAccounts.Insert(0, emptyfeeAccount);
+
+            _incomeAccounts = bookingService.SelectAllAccounts().ToList();
+            var emptyIncomeAccount = new Account();
+            _incomeAccounts.Insert(0, emptyIncomeAccount);
+
+            _comboBoxAccount.DataSource = _feeAccounts;
+            _comboBoxIncomeFeeAccount.DataSource = _incomeAccounts;
             if (entryFee != null)
             {
                 _entryFee = entryFee;
@@ -75,13 +82,16 @@ namespace OpenCBS.GUI.Configuration.EntryFee
         private void UpdateLocalEntryFee()
         {
             var account = _comboBoxAccount.SelectedItem as Account;
+            var incomeAccount = _comboBoxIncomeFeeAccount.SelectedItem as Account;
 
             _entryFee.Name = _textBoxName.Text;
             _entryFee.Min = _numericUpDownMin.Text == "" ? 0m : Math.Round(_numericUpDownMin.Value, Decimals);
             _entryFee.Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals);
             _entryFee.IsRate = IsRate;
             _entryFee.MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals);
-            _entryFee.AccountNumber = account != null ? account.AccountNumber : (new Account()).ToString();        }
+            _entryFee.AccountNumber = account != null ? account.AccountNumber : (new Account()).ToString();
+            _entryFee.IncomeAccountNumber = incomeAccount != null ? incomeAccount.AccountNumber : (new Account()).ToString();
+        }
 
         private void FillFieldsByEntryFee(Fee entryFee)
         {
@@ -91,12 +101,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             _numericUpDownMax.Value = entryFee.Max.HasValue ? entryFee.Max.Value : 0;
             _comboBoxRate.SelectedIndex = entryFee.IsRate ? 0 : 1;
             _numericUpDownMaxSum.Value = entryFee.MaxSum.HasValue ? entryFee.MaxSum.Value : 0;
-            var selectedAccount = _accounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
+            var selectedAccount = _feeAccounts.FirstOrDefault(item => item.AccountNumber == entryFee.AccountNumber);
+            var selectedIncomeAccount = _incomeAccounts.FirstOrDefault(item => item.AccountNumber == entryFee.IncomeAccountNumber);
             if (selectedAccount != null)
                 _comboBoxAccount.SelectedItem = selectedAccount;
             else
                 _comboBoxAccount.SelectedIndex = 0;
 
+            if (selectedIncomeAccount != null)
+                _comboBoxIncomeFeeAccount.SelectedItem = selectedIncomeAccount;
+            else
+                _comboBoxIncomeFeeAccount.SelectedIndex = 0;
         }
         
         #endregion
@@ -139,6 +154,9 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             if (EmptyAccount())
                 return ShowErrorMessageAndReturnFalse("accountEmpty");
 
+            if (EmptyIncomeAccount())
+                return ShowErrorMessageAndReturnFalse("accountEmpty");
+
             return true;
         }
 
@@ -163,11 +181,17 @@ namespace OpenCBS.GUI.Configuration.EntryFee
             return _comboBoxAccount.SelectedValue == null || string.IsNullOrEmpty(_comboBoxAccount.Text);
         }
 
+        private bool EmptyIncomeAccount()
+        {
+            return _comboBoxIncomeFeeAccount.SelectedValue == null || string.IsNullOrEmpty(_comboBoxIncomeFeeAccount.Text);
+        }
+
         #endregion
 
         private Fee GetFeeFromForm()
         {
             var account = _comboBoxAccount.SelectedItem as Account;
+            var incomeAccount = _comboBoxIncomeFeeAccount.SelectedItem as Account;
             var fee = new Fee
                         {
                             Name = _textBoxName.Text,
@@ -175,8 +199,9 @@ namespace OpenCBS.GUI.Configuration.EntryFee
                             Max = _numericUpDownMax.Text == "" ? 0m : Math.Round(_numericUpDownMax.Value, Decimals),
                             IsRate = IsRate,
                             MaxSum = _numericUpDownMaxSum.Text == "" ? 0m : Math.Round(_numericUpDownMaxSum.Value, Decimals),
-                            AccountNumber = account != null ? account.AccountNumber : null
-                        };
+                            AccountNumber = account != null ? account.AccountNumber : null,
+                            IncomeAccountNumber = incomeAccount != null ? incomeAccount.AccountNumber : null
+            };
             return fee;
         }
     }
