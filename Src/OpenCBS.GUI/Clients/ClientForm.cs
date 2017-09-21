@@ -7294,7 +7294,8 @@ namespace OpenCBS.GUI.Clients
 
         private void btnWriteOff_Click(object sender, EventArgs e)
         {
-            _applicationController.Execute(new ShowWriteOffViewCommandData { Loan = _credit, DefaultAction = WriteOff, RefreshAction = RefreshAfterWriteOff});
+            _applicationController.Execute
+                (new ShowWriteOffViewCommandData { Loan = _credit, DefaultAction = WriteOff, RefreshAction = RefreshAfterWriteOff});
         }
 
         private void WriteOff()
@@ -7313,27 +7314,28 @@ namespace OpenCBS.GUI.Clients
             catch (Exception ex)
             {
                 new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
-                return;
             }
         }
 
         private void RefreshAfterWriteOff()
         {
-            try
+            if (_credit.WrittenOff)
             {
-                btnWriteOff.Enabled = false;
-                DisplayLoanEvents(_credit);
-                InitializeContractStatus(_credit);
+                try
+                {
+                    btnWriteOff.Enabled = false;
+                    DisplayLoanEvents(_credit);
+                    InitializeContractStatus(_credit);
 
-                buttonManualSchedule.Enabled = false;
-                buttonLoanReschedule.Enabled = false;
-                btnActions.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
-                return;
-            }
+                    buttonManualSchedule.Enabled = false;
+                    buttonLoanReschedule.Enabled = false;
+                    btnActions.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    new frmShowError(CustomExceptionHandler.ShowExceptionText(ex)).ShowDialog();
+                }
+            }            
         }
 
         private void lvEntryFees_SubItemClicked(object sender, SubItemEventArgs e)
