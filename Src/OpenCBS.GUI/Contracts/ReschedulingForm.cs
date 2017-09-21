@@ -60,6 +60,7 @@ namespace OpenCBS.GUI.Contracts
             contractCodeLabel.Text = Contract.Code;
             _interestRateTextBox.Amount = Contract.InterestRate * 100;
             installmentsNumericUpDown.Minimum = 1;
+            installmentsNumericUpDown.Maximum = 200;
             installmentsNumericUpDown.Value = Contract.NbOfInstallments;
 
             startDateTimePicker.Format = DateTimePickerFormat.Custom;

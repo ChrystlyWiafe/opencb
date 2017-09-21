@@ -1926,10 +1926,11 @@ namespace OpenCBS.Services
         /// and restores Client(individual, corporate) status 
         /// </summary>
         /// <param name="contract">Contract</param>
-        /// <param name="pClient"></param>
+        /// <param name="pClient"> </param>
         /// <param name="comment"> </param>
+        /// <param name="eventId"> </param>
         /// <returns>Cancelled event</returns>
-        public Event CancelLastEvent(Loan contract, IClient pClient, string comment)
+        public Event CancelLastEvent(Loan contract, IClient pClient, string comment, int eventId = 0)
         {
             using (SqlConnection conn = _loanManager.GetConnection())
             using (SqlTransaction sqlTransaction = conn.BeginTransaction())
@@ -1937,7 +1938,9 @@ namespace OpenCBS.Services
                 Event cancelledEvent;
                 try
                 {
-                    Event evnt = contract.GetLastNonDeletedEvent();
+                    Event evnt = eventId == 0
+                        ? contract.GetLastNonDeletedEvent()
+                        : contract.Events.GetEvents().FirstOrDefault(x => x.Id == eventId);
 
                     if (null == evnt)
                         throw new OpenCbsContractSaveException(OpenCbsContractSaveExceptionEnum.EventIsNull);
