@@ -63,6 +63,7 @@ namespace OpenCBS.Controls
                 PaidInterests = installmentList.Sum(x => x.PaidInterests.Value),
                 CapitalRepayment = capitalRepayment,
                 PaidCapital = installmentList.Sum(x => x.PaidCapital.Value),
+                PaidTotal = installmentList.Sum(x => x.PaidInterests.Value + x.PaidCapital.Value), 
                 ExtraAmount2 = installmentList.Sum(x => x.ExtraAmount2.HasValue ? x.ExtraAmount2.Value : 0),
                 OLB = capitalRepayment,
                 OLBAfterRepayment = capitalRepayment,
@@ -104,6 +105,7 @@ namespace OpenCBS.Controls
             extraColumn.AspectToStringConverter =
             paidPrincipalColumn.AspectToStringConverter =
             paidInterestColumn.AspectToStringConverter =
+            paidTotalColumn.AspectToStringConverter =
             paidExtraColumn.AspectToStringConverter =
             olbColumn.AspectToStringConverter =
             extra_amount_1.AspectToStringConverter =

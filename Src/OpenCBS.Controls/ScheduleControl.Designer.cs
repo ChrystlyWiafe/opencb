@@ -41,6 +41,7 @@
             this.paidInterestColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.paidExtraColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.paidPrincipalColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.paidTotalColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.paymentDateColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.lateDaysColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.commentColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -54,7 +55,6 @@
             // 
             // scheduleObjectListView
             // 
-            resources.ApplyResources(this.scheduleObjectListView, "scheduleObjectListView");
             this.scheduleObjectListView.AllColumns.Add(this.numberColumn);
             this.scheduleObjectListView.AllColumns.Add(this.dateColumn);
             this.scheduleObjectListView.AllColumns.Add(this.interestColumn);
@@ -65,6 +65,7 @@
             this.scheduleObjectListView.AllColumns.Add(this.paidInterestColumn);
             this.scheduleObjectListView.AllColumns.Add(this.paidExtraColumn);
             this.scheduleObjectListView.AllColumns.Add(this.paidPrincipalColumn);
+            this.scheduleObjectListView.AllColumns.Add(this.paidTotalColumn);
             this.scheduleObjectListView.AllColumns.Add(this.paymentDateColumn);
             this.scheduleObjectListView.AllColumns.Add(this.lateDaysColumn);
             this.scheduleObjectListView.AllColumns.Add(this.commentColumn);
@@ -81,6 +82,7 @@
             this.paidInterestColumn,
             this.paidExtraColumn,
             this.paidPrincipalColumn,
+            this.paidTotalColumn,
             this.paymentDateColumn,
             this.lateDaysColumn,
             this.commentColumn,
@@ -88,13 +90,13 @@
             this.extra_amount_2});
             this.scheduleObjectListView.ContextMenuStrip = this._scheduleContextMenuStrip;
             this.scheduleObjectListView.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.scheduleObjectListView, "scheduleObjectListView");
             this.scheduleObjectListView.FullRowSelect = true;
             this.scheduleObjectListView.GridLines = true;
             this.scheduleObjectListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.scheduleObjectListView.HeaderWordWrap = true;
             this.scheduleObjectListView.MultiSelect = false;
             this.scheduleObjectListView.Name = "scheduleObjectListView";
-            this.scheduleObjectListView.OverlayText.Text = resources.GetString("resource.Text");
             this.scheduleObjectListView.ShowGroups = false;
             this.scheduleObjectListView.UseCompatibleStateImageBehavior = false;
             this.scheduleObjectListView.View = System.Windows.Forms.View.Details;
@@ -102,104 +104,111 @@
             // numberColumn
             // 
             this.numberColumn.AspectName = "Number";
-            resources.ApplyResources(this.numberColumn, "numberColumn");
             this.numberColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            resources.ApplyResources(this.numberColumn, "numberColumn");
             // 
             // dateColumn
             // 
             this.dateColumn.AspectName = "ExpectedDate";
-            resources.ApplyResources(this.dateColumn, "dateColumn");
             this.dateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            resources.ApplyResources(this.dateColumn, "dateColumn");
             // 
             // interestColumn
             // 
             this.interestColumn.AspectName = "InterestsRepayment";
-            resources.ApplyResources(this.interestColumn, "interestColumn");
             this.interestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.interestColumn, "interestColumn");
             // 
             // extraColumn
             // 
             this.extraColumn.AspectName = "Commission";
-            resources.ApplyResources(this.extraColumn, "extraColumn");
             this.extraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.extraColumn, "extraColumn");
             // 
             // principalColumn
             // 
             this.principalColumn.AspectName = "CapitalRepayment";
-            resources.ApplyResources(this.principalColumn, "principalColumn");
             this.principalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.principalColumn, "principalColumn");
             // 
             // totalColumn
             // 
             this.totalColumn.AspectName = "AmountHasToPayWithInterest";
-            resources.ApplyResources(this.totalColumn, "totalColumn");
             this.totalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.totalColumn, "totalColumn");
             // 
             // olbColumn
             // 
             this.olbColumn.AspectName = "OLB";
-            resources.ApplyResources(this.olbColumn, "olbColumn");
             this.olbColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.olbColumn, "olbColumn");
             // 
             // paidInterestColumn
             // 
             this.paidInterestColumn.AspectName = "PaidInterests";
-            resources.ApplyResources(this.paidInterestColumn, "paidInterestColumn");
             this.paidInterestColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.paidInterestColumn, "paidInterestColumn");
             // 
             // paidExtraColumn
             // 
             this.paidExtraColumn.AspectName = "PaidCommissions";
-            resources.ApplyResources(this.paidExtraColumn, "paidExtraColumn");
             this.paidExtraColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.paidExtraColumn, "paidExtraColumn");
             // 
             // paidPrincipalColumn
             // 
             this.paidPrincipalColumn.AspectName = "PaidCapital";
-            resources.ApplyResources(this.paidPrincipalColumn, "paidPrincipalColumn");
             this.paidPrincipalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.paidPrincipalColumn, "paidPrincipalColumn");
+            // 
+            // paidTotalColumn
+            // 
+            this.paidTotalColumn.AspectName = "PaidTotal";
+            this.paidTotalColumn.CheckBoxes = true;
+            this.paidTotalColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.paidTotalColumn, "paidTotalColumn");
             // 
             // paymentDateColumn
             // 
             this.paymentDateColumn.AspectName = "PaidDate";
-            resources.ApplyResources(this.paymentDateColumn, "paymentDateColumn");
             this.paymentDateColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            resources.ApplyResources(this.paymentDateColumn, "paymentDateColumn");
             // 
             // lateDaysColumn
             // 
             this.lateDaysColumn.AspectName = "LateDays";
-            resources.ApplyResources(this.lateDaysColumn, "lateDaysColumn");
             this.lateDaysColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.lateDaysColumn, "lateDaysColumn");
             // 
             // commentColumn
             // 
             this.commentColumn.AspectName = "Comment";
-            resources.ApplyResources(this.commentColumn, "commentColumn");
             this.commentColumn.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.commentColumn, "commentColumn");
             // 
             // extra_amount_1
             // 
             this.extra_amount_1.AspectName = "ExtraAmount1";
-            resources.ApplyResources(this.extra_amount_1, "extra_amount_1");
             this.extra_amount_1.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.extra_amount_1, "extra_amount_1");
             // 
             // extra_amount_2
             // 
             this.extra_amount_2.AspectName = "ExtraAmount2";
-            resources.ApplyResources(this.extra_amount_2, "extra_amount_2");
             this.extra_amount_2.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            resources.ApplyResources(this.extra_amount_2, "extra_amount_2");
             // 
             // _scheduleContextMenuStrip
             // 
-            resources.ApplyResources(this._scheduleContextMenuStrip, "_scheduleContextMenuStrip");
             this._scheduleContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemCopy});
             this._scheduleContextMenuStrip.Name = "contextMenuStripCopyToClipBoard";
+            resources.ApplyResources(this._scheduleContextMenuStrip, "_scheduleContextMenuStrip");
             // 
             // menuItemCopy
             // 
-            resources.ApplyResources(this.menuItemCopy, "menuItemCopy");
             this.menuItemCopy.Name = "menuItemCopy";
+            resources.ApplyResources(this.menuItemCopy, "menuItemCopy");
             // 
             // ScheduleControl
             // 
@@ -234,5 +243,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemCopy;
         private BrightIdeasSoftware.OLVColumn extra_amount_1;
         private BrightIdeasSoftware.OLVColumn extra_amount_2;
+        public BrightIdeasSoftware.OLVColumn paidTotalColumn;
     }
 }

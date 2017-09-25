@@ -162,6 +162,16 @@ namespace OpenCBS.CoreDomain.Contracts.Loans.Installments
             }
         }
 
+        public OCurrency PaidTotal
+        {
+            get
+            {
+                return AmountComparer.Compare( _paidCapital + _paidInterests + _paidCommision, 0) == 0
+                           ? 0
+                           : _paidCapital + _paidInterests + _paidCommision;
+            }
+        }
+
         public OCurrency   PrincipalHasToPay
         {
             get {
