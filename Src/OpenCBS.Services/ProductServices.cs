@@ -155,10 +155,10 @@ namespace OpenCBS.Services
             if (product.UseEntryFeesCycles)
             {
                 int loanCycle = _productManager.SelectSuitableEntryFeeCycle(product.Id, client.LoanCycle+1);
-                return _productManager.SelectEntryFeesAccordingCycle(product.Id, loanCycle, false);
+                return _entryFeeServices.SelectAllEntryFeeFromLoanProductByCycle(product.Id, loanCycle);
             }
-            else
-                return _entryFeeServices.SelectAllEntryFeeFromLoanProduct(product.Id);
+
+            return _entryFeeServices.SelectAllEntryFeeFromLoanProduct(product.Id);
         }
 
         public List<MaturityCycle> GetMaturityCycleParams(int productId, int cycleId)
@@ -591,25 +591,7 @@ namespace OpenCBS.Services
                 package.EntryFees = _entryFeeServices.SelectAllEntryFeeFromLoanProduct(package.Id);
                 package.EntryFeeCycles = package.EntryFees.Where(x => x.CycleId != null).Select(x => x.CycleId.Value).Distinct().ToList();
             }
-	    }
-
-	    public LoanProduct FindProductByName(string name)
-        {
-            LoanProduct product = _productManager.SelectByName(name);
-            if (product == null) return null;
-            if(product.FundingLine != null)
-		        product.FundingLine = _fundingLineManager.SelectFundingLineById(product.FundingLine.Id, false);
-            if (product.UseEntryFeesCycles)
-            {
-                product.EntryFeeCycles = _productManager.SelectEntryFeeCycles(product.Id, false);
-                product.EntryFees = _productManager.SelectEntryFeesWithCycles(product.Id, false);
-            }
-            else
-            {
-                product.EntryFees = _productManager.SelectEntryFeesWithoutCycles(product.Id, false);
-            }
-		    return product;
-        }
+	    }	 
 
 		public bool DeletePackage(LoanProduct package)
 		{
@@ -910,17 +892,6 @@ namespace OpenCBS.Services
             _productManager.GetAssignedTypes(productClientTypes, productId);
         }
 
-        public LoanProduct FindProductByCode(string code)
-        {
-            LoanProduct product = _productManager.SelectByName(code);
-            if (product.FundingLine != null)
-            {
-                product.FundingLine = _fundingLineManager.SelectFundingLineById(product.FundingLine.Id, false);
-            }
-            product.EntryFees = _productManager.SelectEntryFeesWithoutCycles(product.Id, false);
-            return product;
-        }
-
         public void ProductLoaded(LoanProduct product)
         {
             if (null == product) return;
@@ -997,29 +968,6 @@ namespace OpenCBS.Services
                            item.Metadata["Implementation"].ToString() == "Default"
                        select item.Value).FirstOrDefault();
             if (creator != null) creator.Update(interceptorParams);
-        }
-
-        public void LoanProductInterceptorDelete(IDictionary<string, object> interceptorParams)
-        {
-            // Find non-default implementation
-            var creator = (from item in LoanProductInterceptors
-                           where
-                               item.Metadata.ContainsKey("Implementation") &&
-                               item.Metadata["Implementation"].ToString() != "Default"
-                           select item.Value).FirstOrDefault();
-            if (creator != null)
-            {
-                creator.Delete(interceptorParams);
-                return;
-            }
-
-            // Otherwise, find the default one
-            creator = (from item in LoanProductInterceptors
-                       where
-                           item.Metadata.ContainsKey("Implementation") &&
-                           item.Metadata["Implementation"].ToString() == "Default"
-                       select item.Value).FirstOrDefault();
-            if (creator != null) creator.Delete(interceptorParams);
         }
 
 	    public List<LoanEntryFee> SelectAllEntryFeeFromCredit(int loanId)

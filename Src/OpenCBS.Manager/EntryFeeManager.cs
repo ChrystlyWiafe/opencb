@@ -66,6 +66,34 @@ namespace OpenCBS.Manager
             return result;
         }
 
+        public List<EntryFee> GetAllEntryFeeFromLoanProductByCycle(int loanProductId, int loancycle, IDbTransaction transaction)
+        {
+            const string query = @"SELECT
+                                         ef.[id] Id
+                                        ,ef.[name_of_fee] Name
+                                        ,ef.[min] Min
+                                        ,ef.[max] Max
+                                        ,ef.[rate] IsRate
+                                        ,ef.[max_sum] MaxSum
+                                        ,ef.[is_deleted] IsDeleted
+                                        ,ef.[account_number] AccountNumber
+                                        ,ef.[income_account_number] IncomeAccountNumber
+	                                    ,lpef.[cycle_id] CycleId
+                                        ,lpef.[fee_index] [Index]
+                                    FROM
+                                        [dbo].[EntryFees] ef
+                                    LEFT JOIN
+	                                    [dbo].[LoanProductsEntryFees] lpef on lpef.id_entry_fee = ef.id
+                                    WHERE
+	                                    lpef.id_product = @loanProductId
+                                        and lpef.cycle_id = @loancycle
+	                                    and ef.is_deleted = 0
+                                    ";
+
+            var result = transaction.Connection.Query<EntryFee>(query, new { loanProductId, loancycle }, transaction).ToList();
+            return result;
+        }
+
         public void SaveNewEntryfee(EntryFee entryFee, IDbTransaction transaction)
         {
             const string query = @"INSERT INTO dbo.EntryFees 
