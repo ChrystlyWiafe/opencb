@@ -563,8 +563,8 @@ namespace OpenCBS.Manager.Accounting
 	                    , ClientId
 	                    , UserId
 	                    , BranchId
-	                    , 'Reverting operation ' 
-		                    + cast(b.LoanEventId as varchar) 
+	                    , 'Reverting operation for ' + c.contract_code + ' EventID' 
+		                    + cast(b.LoanEventId as varchar)
 		                , IsExported
 	                    , IsDeleted
 	                    , AdvanceId

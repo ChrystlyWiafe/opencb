@@ -131,7 +131,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account {AccountNumber = paymentMethodAccountNumber },
                         Credit = new Account {AccountNumber = entryFeeAccountNumber},
                         Amount = commission.Fee.Value,
-                        Description = string.Format("Commission for {0}" ,_contractCode),
+                        Description = commission.LoanEntryFee.ProductEntryFee.Name + " for " + _contractCode,
                         LoanEventId = disbursment.Id
                     });
 
@@ -140,7 +140,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Debit = new Account { AccountNumber = entryFeeAccountNumber },
                         Credit = new Account { AccountNumber = entryFeeIncomeAccountNumber },
                         Amount = commission.Fee.Value,
-                        Description = string.Format("Income on Commission for {0}", _contractCode),
+                        Description = "Income on " + commission.LoanEntryFee.ProductEntryFee.Name + " for " + _contractCode,
                         LoanEventId = disbursment.Id
                     });
                 }
