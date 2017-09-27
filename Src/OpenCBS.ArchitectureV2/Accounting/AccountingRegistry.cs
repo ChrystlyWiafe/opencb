@@ -1,5 +1,6 @@
 ﻿using OpenCBS.ArchitectureV2.Accounting.Command;
 using OpenCBS.ArchitectureV2.Accounting.CommandData;
+using OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors;
 using OpenCBS.ArchitectureV2.Interface;
 using OpenCBS.Extensions;
 using StructureMap.Configuration.DSL;
@@ -19,6 +20,7 @@ namespace OpenCBS.ArchitectureV2.Accounting
             For<ICommand<EditBookingCommandData>>().Use<EditBookingCommand>();
             For<ICommand<DeleteBookingCommandData>>().Use<DeleteBookingCommand>();
             For<ICommand<ShowAnalyticBalancesCommandData>>().Use<ShowAnalyticBalancesCommand>();
+            For<IEventInterceptor>().Use<DefaultEventInterceptor>();
         }
     }
 }

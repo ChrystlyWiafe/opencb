@@ -249,7 +249,6 @@
     <Compile Include="Command\ShowDashboardCommand.cs" />
     <Compile Include="Command\ShowWriteOffViewCommand.cs" />
     <Compile Include="Command\ShowReportsMenuCommand.cs" />
-    <Compile Include="EventInterceptor.cs" />
     <Compile Include="Event\DisbursementNotification.cs" />
     <Compile Include="Interface\IAfterLoginHook.cs" />
     <Compile Include="Interface\ISearchClientForm.cs" />

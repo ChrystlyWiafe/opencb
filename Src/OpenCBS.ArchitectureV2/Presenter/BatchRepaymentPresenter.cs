@@ -255,6 +255,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
         public void Repay()
         {
             var tx = _connectionProvider.GetTransaction();
+            var productList = ServicesProvider.GetInstance().GetProductServices().FindAllPackages(false, OClientTypes.All);
             try
             {
                 foreach (var id in _view.SelectedLoanIds)
@@ -263,6 +264,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
 
                     var loan = GetLoan(id);
                     var repaidLoan = loan.Copy();
+                    var product = productList.FirstOrDefault(x => x.Id == loan.ProductId);
                     DistributeTotal(repaidLoan, total);
 
                     var repaymentEvents = GetRepaymentEvents(loan, repaidLoan);
@@ -292,7 +294,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
                                 {"LoanId", loan.Id},
                                 {"ClientId", loan.ClientId},
                                 {"BranchId", loan.BranchId},
-                                {"ProductId", loan.ProductId},
+                                {"Product", product},
                                 {"ProductCode", loan.ProductCode},
                                 {"Event", e},
                                 {"SqlTransaction", tx}
