@@ -829,27 +829,27 @@ namespace OpenCBS.Services
                                            select item).ToList();
                     var listOfRble = (from item in repaymentEvents where item.Code == "RBLE" select item).ToList();
                     var listOfRgle = repaymentEvents.Except(listOfRble).ToList();
-                    if (repayEvent.Code == "RBLE")
-                        CallInterceptor(new Dictionary<string, object>
+
+                    CallInterceptor(new Dictionary<string, object>
+                    {
+                        {"Loan", savedContract},
                         {
-                            {"Loan", savedContract},
+                            "Event", new BadLoanRepaymentEvent
                             {
-                                "Event", new BadLoanRepaymentEvent
-                                {
-                                    Code = "RBLE",
-                                    Principal = listOfRble.Sum(item => item.Principal.Value),
-                                    Interests = listOfRble.Sum(item => item.Interests.Value),
-                                    Commissions = listOfRble.Sum(item => item.Commissions.Value),
-                                    Penalties = listOfRble.Sum(item => item.Fees.Value),
-                                    Id = repayEvent.Id,
-                                    Date = repayEvent.Date,
-                                    PaymentMethodId = paymentMethod.Id,
-                                    Comment = repayEvent.Comment,
-                                    PaymentMethod = paymentMethod
-                                }
-                            },
-                            {"SqlTransaction", sqlTransaction}
-                        });
+                                Code = "RBLE",
+                                Principal = listOfRble.Sum(item => item.Principal.Value),
+                                Interests = listOfRble.Sum(item => item.Interests.Value),
+                                Commissions = listOfRble.Sum(item => item.Commissions.Value),
+                                Penalties = listOfRble.Sum(item => item.Fees.Value),
+                                Id = repayEvent.Id,
+                                Date = repayEvent.Date,
+                                PaymentMethodId = paymentMethod.Id,
+                                Comment = repayEvent.Comment,
+                                PaymentMethod = paymentMethod
+                            }
+                        },
+                        {"SqlTransaction", sqlTransaction}
+                    });
                     CallInterceptor(new Dictionary<string, object>
                     {
                         {"Loan", savedContract},
