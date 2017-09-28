@@ -296,6 +296,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
                                 {"BranchId", loan.BranchId},
                                 {"Product", product},
                                 {"ProductCode", loan.ProductCode},
+                                {"ContractCode", loan.ContractCode},
                                 {"Event", e},
                                 {"SqlTransaction", tx}
                             });
