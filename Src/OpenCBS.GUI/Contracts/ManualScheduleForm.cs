@@ -210,7 +210,7 @@ namespace OpenCBS.GUI.Contracts
                 decimal amount;
                 if (decimal.TryParse(e.NewValue.ToString(), out amount))
                 {
-                    _total.InterestsRepayment += amount - installment.InterestsRepayment;
+                    _total.InterestsRepayment += amount - Math.Round(installment.InterestsRepayment.Value, 2);
                     installment.InterestsRepayment = amount;
                 }
             }
@@ -230,7 +230,7 @@ namespace OpenCBS.GUI.Contracts
                 decimal amount;
                 if (decimal.TryParse(e.NewValue.ToString(), out amount))
                 {
-                    _total.CapitalRepayment += amount - installment.CapitalRepayment;
+                    _total.CapitalRepayment += amount - Math.Round(installment.CapitalRepayment.Value, 2);
                     Loan.InstallmentList[e.ListViewItem.Index].CapitalRepayment = amount;
                 }
                 ScheduleRecalculation(e.ListViewItem.Index);
