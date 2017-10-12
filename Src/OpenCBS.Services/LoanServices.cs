@@ -3115,6 +3115,7 @@ namespace OpenCBS.Services
                 installment.InterestsRepayment = (decimal) item["Interest"];
                 installment.StartDate = (DateTime) item["StartDate"];
                 installment.ExpectedDate = (DateTime) item["ExpectedDate"];
+                installment.LastInterestAccrualDate = (DateTime) item["LastInterestAccrualDate"];
                 installments.Add(installment);
             }
 
