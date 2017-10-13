@@ -3530,7 +3530,7 @@ namespace OpenCBS.Services
 
             try
             {
-                var installments = _instalmentManager.SelectInstallments(loanId, (SqlTransaction)transaction);
+                var installments = _instalmentManager.SelectInstallments(loanId, (SqlTransaction)tx);
 
                 if (transaction == null)
                     tx.Commit();

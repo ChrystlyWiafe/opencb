@@ -3798,6 +3798,11 @@ namespace OpenCBS.GUI.Clients
             }
         }
 
+        private void DisplayListViewLoanDetails(Loan credit)
+        {
+            FillInstallmentListForScheduleControl("loanDetailsScheduleControl", credit);
+        }
+
         private void DisplayListViewLoanRepayments(Loan credit)
         {
             FillInstallmentListForScheduleControl("repaymentScheduleControl", credit);
@@ -4174,7 +4179,9 @@ namespace OpenCBS.GUI.Clients
         {
             if (_credit.Id != notification.LoanId) return;
 
+            _credit.InstallmentList = ServicesProvider.GetInstance().GetContractServices().GetInstallments(_credit.Id);
             DisplayListViewLoanRepayments(_credit);
+            DisplayListViewLoanDetails(_credit);
             DisplayLoanEvents(_credit);
 
             InitializeContractStatus(_credit);
@@ -4198,6 +4205,7 @@ namespace OpenCBS.GUI.Clients
                 btnActions.Enabled = false;
             }
             DisplaySavings(_client.Savings);
+
             //            if (MdiParent != null)
             //                ((MainView) MdiParent).ReloadAlertsSync();
         }
