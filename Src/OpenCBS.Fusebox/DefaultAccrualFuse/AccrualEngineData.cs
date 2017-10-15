@@ -77,6 +77,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             public decimal NonRepaymentPenaltiesBasedOnInitialAmount { get; set; }
             public decimal NonRepaymentPenaltiesBasedOnOlb { get; set; }
             public decimal NonRepaymentPenaltiesBasedOnOverdueInterest { get; set; }
+            public int GracePeriodOfLateFees { get; set; }
 
         }
 
@@ -109,7 +110,8 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                     cr.non_repayment_penalties_based_on_initial_amount NonRepaymentPenaltiesBasedOnInitialAmount,
                     cr.non_repayment_penalties_based_on_olb NonRepaymentPenaltiesBasedOnOlb,
                     cr.non_repayment_penalties_based_on_overdue_interest NonRepaymentPenaltiesBasedOnOverdueInterest,
-                    p.interest_scheme InterestScheme                    
+                    p.interest_scheme InterestScheme,    
+                    p.grace_period_of_latefees GracePeriodOfLateFees            
                 from 
 	                dbo.InstallmentSnapshotForLoan(@_date, @_loanId) i
                 left join
@@ -154,7 +156,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                         loan = new AccrualLoan(row.Id, row.Amount, row.InterestRate, row.Code, row.LoanStartDate,
                             row.ProductId, row.BranchId, row.InterestScheme, row.NonRepaymentPenaltiesBasedOnOverduePrincipal,
                             row.NonRepaymentPenaltiesBasedOnInitialAmount, row.NonRepaymentPenaltiesBasedOnOlb,
-                            row.NonRepaymentPenaltiesBasedOnOverdueInterest);
+                            row.NonRepaymentPenaltiesBasedOnOverdueInterest,row.GracePeriodOfLateFees);
                     }
                     var installment = new AccrualInstallment();
                     installment.StartDate = row.StartDate;

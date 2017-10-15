@@ -173,31 +173,37 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 accrualDate = accrualDate.AddDays(1);
             }
         }
-        
+
         private static void AccruePenalty(AccrualLoan loan, DateTime date, IDbTransaction tx = null)
         {
-            var installments = loan.GetLateInstallments(date);
-            if (installments.Count == 0) return;
+            var installment = loan.GetLastLateInstallment(date);
+
+            if((date.Date - installment.EndDate.Date).Days <= loan.GracePeriodOfLateFees) return;
 
             var connection = tx == null ? DatabaseConnection.GetConnection() : tx.Connection;
             try
             {
-                foreach (var installment in installments)
+                var duePrincipal = loan.GetDuePrincipal(date);
+                var dueInterest = loan.GetDueInterest(date);
+                var plannedOlb = loan.GetOlb();
+
+                var penaltyOnAmount = Math.Round(loan.Amount*loan.NonRepaymentPenaltiesBasedOnInitialAmount, 2);
+                var penaltyOnOlb = Math.Round(plannedOlb*loan.NonRepaymentPenaltiesBasedOnOlb, 2);
+                var penaltyOnOverdueInterest = Math.Round(dueInterest*loan.NonRepaymentPenaltiesBasedOnOverdueInterest,2);
+                var penaltyOnOverduePrincipal =
+                    Math.Round(duePrincipal*loan.NonRepaymentPenaltiesBasedOnOverduePrincipal, 2);
+
+                if ((date.Date - installment.EndDate.Date).Days > loan.GracePeriodOfLateFees)
                 {
-                    var duePrincipal = loan.GetDuePrincipal(date);
-                    var dueInterest = loan.GetDueInterest(date);
-                    var plannedOlb = loan.GetOlb();
+                    penaltyOnAmount *= loan.GracePeriodOfLateFees + 1;
+                    penaltyOnOlb *= loan.GracePeriodOfLateFees + 1;
+                    penaltyOnOverdueInterest *= loan.GracePeriodOfLateFees + 1;
+                    penaltyOnOverduePrincipal *= loan.GracePeriodOfLateFees + 1;
+                }
 
-                    var penaltyOnAmount = Math.Round(loan.Amount * loan.NonRepaymentPenaltiesBasedOnInitialAmount, 2);
-                    var penaltyOnOlb = Math.Round(plannedOlb * loan.NonRepaymentPenaltiesBasedOnOlb, 2);
-                    var penaltyOnOverdueInterest = Math.Round(dueInterest * loan.NonRepaymentPenaltiesBasedOnOverdueInterest, 2);
-                    var penaltyOnOverduePrincipal = Math.Round(duePrincipal * loan.NonRepaymentPenaltiesBasedOnOverduePrincipal, 2);
+                var amount = penaltyOnAmount + penaltyOnOlb + penaltyOnOverdueInterest + penaltyOnOverduePrincipal;
 
-                    var amount = penaltyOnAmount + penaltyOnOlb + penaltyOnOverdueInterest + penaltyOnOverduePrincipal;
-
-                    if (amount == 0) return;
-
-                    var query = @"
+                var query = @"
                         insert into dbo.ContractEvents
                         (
                             event_type, contract_id, event_date, user_id, is_deleted, entry_date
@@ -208,14 +214,13 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                         )
                         select cast(scope_identity() as int)
                         ";
-                    var eventId = connection.Query<int>(query, new { loanId = loan.Id, date }, tx).First();
+                var eventId = connection.Query<int>(query, new {loanId = loan.Id, date}, tx).First();
 
-                    query = @"
+                query = @"
                         insert into dbo.LoanPenaltyAccrualEvents 
                         (id, penalty, installment_number)
                         values (@eventId, @amount, @Number)";
-                    connection.Execute(query, new { eventId, amount, installment.Number }, tx);
-                }
+                connection.Execute(query, new {eventId, amount, installment.Number}, tx);
             }
             finally
             {

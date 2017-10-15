@@ -13,7 +13,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         public AccrualLoan(int id,decimal amount, decimal interestRate, string code, DateTime startDate, int productId, int branchId,
             OInterestScheme interestScheme, decimal nonRepaymentPenaltiesBasedOnOverduePrincipal,
             decimal nonRepaymentPenaltiesBasedOnInitialAmount, decimal nonRepaymentPenaltiesBasedOnOlb,
-            decimal nonRepaymentPenaltiesBasedOnOverdueInterest)
+            decimal nonRepaymentPenaltiesBasedOnOverdueInterest,int gracePeriodOfLateFees)
         {
             _installments = new List<AccrualInstallment>();
             Id = id;
@@ -28,6 +28,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
             NonRepaymentPenaltiesBasedOnOverdueInterest = nonRepaymentPenaltiesBasedOnOverdueInterest;
             NonRepaymentPenaltiesBasedOnOverduePrincipal = nonRepaymentPenaltiesBasedOnOverduePrincipal;
             Amount = amount;
+            GracePeriodOfLateFees = gracePeriodOfLateFees;
         }
 
         public string ClientType { get; private set; }
@@ -49,6 +50,7 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         public decimal NonRepaymentPenaltiesBasedOnInitialAmount { get; private set; }
         public decimal NonRepaymentPenaltiesBasedOnOlb { get; private set; }
         public decimal NonRepaymentPenaltiesBasedOnOverdueInterest { get; private set; }
+        public int GracePeriodOfLateFees { get; set; }
 
         public void AddInstallment(AccrualInstallment installment)
         {
@@ -58,6 +60,11 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
         public List<AccrualInstallment> GetLateInstallments(DateTime date)
         {
             return _installments.FindAll(x => x.EndDate.Date < date.Date && !x.IsRepaid).ToList();
+        }
+
+        public AccrualInstallment GetLastLateInstallment(DateTime date)
+        {
+            return _installments.FindAll(x => x.EndDate.Date < date.Date && !x.IsRepaid).OrderBy(x => x.EndDate).LastOrDefault();
         }
 
         public decimal GetOlb()
