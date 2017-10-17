@@ -100,12 +100,12 @@
             // 
             // _comboBoxRate
             // 
-            resources.ApplyResources(this._comboBoxRate, "_comboBoxRate");
             this._comboBoxRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._comboBoxRate.FormattingEnabled = true;
             this._comboBoxRate.Items.AddRange(new object[] {
             resources.GetString("_comboBoxRate.Items"),
             resources.GetString("_comboBoxRate.Items1")});
+            resources.ApplyResources(this._comboBoxRate, "_comboBoxRate");
             this._comboBoxRate.Name = "_comboBoxRate";
             this._comboBoxRate.SelectedIndexChanged += new System.EventHandler(this.RateChanged);
             // 
@@ -113,7 +113,6 @@
             // 
             this._numericUpDownMin.DecimalPlaces = 2;
             resources.ApplyResources(this._numericUpDownMin, "_numericUpDownMin");
-            this._numericUpDownMin.DecimalPlaces = 2;
             this._numericUpDownMin.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -125,7 +124,6 @@
             // 
             this._numericUpDownMax.DecimalPlaces = 2;
             resources.ApplyResources(this._numericUpDownMax, "_numericUpDownMax");
-            this._numericUpDownMax.DecimalPlaces = 2;
             this._numericUpDownMax.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -137,7 +135,6 @@
             // 
             this._numericUpDownMaxSum.DecimalPlaces = 2;
             resources.ApplyResources(this._numericUpDownMaxSum, "_numericUpDownMaxSum");
-            this._numericUpDownMaxSum.DecimalPlaces = 2;
             this._numericUpDownMaxSum.Maximum = new decimal(new int[] {
             -402653185,
             -1613725636,
@@ -152,8 +149,8 @@
             // 
             // _comboBoxAccount
             // 
-            resources.ApplyResources(this._comboBoxAccount, "_comboBoxAccount");
             this._comboBoxAccount.FormattingEnabled = true;
+            resources.ApplyResources(this._comboBoxAccount, "_comboBoxAccount");
             this._comboBoxAccount.Name = "_comboBoxAccount";
             // 
             // EntryFeeAddEdit
