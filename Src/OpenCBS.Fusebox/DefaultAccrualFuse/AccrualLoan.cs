@@ -167,9 +167,9 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
                 case OInterestScheme.Actual360:
                     return 360;
                 case OInterestScheme.ActualActual:
-                    return DateTime.IsLeapYear(TimeProvider.Today.Year) ? 365 : 366;
+                    return DateTime.IsLeapYear(TimeProvider.Today.Year) ? 366 : 365;
                 case OInterestScheme.ThirtyActual:
-                    return DateTime.IsLeapYear(TimeProvider.Today.Year) ? 365 : 366;
+                    return DateTime.IsLeapYear(TimeProvider.Today.Year) ? 366 : 365;
                 case OInterestScheme.Thirty360:
                     return 360;
                 default:
