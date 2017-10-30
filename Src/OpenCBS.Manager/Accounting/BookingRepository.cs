@@ -6,6 +6,7 @@ using System.Linq;
 using Dapper;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting.Model;
+using OpenCBS.Shared;
 
 namespace OpenCBS.Manager.Accounting
 {
@@ -556,7 +557,7 @@ namespace OpenCBS.Manager.Accounting
 	                    CreditAccount
 	                    , DebitAccount
 	                    , Amount
-	                    , GETDATE()
+	                    , @applicationDate
 	                    , LoanEventId
 	                    , SavingEventId
 	                    , LoanId
@@ -581,7 +582,7 @@ namespace OpenCBS.Manager.Accounting
 	                    (LoanEventId = @loanEventId and @loanEventId is not null)
 	                    or (SavingEventId = @savingEventId and @savingEventId is not null)
                     ";
-            tx.Connection.Execute(query, new {loanEventId, savingEventId}, tx);
+            tx.Connection.Execute(query, new {loanEventId, savingEventId, applicationDate = TimeProvider.Now }, tx);
         }
     }
 }
