@@ -300,24 +300,7 @@ namespace OpenCBS.GUI
 
         private void textBoxHomeType_TextChanged(object sender, EventArgs e)
         {
-            string zipCode = ServicesHelper.CheckTextBoxText(tbZipCode.Text);
-            if(string.IsNullOrEmpty(zipCode))
-            {
-                tbZipCode.BackColor = Color.White;
-                _zipCode = zipCode;
-                return;
-            }
-            //Regex regex = new Regex("^[0-9a-zA-Z]{1,100}$");
-            //if (regex.IsMatch(zipCode))
-            //{
-            //   _zipCode = zipCode;
-            //    tbZipCode.BackColor = Color.White;
-            //}
-            //else
-            //{
-            //    _zipCode = null;
-            //    tbZipCode.BackColor = Color.Red;
-            //}
+            _zipCode = ServicesHelper.CheckTextBoxText(tbZipCode.Text);
         }
 
         private void textBoxEMail_TextChanged(object sender, EventArgs e)
