@@ -85,7 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounting\AccountingData.cs" />
     <Compile Include="Accounting\AccountingMenu.cs" />
     <Compile Include="Accounting\AccountingRegistry.cs" />
     <Compile Include="Accounting\CommandData\AddAccountCommandData.cs" />

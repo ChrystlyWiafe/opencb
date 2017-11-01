@@ -404,9 +404,9 @@ namespace OpenCBS.GUI.Products
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.comboBoxWaiveOffAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.comboBoxWriteOffAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
-            this.comboBoxNonPerfomingAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this.comboBoxWriteOffPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this.comboBoxWriteOffInterestAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
+            this.comboBoxWirteOffPrincipalAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.textBoxTaxValue = new System.Windows.Forms.TextBox();
             this.comboBoxTaxOnPenaltyAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
             this.comboBoxPenaltyIncomeAccount = new OpenCBS.ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox();
@@ -2201,9 +2201,9 @@ namespace OpenCBS.GUI.Products
             this.tabAccounts.Controls.Add(this.label67);
             this.tabAccounts.Controls.Add(this.label66);
             this.tabAccounts.Controls.Add(this.label65);
-            this.tabAccounts.Controls.Add(this.comboBoxWaiveOffAccount);
-            this.tabAccounts.Controls.Add(this.comboBoxWriteOffAccount);
-            this.tabAccounts.Controls.Add(this.comboBoxNonPerfomingAccount);
+            this.tabAccounts.Controls.Add(this.comboBoxWriteOffPenaltyAccount);
+            this.tabAccounts.Controls.Add(this.comboBoxWriteOffInterestAccount);
+            this.tabAccounts.Controls.Add(this.comboBoxWirteOffPrincipalAccount);
             this.tabAccounts.Controls.Add(this.textBoxTaxValue);
             this.tabAccounts.Controls.Add(this.comboBoxTaxOnPenaltyAccount);
             this.tabAccounts.Controls.Add(this.comboBoxPenaltyIncomeAccount);
@@ -2245,23 +2245,23 @@ namespace OpenCBS.GUI.Products
             resources.ApplyResources(this.label65, "label65");
             this.label65.Name = "label65";
             // 
-            // comboBoxWaiveOffAccount
+            // comboBoxWriteOffPenaltyAccount
             // 
-            this.comboBoxWaiveOffAccount.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxWaiveOffAccount, "comboBoxWaiveOffAccount");
-            this.comboBoxWaiveOffAccount.Name = "comboBoxWaiveOffAccount";
+            this.comboBoxWriteOffPenaltyAccount.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxWriteOffPenaltyAccount, "comboBoxWriteOffPenaltyAccount");
+            this.comboBoxWriteOffPenaltyAccount.Name = "comboBoxWriteOffPenaltyAccount";
             // 
-            // comboBoxWriteOffAccount
+            // comboBoxWriteOffInterestAccount
             // 
-            this.comboBoxWriteOffAccount.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxWriteOffAccount, "comboBoxWriteOffAccount");
-            this.comboBoxWriteOffAccount.Name = "comboBoxWriteOffAccount";
+            this.comboBoxWriteOffInterestAccount.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxWriteOffInterestAccount, "comboBoxWriteOffInterestAccount");
+            this.comboBoxWriteOffInterestAccount.Name = "comboBoxWriteOffInterestAccount";
             // 
-            // comboBoxNonPerfomingAccount
+            // comboBoxWirteOffPrincipalAccount
             // 
-            this.comboBoxNonPerfomingAccount.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxNonPerfomingAccount, "comboBoxNonPerfomingAccount");
-            this.comboBoxNonPerfomingAccount.Name = "comboBoxNonPerfomingAccount";
+            this.comboBoxWirteOffPrincipalAccount.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxWirteOffPrincipalAccount, "comboBoxWirteOffPrincipalAccount");
+            this.comboBoxWirteOffPrincipalAccount.Name = "comboBoxWirteOffPrincipalAccount";
             // 
             // textBoxTaxValue
             // 
@@ -2717,8 +2717,8 @@ namespace OpenCBS.GUI.Products
         private Label label67;
         private Label label66;
         private Label label65;
-        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxWaiveOffAccount;
-        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxWriteOffAccount;
-        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxNonPerfomingAccount;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxWriteOffPenaltyAccount;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxWriteOffInterestAccount;
+        private ArchitectureV2.Accounting.View.UserControl.AutocompletionComboBox comboBoxWirteOffPrincipalAccount;
     }
 }

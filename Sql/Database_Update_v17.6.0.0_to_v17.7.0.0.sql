@@ -40,21 +40,21 @@ IF col_length('dbo.WriteOffEvents','fee') IS NULL
     END
 GO
 
-IF col_length('dbo.Packages','non_performing_account') IS NULL
+IF col_length('dbo.Packages','write_off_principal_account') IS NULL
     BEGIN
-		ALTER TABLE dbo.Packages ADD non_performing_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+		ALTER TABLE dbo.Packages ADD write_off_principal_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
 
-IF col_length('dbo.Packages','write_off_account') IS NULL
+IF col_length('dbo.Packages','write_off_interest_account') IS NULL
     BEGIN
-		ALTER TABLE dbo.Packages ADD write_off_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+		ALTER TABLE dbo.Packages ADD write_off_interest_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
 
-IF col_length('dbo.Packages','waive_off_account') IS NULL
+IF col_length('dbo.Packages','write_off_penalty_account') IS NULL
     BEGIN
-		ALTER TABLE dbo.Packages ADD waive_off_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
+		ALTER TABLE dbo.Packages ADD write_off_penalty_account VARCHAR(32) REFERENCES dbo.Accounts(account_number) NULL
     END
 GO
 

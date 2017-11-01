@@ -601,9 +601,9 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.DataSource = new List<Account>(_accounts);
             comboBoxTaxOnPenaltyAccount.DataSource = new List<Account>(_accounts);
             comboBoxPenaltyIncomeAccount.DataSource = new List<Account>(_accounts);
-            comboBoxNonPerfomingAccount.DataSource = new List<Account>(_accounts);
-            comboBoxWriteOffAccount.DataSource = new List<Account>(_accounts);
-            comboBoxWaiveOffAccount.DataSource = new List<Account>(_accounts);
+            comboBoxWirteOffPrincipalAccount.DataSource = new List<Account>(_accounts);
+            comboBoxWriteOffInterestAccount.DataSource = new List<Account>(_accounts);
+            comboBoxWriteOffPenaltyAccount.DataSource = new List<Account>(_accounts);
 
             comboBoxAccruedPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber ==_product.AccruedPenaltyAccountNumber);
             comboBoxInterestAccruedButNotDueAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.InterestAccruedButNotDueAccountNumber);
@@ -614,9 +614,9 @@ namespace OpenCBS.GUI.Products
             comboBoxTaxOnInterestsAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnInterestsAccountNumber);
             comboBoxTaxOnPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.TaxOnPenaltyAccountNumber);
             comboBoxPenaltyIncomeAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.PenaltyIncomeAccountNumber);
-            comboBoxNonPerfomingAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.NonPerfomingAccountNumber);
-	        comboBoxWriteOffAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WriteOffAccountNumber);
-	        comboBoxWaiveOffAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WaiveOffAccountNumber);
+            comboBoxWirteOffPrincipalAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WriteOffPrincipalAccountNumber);
+	        comboBoxWriteOffInterestAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WriteOffInterestAccountNumber);
+	        comboBoxWriteOffPenaltyAccount.SelectedItem = _accounts.FirstOrDefault(item => item.AccountNumber == _product.WriteOffPenaltyAccountNumber);
 
             comboBoxTaxOnPenaltyAccount.SelectedIndexChanged += comboBoxTaxOnPenaltyAccount_SelectedIndexChanged;
 	        comboBoxPenaltyIncomeAccount.SelectedIndexChanged += comboBoxPenaltyIncomeAccount_SelectedIndexChanged;
@@ -627,9 +627,9 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestDueAccount.SelectedIndexChanged += comboBoxInterestDueAccount_SelectedIndexChanged;
             comboBoxPrincipalAccount.SelectedIndexChanged += comboBoxPrincipalAccount_SelectedIndexChanged;
             comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
-	        comboBoxNonPerfomingAccount.SelectedIndexChanged += comboBoxNonPerfomingAccount_SelectedIndexChanged;
-	        comboBoxWriteOffAccount.SelectedIndexChanged += comboBoxWriteOffAccount_SelectedIndexChanged;
-	        comboBoxWaiveOffAccount.SelectedIndexChanged += comboBoxWaiveOffAccount_SelectedIndexChanged;
+	        comboBoxWirteOffPrincipalAccount.SelectedIndexChanged += comboBoxWriteOffPrincipalAccount_SelectedIndexChanged;
+	        comboBoxWriteOffInterestAccount.SelectedIndexChanged += comboBoxWriteOffInterestAccount_SelectedIndexChanged;
+	        comboBoxWriteOffPenaltyAccount.SelectedIndexChanged += comboBoxWriteOffPenaltyAccount_SelectedIndexChanged;
 	    }
 
         private void InitializeTextBox()
@@ -2339,24 +2339,24 @@ namespace OpenCBS.GUI.Products
             buttonSave.Enabled = true;
         }
 
-        private void comboBoxNonPerfomingAccount_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxWriteOffPrincipalAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var account = comboBoxNonPerfomingAccount.SelectedValue as Account;
-            _product.NonPerfomingAccountNumber = account != null ? account.AccountNumber : null;
+            var account = comboBoxWirteOffPrincipalAccount.SelectedValue as Account;
+            _product.WriteOffPrincipalAccountNumber = account != null ? account.AccountNumber : null;
             buttonSave.Enabled = true;
         }
 
-        private void comboBoxWriteOffAccount_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxWriteOffInterestAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var account = comboBoxWriteOffAccount.SelectedValue as Account;
-            _product.WriteOffAccountNumber = account != null ? account.AccountNumber : null;
+            var account = comboBoxWriteOffInterestAccount.SelectedValue as Account;
+            _product.WriteOffInterestAccountNumber = account != null ? account.AccountNumber : null;
             buttonSave.Enabled = true;
         }
 
-        private void comboBoxWaiveOffAccount_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxWriteOffPenaltyAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var account = comboBoxWaiveOffAccount.SelectedValue as Account;
-            _product.WaiveOffAccountNumber = account != null ? account.AccountNumber : null;
+            var account = comboBoxWriteOffPenaltyAccount.SelectedValue as Account;
+            _product.WriteOffPenaltyAccountNumber = account != null ? account.AccountNumber : null;
             buttonSave.Enabled = true;
         }
     }

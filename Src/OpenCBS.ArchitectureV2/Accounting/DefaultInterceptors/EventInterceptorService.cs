@@ -307,32 +307,28 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 {
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account { AccountNumber = _product.WriteOffAccountNumber },
+                        Debit = new Account { AccountNumber = _product.WriteOffPrincipalAccountNumber },
                         Credit = new Account { AccountNumber = _product.PrincipalAccountNumber },
                         Amount = wroe.OLB.Value,
                         Description = "Write off overdue principal for " + _contractCode
                     });
+
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
-                        Credit = new Account { AccountNumber = _product.NonPerfomingAccountNumber },
+                        Debit = new Account { AccountNumber = _product.WriteOffInterestAccountNumber },
+                        Credit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
                         Amount = wroe.AccruedInterests.Value,
                         Description = "Write off overdue interest for " + _contractCode
                     });
-                }
 
-                if (wroe.WriteOffMethod == 2)
-                {
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account { AccountNumber = _product.WaiveOffAccountNumber },
-                        Credit = new Account { AccountNumber = _product.PrincipalAccountNumber },
-                        Amount = wroe.OLB.Value,
-                        Description = "Waive off overdue principal for " + _contractCode
+                        Debit = new Account { AccountNumber = _product.WriteOffPenaltyAccountNumber },
+                        Credit = new Account { AccountNumber = _product.AccruedPenaltyAccountNumber },
+                        Amount = wroe.AccruedPenalties.Value,
+                        Description = "Write off overdue penalty for " + _contractCode
                     });
-
-                    AccountingData.DeleteInterestAccrualsEventsAndBookings(_loanId, wroe.Date.Date, _transaction);
-                }
+                }                
             }
 
             return list;
