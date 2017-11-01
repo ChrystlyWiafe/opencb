@@ -299,6 +299,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 });
             }
 
+            //Write Off Event
             else if (eEvent.Code == "WROE")
             {
                 var wroe = (WriteOffEvent) eEvent;
