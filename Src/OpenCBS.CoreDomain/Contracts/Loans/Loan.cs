@@ -3069,18 +3069,7 @@ namespace OpenCBS.CoreDomain.Contracts.Loans
                 }
             }
             disposed = true;
-        }
-
-        public OCurrency GetOutstandingInterest()
-        {
-            OCurrency interest = 0;
-            foreach (Installment i in InstallmentList)
-            {
-                if (i.IsRepaid) continue;
-                interest += i.InterestsRepayment - i.PaidInterests;
-            }
-            return interest;
-        }
+        }    
 
         public LoanCloseEvent GetCloseEvent(DateTime date)
         {
