@@ -219,6 +219,18 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         LoanEventId = repayment.Id
                     });
                 }
+
+                if (repayment.Commissions.Value > 0m)
+                {
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = paymentMethodAccountNumber },
+                        Credit = new Account { AccountNumber = "3005" },
+                        Amount = repayment.Commissions.Value,
+                        Description = "Repayment of early settlement charges for " + _contractCode,
+                        LoanEventId = repayment.Id
+                    });
+                }
             }
 
             //Accrual Interest Event
@@ -328,6 +340,14 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         Credit = new Account { AccountNumber = _product.AccruedPenaltyAccountNumber },
                         Amount = wroe.AccruedPenalties.Value,
                         Description = "Write off overdue penalty for " + _contractCode
+                    });
+
+                    list.Add(new BookingEntry
+                    {
+                        Debit = new Account { AccountNumber = "1109" },
+                        Credit = new Account { AccountNumber = _product.WriteOffPrincipalAccountNumber },
+                        Amount = wroe.Fee.Value,
+                        Description = "Write off fee for " + _contractCode
                     });
                 }                
             }
