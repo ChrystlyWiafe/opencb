@@ -618,7 +618,7 @@ namespace OpenCBS.GUI.Products
             comboBoxInterestAccruedButNotDueAccount.SelectedIndexChanged += comboBoxInterestAccruedBotNotDueAccount_SelectedIndexChanged;
             comboBoxRescheduleAccount.SelectedIndexChanged += comboBoxRescheduleAccount_SelectedIndexChanged;
             comboBoxLatePrincipal.SelectedIndexChanged += comboBoxLatePrincipal_SelectedIndexChanged;
-            comboBoxRescheduleAccount.SelectedIndexChanged += comboBoxUnrecoverablePrincipal_SelectedIndexChanged;
+            comboBoxUnrecoverablePrincipal.SelectedIndexChanged += comboBoxUnrecoverablePrincipal_SelectedIndexChanged;
         }
 
         private void InitializeTextBox()
