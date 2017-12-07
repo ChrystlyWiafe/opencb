@@ -1174,18 +1174,26 @@ namespace OpenCBS.Services
                     scheduleConfiguration,
                     copyOfRescheduleConfiguration,
                     scheduleBuilder,
-                    loan.CalculateActualOlb().Value).ToList();
+                    loan.CalculateActualOlb().Value,
+                    loan).ToList();
             else
             {
                 if (loan.Product.ScriptName == "Flat (fixed principal, fixed interest)")
                 {
-                    schedule = AssembleFlatRescheduling(loan, rescheduleConfiguration, scheduleConfiguration, false);
-                    var schedule2 = AssembleFlatRescheduling(loan, rescheduleConfiguration, scheduleConfiguration, true);
-                    foreach (var installment in schedule)
-                    {
-                        installment.CapitalRepayment = schedule2.First(x => x.Number == installment.Number).CapitalRepayment;
-                        installment.OLB = schedule2.First(x => x.Number == installment.Number).OLB;
-                    }
+                    //schedule = AssembleFlatRescheduling(loan, rescheduleConfiguration, scheduleConfiguration, false);
+                    //var schedule2 = AssembleFlatRescheduling(loan, rescheduleConfiguration, scheduleConfiguration, true);
+                    //foreach (var installment in schedule)
+                    //{
+                    //    installment.CapitalRepayment = schedule2.First(x => x.Number == installment.Number).CapitalRepayment;
+                    //    installment.OLB = schedule2.First(x => x.Number == installment.Number).OLB;
+                    //}
+                    schedule = rescheduleAssembler.AssembleRescheduling(
+                    schedule,
+                    scheduleConfiguration,
+                    copyOfRescheduleConfiguration,
+                    scheduleBuilder,
+                    loan.CalculateActualOlb().Value, 
+                    loan).ToList();
                 }
                 else
                     schedule = AssembleRescheduling(loan, rescheduleConfiguration, scheduleConfiguration);

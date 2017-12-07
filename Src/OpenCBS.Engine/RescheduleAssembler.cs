@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.CoreDomain.Contracts.Loans.Installments;
 using OpenCBS.Engine.Interfaces;
 using OpenCBS.Shared;
@@ -13,7 +14,7 @@ namespace OpenCBS.Engine
             IScheduleConfiguration scheduleConfiguration,
             IScheduleConfiguration rescheduleConfiguration,
             IScheduleBuilder scheduleBuilder,
-            decimal currentOlb)
+            decimal currentOlb, Loan loan)
         {
             // Build a new combined schedule
 
@@ -96,14 +97,18 @@ namespace OpenCBS.Engine
             {
                 installment.Number += increment;
             }
-
-            // Distribute the extra and overpaid interest
+            
             if (rescheduleConfiguration.GracePeriod > 0 && !rescheduleConfiguration.ChargeInterestDuringGracePeriod)
                 rescheduled[rescheduleConfiguration.GracePeriod].InterestsRepayment +=
                     rescheduleConfiguration.RoundingPolicy.Round(extraInterest);
+            else if (loan.Product.ScriptName == "Flat (fixed principal, fixed interest)")
+            {
+                rescheduled.Last().InterestsRepayment = rescheduled.First().InterestsRepayment;
+            }
             else
                 rescheduled.First().InterestsRepayment =
                     rescheduleConfiguration.RoundingPolicy.Round(firstInterest + extraInterest);
+
             foreach (var installment in rescheduled)
             {
                 if (installment.InterestsRepayment < overpaidInterest)
