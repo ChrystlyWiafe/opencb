@@ -281,6 +281,7 @@
 				<File Id="Database_Update_v17.6.0.0_to_v17.7.0.0.sql" Source="SourceDir\Update\Database_Update_v17.6.0.0_to_v17.7.0.0.sql" />
 				<File Id="Database_Update_v17.7.0.0_to_v17.8.0.0.sql" Source="SourceDir\Update\Database_Update_v17.7.0.0_to_v17.8.0.0.sql" />
 				<File Id="Database_Update_v17.8.0.0_to_v17.9.0.0.sql" Source="SourceDir\Update\Database_Update_v17.8.0.0_to_v17.9.0.0.sql" />
+				<File Id="Database_Update_v17.9.0.0_to_v17.10.0.0.sql" Source="SourceDir\Update\Database_Update_v17.9.0.0_to_v17.10.0.0.sql" />
               </Component>
               <Component Id="xml_data_schema" Guid="CB26138B-9031-2360-D666-DD5F20038ED9">
                 <File Id="OCTOPUS_Data_Schema_v17.10.0.0.xml" Name="OCTOPUS_Data_Schema_(v17.10.0.0).xml" Source="SourceDir\Update\OCTOPUS_Data_Schema_(v17.10.0.0).xml" />
