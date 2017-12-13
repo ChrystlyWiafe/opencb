@@ -103,7 +103,14 @@ namespace OpenCBS.Engine
                     rescheduleConfiguration.RoundingPolicy.Round(extraInterest);
             else if (loan.Product.ScriptName == "Flat (fixed principal, fixed interest)")
             {
+                
+                var last = rescheduled.Last();
+                var preLast = rescheduled.First(x => x.Number == last.Number - 1);
+                var different = last.CapitalRepayment - preLast.CapitalRepayment;
                 rescheduled.Last().InterestsRepayment = rescheduled.First().InterestsRepayment;
+
+                if (different > 0)
+                    last.InterestsRepayment = last.InterestsRepayment - different;
             }
             else
                 rescheduled.First().InterestsRepayment =
