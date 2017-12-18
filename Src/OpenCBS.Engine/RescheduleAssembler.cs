@@ -111,6 +111,8 @@ namespace OpenCBS.Engine
 
                 if (different > 0)
                     last.InterestsRepayment = last.InterestsRepayment - different;
+                if (different < 0)
+                    last.InterestsRepayment = last.InterestsRepayment + (different * (-1));
             }
             else
                 rescheduled.First().InterestsRepayment =
