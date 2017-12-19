@@ -61,8 +61,10 @@
     <Compile Include="DefaultAccrualFuse\AccrualLoan.cs" />
     <Compile Include="DefaultAccrualFuse\DefaultAccualPenaltyFuse.cs" />
     <Compile Include="DefaultAccrualFuse\DefaultAccualInterestFuse.cs" />
+    <Compile Include="DefaultTransitFuse\DefaultLatePrincipalTransitionFuse.cs" />
     <Compile Include="DefaultTransitFuse\FuseInterestTransitService.cs" />
     <Compile Include="DefaultTransitFuse\DefaultLateInterestTransitionFuse.cs" />
+    <Compile Include="DefaultTransitFuse\FusePrincipalTransitService.cs" />
     <Compile Include="Fusebox\Fusebox.cs" />
     <Compile Include="Fusebox\FuseBoxExecutingForm.cs">
       <SubType>Form</SubType>

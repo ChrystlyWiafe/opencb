@@ -12,6 +12,7 @@ namespace OpenCBS.Fusebox.FuseboxRegistry
             For<IAdvancedFuse>().Use<DefaultAccrualPenaltyFuse>();
             For<IAdvancedFuse>().Use<DefaultAccualInterestFuse>();
             For<IAdvancedFuse>().Use<DefaultLateInterestTransitionFuse>();
+            For<IAdvancedFuse>().Use<DefaultLatePrincipalTransitionFuse>();
         }
     }
 }

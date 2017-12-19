@@ -3473,22 +3473,27 @@ namespace OpenCBS.Services
         public void FireEvent(Event eEvent, Loan loan)
         {
             using (var transaction = _loanManager.GetConnection().BeginTransaction())
-                try
-                {
-                    _ePs.FireEvent(eEvent, loan, transaction);
-                    CallInterceptor(new Dictionary<string, object>
-                        {
-                            {"Loan", loan},
-                            {"Event", eEvent},
-                            {"SqlTransaction", transaction}
-                        });
-                    transaction.Commit();
-                }
-                catch (Exception)
-                {
-                    transaction.Rollback();
-                    throw;
-                }
+            try
+            {
+                FireEvent(eEvent, loan, transaction);
+                transaction.Commit();
+            }
+            catch (Exception)
+            {
+                transaction.Rollback();
+                throw;
+            }
+        }
+
+        public void FireEvent(Event eEvent, Loan loan, SqlTransaction transaction)
+        {
+            _ePs.FireEvent(eEvent, loan, transaction);
+            CallInterceptor(new Dictionary<string, object>
+            {
+                {"Loan", loan},
+                {"Event", eEvent},
+                {"SqlTransaction", transaction}
+            });
         }
 
         public Installment GetLastNotFullyRepaidInstallment(int loanId, IDbTransaction transaction = null)

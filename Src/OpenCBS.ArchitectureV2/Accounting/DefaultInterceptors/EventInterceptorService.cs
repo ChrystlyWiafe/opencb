@@ -33,7 +33,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 }
                 else
                 {
-                    var loanId = (int) parameters["LoanId"];
+                    var loanId = _event.ContracId;
                     _loanDetails = EventInterceptorData.GetLoanDetails(loanId, _transaction);
                 }
             }
@@ -265,6 +265,78 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 ServicesProvider.GetInstance()
                     .GetContractServices()
                     .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.RescheduleAccountNumber, _transaction);
+            }
+
+            else if (eEvent.Code == "GLLL")
+            {
+                var transitionEvent = (LoanTransitionEvent)eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account { AccountNumber = _loanDetails.RescheduleAccountNumber },
+                    Credit = new Account { AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
+                    Amount = transitionEvent.Amount.Value,
+                    Description = "Good loan Late loan for " + _loanDetails.ContractCode,
+                    LoanEventId = transitionEvent.Id
+                });
+
+                ServicesProvider.GetInstance()
+                    .GetContractServices()
+                    .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.LatePrincipalAccountnumber, _transaction);
+            }
+
+            else if (eEvent.Code == "LLBL")
+            {
+                var transitionEvent = (LoanTransitionEvent)eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account { AccountNumber = _loanDetails.RescheduleAccountNumber },
+                    Credit = new Account { AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
+                    Amount = transitionEvent.Amount.Value,
+                    Description = "Late loan Bad loan for " + _loanDetails.ContractCode,
+                    LoanEventId = transitionEvent.Id
+                });
+
+                ServicesProvider.GetInstance()
+                    .GetContractServices()
+                    .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.UnrecoverablePrincipalAccountNumber, _transaction);
+            }
+
+            else if (eEvent.Code == "LLGL")
+            {
+                var transitionEvent = (LoanTransitionEvent)eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account { AccountNumber = _loanDetails.RescheduleAccountNumber },
+                    Credit = new Account { AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
+                    Amount = transitionEvent.Amount.Value,
+                    Description = "Late loan Good loan for " + _loanDetails.ContractCode,
+                    LoanEventId = transitionEvent.Id
+                });
+
+                ServicesProvider.GetInstance()
+                    .GetContractServices()
+                    .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.PrincipalAccountNumber, _transaction);
+            }
+
+            else if (eEvent.Code == "BLGL")
+            {
+                var transitionEvent = (LoanTransitionEvent)eEvent;
+
+                list.Add(new BookingEntry
+                {
+                    Debit = new Account { AccountNumber = _loanDetails.RescheduleAccountNumber },
+                    Credit = new Account { AccountNumber = _loanDetails.CurrentPrincipalAccountNumber },
+                    Amount = transitionEvent.Amount.Value,
+                    Description = "Bad loan Good loan for " + _loanDetails.ContractCode,
+                    LoanEventId = transitionEvent.Id
+                });
+
+                ServicesProvider.GetInstance()
+                    .GetContractServices()
+                    .SetCurrentPrincipalAccount(_loanDetails.Id, _loanDetails.PrincipalAccountNumber, _transaction);
             }
 
             return list;
