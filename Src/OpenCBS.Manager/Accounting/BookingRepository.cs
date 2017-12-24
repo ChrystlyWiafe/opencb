@@ -445,5 +445,39 @@ namespace OpenCBS.Manager.Accounting
                     ";
             return tx.Connection.Query<int>(query, new {savingId}, tx).FirstOrDefault();
         }
+
+        public IEnumerable<int> GetChildEvents(int loanEventId, IDbTransaction tx)
+        {
+            const string query = @"
+                        ;WITH cte AS 
+                            (
+                                SELECT
+	                                ce.id
+	                                , ce.parent_id
+                                FROM
+                                    dbo.ContractEvents ce
+                                WHERE
+                                    id = @id
+
+                                UNION ALL
+
+                                SELECT
+	                                ce.id
+	                                , ce.parent_id
+                                FROM
+                                    dbo.ContractEvents ce
+                                JOIN
+                                    cte c ON ce.parent_id = c.id
+                            )
+
+                            SELECT
+                                id
+                            FROM
+                                cte
+                            WHERE
+                                parent_id IS NOT NULL
+                    ";
+            return tx.Connection.Query<int>(query, new { id = loanEventId }, tx);
+        }
     }
 }
