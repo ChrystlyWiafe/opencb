@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Contracts.Loans.Installments;
 using OpenCBS.Engine.InstallmentCalculationPolicy;
 using OpenCBS.Engine.Interfaces;
+using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.Engine
 {
@@ -42,7 +44,9 @@ namespace OpenCBS.Engine
             }
             else
             {
-                result[0].InterestsRepayment = CalculateFirstInstallmentInterest(result[0], configuration);
+                if(ApplicationSettings.GetInstance(User.CurrentUser != null ? User.CurrentUser.Md5 : string.Empty).
+                        PayFirstInterestRealValue)
+                    result[0].InterestsRepayment = CalculateFirstInstallmentInterest(result[0], configuration);
             }
 
             // Initialize RepaymentDate's
