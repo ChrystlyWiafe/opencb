@@ -191,6 +191,15 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
+                        Debit = new Account { AccountNumber = _product.AccruedPenaltyAccountNumber },
+                        Credit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
+                        Amount = repayment.Interests.Value,
+                        Description = "Interest income",
+                        LoanEventId = repayment.Id
+                    });
+
+                    list.Add(new BookingEntry
+                    {
                         Debit = new Account { AccountNumber = _product.TaxOnInterestsAccountNumber },
                         Credit = new Account { AccountNumber = paymentMethodAccountNumber },
                         Amount = repayment.Interests.Value*_taxValue,
@@ -285,19 +294,19 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             }
 
             //Accrual Penalty Event
-            else if (eEvent.Code == "LPAE")
-            {
-                var accrual = (LoanPenaltyAccrualEvent) eEvent;
+            //else if (eEvent.Code == "LPAE")
+            //{
+            //    var accrual = (LoanPenaltyAccrualEvent) eEvent;
 
-                list.Add(new BookingEntry
-                {
-                    Debit = new Account {AccountNumber = _product.AccruedPenaltyAccountNumber },
-                    Credit = new Account {AccountNumber = _product.PenaltyIncomeAccountNumber},
-                    Amount = accrual.Penalty.Value,
-                    Description = "Penalty accrual for " + _contractCode,
-                    LoanEventId = accrual.Id
-                });
-            }
+            //    list.Add(new BookingEntry
+            //    {
+            //        Debit = new Account {AccountNumber = _product.AccruedPenaltyAccountNumber },
+            //        Credit = new Account {AccountNumber = _product.PenaltyIncomeAccountNumber},
+            //        Amount = accrual.Penalty.Value,
+            //        Description = "Penalty accrual for " + _contractCode,
+            //        LoanEventId = accrual.Id
+            //    });
+            //}
 
             else if (eEvent.Code == "WROE")
             {
