@@ -191,8 +191,8 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 
                     list.Add(new BookingEntry
                     {
-                        Debit = new Account { AccountNumber = _product.AccruedPenaltyAccountNumber },
-                        Credit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
+                        Debit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
+                        Credit = new Account { AccountNumber = _product.AccruedPenaltyAccountNumber },
                         Amount = repayment.Interests.Value,
                         Description = "Interest income",
                         LoanEventId = repayment.Id
