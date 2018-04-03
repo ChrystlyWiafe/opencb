@@ -226,7 +226,8 @@ namespace OpenCBS.CoreDomain.Contracts.Loans.Installments
             get
             {
                 return AmountComparer.Equals(_interestsRepayment, _paidInterests) &&
-                       AmountComparer.Equals(_capitalRepayment,_paidCapital) &&
+                       AmountComparer.Equals(Math.Round(_capitalRepayment.Value, 2, MidpointRounding.AwayFromZero),
+                                             _paidCapital) &&
                        AmountComparer.Equals(_commission, _paidCommision);
             }
         }
