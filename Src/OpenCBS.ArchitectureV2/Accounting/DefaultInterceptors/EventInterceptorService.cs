@@ -25,11 +25,10 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             {
                 _event = (CoreDomain.Events.Loan.Event)parameters["Event"];
                 _transaction = (SqlTransaction)parameters["SqlTransaction"];
-
                 if (parameters.ContainsKey("Loan"))
                 {
-                    var coreLoan = (Loan) parameters["Loan"];
-                    _loanDetails = new LoanDetails(coreLoan);
+                    var coreLoan = (Loan)parameters["Loan"];
+                    _loanDetails = EventInterceptorData.GetLoanDetails(coreLoan.Id, _transaction);
                 }
                 else
                 {
@@ -37,7 +36,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                     _loanDetails = EventInterceptorData.GetLoanDetails(loanId, _transaction);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new OpenCbsException("Error while intialize interceptor parameters");
             }

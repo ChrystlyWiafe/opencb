@@ -49,39 +49,42 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             if (_event.Code == "RBLE")
             {
                 var repayment = (RepaymentEvent) _event;
+                var loanLateDays = GetLoanLateDays(_event.ContracId, _event.Date, _transaction);
 
-                if (repayment.Principal.Value > 0m && GetLateDays(_event.ContracId,_transaction) == 0)
+                if (repayment.Principal.Value > 0m && loanLateDays.LateDays == 0)
                 {
                     var code = GetLastPrincipalTransition(_event.ContracId, _transaction);
 
-                    return  new LoanTransitionEvent
+                    return new LoanTransitionEvent
                     {
                         Code = code == "GLLL" ? "LLGL" : code == "GLBL" ? "BLGL" : "",
+                        Date = _event.Date,
                         EntryDate = TimeProvider.Now,
-                        Branch = new Branch { Id = repayment.Branch.Id },
+                        Branch = new Branch {Id = repayment.Branch.Id},
                         Deleted = false,
                         User = User.CurrentUser,
                         ContracId = repayment.ContracId,
+                        Amount = loanLateDays.Olb
                     };
                 }
             }
-
             return null;
         }
 
-        public int GetLateDays(int loanId, IDbTransaction transaction)
+        public LoanLateDays GetLoanLateDays(int loanId, DateTime date, IDbTransaction transaction)
         {
             const string query =
                 @"
                     SELECT
-	                    late_days
-	                    , olb
+                        id Id
+	                    ,late_days LateDays
+	                    , olb Olb
                     FROM
 	                    dbo.ActiveLoans(@date,0) al
                     WHERE
 	                    al.id = @loanId
                 ";
-            return transaction.Connection.Query<int>(query, new { loanId }, transaction).FirstOrDefault();
+            return transaction.Connection.Query<LoanLateDays>(query, new {loanId, date}, transaction).FirstOrDefault();
         }
 
         public string GetLastPrincipalTransition(int loanId, IDbTransaction transaction)
@@ -99,6 +102,13 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
 	                    event_date 
                 ";
             return transaction.Connection.Query<string>(query, new { loanId }, transaction).FirstOrDefault();
+        }
+
+        public class LoanLateDays
+        {
+            public int Id { get; set; }
+            public int LateDays { get; set; }
+            public decimal Olb { get; set; }
         }
     }
 }

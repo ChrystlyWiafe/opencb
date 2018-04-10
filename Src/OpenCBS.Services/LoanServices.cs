@@ -845,7 +845,9 @@ namespace OpenCBS.Services
                                     Date = repayEvent.Date,
                                     PaymentMethodId = paymentMethod.Id,
                                     Comment = repayEvent.Comment,
-                                    PaymentMethod = paymentMethod
+                                    PaymentMethod = paymentMethod,
+                                    Branch = curentLoan.Project.Client.Branch,
+                                    ContracId = curentLoan.Id
                                 }
                             },
                             {"SqlTransaction", sqlTransaction}
@@ -865,7 +867,9 @@ namespace OpenCBS.Services
                                 Date = repayEvent.Date,
                                 PaymentMethodId = paymentMethod.Id,
                                 Comment = repayEvent.Comment,
-                                PaymentMethod = paymentMethod
+                                PaymentMethod = paymentMethod,
+                                Branch = curentLoan.Project.Client.Branch,
+                                ContracId = curentLoan.Id
                             }
                         },
                         {"SqlTransaction", sqlTransaction}

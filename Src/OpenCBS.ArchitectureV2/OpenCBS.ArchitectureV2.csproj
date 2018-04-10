@@ -109,7 +109,6 @@
     <Compile Include="Accounting\Command\ShowAnalyticBalancesCommand.cs" />
     <Compile Include="Accounting\Command\ShowBookingsCommand.cs" />
     <Compile Include="Accounting\Command\ShowTurnoverBalancesCommand.cs" />
-    <Compile Include="Accounting\DefaultInterceptors\DefaultPrincipalEventInterceptor.cs" />
     <Compile Include="Accounting\DefaultInterceptors\DefaultEventInterceptor.cs" />
     <Compile Include="Accounting\DefaultInterceptors\DefaultLoanInterceptor.cs" />
     <Compile Include="Accounting\DefaultInterceptors\EventInterceptorData.cs" />

@@ -2,7 +2,9 @@
 using System.ComponentModel.Composition;
 using System.Data.SqlClient;
 using OpenCBS.CoreDomain;
+using OpenCBS.CoreDomain.Contracts.Loans;
 using OpenCBS.Extensions;
+using OpenCBS.Services;
 using OpenCBS.Services.Accounting;
 
 namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
@@ -38,6 +40,14 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
             else
             {
                 _bookingService.SaveBookings(_interceptorService.CreateBookings(), transaction);
+
+                var interceptorService2 = new DefaultPrincipalEventInterceptorService(interceptorParams);
+                var transitionEvent = interceptorService2.GetPrincipalTransitEvent();
+
+                if (transitionEvent != null)
+                    ServicesProvider.GetInstance()
+                        .GetEventProcessorServices()
+                        .FireEvent(transitionEvent, new Loan { Id = transitionEvent.ContracId }, transaction);
             }
         }
     }

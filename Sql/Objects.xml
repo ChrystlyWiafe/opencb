@@ -3646,7 +3646,7 @@ RETURN
     <drop><![CDATA[IF  EXISTS (
                 SELECT * 
                 FROM sys.objects 
-                WHERE object_id = OBJECT_ID(N'dbo.InstallmentSnapshotForLoan') AND type = N'FN'
+                WHERE object_id = OBJECT_ID(N'dbo.InstallmentSnapshotForLoan') AND type = N'IF'
             )
             DROP FUNCTION [dbo].[InstallmentSnapshotForLoan]]]></drop>
   </object>
