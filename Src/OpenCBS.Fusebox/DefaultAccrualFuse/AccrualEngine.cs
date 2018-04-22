@@ -205,6 +205,8 @@ namespace OpenCBS.Fusebox.DefaultAccrualFuse
 
                 var amount = penaltyOnAmount + penaltyOnOlb + penaltyOnOverdueInterest + penaltyOnOverduePrincipal;
 
+                if(amount <= 0m) return;
+
                 var query = @"
                         insert into dbo.ContractEvents
                         (
