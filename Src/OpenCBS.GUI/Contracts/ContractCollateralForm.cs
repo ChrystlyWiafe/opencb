@@ -221,11 +221,11 @@ namespace OpenCBS.GUI.Contracts
             if (myProperties.GetPropertyValueByName("Сумма") != null) amountProperty = "Сумма";
             if (myProperties.GetPropertyValueByName("Amount") != null) amountProperty = "Amount";
 
-            if (decimal.Parse(myProperties.GetPropertyValueByName(amountProperty).ToString()) <= 0)
-            {
-                MessageBox.Show("Please, enter collateral amount!");
-                return;
-            }
+            //if (decimal.Parse(myProperties.GetPropertyValueByName(amountProperty).ToString()) <= 0)
+            //{
+            //    MessageBox.Show("Please, enter collateral amount!");
+            //    return;
+            //}
             
             List<CollateralPropertyValue> propertyValues = new List<CollateralPropertyValue>();
 
