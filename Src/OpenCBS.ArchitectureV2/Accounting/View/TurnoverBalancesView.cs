@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
@@ -30,6 +31,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
         private void Setup()
         {
             _turnoverBalancesListView.UseAlternatingBackColors = true;
+            _turnoverBalancesListView.Tag = new List<string>() {"@","@", "#,0.00", "#,0.00", "#,0.00", "#,0.00", "#,0.00", "#,0.00" };
             _turnoverBalancesListView.AlternateRowBackColor = Color.FromArgb(240, 240, 240);
             _turnoverBalancesListView.RowFormatter = FormatRow;
             _turnoverBalancesListView.CanExpandGetter = x =>
@@ -55,7 +57,6 @@ namespace OpenCBS.ArchitectureV2.Accounting.View
                 };
             _branchComboBox.DisplayMember = "Value";
         }
-
         private static void FormatRow(OLVListItem item)
         {
             var balance = (Balance)item.RowObject;
