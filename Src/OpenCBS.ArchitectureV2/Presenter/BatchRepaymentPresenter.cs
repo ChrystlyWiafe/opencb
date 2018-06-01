@@ -260,7 +260,7 @@ namespace OpenCBS.ArchitectureV2.Presenter
             {
                 foreach (var id in _view.SelectedLoanIds)
                 {
-                    var total = _view.GetTotal(id);
+                    var total = Math.Round(_view.GetTotal(id),2);
 
                     var loan = GetLoan(id);
                     var repaidLoan = loan.Copy();

@@ -15,15 +15,9 @@ namespace OpenCBS.ArchitectureV2.Model
         public DateTime ExpectedDate { get; set; }
         public DateTime? PaymentDate { get; set; }
         public DateTime LastInterestAccrualDate { get; set; }
-        public bool Repaid
-        {
-            get { return PaidPrincipal + PaidInterest >= Principal + Interest; }
-        }
+        public bool Repaid => Math.Round(PaidPrincipal + PaidInterest,2) >= Math.Round(Principal + Interest,2);
 
-        public decimal UnpaidPrincipal
-        {
-            get { return Principal > PaidPrincipal ? Principal - PaidPrincipal : 0; }
-        }
+        public decimal UnpaidPrincipal => Math.Round(Principal,2) > Math.Round(PaidPrincipal,2) ? Principal - PaidPrincipal : 0;
 
         public decimal UnpaidInterest
         {
