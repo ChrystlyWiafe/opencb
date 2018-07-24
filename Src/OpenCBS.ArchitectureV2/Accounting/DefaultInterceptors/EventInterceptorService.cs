@@ -241,55 +241,58 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                         .GetInstallments(_loanId, _transaction);
 
                 var installment =
-                    installments.First(
+                    installments.FirstOrDefault(
                         item =>
                             accrual.Date.Date >= item.StartDate.Date &&
                             accrual.Date.Date <= item.ExpectedDate.Date);
 
-                var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
+                if (installment != null)
+                { 
+                    var previousInstallment = installments.FirstOrDefault(item => item.Number == installment.Number - 1);
 
-                list.Add(
-                    new BookingEntry
+                    list.Add(
+                        new BookingEntry
+                        {
+                            Debit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
+                            Credit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
+                            Amount = accrual.Interest.Value,
+                            Description = "Interest accrual for " + _contractCode,
+                            LoanEventId = accrual.Id
+                        });
+
+                    if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
                     {
-                        Debit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
-                        Credit = new Account { AccountNumber = _product.InterestIncomeAccountNumber },
-                        Amount = accrual.Interest.Value,
-                        Description = "Interest accrual for " + _contractCode,
-                        LoanEventId = accrual.Id
-                    });
+                        var account = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber };
+                        var balance =
+                            ServicesProvider.GetInstance()
+                                .GetBookingService()
+                                .GetAccountBalanceByLoanId(accrual.Date, account, _loanId, _transaction);
+                        balance += accrual.Interest.Value;
 
-                if (installment != null && installment.ExpectedDate.Date == accrual.Date.Date)
-                {
-                    var account = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber };
-                    var balance =
-                        ServicesProvider.GetInstance()
-                            .GetBookingService()
-                            .GetAccountBalanceByLoanId(accrual.Date, account, _loanId, _transaction);
-                    balance += accrual.Interest.Value;
+                        list.Add(
+                            new BookingEntry
+                            {
+                                Debit = new Account { AccountNumber = _product.InterestDueAccountNumber },
+                                Credit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
+                                Amount = balance,
+                                Description = "Interest due for " + _contractCode,
+                                LoanEventId = accrual.Id
+                            });
+                    }
+                    else if (previousInstallment != null && previousInstallment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
+                    {
+                        var amount = previousInstallment.InterestsRepayment.Value - previousInstallment.PaidInterests.Value;
 
-                    list.Add(
-                        new BookingEntry
-                        {
-                            Debit = new Account { AccountNumber = _product.InterestDueAccountNumber },
-                            Credit = new Account { AccountNumber = _product.InterestAccruedButNotDueAccountNumber },
-                            Amount = balance,
-                            Description = "Interest due for " + _contractCode,
-                            LoanEventId = accrual.Id
-                        });
-                }
-                else if (previousInstallment != null && previousInstallment.ExpectedDate.Date.AddDays(1) == accrual.Date.Date)
-                {
-                    var amount = previousInstallment.InterestsRepayment.Value - previousInstallment.PaidInterests.Value;
-
-                    list.Add(
-                        new BookingEntry
-                        {
-                            Debit = new Account { AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
-                            Credit = new Account { AccountNumber = _product.InterestDueAccountNumber },
-                            Amount = amount,
-                            Description = "Interest for " + _contractCode,
-                            LoanEventId = accrual.Id
-                        });
+                        list.Add(
+                            new BookingEntry
+                            {
+                                Debit = new Account { AccountNumber = _product.InterestDueButNotReceivedAccountNumber },
+                                Credit = new Account { AccountNumber = _product.InterestDueAccountNumber },
+                                Amount = amount,
+                                Description = "Interest for " + _contractCode,
+                                LoanEventId = accrual.Id
+                            });
+                    }
                 }
             }
 
