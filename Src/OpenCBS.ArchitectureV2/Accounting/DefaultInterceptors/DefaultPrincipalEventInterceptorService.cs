@@ -29,7 +29,7 @@ namespace OpenCBS.ArchitectureV2.Accounting.DefaultInterceptors
                 if (parameters.ContainsKey("Loan"))
                 {
                     var coreLoan = (Loan) parameters["Loan"];
-                    _loanDetails = new LoanDetails(coreLoan);
+                    _loanDetails = EventInterceptorData.GetLoanDetails(coreLoan.Id, _transaction);
                 }
                 else
                 {

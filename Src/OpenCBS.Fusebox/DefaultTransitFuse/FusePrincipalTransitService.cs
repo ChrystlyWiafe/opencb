@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using Dapper;
 using OpenCBS.CoreDomain;
@@ -34,7 +35,7 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
 
                 var transitEvent = new LoanTransitionEvent
                 {   
-                    Date = TimeProvider.Now,
+                    Date = date,
                     EntryDate = TimeProvider.Now,
                     Branch = new Branch { Id = loan.BranchId},
                     Deleted = false,
@@ -121,7 +122,8 @@ namespace OpenCBS.Fusebox.DefaultTransitFuse
             var connection = _transaction == null ? DatabaseConnection.GetConnection() : _transaction.Connection;
             try
             {
-                return connection.Query<DateTime>(sql, new {fuseName}, _transaction).FirstOrDefault();
+                return connection.Query<DateTime?>(sql, new {fuseName}, _transaction).FirstOrDefault() ??
+                       TimeProvider.Now;
             }
             finally
             {
